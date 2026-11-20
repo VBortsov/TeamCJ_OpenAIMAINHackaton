@@ -3,7 +3,7 @@ ML memo agent: one OpenAI call per lead that writes a short investment memo stri
 already collected by the pipeline (feed lead, scores, model drivers, base rates).
 The agent never searches and never invents: it explains what is in the JSON it receives.
 
-Key: OPENAI_API_KEY from .env / environment (backend.config.settings). Model: OPENAI_MEMO_MODEL (default gpt-4o-mini).
+Key: OPENAI_API_KEY from .env / environment (backend.config.settings). Model: OPENAI_MEMO_MODEL in .env or the environment.
 Memos are cached on disk in data/memo_cache/<entity_id>.json, keyed by a hash of the input facts.
 """
 
@@ -22,7 +22,7 @@ from backend.enrichment.cost_tracker import CostTracker
 
 logger = logging.getLogger(__name__)
 
-MEMO_MODEL = os.getenv("OPENAI_MEMO_MODEL", "gpt-4o-mini")
+MEMO_MODEL = os.getenv("OPENAI_MEMO_MODEL") or settings.OPENAI_MEMO_MODEL  # env var or .env
 MEMO_CACHE_DIR = settings.DATA_DIR / "memo_cache"
 
 SYSTEM_PROMPT = """You are an analyst at High-Tech Gruenderfonds (HTGF), a German seed investor that wants to meet
