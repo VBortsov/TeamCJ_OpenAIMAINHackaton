@@ -147,6 +147,17 @@ def load_cached_memo(entity_id: str) -> Optional[Dict[str, Any]]:
         return None
 
 
+def memo_input_hash(payload: Dict[str, Any]) -> str:
+    return hashlib.sha256(json.dumps(payload, sort_keys=True, default=str).encode()).hexdigest()[:16]
+
+
+def load_current_memo(entity_id: str, payload: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """The cached memo, but only while it still describes the lead's current facts.
+    After a re-enrichment the facts change, and an old memo would name founders the data no longer has."""
+    cached = load_cached_memo(entity_id)
+    return cached if cached and cached.get("input_hash") == memo_input_hash(payload) else None
+
+
 def fallback_memo(p: Dict[str, Any]) -> Dict[str, Any]:
     """Deterministic memo from the same facts. Used when OpenAI is unavailable; states only supplied facts."""
     c = p.get("company", {})
@@ -172,10 +183,9 @@ def fallback_memo(p: Dict[str, Any]) -> Dict[str, Any]:
 async def generate_memo(entity_id: str, payload: Dict[str, Any], refresh: bool = False,
                         cost_tracker: Optional[CostTracker] = None, allow_llm: bool = True) -> Dict[str, Any]:
     """Return the memo for one lead: cached if the facts did not change, else one OpenAI call."""
-    digest = hashlib.sha256(json.dumps(payload, sort_keys=True, default=str).encode()).hexdigest()[:16]
+    digest = memo_input_hash(payload)
     cached = load_cached_memo(entity_id)
-    if cached and not refresh and cached.get("memo_source", "").startswith("openai") and (
-            cached.get("input_hash") == digest or not allow_llm):
+    if cached and not refresh and cached.get("memo_source", "").startswith("openai") and cached.get("input_hash") == digest:
         return cached
 
     tracker = cost_tracker or CostTracker()

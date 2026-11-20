@@ -586,7 +586,82 @@ def test_founder_flags_follow_founder_records():
     profile = normalize_profile(with_cto)
     assert profile.fd_team_has_technical_founder and profile.fd_any_bigtech
 
-    fresh = normalize_profile(EnrichedProfile(founders_enriched=[EnrichedFounder(full_name="D", role="CEO")]),
-                              model_says_technical=True)
-    assert fresh.fd_team_has_technical_founder  # the model's own finding still counts for a fresh profile
+    # A fresh profile: the model's team-level flag counts only with a founder record behind it.
+    bare = normalize_profile(EnrichedProfile(founders_enriched=[EnrichedFounder(full_name="D", role="CEO")]),
+                             model_says_technical=True)
+    assert not bare.fd_team_has_technical_founder
+    for backing in ({"has_phd": True}, {"is_technical": True}):
+        fresh = normalize_profile(
+            EnrichedProfile(founders_enriched=[EnrichedFounder(full_name="D", role="CEO", **backing)]),
+            model_says_technical=True)
+        assert fresh.fd_team_has_technical_founder
     assert normalize_profile(EnrichedProfile(htgf_vertical="something else")).htgf_vertical == ""
+
+
+def test_kill_rules_need_a_real_gate():
+    from backend.enrichment.openai_enricher import age_kill_reason, funding_kill_reason
+
+    assert age_kill_reason(2021, False, None).startswith("Gate 3")
+    assert age_kill_reason(2025, True, "Founded in 2025") is None          # a known recent year wins
+    assert age_kill_reason(None, True, "Founded in 2025") is None          # reason names no old year
+    assert age_kill_reason(None, True, "Incorporated in 2019").startswith("Gate 3")
+    assert age_kill_reason(None, False, None) is None
+
+    assert funding_kill_reason(True, "CHF 150,000 from Venture Kick") is None
+    assert funding_kill_reason(True, "EXIST grant and an ERC Proof-of-Concept award") is None
+    assert funding_kill_reason(True, "Raised a EUR 4M seed round led by Earlybird").startswith("Gate 5")
+    assert funding_kill_reason(True, "Venture Kick prize, then a Series A from Lakestar").startswith("Gate 5")
+    assert funding_kill_reason(False, "Series A") is None
+
+
+def test_empty_research_is_retried_and_never_cached(tmp_path):
+    import asyncio
+    from types import SimpleNamespace
+    from backend.enrichment.cost_tracker import CostTracker
+    from backend.enrichment.openai_enricher import EnrichedFounder, OpenAIEnricher, _StructuredWebSearchOutput
+
+    def fake_client(results):
+        calls = {"n": 0}
+
+        async def responses_create(**_):
+            return SimpleNamespace(output=[], output_text="findings", usage=None)
+
+        async def parse(**_):
+            calls["n"] += 1
+            return SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(parsed=results[calls["n"] - 1]))], usage=None)
+
+        client = SimpleNamespace(
+            responses=SimpleNamespace(create=responses_create),
+            beta=SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(parse=parse))),
+        )
+        return client, calls
+
+    empty = _StructuredWebSearchOutput(canonical_name="Hydken")
+    good = _StructuredWebSearchOutput(
+        canonical_name="Hydken", description="Admixtures for low-carbon concrete.", htgf_vertical="industrial_climate_deeptech",
+        raised_institutional_round=True, funding_summary="Venture Kick prize",
+        founders=[EnrichedFounder(full_name="Dr. O", role="Co-Founder", has_phd=True, prior_companies=["Accenture"], is_ex_bigtech=True)],
+        fd_team_has_technical_founder=True,
+    )
+    candidate = {"entity_id": "hydken", "canonical_name": "Hydken", "signals": [], "founders": []}
+
+    def enricher(results, name):
+        e = OpenAIEnricher(cache_dir=tmp_path / name, api_key="test", cost_tracker=CostTracker(ledger_path=tmp_path / f"{name}.jsonl")
+                           if "ledger_path" in CostTracker.__init__.__code__.co_varnames else CostTracker())
+        e.client, calls = fake_client(results)
+        return e, calls
+
+    # blank first, good second -> one retry, good profile cached
+    e, calls = enricher([empty, good], "a")
+    profile = asyncio.run(e.enrich_async(candidate))
+    assert calls["n"] == 2 and profile.fd_enriched == 1 and len(profile.founders_enriched) == 1
+    assert not profile.is_post_enrichment_kill          # a prize is not a funding round
+    assert not profile.fd_any_bigtech                    # Accenture is not Big Tech
+    assert profile.fd_team_has_technical_founder        # model flag backed by a founder with a PhD
+    assert (tmp_path / "a" / "hydken.json").exists()
+
+    # blank twice -> unenriched, nothing cached, so the next run tries again
+    e, calls = enricher([empty, empty], "b")
+    profile = asyncio.run(e.enrich_async(candidate))
+    assert calls["n"] == 2 and profile.fd_enriched == 0
+    assert not (tmp_path / "b" / "hydken.json").exists()
