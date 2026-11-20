@@ -42,7 +42,7 @@ Target: `label_progressed` = raised a round after start, or exit. 368 of 688 are
 - Two models in one bundle (`model.joblib`):
   - `model_noacc`: default, for leads found before any accelerator. 23 features.
   - `model_acc`: used when the lead's `accelerator` column is filled. Same features plus accelerator dummies.
-- `ml_score` = percentile of the lead's predicted probability within the out-of-fold predictions on the training set. A score of 85 means "scores higher than 85% of the reference cohort". It is **not** a probability of success.
+- `ml_score` is a smooth 0–100 scale on the model's log-odds: 50 is the median startup of the reference cohort (out-of-fold predictions on the training set), about 60 is its top quarter, and the cohort's best is about 83. It is **not** a probability of success. `ml_percentile` (also in `data/ml_predictions.csv`) is the share of the reference cohort a lead scores above. The percentile is not used as the score because it saturates: on the first real run all 9 enriched leads landed at 99–100, since live leads have far more founder flags filled than training rows.
 - `cohort_year` is a training control only (older cohorts had more time to raise). At scoring it is fixed to 2021 for every lead, so it does not affect the order.
 - Missing `fd_*` founder flags are treated as 0. There is no "missing" indicator, so the model cannot reward a lead simply for having been enriched. A founder count of 0 is treated as unknown.
 - Descriptions are only used for keyword flags. TF-IDF on description text did not improve cross-validation.
@@ -63,6 +63,7 @@ How to read this: the model is a weak but real signal. It is better at pushing u
 - **Selection:** every training company was in an accelerator, and live leads are found before that. The ranking should transfer, absolute rates will not.
 - **Sparse founder data:** `fd_*` flags are filled for 1–28% of training rows, so their weights are noisy and should not be read as findings about founders.
 - **Visibility bias:** founders are easier to find for companies that did well. Encoding missing as 0 limits this but does not remove it. Enrich all leads to the same depth before scoring.
+- **Enrichment shift:** live leads are enriched much more densely than the training rows, so most of them score above 70. Read `ml_score` as an ordering of today's leads, not as distance from an average startup.
 - **Small sample:** 688 rows. Differences of a few `ml_score` points between two leads mean nothing.
 - **Outcome noise:** outcomes come from web research, and a company with no public trace counts as "did not progress".
 

@@ -398,7 +398,7 @@ Runs the ML ranking model on `data/live_candidates_for_ml.csv` (or on `leads` ro
   "scored": 42,
   "predictions_path": "data/ml_predictions.csv",
   "scores": [
-    {"company_id": "…", "ml_score": 95.8, "ml_probability": 0.8353, "model_used": "model_noacc",
+    {"company_id": "…", "ml_score": 83.5, "ml_percentile": 99.6, "ml_probability": 0.8353, "model_used": "model_noacc",
      "ml_drivers": [{"feature": "fd_any_phd", "label": "founder with a PhD", "value": 1.0, "contribution": 0.521}]}
   ],
   "memos": [
@@ -421,6 +421,6 @@ Runs the ML ranking model on `data/live_candidates_for_ml.csv` (or on `leads` ro
 Returns the same `memo` object for one lead. Cached memos are returned to everyone; a missing memo is generated with OpenAI only when the operator token is sent, otherwise a free template memo (`memo_source: "fallback_template"`) is returned.
 
 **UI notes:**
-- `ml_score` is a percentile (0–100), not a probability. Label it "ML rank" or similar.
+- `ml_score` is a 0–100 model score (50 = typical startup in the reference cohort), not a probability. `ml_percentile` (in the `scores` list) is the share of the reference cohort the lead scores above.
 - `top_signals[].source_url` can be `null`. `memo_source` is `"fallback_template"` when OpenAI was unavailable.
 - `GET /api/leads/{entity_id}` now includes `ml_memo` (`null` until generated).

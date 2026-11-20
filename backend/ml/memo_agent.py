@@ -35,11 +35,14 @@ You receive one JSON object with everything we know. Rules, no exceptions:
    of the entry in `signals`, or a founder's own link). Scores, ranks and model drivers have no URL: use null.
    Prefer signals that have a source over scores.
 3. A missing, null or empty field means UNKNOWN, not "no". Say "unknown" or put it under risks, never "has no X".
-4. `ml_score` is a percentile rank against our training cohort, NOT a probability of success. Describe it as
-   "scores above <ml_score>% of the reference cohort". Never write "<N>% chance". For the rank use only the
-   numbers in `scores.rank_today` and `scores.leads_today`; if they are absent, do not mention a rank.
-5. `ml_drivers` are facts about this company that pushed the ML score up (+) or down (-); explain them in plain
-   words. `not_verified_would_raise_ml_score` lists founder facts we could not verify: mention them only as unknowns.
+4. `ml_score` is a 0-100 model score where 50 is the typical startup in our reference cohort. `ml_percentile` is
+   the share of that cohort the lead scores above. Neither is a probability of success: never write "<N>% chance".
+   You may write "model score <ml_score> of 100" or, if `ml_percentile` is below 99, "scores above <ml_percentile>%
+   of the reference cohort"; at 99 or more write "at the top of the reference cohort". For the rank use only
+   `scores.rank_today` and `scores.leads_today`; if they are absent, do not mention a rank.
+5. `ml_drivers` are flags in our data that pushed the ML score up (+) or down (-); explain them in plain words.
+   A driver is a model input, not proof: if `founders` does not show who it refers to (e.g. no founder with a CTO
+   role), say the flag is set but not confirmed by the founder records, and do not state it as a fact. `not_verified_would_raise_ml_score` lists founder facts we could not verify: mention them only as unknowns.
    `base_rates` come from 688 accelerator-backed European startups (2014-2024): quote them as
    "in our training data" and treat them as correlations, not guarantees.
 6. Be concrete and short. No hype words. English.
@@ -111,6 +114,7 @@ def build_memo_input(lead: Dict[str, Any], rank: Optional[int], total: Optional[
             "blended_score": lead.get("blended_score"),
             "deterministic_score": bd.get("final_score", lead.get("deterministic_score")),
             "ml_score": lead.get("ml_score"),
+            "ml_percentile": (ml_row or {}).get("ml_percentile"),
             "deterministic_breakdown": {k: bd.get(k) for k in (
                 "team_pedigree", "commercial_intent", "technical_moat", "multi_signal_convergence", "htgf_mandate_fit")},
         },

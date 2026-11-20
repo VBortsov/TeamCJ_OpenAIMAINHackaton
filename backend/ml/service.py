@@ -31,7 +31,7 @@ def run_scoring(leads: Optional[List[Dict[str, Any]]] = None, input_path: Option
             raise FileNotFoundError(f"{path} not found. Run the wave-2 pipeline first or POST leads in the body.")
         df = pd.read_csv(path)
     if df.empty:
-        return pd.DataFrame(columns=["company_id", "ml_score", "ml_probability", "model_used", "contributions"])
+        return pd.DataFrame(columns=["company_id", "ml_score", "ml_percentile", "ml_probability", "model_used", "contributions"])
     res = score_frame(df).sort_values("ml_score", ascending=False).reset_index(drop=True)
     if write:
         ML_PRED_PATH.parent.mkdir(parents=True, exist_ok=True)

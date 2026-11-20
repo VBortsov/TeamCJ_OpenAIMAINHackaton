@@ -15,6 +15,8 @@ HERE = Path(__file__).resolve().parent
 
 from .features import build_features, has_accelerator  # noqa: E402
 
+SCORE_SCALE = 1.5  # log-odds units per "step" of the 0-100 ml_score scale
+
 LABELS = {
     "n_founders": "number of founders", "solo_founder": "solo founder", "has_cto_founder": "CTO among founders",
     "is_university_city": "based in a university city", "is_germany": "based in Germany", "country_FRA": "based in France",
@@ -47,11 +49,12 @@ def load_base_rates():
 
 
 def score_frame(df: pd.DataFrame, with_contributions: bool = True) -> pd.DataFrame:
-    """Return one row per lead: ml_score (0-100 percentile), ml_probability, model_used, contributions (list of dicts)."""
+    """Return one row per lead: ml_score (0-100, 50 = median reference startup), ml_percentile (vs. the reference cohort),
+    ml_probability (raw model output, uncalibrated), model_used, contributions (list of dicts)."""
     B = load_bundle()
     X = build_features(df)
     used = np.where(has_accelerator(df).values, "model_acc", "model_noacc")
-    prob = np.zeros(len(df)); score = np.zeros(len(df)); contribs = [None] * len(df)
+    prob = np.zeros(len(df)); score = np.zeros(len(df)); pct = np.zeros(len(df)); contribs = [None] * len(df)
     for name in ["model_acc", "model_noacc"]:
         m = used == name
         if not m.any():
@@ -59,7 +62,12 @@ def score_frame(df: pd.DataFrame, with_contributions: bool = True) -> pd.DataFra
         b = B[name]
         Xm = X.loc[m, b["columns"]]
         prob[m] = b["model"].predict_proba(Xm)[:, 1]
-        score[m] = np.searchsorted(b["reference"], prob[m], side="right") / len(b["reference"]) * 100
+        pct[m] = np.searchsorted(b["reference"], prob[m], side="right") / len(b["reference"]) * 100
+        # ml_score: smooth 0-100 scale on the log-odds, 50 = the median reference startup. The percentile alone
+        # saturates at 99-100 for well-enriched live leads (training rows rarely have founder flags filled).
+        ref_logit = np.log(b["reference"] / (1 - b["reference"]))
+        logit = np.log(prob[m] / (1 - prob[m]))
+        score[m] = 100 / (1 + np.exp(-(logit - np.median(ref_logit)) / SCORE_SCALE))
         if with_contributions:
             # contribution = weight per unit * (value - training mean): log-odds relative to the average training startup
             w = np.array([b["weights"][f] for f in b["columns"]])
@@ -74,5 +82,5 @@ def score_frame(df: pd.DataFrame, with_contributions: bool = True) -> pd.DataFra
                                   "contribution": round(float(c[row_i, j]), 3)})
                 contribs[idx] = sorted(items, key=lambda d: -abs(d["contribution"]))
     ids = df["company_id"] if "company_id" in df else pd.Series(range(len(df)), index=df.index)
-    return pd.DataFrame({"company_id": ids.values, "ml_score": np.round(score, 1), "ml_probability": np.round(prob, 4),
-                         "model_used": used, "contributions": contribs})
+    return pd.DataFrame({"company_id": ids.values, "ml_score": np.round(score, 1), "ml_percentile": np.round(pct, 1),
+                         "ml_probability": np.round(prob, 4), "model_used": used, "contributions": contribs})

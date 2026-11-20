@@ -597,7 +597,7 @@
       (brief.devils_advocate_risks?.length ? '<div><strong>Risks and unknowns</strong>' + bulletList(brief.devils_advocate_risks) + '</div>' : '') +
       part("Next step", brief.next_step) +
       '<p class="model-memo-note">' + (String(brief.memo_source || "").startsWith("openai")
-        ? 'Written by a language model from the sourced facts above. The model score is a rank against a reference cohort, not a probability.'
+        ? 'Written by a language model from the sourced facts above. The model score compares the venture with a reference cohort (50 is typical). It is not a probability.'
         : 'Template summary of the sourced facts above.') + '</p></div>';
   }
 
@@ -611,7 +611,7 @@
     const scores = [
       ["Overall sourcing score", memo.overall_score],
       ["Rules-based score", memo.deterministic_score],
-      ["Model rank (0–100)", memo.ml_score],
+      ["Model score (0–100)", memo.ml_score],
       ["Technology score", memo.technology_moat?.moat_score],
       ["Commercial score", memo.commercial_traction?.commercial_score]
     ].filter(([, value]) => Number.isFinite(value));
