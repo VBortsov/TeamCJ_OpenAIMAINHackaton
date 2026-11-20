@@ -1,0 +1,56 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Alvise Braga Illa",
+      "role": "Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder of TXT e-solutions"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 1989,
+  "city": "Milan",
+  "raised_institutional_round": false,
+  "funding_summary": "Listed on the Borsa Italiana–London Stock Exchange (TXT.MI) since July 2000. The company has grown organically and through acquisitions, including the purchase of PACE in 2016 and Cheleo in 2018.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 1989 (older than 3.5 years)",
+  "htgf_vertical": "Software Development and Consulting",
+  "inflection_why_now": "The increasing adoption of mixed reality technologies in aerospace and automotive industries presents a timely opportunity for TXT e-solutions to leverage its expertise in advanced software solutions.",
+  "devils_advocate_risks": [
+    "Integration Challenges: Combining new technologies with existing systems may face technical and operational hurdles.",
+    "Market Competition: The rapidly evolving software solutions market may intensify competition, affecting market share and profitability."
+  ],
+  "citations": [
+    "https://en.wikipedia.org/wiki/TXT_e-solutions",
+    "https://matrixbcg.com/blogs/owners/txtgroup",
+    "https://www.txtgroup.com/hubfs/TXT_Corp_Comm_AHT/TXT/docs/Investors%20Resources/Financial_Anayst_Coverage/2018/Edison_-_Report_13.11.2018.pdf?hsLang=it",
+    "https://www.txtgroup.com/news-events/news-press-releases/txt-e-solutions-joins-microsoft-mixed-reality-partner-program"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's focus on advanced materials and chemicals aligns with TXT e-solutions' expertise in software solutions for the aerospace and automotive industries, potentially fostering collaborations in digital manufacturing and materials innovation."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's enterprise software solutions could integrate with TXT e-solutions' engineering software products, enhancing digital transformation initiatives in sectors like aerospace and automotive."
+    }
+  ]
+}

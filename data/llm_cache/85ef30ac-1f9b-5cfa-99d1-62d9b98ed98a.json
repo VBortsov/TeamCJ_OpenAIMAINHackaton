@@ -1,0 +1,42 @@
+{
+  "founders_enriched": [],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Aachen",
+  "raised_institutional_round": true,
+  "funding_summary": "The project has received an EU contribution of €150,000 under the ERC Proof of Concept Grants.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (The project has received an EU contribution of €150,000 under the ERC Proof of Concept Grants.)",
+  "htgf_vertical": "Sustainable Mobility and Energy Solutions",
+  "inflection_why_now": "The increasing emphasis on sustainable mobility and the transition to hydrogen-based energy solutions necessitate advancements in hydrogen combustion technologies to meet environmental and efficiency standards.",
+  "devils_advocate_risks": [
+    "Technical Complexity: Developing accurate models and control strategies for hydrogen combustion involves intricate scientific and engineering challenges.",
+    "Market Adoption: Integrating new combustion technologies into existing engine platforms may face resistance due to established industry practices and infrastructure."
+  ],
+  "citations": [
+    "https://cordis.europa.eu/project/id/101335205"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "As a leading automotive supplier, Bosch's expertise in engine technology and control systems aligns with the project's objectives."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in sustainable technologies and materials could complement the project's focus on enhancing hydrogen combustion efficiency."
+    }
+  ]
+}

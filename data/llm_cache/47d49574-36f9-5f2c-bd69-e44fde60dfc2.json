@@ -1,0 +1,56 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Priya Darshani",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder of TaskHived"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing complexity and deployment of AI systems in real-world environments have heightened the need for independent reliability assurance, positioning TaskHived to address a critical market demand.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing enterprises to integrate independent AI reliability assessments into their deployment processes may face resistance due to established internal practices.",
+    "Scalability: Expanding TaskHived's assessment network to cover a broad range of industries and AI applications could present challenges in maintaining quality and consistency."
+  ],
+  "citations": [
+    "https://joinup.ch/startup/taskhived-1cc464e8-e278-4794-ad5b-a0776ec16376-12077",
+    "https://www.taskhived.com/press/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leading enterprise software company, SAP's interest in AI-driven solutions aligns with TaskHived's offerings in AI reliability assurance."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's investment in innovative technologies could complement TaskHived's services, particularly in sectors where AI deployment is critical."
+    }
+  ]
+}

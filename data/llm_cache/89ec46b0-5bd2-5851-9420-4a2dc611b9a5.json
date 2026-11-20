@@ -1,0 +1,80 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Yang Zhilin",
+      "role": "CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "Tsinghua University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder"
+    },
+    {
+      "full_name": "Zhou Xinyu",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "Tsinghua University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder"
+    },
+    {
+      "full_name": "Wu Yuxin",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "Tsinghua University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2023,
+  "city": "Beijing",
+  "raised_institutional_round": false,
+  "funding_summary": "Valued at US$300 million with an initial funding of US$60 million in March 2023. Followed by a US$1 billion funding round led by Alibaba in February 2024, a US$300 million investment by Tencent and Gaorong Capital in August 2024, a US$600 million funding round in October 2025, and a valuation of US$35 billion in July 2026.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company older than 3.5 years",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The rapid advancements in AI and the increasing demand for sophisticated language models present a timely opportunity for Moonshot AI to capitalize on its innovative technologies.",
+  "devils_advocate_risks": [
+    "Regulatory Challenges: Potential scrutiny and regulatory hurdles, especially concerning data privacy and international collaborations.",
+    "Market Competition: Intense competition from established AI firms and emerging startups could impact market share and growth prospects."
+  ],
+  "citations": [
+    "https://en.wikipedia.org/wiki/Moonshot_AI",
+    "https://stockanalysis.com/private/moonshot-ai/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Moonshot AI's focus on developing large language models and AI-driven applications aligns with SAP's interest in integrating advanced AI technologies into enterprise solutions."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "The company's emphasis on AI research and development complements Evonik's investment in innovative technologies, particularly those with applications in industrial sectors."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Laia Romero",
+      "role": "Co-founder and Managing Director",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "crunchbase.com"
+    },
+    {
+      "full_name": "Guillermo Grau",
+      "role": "Tech Lead",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "lobelia.earth"
+    },
+    {
+      "full_name": "Suso Peña-Izquierdo",
+      "role": "Lead Scientist",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "lobelia.earth"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2020,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "Lobelia Earth has received a total of €945,728 through nine public grants in Spain between 2022 and 2025.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2020 (older than 3.5 years)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing urgency of climate change and the need for precise environmental data.",
+  "devils_advocate_risks": [
+    "Data Accuracy and Reliability: Ensuring the precision of satellite-derived data is crucial for maintaining credibility and effectiveness.",
+    "Market Competition: The growing field of climate data analytics may lead to increased competition, requiring continuous innovation and differentiation."
+  ],
+  "citations": [
+    "https://www.crunchbase.com/organization/lobelia",
+    "https://www.lobelia.earth/about-us",
+    "https://www.infoempresa.com/es-es/es/empresa/lobelia-earth-sl",
+    "https://ayudascan.com/beneficiario/13722252-b67590687-lobelia-earth-s-l"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in specialty chemicals and materials science, aligning with Lobelia's focus on environmental data analytics and climate solutions."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's expertise in enterprise software and data analytics complements Lobelia's data-driven approach to climate risk assessment and management."
+    }
+  ]
+}

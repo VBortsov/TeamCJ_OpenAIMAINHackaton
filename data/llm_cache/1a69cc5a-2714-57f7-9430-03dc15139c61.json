@@ -1,0 +1,42 @@
+{
+  "founders_enriched": [],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Enschede",
+  "raised_institutional_round": false,
+  "funding_summary": "The project is funded under the European Research Council (ERC), but specific funding amounts are not disclosed.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "Cardiovascular Disease Modeling and Drug Testing",
+  "inflection_why_now": "The increasing prevalence of cardiovascular diseases necessitates innovative models for drug testing to expedite therapeutic development.",
+  "devils_advocate_risks": [
+    "Technical Risk: Challenges in accurately replicating human cardiac function in a miniaturized platform.",
+    "Regulatory Risk: Navigating complex medical device regulations to bring the platform to market."
+  ],
+  "citations": [
+    "https://cordis.europa.eu/project/id/101335553"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "As a pharmaceutical company, they have a vested interest in innovative drug testing platforms."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "With expertise in biotechnology, they could support advancements in medical device development."
+    }
+  ]
+}

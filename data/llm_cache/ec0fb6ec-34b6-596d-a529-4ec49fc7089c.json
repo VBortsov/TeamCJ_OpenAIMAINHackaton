@@ -1,0 +1,68 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Daniel Han",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "NVIDIA"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "anchorterminal.com"
+    },
+    {
+      "full_name": "Michael Han",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "anchorterminal.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2023,
+  "city": null,
+  "raised_institutional_round": true,
+  "funding_summary": "Unsloth raised $500,000 in a seed funding round in June 2024, backed by Y Combinator.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Unsloth raised $500,000 in a seed funding round in June 2024, backed by Y Combinator.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for efficient AI model training presents a timely opportunity for Unsloth's solutions to gain widespread adoption.",
+  "devils_advocate_risks": [
+    "Market Competition: The AI optimization space is highly competitive, with numerous startups and established companies vying for market share.",
+    "Scalability Challenges: Ensuring that Unsloth's solutions can scale effectively to meet the needs of large enterprises may pose technical and operational challenges."
+  ],
+  "citations": [
+    "https://www.anchorterminal.com/people/daniel-han/",
+    "https://www.anchorterminal.com/people/michael-han/",
+    "https://www.thecompanycheck.com/company/b/unsloth/ia6lgiwk9v3mcm9gv",
+    "https://www.youtube.com/watch?v=z9f4bEgFZCg"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Unsloth's focus on optimizing AI model training aligns with SAP's emphasis on enterprise software solutions, potentially enhancing SAP's AI capabilities."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Unsloth's advancements in AI could complement Evonik's interest in innovative technologies, fostering potential applications in materials science and chemical engineering."
+    }
+  ]
+}

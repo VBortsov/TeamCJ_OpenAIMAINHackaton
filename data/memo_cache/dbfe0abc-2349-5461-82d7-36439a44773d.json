@@ -1,0 +1,27 @@
+{
+  "one_liner": "superglue builds AI agents that run ERP implementations for consultants; its Y Combinator participation and live demo booking make it worth an early conversation.",
+  "top_signals": [
+    {
+      "signal": "Participated in Y Combinator’s Winter 2025 batch.",
+      "source_url": "https://www.ycombinator.com/companies/superglue"
+    },
+    {
+      "signal": "The live site takes demo bookings; customer adoption is unknown.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 69.9 of 100 (above 95.9% of the reference cohort). YC participation, deep-tech and B2B classifications, AI mentions, and a co-founder in the CTO role lifted the score; being based in Germany lowered it. A technical-founder flag also lifted the score but is not confirmed by the founder records.",
+      "source_url": null
+    }
+  ],
+  "team": "Adina Goerres is co-founder and CEO; Stefan Faistenauer is co-founder and CTO. The records identify their roles but do not verify a technical background for either founder.",
+  "why_early": "Unknown whether a priced round has occurred. YC participation does not establish priced-round status.",
+  "devils_advocate_risks": [
+    "Consultants and enterprises may hesitate to rely on AI agents for ERP implementation.",
+    "Integrating with different ERP systems and existing IT infrastructure could require substantial effort."
+  ],
+  "next_step": "HTGF Industrial Tech team: Ask the founders which ERP implementation tasks consultants have run with superglue on live client projects.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "dbfe0abc-2349-5461-82d7-36439a44773d",
+  "input_hash": "c2fd2c25132bc600"
+}

@@ -1,0 +1,66 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Stanley Lapidus",
+      "role": "Engineer",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founded Exact Sciences"
+    },
+    {
+      "full_name": "Anthony P. Shuber",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founded Exact Sciences"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 1995,
+  "city": "Marlborough",
+  "raised_institutional_round": true,
+  "funding_summary": "Exact Sciences has raised a total of $1.2 billion across five funding rounds, including an IPO in January 2001 and subsequent rounds in June 2009, July 2015, February 2020, and March 2023.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 1995 (older than 3.5 years)",
+  "htgf_vertical": "molecular diagnostics",
+  "inflection_why_now": "The acquisition of Thrive Earlier Detection Corp. in 2020 positions Exact Sciences to expand into multi-cancer early detection, potentially revolutionizing cancer screening.",
+  "devils_advocate_risks": [
+    "Regulatory Challenges: Navigating complex FDA approval processes for new diagnostic tests.",
+    "Market Competition: Facing competition from emerging biotech firms in the cancer diagnostics space."
+  ],
+  "citations": [
+    "https://www.bccresearch.com/company-index/profile/exact-sciences-corp/history",
+    "https://startupintros.com/orgs/exact-sciences",
+    "https://www.owler.com/company/exactsciences/funding",
+    "https://www.hopkinsmedicine.org/news/articles/2022/02/how-inventors-vision-for-early-cancer-detection-got-a-21-billion-boost"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, aligning with Exact Sciences' focus on innovative diagnostic technologies."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim invests in healthcare innovations, complementing Exact Sciences' mission in cancer diagnostics."
+    }
+  ]
+}

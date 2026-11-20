@@ -1,0 +1,82 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Thomas Kluiters",
+      "role": "Former CEO of Juvoly and software engineer at IMC",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Juvoly",
+        "IMC"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Dutch Startup"
+    },
+    {
+      "full_name": "Raoul Ritter",
+      "role": "Former software engineer at Adyen",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Adyen"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Dutch Startup"
+    },
+    {
+      "full_name": "Jarno Verhagen",
+      "role": "Former CTO at Juvoly",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Juvoly"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Dutch Startup"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "Amsterdam",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised €5 million in a pre-seed funding round in March 2026, led by Balderton Capital with participation from NP Hard Ventures.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised €5 million in a pre-seed funding round in March 2026, led by Balderton Capital with participation from NP Hard Ventures.)",
+  "htgf_vertical": "Speech Recognition",
+  "inflection_why_now": "The increasing demand for accurate speech recognition in diverse European languages presents a timely opportunity for Reson8's specialized solutions.",
+  "devils_advocate_risks": [
+    "Challenges in scaling the technology to handle a wide range of European dialects and specialized industry terminology.",
+    "Potential difficulties in establishing partnerships with large enterprises due to integration complexities."
+  ],
+  "citations": [
+    "https://www.dutchstartup.ai/en/founders/thomas-kluiters",
+    "https://www.dutchstartup.ai/en/founders/raoul-ritter",
+    "https://www.balderton.com/news/reson8-raises-e5m-to-build-hyper-customised-europe-first-speech-ai/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's enterprise software solutions could integrate Reson8's ASR for enhanced data processing."
+    },
+    {
+      "lp_name": "QIAGEN",
+      "reason": "QIAGEN's diagnostics platforms could benefit from improved voice-driven data entry and analysis."
+    }
+  ]
+}

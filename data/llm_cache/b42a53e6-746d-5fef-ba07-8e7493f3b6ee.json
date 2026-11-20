@@ -1,0 +1,65 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Vaibhav Dubey",
+      "role": "Founder & CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder & CEO"
+    },
+    {
+      "full_name": "Marcello De Bernardi",
+      "role": "Founder & CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder & CTO"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Plexe has raised a total of $2.6 million, with a reported valuation of $7.1 million as of October 2026. Latest funding round was a seed round completed in August 2025.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Plexe has raised a total of $2.6 million, with a reported valuation of $7.1 million as of October 2026. Latest funding round was a seed round completed in August 2025.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for AI-driven predictive models in various industries presents a timely opportunity for Plexe to capitalize on its expertise.",
+  "devils_advocate_risks": [
+    "Market Competition: The AI and machine learning sector is highly competitive, with numerous players offering similar solutions.",
+    "Scalability Challenges: Ensuring that Plexe's AI models can scale effectively across diverse industries and applications may pose technical challenges."
+  ],
+  "citations": [
+    "https://www.roundfunded.com/en/yc-startup/plexe",
+    "https://privatemarketview.com/companies/plexe-ai/valuation",
+    "https://www.caplight.com/company/plexe"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Plexe's focus on building predictive ML models aligns with SAP's emphasis on integrating advanced analytics into enterprise solutions."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Plexe's expertise in AI-driven solutions could complement Evonik's interest in innovative technologies within the chemical industry."
+    }
+  ]
+}

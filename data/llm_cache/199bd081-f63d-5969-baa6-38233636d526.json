@@ -1,0 +1,31 @@
+{
+  "founders_enriched": [],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "AI",
+  "inflection_why_now": "The AI industry is experiencing rapid advancements, and 'DavidAU's development of open-weight models on Hugging Face positions it to contribute significantly to this evolving landscape.",
+  "devils_advocate_risks": [
+    "Market Competition: The AI model development space is highly competitive, with numerous entities vying for dominance. 'DavidAU' may face challenges in differentiating its offerings and capturing market share.",
+    "Sustainability of Open-Weight Models: Relying on open-weight models can present challenges in terms of monetization and long-term sustainability, as the open-source nature may limit revenue generation opportunities."
+  ],
+  "citations": [],
+  "lp_synergy_matches": []
+}

@@ -1,0 +1,70 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Florian Wirsing",
+      "role": "CEO and Founder",
+      "linkedin_url": "https://de.linkedin.com/in/florian-wirsing-8b82671b9",
+      "has_phd": false,
+      "universities": [
+        "RWTH Aachen University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder of Senlytics; Master's degree with distinction in intelligent condition monitoring systems for industrial machines."
+    },
+    {
+      "full_name": "Oliver Kokron",
+      "role": "Co-Founder",
+      "linkedin_url": "https://de.linkedin.com/in/oliver-kokron/de",
+      "has_phd": false,
+      "universities": [
+        "RWTH Aachen University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-Founder of Senlytics; specializing in product development with a focus on IIoT."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Aachen",
+  "raised_institutional_round": false,
+  "funding_summary": "No publicly available information regarding any funding rounds or investments raised by Senlytics GmbH.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "Renewable Energy, Technology",
+  "inflection_why_now": "The increasing global emphasis on renewable energy and predictive maintenance solutions presents a timely opportunity for Senlytics to address the critical need for efficient wind turbine operation and maintenance.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing established wind turbine operators to adopt new condition monitoring technologies may face resistance due to existing maintenance practices and investment in current systems.",
+    "Technological Integration: Ensuring seamless integration of Senlytics' sensor technology with diverse wind turbine models and existing infrastructure could pose technical challenges."
+  ],
+  "citations": [
+    "https://de.linkedin.com/in/florian-wirsing-8b82671b9",
+    "https://de.linkedin.com/in/oliver-kokron/de",
+    "https://www.linkedin.com/posts/rwthinnovation_rwthspinoffaward-rwthdemoday-innovationwithimpact-activity-7465780182038142977-oZ4H",
+    "https://www.online-handelsregister.de/handelsregisterauszug/nw/Aachen/HRB/29149/Senlytics-GmbH"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could synergize with Senlytics' focus on condition monitoring systems for industrial machinery."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch's expertise in industrial technology and sensor systems aligns well with Senlytics' development of robust sensor technology for early detection of wear and damage in wind turbine drivetrains."
+    }
+  ]
+}

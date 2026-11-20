@@ -1,0 +1,69 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Henry Ndubuaku",
+      "role": "Founder and CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "Queen Mary University of London"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Roman Shemet",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "ycombinator.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "San Francisco",
+  "raised_institutional_round": true,
+  "funding_summary": "Completed two seed funding rounds, with details about the investors and amounts not publicly disclosed.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Completed two seed funding rounds, with details about the investors and amounts not publicly disclosed.)",
+  "htgf_vertical": "AI Solutions for Mobile and Wearable Devices",
+  "inflection_why_now": "The increasing demand for efficient, low-latency AI solutions for mobile and wearable devices presents a timely opportunity for Cactus Compute's offerings.",
+  "devils_advocate_risks": [
+    "Market Adoption: Achieving widespread adoption of on-device AI solutions may face challenges due to competition and integration complexities.",
+    "Scalability: Ensuring the scalability of AI models across diverse devices with varying hardware capabilities could pose technical hurdles."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/companies/cactus-compute",
+    "https://svatlas.io/founders/05655535-cc4c-4146-a4ea-6952240a13ac",
+    "https://foundermag.co/startup-spotlight/cactus-compute/",
+    "https://www.crunchbase.com/organization/cactus-4616",
+    "https://www.youtube.com/watch?v=Vb98g4GmujU"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Cactus Compute's focus on on-device AI for mobile devices aligns with SAP's interest in integrating advanced technologies into enterprise solutions."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Cactus Compute's expertise in AI for wearables and smart devices complements Evonik's investments in innovative technologies for industrial applications."
+    }
+  ]
+}

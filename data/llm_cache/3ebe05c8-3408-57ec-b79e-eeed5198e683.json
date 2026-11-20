@@ -1,0 +1,74 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Arman Karégar",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "KTH Royal Institute of Technology",
+        "Nanyang Technological University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Startup CEO"
+    },
+    {
+      "full_name": "Max Henry Xie",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "KTH Royal Institute of Technology"
+      ],
+      "prior_companies": [
+        "PayPal"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "AI/Data Scientist"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Stockholm",
+  "raised_institutional_round": false,
+  "funding_summary": "As of November 2026, Vetnio has raised a total of $1 million, including $500K in a Seed round in December 2024 and $500K in a Pre-Seed round in January 2025.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "Veterinarians spend up to 40% of their time on administrative tasks; Vetnio's AI Copilot addresses this inefficiency, enabling professionals to focus more on patient care.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing veterinary clinics to integrate AI solutions into their established workflows may face resistance due to technological apprehension.",
+    "Regulatory Compliance: Ensuring the AI platform adheres to diverse data protection regulations across different regions could be complex and resource-intensive."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/founders/arman-karegar",
+    "https://fundraisingfox.com/companies/vetnio",
+    "https://startupintros.com/orgs/vetnio",
+    "https://www.vcbacked.co/company/vetnio",
+    "https://vetnio.com/blog/why-vetnio-has-become-europes-leading-veterinary-ai-copilot"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Vetnio's AI-driven platform automates administrative tasks for veterinary professionals, aligning with Boehringer Ingelheim's focus on innovative solutions in animal health."
+    },
+    {
+      "lp_name": "Eppendorf SE",
+      "reason": "Vetnio's integration with practice management systems like Provet Cloud complements Eppendorf's expertise in laboratory equipment, potentially enhancing veterinary diagnostics and workflows."
+    }
+  ]
+}

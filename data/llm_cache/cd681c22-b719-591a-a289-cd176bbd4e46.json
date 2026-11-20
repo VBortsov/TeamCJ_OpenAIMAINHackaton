@@ -1,0 +1,70 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Joe Savidge",
+      "role": "Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Palantir"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "Former pod lead at Palantir, previously a founder and investment banker."
+    },
+    {
+      "full_name": "Shav Vimalendiran",
+      "role": "Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "algorithmic hedge fund",
+        "fintech company"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Ex-Quant Developer at an algorithmic hedge fund and founding engineer at a fintech company."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "Raised $500K in a Pre-Seed round in February 2025.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "AI-driven compliance solutions",
+  "inflection_why_now": "The increasing complexity of global regulations necessitates automated compliance solutions, positioning SAMMY Labs' AI-driven platform as a timely solution.",
+  "devils_advocate_risks": [
+    "Dependence on regulatory bodies' adoption of AI-driven compliance tools may slow market penetration.",
+    "Potential challenges in integrating SAMMY Labs' platform with diverse enterprise systems could hinder scalability."
+  ],
+  "citations": [
+    "https://fundraisingfox.com/companies/sammy-labs",
+    "https://standout.work/companies/sammy-labs",
+    "https://www.vcbacked.co/company/sammy-labs"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leader in enterprise software, SAP could benefit from SAMMY Labs' AI-driven compliance solutions to enhance their product offerings."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "With a focus on digitalization in the chemical industry, Evonik could leverage SAMMY Labs' technology to streamline regulatory compliance processes."
+    }
+  ]
+}

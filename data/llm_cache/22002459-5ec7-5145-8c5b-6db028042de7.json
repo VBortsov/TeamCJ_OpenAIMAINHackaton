@@ -1,0 +1,95 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Hendrik Kolvenbach",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "RWTH Aachen",
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder of UpCircle Technology"
+    },
+    {
+      "full_name": "Fidel Esquivel",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder of UpCircle Technology"
+    },
+    {
+      "full_name": "Adrian M. Ensmenger",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder of UpCircle Technology"
+    },
+    {
+      "full_name": "Dario Strübin",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder of UpCircle Technology"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2024,
+  "city": "Zurich",
+  "raised_institutional_round": true,
+  "funding_summary": "The company has raised a total of $220K, with the last funding round of $170K occurring two years ago.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (The company has raised a total of $220K, with the last funding round of $170K occurring two years ago.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing global emphasis on sustainability and circular economy practices presents a timely opportunity for UpCircle's AI-driven recycling solutions.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing traditional recycling industries to adopt new AI technologies may face resistance.",
+    "Scalability: Ensuring that UpCircle's solutions can be effectively scaled across diverse recycling facilities poses a challenge."
+  ],
+  "citations": [
+    "https://www.upcircle.ai/about",
+    "https://ch.linkedin.com/company/eth-zurich-technology-transfer-office",
+    "https://www.linkedin.com/company/up-circle/",
+    "https://www.cbinsights.com/company/up-circle"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, aligning with UpCircle's focus on material intelligence for recycling."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim's interest in sustainable technologies complements UpCircle's mission to enhance recycling processes."
+    }
+  ]
+}

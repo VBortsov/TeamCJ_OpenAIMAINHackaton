@@ -1,0 +1,63 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Francesco Morsiani",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder"
+    },
+    {
+      "full_name": "Vincenzo Nuti",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2002,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "E4 Computer Engineering SpA has received multiple grants from the European Union totaling approximately €5.05 million from 2017 to 2020, indicating a history of funding through grants rather than traditional venture capital investments.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2002 (older than 3.5 years)",
+  "htgf_vertical": "High-performance computing and AI solutions",
+  "inflection_why_now": "The increasing demand for high-performance computing and AI solutions presents a significant growth opportunity for E4 Computer Engineering.",
+  "devils_advocate_risks": [
+    "Market Competition: The rapidly evolving tech landscape may intensify competition, challenging E4's market position.",
+    "Technological Advancements: Keeping pace with rapid technological changes requires continuous innovation and investment."
+  ],
+  "citations": [
+    "https://www.thecompanycheck.com/company/b/e4-computer-engineering/h4voss1bsddz1ul8n"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's focus on advanced materials and chemicals aligns with E4's expertise in high-performance computing and AI, potentially enhancing Evonik's R&D capabilities."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's enterprise software solutions could benefit from E4's high-performance computing infrastructure, improving data processing and analytics for SAP's clients."
+    }
+  ]
+}

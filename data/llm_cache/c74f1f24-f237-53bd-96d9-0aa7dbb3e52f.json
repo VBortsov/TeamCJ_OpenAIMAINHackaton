@@ -1,0 +1,66 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Aharon Yechezkel",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of Softreg"
+    },
+    {
+      "full_name": "Anna-Marie Makarova",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of Softreg"
+    },
+    {
+      "full_name": "Alistair Venables",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of Softreg"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "No publicly available information regarding its funding history or whether it has raised Series A funding or €3 million or more.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "Softreg's recognition at the 2026 Venture Awards highlights its innovative approach in the business and finance sector, positioning it for significant growth.",
+  "devils_advocate_risks": [
+    "Market Penetration: As a new entrant in the business and finance sector, Softreg may face challenges in establishing a strong market presence and competing with established players.",
+    "Scalability: The company's ability to scale its operations effectively to meet growing demand could be hindered by resource constraints or operational inefficiencies."
+  ],
+  "citations": [
+    "https://ethz.ch/en/news-and-events/eth-news/news/2026/06/double-success-for-eth-entrepreneurs-at-the-venture-awards.html",
+    "https://transfer.ethz.ch/founders.html",
+    "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+  ],
+  "lp_synergy_matches": []
+}

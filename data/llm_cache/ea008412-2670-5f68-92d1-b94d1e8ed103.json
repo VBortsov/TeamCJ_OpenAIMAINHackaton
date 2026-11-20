@@ -1,0 +1,68 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Yan Junjie",
+      "role": "Chairman, CEO, CTO",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "Institute of Automation at the Chinese Academy of Sciences",
+        "Tsinghua University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder of MiniMax"
+    },
+    {
+      "full_name": "Ms. Yun Yeyi",
+      "role": "COO, Executive Director",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder of MiniMax"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2021,
+  "city": "Shanghai",
+  "raised_institutional_round": true,
+  "funding_summary": "MiniMax has raised approximately $1.15 billion in private funding, including a $300 million Series B extension in July 2025 at a $4 billion valuation. The company went public on the Hong Kong Stock Exchange in January 2026, raising about $619 million in its IPO.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2021 (older than 3.5 years)",
+  "htgf_vertical": "Artificial Intelligence",
+  "inflection_why_now": "The rapid adoption of AI across industries presents a timely opportunity for MiniMax to leverage its multimodal models in diverse applications.",
+  "devils_advocate_risks": [
+    "Market Competition: The AI sector is highly competitive, with numerous players vying for market share, which could impact MiniMax's growth trajectory.",
+    "Regulatory Challenges: As AI technologies evolve, navigating complex regulatory environments may pose challenges to MiniMax's operations and expansion plans."
+  ],
+  "citations": [
+    "https://minimax-ai.chat/guide/minimax-ai-company/",
+    "https://hokai.io/hub/companies/minimax",
+    "https://sacra.com/c/minimax/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's enterprise software solutions could integrate with MiniMax's AI models to enhance data analytics and business intelligence capabilities."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's focus on specialty chemicals aligns with MiniMax's AI applications in materials science, potentially leading to innovative product developments."
+    }
+  ]
+}

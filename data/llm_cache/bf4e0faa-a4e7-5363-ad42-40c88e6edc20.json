@@ -1,0 +1,87 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Willem Mulder",
+      "role": "Professor in Precision Medicine",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "Eindhoven University of Technology",
+        "Radboud University Medical Center"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Leading figure in the LOCAL-CAR project."
+    },
+    {
+      "full_name": "Roy van der Meel",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Collaborator on the LOCAL-CAR project."
+    },
+    {
+      "full_name": "Matt Timmers",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Collaborator on the LOCAL-CAR project."
+    },
+    {
+      "full_name": "Ewelina Kluza",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Collaborator on the LOCAL-CAR project."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Eindhoven",
+  "raised_institutional_round": true,
+  "funding_summary": "Funded under the ERC Proof of Concept grant, with a net EU contribution of €125,000.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Funded under the ERC Proof of Concept grant, with a net EU contribution of €125,000.)",
+  "htgf_vertical": "Biotechnology",
+  "inflection_why_now": "The increasing prevalence of peritoneal cancers and the limitations of current treatments underscore the urgent need for innovative localized immunotherapies like LOCAL-CAR.",
+  "devils_advocate_risks": [
+    "Regulatory Approval: Navigating the complex regulatory pathways for new immunotherapies may delay product development.",
+    "Clinical Efficacy: Ensuring the hydrogel-nanoparticle platform's effectiveness in diverse patient populations is critical for success."
+  ],
+  "citations": [
+    "https://www.miragenews.com/erc-proof-of-concept-for-flowfacade-local-car-1701932/",
+    "https://cordis.europa.eu/project/id/101334969"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim's focus on innovative therapies aligns with LOCAL-CAR's development of localized mRNA immunotherapy platforms."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's expertise in biocompatible materials complements LOCAL-CAR's work on hydrogel-based delivery systems."
+    }
+  ]
+}

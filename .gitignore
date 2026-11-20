@@ -18,11 +18,16 @@ build/
 dist/
 *.egg-info/
 
-# Data, SQLite databases, and HTTP cache
-data/
-*.db
-*.sqlite
-*.sqlite3
+# Ephemeral & heavy scraper / HTTP caches (> 80 MB)
+data/http_cache/
+data/cordis_cache/
+data/tld_cache/
+data/cost_ledger.jsonl
+data/saved_workspace.json
+data/live_leads/
+data/wave1_candidates.json
+data/wave2_candidates.json
+data/gemini_research_raw.md
 
 # OS & IDE metadata
 .DS_Store

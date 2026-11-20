@@ -1,0 +1,27 @@
+{
+  "one_liner": "Revonode develops AI tools for biotech investment diligence; its 2026 recognition as an ETH Zurich spin-off is a reason to reach out now.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich's 2026 roster recognizes Revonode as a spin-off.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "The founder records list two ETH Zurich co-founders: a CEO with a PhD and a CTO.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 79.9 of 100 (at the top of the reference cohort); ranked 8 of 63 leads today. Spin-off status, deep-tech classification, and the PhD, CTO and ETH Zurich backgrounds pushed the score up. The technical-founder flag also lifted the score but is not confirmed by the founder records.",
+      "source_url": null
+    }
+  ],
+  "team": "Matti Kesti is co-founder and CEO; his record lists ETH Zurich, a PhD and prior experience at Auregen Biotherapeutics SA. Ping-Hsun Tsai is co-founder and CTO; his record lists ETH Zurich.",
+  "why_early": "Unknown. Funding history is not publicly available, so whether a priced round has happened is unverified.",
+  "devils_advocate_risks": [
+    "Biotech investors may be reluctant to switch from established diligence workflows.",
+    "Handling sensitive biotech data creates privacy and compliance risks."
+  ],
+  "next_step": "HTGF Industrial Tech team: Ask which step in biotech investment diligence founders are testing with prospective customers.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "20819852-d36b-5d54-ac57-4af51cf03dca",
+  "input_hash": "442793b47f1dbebe"
+}

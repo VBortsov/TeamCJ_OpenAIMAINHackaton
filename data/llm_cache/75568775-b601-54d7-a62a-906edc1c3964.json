@@ -1,0 +1,117 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Alexandru Kampmann",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of Determion"
+    },
+    {
+      "full_name": "Dr. Dominik Püllen",
+      "role": "Co-founder and CTO",
+      "linkedin_url": "https://de.linkedin.com/in/dominik-p%C3%BCllen-54b438319",
+      "has_phd": true,
+      "universities": [
+        "Technische Universität Darmstadt"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of Determion"
+    },
+    {
+      "full_name": "Niels Schneider",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of Determion"
+    },
+    {
+      "full_name": "Joschko Rehder",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of Determion"
+    },
+    {
+      "full_name": "Michael Petrosyan",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of Determion"
+    },
+    {
+      "full_name": "Jonas Hegerath",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of Determion"
+    },
+    {
+      "full_name": "Roni Ibrahim",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of Determion"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Aachen",
+  "raised_institutional_round": false,
+  "funding_summary": "No publicly available information regarding their funding history.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "Safety-critical systems for automotive applications",
+  "inflection_why_now": "The increasing integration of AI in safety-critical systems necessitates reliable, traceable, and maintainable software solutions, positioning Determion's offerings as timely and essential.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing established industries to transition from proprietary to open-source solutions may present challenges.",
+    "Regulatory Compliance: Ensuring that their software meets the stringent standards required for safety-critical systems across various sectors."
+  ],
+  "citations": [
+    "https://de.linkedin.com/in/dominik-p%C3%BCllen-54b438319",
+    "https://www.linkedin.com/company/edgeflowsystems",
+    "https://de.linkedin.com/company/determion-gmbh"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Their focus on automotive technologies aligns with Determion's expertise in safety-critical systems for automotive applications."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in advanced materials and technologies complements Determion's work in developing open-source software for safety-critical systems."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "one_liner": "Vantel builds an AI platform for commercial insurance brokerages; its Y Combinator listing makes it worth tracking, but a reported seed round puts it past HTGF’s first-round window.",
+  "top_signals": [
+    {
+      "signal": "Vantel is listed in Y Combinator’s 2025–2026 European cohort.",
+      "source_url": "https://www.ycombinator.com/companies/vantel"
+    },
+    {
+      "signal": "The funding summary reports a $2 million seed round in March 2025 from Y Combinator, Inception Fund, Rebel Fund, and angel investors.",
+      "source_url": null
+    },
+    {
+      "signal": "The lead ranks 13th of 63 today, with a model score 84.5 of 100 (at the top of the reference cohort). Fintech, deep tech, and YC participation flags lifted the score, as did flags for a founder CTO, a technical founder, study abroad, and attendance at a top university and a leading business school. The founder records confirm the CTO role but do not confirm the technical-founder flag, study abroad, or the school classifications.",
+      "source_url": null
+    }
+  ],
+  "team": "Love Redin is founder and CEO; Ulme Wennberg is founder and CTO. Both list KTH Royal Institute of Technology. Wennberg also lists the Stockholm School of Economics and the University of Washington.",
+  "why_early": "Unknown whether the reported March 2025 seed round was priced. The reported $2 million raise means Vantel is not a pre-first-round lead.",
+  "devils_advocate_risks": [
+    "Established brokers may resist integrating AI into their workflows.",
+    "Adapting the platform to different insurance products and regional regulations could complicate scaling."
+  ],
+  "next_step": "HTGF Industrial Tech team: confirm funding status before pursuing. Ask the founders: Was the March 2025 seed round a priced equity round?",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "071c673e-7961-5375-a18d-9c2eeef66bd4",
+  "input_hash": "5e91837478c30009"
+}

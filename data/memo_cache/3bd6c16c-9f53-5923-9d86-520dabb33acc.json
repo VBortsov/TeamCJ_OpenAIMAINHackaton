@@ -1,0 +1,28 @@
+{
+  "one_liner": "Hydken develops low-carbon concrete solutions and was recognized as an ETH Zurich spin-off in 2026.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich lists Hydken on its 2026 spin-off roster.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "Hydken has an established legal entity, Hydken GmbH, in Zurich.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 76.4 of 100 (at the top of the reference cohort). The model rewarded university spin-off status, a deep-tech classification, and a founder's top-university background. It also rewarded flags for prior work at a top consultancy, study abroad, and prior startup founding. The founder records list consulting employers but do not confirm the top-consultancy designation, study abroad, or prior startup founding.",
+      "source_url": null
+    }
+  ],
+  "team": "Olga Meichtry studied at EPFL and previously worked at Accenture, EY, and CEMEX. Arnesh Das studied at ETH Zurich and previously worked at Calspak. Their founder roles are unknown.",
+  "why_early": "Unknown whether a priced round has occurred; no funding history is publicly available.",
+  "devils_advocate_risks": [
+    "It is unknown whether the team includes a technical founder.",
+    "Established construction practices may slow adoption of low-carbon concrete.",
+    "Environmental regulations that vary by region may complicate deployment."
+  ],
+  "next_step": "HTGF Industrial Tech team: Ask the founders what test results show about compressive strength and embodied carbon versus conventional concrete.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "3bd6c16c-9f53-5923-9d86-520dabb33acc",
+  "input_hash": "e50b157d3235e575"
+}

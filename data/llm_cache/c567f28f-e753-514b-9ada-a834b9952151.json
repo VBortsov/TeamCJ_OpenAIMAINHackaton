@@ -1,0 +1,96 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Linus Meierhöfer",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [
+        "DRW"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "fundraisingfox.com"
+    },
+    {
+      "full_name": "Lukas Ego",
+      "role": "Founder and Chief Product Officer",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [
+        "Augento",
+        "SMA"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "fundraisingfox.com"
+    },
+    {
+      "full_name": "Hannes Furmans",
+      "role": "Founder and CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "fundraisingfox.com"
+    },
+    {
+      "full_name": "Josef Zoller",
+      "role": "Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "fundraisingfox.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Zurich",
+  "raised_institutional_round": true,
+  "funding_summary": "Stillwind participated in Y Combinator's Winter 2025 batch and secured initial funding from Y Combinator.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Stillwind participated in Y Combinator's Winter 2025 batch and secured initial funding from Y Combinator.)",
+  "htgf_vertical": "Advanced materials and chemicals",
+  "inflection_why_now": "The increasing complexity of electronic designs and the need for efficient component selection make Stillwind's AI-driven solution timely and essential for hardware developers.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing hardware developers to adopt a new AI-driven component selection tool may face resistance due to established workflows.",
+    "Data Accuracy: Ensuring the AI system's database remains accurate and up-to-date with the latest component specifications is crucial for maintaining reliability."
+  ],
+  "citations": [
+    "https://fundraisingfox.com/companies/stillwind"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could benefit from Stillwind's AI-powered component search engine to streamline material selection processes."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's enterprise software solutions could integrate with Stillwind's platform to enhance product development workflows for their industrial clients."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "one_liner": "Determion is developing open-source software for safety-critical systems; RWTH Aachen’s 2026 Spin-off Award is a reason to reach out now.",
+  "top_signals": [
+    {
+      "signal": "Won the 2026 RWTH Aachen University Spin-off Award.",
+      "source_url": "https://www.rwth-aachen.de/cms/root/wir/Profil/Auszeichnungen-und-Ehrungen/Spin-off-Award/~bsjmkr/Determion/lidx/1/"
+    },
+    {
+      "signal": "Co-founder and CTO Dr. Dominik Püllen holds a PhD.",
+      "source_url": "https://de.linkedin.com/in/dominik-p%C3%BCllen-54b438319"
+    },
+    {
+      "signal": "Ranked 2 of 63 leads today, with a model score 92.5 of 100 (at the top of the reference cohort). The model gave credit for the university spin-off and deep-tech flags and marked the German location down slightly.",
+      "source_url": null
+    }
+  ],
+  "team": "The founder records list seven co-founders: CEO Dr. Alexandru Kampmann and CTO Dr. Dominik Püllen, both PhD holders, plus Niels Schneider, Joschko Rehder, Michael Petrosyan, Jonas Hegerath and Roni Ibrahim. The model gave credit for six known founders, a founder with a PhD and a co-founder serving as CTO. It also gave credit for technical-founder and top-university flags, neither of which is confirmed by the founder records.",
+  "why_early": "Unknown. No public funding history is available, so it is unclear whether a priced round has occurred.",
+  "devils_advocate_risks": [
+    "Industrial customers may be reluctant to switch from proprietary software to an open-source stack.",
+    "Whether the software meets the applicable safety standards is unknown."
+  ],
+  "next_step": "HTGF Industrial Tech team: Ask the founders which safety standard they are targeting for their first industrial deployment.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "75568775-b601-54d7-a62a-906edc1c3964",
+  "input_hash": "323b623b42936c28"
+}

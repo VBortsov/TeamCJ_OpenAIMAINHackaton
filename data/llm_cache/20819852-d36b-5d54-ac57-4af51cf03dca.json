@@ -1,0 +1,71 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Matti Kesti",
+      "role": "Co-founder & CEO",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [
+        "Auregen Biotherapeutics SA"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder & CEO of Revonode"
+    },
+    {
+      "full_name": "Ping-Hsun Tsai",
+      "role": "Co-founder & CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder & CTO of Revonode"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "No publicly available information regarding funding history.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing complexity of biotech investments necessitates advanced AI-driven diligence tools to enhance decision-making processes.",
+  "devils_advocate_risks": [
+    "Data Privacy Concerns: Handling sensitive biotech data requires stringent privacy measures to maintain trust and comply with regulations.",
+    "Market Adoption: Convincing traditional biotech investors to adopt AI-driven diligence tools may face resistance due to established practices."
+  ],
+  "citations": [
+    "https://revonode.ai/team",
+    "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html",
+    "https://www.itreseller.ch/Startups/stu_details.cfm?stuf_idx=105559"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in biotechnology and life sciences, aligning with Revonode's focus on AI-powered life science analysis."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim invests in innovative biotech solutions, complementing Revonode's expertise in biotech diligence."
+    }
+  ]
+}

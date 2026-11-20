@@ -1,0 +1,70 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Richard Gong",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "University of Oxford"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of Piggy Robotics"
+    },
+    {
+      "full_name": "Chenny (Qianyi) Deng",
+      "role": "Co-founder and PhD candidate in Computer Science",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "University of Oxford"
+      ],
+      "prior_companies": [
+        "Tencent"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "Co-founder and PhD candidate in Computer Science at the University of Oxford."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $500,000 in an accelerator round on December 1, 2025, from Pioneer Fund and Y Combinator.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $500,000 in an accelerator round on December 1, 2025, from Pioneer Fund and Y Combinator.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for home automation and affordable robotics presents a timely opportunity for Piggy Robotics to introduce mass-producible humanoid robots.",
+  "devils_advocate_risks": [
+    "Technological Challenges: Developing reliable and cost-effective artificial muscle actuators at scale may present significant engineering hurdles.",
+    "Market Adoption: Convincing consumers to adopt humanoid robots for household chores could be challenging due to cultural and psychological barriers."
+  ],
+  "citations": [
+    "https://fundraisingfox.com/companies/piggy-robotics",
+    "https://www.caplight.com/company/piggyrobotics"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could be instrumental in developing the artificial muscle actuators used in Piggy Robotics' humanoid robots."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's expertise in enterprise software solutions could aid in developing the software infrastructure for managing and operating fleets of humanoid robots in various industries."
+    }
+  ]
+}

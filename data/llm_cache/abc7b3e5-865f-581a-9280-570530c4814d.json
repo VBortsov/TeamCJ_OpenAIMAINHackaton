@@ -1,0 +1,69 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Areg Nzsdejan",
+      "role": "CEO & Co-Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Revolut"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "CEO & Co-Founder of Cardamon"
+    },
+    {
+      "full_name": "Dmytro Astakhov",
+      "role": "CTO & Co-Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Revolut"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "CTO & Co-Founder of Cardamon"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Seed funding from Y Combinator in February 2025 and an additional seed funding of $500,000 in May 2025.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Seed funding from Y Combinator in February 2025 and an additional seed funding of $500,000 in May 2025.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing complexity of global financial regulations necessitates efficient compliance solutions to accelerate product launches and market expansion.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing traditional financial institutions to adopt AI-driven compliance solutions may face resistance due to established processes.",
+    "Regulatory Changes: Rapid changes in global regulations could challenge Cardamon's ability to maintain up-to-date compliance coverage."
+  ],
+  "citations": [
+    "https://presentofai.com/spotlight/cardamon.ai",
+    "https://cardamon.ai/articles/cardamon-is-funded-by-y-combinator",
+    "https://www.premieralts.com/companies/cardamon"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could benefit from Cardamon's compliance automation in regulated sectors."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's enterprise software solutions could integrate with Cardamon's compliance tools to enhance regulatory adherence for their clients."
+    }
+  ]
+}

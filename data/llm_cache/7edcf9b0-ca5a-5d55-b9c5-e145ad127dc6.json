@@ -1,0 +1,40 @@
+{
+  "founders_enriched": [],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Bern",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "Healthcare",
+  "inflection_why_now": "The increasing incidence of liver-related complications in cancer patients underscores the urgent need for hepatoprotective therapies, making SAFE-LIVER's innovation timely.",
+  "devils_advocate_risks": [
+    "Clinical Validation: Ensuring the safety and efficacy of the hepatoprotectant in diverse patient populations may present challenges.",
+    "Regulatory Approval: Navigating the complex regulatory pathways for new therapeutic agents could delay market entry."
+  ],
+  "citations": [],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "As a pharmaceutical company, Boehringer Ingelheim Venture Fund could be interested in SAFE-LIVER's hepatoprotectant technology, which aligns with their focus on innovative therapies."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in specialty chemicals and could find synergy in SAFE-LIVER's metabolic hepatoprotectant, potentially integrating it into their healthcare portfolio."
+    }
+  ]
+}

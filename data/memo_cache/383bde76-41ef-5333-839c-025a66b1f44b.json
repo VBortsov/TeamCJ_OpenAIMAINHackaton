@@ -1,0 +1,27 @@
+{
+  "one_liner": "UTHEREAL turns business expertise into secure enterprise AI; ETH Zurich’s 2026 spin-off recognition and a $1 million innovation grant make it worth meeting now.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich recognized UTHEREAL as a spin-off in 2026.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "UTHEREAL received a $1 million Innosuisse innovation grant.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 82.1 of 100 (at the top of the reference cohort); ranked 3 of 63 leads today. The spin-off, ETH Zurich education, PhD and founder-CTO flags lifted the score. Deep tech is a model classification; the technical-founder and study-abroad flags also lifted the score but are not confirmed by the founder records.",
+      "source_url": null
+    }
+  ],
+  "team": "Co-founder and CTO João Carvalho has a PhD and attended ETH Zurich. Co-founder and CEO Wael Abdelmalek previously worked at PwC, WHO, Credit Suisse and AWS.",
+  "why_early": "Unknown whether a priced round has closed. The reported Innosuisse grant does not establish equity funding status.",
+  "devils_advocate_risks": [
+    "Customer adoption in traditional industries is unverified.",
+    "It is unverified whether the platform can serve different industry requirements without losing performance."
+  ],
+  "next_step": "HTGF Industrial Tech team: Ask the founders whether UTHEREAL has closed a priced equity round.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "383bde76-41ef-5333-839c-025a66b1f44b",
+  "input_hash": "b250152d2777e20d"
+}

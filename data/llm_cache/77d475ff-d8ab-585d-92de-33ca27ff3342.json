@@ -1,0 +1,84 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Lukas Bock",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "University of Cambridge"
+      ],
+      "prior_companies": [
+        "Google X",
+        "Allianz"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "CEO of Mercura"
+    },
+    {
+      "full_name": "Stefan Zheng",
+      "role": "Co-founder and CPO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Bain & Company"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "CPO of Mercura"
+    },
+    {
+      "full_name": "Sean Sdahl",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Bosch",
+        "Mercedes-Benz AMG"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "CTO of Mercura"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": true,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Munich",
+  "raised_institutional_round": true,
+  "funding_summary": "Participated in Y Combinator's Winter 2025 batch.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Participated in Y Combinator's Winter 2025 batch.)",
+  "htgf_vertical": "AI-driven software",
+  "inflection_why_now": "The construction supply chain is increasingly adopting AI to streamline operations, making Mercura's automation solutions timely and relevant.",
+  "devils_advocate_risks": [
+    "Convincing traditional distributors and manufacturers to adopt AI-driven solutions may face resistance due to established workflows.",
+    "Ensuring the AI platform can handle diverse and complex requests across various industries without compromising accuracy."
+  ],
+  "citations": [
+    "https://mercura.ai/about",
+    "https://svatlas.io/companies/mercura"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch's extensive experience in industrial automation aligns with Mercura's focus on automating sales processes for manufacturers and distributors."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in innovative technologies in the chemical sector complements Mercura's AI solutions for industrial sales automation."
+    }
+  ]
+}

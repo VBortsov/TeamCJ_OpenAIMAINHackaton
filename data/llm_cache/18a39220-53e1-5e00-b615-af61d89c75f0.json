@@ -1,0 +1,65 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Alex Pinel Neparidze",
+      "role": "Co-CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-CEO of Instinct Space"
+    },
+    {
+      "full_name": "Ashwin Ramjee Iyer",
+      "role": "Co-CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-CEO of Instinct Space"
+    },
+    {
+      "full_name": "Joaquim Dickson",
+      "role": "CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "CTO of Instinct Space"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Instinct Space has received backing from Y Combinator and the NVIDIA Inception Program.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Instinct Space has received backing from Y Combinator and the NVIDIA Inception Program.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for lunar infrastructure and the need for efficient lunar regolith access make Instinct Space's mission timely and relevant.",
+  "devils_advocate_risks": [
+    "Technological challenges in developing reliable lunar landers capable of consistent performance.",
+    "Securing sufficient funding and partnerships to support the development and deployment of lunar missions."
+  ],
+  "citations": [
+    "https://www.instinct-space.com/about",
+    "https://www.instinct-space.com/news/instinct-space-polimak-space-lunar-regolith-partnership"
+  ],
+  "lp_synergy_matches": []
+}

@@ -1,0 +1,70 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Dr.-Ing. David Stenger",
+      "role": "Technological topics",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "RWTH Aachen University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "aiXopt"
+    },
+    {
+      "full_name": "Dr.-Ing. Tim Reuscher",
+      "role": "Organizational topics and external representation",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "RWTH Aachen University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "aiXopt"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Aachen Eintragung",
+  "raised_institutional_round": false,
+  "funding_summary": "The company has received the \"EXIST Gründerstipendium,\" a German government funding program for innovative start-ups. Additionally, aiXopt has been awarded the RWTH Spin-off Award in 2026 and the ICT Tech Transfer Award in 2025. There is no public information indicating that aiXopt has raised Series A funding or secured €3 million or more in investment.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing complexity of modern manufacturing processes and the need for efficient, automated optimization solutions create a timely opportunity for aiXopt's offerings.",
+  "devils_advocate_risks": [
+    "Integration Challenges: Ensuring seamless integration of aiXopt's software with diverse existing manufacturing systems may be complex.",
+    "Scalability Concerns: Adapting aiXopt's solutions to a wide range of industries and production environments could present scalability challenges."
+  ],
+  "citations": [
+    "https://www.aixopt.ai/",
+    "https://www.campus-start-ups.nrw/startupprofile/aixoptgmbh/",
+    "https://www.rwth-innovation.de/de/aktuelles/alle-neuigkeiten/aktuelle-detailseiten/welcome-to-the-collective-incubator-to-aixopt",
+    "https://ye-d.de/innovators-night/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could benefit from aiXopt's optimization solutions to enhance production efficiency and product quality."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch is a leading manufacturer of industrial equipment and could leverage aiXopt's AI-driven optimization to improve the performance and adaptability of their machinery."
+    }
+  ]
+}

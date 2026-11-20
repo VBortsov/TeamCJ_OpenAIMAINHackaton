@@ -1,0 +1,39 @@
+{
+  "founders_enriched": [],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Heidelberg",
+  "raised_institutional_round": false,
+  "funding_summary": "Funded under the ERC Proof of Concept Grant with a European Union contribution of €150,000, scheduled to begin in 2027.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "Biopharmaceuticals",
+  "inflection_why_now": "Glioblastoma remains the most lethal primary brain tumor, with median survival unchanged in two decades, highlighting the urgent need for innovative therapies like SafeCure.",
+  "devils_advocate_risks": [
+    "The complexity of translating preclinical findings into effective human treatments poses significant challenges.",
+    "Securing additional funding and industry partnerships for the clinical development phase may be difficult."
+  ],
+  "citations": [
+    "https://www.dkfz.de/en/cell-fate-engineering-and-disease-modelling/press-releases",
+    "https://cordis.europa.eu/project/id/101335277"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Specializes in innovative biopharmaceuticals and could provide valuable expertise and resources in the development of gene therapies."
+    }
+  ]
+}

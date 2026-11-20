@@ -1,0 +1,64 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Claire Gouze",
+      "role": "CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Business school background; self-taught in data sciences."
+    },
+    {
+      "full_name": "Christophe Blefari",
+      "role": "CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Background in data engineering; blogger at blef.fr."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": true,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Paris",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $500K in a Seed round in June 2025 from Comal Ventures, Kima Ventures, and Y Combinator.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $500K in a Seed round in June 2025 from Comal Ventures, Kima Ventures, and Y Combinator.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing complexity of data analytics necessitates intuitive, open-source solutions like nao Labs to empower data teams and business users.",
+  "devils_advocate_risks": [
+    "Market Adoption: Achieving widespread adoption in a competitive analytics market.",
+    "Scalability: Ensuring the platform can scale effectively to handle diverse and large datasets."
+  ],
+  "citations": [
+    "https://fundraisingfox.com/companies/nao-labs",
+    "https://www.caplight.com/company/getnao"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, aligning with nao Labs' focus on data-driven analytics for industrial applications."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's enterprise software solutions could integrate with nao Labs' analytics platform to enhance data-driven decision-making processes."
+    }
+  ]
+}

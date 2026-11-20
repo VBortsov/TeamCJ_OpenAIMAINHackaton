@@ -1,0 +1,69 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Abel Van Steenweghen",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "Delft University of Technology"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "fundraisingfox.com"
+    },
+    {
+      "full_name": "Brecht Pierreux",
+      "role": "Founder and CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "SpaceX",
+        "NASA's Jet Propulsion Laboratory"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "fundup.ai"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Amsterdam",
+  "raised_institutional_round": true,
+  "funding_summary": "Secured a $500K seed funding round in 2025.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Secured a $500K seed funding round in 2025.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing complexity of engineering projects necessitates AI-driven solutions to enhance efficiency and reduce errors.",
+  "devils_advocate_risks": [
+    "Integration Challenges: Ensuring seamless compatibility between Macadamia's AI agents and diverse existing engineering software and ERP systems.",
+    "Market Adoption: Convincing traditional engineering firms to adopt AI-driven automation solutions over established manual processes."
+  ],
+  "citations": [
+    "https://fundraisingfox.com/people/abel-van-steenweghen",
+    "https://fundup.ai/recently-funded-startups/company/1230beb542e1f766a39d92a13970726286a9b3638110a89e50977c4a0c219528/macadamia"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Macadamia's focus on automating engineering processes aligns with Evonik's interest in innovative technologies for industrial applications."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "The integration of AI agents into engineering workflows complements Bosch's commitment to advancing industrial automation and smart manufacturing solutions."
+    }
+  ]
+}

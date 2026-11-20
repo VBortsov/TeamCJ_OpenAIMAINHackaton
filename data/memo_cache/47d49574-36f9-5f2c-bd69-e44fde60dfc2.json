@@ -1,0 +1,28 @@
+{
+  "one_liner": "TaskHived offers independent AI reliability assessments; its 2026 recognition as an ETH Zurich spin-off gives HTGF a reason to reach out now.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich lists TaskHived on its 2026 spin-off roster.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "The company website offers pilot or demo booking, a sign of commercial intent rather than customer traction.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 65.5 of 100 (above 90.6% of the reference cohort). University spin-off status, deep-tech classification, and the founder’s ETH Zurich affiliation pushed the score up. The solo-founder flag also helped but is not confirmed by the founder records; having only one founder on record pushed the score down.",
+      "source_url": null
+    }
+  ],
+  "team": "Priya Darshani is the only founder identified in the records, which list her ETH Zurich affiliation. Whether she is the sole founder or the team includes a technical founder is unknown.",
+  "why_early": "Unknown whether a priced round has already occurred.",
+  "devils_advocate_risks": [
+    "Enterprises may prefer their existing internal AI assessment processes.",
+    "Maintaining consistent assessment quality across industries and applications may be difficult as the network grows.",
+    "Technical founder coverage is unverified."
+  ],
+  "next_step": "HTGF Industrial Tech team: Ask the founders whether TaskHived has closed a priced equity round.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "47d49574-36f9-5f2c-bd69-e44fde60dfc2",
+  "input_hash": "e82d7903c31f43bc"
+}

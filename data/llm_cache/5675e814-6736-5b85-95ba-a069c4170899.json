@@ -1,0 +1,70 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Manuj Mishra",
+      "role": "CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "Imperial College London"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "CEO of Waffle"
+    },
+    {
+      "full_name": "Diogo Valdivieso",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "EPFL"
+      ],
+      "prior_companies": [
+        "Battle Arena"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of Waffle"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Waffle has raised a total of $2 million in a pre-seed funding round announced in July 2021.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Waffle has raised a total of $2 million in a pre-seed funding round announced in July 2021.)",
+  "htgf_vertical": "AI video editing",
+  "inflection_why_now": "The increasing demand for personalized and engaging video content presents a timely opportunity for Waffle's AI-driven solutions.",
+  "devils_advocate_risks": [
+    "Market Competition: The AI video editing space is rapidly evolving, with numerous entrants potentially diluting Waffle's market share.",
+    "Technological Scalability: Ensuring that Waffle's AI algorithms can handle diverse video formats and maintain high-quality outputs as the user base grows is crucial."
+  ],
+  "citations": [
+    "https://fundraisingfox.com/companies/waffle",
+    "https://startup-seeker.com/company/waffle~ai"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leader in enterprise software, SAP could benefit from integrating Waffle's AI video capabilities into its business solutions."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "With interests in innovative technologies, Evonik could explore applications of Waffle's AI video tools in its chemical and material sciences sectors."
+    }
+  ]
+}

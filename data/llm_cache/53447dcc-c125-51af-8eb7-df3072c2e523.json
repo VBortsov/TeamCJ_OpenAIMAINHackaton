@@ -1,0 +1,42 @@
+{
+  "founders_enriched": [],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing complexity of enterprise data management and the need for AI-driven solutions present a timely opportunity for Leeroo's offerings.",
+  "devils_advocate_risks": [
+    "Integration Challenges: Ensuring seamless integration of Leeroo's AI solutions with diverse enterprise systems could be complex.",
+    "Scalability Concerns: Scaling AI solutions to handle vast amounts of enterprise data without compromising performance may pose technical challenges."
+  ],
+  "citations": [
+    "https://leeroo.com/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leading enterprise software company, SAP could benefit from integrating Leeroo's AI capabilities to enhance its product offerings."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in innovative technologies aligns with Leeroo's AI solutions, potentially fostering collaboration in industrial applications."
+    }
+  ]
+}

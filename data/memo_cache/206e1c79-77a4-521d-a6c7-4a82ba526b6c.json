@@ -1,0 +1,27 @@
+{
+  "one_liner": "44ai develops Haidy, an AI platform for clinical documentation; healthcare pilots and ETH Zurich’s 2026 spin-off recognition make it worth meeting now.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich recognized 44ai as a spin-off in its 2026 roster.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "44ai has been involved in healthcare AI partnerships and pilots; paid conversion is unknown.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 89.4 of 100 (at the top of the reference cohort). The model rewarded a founder-count input of six (only two are identified as founders in the records), ETH spin-off status, a technical-founder flag not confirmed by the founder records, and a deep-tech classification.",
+      "source_url": null
+    }
+  ],
+  "team": "Jannis Schönleber (CEO) and Stefan Lombriser (Strategic Affairs) are identified as founders. The team also lists senior AI research and engineering roles and a medical expert.",
+  "why_early": "Unknown. Funding details are not publicly disclosed, so it is unclear whether a priced round has occurred.",
+  "devils_advocate_risks": [
+    "It is unknown whether pilots have converted to paid deployments.",
+    "Integration into existing clinical workflows and compliance with applicable healthcare AI regulations could slow adoption."
+  ],
+  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders whether 44ai has closed a priced equity round.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "206e1c79-77a4-521d-a6c7-4a82ba526b6c",
+  "input_hash": "17d5149582350498"
+}

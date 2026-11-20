@@ -1,0 +1,42 @@
+{
+  "founders_enriched": [],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2027,
+  "city": "Leiden",
+  "raised_institutional_round": true,
+  "funding_summary": "The project has been awarded an EU contribution of €150,000 under the ERC Proof of Concept funding scheme.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (The project has been awarded an EU contribution of €150,000 under the ERC Proof of Concept funding scheme.)",
+  "htgf_vertical": "Biotechnology and Agricultural Solutions",
+  "inflection_why_now": "The escalating threats to global food security due to climate change and plant diseases necessitate innovative solutions like GRASP to develop crops with enhanced disease resistance.",
+  "devils_advocate_risks": [
+    "Technical Risk: Challenges in accurately reconstructing dynamic gene regulatory networks could impede the project's success.",
+    "Market Risk: The adoption of GRASP's findings by the agricultural industry may be slower than anticipated, affecting the project's impact."
+  ],
+  "citations": [
+    "https://cordis.europa.eu/project/id/101334863"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's expertise in biotechnology and agricultural solutions aligns with GRASP's objectives to enhance crop resilience through advanced gene regulatory analysis."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim's focus on animal health and agricultural innovations complements GRASP's aim to improve plant disease resistance, potentially leading to cross-sector collaborations."
+    }
+  ]
+}

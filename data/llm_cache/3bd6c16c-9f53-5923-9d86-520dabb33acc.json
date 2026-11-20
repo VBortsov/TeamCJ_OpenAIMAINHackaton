@@ -1,0 +1,74 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Olga Meichtry",
+      "role": "null",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "EPFL Swiss Federal Polytechnic School of Lausanne"
+      ],
+      "prior_companies": [
+        "Accenture",
+        "EY",
+        "CEMEX"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founding Team"
+    },
+    {
+      "full_name": "Arnesh Das",
+      "role": "null",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [
+        "Calspak"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founding Team"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": true,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": true,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "No publicly available information regarding its funding history.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "Cleantech",
+  "inflection_why_now": "The construction industry is under increasing pressure to adopt sustainable practices, making Hydken's low-carbon concrete solutions timely and essential.",
+  "devils_advocate_risks": [
+    "Convincing the construction industry to transition from traditional to low-carbon concrete may face resistance due to established practices.",
+    "Navigating varying environmental regulations across different regions could complicate product deployment and scalability."
+  ],
+  "citations": [
+    "https://dealroom.co/just-founded/hydken/",
+    "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Specializes in sustainable materials and chemicals, aligning with Hydken's mission to reduce the carbon footprint of construction."
+    },
+    {
+      "lp_name": "WACKER",
+      "reason": "A global chemical company with a strong emphasis on innovative building materials, potentially benefiting from Hydken's advancements in concrete technology."
+    }
+  ]
+}

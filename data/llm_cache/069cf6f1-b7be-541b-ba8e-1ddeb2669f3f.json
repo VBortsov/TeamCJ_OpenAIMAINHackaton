@@ -1,0 +1,42 @@
+{
+  "founders_enriched": [],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Eindhoven",
+  "raised_institutional_round": false,
+  "funding_summary": "The project has received a net EU financial contribution of €145,000.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "Neuroscience and medical technology",
+  "inflection_why_now": "The increasing demand for high-resolution neural data in neuroscience and medical applications necessitates efficient data compression solutions, making AIM-HIGH's technology timely and relevant.",
+  "devils_advocate_risks": [
+    "Technical Risk: Ensuring the scalability and reliability of the SODA technology in real-world, freely moving animal models may present challenges.",
+    "Market Risk: Achieving product-market fit and widespread adoption of the new telemetry system within the neuroscience and medical research communities could be challenging."
+  ],
+  "citations": [
+    "https://cordis.europa.eu/project/id/101334856"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their interest in innovative healthcare technologies aligns with AIM-HIGH's development of advanced brain-computer interfaces."
+    },
+    {
+      "lp_name": "Leaps by Bayer",
+      "reason": "Their focus on breakthrough innovations in health and agriculture could complement AIM-HIGH's advancements in neuroscience and medical technology."
+    }
+  ]
+}

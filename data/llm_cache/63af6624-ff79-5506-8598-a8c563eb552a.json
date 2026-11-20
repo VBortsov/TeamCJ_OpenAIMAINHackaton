@@ -1,0 +1,36 @@
+{
+  "founders_enriched": [],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": 1954,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "As a state-owned entity, Rai's funding primarily comes from the Italian government and revenue generated through broadcasting services.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 1954 (older than 3.5 years)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing convergence of traditional broadcasting with digital platforms presents Rai with opportunities to innovate and expand its audience reach.",
+  "devils_advocate_risks": [
+    "Technological Adaptation: The need to rapidly adapt to evolving digital broadcasting technologies to remain competitive.",
+    "Regulatory Challenges: Navigating complex regulatory environments and potential political influences affecting operations."
+  ],
+  "citations": [
+    "https://www.treccani.it/enciclopedia/rai-radiotelevisione-italiana/",
+    "https://www.linkedin.com/company/rai-radiotelevisione-italiana",
+    "https://es.wikipedia.org/wiki/RAI",
+    "https://www.youtube.com/watch?v=HRfFac-uVVE"
+  ],
+  "lp_synergy_matches": []
+}

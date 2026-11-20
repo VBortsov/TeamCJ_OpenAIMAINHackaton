@@ -1,0 +1,31 @@
+{
+  "founders_enriched": [],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The AI research landscape is rapidly evolving, with increasing demand for open-weight models and collaborative platforms like Hugging Face, positioning entities like Sentinel7 to contribute significantly to this growth.",
+  "devils_advocate_risks": [
+    "Limited Public Information: The scarcity of publicly available information about Sentinel7's team, funding, and strategic direction poses challenges in assessing their market position and potential for scaling.",
+    "Competitive Landscape: The AI research sector is highly competitive, with numerous entities vying for attention and resources, which could impact Sentinel7's ability to establish a distinct market presence."
+  ],
+  "citations": [],
+  "lp_synergy_matches": []
+}

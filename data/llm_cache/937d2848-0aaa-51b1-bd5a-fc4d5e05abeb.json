@@ -1,0 +1,56 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Paul Sanglé-Ferrière",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Tessian"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "ycombinator.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": true,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Cubic raised a total of $500K in a single seed funding round. They participated in Y Combinator's Spring 2025 batch.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Cubic raised a total of $500K in a single seed funding round. They participated in Y Combinator's Spring 2025 batch.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "With the increasing complexity of software development and the rise of AI-generated code, efficient and accurate code reviews are more critical than ever to maintain software quality.",
+  "devils_advocate_risks": [
+    "Integration Challenges: Ensuring seamless integration of cubic's platform with diverse existing development environments and workflows could be complex.",
+    "Scalability Concerns: As the user base grows, maintaining the performance and accuracy of AI-driven code reviews across various codebases may present scalability challenges."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/companies/cubic",
+    "https://neuronfeed.com/startups/cubic-dev"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leading enterprise software company, SAP could benefit from integrating cubic's AI-driven code review platform to enhance the quality and security of its software products."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's focus on digitalization in the chemical industry aligns with cubic's mission to improve software development processes, potentially streamlining Evonik's internal software tools."
+    }
+  ]
+}

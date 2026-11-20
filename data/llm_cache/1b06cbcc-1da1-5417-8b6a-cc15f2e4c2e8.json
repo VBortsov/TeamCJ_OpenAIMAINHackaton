@@ -1,0 +1,96 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Alexander Breuss",
+      "role": "Chief Executive Officer (CEO)",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "calmea.com"
+    },
+    {
+      "full_name": "Manuel Fujs",
+      "role": "Chief Technology Officer (CTO)",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "calmea.com"
+    },
+    {
+      "full_name": "Leo Andrin Küng",
+      "role": "Chief Commercial Officer (CCO)",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "calmea.com"
+    },
+    {
+      "full_name": "Levin Engeli",
+      "role": "Lead Engineer",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "calmea.com"
+    },
+    {
+      "full_name": "Prof. Dr. Robert Riener",
+      "role": "Scientific Advisor",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "calmea.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Zurich",
+  "raised_institutional_round": true,
+  "funding_summary": "In 2026, calmea secured CHF 150,000 from Venture Kick to advance the commercialization of its intelligent sleep monitoring technology.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In 2026, calmea secured CHF 150,000 from Venture Kick to advance the commercialization of its intelligent sleep monitoring technology.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing global emphasis on health and wellness, coupled with advancements in sensor technology, creates a timely opportunity for calmea's innovative sleep monitoring solutions.",
+  "devils_advocate_risks": [
+    "Challenges in integrating sensor technology seamlessly into existing bed manufacturing processes.",
+    "Potential market resistance to adopting new sleep monitoring technologies without established consumer trust."
+  ],
+  "citations": [
+    "https://calmea.com/",
+    "https://www.linkedin.com/posts/calmea_were-honoured-to-now-be-officially-recognized-activity-7478461545761443841-cImD",
+    "https://www.linkedin.com/posts/calmea_calmea-ag-is-officially-founded-our-activity-7458145058664603648-JXbq",
+    "https://www.linkedin.com/posts/the-swiss-startup-gurus_sleeptech-healthtech-digitalhealth-activity-7469773223937617922-B1CW"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could synergize with calmea's sensor technology for enhanced sleep monitoring solutions."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer's focus on health and wellness aligns with calmea's mission to improve sleep quality, presenting potential collaboration opportunities."
+    }
+  ]
+}

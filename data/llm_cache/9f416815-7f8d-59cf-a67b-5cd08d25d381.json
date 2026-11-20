@@ -1,0 +1,46 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Wang Xing",
+      "role": "Founder of Meituan",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": true,
+      "source_of_identity": "Founder of Meituan"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2023,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The release of LongCat-2.0, a 1.6 trillion-parameter model trained entirely on domestic Chinese processors, marks a significant advancement in AI capabilities within China.",
+  "devils_advocate_risks": [
+    "Integration Challenges: Ensuring seamless integration of LongCat models into Meituan's diverse services may encounter technical and operational hurdles.",
+    "Market Competition: The rapidly evolving AI landscape presents competitive pressures from both domestic and international AI developers."
+  ],
+  "citations": [
+    "https://models.sulat.com/providers/longcat",
+    "https://www.investing.com/news/stock-market-news/chinas-meituan-says-new-ai-model-trained-on-domestic-chips-4767107",
+    "https://www.youtube.com/watch?v=9GWOksNjFpY"
+  ],
+  "lp_synergy_matches": []
+}

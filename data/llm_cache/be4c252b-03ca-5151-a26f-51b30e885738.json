@@ -1,0 +1,73 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Qasim Munye",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "King's College London"
+      ],
+      "prior_companies": [
+        "ShortlyAI"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder and CEO of Menza."
+    },
+    {
+      "full_name": "Mariam Ahmed",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "King's College London"
+      ],
+      "prior_companies": [
+        "Goldman Sachs"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "Co-founder and CTO of Menza."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": true,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2023,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $500,000 in seed funding as of January 2026.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $500,000 in seed funding as of January 2026.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing complexity of consumer data necessitates advanced AI solutions like Menza to uncover actionable insights efficiently.",
+  "devils_advocate_risks": [
+    "Data Integration Challenges: Ensuring seamless integration with a wide array of data sources may present technical difficulties.",
+    "Scalability Concerns: As Menza expands its customer base, maintaining performance and reliability could become challenging."
+  ],
+  "citations": [
+    "https://standout.work/companies/menza",
+    "https://aventure.vc/companies/menza-london-gb/fundraising",
+    "https://www.youtube.com/watch?v=arTd47148YA"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leader in enterprise software, SAP could benefit from integrating Menza's AI-driven analytics to enhance their data processing capabilities."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "With a focus on innovative technologies, Evonik could leverage Menza's platform to gain deeper insights into consumer behavior and market trends."
+    }
+  ]
+}

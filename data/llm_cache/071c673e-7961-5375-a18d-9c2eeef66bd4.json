@@ -1,0 +1,72 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Love Redin",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "KTH Royal Institute of Technology"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder and CEO of Vantel"
+    },
+    {
+      "full_name": "Ulme Wennberg",
+      "role": "Founder and CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "KTH Royal Institute of Technology",
+        "Stockholm School of Economics",
+        "University of Washington"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder and CTO of Vantel"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": true,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Stockholm",
+  "raised_institutional_round": false,
+  "funding_summary": "In March 2025, Vantel raised a $2 million seed round from Y Combinator, Inception Fund, Rebel Fund, and prominent angel investors.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The insurance industry is increasingly adopting AI to streamline operations, making Vantel's solution timely for brokers seeking efficiency gains.",
+  "devils_advocate_risks": [
+    "Integrating AI into traditional insurance workflows may face resistance from established brokers.",
+    "Scaling the AI platform to handle diverse insurance products and regulations across regions could be complex."
+  ],
+  "citations": [
+    "https://fundraisingfox.com/people/love-redin",
+    "https://fundraisingfox.com/people/ulme-wennberg",
+    "https://startups.fru.dev/companies/vantel",
+    "https://www.vantel.com/blog/vantel-raises-2m-seed-from-ycombinator-inception-fund-rebel-fund"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Vantel's AI platform for commercial insurance brokers could integrate with SAP's enterprise solutions, enhancing operational efficiency in the insurance sector."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's focus on digitalization in various industries aligns with Vantel's AI-driven approach to transforming insurance brokerage processes."
+    }
+  ]
+}

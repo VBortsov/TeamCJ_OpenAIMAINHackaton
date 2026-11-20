@@ -1,0 +1,58 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Ingrid Pickering",
+      "role": "Interim CEO and Chief Science Officer",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "University of Saskatchewan"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Role at CLS"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2004,
+  "city": "Saskatoon",
+  "raised_institutional_round": false,
+  "funding_summary": "The CLS receives funding from various government institutions, including the Canada Foundation for Innovation, Canadian Institutes of Health Research, Natural Sciences and Engineering Research Council, and the Province of Saskatchewan. In the 2024–2025 financial year, the CLS received approximately $38.5 million in funding from these sources.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2004 (older than 3.5 years)",
+  "htgf_vertical": "National research facility, advanced materials, healthcare innovations",
+  "inflection_why_now": "The increasing global emphasis on sustainable technologies and healthcare advancements presents a timely opportunity for CLS to leverage its synchrotron capabilities to address pressing scientific challenges.",
+  "devils_advocate_risks": [
+    "Funding Dependency: Reliance on government funding may pose risks if there are changes in political priorities or budget allocations.",
+    "Technological Obsolescence: Rapid advancements in synchrotron technology could necessitate significant investments to maintain CLS's competitive edge."
+  ],
+  "citations": [
+    "https://en.wikipedia.org/wiki/Canadian_Light_Source",
+    "https://www.lightsource.ca/about/governance/organization/leadership.php",
+    "https://www.lightsource.ca/about/about-us.php",
+    "https://www.lobbycanada.gc.ca/app/secure/ocl/lrs/do/rgstrnGvrnmntFndng?lang=eng&regId=966106"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Specializes in advanced materials and chemicals, aligning with CLS's focus on advanced materials research."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Invests in healthcare innovations, which complements CLS's contributions to health research."
+    }
+  ]
+}

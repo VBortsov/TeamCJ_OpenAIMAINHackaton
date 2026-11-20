@@ -1,0 +1,27 @@
+{
+  "one_liner": "LLMify develops AI tools for business processes and is worth meeting after ETH Zurich recognized it as a spin-off in 2026.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich lists LLMify on its 2026 spin-off roster.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "Co-founder Francesco Lässig is listed as an AI engineer and holds a PhD.",
+      "source_url": null
+    },
+    {
+      "signal": "Ranked 1 of 63 leads today, with a model score 81.6 of 100 (at the top of the reference cohort). Spin-off status and a founder PhD raised the score. A solo-founder flag also raised it, while having only one known founder lowered it; the records do not confirm a solo founding team.",
+      "source_url": null
+    }
+  ],
+  "team": "Francesco Lässig is the only identified co-founder. His record lists ETH Zurich, the University of Zurich and the University of Amsterdam, and prior experience at Unit8.",
+  "why_early": "LLMify has not publicly announced a funding round. Whether it has closed a priced round is unknown.",
+  "devils_advocate_risks": [
+    "The model flags a technical founder, but the founder record marks Lässig as non-technical despite listing him as an AI engineer. Technical leadership and the full founding team need confirmation.",
+    "Paid customer adoption is unknown."
+  ],
+  "next_step": "HTGF Digital Tech team: Ask the founders what business workflow a paying customer is using LLMify for today, if any.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "d6033c50-2211-5c46-8575-b323705a5153",
+  "input_hash": "cb7eae8f08c5a8a8"
+}

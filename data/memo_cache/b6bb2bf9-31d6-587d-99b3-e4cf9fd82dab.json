@@ -1,0 +1,27 @@
+{
+  "one_liner": "Spott builds an AI-native ATS and CRM for recruiting firms; its reported Series A makes it too late for HTGF’s pre-first-round outreach.",
+  "top_signals": [
+    {
+      "signal": "Reported funding totals €21.5 million: €3.2 million at seed in March 2025 and €18.3 million at Series A in September 2026.",
+      "source_url": null
+    },
+    {
+      "signal": "Y Combinator lists Spott in its 2025–2026 European cohort.",
+      "source_url": "https://www.ycombinator.com/companies/spott"
+    },
+    {
+      "signal": "Model score 84.7 of 100 (at the top of the reference cohort). Positive inputs include Bain experience, three known founders, a founder CTO, YC participation, a business-to-business product and a deep-tech classification.",
+      "source_url": null
+    }
+  ],
+  "team": "Lander Degrève (co-founder and CEO) attended Bocconi University and previously worked at JPMorgan and Bain & Company. Manu Vanderveeren is co-founder and COO; Samuel Smeys is co-founder and CTO.",
+  "why_early": "Whether either reported round was priced is unknown. The reported seed and Series A put Spott past the first-round outreach window despite the pre-Crunchbase badge.",
+  "devils_advocate_risks": [
+    "The model’s technical-founder and top-university flags are not confirmed by the founder records.",
+    "Competition in HR tech and the need to localize for different markets are recorded risks."
+  ],
+  "next_step": "HTGF Industrial Tech team: deprioritize for pre-first-round outreach. If speaking with the founders, ask whether the reported March 2025 seed was a priced equity round.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "b6bb2bf9-31d6-587d-99b3-e4cf9fd82dab",
+  "input_hash": "c833f9878786b1b5"
+}

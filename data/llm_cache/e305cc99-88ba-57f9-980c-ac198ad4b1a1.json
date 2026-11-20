@@ -1,0 +1,99 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Zeev Farbman",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "Hebrew University"
+      ],
+      "prior_companies": [
+        "Lightricks"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder and CEO of LTX.io"
+    },
+    {
+      "full_name": "Yaron Inger",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "Hebrew University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder and CTO of LTX.io"
+    },
+    {
+      "full_name": "Nir Pochter",
+      "role": "Co-founder and CMO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "Hebrew University"
+      ],
+      "prior_companies": [
+        "Lightricks"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder and CMO of LTX.io"
+    },
+    {
+      "full_name": "Daniel Berkovitz",
+      "role": "Chief Product Officer",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "Bezalel Academy of Arts & Design",
+        "Hebrew University"
+      ],
+      "prior_companies": [
+        "Lightricks"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Chief Product Officer at LTX.io"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": true,
+  "fd_any_prior_exit": true,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2013,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "LTX.io is self-funded, leveraging the success and profitability of its parent company, Lightricks. The company has not disclosed external funding rounds.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Lightricks Series D $300M+ / Founded 2013)",
+  "htgf_vertical": "/",
+  "inflection_why_now": "The increasing demand for scalable, high-fidelity AI-driven creative tools presents a significant market opportunity for LTX.io.",
+  "devils_advocate_risks": [
+    "Convincing enterprises to integrate LTX.io's open-weight models into existing workflows may face resistance due to established processes.",
+    "Ensuring the scalability and reliability of AI models across diverse production environments could pose technical hurdles."
+  ],
+  "citations": [
+    "https://ltx.io/about-us",
+    "https://ltx.io/newsroom/ltx-and-the-democratization-of-creative-production"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "LTX.io's AI-driven creative infrastructure can integrate with SAP's enterprise solutions, enhancing digital content creation processes."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "LTX.io's open-weight AI models can be applied in Evonik's chemical production processes, optimizing visual content for marketing and training."
+    }
+  ]
+}

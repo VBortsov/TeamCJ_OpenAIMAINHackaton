@@ -1,0 +1,77 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Philip Andersson",
+      "role": "CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Crunchbase"
+    },
+    {
+      "full_name": "Jonathan Andersson",
+      "role": "COO and Co-Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Crunchbase"
+    },
+    {
+      "full_name": "Filip Stål",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Y Combinator"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Stockholm",
+  "raised_institutional_round": true,
+  "funding_summary": "In February 2025, Bluebook raised €2.4 million in a pre-seed funding round led by EQT Ventures, with participation from Y Combinator and angel investors.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In February 2025, Bluebook raised €2.4 million in a pre-seed funding round led by EQT Ventures, with participation from Y Combinator and angel investors.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The accounting industry faces significant challenges, including a massive CPA retirement wave (75% in the coming 15 years), increasing complexity from globalization and new regulations, and private equity consolidation driving productivity demands.",
+  "devils_advocate_risks": [
+    "Market Adoption: Accounting firms may be resistant to adopting AI-driven solutions due to concerns over reliability and integration with existing systems.",
+    "Regulatory Compliance: Ensuring that AI-driven accounting solutions comply with diverse and evolving financial regulations across different jurisdictions."
+  ],
+  "citations": [
+    "https://www.thecompanycheck.com/company/b/bluebook/xzerzr6ebn1tefqn0",
+    "https://www.crunchbase.com/organization/bluebook-2eaf",
+    "https://www.ycombinator.com/companies/bluebook",
+    "https://www.wedeal.com/company/Bluebook",
+    "https://app.fundz.net/fundings/bluebook-funding-round-seed-77c4ce"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leading enterprise software company, SAP's expertise in business applications aligns with Bluebook's AI-driven accounting solutions, potentially enhancing integration capabilities."
+    },
+    {
+      "lp_name": "Eppendorf SE",
+      "reason": "Specializing in laboratory equipment, Eppendorf's focus on precision and efficiency could synergize with Bluebook's mission to automate and streamline accounting processes."
+    }
+  ]
+}

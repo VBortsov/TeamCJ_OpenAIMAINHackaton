@@ -1,0 +1,145 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Jannis Schönleber",
+      "role": "CEO & Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "CEO & Founder"
+    },
+    {
+      "full_name": "Stefan Lombriser",
+      "role": "Strategic Affairs & Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Strategic Affairs & Founder"
+    },
+    {
+      "full_name": "Frédéric Odermatt",
+      "role": "Senior AI Researcher",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Senior AI Researcher"
+    },
+    {
+      "full_name": "Florence Lenter",
+      "role": "Senior AI Engineer",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Senior AI Engineer"
+    },
+    {
+      "full_name": "Nils Eyer",
+      "role": "Sales and Partnership Manager",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Sales and Partnership Manager"
+    },
+    {
+      "full_name": "Arbresha Dullaj Asani",
+      "role": "Sales Representative",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Sales Representative"
+    },
+    {
+      "full_name": "Colin Kolbe",
+      "role": "Full-Stack Developer",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Full-Stack Developer"
+    },
+    {
+      "full_name": "Robin Schönleber",
+      "role": "Head of People and Finance",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Head of People and Finance"
+    },
+    {
+      "full_name": "Valentin Grob",
+      "role": "Medical Expert",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Medical Expert"
+    },
+    {
+      "full_name": "Yann Scherly",
+      "role": "Sales Representative",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Sales Representative"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2024,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "Specific details are not publicly disclosed. The company has been involved in partnerships and pilot projects, indicating active engagement in the healthcare AI sector.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "Healthcare AI",
+  "inflection_why_now": "The increasing complexity of healthcare data and the need for efficient documentation systems create a timely opportunity for AI-driven solutions like 44ai's Haidy platform.",
+  "devils_advocate_risks": [
+    "Regulatory Compliance: Navigating the stringent regulations for medical devices and AI applications in healthcare could pose challenges.",
+    "Market Adoption: Convincing healthcare institutions to integrate new AI technologies into their established workflows may require significant effort."
+  ],
+  "citations": [
+    "https://www.itreseller.ch/startups/stu_details.cfm?stuf_idx=97874",
+    "https://www.44ai.ch/",
+    "https://www.medinside.ch/de/neue-ki-plattform-fuer-spitaeler-pilotprojekt-am-kispi-zuerich-20251023"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their focus on innovative healthcare solutions aligns with 44ai's mission to enhance clinical workflows through AI."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's expertise in enterprise software could complement 44ai's AI solutions, potentially integrating with existing healthcare management systems."
+    }
+  ]
+}

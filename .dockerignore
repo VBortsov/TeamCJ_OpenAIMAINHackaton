@@ -4,5 +4,16 @@
 !backend/**
 !first-signal/
 !first-signal/**
+!data/
+!data/**
+data/http_cache/**
+data/cordis_cache/**
+data/tld_cache/**
+data/cost_ledger.jsonl
+data/saved_workspace.json
+data/live_leads/**
+data/wave1_candidates.json
+data/wave2_candidates.json
+data/gemini_research_raw.md
 **/__pycache__/
 **/.env*

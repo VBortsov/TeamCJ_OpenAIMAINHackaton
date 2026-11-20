@@ -1,0 +1,42 @@
+{
+  "founders_enriched": [],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Utrecht",
+  "raised_institutional_round": false,
+  "funding_summary": "Received an EU contribution of €150,000.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The urgent need for targeted therapies in pediatric cancers, particularly MRTs, underscores the timely relevance of BEAT-MRT's gene correction approach.",
+  "devils_advocate_risks": [
+    "Technical Challenges: Developing effective gene correction strategies for MRTs may encounter unforeseen scientific and technical obstacles.",
+    "Regulatory Hurdles: Navigating the complex regulatory landscape for pediatric gene therapies could delay development and commercialization."
+  ],
+  "citations": [
+    "https://cordis.europa.eu/project/id/101333636"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their expertise in pharmaceutical development and commitment to innovative therapies aligns with BEAT-MRT's focus on gene correction strategies for cancer treatment."
+    },
+    {
+      "lp_name": "QIAGEN",
+      "reason": "Their specialization in molecular diagnostics and life sciences could complement BEAT-MRT's research in gene correction for pediatric cancers."
+    }
+  ]
+}

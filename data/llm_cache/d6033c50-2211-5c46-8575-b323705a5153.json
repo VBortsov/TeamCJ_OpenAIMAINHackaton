@@ -1,0 +1,61 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Francesco Lässig",
+      "role": "Co-Founder, AI Engineer",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "ETH Zurich",
+        "University of Zurich",
+        "University of Amsterdam"
+      ],
+      "prior_companies": [
+        "Unit8"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Website"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "The company is privately held and has not publicly announced any funding rounds or raised capital.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": ".",
+  "inflection_why_now": "The increasing demand for sovereign AI solutions in Switzerland presents a timely opportunity for LLMify to address data privacy concerns among local businesses.",
+  "devils_advocate_risks": [
+    "Market Penetration: Establishing a strong presence in the competitive AI market may require significant resources and strategic partnerships.",
+    "Scalability Challenges: Ensuring that LLMify's AI solutions can scale effectively across diverse industries and business sizes could pose technical and operational hurdles."
+  ],
+  "citations": [
+    "https://www.flaessig.com/",
+    "https://transfer.ethz.ch/founders.html",
+    "https://www.crunchbase.com/organization/llmify"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, aligning with LLMify's focus on developing AI solutions for business processes, potentially enhancing Evonik's digital transformation initiatives."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's enterprise software solutions could integrate with LLMify's AI applications, offering enhanced data processing and automation capabilities to SAP's clientele."
+    }
+  ]
+}

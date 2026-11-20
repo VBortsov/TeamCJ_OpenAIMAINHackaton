@@ -1,0 +1,87 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Naoya Okanami",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Listed as an employee on LinkedIn."
+    },
+    {
+      "full_name": "Masatoshi Otake",
+      "role": "CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Identified as the CEO of Higurashi AI."
+    },
+    {
+      "full_name": "Takanori Yoshimoto",
+      "role": "Research Intern",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Listed as an AIRoA (AI Robot Association) Research Intern."
+    },
+    {
+      "full_name": "Ryoma Kumon",
+      "role": "PhD Student",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "University of Tokyo"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Listed as a PhD student at the University of Tokyo."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The recent release of 'Haru 4B,' a full-duplex speech AI model, positions Higurashi AI at the forefront of natural language processing advancements.",
+  "devils_advocate_risks": [
+    "Challenges in scaling the technology to handle diverse languages and dialects effectively.",
+    "Potential difficulties in securing strategic partnerships and funding to support rapid growth."
+  ],
+  "citations": [
+    "https://jp.linkedin.com/company/higurashiai",
+    "https://xitter.cf/LangProc",
+    "https://www.higurashi.ai/ja/haru4b/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leader in enterprise software, SAP could benefit from integrating Higurashi AI's advanced speech models to enhance voice-driven analytics and customer service solutions."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Specializing in specialty chemicals, Evonik could leverage Higurashi AI's technology to develop innovative voice-activated interfaces for industrial applications."
+    }
+  ]
+}

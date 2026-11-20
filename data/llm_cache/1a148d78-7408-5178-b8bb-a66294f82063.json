@@ -1,0 +1,67 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Christian Safka",
+      "role": "Co-Founder & CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Tavus (Y Combinator S21)"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "foundersprime.com"
+    },
+    {
+      "full_name": "Lawrence Lou",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "linkedin.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Vc",
+  "raised_institutional_round": true,
+  "funding_summary": "Pinch has raised a total of $2.5 million across two funding rounds: $500K Seed round in January 2025 and $2M Seed round in January 2018.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Pinch has raised a total of $2.5 million across two funding rounds: $500K Seed round in January 2025 and $2M Seed round in January 2018.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing globalization of business and remote work necessitates seamless real-time communication across languages, positioning Pinch's technology as a timely solution.",
+  "devils_advocate_risks": [
+    "Technological Challenges: Ensuring real-time, accurate voice translation across multiple languages requires continuous refinement of AI models.",
+    "Market Adoption: Convincing enterprises to integrate new AI-driven communication tools into existing workflows may face resistance due to established practices."
+  ],
+  "citations": [
+    "https://www.linkedin.com/company/startpinch",
+    "https://www.foundersprime.com/startups/pinch",
+    "https://startupintros.com/orgs/pinch"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leader in enterprise software, SAP could benefit from integrating Pinch's real-time AI voice translation into its communication platforms, enhancing multilingual collaboration."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Specializing in digitalization and innovation, Evonik could leverage Pinch's technology to improve cross-lingual communication in its global operations."
+    }
+  ]
+}

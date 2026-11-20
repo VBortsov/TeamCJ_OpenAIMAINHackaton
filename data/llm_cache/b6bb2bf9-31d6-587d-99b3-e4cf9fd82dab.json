@@ -1,0 +1,80 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Lander Degrève",
+      "role": "Co-Founder & CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "Bocconi University"
+      ],
+      "prior_companies": [
+        "JPMorgan",
+        "Bain & Company"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "CEO of Spott"
+    },
+    {
+      "full_name": "Manu Vanderveeren",
+      "role": "Co-Founder & COO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "COO of Spott"
+    },
+    {
+      "full_name": "Samuel Smeys",
+      "role": "Co-Founder & CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "CTO of Spott"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": true,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Leuven",
+  "raised_institutional_round": false,
+  "funding_summary": "Total funding raised: €21.5 million. Seed Round: Raised €3.2 million in March 2025. Series A Round: Raised €18.3 million in September 2026.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The recruitment industry is increasingly adopting AI-driven solutions to enhance efficiency, positioning Spott to capitalize on this growing demand.",
+  "devils_advocate_risks": [
+    "Market Competition: The HR tech space is highly competitive, with numerous players vying for market share.",
+    "Scalability Challenges: Expanding operations globally requires robust infrastructure and localized strategies to meet diverse market needs."
+  ],
+  "citations": [
+    "https://spott.chat/about-us",
+    "https://founderland.ai/founder/lander-degr-ve",
+    "https://www.eu-startups.com/2026/09/leuven-based-spott-raises-e18-3-million-to-build-the-ai-native-operating-system-for-recruitment-agencies/?trk=article-ssr-frontend-pulse_little-text-block"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leading enterprise software provider, SAP could benefit from integrating Spott's AI-native ATS and CRM to enhance its HR solutions."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "With a focus on digitalization in the chemical industry, Evonik could leverage Spott's platform to streamline recruitment processes within its global operations."
+    }
+  ]
+}

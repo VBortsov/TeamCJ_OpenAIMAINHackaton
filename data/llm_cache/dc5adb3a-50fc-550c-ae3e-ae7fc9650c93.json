@@ -1,0 +1,56 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Kim Rants",
+      "role": "CEO and co-founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "CEO and co-founder of Alice.tech"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Copenhagen",
+  "raised_institutional_round": true,
+  "funding_summary": "The company raised over $6 million by 2025, including a seed funding round of €4.2 million from three investors in May 2025.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (The company raised over $6 million by 2025, including a seed funding round of €4.2 million from three investors in May 2025.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for personalized learning solutions in education presents a timely opportunity for Alice.tech's AI-driven platform.",
+  "devils_advocate_risks": [
+    "Market Competition: The edtech sector is highly competitive, with numerous players offering similar solutions.",
+    "Scalability Challenges: Ensuring the platform can effectively scale to accommodate a growing user base without compromising quality."
+  ],
+  "citations": [
+    "https://alice.tech/about",
+    "https://svatlas.io/companies/alice-tech",
+    "https://funding.tech.eu/companies/AFCAA470-8113-4C73-A9C3-DB7FA6F2B4CA",
+    "https://www.youtube.com/watch?v=z8LITmGXU9Q"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leader in enterprise software, SAP's expertise in educational tools could synergize with Alice.tech's AI-driven learning platform."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "With a focus on innovative technologies, Evonik could support Alice.tech's growth in the edtech sector."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Chema Garabito",
+      "role": "Co-founder, CEO, and Chief Scientist",
+      "linkedin_url": "https://es.linkedin.com/in/chema-garabito",
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder, CEO, and Chief Scientist of Speridlabs"
+    },
+    {
+      "full_name": "Guillermo Garabito",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of Speridlabs"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": null,
+  "raised_institutional_round": true,
+  "funding_summary": "The company has secured pre-seed funding from PearX, with the specific round size and valuation undisclosed.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (The company has secured pre-seed funding from PearX, with the specific round size and valuation undisclosed.)",
+  "htgf_vertical": "/technology",
+  "inflection_why_now": "The increasing demand for immersive 3D experiences in gaming and robotics presents a timely opportunity for Speridlabs' spatial AI solutions.",
+  "devils_advocate_risks": [
+    "Technical Complexity: Developing scalable and accurate 3D models requires significant computational resources and expertise.",
+    "Market Adoption: Convincing developers and companies to integrate new spatial AI technologies into existing workflows may pose challenges."
+  ],
+  "citations": [
+    "https://www.linkedin.com/posts/manzanaresalejandro_madrid-europe-bayarea-activity-7492837920874348546-_J6l",
+    "https://es.linkedin.com/in/chema-garabito",
+    "https://startuply.vc/article/editable-spatial-models-drive-speridlabs-robotics-and-games-push-vb0b03",
+    "https://pitchbook.com/profiles/company/1366630-84",
+    "https://www.crunchbase.com/organization/speridlabs"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could benefit from Speridlabs' 3D modeling technologies for product design and simulation."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's enterprise software solutions could integrate Speridlabs' spatial AI models to enhance data visualization and spatial analytics capabilities."
+    }
+  ]
+}

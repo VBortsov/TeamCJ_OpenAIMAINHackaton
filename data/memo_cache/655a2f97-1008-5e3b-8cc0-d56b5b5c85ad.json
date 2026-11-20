@@ -1,0 +1,27 @@
+{
+  "one_liner": "Clayground develops AI tools for sales and marketing; ETH Zurich’s 2026 spin-off recognition makes it worth contacting now.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich lists Clayground on its 2026 spin-off roster.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "The team records identify three co-founders with ETH Zurich backgrounds, covering CEO, COO and CTO roles.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 89.2 of 100 (at the top of the reference cohort). Spin-off status, a co-founder serving as CTO and ETH Zurich backgrounds pushed the score up. The model also credited five founders, technical founder expertise and deep-tech classification; the records do not confirm five founders or technical founder expertise, and deep tech is a model classification.",
+      "source_url": null
+    }
+  ],
+  "team": "Dominique Michel (CEO), Massimo Höhn (COO) and Carlo Harprecht (CTO) are identified as co-founders with ETH Zurich backgrounds. Felix Graf Strachwitz is listed as CCO and Nikita Tolstoukhov as a go-to-market consultant; their founder status is unknown.",
+  "why_early": "Unknown whether a priced round has occurred. The available record provides no public funding history.",
+  "devils_advocate_risks": [
+    "Customer adoption is unknown; integrating AI into existing sales workflows may be difficult.",
+    "Technical founder expertise is unconfirmed despite a co-founder holding the CTO role."
+  ],
+  "next_step": "HTGF Digital Tech team: Ask the founders whether Clayground has already closed a priced funding round.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "655a2f97-1008-5e3b-8cc0-d56b5b5c85ad",
+  "input_hash": "a64b0140d37ea663"
+}

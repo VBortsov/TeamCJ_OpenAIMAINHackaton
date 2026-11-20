@@ -1,0 +1,64 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Adina Goerres",
+      "role": "CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of Superglue"
+    },
+    {
+      "full_name": "Stefan Faistenauer",
+      "role": "CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of Superglue"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Herford Germany",
+  "raised_institutional_round": false,
+  "funding_summary": "Participated in Y Combinator's Winter 2025 batch.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing complexity of ERP implementations and the demand for automation present a timely opportunity for Superglue's AI agents to streamline these processes.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing enterprises to trust and adopt AI-driven ERP implementation tools may face resistance due to existing workflows and skepticism about AI reliability.",
+    "Integration Challenges: Ensuring seamless integration of Superglue's AI agents with diverse ERP systems and existing IT infrastructures could be technically complex and resource-intensive."
+  ],
+  "citations": [
+    "https://superglue.ai/careers/",
+    "https://www.linkedin.com/company/superglue-ai"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leading enterprise software provider, SAP's focus on ERP solutions aligns with Superglue's mission to automate ERP implementations."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in innovative technologies could complement Superglue's AI-driven approach to enterprise system integration."
+    }
+  ]
+}

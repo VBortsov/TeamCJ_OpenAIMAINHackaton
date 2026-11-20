@@ -1,0 +1,79 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Hervé Bredin",
+      "role": "Chief Science Officer",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [
+        "French National Centre for Scientific Research (CNRS)"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder, Pyannote AI"
+    },
+    {
+      "full_name": "Juan Coria",
+      "role": "Chief Technology Officer",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder, Pyannote AI"
+    },
+    {
+      "full_name": "Vincent Molina",
+      "role": "Chief Executive Officer",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder, Pyannote AI"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": null,
+  "raised_institutional_round": true,
+  "funding_summary": "Seed Round (April 2025): Raised €8.1 million (approximately $8.84 million) led by Crane Venture Partners and Serena.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Seed Round (April 2025): Raised €8.1 million (approximately $8.84 million) led by Crane Venture Partners and Serena.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for accurate speaker diarization in diverse applications presents a significant market opportunity for Pyannote AI.",
+  "devils_advocate_risks": [
+    "Technological Integration: Ensuring seamless integration of Pyannote AI's technology across various platforms and applications may pose technical challenges.",
+    "Market Competition: The rapidly evolving AI landscape means Pyannote AI must continuously innovate to maintain a competitive edge."
+  ],
+  "citations": [
+    "https://seedtable.com/companies/pyannote-ai",
+    "https://www.pyannote.ai/about-us",
+    "https://github.masuit.org/hbredin",
+    "https://www.eu-startups.com/2025/04/pyannoteai-raises-e8-million-to-build-the-first-language-agnostic-speaker-intelligence-platform/",
+    "https://www.youtube.com/watch?v=CtjDotATEI0"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could benefit from Pyannote AI's voice analytics in quality control and process optimization."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim focuses on pharmaceuticals and animal health; integrating Pyannote AI's speaker diarization could enhance patient monitoring and clinical trial data analysis."
+    }
+  ]
+}

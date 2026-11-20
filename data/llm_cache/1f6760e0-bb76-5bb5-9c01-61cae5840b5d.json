@@ -1,0 +1,35 @@
+{
+  "founders_enriched": [],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Delft",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The urgent need for energy-efficient solutions to reduce environmental and economic burdens associated with building temperature control makes LumiShield's thermochromic hydrogel films a timely innovation.",
+  "devils_advocate_risks": [
+    "Challenges in scaling up the production of thermochromic hydrogel films to meet market demand.",
+    "Potential difficulties in commercializing the technology and achieving widespread adoption in the smart window industry."
+  ],
+  "citations": [
+    "https://www.cordis.europa.eu/project/id/101335307/pl",
+    "https://www.tudelft.nl/en/innovation-impact/pioneering-tech/articles/every-one-of-our-spin-offs-wants-to-make-a-positive-impact",
+    "https://aventure.vc/companies/lumishield-technologies-pittsburgh-pa-us/fundraising"
+  ],
+  "lp_synergy_matches": []
+}

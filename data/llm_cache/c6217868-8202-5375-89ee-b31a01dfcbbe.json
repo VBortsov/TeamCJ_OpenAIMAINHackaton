@@ -1,0 +1,80 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "James He",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "University of Cambridge"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Standout Work"
+    },
+    {
+      "full_name": "Patrick Sharpe",
+      "role": "Co-founder and CPO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "iptiQ"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Standout Work"
+    },
+    {
+      "full_name": "Tom Whittle",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": ""
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "Pre-Seed Round led by Kindred Capital in March 2025, Seed Round led by Point72 Ventures in May 2025, raising $5.35 million.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing complexity of global markets necessitates advanced tools like Artificial Societies' AI simulations to anticipate stakeholder reactions and inform strategic decisions.",
+  "devils_advocate_risks": [
+    "Data Privacy Concerns: Utilizing anonymized social media and transaction data may raise privacy issues, potentially leading to regulatory challenges.",
+    "Model Accuracy: Ensuring the AI simulations accurately reflect real-world behaviors is crucial; any discrepancies could undermine the platform's effectiveness."
+  ],
+  "citations": [
+    "https://societies.ai/company",
+    "https://standout.work/companies/artificial-societies",
+    "https://www.taylorwessing.com/en/insights-and-events/news/media-centre/press-releases/2025/09/advising-artificial-societies-on-pre-seed-and-seed-funding-rounds",
+    "https://www.lemonde.fr/en/economy/article/2026/11/19/anthropic-prices-shares-at-83-valuing-the-ai-firm-at-1-5-trillion-on-the-eve-of-its-ipo_6783988_19.html"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leader in enterprise software, SAP could benefit from Artificial Societies' AI-driven simulations to enhance customer experience and product development strategies."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "DHL could leverage Artificial Societies' simulations to optimize logistics and supply chain strategies by predicting stakeholder reactions to various operational decisions."
+    }
+  ]
+}

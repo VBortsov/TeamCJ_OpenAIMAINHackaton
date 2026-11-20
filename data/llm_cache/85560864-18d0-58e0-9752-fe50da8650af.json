@@ -1,0 +1,74 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Antonia Spicher",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founding Team"
+    },
+    {
+      "full_name": "Johannes Steingass",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founding Team"
+    },
+    {
+      "full_name": "René Bacher",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founding Team"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Aachen",
+  "raised_institutional_round": false,
+  "funding_summary": "No publicly available information regarding its funding history.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "Energy & Hydrogen Technologies",
+  "inflection_why_now": "The increasing global emphasis on sustainable energy solutions and hydrogen technologies presents a timely opportunity for H2ALL's offerings.",
+  "devils_advocate_risks": [
+    "Market Adoption: The success of H2ALL's platform depends on widespread industry acceptance and integration of their software solutions.",
+    "Technological Development: Continuous innovation is crucial to stay ahead in the rapidly evolving field of hydrogen system technologies."
+  ],
+  "citations": [
+    "https://www.gateway-unikoeln.de/startups/h2all",
+    "https://www.linkedin.com/company/h2allofficial"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's expertise in specialty chemicals and materials science aligns with H2ALL's work in hydrogen technologies."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch's involvement in energy solutions and automotive technologies could complement H2ALL's hydrogen system designs."
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-2.5.0-009688.svg)](https://fastapi.tiangolo.com/)
-[![Tests](https://img.shields.io/badge/tests-23%20passed-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/tests-37%20passed-brightgreen.svg)]()
 [![Zero-Fake-Data](https://img.shields.io/badge/policy-Zero--Fake--Data-red.svg)]()
 [![Track](https://img.shields.io/badge/MAIN%20Summit%202026-HTGF%20Track-orange.svg)]()
 
@@ -14,7 +14,7 @@
 
 ## 🏛️ System Architecture
 
-The engine continuously uncovers high-potential, undiscovered European DeepTech spin-offs before they appear on institutional databases (Crunchbase, PitchBook). It screens out noisy agencies and hobby projects via 5 deterministic Kill-Gates, deeply enriches surviving founders with OpenAI live web search, scores companies against the HTGF IV investment mandate, and exports an ML contract and live provenance feed to FastAPI and n8n.
+The engine continuously uncovers high-potential, undiscovered European DeepTech spin-offs before they appear on institutional databases (Crunchbase, PitchBook). It screens out noisy agencies and hobby projects via 5 deterministic Kill-Gates, deeply enriches surviving founders with OpenAI live web search, scores companies against the HTGF IV investment mandate, runs specialized ML ranking models, and serves an interactive full-stack app (`first-signal/`) directly from FastAPI.
 
 ```
                            [ LIVE INGESTION SOURCES ]
@@ -60,7 +60,7 @@ The engine continuously uncovers high-potential, undiscovered European DeepTech 
                                 - Technical Moat (18 pts)
                                 - Multi-Signal Convergence (15 pts)
                                 - HTGF Mandate Fit (10 pts)
-                                - Optional ML Score Blend: 0.5 * det + 0.5 * ml
+                                - 50/50 Blended Ranking: 0.5 * det + 0.5 * ml
                                                    |
            +---------------------------------------+---------------------------------------+
            |                                                                               |
@@ -76,10 +76,10 @@ data/live_candidates_for_ml.csv                                                d
                                       (http://localhost:8000)
                                                    |
                      +-----------------------------+-----------------------------+
-                     |                                                           |
-                     v                                                           v
-          [ Interactive UI / Docs ]                                    [ n8n Automation Dispatch ]
-          (Swagger UI at /docs)                                        (Lusha Contact Enrichment & Slack)
+                     |                             |                             |
+                     v                             v                             v
+          [ FounderHunt Web UI ]         [ Interactive Docs ]          [ n8n Automation Dispatch ]
+          (Mounted at / from first-signal) (Swagger at /docs)           (Lusha Enrichment & Slack)
 ```
 
 ---
@@ -108,10 +108,58 @@ Every surviving lead is evaluated across five explainable dimensions with clear 
 | **4. Multi-Signal Convergence** | **15 pts** | Candidate appearing across independent signal sources (e.g., CORDIS ERC Grant + GitHub open weights + university awards). |
 | **5. HTGF Mandate Fit** | **10 pts** | Clear vertical alignment (`Industrial & Climate`, `Digital Tech & AI`, `Life Sciences & Chemistry`), DACH geography boost, and strategic synergy with **HTGF IV LP investors** (Robert Bosch, Evonik, SAP, Altana, etc.). |
 
-### Optional Machine Learning Score Blend
-When the ML team provides predictions in `data/ml_predictions.csv` (`company_id,ml_score`), the backend automatically blends the scores:
+### Machine Learning Ranking & Fact-Grounded Investment Memos
+The ML layer (`backend/ml/`) integrates two specialized logistic regression models trained on European accelerator cohorts:
+- **`model_acc`**: Optimized for accelerator-backed startups with network effects and founder credentials.
+- **`model_noacc`**: Calibrated for organic deeptech university spin-offs (ETH Zurich, RWTH Aachen, Fraunhofer, Max Planck).
+
+#### 50/50 Blended Ranking
+When predictions are generated in `data/ml_predictions.csv`, the backend blends deterministic signal rigor with statistical pedigree scoring:
 $$\text{blended\_score} = \text{round}(0.5 \times \text{deterministic\_score} + 0.5 \times \text{ml\_score}, 1)$$
-If absent, the system defaults cleanly to `ml_score = null` and `blended_score = deterministic_score`.
+
+#### Fact-Grounded LLM Memo Agent (`backend/ml/memo_agent.py`)
+Generates 1-page structured investment briefs directly from verified facts in the provenance feed:
+- **Zero Hallucination:** Only cites URLs and claims present verbatim in the candidate JSON payload.
+- **Explainability:** Deconstructs positive/negative model drivers, HTGF LP synergies, devil's advocate risks, and recommends a specific HTGF sector team with a concrete founder question.
+- **Offline Cached:** 15 Top Analyst memos are pre-generated and cached in `data/memo_cache/*.json` for instant sub-millisecond retrieval.
+
+---
+
+## 💻 Full-Stack Web Application (`first-signal/`)
+
+The FounderHunt frontend is a clean, responsive single-page application served directly by FastAPI at `/`:
+- **Live Leaderboard:** Filterable ranked ventures with blended scores, earliness badges (*Pre-Crunchbase / Undiscovered*), founder badges, and LP synergy tags.
+- **European Scouting Events:** Over 42 upcoming demo-days, university pitch competitions, and founder meetups across 10+ European hubs (Berlin, Munich, Zurich, London, Paris, Amsterdam, Vienna, Copenhagen, Stockholm).
+- **Interactive Dossiers:** Clickable venture deep dives featuring founder GitHub repositories, Impressum disclosures, and 1-page Analyst Investment Memos.
+- **Operator Sourcing Console:** Interactive on-demand live research and automated CRM dispatch gated by `FOUNDERHUNT_WRITE_TOKEN`.
+
+---
+
+## 🔒 Operator Security & Write Token
+
+Administrative actions are protected via bearer token authentication (`FOUNDERHUNT_WRITE_TOKEN` in `.env`):
+- `POST /api/enrich/live`: Live web evaluation of any submitted European domain.
+- `POST /api/ml/score`: Running ML ranking models and generating new LLM memos.
+- `POST /api/workspace`: Saving shortlist decisions and watchlists.
+- `POST /api/dispatch/n8n/{entity_id}`: Triggering n8n enrichment workflows.
+
+Pass the token as `Authorization: Bearer <FOUNDERHUNT_WRITE_TOKEN>` in API calls or enter it in the UI Settings modal.
+
+---
+
+## 🐳 Docker Deployment (One-Command Launch)
+
+The application packages compact demo data (~1.7 MB total: SQLite DB, ML predictions, EU events, and 15 pre-rendered analyst memos) directly into a non-root production container:
+
+```bash
+# Build the Docker image
+docker build -t founderhunt .
+
+# Run the container (bind to port 8000)
+docker run -p 8000:8000 founderhunt
+```
+
+Visit [http://localhost:8000](http://localhost:8000) — launches immediately with all 63 ventures, 42 EU scouting events, ML rankings, and 15 Analyst briefs out-of-the-box!
 
 ---
 
@@ -130,7 +178,7 @@ If absent, the system defaults cleanly to `ml_score = null` and `blended_score =
 
 ```bash
 # Clone the repository
-git clone https://github.com/TeamCJ-Hackathons/TeamCJ_OpenAIMAINHackaton.git
+git clone https://github.com/VBortsov/TeamCJ_OpenAIMAINHackaton.git
 cd TeamCJ_OpenAIMAINHackaton
 
 # Create and activate virtual environment
@@ -152,6 +200,7 @@ cp .env.example .env
 ```
 Populate `.env` with your API keys:
 - `OPENAI_API_KEY`: Required for live web-search enrichment (runs on Top leads).
+- `FOUNDERHUNT_WRITE_TOKEN`: Operator security token for running research and generating memos.
 - `GITHUB_TOKEN`: Optional (boosts GitHub API limit from 60/hr to 5,000/hr).
 - `N8N_WEBHOOK_URL`: Optional (for automated CRM dispatch and Slack alerts).
 - Optional free keys: `HF_TOKEN`, `OPENALEX_API_KEY`.
@@ -163,7 +212,7 @@ Populate `.env` with your API keys:
 ### Mode A: Demo Rebuild ($0.00 — Cache-Only, No API Spend)
 Re-evaluates and exports the entire leaderboard using verified cached intelligence:
 ```bash
-python -m backend.run_wave2 --skip-ingestion --cache-only --top-k 200
+python -m backend.run_wave2 --skip-ingestion --cache-only --top-k 200 --refresh-events
 ```
 
 ### Mode B: Live Discovery Run (With Ingestion & Budget Cap)
@@ -172,20 +221,30 @@ Runs full live multi-source ingestion, Impressum scraping, and web-search founde
 python -m backend.run_wave2 --limit 30 --top-k 200 --max-budget-usd 2.00
 ```
 
+### Mode C: ML Scoring & Analyst Memo Generation
+Run the dual-model ML ranking engine and generate structured investment memos:
+```bash
+python -m backend.ml.score_live
+```
+
 ---
 
 ## 🚀 Running the FastAPI Server
 
-Launch the REST API server:
+Launch the full-stack server (serving both REST API and FounderHunt UI at `/`):
 ```bash
 uvicorn backend.api.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
+- **FounderHunt Web UI:** [http://localhost:8000/](http://localhost:8000/)
 - **Interactive Swagger Documentation:** [http://localhost:8000/docs](http://localhost:8000/docs)
 - **API Health & Spend Monitor:** `GET http://localhost:8000/api/health`
 - **Provenance Dashboard Feed:** `GET http://localhost:8000/api/dashboard`
+- **European Scouting Events:** `GET http://localhost:8000/api/events`
 - **Filterable Leads:** `GET http://localhost:8000/api/leads?country=DE&min_score=60`
 - **1-Page Investment Memo:** `GET http://localhost:8000/api/leads/{entity_id}`
+- **Fact-Grounded LLM Memo:** `GET http://localhost:8000/api/leads/{entity_id}/ml-memo`
+- **Run ML Scoring & Generate Memos:** `POST http://localhost:8000/api/ml/score`
 - **Founder GitHub Technical Record:** `GET http://localhost:8000/api/founders/github/{username}`
 - **On-Demand Live URL Evaluation:** `POST http://localhost:8000/api/enrich/live`
 - **n8n Webhook Dispatch:** `POST http://localhost:8000/api/dispatch/n8n/{entity_id}`
@@ -196,7 +255,7 @@ See [docs/API_CONTRACT.md](docs/API_CONTRACT.md) for complete endpoint schemas a
 
 ## 🧪 Automated Test Suite
 
-Run the full automated test suite (23 unit tests verifying Kill-Gates, Impressum parsing, Lead Scorer, ML exports, Cost Tracker circuit breaker, and FastAPI endpoints):
+Run the full automated test suite (37 unit tests verifying Kill-Gates, Impressum parsing, Lead Scorer, ML models & memos, Cost Tracker circuit breaker, and FastAPI endpoints):
 ```bash
 pytest -v
 ```
@@ -209,7 +268,7 @@ pytest -v
 TeamCJ_OpenAIMAINHackaton/
 ├── backend/
 │   ├── api/
-│   │   └── main.py                     # FastAPI REST server & OpenAPI documentation
+│   │   └── main.py                     # FastAPI REST server, UI static mount & endpoints
 │   ├── config.py                       # App settings, platform domains, and LP rosters
 │   ├── db/
 │   │   ├── repository.py               # SQLite storage, UUIDs, URL & city normalizers
@@ -217,33 +276,49 @@ TeamCJ_OpenAIMAINHackaton/
 │   ├── enrichment/
 │   │   ├── cost_tracker.py             # Budget circuit-breaker & cost ledger
 │   │   ├── github_verifier.py          # Anti-fake-star & founder profile verification
+│   │   ├── import_founder_links.py     # Offline founder profiles & social links merger
 │   │   ├── impressum.py                # § 5 DDG German legal disclosures scraper
 │   │   └── openai_enricher.py          # Live web-search pedigree & LP synergy enricher
 │   ├── export/
 │   │   └── ml_exporter.py              # ML contract CSV exporter (features.md)
 │   ├── ingestion/
-│   │   ├── adapters/                   # 6 Signal adapters (ETH/RWTH, OpenAlex, HF, etc.)
+│   │   ├── adapters/                   # 6 Signal adapters (ETH/RWTH, OpenAlex, HF, Luma, CORDIS, YC)
 │   │   ├── base.py                     # BaseSignalAdapter & RawCandidate contracts
 │   │   └── http_client.py              # Resilient cached HTTP client with exponential backoff
+│   ├── ml/                             # Machine learning ranking & memo subsystem
+│   │   ├── memo_agent.py               # Fact-grounded 1-page investment memo agent
+│   │   ├── score_live.py               # Standalone ML batch scoring script
+│   │   ├── scoring.py                  # Model loader, feature extraction & inference
+│   │   └── service.py                  # ML predictions service layer
 │   ├── requirements.txt                # Python dependencies
 │   ├── run_wave2.py                    # End-to-end pipeline runner
 │   └── scoring/
 │       ├── kill_gates.py               # 5 Deterministic zero-LLM Kill-Gates
 │       └── scorer.py                   # 5-Pillar transparent lead scoring
-├── data/                               # Local data & caches (strictly gitignored)
-│   ├── cost_ledger.jsonl               # Live API cost audit ledger
+├── first-signal/                       # FounderHunt interactive web UI (SPA)
+│   ├── app.js                          # State management, filtering, dossiers, charts
+│   ├── index.html                      # Semantic layout, accessible views, modals
+│   └── styles.css                      # Modern dark/light responsive styling
+├── data/                               # Bundled lightweight demo data (~1.7 MB total)
+│   ├── events_feed.json                # 42 European scouting events across 10+ cities
 │   ├── live_candidates_for_ml.csv      # ML inference handoff contract (36 columns)
-│   ├── llm_cache/                      # Persistent disk cache for OpenAI responses
-│   ├── scout.db                        # Primary SQLite database
+│   ├── llm_cache/                      # Verified founder enrichment cache JSONs
+│   ├── memo_cache/                     # Top-15 Analyst Investment Memo JSONs
+│   ├── ml_predictions.csv              # Machine learning model predictions & percentiles
+│   ├── scout.db                        # Primary SQLite database (63 ventures, signals)
 │   └── wave2_frontend_feed.json        # Frontend provenance feed snapshot
 ├── docs/
 │   └── API_CONTRACT.md                 # Full REST API & ML handoff contract reference
 ├── tests/
 │   ├── test_adapters.py                # Unit tests for signal ingestion adapters
+│   ├── test_live_integration.py        # Integration tests for live evaluations
+│   ├── test_ml.py                      # Unit tests for ML models, percentiles & memos
 │   ├── test_repository.py              # Unit tests for UUIDs and database operations
-│   └── test_wave2.py                   # 23 tests for Kill-Gates, Scorer, Cost Tracker, API
+│   └── test_wave2.py                   # Tests for Kill-Gates, Scorer, Cost Tracker, API
+├── .dockerignore                       # Excludes heavy scraper caches from image
 ├── .env.example                        # Example environment configuration
-├── .gitignore                          # Strict gitignore protecting keys & caches
+├── .gitignore                          # Strict gitignore protecting keys & raw caches
+├── Dockerfile                          # Production container specification
 ├── pyproject.toml                      # Pytest & packaging configuration
 └── README.md                           # Comprehensive documentation
 ```

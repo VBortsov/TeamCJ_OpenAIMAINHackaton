@@ -1,0 +1,56 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Ala Bunescu",
+      "role": "Lead PI",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "University of Bonn"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Assistant Professor at the University of Bonn"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Bonn",
+  "raised_institutional_round": true,
+  "funding_summary": "The project has secured €150,000 in funding from the European Research Council.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (The project has secured €150,000 in funding from the European Research Council.)",
+  "htgf_vertical": "ERC Proof of Concept Project",
+  "inflection_why_now": "The increasing demand for efficient and scalable synthesis of complex polyaromatic compounds in pharmaceuticals and materials science underscores the timely relevance of Pi-LOOP's innovative approach.",
+  "devils_advocate_risks": [
+    "Commercialization Challenges: Transitioning from a research-focused project to a commercially viable product may encounter market acceptance and scalability issues.",
+    "Intellectual Property Risks: Ensuring robust patent protection and navigating potential patent disputes could pose challenges during commercialization."
+  ],
+  "citations": [
+    "https://www.uni-bonn.de/en/news/124-2026",
+    "https://cordis.europa.eu/project/id/101334864"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in specialty chemicals and materials, aligning with Pi-LOOP's focus on developing new functional molecules for industrial applications."
+    },
+    {
+      "lp_name": "ALTANA",
+      "reason": "ALTANA is a global leader in specialty chemicals, particularly in the field of pigments and additives, which could benefit from Pi-LOOP's innovative synthesis methods for polyaromatic compounds."
+    }
+  ]
+}

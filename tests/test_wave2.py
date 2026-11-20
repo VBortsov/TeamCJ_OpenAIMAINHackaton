@@ -543,6 +543,7 @@ def test_optional_ml_score_blend_integration():
     from backend.api.main import load_frontend_feed, load_ml_predictions
 
     pred_file = settings.DATA_DIR / "ml_predictions.csv"
+    original_content = pred_file.read_bytes() if pred_file.exists() else None
     try:
         # Create temporary ML predictions CSV
         feed = load_frontend_feed()
@@ -560,7 +561,9 @@ def test_optional_ml_score_blend_integration():
             assert matched["blended_score"] == expected_blended
 
     finally:
-        if pred_file.exists():
+        if original_content is not None:
+            pred_file.write_bytes(original_content)
+        elif pred_file.exists():
             pred_file.unlink()
 
 

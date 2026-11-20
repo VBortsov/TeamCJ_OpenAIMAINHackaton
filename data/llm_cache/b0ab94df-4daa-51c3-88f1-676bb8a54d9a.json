@@ -1,0 +1,80 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Ilya Gelfenbeyn",
+      "role": "Co-founder and Executive Chairman",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "API.AI (Dialogflow)"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "Co-founder of API.AI, acquired by Google."
+    },
+    {
+      "full_name": "Kylan Gibbs",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Google DeepMind"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "Led product for large language models at Google DeepMind."
+    },
+    {
+      "full_name": "Michael Ermolenko",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "API.AI"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "Led AI development at API.AI."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": true,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2021,
+  "city": null,
+  "raised_institutional_round": true,
+  "funding_summary": "In total, Inworld AI has raised over $120 million from various funding rounds including Seed, Series A, and multiple venture rounds.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2021 (older than 3.5 years)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for immersive AI-driven experiences in gaming and virtual environments presents a significant growth opportunity for Inworld AI.",
+  "devils_advocate_risks": [
+    "Market Competition: The rapidly evolving AI and gaming sectors may lead to intensified competition, potentially impacting Inworld AI's market share.",
+    "Technological Integration: Ensuring seamless integration of Inworld AI's solutions with diverse gaming platforms and technologies could pose technical challenges."
+  ],
+  "citations": [
+    "https://inworld.ai/resources/what-is-inworld-ai",
+    "https://www.owler.com/company/inworldai/funding"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Inworld AI's focus on real-time AI applications aligns with SAP's enterprise software solutions, potentially enhancing SAP's offerings in AI-driven enterprise applications."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Inworld AI's expertise in AI-driven virtual characters could complement Evonik's interests in innovative technologies, particularly in sectors like digital media and interactive experiences."
+    }
+  ]
+}

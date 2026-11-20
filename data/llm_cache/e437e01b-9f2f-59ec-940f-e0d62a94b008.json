@@ -1,0 +1,73 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Ying Sheng",
+      "role": "CEO",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "Stanford University"
+      ],
+      "prior_companies": [
+        "Databricks",
+        "xAI"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder and CEO of RadixArk"
+    },
+    {
+      "full_name": "Banghua Zhu",
+      "role": "CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "NVIDIA"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "Co-founder and CTO of RadixArk"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": true,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": null,
+  "raised_institutional_round": true,
+  "funding_summary": "In May 2026, RadixArk raised $100 million in a seed funding round led by Accel and co-led by Spark Capital, valuing the company at $400 million post-money.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In May 2026, RadixArk raised $100 million in a seed funding round led by Accel and co-led by Spark Capital, valuing the company at $400 million post-money.)",
+  "htgf_vertical": "AI Infrastructure",
+  "inflection_why_now": "The rapid adoption of AI technologies across industries creates a pressing need for efficient and scalable AI infrastructure, positioning RadixArk to meet this demand.",
+  "devils_advocate_risks": [
+    "Market Competition: The AI infrastructure sector is highly competitive, with numerous established players and new entrants, which could impact RadixArk's market share.",
+    "Technological Integration: Ensuring seamless integration of RadixArk's solutions with diverse existing systems and platforms may present technical challenges."
+  ],
+  "citations": [
+    "https://www.morningstar.com/news/business-wire/20260505077157/radixark-launches-with-100-million-in-seed-funding-led-by-accel-to-grow-sglang-and-democratize-frontier-ai-infrastructure",
+    "https://seedlist.com/startups/radixark",
+    "https://fundraisingfox.com/companies/radixark",
+    "https://techcrunch.com/2026/01/21/sources-project-sglang-spins-out-as-radixark-with-400m-valuation-as-inference-market-explodes/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could benefit from RadixArk's AI infrastructure in optimizing manufacturing processes and product development."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "As a leader in enterprise software, SAP could leverage RadixArk's AI solutions to enhance data analytics and business intelligence offerings for its clients."
+    }
+  ]
+}

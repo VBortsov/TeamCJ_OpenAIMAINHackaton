@@ -1,0 +1,68 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Matt Miller",
+      "role": "Chief Technology Officer",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "LinkedIn"
+    },
+    {
+      "full_name": "Jonathan Watkins",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "LinkedIn"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Quebec City",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $16.2 million in October 2024 during seed round, $19 million in December 2024 during Series A, $17 million in September 2025 during growth round, and $30 million in April 2026 during Series B at a $500 million valuation.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $16.2 million in October 2024 during seed round, $19 million in December 2024 during Series A, $17 million in September 2025 during growth round, and $30 million in April 2026 during Series B at a $500 million valuation.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The rapid adoption of AI in creative industries underscores the timely emergence of ComfyUI's platform.",
+  "devils_advocate_risks": [
+    "Market Competition: The AI creative tools market is becoming increasingly competitive, which could impact ComfyUI's growth trajectory.",
+    "Scalability Challenges: Ensuring the platform can handle a growing user base without compromising performance is crucial for sustained success."
+  ],
+  "citations": [
+    "https://www.linkedin.com/posts/matt-miller-ca_ive-spent-the-last-several-years-running-activity-7453498218417557504-Bn9P",
+    "https://comfy.org/about/",
+    "https://indexed.vc/companies/comfyui",
+    "https://www.fobi.com/creative-tools/companies/comfy-org",
+    "https://blog.comfy.org/p/comfy-raises-17m-funding",
+    "https://www.globenewswire.com/news-release/2026/04/24/3281014/0/en/comfyui-raises-30m-at-500m-valuation-to-scale-open-source-ai-for-creative-production.html"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leader in enterprise software, SAP could benefit from integrating ComfyUI's generative AI capabilities to enhance its product offerings."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "With a focus on innovative technologies, Evonik could leverage ComfyUI's AI-driven solutions to advance its chemical and material sciences."
+    }
+  ]
+}

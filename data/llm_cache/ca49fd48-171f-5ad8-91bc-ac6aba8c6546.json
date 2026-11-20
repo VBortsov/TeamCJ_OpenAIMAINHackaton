@@ -1,0 +1,68 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Olaf Rübenach",
+      "role": "Managing Director",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "RWTH Aachen University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founding team of INGENERIC GmbH"
+    },
+    {
+      "full_name": "Dr. Stefan Hambücker",
+      "role": "Managing Director",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "RWTH Aachen University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founding team of INGENERIC GmbH"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2001,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "Specific details about the company's funding history are not publicly available. However, in 2019, INGENERIC expanded its production capacities by moving to a new facility in Baesweiler, Germany, indicating growth and potential investment.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2001 (older than 3.5 years)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for high-precision micro-optics in sectors like laser technology, optical data communication, and medical devices presents a timely opportunity for INGENERIC to leverage its expertise.",
+  "devils_advocate_risks": [
+    "Potential challenges in scaling production to meet growing global demand.",
+    "The need to continuously innovate to stay ahead in the competitive micro-optics market."
+  ],
+  "citations": [
+    "https://ingeneric.com/about-us/",
+    "https://ingeneric.com/ingeneric-expands-production-capacities/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in specialty chemicals and materials science, aligning with INGENERIC's focus on precision optics for high-tech applications."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim invests in innovative technologies, including medical devices, which could benefit from INGENERIC's optical components in medical applications."
+    }
+  ]
+}

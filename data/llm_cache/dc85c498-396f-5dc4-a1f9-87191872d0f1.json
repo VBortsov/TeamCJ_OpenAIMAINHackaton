@@ -1,0 +1,91 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Manos Theodosis",
+      "role": "Co-founder",
+      "linkedin_url": "https://www.linkedin.com/in/manosth",
+      "has_phd": true,
+      "universities": [
+        "Harvard University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "LinkedIn"
+    },
+    {
+      "full_name": "Tomás Figliolia",
+      "role": "Chief Architect and Co-founder",
+      "linkedin_url": "https://www.linkedin.com/in/tomas-figliolia",
+      "has_phd": true,
+      "universities": [
+        "Johns Hopkins University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "LinkedIn"
+    },
+    {
+      "full_name": "Beren Millidge",
+      "role": "Co-founder and Chief Scientist",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "aipeoplewiki"
+    },
+    {
+      "full_name": "Krithik Puthalath",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "aipeoplewiki"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2021,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "The most recent investment in Zyphra recorded was in 2024.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2021 (older than 3.5 years)",
+  "htgf_vertical": "Artificial Intelligence",
+  "inflection_why_now": "The increasing demand for AI-driven solutions across industries presents a timely opportunity for Zyphra's offerings.",
+  "devils_advocate_risks": [
+    "Market Competition: The AI sector is highly competitive, with numerous established players.",
+    "Scalability Challenges: Ensuring their AI models can scale effectively across diverse applications may pose technical hurdles."
+  ],
+  "citations": [
+    "https://www.linkedin.com/in/manosth",
+    "https://www.linkedin.com/in/tomas-figliolia",
+    "https://aipeoplewiki.com/companies/zyphra/",
+    "https://nextomoro.com/zyphra/",
+    "https://www.gritt.io/company/zyphra/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Zyphra's focus on AI and machine learning aligns with SAP's interest in integrating advanced technologies into enterprise solutions."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Zyphra's work in AI could complement Evonik's initiatives in digitalization and innovation within the chemical industry."
+    }
+  ]
+}

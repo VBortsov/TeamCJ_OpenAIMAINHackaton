@@ -1,0 +1,88 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Professor Dr. Theodor W. Hänsch",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "Max Planck Institute for Quantum Optics"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Nobel Prize in Physics 2005"
+    },
+    {
+      "full_name": "Dr. Ronald Holzwarth",
+      "role": "Co-Founder and Managing Director",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-Founder of Menlo Systems"
+    },
+    {
+      "full_name": "Dr. Michael Mei",
+      "role": "Co-Founder and Managing Director",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-Founder of Menlo Systems"
+    },
+    {
+      "full_name": "Alex Cable",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-Founder of Menlo Systems"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": true,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2001,
+  "city": "Martinsried",
+  "raised_institutional_round": false,
+  "funding_summary": "Menlo Systems received several grants from the European Union over the years, including amounts of approximately $920,657 in October 2018, $289,714 in January 2019, and $92,075 in January 2017. Additionally, Hamamatsu Photonics acquired a minority stake in January 2019.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2001 (older than 3.5 years)",
+  "htgf_vertical": "Quantum Technologies and Precision Photonics",
+  "inflection_why_now": "The increasing demand for precision measurement technologies in quantum computing and telecommunications presents a timely opportunity for Menlo Systems to expand its market presence.",
+  "devils_advocate_risks": [
+    "Technological Obsolescence: Rapid advancements in quantum technologies could render existing products obsolete.",
+    "Market Competition: Emerging competitors with innovative solutions may challenge Menlo Systems' market share."
+  ],
+  "citations": [
+    "https://www.menlosystems.com/company/",
+    "https://www.arqis.com/news/arqis-beraet-hamamatsu-bei-einstieg-in-die-menlo-systems-gmbh/",
+    "https://www.thecompanycheck.com/company/b/menlo-systems/lztcg13ykswmgz6d7",
+    "https://www.youtube.com/watch?v=jE65__sbah0"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Specializes in specialty chemicals and materials science, aligning with Menlo Systems' focus on precision photonics and quantum technologies."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Involved in biopharmaceuticals, which could benefit from Menlo Systems' precision measurement technologies in drug development and diagnostics."
+    }
+  ]
+}

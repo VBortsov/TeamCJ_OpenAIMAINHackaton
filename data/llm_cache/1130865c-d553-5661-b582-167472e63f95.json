@@ -1,0 +1,31 @@
+{
+  "founders_enriched": [],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Delft",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The recent advancements in high-stress silicon nitride membranes have enabled unprecedented sensitivity in room-temperature force and displacement measurements, positioning COMPACT-Q at the forefront of sensor technology innovation.",
+  "devils_advocate_risks": [
+    "The commercialization of highly sensitive sensor technologies often faces challenges in scaling production and ensuring reliability for diverse applications.",
+    "Securing adequate funding and strategic partnerships is crucial for transitioning from research to market-ready products, and any delays or difficulties in this process could impede growth."
+  ],
+  "citations": [],
+  "lp_synergy_matches": []
+}

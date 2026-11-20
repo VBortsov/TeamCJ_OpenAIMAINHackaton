@@ -1,0 +1,84 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Alessandro Morra",
+      "role": "CEO and Co-Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Ascento's official website"
+    },
+    {
+      "full_name": "Ciro Salzmann",
+      "role": "Electronics and Software Co-Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Ascento's official website"
+    },
+    {
+      "full_name": "Dominik Mannhart",
+      "role": "Hardware and Design Co-Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Ascento's official website"
+    },
+    {
+      "full_name": "Miguel de la Iglesia Valls",
+      "role": "CTO and Co-Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Ascento's official website"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2023,
+  "city": "Zurich",
+  "raised_institutional_round": true,
+  "funding_summary": "Ascento has secured investment from Founderful Campus, marking it as their third investment at ETH Zurich.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Ascento has secured investment from Founderful Campus, marking it as their third investment at ETH Zurich.)",
+  "htgf_vertical": "/",
+  "inflection_why_now": "The increasing need for efficient and cost-effective security solutions in large outdoor areas makes Ascento's autonomous robotic guards timely and relevant.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing traditional security providers and clients to transition to robotic solutions may face resistance due to established practices.",
+    "Technological Reliability: Ensuring consistent performance of autonomous robots in diverse and challenging outdoor environments is critical for customer trust and satisfaction."
+  ],
+  "citations": [
+    "https://www.ascento.ai/about",
+    "https://www.linkedin.com/posts/founderfulcampus_announcing-our-investment-inascento-robotics-activity-6965961155504656384-t6my"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Ascento's focus on autonomous robotics aligns with Evonik's interest in innovative technologies, potentially enhancing their portfolio in advanced manufacturing solutions."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Ascento's AI-driven security solutions could integrate with SAP's enterprise software, offering clients enhanced security features within their existing systems."
+    }
+  ]
+}

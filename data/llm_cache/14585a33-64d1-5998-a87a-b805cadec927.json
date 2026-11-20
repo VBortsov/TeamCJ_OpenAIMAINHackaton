@@ -1,0 +1,68 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Virginia Orndorff",
+      "role": "CEO and President",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "CEO and President from 2000 to November 2010"
+    },
+    {
+      "full_name": "Messier",
+      "role": "Chief Executive Officer",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Chief Executive Officer from 2010 to 2014"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2000,
+  "city": "Lafayette",
+  "raised_institutional_round": true,
+  "funding_summary": "The company has raised a total of $4.68 million over five funding rounds. The latest funding round was a grant of $250,000 from the Colorado Office of Economic Development and International Trade on May 18, 2018.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2000 (older than 3.5 years)",
+  "htgf_vertical": "Agricultural Genomics",
+  "inflection_why_now": "Advancements in genomic technologies are enabling more precise and efficient crop improvement, addressing global challenges in food security and sustainability.",
+  "devils_advocate_risks": [
+    "Technological Validation: Ensuring that identified genes effectively translate to desired traits in diverse agricultural environments.",
+    "Market Adoption: Convincing seed companies and farmers to integrate genomic insights into their breeding programs and cultivation practices."
+  ],
+  "citations": [
+    "https://aventure.vc/companies/evolutionary-genomics-lafayette-co-us/fundraising",
+    "https://www.evolgen.com/company-profile",
+    "https://www.evolgen.com/management-team",
+    "https://biology.ecu.edu/faculty/fidisoa-rasambainarivo/",
+    "https://www.fidylab.com/team",
+    "https://www.cbinsights.com/company/evolutionary-genomics/financials"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "As a global leader in animal health, Boehringer Ingelheim could benefit from advancements in crop genomics that enhance animal feed quality."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in sustainable agriculture aligns with Evolutionary Genomics' work in improving crop traits through genomics."
+    }
+  ]
+}

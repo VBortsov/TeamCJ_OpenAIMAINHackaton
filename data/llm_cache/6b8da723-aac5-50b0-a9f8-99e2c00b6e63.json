@@ -1,0 +1,56 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Prof. Maria Christakis",
+      "role": "Principal Investigator",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "Technical University of Vienna"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Led the CIRCUZZ project at TU Wien."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Vienna",
+  "raised_institutional_round": true,
+  "funding_summary": "The project received €150,000 in funding from the European Research Council (ERC).",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (The project received €150,000 in funding from the European Research Council (ERC).)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "With increasing concerns over data privacy and security, the demand for reliable zero-knowledge systems is at an all-time high, making this the ideal time to develop and deploy such technologies.",
+  "devils_advocate_risks": [
+    "Technical Complexity: Developing an open-source tool for testing zero-knowledge systems involves intricate technical challenges that may delay project timelines.",
+    "Adoption Barriers: Convincing developers and security auditors to adopt a new testing tool requires overcoming resistance to change and demonstrating clear advantages over existing solutions."
+  ],
+  "citations": [
+    "https://cysec.wien/news/2026-06-30_erc_christakis/",
+    "https://www.perspicuous-computing.science/maria-christakis-receives-erc-proof-of-concept-grant/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, aligning with CIRCUZZ's focus on enhancing the security of zero-knowledge systems, which are crucial for privacy-preserving technologies."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's expertise in enterprise software solutions could benefit from integrating robust zero-knowledge systems to enhance data privacy and security in their offerings."
+    }
+  ]
+}

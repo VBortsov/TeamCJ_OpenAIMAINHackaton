@@ -1,0 +1,66 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "George Curtis",
+      "role": "CEO and Co-Founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "foundersprime.com"
+    },
+    {
+      "full_name": "Xavier Cochran",
+      "role": "Co-Founder and CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "fundraisingfox.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "The company has raised a total of $500,000 in seed funding as of November 12, 2026.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The rapid advancement of AI applications necessitates robust and scalable data infrastructure solutions like HelixDB.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing enterprises to transition to a new database system may face resistance due to existing infrastructure investments.",
+    "Scalability Challenges: Ensuring HelixDB can scale effectively to meet the demands of large-scale AI applications is critical."
+  ],
+  "citations": [
+    "https://www.foundersprime.com/startups/helixdb",
+    "https://fundraisingfox.com/companies/helixdb",
+    "https://www.ycombinator.com/companies/helixdb",
+    "https://aventure.vc/companies/helixdb-london-gb/fundraising"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "HelixDB's focus on AI and data infrastructure aligns with SAP's interest in enterprise software solutions."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "HelixDB's innovative database solutions could complement Evonik's investments in advanced technologies."
+    }
+  ]
+}

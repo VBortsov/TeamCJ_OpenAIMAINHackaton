@@ -1,0 +1,34 @@
+{
+  "founders_enriched": [],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing global emphasis on digital health solutions and personalized wellness platforms presents a timely opportunity for Flowverse to capitalize on the growing demand for integrated health and lifestyle technologies.",
+  "devils_advocate_risks": [
+    "Market Competition: The healthtech sector is highly competitive, with numerous established players offering similar solutions, which could challenge Flowverse's market entry and growth.",
+    "Regulatory Compliance: Navigating the complex regulatory landscape for health-related technologies requires significant resources and expertise, posing potential hurdles for Flowverse's product development and deployment."
+  ],
+  "citations": [
+    "https://transfer.ethz.ch/founders.html",
+    "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+  ],
+  "lp_synergy_matches": []
+}

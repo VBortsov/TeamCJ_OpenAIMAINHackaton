@@ -1,0 +1,56 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Chong Sun",
+      "role": "Leader of the 'Cancer Immunoregulation' early-career research group",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "Utrecht University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Research Leader at Deutsches Krebsforschungszentrum"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2027,
+  "city": "Heidelberg",
+  "raised_institutional_round": true,
+  "funding_summary": "Secured €150,000 in funding from the European Union as an ERC Proof-of-Concept project.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Secured €150,000 in funding from the European Union as an ERC Proof-of-Concept project.)",
+  "htgf_vertical": "Life Sciences",
+  "inflection_why_now": "The increasing complexity of drug discovery necessitates advanced technologies like LIVEMAP to accurately map drug–protein interactions, thereby accelerating the development of safer and more effective therapies.",
+  "devils_advocate_risks": [
+    "Technological Validation: Ensuring that LIVEMAP's platform can reliably identify a comprehensive range of drug–protein interactions in live cells.",
+    "Market Adoption: Achieving widespread acceptance and integration of the platform within the pharmaceutical and biotechnology industries."
+  ],
+  "citations": [
+    "https://cordis.europa.eu/project/id/101335596/fr",
+    "https://dktk.dkfz.de/en/news/latest-news/double-erc-success-dkfz-researchers"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "As a major pharmaceutical company, Boehringer Ingelheim could benefit from LIVEMAP's platform to enhance drug discovery processes by identifying both intended and unintended drug–protein interactions."
+    },
+    {
+      "lp_name": "QIAGEN",
+      "reason": "Specializing in sample and assay technologies, QIAGEN could integrate LIVEMAP's live-cell mapping capabilities to improve proteomic analyses and diagnostics."
+    }
+  ]
+}

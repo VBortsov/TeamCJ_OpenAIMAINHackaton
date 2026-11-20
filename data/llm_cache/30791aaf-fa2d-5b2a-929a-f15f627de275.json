@@ -1,0 +1,42 @@
+{
+  "founders_enriched": [],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Bonn",
+  "raised_institutional_round": false,
+  "funding_summary": "The ERC grant agreement for STRIQING was signed on July 29, 2026, with the project scheduled to start on January 1, 2027, and end on June 30, 2028. The EU contribution to the project is €150,000.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "Biotechnology",
+  "inflection_why_now": "The increasing prevalence of genetic disorders caused by short tandem repeat expansions underscores the urgent need for advanced diagnostic tools like STRIQING.",
+  "devils_advocate_risks": [
+    "Technical Risk: Challenges in accurately quantifying short tandem repeat instability using next-generation sequencing could impede the project's success.",
+    "Market Risk: The adoption of new diagnostic technologies in clinical settings may be slower than anticipated, affecting the project's commercial viability."
+  ],
+  "citations": [
+    "https://cordis.europa.eu/project/id/101335373"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "As a pharmaceutical company, Boehringer Ingelheim could benefit from STRIQING's advancements in next-generation sequencing, potentially enhancing their drug discovery and development processes."
+    },
+    {
+      "lp_name": "QIAGEN",
+      "reason": "Specializing in sample and assay technologies, QIAGEN could leverage STRIQING's innovations to improve their diagnostic and research offerings, particularly in genetic analysis."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "founders_enriched": [],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "The company has not publicly disclosed any funding history.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing integration of AI agents into various services necessitates a dedicated identity and communication layer to ensure seamless and secure interactions.",
+  "devils_advocate_risks": [
+    "Establishing interoperability among diverse AI agents and platforms may present significant technical challenges.",
+    "Achieving widespread adoption of a new communication standard for AI agents could be hindered by resistance from existing service providers and users."
+  ],
+  "citations": [
+    "https://artil.ai/about/",
+    "https://uk.linkedin.com/company/artil-ai"
+  ],
+  "lp_synergy_matches": []
+}

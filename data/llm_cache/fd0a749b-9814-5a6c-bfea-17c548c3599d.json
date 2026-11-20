@@ -1,0 +1,65 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Ayush Rodrigues",
+      "role": "CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Y Combinator"
+    },
+    {
+      "full_name": "John Yeo",
+      "role": "CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Y Combinator"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Autumn raised a $500,000 seed round in June 2025.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Autumn raised a $500,000 seed round in June 2025.)",
+  "htgf_vertical": ">AI",
+  "inflection_why_now": "The increasing adoption of AI technologies by startups creates a growing demand for specialized billing infrastructures, positioning Autumn to capitalize on this trend.",
+  "devils_advocate_risks": [
+    "Market Competition: The emergence of alternative billing solutions could challenge Autumn's market share.",
+    "Scalability Challenges: Ensuring the platform can handle the diverse and evolving needs of rapidly growing AI startups may require continuous development and adaptation."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/companies/autumn/jobs",
+    "https://www.gritt.io/company/useautumn/",
+    "https://aventure.vc/companies/autumn-london-gb/fundraising"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leading enterprise software company, SAP's focus on business applications aligns with Autumn's billing infrastructure for AI startups, potentially enhancing SAP's offerings in the AI sector."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in innovative technologies complements Autumn's billing solutions, which could be integrated into Evonik's digital transformation initiatives."
+    }
+  ]
+}

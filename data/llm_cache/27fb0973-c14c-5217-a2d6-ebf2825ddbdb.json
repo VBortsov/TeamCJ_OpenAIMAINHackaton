@@ -1,0 +1,106 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Robin Rombach",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Andreas Blattmann",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Patrick Esser",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Axel Sauer",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Sumith Kulal",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Dominik Lorenz",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": ""
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": null,
+  "raised_institutional_round": true,
+  "funding_summary": "Raised €28 million in 2024, led by Andreessen Horowitz, with participation from General Catalyst, Mätch VC, Garry Tan, and Michael Ovitz. Secured $300 million in December 2025, elevating the valuation to $3.25 billion.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised €28 million in 2024, led by Andreessen Horowitz, with participation from General Catalyst, Mätch VC, Garry Tan, and Michael Ovitz. Secured $300 million in December 2025, elevating the valuation to $3.25 billion.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The rapid adoption of Black Forest Labs' FLUX models by major companies like Adobe, Canva, and Meta signifies a pivotal moment for scaling their AI technologies.",
+  "devils_advocate_risks": [
+    "Market Competition: The AI industry is highly competitive, with numerous players vying for dominance, which could impact Black Forest Labs' market share.",
+    "Technological Challenges: Ensuring the scalability and reliability of AI models across diverse applications remains a complex task."
+  ],
+  "citations": [
+    "https://www.linkedin.com/posts/ai-world-eu_daily-startup-spotlight-black-forest-labs-activity-7313186599586975744-iZE5",
+    "https://www.linkedin.com/company/bflai",
+    "https://www.linkedin.com/news/story/ai-startup-black-forest-labs-hits-325b-valuation-7291377/",
+    "https://www.youtube.com/watch?v=H3rZlVkN8Uw"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leader in enterprise software, SAP could benefit from integrating Black Forest Labs' advanced AI models to enhance its data analytics and automation capabilities."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Specializing in specialty chemicals, Evonik could leverage Black Forest Labs' AI technologies to innovate in product development and process optimization."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Professor Branko Šavija",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "Technische Universiteit Delft"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Lead of FUN-CRETE project and recipient of ERC Proof of Concept grant."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Delft",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for sustainable infrastructure solutions presents a timely opportunity for integrating energy harvesting capabilities into structural elements.",
+  "devils_advocate_risks": [
+    "Technical Feasibility: Ensuring the reliable performance of cementitious composites coupled with piezoelectric polymers under real-world conditions.",
+    "Market Adoption: Convincing stakeholders in the construction and infrastructure sectors to adopt new, unproven materials and technologies."
+  ],
+  "citations": [
+    "https://www.tudelft.nl/en/2026/ceg/erc-proof-of-concept-energy-generation-within-load-bearing-structural-elements",
+    "https://www.cordis.europa.eu/project/id/101334672"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could complement the development of innovative cementitious composites for energy harvesting."
+    },
+    {
+      "lp_name": "WACKER",
+      "reason": "WACKER's expertise in chemical production and materials science aligns with the project's aim to develop functional materials for infrastructure applications."
+    }
+  ]
+}

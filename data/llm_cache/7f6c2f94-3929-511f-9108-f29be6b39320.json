@@ -1,0 +1,56 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Chris Baeumer",
+      "role": "Researcher",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "University of Twente"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Leader of the HEA-H2 project"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Enschede",
+  "raised_institutional_round": false,
+  "funding_summary": "The project is funded by the ERC grant but no information indicates the establishment of a standalone company or additional funding.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "Green Hydrogen Technology",
+  "inflection_why_now": "The urgent need for sustainable and affordable green hydrogen solutions is driving innovation in electrolyzer technologies, making HEA-H2's research timely and impactful.",
+  "devils_advocate_risks": [
+    "Technical Risk: Challenges in scaling up the production of high-entropy oxide materials for electrolyzers could impede commercialization efforts.",
+    "Market Risk: The evolving regulatory landscape and competition in the green hydrogen sector may affect the project's market adoption and success."
+  ],
+  "citations": [
+    "https://eseia.eu/news/member-news-university-of-twente-secures-eu-funding-to-advance-green-hydrogen-technology/",
+    "https://cordis.europa.eu/project/id/101335007"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's expertise in chemical engineering and materials science aligns with HEA-H2's development of durable electrolyzer materials for green hydrogen production."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch's involvement in sustainable technologies and automotive applications could complement HEA-H2's advancements in hydrogen energy solutions."
+    }
+  ]
+}

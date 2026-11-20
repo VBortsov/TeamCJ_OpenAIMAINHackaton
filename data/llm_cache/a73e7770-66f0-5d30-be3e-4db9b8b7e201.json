@@ -1,0 +1,54 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Antoine Martin",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "TechCrunch article"
+    },
+    {
+      "full_name": "Michael Goldenstein",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "TechCrunch article"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2023,
+  "city": "Paris",
+  "raised_institutional_round": false,
+  "funding_summary": "No specific funding information available.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "Consumer Technology",
+  "inflection_why_now": "Focus on making social apps more social.",
+  "devils_advocate_risks": [],
+  "citations": [
+    "https://www.amo.de/en/about-amo/our-story/",
+    "https://techcrunch.com/2023/11/19/with-amo-the-founder-of-zenly-wants-to-make-social-apps-social-again/",
+    "https://www.scalablepod.it/en/startup/airmo/",
+    "https://ng.linkedin.com/in/bayode-adeyanju-r-eng-coren-mnse-8544a3143"
+  ],
+  "lp_synergy_matches": []
+}

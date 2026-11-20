@@ -1,0 +1,67 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Yair Adato",
+      "role": "CEO",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [
+        "Ben-Gurion University of the Negev"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Ph.D. in Computer Science specializing in computer vision."
+    },
+    {
+      "full_name": "Gal Jacobi",
+      "role": "Co-founder and President",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": ""
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2020,
+  "city": null,
+  "raised_institutional_round": true,
+  "funding_summary": "Bria AI raised $24 million in Series A on February 21, 2024, and $40 million in Series B on March 13, 2025.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2020 (older than 3.5 years)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for responsible and compliant AI-generated visual content presents a timely opportunity for Bria AI to lead in this niche market.",
+  "devils_advocate_risks": [
+    "Market Competition: The rapidly evolving AI landscape may lead to new entrants offering similar solutions, intensifying competition.",
+    "Regulatory Challenges: Navigating complex copyright and data privacy regulations across different jurisdictions could impact Bria AI's operations."
+  ],
+  "citations": [
+    "https://www.edgepedia.org/bria-ai",
+    "https://www.prnewswire.com/news-releases/bria-raises-24m-series-a-to-pioneer-responsible-visual-generative-ai-for-enterprises-302067391.html",
+    "https://techcrunch.com/2025/03/13/bria-lands-new-funding-for-ai-models-trained-on-licensed-data/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Bria AI's enterprise visual generative AI platform can integrate with SAP's enterprise resource planning systems, enhancing content creation capabilities within SAP's ecosystem."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's focus on digitalization in the chemical industry aligns with Bria AI's solutions, potentially improving Evonik's marketing and product visualization processes."
+    }
+  ]
+}

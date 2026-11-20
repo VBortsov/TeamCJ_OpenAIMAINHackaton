@@ -1,0 +1,77 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Xiaodong (Samuel) Zeng",
+      "role": "Founder and CEO",
+      "linkedin_url": "https://www.linkedin.com/in/xiaodongzeng",
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Official Edge0 website"
+    },
+    {
+      "full_name": "Wang L. Mao",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Official Edge0 website"
+    },
+    {
+      "full_name": "Bupalinyu",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Official Edge0 website"
+    },
+    {
+      "full_name": "Chua",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Official Edge0 website"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "The company has not publicly disclosed its funding history, and given the recent founding date, Edge0 has not yet reached Series A funding or raised €3 million.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The recent open-sourcing of Edge0-145B and Edge0-120B models marks a significant advancement in on-device AI, enabling cloud-level intelligence on consumer hardware.",
+  "devils_advocate_risks": [
+    "Market Adoption: Achieving widespread adoption of on-device AI models requires overcoming technical challenges and convincing consumers and businesses of their benefits.",
+    "Competitive Landscape: The rapidly evolving AI sector presents competition from established players and emerging startups, which could impact Edge0's market share and growth prospects."
+  ],
+  "citations": [
+    "https://www.linkedin.com/in/xiaodongzeng",
+    "https://huggingface.co/Edge0/spaces",
+    "https://edge0.ai/research/edge0-memory-wall",
+    "https://nitter.gq/Edge0_AI"
+  ],
+  "lp_synergy_matches": []
+}

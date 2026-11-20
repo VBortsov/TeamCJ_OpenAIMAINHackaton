@@ -1,0 +1,79 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Hervé Bredin",
+      "role": "Chief Science Officer (CSO)",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [
+        "French National Centre for Scientific Research (CNRS)"
+      ],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder and CSO of Pyannote AI"
+    },
+    {
+      "full_name": "Vincent Molina",
+      "role": "Chief Executive Officer (CEO)",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder and CEO of Pyannote AI"
+    },
+    {
+      "full_name": "Juan Manuel Coria",
+      "role": "Chief Technology Officer (CTO)",
+      "linkedin_url": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder and CTO of Pyannote AI"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Paris",
+  "raised_institutional_round": true,
+  "funding_summary": "In April 2025, Pyannote AI raised €8.1 million in a seed funding round led by Crane Venture Partners and Serena, with participation from angel investors Julien Chaumond and Alexis Conneau.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In April 2025, Pyannote AI raised €8.1 million in a seed funding round led by Crane Venture Partners and Serena, with participation from angel investors Julien Chaumond and Alexis Conneau.)",
+  "htgf_vertical": "AI/Voice Intelligence",
+  "inflection_why_now": "The increasing reliance on voice interfaces and remote communications across industries underscores the critical need for accurate speaker diarization and voice intelligence solutions, positioning Pyannote AI to meet this growing demand.",
+  "devils_advocate_risks": [
+    "Market Competition: The field of speaker diarization and voice intelligence is rapidly evolving, with numerous players entering the market, which could impact Pyannote AI's market share and growth prospects.",
+    "Technological Integration: Ensuring seamless integration of Pyannote AI's solutions into diverse client infrastructures and workflows may present technical challenges and require significant customization efforts."
+  ],
+  "citations": [
+    "https://www.pyannote.ai/about-us",
+    "https://github.masuit.org/hbredin",
+    "https://huggingface.co/pyannote",
+    "https://www.eu-startups.com/2025/04/pyannoteai-raises-e8-million-to-build-the-first-language-agnostic-speaker-intelligence-platform/",
+    "https://www.youtube.com/watch?v=EzI6LeeK_f8"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a global leader in enterprise software, SAP could benefit from integrating Pyannote AI's speaker diarization technology to enhance voice analytics capabilities within their solutions."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "DHL's extensive logistics and customer service operations could leverage Pyannote AI's technology to improve transcription and analysis of customer interactions, leading to better service and operational efficiency."
+    }
+  ]
+}

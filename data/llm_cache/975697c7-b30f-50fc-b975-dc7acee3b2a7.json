@@ -1,0 +1,106 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Mira Murati",
+      "role": "Chief Technology Officer",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "OpenAI"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "Former Chief Technology Officer at OpenAI"
+    },
+    {
+      "full_name": "John Schulman",
+      "role": "Chief Scientist",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "OpenAI"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "Co-founder of OpenAI"
+    },
+    {
+      "full_name": "Barret Zoph",
+      "role": "Chief Technology Officer",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "OpenAI"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "Former Vice President of Research at OpenAI"
+    },
+    {
+      "full_name": "Luke Metz",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "OpenAI"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "Former member of OpenAI's technical staff"
+    },
+    {
+      "full_name": "Andrew Tulloch",
+      "role": null,
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "OpenAI"
+      ],
+      "is_ex_bigtech": true,
+      "source_of_identity": "Former member of OpenAI's technical staff"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": null,
+  "raised_institutional_round": true,
+  "funding_summary": "In July 2025, the company raised approximately $2 billion in a seed round led by Andreessen Horowitz, valuing the company at $12 billion.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In July 2025, the company raised approximately $2 billion in a seed round led by Andreessen Horowitz, valuing the company at $12 billion.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The rapid advancement of AI technologies necessitates the development of customizable and understandable AI systems to meet diverse user needs.",
+  "devils_advocate_risks": [
+    "Talent Retention: High turnover among key team members, such as the departures of Zoph and Metz back to OpenAI, could disrupt operations.",
+    "Market Competition: Intense competition from established AI companies and emerging startups may challenge market penetration and growth."
+  ],
+  "citations": [
+    "https://techcrunch.com/2025/02/18/thinking-machines-lab-is-ex-openai-cto-mira-muratis-new-startup/",
+    "https://en.wikipedia.org/wiki/Thinking_Machines_Lab",
+    "https://www.axios.com/2026/08/17/ai-startup-founders-flux",
+    "https://moneyweek.com/economy/people/mira-murati-ai-trailblazer-thinking-machines-lab"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leader in enterprise software, SAP could benefit from Thinking Machines Lab's AI systems to enhance business processes and data analytics."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Specializing in specialty chemicals, Evonik could leverage Thinking Machines Lab's AI models to optimize chemical processes and product development."
+    }
+  ]
+}

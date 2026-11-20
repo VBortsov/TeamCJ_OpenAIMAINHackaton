@@ -1,0 +1,80 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Oliver Petrovic",
+      "role": "Co-founder and Oberingenieur für Automatisierung und Steuerungstechnik",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "RWTH Aachen University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder at Werkzeugmaschinenlabor (WZL) of RWTH Aachen University"
+    },
+    {
+      "full_name": "Manuel Belke",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "RWTH Aachen University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder with experience in robotics, AI, simulation, production from WZL"
+    },
+    {
+      "full_name": "Christoph Susen",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "RWTH Aachen University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder with background in robotics, AI, simulation, production from WZL"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Grünwald Handelsregister",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for automation and AI integration in industrial manufacturing presents a timely opportunity for Athenyx Robotics to address existing challenges in the sector.",
+  "devils_advocate_risks": [
+    "Integration Challenges: Ensuring seamless integration of AI-driven robotic systems into diverse industrial environments may encounter technical and operational hurdles.",
+    "Scalability Issues: Developing solutions that are both scalable and adaptable to various industrial applications could pose significant challenges."
+  ],
+  "citations": [
+    "https://www.computer-automation.de/robotik/athenyx-robotics--ausgruendung-der-rwth-aachen-bringt-ki-robotik-in-die-industrielle-anwendung-990829.htm?thema=roboter-programmierung",
+    "https://www.online-handelsregister.de/handelsregisterauszug/by/Muenchen/HRB/309071/Athenyx-Robotics-GmbH"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "As a leader in industrial automation, Bosch could benefit from Athenyx Robotics' AI-driven solutions to enhance their manufacturing processes."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's focus on innovative technologies aligns with Athenyx Robotics' advancements in AI and robotics, potentially leading to synergistic collaborations."
+    }
+  ]
+}

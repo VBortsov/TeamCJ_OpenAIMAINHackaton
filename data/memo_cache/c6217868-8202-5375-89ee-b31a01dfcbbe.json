@@ -1,0 +1,27 @@
+{
+  "one_liner": "Artificial Societies builds a foundation model to simulate human behavior for decision-making; its YC listing warrants a look, but reported funding puts it past HTGF’s pre-first-round window.",
+  "top_signals": [
+    {
+      "signal": "Listed as part of a recent European Y Combinator cohort.",
+      "source_url": "https://www.ycombinator.com/companies/artificial-societies"
+    },
+    {
+      "signal": "Reported a Kindred Capital-led pre-seed in March 2025 and a Point72 Ventures-led seed in May 2025; the funding summary cites $5.35 million raised.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 76.7 of 100 (at the top of the reference cohort). Positive inputs include three known founders, a co-founder CTO, deep-tech and B2B classifications, YC participation, and a top-university flag. The separate technical-founder flag is not confirmed by the founder records.",
+      "source_url": null
+    }
+  ],
+  "team": "James He is co-founder and CEO, with the University of Cambridge listed. Patrick Sharpe is co-founder and CPO, with prior experience at iptiQ. Tom Whittle is listed as co-founder and CTO; the role does not independently verify his technical background.",
+  "why_early": "Unknown whether either round was priced. The reported pre-seed and seed mean the company is already past its first funding round.",
+  "devils_advocate_risks": [
+    "It is unknown how accurately the simulations predict real-world behavior.",
+    "Use of anonymized social media and transaction data may raise privacy and regulatory concerns."
+  ],
+  "next_step": "HTGF Industrial Tech team: deprioritize for pre-first-round outreach. If meeting the founders, ask: What results have you seen when comparing model predictions with observed behavior on decisions the model had not seen before?",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "c6217868-8202-5375-89ee-b31a01dfcbbe",
+  "input_hash": "3be022d2991bf54d"
+}

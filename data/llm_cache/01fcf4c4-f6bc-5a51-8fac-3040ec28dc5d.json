@@ -1,0 +1,67 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Professor Tim Spector",
+      "role": "Co-founder, Professor of Genetics",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [
+        "King's College London"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of ZOE"
+    },
+    {
+      "full_name": "Jonathan Wolf",
+      "role": "Co-founder, Geneticist and Tech Specialist",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Co-founder of ZOE"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2017,
+  "city": null,
+  "raised_institutional_round": true,
+  "funding_summary": "Closed a Series B round with a total raise of $53 million in May 2021 and raised an additional $15 million in July 2024, bringing the total funding to $118 million.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2017 (older than 3.5 years)",
+  "htgf_vertical": "Healthtech",
+  "inflection_why_now": "The increasing global awareness of gut health's impact on overall well-being presents a timely opportunity for ZOE's personalized nutrition solutions.",
+  "devils_advocate_risks": [
+    "Market Competition: The personalized nutrition sector is rapidly growing, with numerous entrants potentially intensifying competition.",
+    "Regulatory Challenges: Navigating diverse health regulations across different regions could pose operational hurdles."
+  ],
+  "citations": [
+    "https://www.theguardian.com/business/2023/nov/14/i-was-overeating-the-zoe-nutrition-app-founders-on-diet-raising-millions-and-the-perfect-microbiome",
+    "https://techcrunch.com/2021/05/04/personalized-nutrition-startup-zoe-closes-out-series-b-at-53m/",
+    "https://techcrunch.com/2024/07/30/nutrition-microbiome-zoe/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "ZOE's focus on gut health and microbiome research aligns with Boehringer Ingelheim's interest in innovative healthcare solutions."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "ZOE's personalized nutrition approach complements Evonik's commitment to health and nutrition innovations."
+    }
+  ]
+}

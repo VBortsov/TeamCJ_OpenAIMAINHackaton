@@ -1,0 +1,66 @@
+{
+  "founders_enriched": [
+    {
+      "full_name": "Edward Huang",
+      "role": "CEO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder of Finbar"
+    },
+    {
+      "full_name": "Robin Gan",
+      "role": "CTO",
+      "linkedin_url": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "source_of_identity": "Founder of Finbar"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2023,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "Finbar has raised a total of $500,000 in a pre-seed funding round announced in March 2025.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing complexity of global financial markets necessitates advanced AI tools like Finbar to streamline investment research and decision-making processes.",
+  "devils_advocate_risks": [
+    "Ensuring the precision and reliability of financial data extracted and analyzed by AI models is crucial to maintain investor trust.",
+    "The financial data and analytics sector is highly competitive, with established players potentially developing similar AI-driven solutions."
+  ],
+  "citations": [
+    "https://startupintros.com/orgs/finbar",
+    "https://mentionfox.com/funding/yc-finbar",
+    "https://uk.linkedin.com/in/ed-jenks-b19458173",
+    "https://www.vcbacked.co/company/finbar"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could benefit from Finbar's AI-driven financial analysis to assess market trends and investment opportunities in the chemical sector."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's enterprise software solutions could integrate with Finbar's financial data platform to enhance financial modeling and analytics capabilities for their clients."
+    }
+  ]
+}
