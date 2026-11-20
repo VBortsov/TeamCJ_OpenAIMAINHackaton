@@ -377,3 +377,50 @@ Dispatches a top lead payload to n8n workflow for Lusha contact enrichment and S
   }
 }
 ```
+
+
+---
+
+## ML Scoring & Memo Endpoints
+
+Full model documentation: [model_docs.md](../model_docs.md). Feature list: [features.md](../features.md).
+
+#### `POST /api/ml/score`
+Runs the ML ranking model on `data/live_candidates_for_ml.csv` (or on `leads` rows sent in the body, same schema), writes `data/ml_predictions.csv`, and generates LLM memos for the top-K leads by `blended_score`.
+
+**Body (all optional):** `{"memo_top_k": 10, "refresh_memos": false, "leads": null}`
+
+**Auth:** generating memos (`memo_top_k > 0`) calls OpenAI and needs `Authorization: Bearer <FOUNDERHUNT_WRITE_TOKEN>`. Scoring only (`memo_top_k: 0`) is open. Scoring also runs automatically when the exported leads are newer than `data/ml_predictions.csv`.
+
+**Response (200 OK):**
+```json
+{
+  "scored": 42,
+  "predictions_path": "data/ml_predictions.csv",
+  "scores": [
+    {"company_id": "…", "ml_score": 95.8, "ml_probability": 0.8353, "model_used": "model_noacc",
+     "ml_drivers": [{"feature": "fd_any_phd", "label": "founder with a PhD", "value": 1.0, "contribution": 0.521}]}
+  ],
+  "memos": [
+    {"rank": 1, "entity_id": "…", "name": "aiXopt", "blended_score": 82.9, "ml_score": 95.8,
+     "memo": {
+       "one_liner": "…",
+       "top_signals": [{"signal": "…", "source_url": "https://…"}],
+       "team": "…",
+       "why_early": "…",
+       "devils_advocate_risks": ["…"],
+       "next_step": "…",
+       "memo_source": "openai:gpt-6.2-sol",
+       "ml_drivers": []
+     }}
+  ]
+}
+```
+
+#### `GET /api/leads/{entity_id}/ml-memo?refresh=false`
+Returns the same `memo` object for one lead. Cached memos are returned to everyone; a missing memo is generated with OpenAI only when the operator token is sent, otherwise a free template memo (`memo_source: "fallback_template"`) is returned.
+
+**UI notes:**
+- `ml_score` is a percentile (0–100), not a probability. Label it "ML rank" or similar.
+- `top_signals[].source_url` can be `null`. `memo_source` is `"fallback_template"` when OpenAI was unavailable.
+- `GET /api/leads/{entity_id}` now includes `ml_memo` (`null` until generated).

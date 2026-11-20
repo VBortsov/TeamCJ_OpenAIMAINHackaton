@@ -578,6 +578,29 @@
     return values.length ? '<ul>' + values.map(value => '<li>' + escape(value) + '</li>').join("") + '</ul>' : '';
   }
 
+  function modelMemo(memo) {
+    const brief = memo.ml_memo;
+    if (!brief || typeof brief !== "object") return "";
+    const signals = (Array.isArray(brief.top_signals) ? brief.top_signals : [])
+      .filter(item => item && typeof item.signal === "string" && item.signal.trim()).map(item => {
+        let link = "";
+        try { link = item.source_url ? " " + sourceLink({ url: item.source_url, publisher: new URL(item.source_url).hostname }) : ""; }
+        catch { link = ""; }
+        return '<li>' + escape(item.signal) + link + '</li>';
+      });
+    const part = (title, value) => typeof value === "string" && value.trim()
+      ? '<div><strong>' + title + '</strong><p>' + escape(value) + '</p></div>' : '';
+    return '<div class="model-memo"><strong>Analyst brief</strong>' +
+      (typeof brief.one_liner === "string" ? '<p>' + escape(brief.one_liner) + '</p>' : '') +
+      (signals.length ? '<div><strong>Strongest signals</strong><ul>' + signals.join("") + '</ul></div>' : '') +
+      part("Team", brief.team) + part("Why it is early", brief.why_early) +
+      (brief.devils_advocate_risks?.length ? '<div><strong>Risks and unknowns</strong>' + bulletList(brief.devils_advocate_risks) + '</div>' : '') +
+      part("Next step", brief.next_step) +
+      '<p class="model-memo-note">' + (String(brief.memo_source || "").startsWith("openai")
+        ? 'Written by a language model from the sourced facts above. The model score is a rank against a reference cohort, not a probability.'
+        : 'Template summary of the sourced facts above.') + '</p></div>';
+  }
+
   function memoSection(memo) {
     const founders = (memo.team_dossier?.founders || []).map(person => {
       const details = [person.role, ...(person.universities || [])].filter(Boolean).join(" · ");
@@ -588,7 +611,7 @@
     const scores = [
       ["Overall sourcing score", memo.overall_score],
       ["Rules-based score", memo.deterministic_score],
-      ["Model score", memo.ml_score],
+      ["Model rank (0–100)", memo.ml_score],
       ["Technology score", memo.technology_moat?.moat_score],
       ["Commercial score", memo.commercial_traction?.commercial_score]
     ].filter(([, value]) => Number.isFinite(value));
@@ -601,6 +624,7 @@
       '<div class="recommendation-content">' +
       (memo.executive_summary ? '<p>' + escape(memo.executive_summary) + '</p>' : '') +
       (memo.investment_thesis?.why_now ? '<div><strong>Investment thesis</strong><p>' + escape(memo.investment_thesis.why_now) + '</p></div>' : '') +
+      modelMemo(memo) +
       (stats.length ? '<dl class="sourcing-stats">' + stats.join("") + '</dl>' : '') +
       (founders.length ? '<div><strong>Founding team</strong><ul>' + founders.join("") + '</ul></div>' : '') +
       (memo.devils_advocate_risks?.length ? '<div><strong>Risks to verify</strong>' + bulletList(memo.devils_advocate_risks) + '</div>' : '') +

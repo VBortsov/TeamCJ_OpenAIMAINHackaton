@@ -687,3 +687,7 @@ body[data-kind="people"] #lead-title em { margin-inline-start: .1em; }
 .github-inspection { grid-column: 1 / -1; }
 .workflow-handoff { margin-top: 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 @media (max-width: 680px) { .sourcing-workspace { grid-template-columns: 1fr; } }
+
+.model-memo { display: grid; gap: 10px; padding: 12px 0; border-top: 1px solid var(--recommendation-rule); border-bottom: 1px solid var(--recommendation-rule); }
+.model-memo p { margin: 0; }
+.model-memo-note { color: var(--muted); font-size: .8125rem; }

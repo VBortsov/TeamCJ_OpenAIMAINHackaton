@@ -41,6 +41,8 @@ from backend.enrichment.github_verifier import GitHubVerifier, FounderGitHubProf
 from backend.scoring.kill_gates import KillGateEvaluator
 from backend.enrichment.openai_enricher import OpenAIEnricher
 from backend.scoring.scorer import LeadScorer, ScoreBreakdown
+from backend.ml import service as ml_service
+from backend.ml.memo_agent import build_memo_input, generate_memo, load_cached_memo
 
 logger = logging.getLogger("api")
 
@@ -64,6 +66,10 @@ tags_metadata = [
     {
         "name": "Enrichment",
         "description": "On-demand live Impressum scraping, Kill-Gate screening, and web search enrichment for new domains.",
+    },
+    {
+        "name": "ML",
+        "description": "ML ranking model (ml_score 0-100) and fact-grounded LLM investment memos for the top leads.",
     },
     {
         "name": "Integrations",
@@ -171,7 +177,8 @@ def load_frontend_feed() -> Dict[str, Any]:
         with open(FEED_PATH, "r", encoding="utf-8") as f:
             feed = json.load(f)
 
-    # Attach optional ML scores if data/ml_predictions.csv exists
+    # Attach ML scores: data/ml_predictions.csv is (re)built automatically from the exported leads
+    ml_service.ensure_predictions()
     ml_preds = load_ml_predictions()
     leads = feed.setdefault("ranked_leads", [])
     existing_ids = {lead.get("entity_id") for lead in leads}
@@ -404,7 +411,10 @@ def get_lead_dossier(entity_id: str):
 
         # Section 7: Audit Trail & Clickable Evidence
         "evidence_urls": matched.get("score_breakdown", {}).get("evidence_urls", []),
-        "score_drivers": matched.get("score_breakdown", {}).get("drivers", [])
+        "score_drivers": matched.get("score_breakdown", {}).get("drivers", []),
+
+        # Section 8: ML memo (null until generated via POST /api/ml/score or GET /api/leads/{id}/ml-memo)
+        "ml_memo": load_cached_memo(entity_id)
     }
     return memo
 
@@ -573,6 +583,95 @@ async def dispatch_lead_to_n8n(entity_id: str, authorization: str | None = Heade
         "note": "N8N_WEBHOOK_URL not configured; returning verified dispatch contract payload for UI/n8n integration testing.",
         "payload": payload
     }
+
+
+# =============================================================================
+# 7. ML Scoring & Fact-Grounded Memo Endpoints
+# =============================================================================
+class MLScoreRequest(BaseModel):
+    leads: Optional[List[Dict[str, Any]]] = Field(
+        default=None,
+        description="Optional rows in the live_candidates_for_ml.csv schema. If omitted, data/live_candidates_for_ml.csv is scored."
+    )
+    memo_top_k: int = Field(default=10, ge=0, le=50, description="Generate LLM memos for the top-K leads by blended score (0 = none)")
+    refresh_memos: bool = Field(default=False, description="Regenerate memos even if cached")
+
+
+async def _memo_for_lead(lead: Dict[str, Any], rank: Optional[int], total: Optional[int], refresh: bool = False,
+                         allow_llm: bool = True) -> Dict[str, Any]:
+    entity_id = lead.get("entity_id")
+    ml_row = ml_service.explain_lead(entity_id)
+    payload = build_memo_input(lead, rank, total, ml_row, ml_service.base_rates())
+    memo = await generate_memo(entity_id, payload, refresh=refresh, allow_llm=allow_llm,
+                               cost_tracker=CostTracker(max_budget_usd=settings.FOUNDERHUNT_ENRICH_BUDGET_USD))
+    memo["ml_drivers"] = (ml_row or {}).get("contributions") or []
+    return memo
+
+
+def _is_operator(authorization: str | None) -> bool:
+    token = settings.FOUNDERHUNT_WRITE_TOKEN
+    return bool(token) and hmac.compare_digest((authorization or "").encode(), f"Bearer {token}".encode())
+
+
+@app.post(
+    "/api/ml/score",
+    tags=["ML"],
+    summary="Run ML Ranking Model & Generate Top-K Memos",
+    description=(
+        "Scores leads with the ML ranking model, writes data/ml_predictions.csv (picked up by every other endpoint for "
+        "ml_score and blended_score), then writes fact-grounded LLM memos for the top-K leads by blended score. "
+        "Scoring is free and open; generating memos (memo_top_k > 0) calls OpenAI and needs the operator token."
+    )
+)
+async def run_ml_scoring(req: MLScoreRequest = MLScoreRequest(), authorization: str | None = Header(None)):
+    if req.memo_top_k > 0:
+        require_operator(authorization)
+    try:
+        res = ml_service.run_scoring(leads=req.leads)
+    except FileNotFoundError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+
+    feed = load_frontend_feed()  # now includes ml_score + blended_score, sorted by blended_score
+    leads = feed.get("ranked_leads", [])
+    top = leads[: req.memo_top_k]
+    memos = await asyncio.gather(*[
+        _memo_for_lead(lead, rank=i + 1, total=len(leads), refresh=req.refresh_memos) for i, lead in enumerate(top)
+    ]) if top else []
+
+    return {
+        "scored": int(len(res)),
+        "predictions_path": str(ml_service.ML_PRED_PATH),
+        "scores": [
+            {"company_id": r["company_id"], "ml_score": r["ml_score"], "ml_probability": r["ml_probability"],
+             "model_used": r["model_used"], "ml_drivers": (r["contributions"] or [])[:5]}
+            for r in res.to_dict(orient="records")
+        ],
+        "memos": [
+            {"rank": i + 1, "entity_id": lead.get("entity_id"), "name": lead.get("name"),
+             "blended_score": lead.get("blended_score"), "ml_score": lead.get("ml_score"), "memo": memo}
+            for i, (lead, memo) in enumerate(zip(top, memos))
+        ]
+    }
+
+
+@app.get(
+    "/api/leads/{entity_id}/ml-memo",
+    tags=["ML"],
+    summary="Fact-Grounded LLM Memo for One Lead",
+    description=(
+        "One-liner, three strongest signals with source URLs, team, why it is early, devil's advocate risks and next step. "
+        "Written only from facts already in the feed; cached on disk. Without the operator token only a cached memo or a "
+        "free template memo is returned; with it, a missing memo is generated with OpenAI."
+    )
+)
+async def get_lead_ml_memo(entity_id: str, refresh: bool = Query(False, description="Regenerate even if cached (operator only)"),
+                           authorization: str | None = Header(None)):
+    leads = load_frontend_feed().get("ranked_leads", [])
+    idx = next((i for i, l in enumerate(leads) if l.get("entity_id") == entity_id), None)
+    if idx is None:
+        raise HTTPException(status_code=404, detail=f"Entity '{entity_id}' not found in ranked leads")
+    operator = _is_operator(authorization)
+    return await _memo_for_lead(leads[idx], rank=idx + 1, total=len(leads), refresh=refresh and operator, allow_llm=operator)
 
 
 # Serve the prototype from the same origin as the API when the frontend is present.

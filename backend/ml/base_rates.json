@@ -1,0 +1,121 @@
+{
+  "label": "label_progressed (raised a round after start, or exit)",
+  "n": 688,
+  "overall_rate": 0.535,
+  "features": {
+    "is_germany": {
+      "rate_if_1": 0.53,
+      "n_if_1": 234,
+      "rate_if_0": 0.537,
+      "n_if_0": 454
+    },
+    "is_university_city": {
+      "rate_if_1": 0.55,
+      "n_if_1": 413,
+      "rate_if_0": 0.513,
+      "n_if_0": 275
+    },
+    "solo_founder": {
+      "rate_if_1": 0.585,
+      "n_if_1": 123,
+      "rate_if_0": 0.524,
+      "n_if_0": 565
+    },
+    "has_cto_founder": {
+      "rate_if_1": 0.632,
+      "n_if_1": 106,
+      "rate_if_0": 0.517,
+      "n_if_0": 582
+    },
+    "is_deeptech": {
+      "rate_if_1": 0.587,
+      "n_if_1": 235,
+      "rate_if_0": 0.508,
+      "n_if_0": 453
+    },
+    "mentions_ai": {
+      "rate_if_1": 0.518,
+      "n_if_1": 226,
+      "rate_if_0": 0.543,
+      "n_if_0": 462
+    },
+    "tag_fintech": {
+      "rate_if_1": 0.586,
+      "n_if_1": 87,
+      "rate_if_0": 0.527,
+      "n_if_0": 601
+    },
+    "tag_b2b": {
+      "rate_if_1": 0.571,
+      "n_if_1": 14,
+      "rate_if_0": 0.534,
+      "n_if_0": 674
+    },
+    "tag_saas": {
+      "rate_if_1": 0.58,
+      "n_if_1": 100,
+      "rate_if_0": 0.527,
+      "n_if_0": 588
+    },
+    "country_FRA": {
+      "rate_if_1": 0.521,
+      "n_if_1": 240,
+      "rate_if_0": 0.542,
+      "n_if_0": 448
+    },
+    "fd_any_phd": {
+      "rate_if_1": 0.75,
+      "n_if_1": 28,
+      "rate_if_0": 0.526,
+      "n_if_0": 660
+    },
+    "fd_any_top_university": {
+      "rate_if_1": 0.696,
+      "n_if_1": 23,
+      "rate_if_0": 0.529,
+      "n_if_0": 665
+    },
+    "fd_any_stem_degree": {
+      "rate_if_1": 0.703,
+      "n_if_1": 74,
+      "rate_if_0": 0.515,
+      "n_if_0": 614
+    },
+    "fd_any_bigtech": {
+      "rate_if_1": 0.545,
+      "n_if_1": 11,
+      "rate_if_0": 0.535,
+      "n_if_0": 677
+    },
+    "fd_any_academic_researcher": {
+      "rate_if_1": 0.714,
+      "n_if_1": 28,
+      "rate_if_0": 0.527,
+      "n_if_0": 660
+    },
+    "fd_any_serial_founder": {
+      "rate_if_1": 0.667,
+      "n_if_1": 24,
+      "rate_if_0": 0.53,
+      "n_if_0": 664
+    },
+    "fd_any_studied_abroad": {
+      "rate_if_1": 0.789,
+      "n_if_1": 19,
+      "rate_if_0": 0.528,
+      "n_if_0": 669
+    },
+    "fd_team_has_technical_founder": {
+      "rate_if_1": 0.681,
+      "n_if_1": 191,
+      "rate_if_0": 0.479,
+      "n_if_0": 497
+    },
+    "fd_university_spinoff": {
+      "rate_if_1": 0.857,
+      "n_if_1": 14,
+      "rate_if_0": 0.528,
+      "n_if_0": 674
+    }
+  }
+}
