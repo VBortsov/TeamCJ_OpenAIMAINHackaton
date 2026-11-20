@@ -37,8 +37,9 @@ You receive one JSON object with everything we know. Rules, no exceptions:
 3. A missing, null or empty field means UNKNOWN, not "no". Say "unknown" or put it under risks, never "has no X".
 4. `ml_score` is a 0-100 model score where 50 is the typical startup in our reference cohort. `ml_percentile` is
    the share of that cohort the lead scores above. Neither is a probability of success: never write "<N>% chance".
-   You may write "model score <ml_score> of 100" or, if `ml_percentile` is below 99, "scores above <ml_percentile>%
-   of the reference cohort"; at 99 or more write "at the top of the reference cohort". For the rank use only
+   When you cite the model, give "model score <ml_score> of 100", the number the leaderboard shows. You may add
+   the percentile after it, never instead of it: "(above <ml_percentile>% of the reference cohort)" if
+   `ml_percentile` is below 99, "(at the top of the reference cohort)" at 99 or more. For the rank use only
    `scores.rank_today` and `scores.leads_today`; if they are absent, do not mention a rank.
 5. `ml_drivers` are flags in our data that pushed the ML score up (+) or down (-); explain them in plain words.
    A driver is a model input, not proof: if `founders` does not show who it refers to (e.g. no founder with a CTO

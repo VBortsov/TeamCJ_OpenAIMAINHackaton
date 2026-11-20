@@ -665,3 +665,24 @@ def test_empty_research_is_retried_and_never_cached(tmp_path):
     profile = asyncio.run(e.enrich_async(candidate))
     assert calls["n"] == 2 and profile.fd_enriched == 0
     assert not (tmp_path / "b" / "hydken.json").exists()
+
+    # facts but no founders, twice -> facts are used for this run, the scraped founders stay, nothing is cached
+    no_people = _StructuredWebSearchOutput(canonical_name="Hydken", description="Admixtures for low-carbon concrete.",
+                                           htgf_vertical="industrial_climate_deeptech")
+    scraped = dict(candidate, founders=[{"full_name": "Olga M", "link_method": "impressum"}])
+    e, calls = enricher([no_people, no_people], "c")
+    profile = asyncio.run(e.enrich_async(scraped))
+    assert calls["n"] == 2 and profile.fd_enriched == 1 and profile.description
+    assert [f.full_name for f in profile.founders_enriched] == ["Olga M"]
+    assert not (tmp_path / "c" / "hydken.json").exists()
+
+    # facts but no founders, then founders on the retry -> the retry wins and is cached
+    e, calls = enricher([no_people, good], "d")
+    profile = asyncio.run(e.enrich_async(scraped))
+    assert calls["n"] == 2 and [f.full_name for f in profile.founders_enriched] == ["Dr. O"]
+    assert (tmp_path / "d" / "hydken.json").exists()
+
+    # founders on the first try -> no second call
+    e, calls = enricher([good, good], "e")
+    asyncio.run(e.enrich_async(scraped))
+    assert calls["n"] == 1

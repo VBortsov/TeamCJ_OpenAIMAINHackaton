@@ -78,7 +78,11 @@ def normalize_vertical(value: Optional[str]) -> str:
     return ""
 
 
-MAX_RESEARCH_ATTEMPTS = 2  # one retry when the model returns a blank record
+MAX_RESEARCH_ATTEMPTS = 2  # one retry when the model returns a blank record or finds no founders
+FOUNDER_RETRY_HINT = (
+    "\n\nThe previous search returned no founders. Search specifically for the founders or managing directors: "
+    "the Impressum / legal notice, the commercial register entry, the team or about page, and LinkedIn."
+)
 MAX_FOUNDING_YEAR_FOR_KILL = 2022  # Gate 3: founded in 2022 or earlier = older than 3.5 years
 _NON_DILUTIVE_PATTERN = re.compile(
     r"grant|prize|award|competition|fellowship|scholarship|subsid|non[- ]dilutive|stipend|accelerator|incubator|"
@@ -282,15 +286,15 @@ class OpenAIEnricher:
         )
 
         try:
-            extracted = None
-            citations: List[str] = []
+            # Keep the best attempt: the first one that names founders, else the latest one with any facts.
+            best = None
             for attempt in range(1, MAX_RESEARCH_ATTEMPTS + 1):
                 if attempt > 1 and not self.cost_tracker.can_execute_live_call():
                     break
                 resp = await self.client.responses.create(
                     model="gpt-4o-mini",
                     tools=[{"type": "web_search_preview"}],
-                    input=prompt
+                    input=prompt if attempt == 1 else prompt + FOUNDER_RETRY_HINT
                 )
 
                 # Count actual web search calls and extract clean citations
@@ -343,12 +347,17 @@ class OpenAIEnricher:
                 out_tokens += getattr(getattr(parsed, "usage", None), "completion_tokens", 0) or 0
                 self.cost_tracker.record_live_call(ent_id, cname, in_tokens, out_tokens, web_search_calls)
                 if not is_empty_research(extracted):
+                    best = (extracted, citations)
+                if extracted.founders:
                     break
-                logger.warning("Empty research result for '%s' (attempt %d of %d)", cname, attempt, MAX_RESEARCH_ATTEMPTS)
+                logger.warning("Research for '%s' returned %s (attempt %d of %d)", cname,
+                               "nothing" if is_empty_research(extracted) else "no founders", attempt, MAX_RESEARCH_ATTEMPTS)
 
-            if extracted is None or is_empty_research(extracted):
+            if best is None:
                 # Nothing usable came back: score the lead as unenriched and do not cache, so the next run tries again
                 return self._build_unenriched_profile(candidate, reason="Enrichment returned no facts")
+            extracted, citations = best
+            founders_found = bool(extracted.founders)
 
             # Filter founders with clean URLs and strict personal LinkedIn check
             cleaned_founders = []
@@ -356,6 +365,9 @@ class OpenAIEnricher:
                 clean_li = clean_url(f.linkedin_url)
                 f.linkedin_url = clean_li if is_valid_founder_linkedin(clean_li) else None
                 cleaned_founders.append(f)
+            if not cleaned_founders:
+                # The search found facts but no people: keep the founders the scraper already had
+                cleaned_founders = self._scraped_founders(candidate)
 
             norm_city = normalize_city(extracted.city or candidate.get("city"))
             is_spinoff = extracted.fd_university_spinoff or any(s in ("eth_rwth", "cordis_erc") for s in signals)
@@ -397,8 +409,11 @@ class OpenAIEnricher:
             )
             normalize_profile(profile, model_says_technical=extracted.fd_team_has_technical_founder)
 
-            with open(cache_file, "w", encoding="utf-8") as f:
-                json.dump(profile.model_dump(), f, indent=2, ensure_ascii=False)
+            # A profile without founders from the search is used for this run but not cached,
+            # so it cannot freeze a lead without its team: the next run searches again.
+            if founders_found:
+                with open(cache_file, "w", encoding="utf-8") as f:
+                    json.dump(profile.model_dump(), f, indent=2, ensure_ascii=False)
 
             return profile
 
@@ -409,12 +424,10 @@ class OpenAIEnricher:
     def enrich(self, candidate: Dict[str, Any]) -> EnrichedProfile:
         return asyncio.run(self.enrich_async(candidate))
 
-    def _build_unenriched_profile(self, candidate: Dict[str, Any], reason: str) -> EnrichedProfile:
-        signals = [s.get("source_name") for s in candidate.get("signals", [])]
-        is_spinoff = any(s in ("eth_rwth", "cordis_erc") for s in signals)
-        raw_founders = candidate.get("founders", [])
-
-        enriched_founders = [
+    @staticmethod
+    def _scraped_founders(candidate: Dict[str, Any]) -> List[EnrichedFounder]:
+        """Founders the scraper already listed (Impressum, roster), without any enriched facts."""
+        return [
             EnrichedFounder(
                 full_name=f["full_name"],
                 role="Founder",
@@ -423,8 +436,13 @@ class OpenAIEnricher:
                 is_ex_bigtech=False,
                 source_of_identity=f.get("link_method", "scraped_roster")
             )
-            for f in raw_founders if f.get("full_name") and not f.get("full_name", "").startswith("Lead PI (")
+            for f in candidate.get("founders", []) if f.get("full_name") and not f.get("full_name", "").startswith("Lead PI (")
         ]
+
+    def _build_unenriched_profile(self, candidate: Dict[str, Any], reason: str) -> EnrichedProfile:
+        signals = [s.get("source_name") for s in candidate.get("signals", [])]
+        is_spinoff = any(s in ("eth_rwth", "cordis_erc") for s in signals)
+        enriched_founders = self._scraped_founders(candidate)
 
         return EnrichedProfile(
             founders_enriched=enriched_founders,
