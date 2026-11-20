@@ -26,6 +26,16 @@ def test_scores_are_percentiles_and_ordered():
     assert any(c["feature"] == "fd_any_phd" and c["contribution"] > 0 for c in res.loc["a", "contributions"])
 
 
+def test_ml_score_does_not_saturate_for_well_enriched_leads():
+    strong = {"company_id": "s", "country_code": "CHE", "is_university_city": 1, "n_founders_listed": 2, "has_cto_founder": 1,
+              "profile2026_is_deeptech": 1, "fd_any_phd": 1, "fd_any_top_university": 1, "fd_any_stem_degree": 1,
+              "fd_team_has_technical_founder": 1, "fd_university_spinoff": 1}
+    weaker = {**strong, "company_id": "w", "fd_any_phd": 0, "fd_any_top_university": 0, "profile2026_is_deeptech": 0}
+    res = score_frame(pd.DataFrame([strong, weaker])).set_index("company_id")
+    assert res.loc["s", "ml_score"] < 99 and res.loc["s", "ml_score"] - res.loc["w", "ml_score"] > 3
+    assert res.ml_percentile.between(0, 100).all()
+
+
 def test_zero_founders_means_unknown():
     res = score_frame(_leads()).set_index("company_id")
     assert res.loc["b", "ml_probability"] == res.loc["c", "ml_probability"]

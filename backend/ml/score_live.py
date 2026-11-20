@@ -2,7 +2,7 @@
 Usage: python -m backend.ml.score_live [data/live_candidates_for_ml.csv] [data/ml_predictions.csv]
 Per lead: if the optional `accelerator` column is filled -> model_acc, else -> model_noacc.
 Missing contract columns are treated as 0 / unknown; fd_* NaN -> 0.
-Output columns: company_id, ml_score (0-100, percentile vs. the training reference of the model used), ml_probability, model_used
+Output columns: company_id, ml_score (0-100, 50 = median reference startup), ml_percentile (vs. the training reference), ml_probability, model_used
 """
 import sys
 from pathlib import Path

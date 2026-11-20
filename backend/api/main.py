@@ -642,7 +642,7 @@ async def run_ml_scoring(req: MLScoreRequest = MLScoreRequest(), authorization: 
         "scored": int(len(res)),
         "predictions_path": str(ml_service.ML_PRED_PATH),
         "scores": [
-            {"company_id": r["company_id"], "ml_score": r["ml_score"], "ml_probability": r["ml_probability"],
+            {"company_id": r["company_id"], "ml_score": r["ml_score"], "ml_percentile": r["ml_percentile"], "ml_probability": r["ml_probability"],
              "model_used": r["model_used"], "ml_drivers": (r["contributions"] or [])[:5]}
             for r in res.to_dict(orient="records")
         ],
