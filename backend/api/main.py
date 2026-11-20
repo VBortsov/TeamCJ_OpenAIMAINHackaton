@@ -39,7 +39,7 @@ from backend.enrichment.cost_tracker import CostTracker
 from backend.enrichment.impressum import ImpressumResult
 from backend.enrichment.github_verifier import GitHubVerifier, FounderGitHubProfile
 from backend.scoring.kill_gates import KillGateEvaluator
-from backend.enrichment.openai_enricher import OpenAIEnricher
+from backend.enrichment.openai_enricher import OpenAIEnricher, normalize_vertical
 from backend.scoring.scorer import LeadScorer, ScoreBreakdown
 from backend.ml import service as ml_service
 from backend.ml.memo_agent import build_memo_input, generate_memo, load_cached_memo
@@ -190,6 +190,8 @@ def load_frontend_feed() -> Dict[str, Any]:
         except (OSError, ValueError, KeyError, TypeError):
             logger.warning("Could not read live lead %s", path.name)
     for lead in leads:
+        if "htgf_vertical" in lead:  # feeds written before verticals were normalised
+            lead["htgf_vertical"] = normalize_vertical(lead["htgf_vertical"])
         cid = lead.get("entity_id")
         det_score = lead.get("score_breakdown", {}).get("final_score") or lead.get("deterministic_score", 0.0)
         if ml_preds and cid in ml_preds:
@@ -365,7 +367,7 @@ def get_lead_dossier(entity_id: str):
         "country_code": matched.get("country_code"),
         "city": matched.get("city"),
         "founding_year": matched.get("founding_year"),
-        "htgf_vertical": matched.get("htgf_vertical", "industrial_climate_deeptech"),
+        "htgf_vertical": matched.get("htgf_vertical"),
         "earliness_badge": matched.get("earliness_badge", "Pre-Crunchbase / Undiscovered"),
         
         # Scoring metrics

@@ -8,6 +8,7 @@ Strict Zero-Fake-Data / Fail-Fast Policy with Budget Circuit-Breaker & Cost Trac
 """
 
 from __future__ import annotations
+import re
 import asyncio
 import json
 import logging
@@ -33,6 +34,48 @@ HTGF_IV_LPS = [
     "Haniel", "adesso", "PwC Deutschland", "BÜFA", "Maschinenringe", "igus",
     "CEWE", "media + more venture"
 ]
+
+
+HTGF_VERTICALS = ("industrial_climate_deeptech", "digital_tech_ai", "life_sciences_chemistry", "out_of_mandate")
+
+# Employers that count as "Big Tech" for fd_any_bigtech. Consulting, audit and industrial materials firms do not.
+BIGTECH_EMPLOYERS = (
+    "google", "alphabet", "deepmind", "meta", "facebook", "microsoft", "nvidia", "apple", "amazon", "aws",
+    "intel", "amd", "ibm", "oracle", "salesforce", "adobe", "openai", "anthropic", "tesla", "spacex", "palantir",
+    "qualcomm", "arm", "asml", "samsung", "uber", "netflix", "stripe", "spotify", "sap", "siemens", "bosch",
+    "robert bosch", "celonis", "infineon",
+)
+_BIGTECH_PATTERN = re.compile(r"(?<![a-z0-9])(?:" + "|".join(re.escape(n) for n in BIGTECH_EMPLOYERS) + r")(?![a-z0-9])")
+_TECHNICAL_ROLE_PATTERN = re.compile(
+    r"(?<![a-z])(?:cto|cso|chief technolog\w*|chief scien\w*|chief engineer\w*|technical|technolog\w*|engineer\w*|"
+    r"scientist|research\w*|r&d|developer|architect)(?![a-z])"
+)
+
+
+def is_bigtech_employer(company: str) -> bool:
+    return bool(_BIGTECH_PATTERN.search((company or "").lower()))
+
+
+def has_technical_role(role: Optional[str]) -> bool:
+    return bool(_TECHNICAL_ROLE_PATTERN.search((role or "").lower()))
+
+
+def normalize_vertical(value: Optional[str]) -> str:
+    """Map whatever the model returned onto the four verticals the scorer and the frontend know.
+    Returns "" (unclassified) when nothing matches, instead of guessing a sector."""
+    v = (value or "").strip().lower().replace("-", "_").replace(" ", "_")
+    if v in HTGF_VERTICALS:
+        return v
+    if "out_of" in v or "not_in_mandate" in v or "outside" in v:
+        return "out_of_mandate"
+    if any(k in v for k in ("life", "bio", "pharma", "med", "health", "chem", "diagnos", "therap")):
+        return "life_sciences_chemistry"
+    if any(k in v for k in ("industr", "climate", "energy", "robot", "hardware", "deep", "material", "manufactur",
+                            "quantum", "sensor", "construct", "mobility", "space", "semicon")):
+        return "industrial_climate_deeptech"
+    if any(k in v for k in ("digital", "software", "saas", "data", "cyber", "fintech", "cloud", "ai", "ml", "llm")):
+        return "digital_tech_ai"
+    return ""
 
 
 class EnrichedFounder(BaseModel):
@@ -80,6 +123,27 @@ class EnrichedProfile(BaseModel):
     devils_advocate_risks: List[str] = Field(default_factory=list)
     citations: List[str] = Field(default_factory=list)
     lp_synergy_matches: List[LPSynergyMatch] = Field(default_factory=list)
+    flags_version: int = 1  # 2 = founder flags derived by normalize_profile(); older cache files are upgraded on load
+
+
+def normalize_profile(profile: "EnrichedProfile", model_says_technical: Optional[bool] = None) -> "EnrichedProfile":
+    """Make the founder flags follow the founder records, for fresh and cached profiles alike.
+    - Big Tech: only when a founder's prior company is on BIGTECH_EMPLOYERS (the model also flagged consulting firms).
+    - Technical founder: a founder holds a technical role (CTO, engineer, scientist ...), or the model said so
+      for a fresh profile. Having any founder at all no longer counts.
+    - Vertical: mapped onto the known keys, "" when unknown.
+    """
+    for founder in profile.founders_enriched:
+        founder.is_ex_bigtech = any(is_bigtech_employer(c) for c in founder.prior_companies)
+    profile.fd_any_bigtech = any(f.is_ex_bigtech for f in profile.founders_enriched)
+    role_based = any(has_technical_role(f.role) for f in profile.founders_enriched)
+    if model_says_technical is not None:
+        profile.fd_team_has_technical_founder = bool(model_says_technical) or role_based
+    elif profile.flags_version < 2:
+        profile.fd_team_has_technical_founder = role_based
+    profile.htgf_vertical = normalize_vertical(profile.htgf_vertical)
+    profile.flags_version = 2
+    return profile
 
 
 class _StructuredWebSearchOutput(BaseModel):
@@ -138,7 +202,7 @@ class OpenAIEnricher:
                 with open(cache_file, "r", encoding="utf-8") as f:
                     cached_data = json.load(f)
                 self.cost_tracker.record_cache_hit(ent_id, cname)
-                return EnrichedProfile(**cached_data)
+                return normalize_profile(EnrichedProfile(**cached_data))
             except Exception as e:
                 logger.debug("Failed loading cache for %s: %s", ent_id, e)
 
@@ -165,7 +229,9 @@ class OpenAIEnricher:
             f"2. Check if this is a university spin-off (e.g. RWTH Aachen, ETH Zurich, TU Munich, Fraunhofer, ERC).\n"
             f"3. Find exact founding year and funding history. If founded in 2022 or earlier (e.g. 2001, 2015, 2020), or if already raised Series A / >= €3M, state this clearly!\n"
             f"4. Propose 1-2 strategic LP synergy matches from this verified HTGF IV LP list: {HTGF_IV_LPS[:15]} with 1-sentence technical reason.\n"
-            f"5. Describe the venture's product in one source-backed sentence. Provide a 1-sentence 'Inflection Why Now' and 2 genuine execution risks."
+            f"5. Describe the venture's product in one source-backed sentence. Provide a 1-sentence 'Inflection Why Now' and 2 genuine execution risks.\n"
+            f"6. Classify htgf_vertical as exactly one of: industrial_climate_deeptech, digital_tech_ai, life_sciences_chemistry, out_of_mandate.\n"
+            f"7. For each founder list prior employers in prior_companies. is_ex_bigtech is true only for large technology companies (e.g. Google, Microsoft, Nvidia, SAP, Siemens, Bosch), never for consulting, audit or materials firms."
         )
 
         try:
@@ -250,12 +316,12 @@ class OpenAIEnricher:
                 fd_any_elite_business_school=extracted.fd_any_elite_business_school,
                 fd_any_stem_degree=extracted.fd_any_stem_degree,
                 fd_any_studied_abroad=extracted.fd_any_studied_abroad,
-                fd_any_bigtech=extracted.fd_any_bigtech or any(f.is_ex_bigtech for f in cleaned_founders),
+                fd_any_bigtech=False,  # set by normalize_profile() from the founders' prior companies
                 fd_any_top_consulting=extracted.fd_any_top_consulting,
                 fd_any_academic_researcher=extracted.fd_any_academic_researcher,
                 fd_any_serial_founder=extracted.fd_any_serial_founder,
                 fd_any_prior_exit=extracted.fd_any_prior_exit,
-                fd_team_has_technical_founder=extracted.fd_team_has_technical_founder or bool(cleaned_founders),
+                fd_team_has_technical_founder=extracted.fd_team_has_technical_founder,
                 fd_university_spinoff=is_spinoff,
                 founding_year=founding_year,
                 city=norm_city,
@@ -264,12 +330,13 @@ class OpenAIEnricher:
                 is_pre_crunchbase=not is_post_kill,
                 is_post_enrichment_kill=is_post_kill,
                 kill_reason=kill_reason,
-                htgf_vertical=extracted.htgf_vertical or "industrial_climate_deeptech",
+                htgf_vertical=extracted.htgf_vertical,
                 inflection_why_now=extracted.inflection_why_now,
                 devils_advocate_risks=extracted.devils_advocate_risks,
                 citations=citations,
                 lp_synergy_matches=extracted.lp_synergy_matches
             )
+            normalize_profile(profile, model_says_technical=extracted.fd_team_has_technical_founder)
 
             with open(cache_file, "w", encoding="utf-8") as f:
                 json.dump(profile.model_dump(), f, indent=2, ensure_ascii=False)
@@ -307,14 +374,15 @@ class OpenAIEnricher:
             fd_any_top_university=is_spinoff,
             fd_any_stem_degree=is_spinoff,
             fd_university_spinoff=is_spinoff,
-            fd_team_has_technical_founder=bool(enriched_founders),
+            fd_team_has_technical_founder=False,
+            flags_version=2,
             city=normalize_city(candidate.get("city")),
             founding_year=2025,
             funding_summary="Pre-Seed (Unenriched)",
             is_pre_crunchbase=True,
             is_post_enrichment_kill=False,
             kill_reason=None,
-            htgf_vertical="industrial_climate_deeptech",
+            htgf_vertical="",
             inflection_why_now="",
             devils_advocate_risks=[f"Unenriched lead ({reason})"],
             citations=[],

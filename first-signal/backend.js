@@ -77,12 +77,13 @@
 
         const founders = array(lead.founders).filter(founder => text(founder?.full_name) &&
           !text(founder.full_name).startsWith("Lead PI ("));
-        const founder = founders.find(person => /\bceo\b/i.test(text(person.role))) || founders[0];
-        if (founder) {
+        // Every founder is listed; the CEO (or the first founder) comes first because cards show the first one.
+        const lead_founder = founders.find(person => /\bceo\b/i.test(text(person.role))) || founders[0];
+        const source = website || signals.map(signal => sources.find(item => item.id === signal.source_id)?.url).find(Boolean);
+        [lead_founder, ...founders.filter(person => person !== lead_founder)].filter(Boolean).forEach((founder, index) => {
           const linkedin = safeUrl(founder.linkedin_url);
-          const source = website || signals.map(signal => sources.find(item => item.id === signal.source_id)?.url).find(Boolean);
           people.push({
-            id: id + ":founder", name: text(founder.full_name), role: text(founder.role) || "Founder",
+            id: id + ":founder" + (index ? ":" + index : ""), name: text(founder.full_name), role: text(founder.role) || "Founder",
             contribution: array(founder.universities).map(text).filter(Boolean).join(" · "),
             projects: [id], source, ventures: [], profiles: {
               linkedin: linkedin && /(^|\.)linkedin\.com$/i.test(new URL(linkedin).hostname) ? linkedin : "",
@@ -91,7 +92,7 @@
               more: []
             }
           });
-        }
+        });
       }
       return { connected: true, teams: [...teams.values(), ...demo.teams], sources: [...sources, ...demo.sources],
         people: [...demo.people, ...people], liveCount: teams.size };

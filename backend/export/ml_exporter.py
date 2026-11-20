@@ -6,6 +6,7 @@ the schema of our ML teammate's train_new_cohort.csv and features.md.
 
 from __future__ import annotations
 import csv
+import re
 import logging
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -113,10 +114,10 @@ def export_ml_contract(
         lps = "; ".join([lp for lp in formatted_lps if lp])
 
         has_cto = 1 if any(
-            "cto" in (f.get("raw_bio", "") or "").lower() for f in raw_founders
+            re.search(r"(?<![a-z])(?:cto|chief technolog\w*)(?![a-z])", (f.get("raw_bio", "") or "").lower()) for f in raw_founders
         ) or any(
-            "cto" in (ef.get("role", "") or "").lower() for ef in enriched_founders
-        ) or profile.get("fd_team_has_technical_founder", False) else 0
+            re.search(r"(?<![a-z])(?:cto|chief technolog\w*)(?![a-z])", (ef.get("role", "") or "").lower()) for ef in enriched_founders
+        ) else 0
 
         # Cohort year
         cohort = profile.get("founding_year") or 2026
@@ -158,7 +159,7 @@ def export_ml_contract(
             "accelerator": accelerator,
             "fd_enriched": int(profile.get("fd_enriched", 0)),
             "is_pre_crunchbase": 1 if profile.get("is_pre_crunchbase", True) else 0,
-            "htgf_vertical": profile.get("htgf_vertical", "industrial_climate_deeptech"),
+            "htgf_vertical": profile.get("htgf_vertical", ""),
             "deterministic_score": cand.get("deterministic_score", breakdown.get("final_score", 0.0)),
             "lp_synergy_matches": lps,
             "inflection_why_now": profile.get("inflection_why_now", "")

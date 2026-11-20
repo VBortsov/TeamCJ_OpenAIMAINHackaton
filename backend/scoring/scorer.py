@@ -62,7 +62,7 @@ class LeadScorer:
 
         if profile.fd_team_has_technical_founder:
             team_pts += 7.0
-            drivers.append("Dedicated technical co-founder / CTO on the founding roster (+7 pts)")
+            drivers.append("Technical founder on the founding team (+7 pts)")
 
         if profile.fd_any_bigtech:
             team_pts += 5.0
