@@ -13,7 +13,7 @@ import asyncio
 import json
 import logging
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Literal, Optional
 from openai import AsyncOpenAI
 from pydantic import BaseModel, Field
 
@@ -78,6 +78,52 @@ def normalize_vertical(value: Optional[str]) -> str:
     return ""
 
 
+MAX_RESEARCH_ATTEMPTS = 2  # one retry when the model returns a blank record or finds no founders
+FOUNDER_RETRY_HINT = (
+    "\n\nThe previous search returned no founders. Search specifically for the founders or managing directors: "
+    "the Impressum / legal notice, the commercial register entry, the team or about page, and LinkedIn."
+)
+MAX_FOUNDING_YEAR_FOR_KILL = 2022  # Gate 3: founded in 2022 or earlier = older than 3.5 years
+_NON_DILUTIVE_PATTERN = re.compile(
+    r"grant|prize|award|competition|fellowship|scholarship|subsid|non[- ]dilutive|stipend|accelerator|incubator|"
+    r"venture kick|innosuisse|\bexist\b|\beic\b|\berc\b|horizon europe|bmbf|pioneer fellow|proof[- ]of[- ]concept"
+)
+_EQUITY_ROUND_PATTERN = re.compile(
+    r"series [a-e]\b|seed round|pre[- ]seed round|seed financing|seed funding|financing round|funding round|"
+    r"equity|venture capital|\bvc\b|led by|investors? (?:include|participat)|angel round"
+)
+
+
+def age_kill_reason(founding_year: Optional[int], model_says_old: bool, model_reason: Optional[str]) -> Optional[str]:
+    """Gate 3 only fires on a year. A known founding year decides alone; the model's 'older' flag is accepted
+    only when its own reason names a year of 2022 or earlier (it has returned 'Founded in 2025' as a reason)."""
+    if founding_year:
+        if founding_year <= MAX_FOUNDING_YEAR_FOR_KILL:
+            return f"Gate 3: Company founded in {founding_year} (older than 3.5 years)"
+        return None
+    if model_says_old:
+        years = [int(y) for y in re.findall(r"(?<!\d)(19\d{2}|20\d{2})(?!\d)", model_reason or "")]
+        if years and min(years) <= MAX_FOUNDING_YEAR_FOR_KILL:
+            return f"Gate 3: {model_reason.strip()}"
+    return None
+
+
+def funding_kill_reason(model_says_round: bool, funding_summary: Optional[str]) -> Optional[str]:
+    """Gate 5 only fires on an equity round. Grants, prizes and fellowships (Venture Kick, EXIST, Innosuisse,
+    ERC ...) are not funding rounds, so a summary that only names those does not reject the lead."""
+    if not model_says_round:
+        return None
+    summary = (funding_summary or "").lower()
+    if _NON_DILUTIVE_PATTERN.search(summary) and not _EQUITY_ROUND_PATTERN.search(summary):
+        return None
+    return f"Gate 5: Raised institutional round ({funding_summary})"
+
+
+def is_empty_research(extracted: "_StructuredWebSearchOutput") -> bool:
+    """The model sometimes returns a blank record without raising. Nothing to score: no founders, no description."""
+    return not extracted.founders and not (extracted.description or "").strip()
+
+
 class EnrichedFounder(BaseModel):
     full_name: str
     role: Optional[str] = "Co-Founder"
@@ -86,6 +132,7 @@ class EnrichedFounder(BaseModel):
     universities: List[str] = Field(default_factory=list)
     prior_companies: List[str] = Field(default_factory=list)
     is_ex_bigtech: bool = False
+    is_technical: bool = False  # engineering / science / CS background or a technical role, stated in the sources
     source_of_identity: str = "web_search"
 
 
@@ -129,16 +176,19 @@ class EnrichedProfile(BaseModel):
 def normalize_profile(profile: "EnrichedProfile", model_says_technical: Optional[bool] = None) -> "EnrichedProfile":
     """Make the founder flags follow the founder records, for fresh and cached profiles alike.
     - Big Tech: only when a founder's prior company is on BIGTECH_EMPLOYERS (the model also flagged consulting firms).
-    - Technical founder: a founder holds a technical role (CTO, engineer, scientist ...), or the model said so
-      for a fresh profile. Having any founder at all no longer counts.
+    - Technical founder: a founder record shows a technical role or background (CTO, engineer, scientist ...).
+      For a fresh profile the model's team-level flag also counts if a founder holds a PhD. Having any founder
+      at all, or the model's flag with no founder record behind it, does not count.
     - Vertical: mapped onto the known keys, "" when unknown.
     """
     for founder in profile.founders_enriched:
         founder.is_ex_bigtech = any(is_bigtech_employer(c) for c in founder.prior_companies)
     profile.fd_any_bigtech = any(f.is_ex_bigtech for f in profile.founders_enriched)
-    role_based = any(has_technical_role(f.role) for f in profile.founders_enriched)
+    role_based = any(has_technical_role(f.role) or f.is_technical for f in profile.founders_enriched)
     if model_says_technical is not None:
-        profile.fd_team_has_technical_founder = bool(model_says_technical) or role_based
+        # the model's team-level flag needs a founder record behind it: a technical role or background, or a PhD
+        backed = any(f.has_phd for f in profile.founders_enriched)
+        profile.fd_team_has_technical_founder = role_based or (bool(model_says_technical) and backed)
     elif profile.flags_version < 2:
         profile.fd_team_has_technical_founder = role_based
     profile.htgf_vertical = normalize_vertical(profile.htgf_vertical)
@@ -155,7 +205,8 @@ class _StructuredWebSearchOutput(BaseModel):
     funding_summary: str = ""
     is_older_than_3_5_years: bool = False
     older_reason: Optional[str] = None
-    htgf_vertical: str = "industrial_climate_deeptech"
+    htgf_vertical: Literal["industrial_climate_deeptech", "digital_tech_ai", "life_sciences_chemistry",
+                           "out_of_mandate", "unknown"] = "unknown"
     inflection_why_now: str = ""
     devils_advocate_risks: List[str] = Field(default_factory=list)
     founders: List[EnrichedFounder] = Field(default_factory=list)
@@ -227,61 +278,86 @@ class OpenAIEnricher:
             f"Tasks:\n"
             f"1. Search web sources to identify the real founding team. If known founders {raw_founders} exist, verify their roles, PhDs, engineering/STEM backgrounds, and exact LinkedIn URLs (ONLY if verbatim in search results; DO NOT fabricate URLs).\n"
             f"2. Check if this is a university spin-off (e.g. RWTH Aachen, ETH Zurich, TU Munich, Fraunhofer, ERC).\n"
-            f"3. Find exact founding year and funding history. If founded in 2022 or earlier (e.g. 2001, 2015, 2020), or if already raised Series A / >= €3M, state this clearly!\n"
+            f"3. Find exact founding year and funding history. If founded in 2022 or earlier (e.g. 2001, 2015, 2020), or if already raised Series A / >= €3M, state this clearly! Keep equity rounds (seed, Series A, VC or angel investors) apart from non-dilutive money: grants, prizes, awards and fellowships (Venture Kick, EXIST, Innosuisse, ERC, EIC) are NOT funding rounds.\n"
             f"4. Propose 1-2 strategic LP synergy matches from this verified HTGF IV LP list: {HTGF_IV_LPS[:15]} with 1-sentence technical reason.\n"
             f"5. Describe the venture's product in one source-backed sentence. Provide a 1-sentence 'Inflection Why Now' and 2 genuine execution risks.\n"
             f"6. Classify htgf_vertical as exactly one of: industrial_climate_deeptech, digital_tech_ai, life_sciences_chemistry, out_of_mandate.\n"
-            f"7. For each founder list prior employers in prior_companies. is_ex_bigtech is true only for large technology companies (e.g. Google, Microsoft, Nvidia, SAP, Siemens, Bosch), never for consulting, audit or materials firms."
+            f"7. For each founder list prior employers in prior_companies. is_ex_bigtech is true only for large technology companies (e.g. Google, Microsoft, Nvidia, SAP, Siemens, Bosch), never for consulting, audit or materials firms. Say for each founder whether the sources show an engineering, science or computer-science background or a technical role."
         )
 
         try:
-            resp = await self.client.responses.create(
-                model="gpt-4o-mini",
-                tools=[{"type": "web_search_preview"}],
-                input=prompt
-            )
+            # Keep the best attempt: the first one that names founders, else the latest one with any facts.
+            best = None
+            for attempt in range(1, MAX_RESEARCH_ATTEMPTS + 1):
+                if attempt > 1 and not self.cost_tracker.can_execute_live_call():
+                    break
+                resp = await self.client.responses.create(
+                    model="gpt-4o-mini",
+                    tools=[{"type": "web_search_preview"}],
+                    input=prompt if attempt == 1 else prompt + FOUNDER_RETRY_HINT
+                )
 
-            # Count actual web search calls and extract clean citations
-            web_search_calls = 0
-            citations: List[str] = []
-            if hasattr(resp, "output") and resp.output:
-                for out in resp.output:
-                    otype = getattr(out, "type", "")
-                    if otype == "web_search_call":
-                        web_search_calls += 1
-                    elif otype == "message":
-                        for content in getattr(out, "content", []):
-                            for ann in getattr(content, "annotations", []):
-                                if getattr(ann, "type", "") == "url_citation" and getattr(ann, "url", None):
-                                    cu = clean_url(ann.url)
-                                    if cu:
-                                        citations.append(cu)
-            citations = list(dict.fromkeys(citations))
+                # Count actual web search calls and extract clean citations
+                web_search_calls = 0
+                citations: List[str] = []
+                if hasattr(resp, "output") and resp.output:
+                    for out in resp.output:
+                        otype = getattr(out, "type", "")
+                        if otype == "web_search_call":
+                            web_search_calls += 1
+                        elif otype == "message":
+                            for content in getattr(out, "content", []):
+                                for ann in getattr(content, "annotations", []):
+                                    if getattr(ann, "type", "") == "url_citation" and getattr(ann, "url", None):
+                                        cu = clean_url(ann.url)
+                                        if cu:
+                                            citations.append(cu)
+                citations = list(dict.fromkeys(citations))
 
-            parsed = await self.client.beta.chat.completions.parse(
-                model="gpt-4o-mini",
-                messages=[
-                    {
-                        "role": "system",
-                        "content": (
-                            "Extract verified facts from the research findings into the structured schema. "
-                            "STRICT RULE: Only set fields that are explicitly supported by the text. "
-                            "Never invent founders, never fabricate LinkedIn URLs (set null if not found), "
-                            "and set is_older_than_3_5_years=True if founded in 2022 or earlier."
-                        )
-                    },
-                    {"role": "user", "content": f"Startup: {cname}\n\nWeb Search Findings:\n{resp.output_text}"}
-                ],
-                response_format=_StructuredWebSearchOutput
-            )
-            extracted: _StructuredWebSearchOutput = parsed.choices[0].message.parsed
+                parsed = await self.client.beta.chat.completions.parse(
+                    model="gpt-4o-mini",
+                    messages=[
+                        {
+                            "role": "system",
+                            "content": (
+                                "Extract verified facts from the research findings into the structured schema. "
+                                "STRICT RULE: Only set fields that are explicitly supported by the text. "
+                                "Never invent founders, never fabricate LinkedIn URLs (set null if not found), "
+                                "and set is_older_than_3_5_years=True only if founded in 2022 or earlier, naming that year in older_reason. "
+                                "raised_institutional_round=True only for a priced equity round from venture or institutional investors; "
+                                "grants, prizes, awards, fellowships and accelerator stipends (Venture Kick, EXIST, Innosuisse, ERC, EIC) are not rounds. "
+                                "founders[].is_technical=True only when the text shows an engineering, science or computer-science background or a technical role for that person. "
+                                "htgf_vertical: industrial_climate_deeptech = hardware, robotics, materials, energy, climate, manufacturing, construction; "
+                                "digital_tech_ai = software, AI / LLM products, SaaS, data, fintech; "
+                                "life_sciences_chemistry = biotech, medtech, pharma, diagnostics, chemistry; "
+                                "out_of_mandate = none of these; unknown = the text does not say what the company makes."
+                            )
+                        },
+                        {"role": "user", "content": f"Startup: {cname}\n\nWeb Search Findings:\n{resp.output_text}"}
+                    ],
+                    response_format=_StructuredWebSearchOutput,
+                    temperature=0
+                )
+                extracted: _StructuredWebSearchOutput = parsed.choices[0].message.parsed
 
-            # Track token usage and live call spend
-            in_tokens = getattr(getattr(resp, "usage", None), "input_tokens", 0) or 0
-            out_tokens = getattr(getattr(resp, "usage", None), "output_tokens", 0) or 0
-            in_tokens += getattr(getattr(parsed, "usage", None), "prompt_tokens", 0) or 0
-            out_tokens += getattr(getattr(parsed, "usage", None), "completion_tokens", 0) or 0
-            self.cost_tracker.record_live_call(ent_id, cname, in_tokens, out_tokens, web_search_calls)
+                # Track token usage and live call spend
+                in_tokens = getattr(getattr(resp, "usage", None), "input_tokens", 0) or 0
+                out_tokens = getattr(getattr(resp, "usage", None), "output_tokens", 0) or 0
+                in_tokens += getattr(getattr(parsed, "usage", None), "prompt_tokens", 0) or 0
+                out_tokens += getattr(getattr(parsed, "usage", None), "completion_tokens", 0) or 0
+                self.cost_tracker.record_live_call(ent_id, cname, in_tokens, out_tokens, web_search_calls)
+                if not is_empty_research(extracted):
+                    best = (extracted, citations)
+                if extracted.founders:
+                    break
+                logger.warning("Research for '%s' returned %s (attempt %d of %d)", cname,
+                               "nothing" if is_empty_research(extracted) else "no founders", attempt, MAX_RESEARCH_ATTEMPTS)
+
+            if best is None:
+                # Nothing usable came back: score the lead as unenriched and do not cache, so the next run tries again
+                return self._build_unenriched_profile(candidate, reason="Enrichment returned no facts")
+            extracted, citations = best
+            founders_found = bool(extracted.founders)
 
             # Filter founders with clean URLs and strict personal LinkedIn check
             cleaned_founders = []
@@ -289,22 +365,17 @@ class OpenAIEnricher:
                 clean_li = clean_url(f.linkedin_url)
                 f.linkedin_url = clean_li if is_valid_founder_linkedin(clean_li) else None
                 cleaned_founders.append(f)
+            if not cleaned_founders:
+                # The search found facts but no people: keep the founders the scraper already had
+                cleaned_founders = self._scraped_founders(candidate)
 
             norm_city = normalize_city(extracted.city or candidate.get("city"))
             is_spinoff = extracted.fd_university_spinoff or any(s in ("eth_rwth", "cordis_erc") for s in signals)
 
             founding_year = extracted.founding_year
-            is_post_kill = False
-            kill_reason = None
-            if founding_year and founding_year <= 2022:
-                is_post_kill = True
-                kill_reason = f"Gate 3: Company founded in {founding_year} (older than 3.5 years)"
-            elif extracted.is_older_than_3_5_years:
-                is_post_kill = True
-                kill_reason = extracted.older_reason or "Gate 3: Company older than 3.5 years"
-            elif extracted.raised_institutional_round:
-                is_post_kill = True
-                kill_reason = f"Gate 5: Raised institutional round ({extracted.funding_summary})"
+            kill_reason = age_kill_reason(founding_year, extracted.is_older_than_3_5_years, extracted.older_reason) \
+                or funding_kill_reason(extracted.raised_institutional_round, extracted.funding_summary)
+            is_post_kill = kill_reason is not None
 
             profile = EnrichedProfile(
                 canonical_name=extracted.canonical_name,
@@ -325,7 +396,7 @@ class OpenAIEnricher:
                 fd_university_spinoff=is_spinoff,
                 founding_year=founding_year,
                 city=norm_city,
-                raised_institutional_round=extracted.raised_institutional_round,
+                raised_institutional_round=bool(funding_kill_reason(extracted.raised_institutional_round, extracted.funding_summary)),
                 funding_summary=extracted.funding_summary,
                 is_pre_crunchbase=not is_post_kill,
                 is_post_enrichment_kill=is_post_kill,
@@ -338,8 +409,11 @@ class OpenAIEnricher:
             )
             normalize_profile(profile, model_says_technical=extracted.fd_team_has_technical_founder)
 
-            with open(cache_file, "w", encoding="utf-8") as f:
-                json.dump(profile.model_dump(), f, indent=2, ensure_ascii=False)
+            # A profile without founders from the search is used for this run but not cached,
+            # so it cannot freeze a lead without its team: the next run searches again.
+            if founders_found:
+                with open(cache_file, "w", encoding="utf-8") as f:
+                    json.dump(profile.model_dump(), f, indent=2, ensure_ascii=False)
 
             return profile
 
@@ -350,12 +424,10 @@ class OpenAIEnricher:
     def enrich(self, candidate: Dict[str, Any]) -> EnrichedProfile:
         return asyncio.run(self.enrich_async(candidate))
 
-    def _build_unenriched_profile(self, candidate: Dict[str, Any], reason: str) -> EnrichedProfile:
-        signals = [s.get("source_name") for s in candidate.get("signals", [])]
-        is_spinoff = any(s in ("eth_rwth", "cordis_erc") for s in signals)
-        raw_founders = candidate.get("founders", [])
-
-        enriched_founders = [
+    @staticmethod
+    def _scraped_founders(candidate: Dict[str, Any]) -> List[EnrichedFounder]:
+        """Founders the scraper already listed (Impressum, roster), without any enriched facts."""
+        return [
             EnrichedFounder(
                 full_name=f["full_name"],
                 role="Founder",
@@ -364,8 +436,13 @@ class OpenAIEnricher:
                 is_ex_bigtech=False,
                 source_of_identity=f.get("link_method", "scraped_roster")
             )
-            for f in raw_founders if f.get("full_name") and not f.get("full_name", "").startswith("Lead PI (")
+            for f in candidate.get("founders", []) if f.get("full_name") and not f.get("full_name", "").startswith("Lead PI (")
         ]
+
+    def _build_unenriched_profile(self, candidate: Dict[str, Any], reason: str) -> EnrichedProfile:
+        signals = [s.get("source_name") for s in candidate.get("signals", [])]
+        is_spinoff = any(s in ("eth_rwth", "cordis_erc") for s in signals)
+        enriched_founders = self._scraped_founders(candidate)
 
         return EnrichedProfile(
             founders_enriched=enriched_founders,

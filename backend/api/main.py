@@ -42,7 +42,7 @@ from backend.scoring.kill_gates import KillGateEvaluator
 from backend.enrichment.openai_enricher import OpenAIEnricher, normalize_vertical
 from backend.scoring.scorer import LeadScorer, ScoreBreakdown
 from backend.ml import service as ml_service
-from backend.ml.memo_agent import build_memo_input, generate_memo, load_cached_memo
+from backend.ml.memo_agent import build_memo_input, generate_memo, load_current_memo
 
 logger = logging.getLogger("api")
 
@@ -416,9 +416,23 @@ def get_lead_dossier(entity_id: str):
         "score_drivers": matched.get("score_breakdown", {}).get("drivers", []),
 
         # Section 8: ML memo (null until generated via POST /api/ml/score or GET /api/leads/{id}/ml-memo)
-        "ml_memo": load_cached_memo(entity_id)
+        "ml_memo": _current_ml_memo(matched, leads)
     }
     return memo
+
+
+def _current_ml_memo(lead: Dict[str, Any], leads: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    """Cached LLM memo for the dossier, only if it was written from the lead's current facts and rank."""
+    entity_id = lead.get("entity_id")
+    idx = next((i for i, l in enumerate(leads) if l.get("entity_id") == entity_id), None)
+    if idx is None:
+        return None
+    try:
+        payload = build_memo_input(lead, idx + 1, len(leads), ml_service.explain_lead(entity_id), ml_service.base_rates())
+        return load_current_memo(entity_id, payload)
+    except Exception as e:
+        logger.warning("Could not check the cached memo for %s: %s", entity_id, e)
+        return None
 
 
 # =============================================================================

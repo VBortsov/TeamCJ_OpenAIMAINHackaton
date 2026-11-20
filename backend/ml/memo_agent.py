@@ -37,8 +37,9 @@ You receive one JSON object with everything we know. Rules, no exceptions:
 3. A missing, null or empty field means UNKNOWN, not "no". Say "unknown" or put it under risks, never "has no X".
 4. `ml_score` is a 0-100 model score where 50 is the typical startup in our reference cohort. `ml_percentile` is
    the share of that cohort the lead scores above. Neither is a probability of success: never write "<N>% chance".
-   You may write "model score <ml_score> of 100" or, if `ml_percentile` is below 99, "scores above <ml_percentile>%
-   of the reference cohort"; at 99 or more write "at the top of the reference cohort". For the rank use only
+   When you cite the model, give "model score <ml_score> of 100", the number the leaderboard shows. You may add
+   the percentile after it, never instead of it: "(above <ml_percentile>% of the reference cohort)" if
+   `ml_percentile` is below 99, "(at the top of the reference cohort)" at 99 or more. For the rank use only
    `scores.rank_today` and `scores.leads_today`; if they are absent, do not mention a rank.
 5. `ml_drivers` are flags in our data that pushed the ML score up (+) or down (-); explain them in plain words.
    A driver is a model input, not proof: if `founders` does not show who it refers to (e.g. no founder with a CTO
@@ -147,6 +148,17 @@ def load_cached_memo(entity_id: str) -> Optional[Dict[str, Any]]:
         return None
 
 
+def memo_input_hash(payload: Dict[str, Any]) -> str:
+    return hashlib.sha256(json.dumps(payload, sort_keys=True, default=str).encode()).hexdigest()[:16]
+
+
+def load_current_memo(entity_id: str, payload: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """The cached memo, but only while it still describes the lead's current facts.
+    After a re-enrichment the facts change, and an old memo would name founders the data no longer has."""
+    cached = load_cached_memo(entity_id)
+    return cached if cached and cached.get("input_hash") == memo_input_hash(payload) else None
+
+
 def fallback_memo(p: Dict[str, Any]) -> Dict[str, Any]:
     """Deterministic memo from the same facts. Used when OpenAI is unavailable; states only supplied facts."""
     c = p.get("company", {})
@@ -172,10 +184,9 @@ def fallback_memo(p: Dict[str, Any]) -> Dict[str, Any]:
 async def generate_memo(entity_id: str, payload: Dict[str, Any], refresh: bool = False,
                         cost_tracker: Optional[CostTracker] = None, allow_llm: bool = True) -> Dict[str, Any]:
     """Return the memo for one lead: cached if the facts did not change, else one OpenAI call."""
-    digest = hashlib.sha256(json.dumps(payload, sort_keys=True, default=str).encode()).hexdigest()[:16]
+    digest = memo_input_hash(payload)
     cached = load_cached_memo(entity_id)
-    if cached and not refresh and cached.get("memo_source", "").startswith("openai") and (
-            cached.get("input_hash") == digest or not allow_llm):
+    if cached and not refresh and cached.get("memo_source", "").startswith("openai") and cached.get("input_hash") == digest:
         return cached
 
     tracker = cost_tracker or CostTracker()
