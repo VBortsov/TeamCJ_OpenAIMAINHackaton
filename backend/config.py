@@ -20,6 +20,10 @@ class Settings(BaseSettings):
     ELEVENLABS_API_KEY: str | None = Field(default=None, description="ElevenLabs API key for Wave 3 partner briefing audio")
     N8N_WEBHOOK_URL: str | None = Field(default=None, description="Webhook for Top-10 leads dispatch")
 
+    FOUNDERHUNT_WRITE_TOKEN: str | None = Field(default=None, description="Operator token for live evaluation and real workflow dispatch")
+    FOUNDERHUNT_ALLOWED_ORIGINS: list[str] = Field(default_factory=list)
+    FOUNDERHUNT_ENRICH_BUDGET_USD: float = Field(default=2.0, ge=0)
+
     # Optional Free / Community API Keys
     OPENALEX_API_KEY: str | None = Field(default=None, description="OpenAlex API key for higher rate limits")
     HF_TOKEN: str | None = Field(default=None, description="Hugging Face User Access Token")

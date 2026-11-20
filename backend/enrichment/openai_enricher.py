@@ -52,6 +52,8 @@ class LPSynergyMatch(BaseModel):
 
 
 class EnrichedProfile(BaseModel):
+    canonical_name: Optional[str] = None
+    description: str = ""
     founders_enriched: List[EnrichedFounder] = Field(default_factory=list)
     fd_enriched: int = 1
     fd_any_phd: bool = False
@@ -69,7 +71,7 @@ class EnrichedProfile(BaseModel):
     founding_year: Optional[int] = None
     city: Optional[str] = None
     raised_institutional_round: bool = False
-    funding_summary: str = "Pre-Seed / Undisclosed Grants"
+    funding_summary: str = ""
     is_pre_crunchbase: bool = True
     is_post_enrichment_kill: bool = False
     kill_reason: Optional[str] = None
@@ -82,10 +84,11 @@ class EnrichedProfile(BaseModel):
 
 class _StructuredWebSearchOutput(BaseModel):
     canonical_name: str
+    description: str = ""
     city: Optional[str] = None
     founding_year: Optional[int] = None
     raised_institutional_round: bool = False
-    funding_summary: str = "Pre-Seed / Grants"
+    funding_summary: str = ""
     is_older_than_3_5_years: bool = False
     older_reason: Optional[str] = None
     htgf_vertical: str = "industrial_climate_deeptech"
@@ -162,7 +165,7 @@ class OpenAIEnricher:
             f"2. Check if this is a university spin-off (e.g. RWTH Aachen, ETH Zurich, TU Munich, Fraunhofer, ERC).\n"
             f"3. Find exact founding year and funding history. If founded in 2022 or earlier (e.g. 2001, 2015, 2020), or if already raised Series A / >= €3M, state this clearly!\n"
             f"4. Propose 1-2 strategic LP synergy matches from this verified HTGF IV LP list: {HTGF_IV_LPS[:15]} with 1-sentence technical reason.\n"
-            f"5. Provide a 1-sentence 'Inflection Why Now' and 2 genuine execution risks."
+            f"5. Describe the venture's product in one source-backed sentence. Provide a 1-sentence 'Inflection Why Now' and 2 genuine execution risks."
         )
 
         try:
@@ -238,6 +241,8 @@ class OpenAIEnricher:
                 kill_reason = f"Gate 5: Raised institutional round ({extracted.funding_summary})"
 
             profile = EnrichedProfile(
+                canonical_name=extracted.canonical_name,
+                description=extracted.description,
                 founders_enriched=cleaned_founders,
                 fd_enriched=1,
                 fd_any_phd=extracted.fd_any_phd or any(f.has_phd for f in cleaned_founders),
@@ -252,7 +257,7 @@ class OpenAIEnricher:
                 fd_any_prior_exit=extracted.fd_any_prior_exit,
                 fd_team_has_technical_founder=extracted.fd_team_has_technical_founder or bool(cleaned_founders),
                 fd_university_spinoff=is_spinoff,
-                founding_year=founding_year or 2025,
+                founding_year=founding_year,
                 city=norm_city,
                 raised_institutional_round=extracted.raised_institutional_round,
                 funding_summary=extracted.funding_summary,
