@@ -1,25 +1,24 @@
 """
 OpenAI Real Web-Search Founder, Ex-Big-Tech, Pre-Crunchbase & HTGF LP Synergy Enricher.
-Strict Zero-Fake-Data / Fail-Fast Policy:
+Strict Zero-Fake-Data / Fail-Fast Policy with Budget Circuit-Breaker & Cost Tracking:
 - Calls live OpenAI Responses API with web_search_preview.
-- Extracts real verifiable facts, real citations, and real founder identities.
+- Extracts real verifiable facts, clean citations, and genuine founder identities.
 - Zero hardcoded company profiles or synthetic fallbacks.
-- If API key is missing or call fails, logs loudly and sets fd_enriched = 0.
+- Enforces hard budget caps and supports --cache-only mode ($0.00).
 """
 
 from __future__ import annotations
 import asyncio
 import json
 import logging
-import os
-import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 from openai import AsyncOpenAI
 from pydantic import BaseModel, Field
 
 from backend.config import settings
-from backend.db.repository import normalize_city
+from backend.db.repository import normalize_city, clean_url, is_valid_founder_linkedin
+from backend.enrichment.cost_tracker import CostTracker
 
 logger = logging.getLogger(__name__)
 
@@ -39,7 +38,7 @@ HTGF_IV_LPS = [
 class EnrichedFounder(BaseModel):
     full_name: str
     role: Optional[str] = "Co-Founder"
-    linkedin_url: Optional[str] = None  # Populated ONLY if verbatim in live search or website
+    linkedin_url: Optional[str] = None  # Strictly linkedin.com/in/... (never fabricated)
     has_phd: bool = False
     universities: List[str] = Field(default_factory=list)
     prior_companies: List[str] = Field(default_factory=list)
@@ -54,7 +53,7 @@ class LPSynergyMatch(BaseModel):
 
 class EnrichedProfile(BaseModel):
     founders_enriched: List[EnrichedFounder] = Field(default_factory=list)
-    fd_enriched: int = 1  # 1 = live web search succeeded, 0 = failed/un-enriched
+    fd_enriched: int = 1
     fd_any_phd: bool = False
     fd_any_top_university: bool = False
     fd_any_elite_business_school: bool = False
@@ -109,37 +108,46 @@ class _StructuredWebSearchOutput(BaseModel):
 
 
 class OpenAIEnricher:
-    """Async OpenAI Web-Search Enricher with strict zero-fake-data compliance."""
+    """Async OpenAI Web-Search Enricher with CostTracker and circuit-breaker."""
 
-    def __init__(self, cache_dir: Optional[Path] = None, api_key: Optional[str] = None):
+    def __init__(
+        self,
+        cache_dir: Optional[Path] = None,
+        api_key: Optional[str] = None,
+        cost_tracker: Optional[CostTracker] = None
+    ):
         self.cache_dir = Path(cache_dir or settings.DATA_DIR / "llm_cache")
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.api_key = api_key or settings.OPENAI_API_KEY
+        self.cost_tracker = cost_tracker or CostTracker()
         if not self.api_key:
-            logger.warning("OPENAI_API_KEY is missing! Enrichment will fail-fast with fd_enriched=0.")
+            logger.warning("OPENAI_API_KEY missing! Enrichment will fail-fast with fd_enriched=0.")
         self.client = AsyncOpenAI(api_key=self.api_key) if self.api_key else None
 
     async def enrich_async(self, candidate: Dict[str, Any]) -> EnrichedProfile:
-        """Enriches a single candidate using live OpenAI web search and disk caching."""
         ent_id = candidate["entity_id"]
+        cname = candidate.get("canonical_name", "")
         cache_file = self.cache_dir / f"{ent_id}.json"
 
-        # 1. Check disk cache
+        # 1. Check disk cache ($0.00 spend)
         if cache_file.exists():
             try:
                 with open(cache_file, "r", encoding="utf-8") as f:
                     cached_data = json.load(f)
+                self.cost_tracker.record_cache_hit(ent_id, cname)
                 return EnrichedProfile(**cached_data)
             except Exception as e:
                 logger.debug("Failed loading cache for %s: %s", ent_id, e)
 
-        # 2. Fail-fast if API key is not configured
+        # 2. Circuit-breaker check (budget cap or cache-only mode)
+        if not self.cost_tracker.can_execute_live_call():
+            return self._build_unenriched_profile(candidate, reason="Budget cap reached or cache-only mode active")
+
         if not self.client:
-            logger.error("FAIL-FAST: Cannot enrich '%s' because OPENAI_API_KEY is not configured.", candidate.get("canonical_name"))
+            logger.error("FAIL-FAST: OPENAI_API_KEY not configured for '%s'.", cname)
             return self._build_unenriched_profile(candidate, reason="OPENAI_API_KEY not configured")
 
-        # 3. Execute live web search via OpenAI Responses API
-        cname = candidate.get("canonical_name", "")
+        # 3. Live Web Search via Responses API
         domain = candidate.get("normalized_domain") or candidate.get("website_url") or ""
         city = candidate.get("city") or ""
         signals = [s.get("source_name") for s in candidate.get("signals", [])]
@@ -158,25 +166,29 @@ class OpenAIEnricher:
         )
 
         try:
-            # Step A: Live Web Search via Responses API
             resp = await self.client.responses.create(
                 model="gpt-4o-mini",
                 tools=[{"type": "web_search_preview"}],
                 input=prompt
             )
 
-            # Step B: Extract genuine citations from web search annotations
+            # Count actual web search calls and extract clean citations
+            web_search_calls = 0
             citations: List[str] = []
             if hasattr(resp, "output") and resp.output:
                 for out in resp.output:
-                    if getattr(out, "type", "") == "message":
+                    otype = getattr(out, "type", "")
+                    if otype == "web_search_call":
+                        web_search_calls += 1
+                    elif otype == "message":
                         for content in getattr(out, "content", []):
                             for ann in getattr(content, "annotations", []):
                                 if getattr(ann, "type", "") == "url_citation" and getattr(ann, "url", None):
-                                    citations.append(ann.url)
+                                    cu = clean_url(ann.url)
+                                    if cu:
+                                        citations.append(cu)
             citations = list(dict.fromkeys(citations))
 
-            # Step C: Parse structured facts strictly from search output text
             parsed = await self.client.beta.chat.completions.parse(
                 model="gpt-4o-mini",
                 messages=[
@@ -195,15 +207,26 @@ class OpenAIEnricher:
             )
             extracted: _StructuredWebSearchOutput = parsed.choices[0].message.parsed
 
-            # Step D: Build verified profile
+            # Track token usage and live call spend
+            in_tokens = getattr(getattr(resp, "usage", None), "input_tokens", 0) or 0
+            out_tokens = getattr(getattr(resp, "usage", None), "output_tokens", 0) or 0
+            in_tokens += getattr(getattr(parsed, "usage", None), "prompt_tokens", 0) or 0
+            out_tokens += getattr(getattr(parsed, "usage", None), "completion_tokens", 0) or 0
+            self.cost_tracker.record_live_call(ent_id, cname, in_tokens, out_tokens, web_search_calls)
+
+            # Filter founders with clean URLs and strict personal LinkedIn check
+            cleaned_founders = []
+            for f in extracted.founders:
+                clean_li = clean_url(f.linkedin_url)
+                f.linkedin_url = clean_li if is_valid_founder_linkedin(clean_li) else None
+                cleaned_founders.append(f)
+
             norm_city = normalize_city(extracted.city or candidate.get("city"))
             is_spinoff = extracted.fd_university_spinoff or any(s in ("eth_rwth", "cordis_erc") for s in signals)
 
-            # Verify Post-Enrichment Kill-Gates
             founding_year = extracted.founding_year
             is_post_kill = False
             kill_reason = None
-
             if founding_year and founding_year <= 2022:
                 is_post_kill = True
                 kill_reason = f"Gate 3: Company founded in {founding_year} (older than 3.5 years)"
@@ -215,19 +238,19 @@ class OpenAIEnricher:
                 kill_reason = f"Gate 5: Raised institutional round ({extracted.funding_summary})"
 
             profile = EnrichedProfile(
-                founders_enriched=extracted.founders,
+                founders_enriched=cleaned_founders,
                 fd_enriched=1,
-                fd_any_phd=extracted.fd_any_phd or any(f.has_phd for f in extracted.founders),
+                fd_any_phd=extracted.fd_any_phd or any(f.has_phd for f in cleaned_founders),
                 fd_any_top_university=extracted.fd_any_top_university,
                 fd_any_elite_business_school=extracted.fd_any_elite_business_school,
                 fd_any_stem_degree=extracted.fd_any_stem_degree,
                 fd_any_studied_abroad=extracted.fd_any_studied_abroad,
-                fd_any_bigtech=extracted.fd_any_bigtech or any(f.is_ex_bigtech for f in extracted.founders),
+                fd_any_bigtech=extracted.fd_any_bigtech or any(f.is_ex_bigtech for f in cleaned_founders),
                 fd_any_top_consulting=extracted.fd_any_top_consulting,
                 fd_any_academic_researcher=extracted.fd_any_academic_researcher,
                 fd_any_serial_founder=extracted.fd_any_serial_founder,
                 fd_any_prior_exit=extracted.fd_any_prior_exit,
-                fd_team_has_technical_founder=extracted.fd_team_has_technical_founder or bool(extracted.founders),
+                fd_team_has_technical_founder=extracted.fd_team_has_technical_founder or bool(cleaned_founders),
                 fd_university_spinoff=is_spinoff,
                 founding_year=founding_year or 2025,
                 city=norm_city,
@@ -243,7 +266,6 @@ class OpenAIEnricher:
                 lp_synergy_matches=extracted.lp_synergy_matches
             )
 
-            # Persist to disk cache
             with open(cache_file, "w", encoding="utf-8") as f:
                 json.dump(profile.model_dump(), f, indent=2, ensure_ascii=False)
 
@@ -254,26 +276,23 @@ class OpenAIEnricher:
             return self._build_unenriched_profile(candidate, reason=str(e))
 
     def enrich(self, candidate: Dict[str, Any]) -> EnrichedProfile:
-        """Synchronous wrapper for single-lead compatibility."""
         return asyncio.run(self.enrich_async(candidate))
 
     def _build_unenriched_profile(self, candidate: Dict[str, Any], reason: str) -> EnrichedProfile:
-        """Constructs an auditable un-enriched profile without fabricating synthetic facts."""
         signals = [s.get("source_name") for s in candidate.get("signals", [])]
         is_spinoff = any(s in ("eth_rwth", "cordis_erc") for s in signals)
         raw_founders = candidate.get("founders", [])
 
-        # Keep only raw scraped founders; zero synthetic fields
         enriched_founders = [
             EnrichedFounder(
                 full_name=f["full_name"],
                 role="Founder",
-                linkedin_url=f.get("linkedin_url"),
+                linkedin_url=clean_url(f.get("linkedin_url")) if is_valid_founder_linkedin(f.get("linkedin_url")) else None,
                 has_phd=False,
                 is_ex_bigtech=False,
                 source_of_identity=f.get("link_method", "scraped_roster")
             )
-            for f in raw_founders if f.get("full_name")
+            for f in raw_founders if f.get("full_name") and not f.get("full_name", "").startswith("Lead PI (")
         ]
 
         return EnrichedProfile(

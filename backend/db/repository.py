@@ -75,6 +75,8 @@ CITY_NORMALIZATION: Dict[str, str] = {
     "munchen": "Munich",
     "garching": "Munich",
     "garching bei münchen": "Munich",
+    "grünwald": "Munich",
+    "grunwald": "Munich",
     "zürich": "Zurich",
     "zurich": "Zurich",
     "köln": "Cologne",
@@ -104,18 +106,75 @@ CITY_NORMALIZATION: Dict[str, str] = {
     "london": "London",
     "stockholm": "Stockholm",
     "vienna": "Vienna",
-    "wien": "Vienna"
+    "wien": "Vienna",
+    "herford": "Herford",
+    "delft": "Delft"
 }
+
+NOISE_CITY_PATTERNS = [
+    r"\beintragung\b", r"\bhandelsregister\b", r"\bamtsgericht\b",
+    r"\bgermany\b", r"\bdeutschland\b", r"\bswitzerland\b", r"\bschweiz\b",
+    r"\baustria\b", r"\bösterreich\b", r"\bgmbh\b", r"\bug\b", r"\bag\b",
+    r"\baddress\b", r"\badresse\b"
+]
 
 
 def normalize_city(city: Optional[str]) -> Optional[str]:
-    """Standardize city names to English hub names per ML contract (features.md)."""
+    """Standardize city names to clean English hub names per ML contract (features.md)."""
     if not city:
         return None
     clean = city.strip()
+
+    # Reject law-firm or legal office strings from Impressum (e.g. 'Kanzlei Berger')
+    if re.search(r"\bkanzlei\b", clean, re.IGNORECASE):
+        return None
+
+    # Strip postal code prefixes: e.g. "52062 Aachen"
     clean = re.sub(r"^\d{4,5}\s+", "", clean)
     clean = clean.split(",")[0].split("\n")[0].strip()
+
+    # Strip trailing corporate/register noise words
+    for noise in NOISE_CITY_PATTERNS:
+        clean = re.sub(noise, "", clean, flags=re.IGNORECASE).strip()
+
+    # Clean non-word characters except hyphens and umlauts
+    clean = re.sub(r"[^\w\säöüÄÖÜß\-]", "", clean).strip()
+    if not clean:
+        return None
+
     return CITY_NORMALIZATION.get(clean.lower(), clean.title() if clean else None)
+
+
+def clean_url(url: Optional[str]) -> Optional[str]:
+    """Strips tracking query parameters (e.g. utm_source=openai) from URLs."""
+    if not url:
+        return None
+    url = url.strip()
+    try:
+        import urllib.parse
+        parsed = urllib.parse.urlparse(url)
+        qs = urllib.parse.parse_qsl(parsed.query, keep_blank_values=True)
+        filtered_qs = [(k, v) for k, v in qs if not k.lower().startswith("utm_")]
+        new_query = urllib.parse.urlencode(filtered_qs)
+        cleaned = urllib.parse.urlunparse((
+            parsed.scheme,
+            parsed.netloc,
+            parsed.path,
+            parsed.params,
+            new_query,
+            parsed.fragment
+        ))
+        return cleaned.rstrip("?")
+    except Exception:
+        return re.sub(r"[?&]utm_[^&#]*", "", url).rstrip("?")
+
+
+def is_valid_founder_linkedin(url: Optional[str]) -> bool:
+    """Strictly matches personal LinkedIn founder profiles: linkedin.com/in/..."""
+    if not url:
+        return False
+    u = url.lower().strip()
+    return "linkedin.com/in/" in u and "linkedin.com/company/" not in u
 
 
 def generate_entity_id(
@@ -201,6 +260,10 @@ class DatabaseRepository:
                 conn.execute("ALTER TABLE entities ADD COLUMN city TEXT")
             if "accelerator" not in cols:
                 conn.execute("ALTER TABLE entities ADD COLUMN accelerator TEXT DEFAULT ''")
+
+            # Purge any legacy placeholder 'Lead PI (...)' records
+            conn.execute("DELETE FROM entity_founder_links WHERE founder_id IN (SELECT founder_id FROM founders WHERE full_name LIKE 'Lead PI (%')")
+            conn.execute("DELETE FROM founders WHERE full_name LIKE 'Lead PI (%'")
             conn.commit()
         logger.info("Database schema initialized at %s", self.db_path)
 

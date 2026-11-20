@@ -378,17 +378,71 @@ def test_zero_fake_data_and_city_normalization():
     enricher_cls = OpenAIEnricher
     assert not hasattr(enricher_cls, "KNOWN_DEEPTECH_INTELLIGENCE")
 
-    # 4. City normalization per features.md
+    # 4. City normalization per features.md & noise stripping
     assert normalize_city("München") == "Munich"
     assert normalize_city("Zürich") == "Zurich"
     assert normalize_city("Köln") == "Cologne"
     assert normalize_city("Garching bei München") == "Munich"
     assert normalize_city("Wien") == "Vienna"
     assert normalize_city("Berlin") == "Berlin"
+    assert normalize_city("Aachen Eintragung") == "Aachen"
+    assert normalize_city("Grünwald Handelsregister") == "Munich"
+    assert normalize_city("Herford Germany") == "Herford"
+    assert normalize_city("Kanzlei Berger") is None
 
 
 # =============================================================================
-# 7. FastAPI Provenance Endpoints Tests
+# 7. CostTracker Circuit-Breaker & URL Cleaning Tests
+# =============================================================================
+def test_cost_tracker_circuit_breaker():
+    from backend.enrichment.cost_tracker import CostTracker
+
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        ledger = Path(tmp_dir) / "test_ledger.jsonl"
+        tracker = CostTracker(max_budget_usd=0.10, cache_only=False, ledger_path=ledger)
+
+        # Initial checks
+        assert tracker.can_execute_live_call(expected_cost=0.03) is True
+
+        # Record a call with 1 web search + 5000 tokens
+        cost = tracker.record_live_call(
+            entity_id="test_id_1",
+            canonical_name="TestStartup",
+            input_tokens=4000,
+            output_tokens=1000,
+            web_search_calls=1
+        )
+        assert cost >= 0.025  # At least web search call cost
+        assert tracker.live_llm_calls == 1
+
+        # Test cache-only mode blocks execution
+        tracker_cache_only = CostTracker(cache_only=True, ledger_path=ledger)
+        assert tracker_cache_only.can_execute_live_call() is False
+
+        # Test budget cap blocks execution when exceeded
+        tracker_capped = CostTracker(max_budget_usd=0.05, ledger_path=ledger)
+        tracker_capped.record_live_call("id2", "Startup2", 1000, 1000, web_search_calls=2) # ~$0.05+
+        assert tracker_capped.can_execute_live_call(expected_cost=0.03) is False
+
+
+def test_clean_url_and_linkedin_filter():
+    from backend.db.repository import clean_url, is_valid_founder_linkedin
+
+    # clean_url strips utm_source query params
+    assert clean_url("https://www.aixopt.ai/?utm_source=openai") == "https://www.aixopt.ai/"
+    assert clean_url("https://de.linkedin.com/in/dominik-p%C3%BCllen-54b438319?utm_source=openai") == "https://de.linkedin.com/in/dominik-p%C3%BCllen-54b438319"
+    assert clean_url("http://determion.com") == "http://determion.com"
+
+    # Strict LinkedIn founder profile filter
+    assert is_valid_founder_linkedin("https://de.linkedin.com/in/dominik-p%C3%BCllen-54b438319") is True
+    assert is_valid_founder_linkedin("https://www.flaessig.com/") is False
+    assert is_valid_founder_linkedin("https://ch.linkedin.com/company/sherlockrobotics") is False
+    assert is_valid_founder_linkedin("https://revonode.ai/team") is False
+    assert is_valid_founder_linkedin(None) is False
+
+
+# =============================================================================
+# 8. FastAPI Provenance Endpoints Tests
 # =============================================================================
 def test_fastapi_endpoints():
     client = TestClient(app)
@@ -396,7 +450,10 @@ def test_fastapi_endpoints():
     # Health check
     res_health = client.get("/api/health")
     assert res_health.status_code == 200
-    assert res_health.json()["status"] == "healthy"
+    health_data = res_health.json()
+    assert health_data["status"] == "healthy"
+    assert "cost_and_cache" in health_data
+    assert "cached_leads_count" in health_data["cost_and_cache"]
 
     # Dashboard endpoint
     res_dash = client.get("/api/dashboard")

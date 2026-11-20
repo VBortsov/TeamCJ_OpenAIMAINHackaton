@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from backend.config import settings
-from backend.db.repository import normalize_city
+from backend.db.repository import normalize_city, clean_url, is_valid_founder_linkedin
 
 logger = logging.getLogger(__name__)
 
@@ -69,8 +69,8 @@ def export_ml_contract(
         breakdown_raw = cand.get("score_breakdown") or {}
         breakdown = breakdown_raw.model_dump() if hasattr(breakdown_raw, "model_dump") else (breakdown_raw if isinstance(breakdown_raw, dict) else {})
 
-        # English normalized city & University check
-        raw_city = cand.get("city") or cand.get("impressum_city") or profile.get("city") or ""
+        # English normalized city (prioritize clean profile.city over noisy Impressum)
+        raw_city = profile.get("city") or cand.get("city") or cand.get("impressum_city") or ""
         city = normalize_city(raw_city) or ""
         tags = cand.get("raw_tags", [])
         desc = cand.get("description", "") or ""
@@ -82,20 +82,21 @@ def export_ml_contract(
         raw_acc = (cand.get("accelerator") or "").strip().lower()
         accelerator = raw_acc if raw_acc in ALLOWED_ACCELERATORS else ("other" if raw_acc else "")
 
-        # Founders & LinkedIns (only genuine identities, never fabricated)
-        founders = cand.get("founders", [])
+        # Founders & LinkedIns (real verified profile.founders_enriched take priority over DB)
+        raw_founders = [f for f in cand.get("founders", []) if not (f.get("full_name") or "").startswith("Lead PI (")]
         enriched_founders = profile.get("founders_enriched", [])
 
-        all_f_names = [f.get("full_name", "") for f in founders if f.get("full_name")]
-        all_f_linkedins = [f.get("linkedin_url", "") for f in founders if f.get("linkedin_url")]
+        if enriched_founders:
+            all_f_names = [ef.get("full_name", "").strip() for ef in enriched_founders if ef.get("full_name")]
+            all_f_linkedins = [clean_url(ef.get("linkedin_url", "")) for ef in enriched_founders if is_valid_founder_linkedin(ef.get("linkedin_url"))]
+        else:
+            all_f_names = [f.get("full_name", "").strip() for f in raw_founders if f.get("full_name")]
+            all_f_linkedins = [clean_url(f.get("linkedin_url", "")) for f in raw_founders if is_valid_founder_linkedin(f.get("linkedin_url"))]
 
-        if not all_f_names and enriched_founders:
-            all_f_names = [ef.get("full_name", "") for ef in enriched_founders if ef.get("full_name")]
-            all_f_linkedins = [ef.get("linkedin_url", "") for ef in enriched_founders if ef.get("linkedin_url")]
-
+        all_f_linkedins = [u for u in all_f_linkedins if u]
         f_names = "; ".join(all_f_names)
         f_linkedins = "; ".join(all_f_linkedins)
-        n_founders = max(len(founders), len(enriched_founders))
+        n_founders = max(len(raw_founders), len(enriched_founders))
 
         # Format LP matches cleanly
         raw_lps = profile.get("lp_synergy_matches", [])
@@ -112,7 +113,7 @@ def export_ml_contract(
         lps = "; ".join([lp for lp in formatted_lps if lp])
 
         has_cto = 1 if any(
-            "cto" in (f.get("raw_bio", "") or "").lower() for f in founders
+            "cto" in (f.get("raw_bio", "") or "").lower() for f in raw_founders
         ) or any(
             "cto" in (ef.get("role", "") or "").lower() for ef in enriched_founders
         ) or profile.get("fd_team_has_technical_founder", False) else 0
@@ -127,7 +128,7 @@ def export_ml_contract(
         row = {
             "company_id": cand.get("entity_id"),
             "name": cand.get("canonical_name"),
-            "homepage_url": cand.get("website_url") or "",
+            "homepage_url": clean_url(cand.get("website_url")) or "",
             "country_code": iso3,
             "is_germany": is_de,
             "city": city,

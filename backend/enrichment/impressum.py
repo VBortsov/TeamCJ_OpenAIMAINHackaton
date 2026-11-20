@@ -13,6 +13,7 @@ from bs4 import BeautifulSoup
 from pydantic import BaseModel, Field
 
 from backend.ingestion.http_client import CachedHttpClient
+from backend.db.repository import normalize_city
 
 logger = logging.getLogger(__name__)
 
@@ -187,7 +188,7 @@ class ImpressumScraper:
         # 4. City (German Postal code + City pattern: e.g. 52070 Aachen, 80333 München, 10115 Berlin)
         m_city = re.search(r"\b\d{5}[ \t]+([A-ZÄÖÜ][a-zäöüß]+(?:[- ][A-ZÄÖÜ][a-zäöüß]+)?)\b", text)
         if m_city and not result.city:
-            result.city = m_city.group(1).strip()
+            result.city = normalize_city(m_city.group(1).strip())
 
         # 5. Managing Directors (Geschäftsführer / Vertreten durch)
         gf_patterns = [

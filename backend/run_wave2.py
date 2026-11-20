@@ -45,6 +45,8 @@ from backend.scoring.kill_gates import KillGateEvaluator, KillGateResult
 from backend.enrichment.openai_enricher import OpenAIEnricher, EnrichedProfile
 from backend.scoring.scorer import LeadScorer, ScoreBreakdown
 from backend.export.ml_exporter import export_ml_contract
+from backend.enrichment.cost_tracker import CostTracker
+from backend.db.repository import clean_url, is_valid_founder_linkedin, normalize_city
 
 # Configure readable logging
 logging.basicConfig(
@@ -99,7 +101,10 @@ async def run_wave2_pipeline(
     limit_per_adapter: int = 30,
     top_k: int = 200,
     skip_ingestion: bool = False,
-    clear_cache: bool = False
+    clear_cache: bool = False,
+    confirm_clear_cache: bool = False,
+    cache_only: bool = False,
+    max_budget_usd: float = 2.00
 ) -> DatabaseRepository:
     """Execute end-to-end Wave 2 / 2.5 pipeline."""
     start_time = time.time()
@@ -108,12 +113,18 @@ async def run_wave2_pipeline(
     logger.info("Target: MAIN Summit 2026 - HTGF Track (~70%% DACH Pre-Seed/Seed DeepTech)")
     logger.info("================================================================================")
 
-    # Clear stale LLM cache if requested
+    # Initialize Cost & Budget Tracker
+    cost_tracker = CostTracker(max_budget_usd=max_budget_usd, cache_only=cache_only)
+
+    # Clear stale LLM cache ONLY if explicitly confirmed with safety lock
     llm_cache_dir = settings.DATA_DIR / "llm_cache"
-    if clear_cache and llm_cache_dir.exists():
-        logger.info("Clearing stale LLM cache directory: %s", llm_cache_dir)
-        shutil.rmtree(llm_cache_dir)
-        llm_cache_dir.mkdir(parents=True, exist_ok=True)
+    if clear_cache:
+        if not confirm_clear_cache:
+            logger.warning("SAFETY LOCK ACTIVE: --clear-cache was requested without --confirm-clear-cache! Cached data protected.")
+        elif llm_cache_dir.exists():
+            logger.warning("CONFIRMED CLEAR: Wiping LLM cache directory: %s", llm_cache_dir)
+            shutil.rmtree(llm_cache_dir)
+            llm_cache_dir.mkdir(parents=True, exist_ok=True)
 
     # 1. Initialize SQLite Database
     repo = DatabaseRepository(settings.SQLITE_DB_PATH)
@@ -371,7 +382,7 @@ async def run_wave2_pipeline(
         # Stage 5: Equal Pedigree Enrichment Across ALL Surviving Leads (No Top-25 Bias!)
         # =========================================================================
         logger.info("\n--- [Stage 5] Equal Pedigree Enrichment & Multi-Pillar Scoring ---")
-        enricher = OpenAIEnricher()
+        enricher = OpenAIEnricher(cost_tracker=cost_tracker)
 
         # Fetch candidates that passed Kill-Gates
         surviving_candidates = repo.get_surviving_candidates()
@@ -412,7 +423,7 @@ async def run_wave2_pipeline(
                     "name": cand["canonical_name"],
                     "canonical_name": cand["canonical_name"],
                     "country_code": cand.get("country_code") or "N/A",
-                    "website_url": cand.get("website_url"),
+                    "website_url": clean_url(cand.get("website_url")),
                     "discovered_from": [format_source_label(s)["source_label"] for s in cand.get("signals", [])],
                     "kill_reasons": [profile.kill_reason or "Gate 3: Company age > 3.5 years"]
                 })
@@ -468,13 +479,38 @@ async def run_wave2_pipeline(
         for cand in scored_candidates:
             prof: EnrichedProfile = cand["enriched_profile"]
             bd: ScoreBreakdown = cand["score_breakdown"]
+            clean_lead_city = normalize_city(prof.city or cand.get("city") or "") or "Munich"
+            clean_website = clean_url(cand.get("website_url"))
+
+            # Real verified founders take priority over DB
+            lead_founders = []
+            if prof.founders_enriched:
+                for f in prof.founders_enriched:
+                    fd = f.model_dump()
+                    cli = clean_url(fd.get("linkedin_url"))
+                    fd["linkedin_url"] = cli if is_valid_founder_linkedin(cli) else None
+                    lead_founders.append(fd)
+            else:
+                lead_founders = [
+                    {
+                        "full_name": f.get("full_name"),
+                        "role": "Founder",
+                        "linkedin_url": clean_url(f.get("linkedin_url")) if is_valid_founder_linkedin(f.get("linkedin_url")) else None,
+                        "has_phd": prof.fd_any_phd,
+                        "is_ex_bigtech": prof.fd_any_bigtech,
+                        "prior_companies": [],
+                        "universities": [clean_lead_city] if clean_lead_city else [],
+                        "source_of_identity": f.get("link_method", "roster")
+                    } for f in cand.get("founders", []) if not (f.get("full_name") or "").startswith("Lead PI (")
+                ]
+
             feed_leads.append({
                 "entity_id": cand["entity_id"],
                 "name": cand["canonical_name"],
                 "canonical_name": cand["canonical_name"],
-                "website_url": cand.get("website_url"),
+                "website_url": clean_website,
                 "country_code": cand.get("country_code") or "DE",
-                "city": cand.get("city") or prof.city or "Aachen",
+                "city": clean_lead_city,
                 "legal_name": cand.get("legal_name") or cand["canonical_name"],
                 "legal_form": cand.get("legal_form"),
                 "register_number": cand.get("register_number"),
@@ -492,20 +528,9 @@ async def run_wave2_pipeline(
                     "multi_signal_convergence": bd.multi_signal_convergence,
                     "htgf_mandate_fit": bd.htgf_mandate_fit,
                     "drivers": bd.drivers,
-                    "evidence_urls": bd.evidence_urls
+                    "evidence_urls": [clean_url(u) for u in bd.evidence_urls if u]
                 },
-                "founders": [f.model_dump() for f in prof.founders_enriched] if prof.founders_enriched else [
-                    {
-                        "full_name": f.get("full_name"),
-                        "role": "Founder",
-                        "linkedin_url": f.get("linkedin_url"),
-                        "has_phd": prof.fd_any_phd,
-                        "is_ex_bigtech": prof.fd_any_bigtech,
-                        "prior_companies": [],
-                        "universities": [prof.city] if prof.city else [],
-                        "source_of_identity": f.get("link_method", "roster")
-                    } for f in cand.get("founders", [])
-                ],
+                "founders": lead_founders,
                 "inflection_why_now": prof.inflection_why_now,
                 "devils_advocate_risks": prof.devils_advocate_risks,
                 "lp_synergy_matches": [lp.model_dump() for lp in prof.lp_synergy_matches]
@@ -550,7 +575,8 @@ async def run_wave2_pipeline(
             ml_csv_path=ml_csv_path,
             json_export_path=json_export_path,
             frontend_feed_path=frontend_feed_path,
-            duration=duration
+            duration=duration,
+            cost_tracker=cost_tracker
         )
 
     return repo
@@ -564,7 +590,8 @@ def print_funnel_summary(
     ml_csv_path: Path,
     json_export_path: Path,
     frontend_feed_path: Path,
-    duration: float
+    duration: float,
+    cost_tracker: Optional[CostTracker] = None
 ) -> None:
     """Print readable verification tables using tabulate."""
     print("\n" + "=" * 90)
@@ -628,6 +655,22 @@ def print_funnel_summary(
         ["Total Pipeline Execution Time", f"{duration:.2f} seconds"],
     ]
     print(tabulate(export_rows, headers=["Artifact / Metric", "Value"], tablefmt="fancy_grid"))
+
+    # 5. API Cost & Cache Report
+    print("\n--- [5] API COST & CACHE REPORT ---")
+    tracker = cost_tracker or CostTracker()
+    cost_summary = tracker.get_summary()
+    cost_rows = [
+        ["Cache Hits ($0.00)", str(cost_summary["cache_hits"])],
+        ["Live OpenAI Calls", str(cost_summary["live_llm_calls"])],
+        ["Web Search Calls", str(cost_summary["web_search_calls"])],
+        ["Token Usage (Input / Output)", f"{cost_summary['input_tokens']:,} / {cost_summary['output_tokens']:,}"],
+        ["Estimated Run Cost (USD)", f"${cost_summary['estimated_run_cost_usd']:.4f}"],
+        ["Cumulative Ledger Spend (USD)", f"${cost_summary['cumulative_ledger_spend_usd']:.4f}"],
+        ["Circuit-Breaker Budget Cap", f"${cost_summary['max_budget_usd']:.2f}"],
+        ["Cache-Only Mode", "ACTIVE" if cost_summary["cache_only"] else "INACTIVE"],
+    ]
+    print(tabulate(cost_rows, headers=["Metric", "Value"], tablefmt="fancy_grid"))
     print("=" * 90 + "\n")
 
 
@@ -636,14 +679,20 @@ def main():
     parser.add_argument("--limit", type=int, default=30, help="Per-adapter candidate limit (default: 30)")
     parser.add_argument("--top-k", type=int, default=200, help="Number of surviving leads to deeply enrich & score (default: 200)")
     parser.add_argument("--skip-ingestion", action="store_true", help="Skip re-ingestion and run pipeline on existing database")
-    parser.add_argument("--clear-cache", action="store_true", help="Clear stale data/llm_cache before running")
+    parser.add_argument("--cache-only", action="store_true", help="Strictly forbid live OpenAI calls; only read from data/llm_cache/ ($0.00)")
+    parser.add_argument("--max-budget-usd", type=float, default=2.00, help="Hard circuit-breaker budget cap in USD (default: 2.00)")
+    parser.add_argument("--clear-cache", action="store_true", help="Clear stale data/llm_cache before running (requires --confirm-clear-cache)")
+    parser.add_argument("--confirm-clear-cache", action="store_true", help="Confirm clearing cache (safety protection)")
     args = parser.parse_args()
 
     asyncio.run(run_wave2_pipeline(
         limit_per_adapter=args.limit,
         top_k=args.top_k,
         skip_ingestion=args.skip_ingestion,
-        clear_cache=args.clear_cache
+        clear_cache=args.clear_cache,
+        confirm_clear_cache=args.confirm_clear_cache,
+        cache_only=args.cache_only,
+        max_budget_usd=args.max_budget_usd
     ))
 
 

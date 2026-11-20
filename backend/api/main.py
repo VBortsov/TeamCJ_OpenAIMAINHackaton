@@ -21,7 +21,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from backend.config import settings
-from backend.db.repository import DatabaseRepository, normalize_domain, slugify
+from backend.db.repository import DatabaseRepository, normalize_domain, slugify, clean_url, is_valid_founder_linkedin
+from backend.enrichment.cost_tracker import CostTracker
 from backend.enrichment.impressum import ImpressumScraper, ImpressumResult
 from backend.enrichment.github_verifier import GitHubVerifier
 from backend.scoring.kill_gates import KillGateEvaluator, KillGateResult
@@ -81,6 +82,9 @@ class LiveEnrichRequest(BaseModel):
 def health_check():
     repo = get_repo()
     stats = repo.get_stats()
+    tracker = CostTracker()
+    cache_dir = settings.DATA_DIR / "llm_cache"
+    cached_leads = len(list(cache_dir.glob("*.json"))) if cache_dir.exists() else 0
     return {
         "status": "healthy",
         "version": "2.5.0",
@@ -89,6 +93,11 @@ def health_check():
             "path": str(repo.db_path),
             "total_entities": stats.get("total_entities", 0),
             "total_signals": stats.get("total_signals", 0)
+        },
+        "cost_and_cache": {
+            "cached_leads_count": cached_leads,
+            "cumulative_spend_usd": tracker.get_cumulative_ledger_spend(),
+            "max_budget_cap_usd": tracker.max_budget_usd
         }
     }
 
@@ -320,8 +329,8 @@ async def dispatch_lead_to_n8n(entity_id: str):
             {
                 "name": f.get("full_name"),
                 "role": f.get("role", "Founder"),
-                "linkedin": f.get("linkedin_url")
-            } for f in memo.get("team_dossier", {}).get("founders", [])
+                "linkedin": clean_url(f.get("linkedin_url")) if is_valid_founder_linkedin(f.get("linkedin_url")) else None
+            } for f in memo.get("team_dossier", {}).get("founders", []) if not (f.get("full_name") or "").startswith("Lead PI (")
         ],
         "lp_synergies": [lp.get("lp_name") for lp in memo.get("lp_synergy_analysis", [])],
         "key_drivers": memo["score_drivers"]
