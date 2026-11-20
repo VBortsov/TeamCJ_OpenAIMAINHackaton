@@ -1,0 +1,31 @@
+# Environment & secrets (paid API keys, sensitive configs)
+.env
+.env.*
+!.env.example
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache & build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+
+# Data, SQLite databases, and HTTP cache
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# OS & IDE metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
