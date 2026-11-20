@@ -4,12 +4,14 @@ Serves:
 - Dashboard provenance feed (instant cached load for demo safety)
 - Filterable ranked early-stage leads
 - Detailed 1-page Investment Memos & Dossiers
+- Founder GitHub technical profile inspection
 - Rejected noise audit trail
 - On-demand live Impressum + web-search enrichment & scoring
 - N8N webhook dispatch / preview
 """
 
 from __future__ import annotations
+import csv
 from datetime import datetime, timezone
 import json
 import logging
@@ -21,20 +23,60 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from backend.config import settings
-from backend.db.repository import DatabaseRepository, normalize_domain, slugify, clean_url, is_valid_founder_linkedin
+from backend.db.repository import (
+    DatabaseRepository,
+    normalize_domain,
+    slugify,
+    clean_url,
+    is_valid_founder_linkedin
+)
 from backend.enrichment.cost_tracker import CostTracker
 from backend.enrichment.impressum import ImpressumScraper, ImpressumResult
-from backend.enrichment.github_verifier import GitHubVerifier
+from backend.enrichment.github_verifier import GitHubVerifier, FounderGitHubProfile
 from backend.scoring.kill_gates import KillGateEvaluator, KillGateResult
 from backend.enrichment.openai_enricher import OpenAIEnricher, EnrichedProfile
 from backend.scoring.scorer import LeadScorer, ScoreBreakdown
 
 logger = logging.getLogger("api")
 
+tags_metadata = [
+    {
+        "name": "System",
+        "description": "System health, database metrics, and API cost & cache monitoring ($0.00 safety monitor).",
+    },
+    {
+        "name": "Dashboard",
+        "description": "Full provenance feed, conversion funnel, ranked leads, and filtered noise audit for UI widgets.",
+    },
+    {
+        "name": "Leads",
+        "description": "Searchable, filterable early-stage DeepTech leads and 1-page Investment Memos for partner review.",
+    },
+    {
+        "name": "Founders",
+        "description": "Founder technical track record verification via live GitHub profile inspection.",
+    },
+    {
+        "name": "Enrichment",
+        "description": "On-demand live Impressum scraping, Kill-Gate screening, and web search enrichment for new domains.",
+    },
+    {
+        "name": "Integrations",
+        "description": "Outbound webhook dispatch to n8n for CRM / Lusha contact enrichment and Slack notifications.",
+    },
+]
+
 app = FastAPI(
-    title="HTGF Early-Stage Sourcing Engine API",
-    description="MAIN Summit 2026 early-stage DeepTech scouting backend with full provenance audit trail",
-    version="2.5.0"
+    title="HTGF Early-Stage European Sourcing Engine API",
+    description=(
+        "High-precision early-stage European startup sourcing engine for High-Tech Gründerfonds (HTGF) "
+        "track at MAIN Summit 2026 (~70% DACH focus, Pre-Seed & Seed DeepTech, AI, Industrial, Life Sciences). "
+        "Combines multi-source signal ingestion, 5 deterministic Kill-Gates, Impressum compliance extraction, "
+        "live GitHub technical verification, async OpenAI web search pedigree enrichment, and optional "
+        "ML scoring blend with complete auditable provenance."
+    ),
+    version="2.5.0",
+    openapi_tags=tags_metadata
 )
 
 # Enable CORS for local frontend integration
@@ -47,15 +89,42 @@ app.add_middleware(
 )
 
 FEED_PATH = settings.DATA_DIR / "wave2_frontend_feed.json"
+ML_PRED_PATH = settings.DATA_DIR / "ml_predictions.csv"
 
 
 def get_repo() -> DatabaseRepository:
     return DatabaseRepository(settings.SQLITE_DB_PATH)
 
 
+def load_ml_predictions() -> Dict[str, float]:
+    """Reads optional ML predictions CSV (columns: company_id, ml_score) if present."""
+    if not ML_PRED_PATH.exists():
+        return {}
+    preds: Dict[str, float] = {}
+    try:
+        with open(ML_PRED_PATH, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                cid = (row.get("company_id") or row.get("entity_id") or "").strip()
+                score_str = (row.get("ml_score") or row.get("score") or "").strip()
+                if cid and score_str:
+                    try:
+                        preds[cid] = float(score_str)
+                    except ValueError:
+                        continue
+    except Exception as e:
+        logger.warning("Could not read ml_predictions.csv: %s", e)
+    return preds
+
+
 def load_frontend_feed() -> Dict[str, Any]:
+    """
+    Loads frontend provenance feed. If data/ml_predictions.csv exists,
+    automatically attaches ml_score (0-100) and blended_score (0.5 * det + 0.5 * ml)
+    and sorts leads by blended_score descending.
+    """
     if not FEED_PATH.exists():
-        return {
+        feed = {
             "meta": {
                 "generated_at": datetime.now(timezone.utc).isoformat(),
                 "total_raw": 0,
@@ -67,8 +136,29 @@ def load_frontend_feed() -> Dict[str, Any]:
             "ranked_leads": [],
             "rejected_audit": []
         }
-    with open(FEED_PATH, "r", encoding="utf-8") as f:
-        return json.load(f)
+    else:
+        with open(FEED_PATH, "r", encoding="utf-8") as f:
+            feed = json.load(f)
+
+    # Attach optional ML scores if data/ml_predictions.csv exists
+    ml_preds = load_ml_predictions()
+    leads = feed.get("ranked_leads", [])
+    for lead in leads:
+        cid = lead.get("entity_id")
+        det_score = lead.get("score_breakdown", {}).get("final_score") or lead.get("deterministic_score", 0.0)
+        if ml_preds and cid in ml_preds:
+            ml_s = round(float(ml_preds[cid]), 1)
+            blended = round(0.5 * det_score + 0.5 * ml_s, 1)
+            lead["ml_score"] = ml_s
+            lead["blended_score"] = blended
+        else:
+            lead["ml_score"] = None
+            lead["blended_score"] = det_score
+
+    if ml_preds:
+        feed["ranked_leads"] = sorted(leads, key=lambda l: l.get("blended_score", 0.0), reverse=True)
+
+    return feed
 
 
 class LiveEnrichRequest(BaseModel):
@@ -78,7 +168,12 @@ class LiveEnrichRequest(BaseModel):
 # =============================================================================
 # 1. Health & Dashboard Endpoints
 # =============================================================================
-@app.get("/api/health")
+@app.get(
+    "/api/health",
+    tags=["System"],
+    summary="System Health & API Spend Monitor",
+    description="Returns database entity counts, cached leads inventory, and cumulative API spend from cost ledger."
+)
 def health_check():
     repo = get_repo()
     stats = repo.get_stats()
@@ -102,16 +197,25 @@ def health_check():
     }
 
 
-@app.get("/api/dashboard")
+@app.get(
+    "/api/dashboard",
+    tags=["Dashboard"],
+    summary="Complete Provenance Feed & Funnel",
+    description="Returns full provenance feed: conversion funnel, all ranked leads with scores, and rejected noise audit."
+)
 def get_dashboard():
-    """Returns the full provenance feed: meta, funnel, ranked leads, and rejected noise audit."""
     return load_frontend_feed()
 
 
 # =============================================================================
 # 2. Leads & Investment Memo Endpoints
 # =============================================================================
-@app.get("/api/leads")
+@app.get(
+    "/api/leads",
+    tags=["Leads"],
+    summary="Filterable Ranked Leads",
+    description="Filter top early-stage DeepTech leads by HTGF vertical, country code, or minimum score threshold."
+)
 def list_leads(
     vertical: Optional[str] = Query(None, description="Filter by HTGF vertical: industrial_climate_deeptech, digital_tech_ai, life_sciences_chemistry"),
     country: Optional[str] = Query(None, description="Filter by 2-letter country code (DE, CH, AT, etc.)"),
@@ -126,7 +230,7 @@ def list_leads(
             continue
         if country and (lead.get("country_code") or "").upper() != country.upper():
             continue
-        score = lead.get("score_breakdown", {}).get("final_score", 0.0)
+        score = lead.get("blended_score") if lead.get("blended_score") is not None else lead.get("score_breakdown", {}).get("final_score", 0.0)
         if score < min_score:
             continue
         filtered.append(lead)
@@ -137,9 +241,13 @@ def list_leads(
     }
 
 
-@app.get("/api/leads/{entity_id}")
+@app.get(
+    "/api/leads/{entity_id}",
+    tags=["Leads"],
+    summary="1-Page Investment Memo & Partner Dossier",
+    description="Generates an auditable 1-page Investment Memo with thesis, founder pedigree, IP moat, LP synergy, and devil's advocate risks."
+)
 def get_lead_dossier(entity_id: str):
-    """Generates an auditable 1-page Investment Memo structure for partner review."""
     feed = load_frontend_feed()
     leads = feed.get("ranked_leads", [])
 
@@ -154,6 +262,8 @@ def get_lead_dossier(entity_id: str):
         matched = db_cand
 
     # Structure 1-page Investment Memo
+    overall_score = matched.get("blended_score") if matched.get("blended_score") is not None else matched.get("score_breakdown", {}).get("final_score", 0.0)
+
     memo = {
         "entity_id": matched.get("entity_id"),
         "name": matched.get("name") or matched.get("canonical_name"),
@@ -166,6 +276,12 @@ def get_lead_dossier(entity_id: str):
         "htgf_vertical": matched.get("htgf_vertical", "industrial_climate_deeptech"),
         "earliness_badge": matched.get("earliness_badge", "Pre-Crunchbase / Undiscovered"),
         
+        # Scoring metrics
+        "overall_score": overall_score,
+        "deterministic_score": matched.get("score_breakdown", {}).get("final_score", 0.0),
+        "ml_score": matched.get("ml_score"),
+        "blended_score": matched.get("blended_score"),
+
         # Section 1: Executive Summary & Thesis
         "executive_summary": matched.get("description"),
         "investment_thesis": {
@@ -207,18 +323,38 @@ def get_lead_dossier(entity_id: str):
 
         # Section 7: Audit Trail & Clickable Evidence
         "evidence_urls": matched.get("score_breakdown", {}).get("evidence_urls", []),
-        "overall_score": matched.get("score_breakdown", {}).get("final_score", 0.0),
         "score_drivers": matched.get("score_breakdown", {}).get("drivers", [])
     }
     return memo
 
 
 # =============================================================================
-# 3. Noise / Filtered Out Audit Endpoint
+# 3. Founder Technical Profile Verification Endpoint
 # =============================================================================
-@app.get("/api/rejected")
+@app.get(
+    "/api/founders/github/{username}",
+    tags=["Founders"],
+    summary="Founder GitHub Technical Track Record",
+    description="Inspects verified public GitHub profile, repository stats, stars, forks, languages, and social links using GitHub token."
+)
+async def get_founder_github_profile(username: str):
+    verifier = GitHubVerifier()
+    profile = await verifier.verify_founder(username)
+    if not profile:
+        raise HTTPException(status_code=404, detail=f"GitHub user '{username}' not found")
+    return profile.model_dump()
+
+
+# =============================================================================
+# 4. Noise / Filtered Out Audit Endpoint
+# =============================================================================
+@app.get(
+    "/api/rejected",
+    tags=["Dashboard"],
+    summary="Filtered Out Noise Audit Trail",
+    description="Returns noise filtered out by Gates 1-5 (consultancies, agencies, fake stars, scaleups) proving sourcing rigor."
+)
 def list_rejected_entities():
-    """Returns the noise filtered out by Gates 1-5 to prove sourcing rigor."""
     feed = load_frontend_feed()
     rejected = feed.get("rejected_audit", [])
     return {
@@ -228,14 +364,15 @@ def list_rejected_entities():
 
 
 # =============================================================================
-# 4. Live On-Demand Enrichment Endpoint
+# 5. Live On-Demand Enrichment Endpoint
 # =============================================================================
-@app.post("/api/enrich/live")
+@app.post(
+    "/api/enrich/live",
+    tags=["Enrichment"],
+    summary="On-Demand Impressum & Web-Search Enrichment",
+    description="Evaluates ANY new startup URL or company name on-demand in seconds with live Impressum scraping and Kill-Gates."
+)
 async def live_enrich_startup(req: LiveEnrichRequest):
-    """
-    On-demand Impressum scraping + web search enrichment + scoring for ANY new startup
-    in 5-10 seconds for live jury Q&A demonstrations.
-    """
     target = req.domain_or_name.strip()
     if not target:
         raise HTTPException(status_code=400, detail="Target domain or company name required")
@@ -303,14 +440,15 @@ async def live_enrich_startup(req: LiveEnrichRequest):
 
 
 # =============================================================================
-# 5. N8N Webhook Dispatch Endpoint
+# 6. N8N Webhook Dispatch Endpoint
 # =============================================================================
-@app.post("/api/dispatch/n8n/{entity_id}")
+@app.post(
+    "/api/dispatch/n8n/{entity_id}",
+    tags=["Integrations"],
+    summary="Dispatch Lead to n8n Webhook",
+    description="Dispatches top lead payload to n8n for Lusha contact enrichment and Slack notifications. Returns simulation if webhook not configured."
+)
 async def dispatch_lead_to_n8n(entity_id: str):
-    """
-    Dispatches a Top lead payload to n8n workflow for Lusha contact enrichment & Slack alert.
-    If N8N_WEBHOOK_URL is not configured, returns a simulated preview payload.
-    """
     memo = get_lead_dossier(entity_id)
 
     payload = {

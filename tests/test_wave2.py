@@ -491,3 +491,76 @@ def test_fastapi_endpoints():
     assert res_rej.status_code == 200
     assert "rejected_entities" in res_rej.json()
 
+    # Docs endpoint
+    res_docs = client.get("/docs")
+    assert res_docs.status_code == 200
+
+
+def test_github_founder_verification_endpoint():
+    client = TestClient(app)
+
+    # 1. Non-existent user returns 404
+    res_404 = client.get("/api/founders/github/non_existent_founder_xyz_99999")
+    assert res_404.status_code == 404
+
+    # 2. Mocked successful verification returns FounderGitHubProfile structure
+    from unittest.mock import AsyncMock, patch
+    from backend.enrichment.github_verifier import FounderGitHubProfile
+
+    mock_profile = FounderGitHubProfile(
+        username="testfounder",
+        profile_url="https://github.com/testfounder",
+        name="Dr. Tech Founder",
+        bio="AI & Robotics researcher",
+        company="RoboTech Spin-off",
+        location="Munich, Germany",
+        blog="https://testfounder.dev",
+        public_repos=12,
+        followers=450,
+        total_stars=1250,
+        total_forks=180,
+        top_languages=["Python", "C++", "Rust"],
+        top_repos=[
+            {"name": "deep-robotics", "url": "https://github.com/testfounder/deep-robotics", "stars": 900, "forks": 120, "language": "Python", "pushed_at": "2026-02-15"}
+        ],
+        social_accounts=[{"provider": "twitter", "url": "https://x.com/testfounder"}]
+    )
+
+    with patch("backend.enrichment.github_verifier.GitHubVerifier.verify_founder", new_callable=AsyncMock) as mock_verify:
+        mock_verify.return_value = mock_profile
+        res = client.get("/api/founders/github/testfounder")
+        assert res.status_code == 200
+        data = res.json()
+        assert data["username"] == "testfounder"
+        assert data["total_stars"] == 1250
+        assert "Python" in data["top_languages"]
+        assert len(data["top_repos"]) == 1
+        assert data["top_repos"][0]["stars"] == 900
+
+
+def test_optional_ml_score_blend_integration():
+    from backend.config import settings
+    from backend.api.main import load_frontend_feed, load_ml_predictions
+
+    pred_file = settings.DATA_DIR / "ml_predictions.csv"
+    try:
+        # Create temporary ML predictions CSV
+        feed = load_frontend_feed()
+        leads = feed.get("ranked_leads", [])
+        if leads:
+            target_id = leads[0]["entity_id"]
+            pred_file.write_text(f"company_id,ml_score\n{target_id},92.0\n", encoding="utf-8")
+
+            # Reload feed
+            blended_feed = load_frontend_feed()
+            matched = next(l for l in blended_feed["ranked_leads"] if l["entity_id"] == target_id)
+            assert matched["ml_score"] == 92.0
+            det = matched.get("score_breakdown", {}).get("final_score") or matched.get("deterministic_score", 0.0)
+            expected_blended = round(0.5 * det + 0.5 * 92.0, 1)
+            assert matched["blended_score"] == expected_blended
+
+    finally:
+        if pred_file.exists():
+            pred_file.unlink()
+
+
