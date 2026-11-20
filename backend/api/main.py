@@ -350,7 +350,11 @@ def list_events():
         signals = [s.get("source_name", "") for s in lead.get("discovered_from", [])]
 
         if "eth_rwth" in signals:
-            if "aachen" in city:
+            is_rwth = any(
+                "rwth" in f"{s.get('source_label', '')} {s.get('source_url', '')}".lower()
+                for s in lead.get("discovered_from", [])
+            ) or (lead.get("country_code") or "").upper() == "DE"
+            if is_rwth:
                 cohorts["rwth_award"]["projects"].append([lid, f"RWTH Aachen Spin-off Award winner: {lname}"])
             else:
                 cohorts["eth_spinoff"]["projects"].append([lid, f"ETH Zurich spin-off license: {lname}"])
