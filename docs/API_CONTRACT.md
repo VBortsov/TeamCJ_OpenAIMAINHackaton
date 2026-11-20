@@ -390,6 +390,8 @@ Runs the ML ranking model on `data/live_candidates_for_ml.csv` (or on `leads` ro
 
 **Body (all optional):** `{"memo_top_k": 10, "refresh_memos": false, "leads": null}`
 
+**Auth:** generating memos (`memo_top_k > 0`) calls OpenAI and needs `Authorization: Bearer <FOUNDERHUNT_WRITE_TOKEN>`. Scoring only (`memo_top_k: 0`) is open. Scoring also runs automatically when the exported leads are newer than `data/ml_predictions.csv`.
+
 **Response (200 OK):**
 ```json
 {
@@ -416,7 +418,7 @@ Runs the ML ranking model on `data/live_candidates_for_ml.csv` (or on `leads` ro
 ```
 
 #### `GET /api/leads/{entity_id}/ml-memo?refresh=false`
-Returns the same `memo` object for one lead (cached on disk, generated on first call).
+Returns the same `memo` object for one lead. Cached memos are returned to everyone; a missing memo is generated with OpenAI only when the operator token is sent, otherwise a free template memo (`memo_source: "fallback_template"`) is returned.
 
 **UI notes:**
 - `ml_score` is a percentile (0–100), not a probability. Label it "ML rank" or similar.

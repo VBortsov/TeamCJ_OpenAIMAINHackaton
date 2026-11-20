@@ -53,3 +53,16 @@ def explain_lead(entity_id: str) -> Optional[Dict[str, Any]]:
 
 def base_rates() -> Dict[str, Any]:
     return load_base_rates()
+
+
+def ensure_predictions() -> None:
+    """Keep data/ml_predictions.csv in step with the exported leads: score them when the predictions file is
+    missing or older than the export. Scoring is local and free (no OpenAI call). Never raises."""
+    try:
+        if not ML_INPUT_PATH.exists():
+            return
+        if ML_PRED_PATH.exists() and ML_PRED_PATH.stat().st_mtime >= ML_INPUT_PATH.stat().st_mtime:
+            return
+        run_scoring()
+    except Exception as e:
+        logger.warning("Automatic ML scoring skipped: %s", e)

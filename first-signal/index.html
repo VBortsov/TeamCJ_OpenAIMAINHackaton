@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F7F3EB"><title>FounderHunt — Founder-first search for venture capital</title>
+<link rel="stylesheet" href="style.css">
+<script src="roster.js" defer></script><script src="people.js" defer></script><script src="events.js" defer></script><script src="milestones.js" defer></script><script src="recommendations.js" defer></script><script src="backend.js" defer></script><script src="app.js" defer></script>
+</head><body data-page="explore">
+<svg class="sprites" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.7"/><path d="m16 16 4.4 4.4"/></symbol>
+<symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h6m4 0h6M4 17h10m4 0h2"/><circle cx="12" cy="7" r="2"/><circle cx="16" cy="17" r="2"/></symbol>
+<symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6.5 4.5h11v16l-5.5-3.6-5.5 3.6z"/></symbol>
+<symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M7 6h11v11"/></symbol>
+<symbol id="i-cross" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="m3 9 9-5 9 5-9 5zM3 13l9 5 9-5m-18 4 9 5 9-5"/></symbol>
+<symbol id="i-chevron" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol>
+<symbol id="i-undo" viewBox="0 0 24 24"><path d="M4 10h10a6 6 0 0 1 0 12M9 5l-5 5 5 5" transform="translate(0 -2)"/></symbol>
+<symbol id="i-rows" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M4 9h16M4 14h16"/></symbol>
+<symbol id="i-cards" viewBox="0 0 24 24"><rect x="8" y="5" width="12" height="15" rx="2"/><path d="m5 17-2-12a2 2 0 0 1 1.8-2.3l10-1"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s6.8-7.5 6.8-12A6.8 6.8 0 0 0 5.2 9c0 4.5 6.8 12 6.8 12z"/><circle cx="12" cy="9" r="2.2"/></symbol>
+<symbol id="i-carousel-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+<symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M20.45 2H3.55A1.55 1.55 0 0 0 2 3.55v16.9C2 21.31 2.69 22 3.55 22h16.9c.86 0 1.55-.69 1.55-1.55V3.55C22 2.69 21.31 2 20.45 2ZM8 19H5V9h3ZM6.5 7.6a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4ZM19 19h-3v-5.1c0-1.2-.38-1.9-1.38-1.9-1.12 0-1.62.78-1.62 1.9V19h-3V9h2.9v1.36A3.55 3.55 0 0 1 16.08 9C18 9 19 10.3 19 12.8Z"/></symbol>
+<symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54l-.02-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.03-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1.01 1.72 2.65 1.23 3.29.94.1-.73.39-1.23.71-1.51-2.5-.29-5.12-1.25-5.12-5.57 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.6 0c2.15-1.46 3.1-1.15 3.1-1.15.61 1.55.23 2.69.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.33-2.63 5.28-5.14 5.56.4.35.76 1.03.76 2.08l-.01 3.1c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></symbol>
+<symbol id="i-mark" viewBox="0 0 32 32"><path d="M4 17V5h12M16 27h12V15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs></svg>
+<header class="app-header"><div class="shell nav-layout">
+<a class="wordmark" href="#explore" data-page="explore" aria-label="FounderHunt home"><span class="wordmark-text">FounderHunt</span><img src="founderhunt-logo.png" alt="" width="1280" height="774"></a>
+<nav class="main-nav" aria-label="Workspace navigation">
+<button type="button" data-page="explore" class="is-active">Explore</button>
+<button type="button" data-page="review">Review</button>
+<button type="button" data-page="sourcing" id="sourcingNav" hidden>Sourcing</button>
+<button type="button" data-page="collection">Saved <span id="savedCount">0</span></button>
+</nav>
+<div class="workspace-label"><span class="workspace-glyph" aria-hidden="true"></span><span id="dataMode">Demo</span></div>
+</div></header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+<div class="shell hero-layout">
+<div class="hero-copy">
+<p class="hero-category">Founder-first search for venture capital.</p>
+<h1 id="hero-title">Find the founders.<br><em>See the potential.</em></h1>
+<p class="hero-description">A company profile tells you what a venture does. FounderHunt helps you explore the people building it.</p>
+<a href="#workspace" class="primary demo-link">Explore the demo</a>
+</div>
+<aside class="founder-preview" aria-label="Founder profiles" aria-roledescription="carousel">
+<div class="preview-profile">
+<div id="heroFounder" class="preview-slides" tabindex="0" aria-label="Founder slides. Use the left and right arrow keys." aria-live="polite"></div>
+<button type="button" id="previewPrevious" class="preview-button" aria-label="Previous founder" aria-controls="heroFounder"><svg class="icon" aria-hidden="true"><use href="#i-carousel-arrow"/></svg></button>
+<button type="button" id="previewNext" class="preview-button" aria-label="Next founder" aria-controls="heroFounder"><svg class="icon" aria-hidden="true"><use href="#i-carousel-arrow"/></svg></button>
+<div class="preview-meta"><span class="preview-progress" aria-hidden="true"></span><span id="previewPosition" class="preview-position"></span></div>
+</div>
+</aside>
+</div>
+</section>
+<div class="shell workspace" id="workspace">
+<div class="search-tools">
+<form id="searchForm" role="search"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><input type="search" id="query" placeholder="Search founders, ventures or technology" aria-label="Search founders, ventures or technology" autocomplete="off"><kbd aria-hidden="true">/</kbd></form>
+<div class="filter-strip"><label class="filter"><span class="sr-only">Sector</span><select id="sector" aria-label="Sector"></select><svg aria-hidden="true" class="icon"><use href="#i-chevron"/></svg></label>
+<label class="filter sort"><svg class="icon" aria-hidden="true"><use href="#i-sliders"/></svg><span class="sr-only">Sort order</span><select id="sort" aria-label="Sort order"><option value="signal">Best match</option><option value="recent" data-venture-sort>Latest signal</option><option value="discovery-newest" data-venture-sort>Discovery date · newest first</option><option value="discovery-oldest" data-venture-sort>Discovery date · oldest first</option><option value="name">Name A–Z</option></select><svg aria-hidden="true" class="icon"><use href="#i-chevron"/></svg></label><button type="button" class="text-button" data-clear-filters>Reset</button></div>
+</div>
+<section id="exploreView" aria-labelledby="lead-title">
+<div class="section-heading"><h2 id="lead-title">Explore <em id="exploreCategory">ventures</em></h2><button type="button" id="reviewStart" class="primary"><svg class="icon" aria-hidden="true"><use href="#i-cards"/></svg>Review ventures</button></div>
+<div class="results-toolbar"><div class="switch" aria-label="Explore category"><button type="button" data-kind="projects" aria-pressed="true">Ventures</button><button type="button" data-kind="people" aria-pressed="false">Founders</button><button type="button" data-kind="events" aria-pressed="false">Events</button></div><span class="result-count" id="resultsCount" aria-live="polite"></span></div>
+<div id="results" class="results"></div>
+<div id="eventsView" hidden>
+<div class="events-intro">
+<p>Find ventures through competitions and university labs. Prior cohorts show the kinds of teams each programme has surfaced.</p>
+</div>
+<div class="results-toolbar events-toolbar">
+<div class="switch" role="group" aria-label="Event type">
+<button type="button" data-event-type="all" aria-pressed="true">All</button>
+<button type="button" data-event-type="competition" aria-pressed="false">Competitions</button>
+<button type="button" data-event-type="lab" aria-pressed="false">Venture labs</button>
+</div>
+<span class="result-count" id="eventCount" aria-live="polite"></span>
+</div>
+<div id="eventResults" class="event-list"></div>
+</div></section>
+<section id="reviewView" hidden aria-labelledby="review-title"><div class="section-heading"><h2 id="review-title">Review <em>ventures</em></h2></div><div id="deckArea"></div></section>
+<section id="sourcingView" hidden aria-labelledby="sourcing-title">
+<div class="section-heading"><h2 id="sourcing-title">Sourcing</h2><button class="outline" type="button" id="refreshFeed">Refresh venture feed</button></div>
+<div class="sourcing-workspace">
+<section class="sourcing-pane">
+<h3>Evaluate a venture</h3>
+<form id="enrichForm" class="sourcing-form">
+<label for="operatorToken">Operator token</label><input id="operatorToken" type="password" autocomplete="off">
+<label for="ventureTarget">Startup name or website</label><input id="ventureTarget" type="text" required maxlength="180" placeholder="e.g. company.com">
+<button class="primary" type="submit">Run live evaluation</button>
+</form>
+<p id="enrichStatus" role="status"></p><div id="enrichResult"></div>
+<div class="saved-workspace-controls"><h4>Shared saved ventures</h4>
+<button type="button" class="outline" id="loadWorkspace">Load shared saves</button>
+<button type="button" class="outline" id="saveWorkspace">Publish current saves</button>
+<p id="workspaceStatus" role="status"></p></div>
+</section>
+<section class="sourcing-pane">
+<h3>Pipeline and API</h3>
+<p id="pipelineStatus" role="status"></p><div id="pipelineResults"></div>
+</section>
+</div>
+</section>
+<section id="collectionView" hidden aria-labelledby="saved-title"><div class="section-heading"><h2 id="saved-title">Saved</h2></div><div id="collectionArea"></div></section>
+</div></main>
+<footer class="shell"><span>FounderHunt</span><span>MAIN Hackathon · Maastricht 2026</span></footer>
+<dialog id="leadDialog" aria-label="Venture details"><button type="button" id="closeDialog" class="dialog-close" aria-label="Close details"><svg class="icon" aria-hidden="true"><use href="#i-cross"/></svg></button><div id="detailContent"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+</body></html>

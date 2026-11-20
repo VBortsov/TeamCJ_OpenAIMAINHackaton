@@ -11,30 +11,35 @@ Serves:
 """
 
 from __future__ import annotations
+import asyncio
 import csv
+import hashlib
+import hmac
+import re
+from tempfile import NamedTemporaryFile
+from urllib.parse import urlsplit
 from datetime import datetime, timezone
 import json
 import logging
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 import httpx
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, Header, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from backend.config import settings
 from backend.db.repository import (
     DatabaseRepository,
-    normalize_domain,
-    slugify,
     clean_url,
     is_valid_founder_linkedin
 )
 from backend.enrichment.cost_tracker import CostTracker
-from backend.enrichment.impressum import ImpressumScraper, ImpressumResult
+from backend.enrichment.impressum import ImpressumResult
 from backend.enrichment.github_verifier import GitHubVerifier, FounderGitHubProfile
-from backend.scoring.kill_gates import KillGateEvaluator, KillGateResult
-from backend.enrichment.openai_enricher import OpenAIEnricher, EnrichedProfile
+from backend.scoring.kill_gates import KillGateEvaluator
+from backend.enrichment.openai_enricher import OpenAIEnricher
 from backend.scoring.scorer import LeadScorer, ScoreBreakdown
 from backend.ml import service as ml_service
 from backend.ml.memo_agent import build_memo_input, generate_memo, load_cached_memo
@@ -85,17 +90,43 @@ app = FastAPI(
     openapi_tags=tags_metadata
 )
 
-# Enable CORS for local frontend integration
+# Same-origin hosting works without CORS. Separate frontend deployments opt in by origin.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    allow_origins=settings.FOUNDERHUNT_ALLOWED_ORIGINS,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 FEED_PATH = settings.DATA_DIR / "wave2_frontend_feed.json"
 ML_PRED_PATH = settings.DATA_DIR / "ml_predictions.csv"
+LIVE_LEADS_DIR = settings.DATA_DIR / "live_leads"
+SAVED_WORKSPACE_PATH = settings.DATA_DIR / "saved_workspace.json"
+live_enrichment_lock = asyncio.Lock()
+
+
+def require_operator(authorization: str | None) -> None:
+    token = settings.FOUNDERHUNT_WRITE_TOKEN
+    if not token:
+        raise HTTPException(status_code=503, detail="The operator token is not configured.")
+    if not hmac.compare_digest((authorization or "").encode(), f"Bearer {token}".encode()):
+        raise HTTPException(status_code=401, detail="A valid operator token is required.")
+
+
+def write_json_atomically(path: Path, value: Dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with NamedTemporaryFile(mode="w", encoding="utf-8", dir=path.parent, delete=False) as output:
+        temporary = Path(output.name)
+        try:
+            json.dump(value, output, ensure_ascii=False)
+            output.close()
+            temporary.replace(path)
+        finally:
+            temporary.unlink(missing_ok=True)
+
+
+def store_live_lead(lead: Dict[str, Any]) -> None:
+    write_json_atomically(LIVE_LEADS_DIR / f"{lead['entity_id']}.json", lead)
 
 
 def get_repo() -> DatabaseRepository:
@@ -146,9 +177,18 @@ def load_frontend_feed() -> Dict[str, Any]:
         with open(FEED_PATH, "r", encoding="utf-8") as f:
             feed = json.load(f)
 
-    # Attach optional ML scores if data/ml_predictions.csv exists
+    # Attach ML scores: data/ml_predictions.csv is (re)built automatically from the exported leads
+    ml_service.ensure_predictions()
     ml_preds = load_ml_predictions()
-    leads = feed.get("ranked_leads", [])
+    leads = feed.setdefault("ranked_leads", [])
+    existing_ids = {lead.get("entity_id") for lead in leads}
+    for path in sorted(LIVE_LEADS_DIR.glob("live-*.json")):
+        try:
+            lead = json.loads(path.read_text(encoding="utf-8"))
+            if lead["entity_id"] not in existing_ids:
+                leads.append(lead)
+        except (OSError, ValueError, KeyError, TypeError):
+            logger.warning("Could not read live lead %s", path.name)
     for lead in leads:
         cid = lead.get("entity_id")
         det_score = lead.get("score_breakdown", {}).get("final_score") or lead.get("deterministic_score", 0.0)
@@ -161,14 +201,40 @@ def load_frontend_feed() -> Dict[str, Any]:
             lead["ml_score"] = None
             lead["blended_score"] = det_score
 
-    if ml_preds:
+    if ml_preds or any(lead.get("discovered_at") for lead in leads):
         feed["ranked_leads"] = sorted(leads, key=lambda l: l.get("blended_score", 0.0), reverse=True)
 
     return feed
 
 
 class LiveEnrichRequest(BaseModel):
-    domain_or_name: str = Field(description="Startup URL, domain (e.g. 'aixopt.ai'), or company name")
+    domain_or_name: str = Field(min_length=1, max_length=180, description="Public startup website or company name")
+
+
+class SavedWorkspace(BaseModel):
+    decisions: Dict[str, str] = Field(default_factory=dict, max_length=2000)
+    tracked: Dict[str, str] = Field(default_factory=dict, max_length=2000)
+
+
+@app.get("/api/workspace/saved", tags=["Integrations"])
+def read_saved_workspace(authorization: str | None = Header(None)):
+    require_operator(authorization)
+    if not SAVED_WORKSPACE_PATH.exists():
+        return SavedWorkspace()
+    return SavedWorkspace.model_validate_json(SAVED_WORKSPACE_PATH.read_text(encoding="utf-8"))
+
+
+@app.post("/api/workspace/saved", tags=["Integrations"])
+def save_workspace(body: SavedWorkspace, authorization: str | None = Header(None)):
+    require_operator(authorization)
+    if any(not re.fullmatch(r"[\w:-]{1,160}", item) for item in [*body.decisions, *body.tracked]):
+        raise HTTPException(status_code=400, detail="Invalid saved item identifier.")
+    if any(value not in {"shortlist", "watch", "pass"} for value in body.decisions.values()) or any(
+        value != "track" for value in body.tracked.values()
+    ):
+        raise HTTPException(status_code=400, detail="Invalid saved item state.")
+    write_json_atomically(SAVED_WORKSPACE_PATH, body.model_dump())
+    return body
 
 
 # =============================================================================
@@ -183,7 +249,7 @@ class LiveEnrichRequest(BaseModel):
 def health_check():
     repo = get_repo()
     stats = repo.get_stats()
-    tracker = CostTracker()
+    tracker = CostTracker(max_budget_usd=settings.FOUNDERHUNT_ENRICH_BUDGET_USD)
     cache_dir = settings.DATA_DIR / "llm_cache"
     cached_leads = len(list(cache_dir.glob("*.json"))) if cache_dir.exists() else 0
     return {
@@ -211,6 +277,26 @@ def health_check():
 )
 def get_dashboard():
     return load_frontend_feed()
+
+
+@app.get("/api/events", tags=["Dashboard"], summary="Public event signals linked to ranked ventures")
+def list_events():
+    events: Dict[str, Any] = {}
+    for lead in load_frontend_feed().get("ranked_leads", []):
+        for signal in lead.get("discovered_from", []):
+            if signal.get("source_name") != "luma_events":
+                continue
+            url = clean_url(signal.get("source_url"))
+            date = signal.get("event_on") or signal.get("signal_date")
+            title = signal.get("event_title")
+            if not (url and date and title):
+                continue
+            event = events.setdefault(url, {
+                "name": title, "date": date, "url": url, "location": signal.get("event_city"),
+                "projects": []
+            })
+            event["projects"].append([lead["entity_id"], "Named as an organiser in the source event listing."])
+    return {"events": sorted(events.values(), key=lambda event: event["date"])}
 
 
 # =============================================================================
@@ -277,8 +363,8 @@ def get_lead_dossier(entity_id: str):
         "legal_name": matched.get("legal_name") or matched.get("canonical_name"),
         "website_url": matched.get("website_url"),
         "country_code": matched.get("country_code"),
-        "city": matched.get("city") or "Aachen",
-        "founding_year": matched.get("founding_year", 2025),
+        "city": matched.get("city"),
+        "founding_year": matched.get("founding_year"),
         "htgf_vertical": matched.get("htgf_vertical", "industrial_climate_deeptech"),
         "earliness_badge": matched.get("earliness_badge", "Pre-Crunchbase / Undiscovered"),
         
@@ -291,15 +377,15 @@ def get_lead_dossier(entity_id: str):
         # Section 1: Executive Summary & Thesis
         "executive_summary": matched.get("description"),
         "investment_thesis": {
-            "why_now": matched.get("inflection_why_now", "Commercialization of academic IP under European DeepTech sovereignty mandates."),
-            "catalyst": "Expanding European industrial automation requirements and demand for verified IP spin-offs."
+            "why_now": matched.get("inflection_why_now"),
+            "catalyst": matched.get("catalyst")
         },
 
         # Section 2: Founder Pedigree & Technical Team
         "team_dossier": {
             "founders": matched.get("founders", []),
             "has_phd": any(f.get("has_phd") for f in matched.get("founders", [])),
-            "university_origin": "RWTH Aachen / ETH Zurich",
+            "university_origin": matched.get("university_origin"),
             "pedigree_score": matched.get("score_breakdown", {}).get("team_pedigree", 0.0)
         },
 
@@ -307,25 +393,21 @@ def get_lead_dossier(entity_id: str):
         "technology_moat": {
             "spin_off_origin": matched.get("discovered_from", []),
             "moat_score": matched.get("score_breakdown", {}).get("technical_moat", 0.0),
-            "ip_status": "Proprietary University Lab Patent / Open Source"
+            "ip_status": matched.get("ip_status")
         },
 
         # Section 4: Commercial Traction & Impressum Compliance
         "commercial_traction": {
             "register_number": matched.get("register_number"),
             "commercial_score": matched.get("score_breakdown", {}).get("commercial_intent", 0.0),
-            "status": "Early Pilots / B2B Trials"
+            "status": matched.get("funding_summary")
         },
 
         # Section 5: HTGF IV Industrial LP Synergy
         "lp_synergy_analysis": matched.get("lp_synergy_matches", []),
 
         # Section 6: Devil's Advocate Risks & Mitigations
-        "devils_advocate_risks": matched.get("devils_advocate_risks", [
-            "Lengthy qualification cycle with German Mittelstand industrial customers.",
-            "Specialized engineering talent acquisition bottleneck.",
-            "Initial Capex requirements before recurring software revenues."
-        ]),
+        "devils_advocate_risks": matched.get("devils_advocate_risks", []),
 
         # Section 7: Audit Trail & Clickable Evidence
         "evidence_urls": matched.get("score_breakdown", {}).get("evidence_urls", []),
@@ -375,77 +457,73 @@ def list_rejected_entities():
 # =============================================================================
 # 5. Live On-Demand Enrichment Endpoint
 # =============================================================================
-@app.post(
-    "/api/enrich/live",
-    tags=["Enrichment"],
-    summary="On-Demand Impressum & Web-Search Enrichment",
-    description="Evaluates ANY new startup URL or company name on-demand in seconds with live Impressum scraping and Kill-Gates."
-)
-async def live_enrich_startup(req: LiveEnrichRequest):
+@app.post("/api/enrich/live", tags=["Enrichment"], summary="Evaluate a startup using public web sources")
+async def live_enrich_startup(req: LiveEnrichRequest, authorization: str | None = Header(None)):
+    require_operator(authorization)
     target = req.domain_or_name.strip()
-    if not target:
-        raise HTTPException(status_code=400, detail="Target domain or company name required")
+    if not target or any(ord(char) < 32 for char in target):
+        raise HTTPException(status_code=400, detail="Enter a startup name or public website.")
 
-    repo = get_repo()
-    norm_dom = normalize_domain(target)
-    cname = target.replace("https://", "").replace("http://", "").split("/")[0]
+    website = None
+    if "://" in target or ("." in target and not any(char.isspace() for char in target)):
+        try:
+            parsed = urlsplit(target if "://" in target else "https://" + target)
+            domain = parsed.hostname or ""
+            valid = (parsed.scheme in ("http", "https") and not parsed.username and not parsed.port and
+                     re.fullmatch(r"(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,63}", domain))
+        except ValueError:
+            valid = False
+        if not valid:
+            raise HTTPException(status_code=400, detail="Enter a startup name or public website.")
+        target = domain.removeprefix("www.")
+        website = f"https://{domain}"
 
-    # 1. Impressum Scraping
-    impressum_scraper = ImpressumScraper()
-    imp_res = await impressum_scraper.scrape(norm_dom or target)
-
-    cand_dict = {
-        "entity_id": f"live:{slugify(cname)}",
-        "canonical_name": imp_res.legal_name or cname,
-        "normalized_domain": norm_dom,
-        "website_url": f"https://{norm_dom}" if norm_dom else None,
-        "country_code": "DE" if imp_res.register_number and "HRB" in imp_res.register_number else "DE",
-        "city": imp_res.city or "Berlin",
-        "legal_name": imp_res.legal_name,
-        "legal_form": imp_res.legal_form,
-        "register_number": imp_res.register_number,
-        "raw_tags": ["Live Evaluated", "DeepTech"],
-        "description": f"Live evaluated venture '{cname}' analyzed via HTGF Engine.",
-        "founders": [{"full_name": f} for f in imp_res.founders],
-        "signals": [{"source_name": "live_jury_eval", "source_url": f"https://{norm_dom or target}"}]
+    entity_id = "live-" + hashlib.sha256(target.casefold().encode()).hexdigest()[:24]
+    candidate = {
+        "entity_id": entity_id, "canonical_name": target, "website_url": website,
+        "raw_tags": [], "description": "", "founders": [], "signals": []
     }
-
-    # 2. Kill-Gates Evaluation
-    evaluator = KillGateEvaluator(repo=repo)
-    kill_res: KillGateResult = evaluator.evaluate(
-        candidate=cand_dict,
-        impressum_legal_name=imp_res.legal_name,
-        impressum_text=imp_res.legal_form
-    )
-
-    # 3. Enrichment
-    enricher = OpenAIEnricher()
-    profile: EnrichedProfile = enricher.enrich(cand_dict)
-
-    if profile.is_post_enrichment_kill:
-        kill_res.gate_passed = False
-        kill_res.kill_reasons.append(profile.kill_reason)
-
-    # 4. Scoring
-    breakdown: ScoreBreakdown = LeadScorer.calculate_score(
-        candidate=cand_dict,
-        profile=profile,
-        impressum=imp_res
-    )
-
-    return {
-        "canonical_name": cand_dict["canonical_name"],
-        "domain": norm_dom,
-        "city": profile.city or cand_dict["city"],
-        "gate_passed": kill_res.gate_passed,
-        "kill_reasons": kill_res.kill_reasons,
-        "final_score": breakdown.final_score if kill_res.gate_passed else 0.0,
-        "score_breakdown": breakdown.model_dump(),
-        "htgf_vertical": profile.htgf_vertical,
-        "inflection_why_now": profile.inflection_why_now,
-        "founders_enriched": [f.model_dump() for f in profile.founders_enriched],
-        "lp_synergy_matches": [lp.model_dump() for lp in profile.lp_synergy_matches]
-    }
+    # Submitted websites are research context. The API does not fetch arbitrary submitted URLs.
+    async with live_enrichment_lock:
+        tracker = CostTracker(max_budget_usd=settings.FOUNDERHUNT_ENRICH_BUDGET_USD)
+        profile = await OpenAIEnricher(cost_tracker=tracker).enrich_async(candidate)
+        if not profile.fd_enriched:
+            raise HTTPException(status_code=503, detail="Live research is unavailable. Check the provider configuration and enrichment budget.")
+        citations = list(dict.fromkeys(url for raw in profile.citations if (url := clean_url(raw))))
+        if not citations:
+            raise HTTPException(status_code=422, detail="No source-backed evaluation was found for this startup.")
+        candidate["canonical_name"] = profile.canonical_name or target
+        candidate["description"] = profile.description
+        screened = KillGateEvaluator(repo=get_repo()).evaluate(candidate=candidate)
+        reasons = [*screened.kill_reasons]
+        if profile.is_post_enrichment_kill:
+            reasons.append(profile.kill_reason or "The venture did not meet the enrichment criteria.")
+        breakdown = LeadScorer.calculate_score(candidate=candidate, profile=profile, impressum=ImpressumResult())
+        lead = {
+            "entity_id": entity_id, "name": profile.canonical_name or target, "canonical_name": profile.canonical_name or target,
+            "domain": target if website else None, "website_url": website,
+            "city": profile.city, "founding_year": profile.founding_year,
+            "discovered_at": datetime.now(timezone.utc).isoformat(),
+            "htgf_vertical": profile.htgf_vertical, "description": profile.description,
+            "inflection_why_now": profile.inflection_why_now, "funding_summary": profile.funding_summary,
+            "founders": [founder.model_dump() for founder in profile.founders_enriched],
+            "lp_synergy_matches": [match.model_dump() for match in profile.lp_synergy_matches],
+            "devils_advocate_risks": profile.devils_advocate_risks,
+            "discovered_from": [{"source_label": "Public web source", "source_url": url} for url in citations],
+            "score_breakdown": {**breakdown.model_dump(), "evidence_urls": citations},
+            "gate_passed": not reasons, "kill_reasons": reasons,
+            "final_score": breakdown.final_score if not reasons else 0.0,
+            "founders_enriched": [founder.model_dump() for founder in profile.founders_enriched]
+        }
+        if not reasons:
+            previous = LIVE_LEADS_DIR / f"{entity_id}.json"
+            if previous.is_file():
+                try:
+                    lead["discovered_at"] = json.loads(previous.read_text(encoding="utf-8")).get("discovered_at") or lead["discovered_at"]
+                except (OSError, ValueError):
+                    logger.warning("Could not recover the discovery date for %s", entity_id)
+            store_live_lead(lead)
+        return lead
 
 
 # =============================================================================
@@ -457,7 +535,10 @@ async def live_enrich_startup(req: LiveEnrichRequest):
     summary="Dispatch Lead to n8n Webhook",
     description="Dispatches top lead payload to n8n for Lusha contact enrichment and Slack notifications. Returns simulation if webhook not configured."
 )
-async def dispatch_lead_to_n8n(entity_id: str):
+async def dispatch_lead_to_n8n(entity_id: str, authorization: str | None = Header(None)):
+    webhook_url = settings.N8N_WEBHOOK_URL
+    if webhook_url:
+        require_operator(authorization)
     memo = get_lead_dossier(entity_id)
 
     payload = {
@@ -483,23 +564,18 @@ async def dispatch_lead_to_n8n(entity_id: str):
         "key_drivers": memo["score_drivers"]
     }
 
-    webhook_url = settings.N8N_WEBHOOK_URL
     if webhook_url:
         try:
             async with httpx.AsyncClient(timeout=10.0) as client:
                 res = await client.post(webhook_url, json=payload)
+                res.raise_for_status()
                 return {
                     "status": "dispatched",
-                    "webhook_url": webhook_url,
                     "response_status": res.status_code,
                     "payload": payload
                 }
-        except Exception as e:
-            return {
-                "status": "dispatch_error",
-                "error": str(e),
-                "payload": payload
-            }
+        except httpx.HTTPError:
+            raise HTTPException(status_code=502, detail="The workflow did not accept the lead.")
 
     # Simulation fallback for hackathon demonstration
     return {
@@ -521,13 +597,20 @@ class MLScoreRequest(BaseModel):
     refresh_memos: bool = Field(default=False, description="Regenerate memos even if cached")
 
 
-async def _memo_for_lead(lead: Dict[str, Any], rank: Optional[int], total: Optional[int], refresh: bool = False) -> Dict[str, Any]:
+async def _memo_for_lead(lead: Dict[str, Any], rank: Optional[int], total: Optional[int], refresh: bool = False,
+                         allow_llm: bool = True) -> Dict[str, Any]:
     entity_id = lead.get("entity_id")
     ml_row = ml_service.explain_lead(entity_id)
     payload = build_memo_input(lead, rank, total, ml_row, ml_service.base_rates())
-    memo = await generate_memo(entity_id, payload, refresh=refresh)
+    memo = await generate_memo(entity_id, payload, refresh=refresh, allow_llm=allow_llm,
+                               cost_tracker=CostTracker(max_budget_usd=settings.FOUNDERHUNT_ENRICH_BUDGET_USD))
     memo["ml_drivers"] = (ml_row or {}).get("contributions") or []
     return memo
+
+
+def _is_operator(authorization: str | None) -> bool:
+    token = settings.FOUNDERHUNT_WRITE_TOKEN
+    return bool(token) and hmac.compare_digest((authorization or "").encode(), f"Bearer {token}".encode())
 
 
 @app.post(
@@ -536,12 +619,13 @@ async def _memo_for_lead(lead: Dict[str, Any], rank: Optional[int], total: Optio
     summary="Run ML Ranking Model & Generate Top-K Memos",
     description=(
         "Scores leads with the ML ranking model, writes data/ml_predictions.csv (picked up by every other endpoint for "
-        "ml_score and blended_score), then writes fact-grounded LLM memos for the top-K leads by blended score."
+        "ml_score and blended_score), then writes fact-grounded LLM memos for the top-K leads by blended score. "
+        "Scoring is free and open; generating memos (memo_top_k > 0) calls OpenAI and needs the operator token."
     )
 )
-async def run_ml_scoring(req: MLScoreRequest = MLScoreRequest()):
-    import asyncio
-
+async def run_ml_scoring(req: MLScoreRequest = MLScoreRequest(), authorization: str | None = Header(None)):
+    if req.memo_top_k > 0:
+        require_operator(authorization)
     try:
         res = ml_service.run_scoring(leads=req.leads)
     except FileNotFoundError as e:
@@ -576,12 +660,21 @@ async def run_ml_scoring(req: MLScoreRequest = MLScoreRequest()):
     summary="Fact-Grounded LLM Memo for One Lead",
     description=(
         "One-liner, three strongest signals with source URLs, team, why it is early, devil's advocate risks and next step. "
-        "Written only from facts already in the feed; cached on disk. Falls back to a template if OpenAI is unavailable."
+        "Written only from facts already in the feed; cached on disk. Without the operator token only a cached memo or a "
+        "free template memo is returned; with it, a missing memo is generated with OpenAI."
     )
 )
-async def get_lead_ml_memo(entity_id: str, refresh: bool = Query(False, description="Regenerate even if cached")):
+async def get_lead_ml_memo(entity_id: str, refresh: bool = Query(False, description="Regenerate even if cached (operator only)"),
+                           authorization: str | None = Header(None)):
     leads = load_frontend_feed().get("ranked_leads", [])
     idx = next((i for i, l in enumerate(leads) if l.get("entity_id") == entity_id), None)
     if idx is None:
         raise HTTPException(status_code=404, detail=f"Entity '{entity_id}' not found in ranked leads")
-    return await _memo_for_lead(leads[idx], rank=idx + 1, total=len(leads), refresh=refresh)
+    operator = _is_operator(authorization)
+    return await _memo_for_lead(leads[idx], rank=idx + 1, total=len(leads), refresh=refresh and operator, allow_llm=operator)
+
+
+# Serve the prototype from the same origin as the API when the frontend is present.
+frontend_directory = Path(__file__).resolve().parents[2] / "first-signal"
+if (frontend_directory / "index.html").is_file():
+    app.mount("/", StaticFiles(directory=frontend_directory, html=True), name="frontend")

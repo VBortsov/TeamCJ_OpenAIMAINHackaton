@@ -23,6 +23,7 @@ import shutil
 import sys
 import time
 from pathlib import Path
+from tempfile import NamedTemporaryFile
 from typing import Any, Dict, List, Optional
 from tabulate import tabulate
 
@@ -91,7 +92,10 @@ def format_source_label(sig: Dict[str, Any]) -> Dict[str, str]:
     return {
         "source_name": src,
         "source_label": label,
-        "signal_date": sig.get("signal_date", "2026-01-01"),
+        "signal_date": sig.get("signal_date"),
+        **({"event_title": (sig.get("raw_metrics") or {}).get("event_title"),
+            "event_on": (sig.get("raw_metrics") or {}).get("event_start"),
+            "event_city": (sig.get("raw_metrics") or {}).get("city")} if src == "luma_events" else {}),
         "source_url": url,
         "summary": summary
     }
@@ -517,6 +521,7 @@ async def run_wave2_pipeline(
                 "founding_year": prof.founding_year or 2025,
                 "htgf_vertical": prof.htgf_vertical,
                 "description": cand.get("description", ""),
+                "discovered_at": cand.get("created_at"),
                 "discovered_from": [format_source_label(s) for s in cand.get("signals", [])],
                 "earliness_badge": "Pre-Crunchbase / Undiscovered" if prof.is_pre_crunchbase else "Grant-Only Pre-Seed",
                 "funding_summary": prof.funding_summary,
@@ -559,8 +564,9 @@ async def run_wave2_pipeline(
             "rejected_audit": rejected_audit
         }
 
-        with open(frontend_feed_path, "w", encoding="utf-8") as f:
-            json.dump(frontend_feed, f, indent=2, ensure_ascii=False)
+        with NamedTemporaryFile(mode="w", encoding="utf-8", dir=frontend_feed_path.parent, delete=False) as output:
+            json.dump(frontend_feed, output, indent=2, ensure_ascii=False)
+        Path(output.name).replace(frontend_feed_path)
         logger.info("Exported Frontend Provenance Feed to %s", frontend_feed_path)
 
         # =========================================================================

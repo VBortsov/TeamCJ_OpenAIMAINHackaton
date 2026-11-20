@@ -1,0 +1,8 @@
+**
+!Dockerfile
+!backend/
+!backend/**
+!first-signal/
+!first-signal/**
+**/__pycache__/
+**/.env*

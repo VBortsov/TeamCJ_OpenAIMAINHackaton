@@ -48,3 +48,22 @@ def test_memo_input_drops_empty_and_fallback_works(monkeypatch, tmp_path):
     monkeypatch.setattr(memo_agent, "MEMO_CACHE_DIR", tmp_path)
     out = asyncio.run(generate_memo("a", payload))
     assert out["memo_source"] == "fallback_template" and not list(tmp_path.iterdir())
+
+
+def test_memo_generation_needs_operator_token(tmp_path, monkeypatch):
+    from fastapi.testclient import TestClient
+    from backend.api import main
+
+    monkeypatch.setattr(main.settings, "FOUNDERHUNT_WRITE_TOKEN", "test-operator")
+    monkeypatch.setattr(main, "FEED_PATH", tmp_path / "feed.json")
+    monkeypatch.setattr(main, "LIVE_LEADS_DIR", tmp_path / "live")
+    monkeypatch.setattr(main.ml_service, "ML_INPUT_PATH", tmp_path / "live_candidates_for_ml.csv")
+    monkeypatch.setattr(main.ml_service, "ML_PRED_PATH", tmp_path / "ml_predictions.csv")
+    monkeypatch.setattr(main, "ML_PRED_PATH", tmp_path / "ml_predictions.csv")
+    _leads().to_csv(tmp_path / "live_candidates_for_ml.csv", index=False)
+    client = TestClient(main.app)
+
+    assert client.post("/api/ml/score", json={"memo_top_k": 3}).status_code == 401
+    open_scoring = client.post("/api/ml/score", json={"memo_top_k": 0})
+    assert open_scoring.status_code == 200 and open_scoring.json()["scored"] == 4
+    assert (tmp_path / "ml_predictions.csv").exists()

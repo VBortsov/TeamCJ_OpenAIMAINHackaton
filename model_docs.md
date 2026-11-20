@@ -8,23 +8,24 @@ Code and artefacts live in `backend/ml/`. Feature definitions are in [features.m
 
 ```bash
 pip install -r backend/requirements.txt
-cp .env.example .env            # put OPENAI_API_KEY=sk-... in .env (git-ignored, never commit it)
+cp .env.example .env            # set OPENAI_API_KEY=sk-... and FOUNDERHUNT_WRITE_TOKEN=<any secret> in .env (git-ignored, never commit it)
 
 # 1. Pipeline exports leads -> data/live_candidates_for_ml.csv (backend/run_wave2.py)
 # 2. Score them -> data/ml_predictions.csv
 python -m backend.ml.score_live
 # or through the API (also writes memos for the top 10):
 uvicorn backend.api.main:app --reload
-curl -X POST localhost:8000/api/ml/score -H 'Content-Type: application/json' -d '{"memo_top_k": 10}'
+curl -X POST localhost:8000/api/ml/score -H 'Content-Type: application/json' \
+     -H "Authorization: Bearer $FOUNDERHUNT_WRITE_TOKEN" -d '{"memo_top_k": 10}'
 ```
 
 | Endpoint | What it does |
 |---|---|
-| `POST /api/ml/score` | Scores `data/live_candidates_for_ml.csv` (or `leads` rows sent in the body), writes `data/ml_predictions.csv`, returns scores with their top drivers, and generates memos for the top `memo_top_k` leads by blended score (default 10, 0 = none) |
-| `GET /api/leads/{entity_id}/ml-memo` | Memo for one lead, generated live and cached (`?refresh=true` to regenerate) |
-| `GET /api/leads/{entity_id}` | Existing dossier, now with `ml_memo` (null until generated) |
+| `POST /api/ml/score` | Scores `data/live_candidates_for_ml.csv` (or `leads` rows sent in the body), writes `data/ml_predictions.csv`, returns scores with their top drivers, and generates memos for the top `memo_top_k` leads by blended score (default 10, 0 = none). Memos call OpenAI, so `memo_top_k > 0` needs the operator token (`Authorization: Bearer $FOUNDERHUNT_WRITE_TOKEN`) |
+| `GET /api/leads/{entity_id}/ml-memo` | Memo for one lead. Returns the cached memo; without the operator token a missing memo comes back as a free template, with the token it is generated with OpenAI (`?refresh=true` to regenerate) |
+| `GET /api/leads/{entity_id}` | Existing dossier, now with `ml_memo` (null until generated). The frontend shows it as "Analyst brief" inside the investment memo panel |
 
-All existing endpoints pick up `ml_score` and `blended_score` automatically once `data/ml_predictions.csv` exists.
+Scoring also runs by itself: whenever the API loads the feed and `data/ml_predictions.csv` is missing or older than `data/live_candidates_for_ml.csv`, the leads are rescored (local, no OpenAI). So after `run_wave2`, `ml_score` and `blended_score` appear without any extra step. Only the memos need the one `POST /api/ml/score` call.
 
 Retrain: `python -m backend.ml.train_final` (rewrites `model.joblib` and `metrics.json`), then `python -m backend.ml.build_base_rates`.
 

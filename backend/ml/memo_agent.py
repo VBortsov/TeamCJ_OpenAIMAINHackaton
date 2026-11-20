@@ -166,16 +166,19 @@ def fallback_memo(p: Dict[str, Any]) -> Dict[str, Any]:
 
 
 async def generate_memo(entity_id: str, payload: Dict[str, Any], refresh: bool = False,
-                        cost_tracker: Optional[CostTracker] = None) -> Dict[str, Any]:
+                        cost_tracker: Optional[CostTracker] = None, allow_llm: bool = True) -> Dict[str, Any]:
     """Return the memo for one lead: cached if the facts did not change, else one OpenAI call."""
     digest = hashlib.sha256(json.dumps(payload, sort_keys=True, default=str).encode()).hexdigest()[:16]
     cached = load_cached_memo(entity_id)
-    if cached and not refresh and cached.get("input_hash") == digest and cached.get("memo_source", "").startswith("openai"):
+    if cached and not refresh and cached.get("memo_source", "").startswith("openai") and (
+            cached.get("input_hash") == digest or not allow_llm):
         return cached
 
     tracker = cost_tracker or CostTracker()
     memo: Dict[str, Any]
-    if not settings.OPENAI_API_KEY:
+    if not allow_llm:
+        memo = {**fallback_memo(payload), "memo_source": "fallback_template", "memo_note": "LLM memo not generated yet"}
+    elif not settings.OPENAI_API_KEY:
         memo = {**fallback_memo(payload), "memo_source": "fallback_template", "memo_note": "OPENAI_API_KEY not set"}
     elif not tracker.can_execute_live_call(expected_cost=0.002):
         memo = {**fallback_memo(payload), "memo_source": "fallback_template", "memo_note": "Budget cap reached or cache-only mode"}
