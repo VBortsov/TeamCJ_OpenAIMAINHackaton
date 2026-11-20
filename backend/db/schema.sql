@@ -76,9 +76,20 @@ CREATE TABLE IF NOT EXISTS funding_blocklist (
     source_url TEXT
 );
 
+-- 6. Deterministic Kill-Gates & Lead Scoring (Waves 2-3)
+CREATE TABLE IF NOT EXISTS lead_scores (
+    entity_id TEXT PRIMARY KEY REFERENCES entities(entity_id) ON DELETE CASCADE,
+    gate_passed INTEGER NOT NULL DEFAULT 1,          -- 1 if passed all kill gates, 0 if rejected
+    kill_reasons_json TEXT,                          -- JSON array of strings explaining kill reasons
+    deterministic_score REAL DEFAULT 0.0,            -- 0 to 100 transparent score
+    score_breakdown_json TEXT,                       -- JSON breakdown of 5 pillars
+    scored_at TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Indexes for Fast Querying & Scoring
 CREATE INDEX IF NOT EXISTS idx_entities_domain ON entities(normalized_domain);
 CREATE INDEX IF NOT EXISTS idx_signals_entity ON source_signals(entity_id);
 CREATE INDEX IF NOT EXISTS idx_signals_source ON source_signals(source_name);
 CREATE INDEX IF NOT EXISTS idx_founders_name ON founders(full_name);
 CREATE INDEX IF NOT EXISTS idx_links_founder ON entity_founder_links(founder_id);
+CREATE INDEX IF NOT EXISTS idx_scores_gate ON lead_scores(gate_passed);

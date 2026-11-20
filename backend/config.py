@@ -66,22 +66,36 @@ OPENALEX_PRIMARY_LAB_IDS = [
     "I4923324",    # Fraunhofer
 ]
 
-# Established Big Tech & Major Conglomerates Blocklist (normalized lower-case tokens)
+# Platform & aggregator domains that must NEVER be treated as an entity's custom domain
+PLATFORM_DOMAINS: Set[str] = {
+    "huggingface.co", "github.com", "gitlab.com", "lu.ma", "luma.com",
+    "linkedin.com", "twitter.com", "x.com", "medium.com", "substack.com",
+    "youtube.com", "arxiv.org", "orcid.org", "openalex.org", "doi.org",
+    "wikipedia.org", "notion.site", "linktr.ee", "google.com", "apple.com"
+}
+
+# Established Big Tech, Legacy Corporates & Research Institutes Blocklist
 BIG_TECH_BLOCKLIST: Set[str] = {
-    # US / Global Big Tech
+    # US / Global Big Tech & Legacy Hardware/IT
     "google", "alphabet", "deepmind", "meta", "facebook", "microsoft", "nvidia",
     "apple", "amazon", "aws", "intel", "amd", "ibm", "oracle", "salesforce",
     "adobe", "cisco", "qualcomm", "broadcom", "uber", "netflix", "paypal",
-    # Asian Giants
+    "hewlett packard", "hpe", "hp", "seagate", "western digital", "dell",
+    # Asian Giants & Conglomerates
     "samsung", "huawei", "alibaba", "tencent", "baidu", "bytedance", "tsmc",
-    "sony", "panasonic", "hitachi", "nec", "fujitsu", "lenovo",
-    # German & European Conglomerates
+    "sony", "panasonic", "hitachi", "nec", "fujitsu", "lenovo", "sumitomo",
+    # German & European Conglomerates & Industrial Legacy
     "sap", "siemens", "bosch", "robert bosch", "bmw", "mercedes", "mercedes-benz",
     "daimler", "volkswagen", "vw", "porsche", "audi", "basf", "bayer",
     "boehringer ingelheim", "merck", "sanofi", "novartis", "roche", "airbus",
     "philips", "asml", "infineon", "deutsche telekom", "telekom", "ericsson",
     "nokia", "zf friedrichshafen", "continental", "thyssenkrupp", "e.on", "rwe",
-    "zeiss", "carl zeiss", "trumpf", "fraunhofer", "max planck", "helmholtz",
+    "zeiss", "carl zeiss", "trumpf", "dow", "dow chemical", "knauf", "nxp",
+    "regeneron", "akzonobel", "framatome", "arup", "cosmote", "rai",
+    "valeo", "safran", "thales", "alstom", "stmicroelectronics", "henkel",
+    # Research Institutes / Consortia (not startups)
+    "fraunhofer", "max planck", "helmholtz", "leibniz", "flanders make",
+    "eurecat", "silicon austria labs", "vito", "tno", "vtt", "inria", "cern",
     # Well-known Late Stage / Public European Tech
     "spotify", "adyen", "klarna", "delivery hero", "zalando", "auto1", "hellofresh",
     # Open Source Foundations / Consortiums

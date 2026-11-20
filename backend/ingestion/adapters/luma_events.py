@@ -29,6 +29,15 @@ TECH_KEYWORDS = {
 }
 
 
+COMMUNITY_REGEX = re.compile(
+    r"(?i)\b(community|communities|network|women in tech|club|meetup|association|society|chapter|hub|cohort|events|court|summit|conference)\b"
+)
+
+
+def is_community_or_event_org(name: str) -> bool:
+    return bool(COMMUNITY_REGEX.search(name))
+
+
 def is_tech_startup_event(title: str, description: str = "") -> bool:
     text = f"{title} {description}".lower()
     tokens = set(re.findall(r"\b\w+\b", text))
@@ -129,6 +138,11 @@ class LumaEventsAdapter(BaseSignalAdapter):
                             org_name = hosts[0].get("name")
 
                         if not org_name:
+                            continue
+
+                        # Bug 3 Fix: Exclude pure event communities / meetup networks
+                        if is_community_or_event_org(org_name):
+                            logger.debug("Skipping event community/network '%s'", org_name)
                             continue
 
                         norm_key = org_name.lower().strip()

@@ -122,6 +122,9 @@ class HuggingFaceHubAdapter(BaseSignalAdapter):
                 org_fullname = org_meta.get("fullname") or org_name
                 canonical_name = org_fullname if len(org_fullname) > 2 else org_name
                 hf_url = f"https://huggingface.co/{org_name}"
+                custom_site = org_meta.get("website") or org_meta.get("homepage")
+                effective_website = custom_site if custom_site and "http" in custom_site else hf_url
+                norm_domain = normalize_domain(custom_site) if custom_site else None
 
                 founders: List[RawFounder] = []
                 if isinstance(members, list):
@@ -157,7 +160,8 @@ class HuggingFaceHubAdapter(BaseSignalAdapter):
 
                 candidate = RawCandidate(
                     canonical_name=canonical_name,
-                    website_url=hf_url,
+                    normalized_domain=norm_domain,
+                    website_url=effective_website,
                     country_code=None,  # HF doesn't guarantee country, can be enriched downstream
                     description=(
                         f"AI research lab & startup developing open-weights models on Hugging Face. "

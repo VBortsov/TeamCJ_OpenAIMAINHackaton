@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 import tldextract
 
-from backend.config import settings
+from backend.config import settings, PLATFORM_DOMAINS
 
 logger = logging.getLogger(__name__)
 
@@ -30,6 +30,7 @@ def normalize_domain(url_or_domain: Optional[str]) -> Optional[str]:
     """
     Extract and normalize the top domain under public suffix (eTLD+1).
     Example: 'https://sub.portal.deeptech.de/index.html' -> 'deeptech.de'
+    Returns None if domain is in PLATFORM_DOMAINS (huggingface.co, github.com, etc.).
     """
     if not url_or_domain:
         return None
@@ -47,10 +48,14 @@ def normalize_domain(url_or_domain: Optional[str]) -> Optional[str]:
 
     try:
         extracted = _extractor(cleaned)
+        domain = None
         if extracted.domain and extracted.suffix:
-            return f"{extracted.domain}.{extracted.suffix}".lower()
+            domain = f"{extracted.domain}.{extracted.suffix}".lower()
         elif extracted.domain:
-            return extracted.domain.lower()
+            domain = extracted.domain.lower()
+
+        if domain and domain not in PLATFORM_DOMAINS:
+            return domain
     except Exception as e:
         logger.debug("Failed to extract domain from %s: %s", url_or_domain, e)
 
@@ -74,11 +79,11 @@ def generate_entity_id(
     """
     Deterministic UUIDv5.
     Priority:
-    1. normalized_domain if present
+    1. Valid non-platform normalized_domain if present
     2. source_name:source_native_id if present
     3. canonical_name slug
     """
-    if normalized_domain:
+    if normalized_domain and normalized_domain not in PLATFORM_DOMAINS:
         return str(uuid.uuid5(uuid.NAMESPACE_DNS, normalized_domain))
     
     if source_name and source_native_id:
@@ -168,6 +173,8 @@ class DatabaseRepository:
         Returns the entity_id.
         """
         norm_domain = normalize_domain(normalized_domain or website_url)
+        if norm_domain in PLATFORM_DOMAINS:
+            norm_domain = None
         raw_tags_json = json.dumps(raw_tags or [], ensure_ascii=False)
         lp_synergy_json = json.dumps(lp_synergy or {}, ensure_ascii=False) if lp_synergy else None
 
@@ -177,6 +184,14 @@ class DatabaseRepository:
             existing_id = None
             if norm_domain:
                 cursor.execute("SELECT entity_id FROM entities WHERE normalized_domain = ?", (norm_domain,))
+                row = cursor.fetchone()
+                if row:
+                    existing_id = row["entity_id"]
+            elif source_name and source_native_id:
+                cursor.execute(
+                    "SELECT entity_id FROM source_signals WHERE source_name = ? AND source_native_id = ?",
+                    (source_name, source_native_id)
+                )
                 row = cursor.fetchone()
                 if row:
                     existing_id = row["entity_id"]
@@ -200,6 +215,9 @@ class DatabaseRepository:
                 canonical_name = COALESCE(excluded.canonical_name, entities.canonical_name),
                 normalized_domain = COALESCE(excluded.normalized_domain, entities.normalized_domain),
                 website_url = COALESCE(excluded.website_url, entities.website_url),
+                legal_name = COALESCE(excluded.legal_name, entities.legal_name),
+                legal_form = COALESCE(excluded.legal_form, entities.legal_form),
+                register_number = COALESCE(excluded.register_number, entities.register_number),
                 country_code = COALESCE(excluded.country_code, entities.country_code),
                 description = CASE
                     WHEN entities.description IS NULL OR length(entities.description) < length(excluded.description)
@@ -216,6 +234,29 @@ class DatabaseRepository:
             conn.commit()
 
         return entity_id
+
+    def update_entity_impressum(
+        self,
+        entity_id: str,
+        legal_name: Optional[str] = None,
+        legal_form: Optional[str] = None,
+        register_number: Optional[str] = None,
+        country_code: Optional[str] = None,
+    ) -> None:
+        """Update legal registration details from Impressum scraping."""
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            sql = """
+            UPDATE entities SET
+                legal_name = COALESCE(?, legal_name),
+                legal_form = COALESCE(?, legal_form),
+                register_number = COALESCE(?, register_number),
+                country_code = COALESCE(?, country_code),
+                updated_at = CURRENT_TIMESTAMP
+            WHERE entity_id = ?
+            """
+            cursor.execute(sql, (legal_name, legal_form, register_number, country_code, entity_id))
+            conn.commit()
 
     def upsert_signal(
         self,
@@ -428,3 +469,90 @@ class DatabaseRepository:
                 candidates.append(ent)
 
         return candidates
+
+    def check_funding_blocklist(
+        self,
+        canonical_name: str,
+        normalized_domain: Optional[str] = None
+    ) -> Tuple[bool, Optional[str]]:
+        """
+        Check if entity matches known funded / scaleup companies.
+        Returns (is_blocked, reason_string).
+        """
+        slug = slugify(canonical_name)
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            # 1. Check by domain
+            if normalized_domain:
+                cursor.execute(
+                    "SELECT source, round_info FROM funding_blocklist WHERE normalized_domain = ?",
+                    (normalized_domain,)
+                )
+                row = cursor.fetchone()
+                if row:
+                    return True, f"Domain '{normalized_domain}' in funding blocklist ({row['source']}: {row['round_info']})"
+
+            # 2. Check by name slug
+            cursor.execute(
+                "SELECT source, round_info FROM funding_blocklist WHERE normalized_name = ?",
+                (slug,)
+            )
+            row = cursor.fetchone()
+            if row:
+                return True, f"Company '{canonical_name}' in funding blocklist ({row['source']}: {row['round_info']})"
+
+        return False, None
+
+    def save_lead_score(
+        self,
+        entity_id: str,
+        gate_passed: bool,
+        kill_reasons: Optional[List[str]] = None,
+        deterministic_score: float = 0.0,
+        score_breakdown: Optional[Dict[str, Any]] = None
+    ) -> None:
+        """Upsert lead score and kill gate status."""
+        kill_reasons_json = json.dumps(kill_reasons or [], ensure_ascii=False)
+        score_breakdown_json = json.dumps(score_breakdown or {}, ensure_ascii=False)
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            sql = """
+            INSERT INTO lead_scores (
+                entity_id, gate_passed, kill_reasons_json, deterministic_score, score_breakdown_json
+            ) VALUES (?, ?, ?, ?, ?)
+            ON CONFLICT(entity_id) DO UPDATE SET
+                gate_passed = excluded.gate_passed,
+                kill_reasons_json = excluded.kill_reasons_json,
+                deterministic_score = excluded.deterministic_score,
+                score_breakdown_json = excluded.score_breakdown_json,
+                scored_at = CURRENT_TIMESTAMP
+            """
+            cursor.execute(sql, (
+                entity_id, 1 if gate_passed else 0, kill_reasons_json,
+                deterministic_score, score_breakdown_json
+            ))
+            conn.commit()
+
+    def get_surviving_candidates(self) -> List[Dict[str, Any]]:
+        """Retrieve only candidates that passed all 5 Kill-Gates, with scores attached."""
+        all_candidates = self.export_all_candidates()
+        surviving = []
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            for cand in all_candidates:
+                ent_id = cand["entity_id"]
+                cursor.execute("SELECT * FROM lead_scores WHERE entity_id = ?", (ent_id,))
+                score_row = cursor.fetchone()
+                if score_row:
+                    s_dict = dict(score_row)
+                    if s_dict["gate_passed"] == 1:
+                        cand["deterministic_score"] = s_dict["deterministic_score"]
+                        try:
+                            cand["score_breakdown"] = json.loads(s_dict["score_breakdown_json"]) if s_dict.get("score_breakdown_json") else {}
+                        except Exception:
+                            cand["score_breakdown"] = {}
+                        surviving.append(cand)
+                else:
+                    # If not scored yet, include for scoring
+                    surviving.append(cand)
+        return surviving

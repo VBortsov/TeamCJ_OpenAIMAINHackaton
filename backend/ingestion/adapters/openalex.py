@@ -28,8 +28,15 @@ EXTENDED_BIG_CORP_BLOCKLIST: Set[str] = BIG_TECH_BLOCKLIST | {
     "mckinsey", "boston consulting", "bcg", "bain & company", "deloitte", "pwc", "kpmg", "ey",
     "accenture", "capgemini", "infosys", "tcs", "wipro", "cognizant",
     "goldman sachs", "jpmorgan", "morgan stanley", "ubs", "credit suisse", "deutsche bank",
-    "bnp paribas", "santander", "barclays", "hsbc", "citigroup", "blackrock"
+    "bnp paribas", "santander", "barclays", "hsbc", "citigroup", "blackrock",
+    # Legacy Corporates & Research Consortia added in Wave 2
+    "fraunhofer", "flanders make", "eurecat", "silicon austria labs", "dow", "dow chemical",
+    "knauf", "nxp", "hewlett packard", "hpe", "hp", "seagate", "regeneron", "akzonobel",
+    "framatome", "arup", "sumitomo", "cosmote", "rai", "valeo", "safran", "thales",
+    "alstom", "stmicroelectronics", "henkel", "vito", "tno", "vtt"
 }
+
+ALLOWED_EU_COUNTRIES: Set[str] = {"DE", "CH", "AT", "NL", "FR", "BE", "GB", "DK", "SE"}
 
 
 def is_corporate_or_big_tech(name: str) -> bool:
@@ -155,11 +162,38 @@ class OpenAlexAdapter(BaseSignalAdapter):
                     country_code = c_inst.get("country_code")
                     ror = c_inst.get("ror")
 
-                    # Normalize key
+                    # Bug 2 Fix: Restrict to European/DACH focus
+                    if country_code and country_code not in ALLOWED_EU_COUNTRIES:
+                        continue
+
                     norm_key = clean_name.lower().strip()
                     if norm_key in seen_companies or not clean_name:
                         continue
                     seen_companies.add(norm_key)
+
+                    # Bug 2 Fix: Check OpenAlex works_count <= 35 (excludes legacy enterprises)
+                    inst_native_id = c_id.split("/")[-1] if "/" in c_id else c_id
+                    works_count = 1
+                    homepage_url = None
+                    try:
+                        inst_meta = await client.get_json(
+                            f"https://api.openalex.org/institutions/{inst_native_id}",
+                            headers=headers or None,
+                            params={"select": "id,display_name,works_count,homepage_url,country_code"},
+                            use_cache=True
+                        )
+                        works_count = inst_meta.get("works_count", 1)
+                        homepage_url = inst_meta.get("homepage_url")
+                        if not country_code:
+                            country_code = inst_meta.get("country_code")
+                    except Exception as meta_err:
+                        logger.debug("Could not fetch institution meta for %s: %s", inst_native_id, meta_err)
+
+                    if works_count > 35:
+                        logger.info("Skipping legacy enterprise '%s' (works_count=%d > 35)", clean_name, works_count)
+                        continue
+
+                    norm_domain = normalize_domain(homepage_url) if homepage_url else None
 
                     signal = RawSignal(
                         source_name=self.name,
@@ -172,6 +206,7 @@ class OpenAlexAdapter(BaseSignalAdapter):
                             "cited_by_count": cited_by,
                             "primary_topic": topic_name,
                             "institution_openalex_id": c_id,
+                            "works_count": works_count,
                             "ror": ror
                         },
                         source_url=work_doi if work_doi.startswith("http") else f"https://openalex.org/{work_id.split('/')[-1]}"
@@ -180,9 +215,11 @@ class OpenAlexAdapter(BaseSignalAdapter):
                     candidate = RawCandidate(
                         canonical_name=clean_name,
                         legal_name=raw_cname,
+                        normalized_domain=norm_domain,
+                        website_url=homepage_url,
                         country_code=country_code,
                         description=(
-                            f"Early-stage venture co-authoring scientific research on '{work_title}' "
+                            f"Early-stage venture (works_count: {works_count}) co-authoring scientific research on '{work_title}' "
                             f"in topic area '{topic_name}' with elite EU researchers."
                         ),
                         raw_tags=["DeepTech", "Research Co-Affiliation", "Academic Spin-off", topic_name],
