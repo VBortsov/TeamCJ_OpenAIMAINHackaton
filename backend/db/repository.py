@@ -147,6 +147,10 @@ class DatabaseRepository:
 
         with get_db_connection(self.db_path) as conn:
             conn.executescript(schema_sql)
+            # Non-breaking migration check: Ensure 'city' column exists on entities
+            cols = [row["name"] for row in conn.execute("PRAGMA table_info(entities)").fetchall()]
+            if "city" not in cols:
+                conn.execute("ALTER TABLE entities ADD COLUMN city TEXT")
             conn.commit()
         logger.info("Database schema initialized at %s", self.db_path)
 
@@ -159,6 +163,7 @@ class DatabaseRepository:
         legal_form: Optional[str] = None,
         register_number: Optional[str] = None,
         country_code: Optional[str] = None,
+        city: Optional[str] = None,
         incorporation_date: Optional[str] = None,
         domain_created_date: Optional[str] = None,
         description: Optional[str] = None,
@@ -207,10 +212,10 @@ class DatabaseRepository:
             sql = """
             INSERT INTO entities (
                 entity_id, canonical_name, normalized_domain, website_url,
-                legal_name, legal_form, register_number, country_code,
+                legal_name, legal_form, register_number, country_code, city,
                 incorporation_date, domain_created_date, description,
                 raw_tags_json, funding_status, lp_synergy_json
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(entity_id) DO UPDATE SET
                 canonical_name = COALESCE(excluded.canonical_name, entities.canonical_name),
                 normalized_domain = COALESCE(excluded.normalized_domain, entities.normalized_domain),
@@ -219,6 +224,7 @@ class DatabaseRepository:
                 legal_form = COALESCE(excluded.legal_form, entities.legal_form),
                 register_number = COALESCE(excluded.register_number, entities.register_number),
                 country_code = COALESCE(excluded.country_code, entities.country_code),
+                city = COALESCE(excluded.city, entities.city),
                 description = CASE
                     WHEN entities.description IS NULL OR length(entities.description) < length(excluded.description)
                     THEN excluded.description ELSE entities.description END,
@@ -227,7 +233,7 @@ class DatabaseRepository:
             """
             cursor.execute(sql, (
                 entity_id, canonical_name, norm_domain, website_url,
-                legal_name, legal_form, register_number, country_code,
+                legal_name, legal_form, register_number, country_code, city,
                 incorporation_date, domain_created_date, description,
                 raw_tags_json, funding_status, lp_synergy_json
             ))
@@ -242,8 +248,9 @@ class DatabaseRepository:
         legal_form: Optional[str] = None,
         register_number: Optional[str] = None,
         country_code: Optional[str] = None,
+        city: Optional[str] = None,
     ) -> None:
-        """Update legal registration details from Impressum scraping."""
+        """Update legal registration details and city from Impressum scraping."""
         with self.get_connection() as conn:
             cursor = conn.cursor()
             sql = """
@@ -252,10 +259,11 @@ class DatabaseRepository:
                 legal_form = COALESCE(?, legal_form),
                 register_number = COALESCE(?, register_number),
                 country_code = COALESCE(?, country_code),
+                city = COALESCE(?, city),
                 updated_at = CURRENT_TIMESTAMP
             WHERE entity_id = ?
             """
-            cursor.execute(sql, (legal_name, legal_form, register_number, country_code, entity_id))
+            cursor.execute(sql, (legal_name, legal_form, register_number, country_code, city, entity_id))
             conn.commit()
 
     def upsert_signal(

@@ -1,5 +1,5 @@
 """
-Wave 2 Ingestion, Enrichment, Kill-Gates & ML Feature Pipeline Runner.
+Wave 2 Ingestion, Enrichment, Kill-Gates, Scorer, ML Export & Frontend Provenance Pipeline.
 
 Orchestrates:
 1. Funding Blocklist synchronization (RSS + YC <= 2024 + curated scaleups)
@@ -7,16 +7,19 @@ Orchestrates:
 3. German § 5 DDG Impressum scraping & GitHub anti-fake-star verification
 4. Deterministic 5-Gate Kill screening (Zero-LLM cost)
 5. Top-K Founder Pedigree & HTGF LP Synergy enrichment (OpenAI + disk cache / heuristic fallback)
-6. Transparent 0-100 multi-pillar lead scoring
-7. ML Inference contract export (data/live_candidates_for_ml.csv)
-8. Comprehensive diagnostic Funnel & Leaderboard summary tables
+6. Post-enrichment Company Age / Scaleup Kill-Gate enforcement (eliminates legacy corporates like Ingeneric)
+7. Transparent 0-100 multi-pillar lead scoring with fine-grained differentiation
+8. ML Inference contract export (data/live_candidates_for_ml.csv)
+9. Frontend Provenance Feed export (data/wave2_frontend_feed.json) & Funnel Leaderboard
 """
 
 from __future__ import annotations
 import argparse
 import asyncio
+from datetime import datetime, timezone
 import json
 import logging
+import shutil
 import sys
 import time
 from pathlib import Path
@@ -51,17 +54,62 @@ logging.basicConfig(
 logger = logging.getLogger("run_wave2")
 
 
+def format_source_label(sig: Dict[str, Any]) -> Dict[str, str]:
+    """Transforms raw source signal into human-friendly provenance badge."""
+    src = sig.get("source_name", "")
+    url = sig.get("source_url", "")
+    metrics = sig.get("raw_metrics", {})
+    label = "Signal Feed"
+    summary = "Discovered early-stage signal"
+
+    if src == "eth_rwth":
+        if "rwth" in url.lower() or "rwth" in str(metrics).lower():
+            label = "RWTH Aachen 2026 Spin-off Award"
+            summary = "Official winner of the RWTH Aachen University Spin-off Award"
+        else:
+            label = "ETH Zurich 2026 Spin-off Roster"
+            summary = "Recognized academic spin-off from ETH Zurich"
+    elif src == "cordis_erc":
+        label = "EU CORDIS ERC Proof-of-Concept"
+        summary = "Horizon Europe ERC Proof-of-Concept grant commercializing university research"
+    elif src == "hf_hub":
+        label = "Hugging Face Trending AI Org"
+        summary = "High developer velocity and model downloads on Hugging Face Hub"
+    elif src == "openalex":
+        label = "OpenAlex Research Co-Affiliation"
+        summary = "Co-authorship between top European research lab and startup"
+    elif src == "luma_events":
+        label = "German AI Demo-Day & Pitch Event"
+        summary = "Founder demo-day pitch at German tech hub event"
+
+    return {
+        "source_name": src,
+        "source_label": label,
+        "signal_date": sig.get("signal_date", "2026-01-01"),
+        "source_url": url,
+        "summary": summary
+    }
+
+
 async def run_wave2_pipeline(
     limit_per_adapter: int = 30,
     top_k: int = 25,
-    skip_ingestion: bool = False
+    skip_ingestion: bool = False,
+    clear_cache: bool = False
 ) -> DatabaseRepository:
-    """Execute end-to-end Wave 2 pipeline."""
+    """Execute end-to-end Wave 2 / 2.5 pipeline."""
     start_time = time.time()
     logger.info("================================================================================")
-    logger.info("Starting Wave 2 Pipeline: Ingestion + Impressum + Kill-Gates + Scorer + ML Export")
+    logger.info("Starting Wave 2 / 2.5 Pipeline: Ingestion + Provenance + Kill-Gates + Scorer")
     logger.info("Target: MAIN Summit 2026 - HTGF Track (~70%% DACH Pre-Seed/Seed DeepTech)")
     logger.info("================================================================================")
+
+    # Clear stale LLM cache if requested
+    llm_cache_dir = settings.DATA_DIR / "llm_cache"
+    if clear_cache and llm_cache_dir.exists():
+        logger.info("Clearing stale LLM cache directory: %s", llm_cache_dir)
+        shutil.rmtree(llm_cache_dir)
+        llm_cache_dir.mkdir(parents=True, exist_ok=True)
 
     # 1. Initialize SQLite Database
     repo = DatabaseRepository(settings.SQLITE_DB_PATH)
@@ -110,6 +158,7 @@ async def run_wave2_pipeline(
                         legal_form=cand.legal_form,
                         register_number=cand.register_number,
                         country_code=cand.country_code,
+                        city=cand.city,
                         incorporation_date=cand.incorporation_date,
                         domain_created_date=cand.domain_created_date,
                         description=cand.description,
@@ -170,7 +219,6 @@ async def run_wave2_pipeline(
         impressum_map: Dict[str, ImpressumResult] = {}
         github_map: Dict[str, GitHubRepoMetrics] = {}
 
-        # Run Impressum scraping concurrently with concurrency limit (semaphore 5)
         sem = asyncio.Semaphore(5)
 
         async def scrape_impressum_task(cand: Dict[str, Any]):
@@ -189,13 +237,14 @@ async def run_wave2_pipeline(
                 ent_id, imp_res = res
                 impressum_map[ent_id] = imp_res
                 # Update entity legal details in DB if found
-                if imp_res.legal_name or imp_res.register_number or imp_res.legal_form:
+                if imp_res.legal_name or imp_res.register_number or imp_res.legal_form or imp_res.city:
                     repo.update_entity_impressum(
                         entity_id=ent_id,
                         legal_name=imp_res.legal_name,
                         legal_form=imp_res.legal_form,
                         register_number=imp_res.register_number,
-                        country_code="DE" if imp_res.register_number and "HRB" in imp_res.register_number else None
+                        country_code="DE" if imp_res.register_number and "HRB" in imp_res.register_number else None,
+                        city=imp_res.city
                     )
                 # Link newly discovered founders (Geschäftsführer)
                 for f_name in imp_res.founders:
@@ -216,13 +265,11 @@ async def run_wave2_pipeline(
             imp = impressum_map.get(ent_id)
             target = imp.github_org if imp and imp.github_org else None
             if not target:
-                # Check founders
                 for f in cand.get("founders", []):
                     if f.get("github_handle"):
                         target = f["github_handle"]
                         break
             if not target:
-                # Check signals
                 for s in cand.get("signals", []):
                     if "github.com" in s.get("source_url", ""):
                         target = s["source_url"]
@@ -255,11 +302,13 @@ async def run_wave2_pipeline(
             "gate3_corporate_age_failed": 0,
             "gate4_fake_stars_failed": 0,
             "gate5_already_funded_failed": 0,
+            "post_enrichment_age_kills": 0,
             "total_passed": 0,
         }
 
         # Reload updated candidates
         all_candidates = repo.export_all_candidates()
+        rejected_audit: List[Dict[str, Any]] = []
 
         for cand in all_candidates:
             ent_id = cand["entity_id"]
@@ -291,6 +340,15 @@ async def run_wave2_pipeline(
 
             if result.gate_passed:
                 gate_counts["total_passed"] += 1
+            else:
+                rejected_audit.append({
+                    "entity_id": ent_id,
+                    "canonical_name": cand["canonical_name"],
+                    "country_code": cand.get("country_code") or "N/A",
+                    "website_url": cand.get("website_url"),
+                    "discovered_from": [format_source_label(s)["source_label"] for s in cand.get("signals", [])],
+                    "kill_reasons": result.kill_reasons
+                })
 
             repo.save_lead_score(
                 entity_id=ent_id,
@@ -312,7 +370,6 @@ async def run_wave2_pipeline(
         # Fetch candidates that passed Kill-Gates
         surviving_candidates = repo.get_surviving_candidates()
 
-        # Prioritize candidates: DACH / DE first, then spin-offs/academic signals, then signals count
         def priority_key(cand: Dict[str, Any]) -> tuple:
             cc = (cand.get("country_code") or "").upper()
             is_de = 1 if cc == "DE" else (0.85 if cc in ("CH", "AT") else 0.5)
@@ -334,7 +391,33 @@ async def run_wave2_pipeline(
             # 1. Enrich founder pedigree flags & HTGF LP matches (disk cache + OpenAI / heuristic fallback)
             profile: EnrichedProfile = enricher.enrich(cand)
 
-            # 2. Compute 0-100 multi-pillar score
+            # 2. Check for post-enrichment age or funding kills (e.g. Ingeneric founded 2001)
+            if profile.is_post_enrichment_kill:
+                logger.info("Rejecting '%s' post-enrichment: %s", cand["canonical_name"], profile.kill_reason)
+                gate_counts["post_enrichment_age_kills"] += 1
+                gate_counts["total_passed"] -= 1
+                repo.save_lead_score(
+                    entity_id=ent_id,
+                    gate_passed=False,
+                    kill_reasons=[profile.kill_reason or "Post-enrichment age/scaleup kill"],
+                    deterministic_score=0.0
+                )
+                rejected_audit.append({
+                    "entity_id": ent_id,
+                    "canonical_name": cand["canonical_name"],
+                    "country_code": cand.get("country_code") or "N/A",
+                    "website_url": cand.get("website_url"),
+                    "discovered_from": [format_source_label(s)["source_label"] for s in cand.get("signals", [])],
+                    "kill_reasons": [profile.kill_reason or "Gate 3: Company age > 3.5 years"]
+                })
+                continue
+
+            # Update city on candidate if discovered
+            if profile.city:
+                cand["city"] = profile.city
+                repo.update_entity_impressum(entity_id=ent_id, city=profile.city)
+
+            # 3. Compute 0-100 multi-pillar score
             score_breakdown: ScoreBreakdown = LeadScorer.calculate_score(
                 candidate=cand,
                 profile=profile,
@@ -342,7 +425,7 @@ async def run_wave2_pipeline(
                 github=gh
             )
 
-            # 3. Update database with final score and breakdown
+            # 4. Update database with final score and breakdown
             repo.save_lead_score(
                 entity_id=ent_id,
                 gate_passed=True,
@@ -361,9 +444,9 @@ async def run_wave2_pipeline(
         scored_candidates.sort(key=lambda c: c["deterministic_score"], reverse=True)
 
         # =========================================================================
-        # Stage 6: ML Inference Contract Export
+        # Stage 6: ML Inference Contract & Frontend Provenance Feed Export
         # =========================================================================
-        logger.info("\n--- [Stage 6] Exporting ML Inference Contract & Clean Snapshots ---")
+        logger.info("\n--- [Stage 6] Exporting ML Inference Contract & Frontend Provenance Feed ---")
         ml_csv_path = settings.DATA_DIR / "live_candidates_for_ml.csv"
         export_ml_contract(scored_candidates, output_path=ml_csv_path)
 
@@ -372,7 +455,82 @@ async def run_wave2_pipeline(
         all_exported = repo.export_all_candidates()
         with open(json_export_path, "w", encoding="utf-8") as f:
             json.dump(all_exported, f, indent=2, ensure_ascii=False)
-        logger.info("Exported JSON snapshot to %s", json_export_path)
+
+        # Export Frontend Provenance Feed JSON (data/wave2_frontend_feed.json)
+        frontend_feed_path = settings.DATA_DIR / "wave2_frontend_feed.json"
+        feed_leads = []
+        for cand in scored_candidates:
+            prof: EnrichedProfile = cand["enriched_profile"]
+            bd: ScoreBreakdown = cand["score_breakdown"]
+            feed_leads.append({
+                "entity_id": cand["entity_id"],
+                "name": cand["canonical_name"],
+                "canonical_name": cand["canonical_name"],
+                "website_url": cand.get("website_url"),
+                "country_code": cand.get("country_code") or "DE",
+                "city": cand.get("city") or prof.city or "Aachen",
+                "legal_name": cand.get("legal_name") or cand["canonical_name"],
+                "legal_form": cand.get("legal_form"),
+                "register_number": cand.get("register_number"),
+                "founding_year": prof.founding_year or 2025,
+                "htgf_vertical": prof.htgf_vertical,
+                "description": cand.get("description", ""),
+                "discovered_from": [format_source_label(s) for s in cand.get("signals", [])],
+                "earliness_badge": "Pre-Crunchbase / Undiscovered" if prof.is_pre_crunchbase else "Grant-Only Pre-Seed",
+                "funding_summary": prof.funding_summary,
+                "score_breakdown": {
+                    "final_score": bd.final_score,
+                    "team_pedigree": bd.team_pedigree,
+                    "commercial_intent": bd.commercial_intent,
+                    "technical_moat": bd.technical_moat,
+                    "multi_signal_convergence": bd.multi_signal_convergence,
+                    "htgf_mandate_fit": bd.htgf_mandate_fit,
+                    "drivers": bd.drivers,
+                    "evidence_urls": bd.evidence_urls
+                },
+                "founders": [f.model_dump() for f in prof.founders_enriched] if prof.founders_enriched else [
+                    {
+                        "full_name": f.get("full_name"),
+                        "role": "Founder",
+                        "linkedin_url": f.get("linkedin_url"),
+                        "has_phd": prof.fd_any_phd,
+                        "is_ex_bigtech": prof.fd_any_bigtech,
+                        "prior_companies": [],
+                        "universities": [prof.city] if prof.city else [],
+                        "source_of_identity": f.get("link_method", "roster")
+                    } for f in cand.get("founders", [])
+                ],
+                "inflection_why_now": prof.inflection_why_now,
+                "devils_advocate_risks": prof.devils_advocate_risks,
+                "lp_synergy_matches": [lp.model_dump() for lp in prof.lp_synergy_matches]
+            })
+
+        dach_count = sum(1 for c in scored_candidates if (c.get("country_code") or "").upper() in ("DE", "CH", "AT"))
+        frontend_feed = {
+            "meta": {
+                "generated_at": datetime.now(timezone.utc).isoformat(),
+                "total_raw": total_raw_count,
+                "passed_kill_gates": len(scored_candidates),
+                "enriched_count": len(scored_candidates),
+                "germany_dach_share_pct": round((dach_count / max(1, len(scored_candidates))) * 100, 1)
+            },
+            "funnel": {
+                "raw_ingested": total_raw_count,
+                "gate1_hobby_failed": gate_counts["gate1_hobby_failed"],
+                "gate2_consultancy_failed": gate_counts["gate2_consultancy_failed"],
+                "gate3_corporate_age_failed": gate_counts["gate3_corporate_age_failed"],
+                "gate4_fake_stars_failed": gate_counts["gate4_fake_stars_failed"],
+                "gate5_already_funded_failed": gate_counts["gate5_already_funded_failed"],
+                "post_enrichment_age_kills": gate_counts["post_enrichment_age_kills"],
+                "survived_all_gates": len(scored_candidates)
+            },
+            "ranked_leads": feed_leads,
+            "rejected_audit": rejected_audit
+        }
+
+        with open(frontend_feed_path, "w", encoding="utf-8") as f:
+            json.dump(frontend_feed, f, indent=2, ensure_ascii=False)
+        logger.info("Exported Frontend Provenance Feed to %s", frontend_feed_path)
 
         # =========================================================================
         # Stage 7: Funnel Summary & Verification Reporting
@@ -385,6 +543,7 @@ async def run_wave2_pipeline(
             scored_candidates=scored_candidates,
             ml_csv_path=ml_csv_path,
             json_export_path=json_export_path,
+            frontend_feed_path=frontend_feed_path,
             duration=duration
         )
 
@@ -398,18 +557,19 @@ def print_funnel_summary(
     scored_candidates: List[Dict[str, Any]],
     ml_csv_path: Path,
     json_export_path: Path,
+    frontend_feed_path: Path,
     duration: float
 ) -> None:
     """Print readable verification tables using tabulate."""
     print("\n" + "=" * 90)
-    print("                    WAVE 2 FUNNEL & VERIFICATION LEADERBOARD")
+    print("               WAVE 2.5 / 3 FUNNEL & VERIFICATION LEADERBOARD")
     print("=" * 90)
 
     # 1. Ingestion & Scoring Funnel Table
     funnel_rows = [
         ["1. Raw Ingested Candidates (5 Adapters)", total_raw, "100.0%"],
-        ["2. Survived 5 Deterministic Kill-Gates", gate_counts["total_passed"], f"{(gate_counts['total_passed'] / max(1, total_raw)) * 100:.1f}%"],
-        ["3. Deeply Enriched & Multi-Pillar Scored", top_k_count, f"{(top_k_count / max(1, total_raw)) * 100:.1f}%"],
+        ["2. Survived Initial 5 Kill-Gates", gate_counts["total_passed"] + gate_counts["post_enrichment_age_kills"], f"{((gate_counts['total_passed'] + gate_counts['post_enrichment_age_kills']) / max(1, total_raw)) * 100:.1f}%"],
+        ["3. Deeply Enriched & Scored (Post-Age Kills)", top_k_count, f"{(top_k_count / max(1, total_raw)) * 100:.1f}%"],
         ["4. Top Ranked Leads for Partner Review", min(10, len(scored_candidates)), f"{(min(10, len(scored_candidates)) / max(1, total_raw)) * 100:.1f}%"],
     ]
     print("\n--- [1] INGESTION & SCREENING FUNNEL ---")
@@ -419,10 +579,11 @@ def print_funnel_summary(
     casualties_rows = [
         ["Gate 1: Homework / Hobby / Community / Event Host", gate_counts["gate1_hobby_failed"]],
         ["Gate 2: Dev Agency / IT Consultancy (without IP)", gate_counts["gate2_consultancy_failed"]],
-        ["Gate 3: Legacy Corporate / Big Tech / Age > 3.0 yrs", gate_counts["gate3_corporate_age_failed"]],
+        ["Gate 3: Legacy Corporate / Big Tech / Age > 3.5 yrs (Initial)", gate_counts["gate3_corporate_age_failed"]],
         ["Gate 4: StarScout Fake-Star Anomaly (fork_ratio < 0.03)", gate_counts["gate4_fake_stars_failed"]],
         ["Gate 5: Already Funded Seed+ / Series A+ / YC <= 2024", gate_counts["gate5_already_funded_failed"]],
-        ["Total Passing All 5 Gates", gate_counts["total_passed"]],
+        ["Post-Enrichment Kill: Company Age > 3.5 yrs (e.g. Ingeneric)", gate_counts["post_enrichment_age_kills"]],
+        ["Total Passing All Gates (Pre-Crunchbase Leads)", top_k_count],
     ]
     print("\n--- [2] DETERMINISTIC KILL-GATES SCREENING CASUALTIES ---")
     print(tabulate(casualties_rows, headers=["Screening Gate", "Casualties Flagged"], tablefmt="fancy_grid"))
@@ -431,8 +592,9 @@ def print_funnel_summary(
     print("\n--- [3] TOP-10 RANKED EARLY-STAGE LEADS (HTGF TRACK) ---")
     top10_rows = []
     for rank, cand in enumerate(scored_candidates[:10], start=1):
-        name = cand["canonical_name"][:22]
+        name = cand["canonical_name"][:20]
         cc = cand.get("country_code") or "N/A"
+        city = (cand.get("city") or cand.get("enriched_profile").city or "N/A")[:12]
         score = cand["deterministic_score"]
         bd = cand["score_breakdown"]
         prof = cand["enriched_profile"]
@@ -442,37 +604,40 @@ def print_funnel_summary(
         conv = f"{bd.multi_signal_convergence:.0f}/15"
         htgf = f"{bd.htgf_mandate_fit:.0f}/10"
         pre_cb = "Yes" if prof.is_pre_crunchbase else "No"
-        lps = ", ".join(prof.lp_synergy_matches[:2])[:25]
+        lps = ", ".join([lp.lp_name for lp in prof.lp_synergy_matches[:2]])[:24]
         top10_rows.append([
-            f"#{rank}", name, cc, f"{score:.1f}", pedigree, intent, moat, conv, htgf, pre_cb, lps
+            f"#{rank}", name, cc, city, f"{score:.1f}", pedigree, intent, moat, conv, htgf, pre_cb, lps
         ])
 
-    headers = ["Rank", "Company", "Country", "Score", "Team", "Intent", "Moat", "Signals", "HTGF", "Pre-CB", "Top LP Synergies"]
+    headers = ["Rank", "Company", "Country", "City", "Score", "Team", "Intent", "Moat", "Signals", "HTGF", "Pre-CB", "Top LP Synergies"]
     print(tabulate(top10_rows, headers=headers, tablefmt="fancy_grid"))
 
     # 4. Export Artifacts & Execution Stats
     print("\n--- [4] EXPORT ARTIFACTS & INTEGRATION FILES ---")
     export_rows = [
         ["ML Inference CSV Contract", str(ml_csv_path)],
+        ["Frontend Provenance Feed JSON", str(frontend_feed_path)],
         ["JSON Snapshot Export", str(json_export_path)],
         ["SQLite Database", str(settings.SQLITE_DB_PATH)],
-        ["Total Wave 2 Execution Time", f"{duration:.2f} seconds"],
+        ["Total Pipeline Execution Time", f"{duration:.2f} seconds"],
     ]
     print(tabulate(export_rows, headers=["Artifact / Metric", "Value"], tablefmt="fancy_grid"))
     print("=" * 90 + "\n")
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Wave 2 Ingestion, Enrichment & Scoring Runner")
+    parser = argparse.ArgumentParser(description="Wave 2.5 / 3 Pipeline Runner")
     parser.add_argument("--limit", type=int, default=30, help="Per-adapter candidate limit (default: 30)")
     parser.add_argument("--top-k", type=int, default=25, help="Number of surviving leads to deeply enrich & score (default: 25)")
     parser.add_argument("--skip-ingestion", action="store_true", help="Skip re-ingestion and run pipeline on existing database")
+    parser.add_argument("--clear-cache", action="store_true", help="Clear stale data/llm_cache before running")
     args = parser.parse_args()
 
     asyncio.run(run_wave2_pipeline(
         limit_per_adapter=args.limit,
         top_k=args.top_k,
-        skip_ingestion=args.skip_ingestion
+        skip_ingestion=args.skip_ingestion,
+        clear_cache=args.clear_cache
     ))
 
 

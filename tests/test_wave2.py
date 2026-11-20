@@ -17,10 +17,12 @@ from backend.config import PLATFORM_DOMAINS, BIG_TECH_BLOCKLIST
 from backend.db.repository import DatabaseRepository, normalize_domain, slugify
 from backend.scoring.kill_gates import KillGateEvaluator, KillGateResult
 from backend.enrichment.impressum import ImpressumScraper, ImpressumResult
-from backend.enrichment.openai_enricher import EnrichedProfile
+from backend.enrichment.openai_enricher import EnrichedProfile, LPSynergyMatch, EnrichedFounder
 from backend.scoring.scorer import LeadScorer, ScoreBreakdown
 from backend.enrichment.github_verifier import GitHubRepoMetrics
 from backend.export.ml_exporter import export_ml_contract, ISO2_TO_ISO3
+from backend.api.main import app
+from starlette.testclient import TestClient
 
 
 # =============================================================================
@@ -309,7 +311,10 @@ def test_export_ml_contract_schema_and_types():
                     fd_university_spinoff=True,
                     is_pre_crunchbase=True,
                     htgf_vertical="industrial_climate_deeptech",
-                    lp_synergy_matches=["Robert Bosch GmbH", "Schunk Group"],
+                    lp_synergy_matches=[
+                        LPSynergyMatch(lp_name="Robert Bosch GmbH", reason="Automation"),
+                        LPSynergyMatch(lp_name="Schunk Group", reason="Gripping")
+                    ],
                     inflection_why_now="Microchip manufacturing nearshoring in EU"
                 ),
                 "score_breakdown": ScoreBreakdown(
@@ -347,3 +352,52 @@ def test_export_ml_contract_schema_and_types():
         assert row["is_pre_crunchbase"] == "1"
         assert float(row["deterministic_score"]) == 84.5
         assert "Robert Bosch GmbH" in row["lp_synergy_matches"]
+
+
+# =============================================================================
+# 6. FastAPI Provenance Endpoints Tests
+# =============================================================================
+def test_fastapi_endpoints():
+    client = TestClient(app)
+
+    # Health check
+    res_health = client.get("/api/health")
+    assert res_health.status_code == 200
+    assert res_health.json()["status"] == "healthy"
+
+    # Dashboard endpoint
+    res_dash = client.get("/api/dashboard")
+    assert res_dash.status_code == 200
+    data = res_dash.json()
+    assert "meta" in data
+    assert "funnel" in data
+    assert "ranked_leads" in data
+    assert "rejected_audit" in data
+
+    # Leads list with filter
+    res_leads = client.get("/api/leads?country=DE")
+    assert res_leads.status_code == 200
+    leads = res_leads.json().get("leads", [])
+    assert len(leads) > 0
+
+    top_id = leads[0]["entity_id"]
+
+    # Lead memo endpoint
+    res_memo = client.get(f"/api/leads/{top_id}")
+    assert res_memo.status_code == 200
+    memo = res_memo.json()
+    assert memo["entity_id"] == top_id
+    assert "investment_thesis" in memo
+    assert "team_dossier" in memo
+    assert "lp_synergy_analysis" in memo
+
+    # N8N dispatch endpoint
+    res_n8n = client.post(f"/api/dispatch/n8n/{top_id}")
+    assert res_n8n.status_code == 200
+    assert res_n8n.json()["status"] in ["simulated_dispatch", "dispatched"]
+
+    # Rejected noise audit
+    res_rej = client.get("/api/rejected")
+    assert res_rej.status_code == 200
+    assert "rejected_entities" in res_rej.json()
+

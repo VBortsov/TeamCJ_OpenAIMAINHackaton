@@ -24,7 +24,10 @@ ISO2_TO_ISO3 = {
 UNIVERSITY_CITIES = {
     "aachen", "münchen", "munich", "zürich", "zurich", "berlin",
     "darmstadt", "dresden", "karlsruhe", "heidelberg", "tübingen",
-    "delft", "lausanne", "oxford", "cambridge", "leoben", "muenster"
+    "delft", "lausanne", "oxford", "cambridge", "leoben", "muenster",
+    "bonn", "erlangen", "stuttgart", "frankfurt", "hamburg", "cologne",
+    "köln", "düsseldorf", "freiburg", "würzburg", "hannover", "innsbruck",
+    "wien", "vienna", "basel", "jena", "potsdam", "braunschweig"
 }
 
 
@@ -57,34 +60,56 @@ def export_ml_contract(
         iso3 = ISO2_TO_ISO3.get(c2, "DEU" if c2 == "DE" else "CHE" if c2 == "CH" else "EU")
         is_de = 1 if iso3 == "DEU" else 0
 
-        # City & University check
-        city = cand.get("city") or cand.get("impressum_city") or ""
-        is_uni_city = 1 if any(u in city.lower() for u in UNIVERSITY_CITIES) else 0
-
-        # Cohort year
-        cohort = 2026
-        inc = cand.get("incorporation_date") or ""
-        if "2025" in inc or "2025" in str(cand.get("signals", [])):
-            cohort = 2025
-
-        tags = cand.get("raw_tags", [])
-        desc = cand.get("description", "") or ""
-        is_deeptech = 1 if any("deeptech" in t.lower() for t in tags) or "deeptech" in desc.lower() else 0
-        mentions_ai = 1 if any("ai" in t.lower() for t in tags) or "ai" in desc.lower() or "neural" in desc.lower() else 0
-
-        founders = cand.get("founders", [])
-        f_names = "; ".join(f.get("full_name", "") for f in founders if f.get("full_name"))
-        f_linkedins = "; ".join(f.get("linkedin_url", "") for f in founders if f.get("linkedin_url"))
-
         profile_raw = cand.get("enriched_profile") or {}
         profile = profile_raw.model_dump() if hasattr(profile_raw, "model_dump") else (profile_raw if isinstance(profile_raw, dict) else {})
         breakdown_raw = cand.get("score_breakdown") or {}
         breakdown = breakdown_raw.model_dump() if hasattr(breakdown_raw, "model_dump") else (breakdown_raw if isinstance(breakdown_raw, dict) else {})
-        lps = "; ".join(profile.get("lp_synergy_matches", []))
+
+        # City & University check
+        city = cand.get("city") or cand.get("impressum_city") or profile.get("city") or ""
+        tags = cand.get("raw_tags", [])
+        desc = cand.get("description", "") or ""
+        is_uni_city = 1 if (city and any(u in city.lower() for u in UNIVERSITY_CITIES)) or any(u in desc.lower() for u in UNIVERSITY_CITIES) else 0
+        is_deeptech = 1 if any("deeptech" in t.lower() for t in tags) or "deeptech" in desc.lower() else 0
+        mentions_ai = 1 if any("ai" in t.lower() for t in tags) or "ai" in desc.lower() or "neural" in desc.lower() else 0
+
+        # Founders & LinkedIns (from database or enriched profile)
+        founders = cand.get("founders", [])
+        enriched_founders = profile.get("founders_enriched", [])
+        
+        all_f_names = [f.get("full_name", "") for f in founders if f.get("full_name")]
+        all_f_linkedins = [f.get("linkedin_url", "") for f in founders if f.get("linkedin_url")]
+
+        if not all_f_names and enriched_founders:
+            all_f_names = [ef.get("full_name", "") for ef in enriched_founders if ef.get("full_name")]
+            all_f_linkedins = [ef.get("linkedin_url", "") for ef in enriched_founders if ef.get("linkedin_url")]
+
+        f_names = "; ".join(all_f_names)
+        f_linkedins = "; ".join(all_f_linkedins)
+        n_founders = max(len(founders), len(enriched_founders))
+
+        # Format LP matches cleanly
+        raw_lps = profile.get("lp_synergy_matches", [])
+        formatted_lps = []
+        for item in raw_lps:
+            if isinstance(item, dict):
+                formatted_lps.append(item.get("lp_name", ""))
+            elif hasattr(item, "lp_name"):
+                formatted_lps.append(item.lp_name)
+            else:
+                formatted_lps.append(str(item))
+        lps = "; ".join([lp for lp in formatted_lps if lp])
 
         has_cto = 1 if any(
             "cto" in (f.get("raw_bio", "") or "").lower() for f in founders
         ) or profile.get("fd_team_has_technical_founder", True) else 0
+
+        # Cohort year
+        cohort = profile.get("founding_year") or 2026
+        if not profile.get("founding_year"):
+            inc = cand.get("incorporation_date") or ""
+            if "2025" in inc or "2025" in str(cand.get("signals", [])):
+                cohort = 2025
 
         row = {
             "company_id": cand.get("entity_id"),
@@ -94,7 +119,7 @@ def export_ml_contract(
             "is_germany": is_de,
             "city": city,
             "cohort_year": cohort,
-            "n_founders_listed": len(founders),
+            "n_founders_listed": n_founders,
             "has_cto_founder": has_cto,
             "is_university_city": is_uni_city,
             "profile2026_tags": "|".join(tags),
@@ -103,7 +128,7 @@ def export_ml_contract(
             "profile2026_mentions_ai": mentions_ai,
             "founder_names": f_names,
             "founder_linkedins": f_linkedins,
-            "fd_n_founders_found": len(founders),
+            "fd_n_founders_found": n_founders,
             "fd_any_phd": 1 if profile.get("fd_any_phd") else 0,
             "fd_any_top_university": 1 if profile.get("fd_any_top_university") else 0,
             "fd_any_elite_business_school": 1 if profile.get("fd_any_elite_business_school") else 0,

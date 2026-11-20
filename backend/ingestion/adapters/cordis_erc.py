@@ -114,24 +114,18 @@ class CordisErcAdapter(BaseSignalAdapter):
                         source_url=source_url
                     )
 
-                    founder = RawFounder(
-                        full_name=f"Lead PI ({acronym})",
-                        elite_affiliations=[host_name] if host_name else [],
-                        link_method="erc_grant_pi",
-                        link_confidence=0.85
-                    )
-
                     candidate = RawCandidate(
                         canonical_name=acronym,
                         legal_name=f"{acronym} (ERC Proof of Concept, {host_name})",
                         country_code=country,
+                        city=city,
                         description=f"ERC Proof-of-Concept Project: {title}. Host: {host_name} ({city}). Objective: {objective[:200]}...",
                         raw_tags=["DeepTech", "ERC Proof-of-Concept", "Horizon Europe", "Pre-Incorporation", "Academic IP"],
                         funding_status="grant_backed",
                         source_name=self.name,
                         source_native_id=signal.source_native_id,
                         signals=[signal],
-                        founders=[founder]
+                        founders=[]
                     )
                     candidates.append(candidate)
 

@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS entities (
     legal_form TEXT,                                  -- GmbH, AG, UG, SA, Ltd., etc.
     register_number TEXT,                             -- e.g., HRB 123456
     country_code TEXT,                                -- ISO 3166-1 alpha-2 (DE, CH, AT, NL, etc.)
+    city TEXT,                                        -- Headquarters / campus city (Aachen, Zurich, Munich, etc.)
     incorporation_date TEXT,                          -- YYYY-MM-DD
     domain_created_date TEXT,                         -- WHOIS domain creation date
     description TEXT,                                 -- Concise company/product summary
