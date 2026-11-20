@@ -38,7 +38,8 @@ You receive one JSON object with everything we know. Rules, no exceptions:
 4. `ml_score` is a percentile rank against our training cohort, NOT a probability of success. Describe it as
    "scores above <ml_score>% of the reference cohort". Never write "<N>% chance". For the rank use only the
    numbers in `scores.rank_today` and `scores.leads_today`; if they are absent, do not mention a rank.
-5. `ml_drivers` are what pushed the ML score up (+) or down (-); explain them in plain words.
+5. `ml_drivers` are facts about this company that pushed the ML score up (+) or down (-); explain them in plain
+   words. `not_verified_would_raise_ml_score` lists founder facts we could not verify: mention them only as unknowns.
    `base_rates` come from 688 accelerator-backed European startups (2014-2024): quote them as
    "in our training data" and treat them as correlations, not guarantees.
 6. Be concrete and short. No hype words. English.
@@ -80,14 +81,17 @@ def _prune(obj: Any) -> Any:
 
 
 def _driver(d: Dict[str, Any]) -> Dict[str, Any]:
-    """Plain-words driver. For 0/1 flags that are 0 we say 'not verified', because 0 also covers unknown."""
-    if d["feature"] == "n_founders":
-        what = f"{int(d['value'])} founder(s) known"
-    elif d["value"]:
-        what = d["label"]
-    else:
-        what = f"not verified: {d['label']}"
+    what = f"{int(d['value'])} founder(s) known" if d["feature"] == "n_founders" else d["label"]
     return {"what": what, "direction": "+" if d["contribution"] > 0 else "-", "weight": d["contribution"], "feature": d["feature"]}
+
+
+def _split_drivers(drivers: list) -> tuple[list, list]:
+    """Present facts (flag = 1, founder count) explain the score. Flags at 0 are not facts about the company:
+    only founder flags that would raise the score are passed on, as 'not verified' (0 also covers unknown)."""
+    present = [_driver(d) for d in drivers if (d["value"] or d["feature"] == "n_founders") and abs(d["contribution"]) >= 0.05]
+    unverified = [d["label"] for d in drivers
+                  if not d["value"] and d["contribution"] <= -0.05 and (d["feature"].startswith("fd_") or d["feature"] == "has_cto_founder")]
+    return present[:8], unverified[:4]
 
 
 def build_memo_input(lead: Dict[str, Any], rank: Optional[int], total: Optional[int],
@@ -95,7 +99,8 @@ def build_memo_input(lead: Dict[str, Any], rank: Optional[int], total: Optional[
     """Assemble the fact sheet for one lead from the frontend feed LeadObject + ML output."""
     bd = lead.get("score_breakdown") or {}
     drivers = (ml_row or {}).get("contributions") or []
-    used = {d["feature"] for d in drivers}
+    present, unverified = _split_drivers(drivers)
+    used = {d["feature"] for d in present}
     rates = {f: r for f, r in (base_rates.get("features") or {}).items() if f in used}
     payload = {
         "company": {k: lead.get(k) for k in (
@@ -111,7 +116,8 @@ def build_memo_input(lead: Dict[str, Any], rank: Optional[int], total: Optional[
         },
         "deterministic_drivers": bd.get("drivers"),
         "evidence_urls": bd.get("evidence_urls"),
-        "ml_drivers": [_driver(d) for d in drivers[:8] if abs(d["contribution"]) >= 0.05],
+        "ml_drivers": present,
+        "not_verified_would_raise_ml_score": unverified,
         "base_rates": {"overall_rate": base_rates.get("overall_rate"), "label": base_rates.get("label"), "by_feature": rates},
         "signals": lead.get("discovered_from"),
         "founders": lead.get("founders"),

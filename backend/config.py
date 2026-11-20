@@ -17,7 +17,7 @@ class Settings(BaseSettings):
 
     # Paid / Hackathon Tokens
     OPENAI_API_KEY: str | None = Field(default=None, description="OpenAI API key for Wave 2/3 LLM tasks")
-    OPENAI_MEMO_MODEL: str = Field(default="gpt-4o-mini", description="OpenAI model for the ML memo agent (backend/ml/memo_agent.py)")
+    OPENAI_MEMO_MODEL: str = Field(default="gpt-6.2-sol", description="OpenAI model for the ML memo agent (backend/ml/memo_agent.py)")
     ELEVENLABS_API_KEY: str | None = Field(default=None, description="ElevenLabs API key for Wave 3 partner briefing audio")
     N8N_WEBHOOK_URL: str | None = Field(default=None, description="Webhook for Top-10 leads dispatch")
 

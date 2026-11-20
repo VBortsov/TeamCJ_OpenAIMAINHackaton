@@ -408,7 +408,7 @@ Runs the ML ranking model on `data/live_candidates_for_ml.csv` (or on `leads` ro
        "why_early": "…",
        "devils_advocate_risks": ["…"],
        "next_step": "…",
-       "memo_source": "openai:gpt-4o-mini",
+       "memo_source": "openai:gpt-6.2-sol",
        "ml_drivers": []
      }}
   ]

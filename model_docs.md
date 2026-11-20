@@ -69,7 +69,7 @@ How to read this: the model is a weak but real signal. It is better at pushing u
 
 `backend/ml/scoring.py` returns per-feature contributions for every lead (weight × (value − training mean), in log-odds, relative to the average training startup). These are shown as `ml_drivers`.
 
-`backend/ml/memo_agent.py` makes one OpenAI call per lead (model from `OPENAI_MEMO_MODEL`, default `gpt-4o-mini`, structured JSON output). Input is only what the pipeline already collected: the feed lead (description, signals with URLs, founders, LP matches, deterministic drivers), scores and rank, `ml_drivers`, and base rates from the training table (`base_rates.json`). Output:
+`backend/ml/memo_agent.py` makes one OpenAI call per lead (model from `OPENAI_MEMO_MODEL` in `.env`, default `gpt-6.2-sol`, structured JSON output). Input is only what the pipeline already collected: the feed lead (description, signals with URLs, founders, LP matches, deterministic drivers), scores and rank, `ml_drivers`, and base rates from the training table (`base_rates.json`). Output:
 
 ```json
 {
@@ -79,11 +79,11 @@ How to read this: the model is a weak but real signal. It is better at pushing u
   "why_early": "...",
   "devils_advocate_risks": ["..."],
   "next_step": "...",
-  "memo_source": "openai:gpt-4o-mini",
+  "memo_source": "openai:gpt-6.2-sol",
   "ml_drivers": [{"feature": "fd_any_phd", "label": "founder with a PhD", "value": 1.0, "contribution": 0.52}]
 }
 ```
 
-Tested once against the real OpenAI API on 20 November 2026 (3 test leads, all memos returned from `gpt-4o-mini`).
+Tested once against the real OpenAI API on 20 November 2026 (3 test leads, all memos returned from `gpt-6.2-sol` in about 11 seconds, roughly 1,700 input and 400 output tokens per memo).
 
 Rules in the prompt: every claim rests on a supplied fact, URLs are only copied from the input and only attached to the fact they belong to, an empty field means unknown and not "no" (empty fields are removed before the call), and `ml_score` is never called a probability. Memos are cached in `data/memo_cache/` and regenerated only if the facts change. The agent respects the shared budget cap in `CostTracker`. If OpenAI is unreachable or the key is missing, a template memo built from the same facts is returned with `memo_source: "fallback_template"`.
