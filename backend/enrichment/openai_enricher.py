@@ -124,10 +124,25 @@ def is_empty_research(extracted: "_StructuredWebSearchOutput") -> bool:
     return not extracted.founders and not (extracted.description or "").strip()
 
 
+GITHUB_USERNAME_REGEX = re.compile(r"^[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,38})$")
+
+
+def clean_github_handle(handle: Optional[str]) -> Optional[str]:
+    """Validate and normalize a GitHub username strictly without fabrication."""
+    if not handle:
+        return None
+    h = str(handle).strip().lstrip("@")
+    h = re.sub(r"^https?://(?:www\.)?github\.com/", "", h, flags=re.I).strip("/").split("/")[0].strip()
+    if h and GITHUB_USERNAME_REGEX.match(h):
+        return h
+    return None
+
+
 class EnrichedFounder(BaseModel):
     full_name: str
     role: Optional[str] = "Co-Founder"
     linkedin_url: Optional[str] = None  # Strictly linkedin.com/in/... (never fabricated)
+    github_handle: Optional[str] = None  # Validated GitHub handle (username only, e.g. 'torvalds')
     has_phd: bool = False
     universities: List[str] = Field(default_factory=list)
     prior_companies: List[str] = Field(default_factory=list)
@@ -276,7 +291,7 @@ class OpenAIEnricher:
             f"Research startup '{cname}' (domain: '{domain}', city: '{city}') using live web search.\n"
             f"Known context: Scraped founders: {raw_founders}; Source signals: {signals}; Description: {candidate.get('description', '')[:300]}.\n\n"
             f"Tasks:\n"
-            f"1. Search web sources to identify the real founding team. If known founders {raw_founders} exist, verify their roles, PhDs, engineering/STEM backgrounds, and exact LinkedIn URLs (ONLY if verbatim in search results; DO NOT fabricate URLs).\n"
+            f"1. Search web sources to identify the real founding team. If known founders {raw_founders} exist, verify their roles, PhDs, engineering/STEM backgrounds, exact LinkedIn URLs (ONLY if verbatim in search results; DO NOT fabricate URLs), and exact GitHub handles (username only, e.g. 'torvalds'; DO NOT fabricate).\n"
             f"2. Check if this is a university spin-off (e.g. RWTH Aachen, ETH Zurich, TU Munich, Fraunhofer, ERC).\n"
             f"3. Find exact founding year and funding history. If founded in 2022 or earlier (e.g. 2001, 2015, 2020), or if already raised Series A / >= €3M, state this clearly! Keep equity rounds (seed, Series A, VC or angel investors) apart from non-dilutive money: grants, prizes, awards and fellowships (Venture Kick, EXIST, Innosuisse, ERC, EIC) are NOT funding rounds.\n"
             f"4. Propose 1-2 strategic LP synergy matches from this verified HTGF IV LP list: {HTGF_IV_LPS[:15]} with 1-sentence technical reason.\n"
@@ -322,7 +337,7 @@ class OpenAIEnricher:
                             "content": (
                                 "Extract verified facts from the research findings into the structured schema. "
                                 "STRICT RULE: Only set fields that are explicitly supported by the text. "
-                                "Never invent founders, never fabricate LinkedIn URLs (set null if not found), "
+                                "Never invent founders, never fabricate LinkedIn URLs or GitHub handles (set null if not found), "
                                 "and set is_older_than_3_5_years=True only if founded in 2022 or earlier, naming that year in older_reason. "
                                 "raised_institutional_round=True only for a priced equity round from venture or institutional investors; "
                                 "grants, prizes, awards, fellowships and accelerator stipends (Venture Kick, EXIST, Innosuisse, ERC, EIC) are not rounds. "
@@ -364,6 +379,7 @@ class OpenAIEnricher:
             for f in extracted.founders:
                 clean_li = clean_url(f.linkedin_url)
                 f.linkedin_url = clean_li if is_valid_founder_linkedin(clean_li) else None
+                f.github_handle = clean_github_handle(f.github_handle)
                 cleaned_founders.append(f)
             if not cleaned_founders:
                 # The search found facts but no people: keep the founders the scraper already had

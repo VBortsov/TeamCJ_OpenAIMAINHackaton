@@ -41,6 +41,8 @@ CURATED_FUNDED_SCALEUPS = [
     ("Volocopter", "volocopter.com", "Series E", "https://volocopter.com"),
     ("Mistral AI", "mistral.ai", "Series A/B (€600M)", "https://mistral.ai"),
     ("Poolside", "poolside.ai", "Series B ($500M)", "https://poolside.ai"),
+    ("Lightricks", "lightricks.com", "Series D ($300M+)", "https://lightricks.com"),
+    ("LTX", "ltx.io", "Late-stage / Lightricks product", "https://ltx.io"),
 ]
 
 

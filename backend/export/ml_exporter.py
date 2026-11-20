@@ -36,6 +36,15 @@ UNIVERSITY_CITIES = {
 ALLOWED_ACCELERATORS = {"yc", "techstars", "antler", "ef", "sosv", "500", "alchemist", "other"}
 
 
+DEEPTECH_REGEX = re.compile(
+    r"\b(deep[- ]?tech|robotics|quantum|photonics|biotech|semiconductor|hardware|materials|nanobody|medtech|fusion|autonomous|sensor)\b",
+    re.IGNORECASE
+)
+AI_MENTIONS_REGEX = re.compile(
+    r"(?i)\b(ai|artificial intelligence|machine learning|llm|neural|deep learning|foundation model|generative|computer vision|nlp)\b"
+)
+
+
 def export_ml_contract(
     candidates_with_scores: List[Dict[str, Any]],
     output_path: Optional[Path | str] = None
@@ -61,9 +70,13 @@ def export_ml_contract(
 
     rows = []
     for cand in candidates_with_scores:
-        c2 = (cand.get("country_code") or "DE").upper()
-        iso3 = ISO2_TO_ISO3.get(c2, "DEU" if c2 == "DE" else "CHE" if c2 == "CH" else "EU")
-        is_de = 1 if iso3 == "DEU" else 0
+        raw_c2 = (cand.get("country_code") or "").strip().upper()
+        if raw_c2:
+            iso3 = ISO2_TO_ISO3.get(raw_c2, "DEU" if raw_c2 == "DE" else "CHE" if raw_c2 == "CH" else "EU")
+            is_de = 1 if iso3 == "DEU" else 0
+        else:
+            iso3 = ""
+            is_de = 0
 
         profile_raw = cand.get("enriched_profile") or {}
         profile = profile_raw.model_dump() if hasattr(profile_raw, "model_dump") else (profile_raw if isinstance(profile_raw, dict) else {})
@@ -76,8 +89,11 @@ def export_ml_contract(
         tags = cand.get("raw_tags", [])
         desc = cand.get("description", "") or ""
         is_uni_city = 1 if (city and any(u in city.lower() for u in UNIVERSITY_CITIES)) or any(u in desc.lower() for u in UNIVERSITY_CITIES) else 0
-        is_deeptech = 1 if any("deeptech" in t.lower() for t in tags) or "deeptech" in desc.lower() else 0
-        mentions_ai = 1 if any("ai" in t.lower() for t in tags) or "ai" in desc.lower() or "neural" in desc.lower() else 0
+
+        htgf_vert = profile.get("htgf_vertical") or cand.get("htgf_vertical") or ""
+        full_text = f"{' '.join(tags)} {desc}"
+        is_deeptech = 1 if (htgf_vert in ("industrial_climate_deeptech", "life_sciences_chemistry") or bool(DEEPTECH_REGEX.search(full_text))) else 0
+        mentions_ai = 1 if bool(AI_MENTIONS_REGEX.search(full_text)) else 0
 
         # Accelerator column (exact lowercase values per features.md)
         raw_acc = (cand.get("accelerator") or "").strip().lower()

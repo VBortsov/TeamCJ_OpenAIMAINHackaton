@@ -47,6 +47,7 @@ from backend.enrichment.openai_enricher import OpenAIEnricher, EnrichedProfile
 from backend.scoring.scorer import LeadScorer, ScoreBreakdown
 from backend.export.ml_exporter import export_ml_contract
 from backend.enrichment.cost_tracker import CostTracker
+from backend.enrichment.import_founder_links import merge_offline_founder_profiles
 from backend.db.repository import clean_url, is_valid_founder_linkedin, normalize_city
 
 # Configure readable logging
@@ -108,7 +109,8 @@ async def run_wave2_pipeline(
     clear_cache: bool = False,
     confirm_clear_cache: bool = False,
     cache_only: bool = False,
-    max_budget_usd: float = 2.00
+    max_budget_usd: float = 2.00,
+    refresh_events: bool = False
 ) -> DatabaseRepository:
     """Execute end-to-end Wave 2 / 2.5 pipeline."""
     start_time = time.time()
@@ -132,6 +134,17 @@ async def run_wave2_pipeline(
 
     # 1. Initialize SQLite Database
     repo = DatabaseRepository(settings.SQLITE_DB_PATH)
+
+    # Merge optional offline founder profile enrichments if present
+    founder_enrichment_file = settings.DATA_DIR / "founder_profiles_enrichment.json"
+    if founder_enrichment_file.exists():
+        logger.info("Discovered offline founder profiles at %s — merging...", founder_enrichment_file)
+        merge_stats = merge_offline_founder_profiles(
+            enrichment_file=founder_enrichment_file,
+            cache_dir=settings.LLM_CACHE_DIR,
+            db_path=settings.SQLITE_DB_PATH
+        )
+        logger.info("Offline founder profiles merged: %s", merge_stats)
 
     async with CachedHttpClient() as http_client:
         # =========================================================================
@@ -569,6 +582,17 @@ async def run_wave2_pipeline(
         Path(output.name).replace(frontend_feed_path)
         logger.info("Exported Frontend Provenance Feed to %s", frontend_feed_path)
 
+        # Export European Events Sourcing Catalog
+        events_feed_path = settings.DATA_DIR / "events_feed.json"
+        if refresh_events or not events_feed_path.exists():
+            logger.info("Generating European events sourcing catalog from 12 hubs...")
+            luma_adapter = LumaEventsAdapter(http_client=http_client)
+            catalog = await luma_adapter.fetch_events_catalog(limit_per_city=15)
+            with NamedTemporaryFile(mode="w", encoding="utf-8", dir=events_feed_path.parent, delete=False) as output:
+                json.dump(catalog, output, indent=2, ensure_ascii=False)
+            Path(output.name).replace(events_feed_path)
+            logger.info("Persisted %d European sourcing events to %s", len(catalog), events_feed_path)
+
         # =========================================================================
         # Stage 7: Funnel Summary & Verification Reporting
         # =========================================================================
@@ -581,6 +605,7 @@ async def run_wave2_pipeline(
             ml_csv_path=ml_csv_path,
             json_export_path=json_export_path,
             frontend_feed_path=frontend_feed_path,
+            events_feed_path=events_feed_path,
             duration=duration,
             cost_tracker=cost_tracker
         )
@@ -597,7 +622,8 @@ def print_funnel_summary(
     json_export_path: Path,
     frontend_feed_path: Path,
     duration: float,
-    cost_tracker: Optional[CostTracker] = None
+    cost_tracker: Optional[CostTracker] = None,
+    events_feed_path: Optional[Path] = None
 ) -> None:
     """Print readable verification tables using tabulate."""
     print("\n" + "=" * 90)
@@ -656,6 +682,7 @@ def print_funnel_summary(
     export_rows = [
         ["ML Inference CSV Contract", str(ml_csv_path)],
         ["Frontend Provenance Feed JSON", str(frontend_feed_path)],
+        *( [["European Events Feed JSON", str(events_feed_path)]] if events_feed_path and events_feed_path.exists() else [] ),
         ["JSON Snapshot Export", str(json_export_path)],
         ["SQLite Database", str(settings.SQLITE_DB_PATH)],
         ["Total Pipeline Execution Time", f"{duration:.2f} seconds"],
@@ -689,6 +716,7 @@ def main():
     parser.add_argument("--max-budget-usd", type=float, default=2.00, help="Hard circuit-breaker budget cap in USD (default: 2.00)")
     parser.add_argument("--clear-cache", action="store_true", help="Clear stale data/llm_cache before running (requires --confirm-clear-cache)")
     parser.add_argument("--confirm-clear-cache", action="store_true", help="Confirm clearing cache (safety protection)")
+    parser.add_argument("--refresh-events", action="store_true", help="Fetch fresh European sourcing events catalog from Luma into data/events_feed.json")
     args = parser.parse_args()
 
     asyncio.run(run_wave2_pipeline(
@@ -698,7 +726,8 @@ def main():
         clear_cache=args.clear_cache,
         confirm_clear_cache=args.confirm_clear_cache,
         cache_only=args.cache_only,
-        max_budget_usd=args.max_budget_usd
+        max_budget_usd=args.max_budget_usd,
+        refresh_events=args.refresh_events
     ))
 
 

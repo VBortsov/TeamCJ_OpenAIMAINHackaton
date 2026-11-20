@@ -48,6 +48,8 @@ class ImpressumResult(BaseModel):
     deeptech_keywords_found: List[str] = Field(default_factory=list)
     github_org: Optional[str] = None
     linkedin_url: Optional[str] = None
+    founder_linkedins: List[str] = Field(default_factory=list)
+    founder_githubs: List[str] = Field(default_factory=list)
 
 
 class ImpressumScraper:
@@ -104,12 +106,13 @@ class ImpressumScraper:
                 if p_url not in legal_page_urls:
                     legal_page_urls.append(p_url)
 
-            # 2. Probe candidate legal/impressum pages
-            for leg_url in legal_page_urls[:4]:  # check top 4 candidate paths
+            # 2. Probe candidate legal/impressum & team pages
+            for leg_url in legal_page_urls[:6]:
                 try:
                     res = await client.get(leg_url, use_cache=True)
-                    if res.status_code == 200 and len(res.text) > 300:
+                    if res.status_code == 200 and len(res.text) > 200:
                         leg_soup = BeautifulSoup(res.text, "html.parser")
+                        self._extract_founder_social_links(leg_soup, result)
                         text = leg_soup.get_text(separator=" ", strip=True)
                         # Check if page actually looks like legal notice / impressum
                         if any(k in text.lower() for k in ["impressum", "angaben gemäß", "vertreten durch", "handelsregister", "registered office"]):
@@ -151,7 +154,8 @@ class ImpressumScraper:
             score += 0.2
         result.commercial_intent_score = min(score, 1.0)
 
-        # External profiles
+        # External profiles & personal founder links
+        self._extract_founder_social_links(soup, result)
         for a in soup.find_all("a"):
             href = a.get("href", "")
             if "github.com/" in href and not result.github_org:
@@ -161,6 +165,28 @@ class ImpressumScraper:
                     result.github_org = parts[0]
             if "linkedin.com/company/" in href and not result.linkedin_url:
                 result.linkedin_url = href.split("?")[0]
+
+    def _extract_founder_social_links(self, soup: BeautifulSoup, result: ImpressumResult) -> None:
+        """Extract personal linkedin.com/in/... and github.com/<user> profile links from team/about pages."""
+        for a in soup.find_all("a"):
+            href = (a.get("href") or "").strip()
+            if not href:
+                continue
+            if "linkedin.com/in/" in href:
+                clean_li = href.split("?")[0].rstrip("/")
+                if clean_li not in result.founder_linkedins:
+                    result.founder_linkedins.append(clean_li)
+            elif "github.com/" in href:
+                parsed = urlparse(href)
+                parts = [p for p in parsed.path.split("/") if p]
+                if parts and len(parts) == 1:
+                    gh_user = parts[0].strip().lstrip("@")
+                    if gh_user.lower() not in (
+                        "features", "pricing", "marketplace", "login", "signup", "about",
+                        "blog", "contact", "security", "topics", "collections", "events", "trending"
+                    ):
+                        if gh_user not in result.founder_githubs:
+                            result.founder_githubs.append(gh_user)
 
     def _parse_impressum_text(self, text: str, result: ImpressumResult) -> None:
         # 1. Commercial Register Number (HRB / HRA / CH)

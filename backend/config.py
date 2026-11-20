@@ -103,6 +103,7 @@ BIG_TECH_BLOCKLIST: Set[str] = {
     "eurecat", "silicon austria labs", "vito", "tno", "vtt", "inria", "cern",
     # Well-known Late Stage / Public European Tech
     "spotify", "adyen", "klarna", "delivery hero", "zalando", "auto1", "hellofresh",
+    "lightricks", "ltx.io", "ltx",
     # Open Source Foundations / Consortiums
     "apache", "linux foundation", "eclipse foundation", "w3c"
 }

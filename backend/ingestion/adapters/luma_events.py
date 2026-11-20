@@ -17,8 +17,18 @@ from backend.db.repository import normalize_domain
 logger = logging.getLogger(__name__)
 
 LUMA_CITIES = [
-    ("Berlin", "https://luma.com/berlin"),
-    ("Munich", "https://luma.com/munich"),
+    ("Berlin", "DE", "https://luma.com/berlin"),
+    ("Munich", "DE", "https://luma.com/munich"),
+    ("Zurich", "CH", "https://luma.com/zurich"),
+    ("Amsterdam", "NL", "https://luma.com/amsterdam"),
+    ("Paris", "FR", "https://luma.com/paris"),
+    ("London", "GB", "https://luma.com/london"),
+    ("Vienna", "AT", "https://luma.com/vienna"),
+    ("Hamburg", "DE", "https://luma.com/hamburg"),
+    ("Frankfurt", "DE", "https://luma.com/frankfurt"),
+    ("Cologne", "DE", "https://luma.com/cologne"),
+    ("Stockholm", "SE", "https://luma.com/stockholm"),
+    ("Copenhagen", "DK", "https://luma.com/copenhagen"),
 ]
 
 TECH_KEYWORDS = {
@@ -62,7 +72,7 @@ class LumaEventsAdapter(BaseSignalAdapter):
             if own_client:
                 await client.__aenter__()
 
-            for city_name, city_url in LUMA_CITIES:
+            for city_name, country_code, city_url in LUMA_CITIES:
                 if len(candidates) >= limit:
                     break
 
@@ -184,9 +194,9 @@ class LumaEventsAdapter(BaseSignalAdapter):
                             canonical_name=org_name,
                             normalized_domain=norm_domain,
                             website_url=org_website,
-                            country_code="DE",
-                            description=f"Host/Organizer of German tech event '{ev_title}' in {city_name}.",
-                            raw_tags=["Tech Event Host", "German Ecosystem", city_name, "Luma"],
+                            country_code=country_code,
+                            description=f"Host/Organizer of tech event '{ev_title}' in {city_name}.",
+                            raw_tags=["Tech Event Host", f"{city_name} Ecosystem", city_name, "Luma"],
                             funding_status="unknown",
                             source_name=self.name,
                             source_native_id=signal.source_native_id,
@@ -205,3 +215,116 @@ class LumaEventsAdapter(BaseSignalAdapter):
                 await client.__aexit__(None, None, None)
 
         return candidates[:limit]
+
+    async def fetch_events_catalog(self, limit_per_city: int = 15) -> List[Dict[str, Any]]:
+        """
+        Scrapes upcoming European tech, AI, startup, pitch, and demo-day events across all 12 hubs.
+        Unlike candidate startup ingestion, does NOT filter out community or university organizers
+        so partners have full visibility into live deal-sourcing opportunities.
+        """
+        events: List[Dict[str, Any]] = []
+        client = self.http_client or CachedHttpClient()
+        own_client = self.http_client is None
+        seen_urls: Set[str] = set()
+
+        try:
+            if own_client:
+                await client.__aenter__()
+
+            for city_name, country_code, city_url in LUMA_CITIES:
+                city_count = 0
+                try:
+                    logger.info("Scraping Luma events catalog for %s (%s)...", city_name, country_code)
+                    html_text = await client.get_text(city_url, use_cache=True)
+                    soup = BeautifulSoup(html_text, "html.parser")
+
+                    events_data: List[Dict[str, Any]] = []
+                    next_data_script = soup.find("script", id="__NEXT_DATA__")
+                    if next_data_script and next_data_script.string:
+                        try:
+                            parsed_next = json.loads(next_data_script.string)
+                            events_data = (
+                                parsed_next.get("props", {})
+                                .get("pageProps", {})
+                                .get("initialData", {})
+                                .get("data", {})
+                                .get("events", [])
+                            )
+                        except Exception as parse_err:
+                            logger.debug("Failed parsing __NEXT_DATA__ for %s: %s", city_name, parse_err)
+
+                    if not events_data:
+                        for s in soup.find_all("script", type="application/ld+json"):
+                            if s.string and "Event" in s.string:
+                                try:
+                                    ld_obj = json.loads(s.string)
+                                    if isinstance(ld_obj, list):
+                                        events_data.extend(ld_obj)
+                                    elif isinstance(ld_obj, dict):
+                                        events_data.append(ld_obj)
+                                except Exception:
+                                    pass
+
+                    for item in events_data:
+                        if city_count >= limit_per_city:
+                            break
+
+                        ev = item.get("event") or (item if item.get("@type") == "Event" else {})
+                        cal = item.get("calendar") or {}
+                        hosts = item.get("hosts") or []
+
+                        ev_title = ev.get("name") or ev.get("summary") or ""
+                        ev_slug = ev.get("url") or ev.get("slug") or ev.get("id") or ""
+                        ev_start = ev.get("start_at") or ev.get("startDate")
+                        cal_name = cal.get("name") or ""
+                        desc = ev.get("description") or cal.get("description") or ""
+
+                        if not is_tech_startup_event(ev_title, desc):
+                            continue
+
+                        # Determine organizer name
+                        org_name = None
+                        if hosts:
+                            org_name = hosts[0].get("name")
+                        if not org_name and cal_name and cal_name not in ("Personal", "Private"):
+                            org_name = cal_name
+                        if not org_name:
+                            org_name = f"{city_name} Tech Ecosystem"
+
+                        # Build event URL
+                        if ev_slug and ev_slug.startswith("http"):
+                            event_url = ev_slug
+                        elif ev_slug:
+                            event_url = f"https://luma.com/{ev_slug.lstrip('/')}"
+                        else:
+                            event_url = city_url
+
+                        if event_url in seen_urls:
+                            continue
+                        seen_urls.add(event_url)
+
+                        clean_date = ev_start[:10] if ev_start else "2026-03-01"
+
+                        events.append({
+                            "type": "event",
+                            "name": ev_title,
+                            "organiser": org_name,
+                            "location": city_name,
+                            "country_code": country_code,
+                            "date": clean_date,
+                            "url": event_url,
+                            "description": desc[:300].strip() if desc else f"European tech & founder scouting event in {city_name}.",
+                            "projects": []
+                        })
+                        city_count += 1
+
+                except Exception as city_err:
+                    logger.warning("Error fetching events catalog for %s: %s", city_name, city_err)
+
+        except Exception as e:
+            logger.error("Error in fetch_events_catalog: %s", e)
+        finally:
+            if own_client:
+                await client.__aexit__(None, None, None)
+
+        return events

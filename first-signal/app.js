@@ -827,20 +827,25 @@
       button.setAttribute("aria-pressed", String(button.dataset.eventType === type));
     });
     byId("eventResults").innerHTML = events.map(event => {
-      const timing = event.date && event.date < today ? event.pastTiming : event.timing;
+      const timing = event.date && event.date < today ? (event.pastTiming || "Past event") : (event.timing || "Event date");
       const date = event.date ? ' <time datetime="' + escape(event.date) + '">' + dateLabel(event.date) + '</time>' : '';
-      const projects = event.projects.map(([id, reason]) =>
-        '<li><button type="button" class="text-button project-link" data-open="' + escape(id) + '">' +
-        escape(teamById.get(id).name) + '</button><p>' + escape(reason) + '</p></li>'
-      ).join("");
+      const projects = (event.projects || []).map(([id, reason]) => {
+        const team = teamById.get(id);
+        const teamName = team ? team.name : id.replace("api:", "");
+        return '<li><button type="button" class="text-button project-link" data-open="' + escape(id) + '">' +
+          escape(teamName) + '</button><p>' + escape(reason) + '</p></li>';
+      }).join("");
+      const projectsSection = projects ? (
+        '<div class="event-projects"><h4>' + escape(event.projectsLabel || "Ventures from this cohort") + '</h4><ul>' + projects + '</ul>' +
+        (event.projectsSource ? sourceLink({ publisher: "Venture evidence", url: event.projectsSource }) : '') +
+        '</div>'
+      ) : '';
       return '<article class="event-row"><div class="event-overview"><div class="event-timing"><span class="event-kind ' +
         escape(event.type) + '">' + (event.type === "lab" ? "Venture lab" : event.type === "event" ? "Sourcing event" : "Competition") + '</span><span>' +
         escape(timing) + date + '</span></div><h3>' + escape(event.name) + '</h3><p class="event-organiser">' +
-        escape([event.organiser, event.location].filter(Boolean).join(" · ")) + '</p><p class="event-description">' + escape(event.description) +
-        '</p>' + sourceLink({ publisher: "Programme website", url: event.url }) + '</div>' +
-        '<div class="event-projects"><h4>' + escape(event.projectsLabel) + '</h4><ul>' + projects + '</ul>' +
-        (event.projectsSource ? sourceLink({ publisher: "Venture evidence", url: event.projectsSource }) : '') +
-        '</div></article>';
+        escape([event.organiser, event.location].filter(Boolean).join(" · ")) + '</p><p class="event-description">' + escape(event.description || "") +
+        '</p>' + (event.url ? sourceLink({ publisher: "Programme website", url: event.url }) : '') + '</div>' +
+        projectsSection + '</article>';
     }).join("");
   }
 
@@ -1121,14 +1126,19 @@
   renderEvents("all");
   if (connected) {
     window.FOUNDERHUNT_API.events().then(({ events }) => {
-      backendEvents = events.map(event => ({
-        ...event, type: "event", date: event.date.slice(0, 10),
-        timing: "Event date", pastTiming: "Past event",
-        organiser: "Luma", description: "Event listing captured by the sourcing pipeline.",
-        projectsLabel: "Linked organisers",
-        projects: event.projects.map(([id, reason]) => ["api:" + id, reason]).filter(([id]) => teamById.has(id))
-      })).filter(event => event.projects.length);
-      renderEvents(document.querySelector('[data-event-type][aria-pressed="true"]').dataset.eventType);
+      backendEvents = (events || []).map(event => ({
+        ...event,
+        type: event.type || "event",
+        date: event.date ? event.date.slice(0, 10) : "",
+        timing: event.timing || "Event date",
+        pastTiming: event.pastTiming || "Past event",
+        organiser: event.organiser || "Ecosystem Host",
+        description: event.description || "Event listing captured by the sourcing pipeline.",
+        projectsLabel: event.projectsLabel || ((event.projects && event.projects.length) ? "Ventures from this cohort" : "Linked organisers"),
+        projects: (event.projects || []).map(([id, reason]) => [id.startsWith("api:") ? id : "api:" + id, reason]).filter(([id]) => teamById.has(id))
+      }));
+      const activeBtn = document.querySelector('[data-event-type][aria-pressed="true"]');
+      renderEvents(activeBtn ? activeBtn.dataset.eventType : "all");
     }).catch(() => {});
   }
   showPage("explore");

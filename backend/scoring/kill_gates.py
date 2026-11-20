@@ -96,8 +96,9 @@ class KillGateEvaluator:
         # =========================================================================
         name_lower = name.lower()
         legal_lower = legal_name.lower()
+        domain_lower = (domain or "").lower()
         for blocked in BIG_TECH_BLOCKLIST:
-            if blocked in name_lower or (legal_lower and blocked in legal_lower):
+            if blocked in name_lower or (legal_lower and blocked in legal_lower) or (domain_lower and blocked in domain_lower):
                 g3 = False
                 reasons.append(f"Gate 3 (Legacy Corporate): Matches corporate blocklist token '{blocked}'")
                 break

@@ -686,3 +686,131 @@ def test_empty_research_is_retried_and_never_cached(tmp_path):
     e, calls = enricher([good, good], "e")
     asyncio.run(e.enrich_async(scraped))
     assert calls["n"] == 1
+
+
+def test_clean_github_handle():
+    from backend.enrichment.openai_enricher import clean_github_handle
+
+    assert clean_github_handle("https://github.com/torvalds") == "torvalds"
+    assert clean_github_handle("@octocat") == "octocat"
+    assert clean_github_handle("https://github.com/john-doe_123") is None  # invalid chars for github username
+    assert clean_github_handle("valid-user-123") == "valid-user-123"
+    assert clean_github_handle("-invalidstart") is None
+    assert clean_github_handle(None) is None
+
+
+def test_gate3_domain_blocklist(tmp_path):
+    from backend.db.repository import DatabaseRepository
+    from backend.scoring.kill_gates import KillGateEvaluator
+
+    repo = DatabaseRepository(tmp_path / "test.db")
+    evaluator = KillGateEvaluator(repo=repo)
+
+    # Candidate with a blocked domain (e.g. ltx.io)
+    cand_blocked = {
+        "entity_id": "ltx-test",
+        "canonical_name": "LTX",
+        "normalized_domain": "ltx.io",
+        "website_url": "https://ltx.io",
+        "description": "Video generation studio"
+    }
+    res = evaluator.evaluate(cand_blocked)
+    assert not res.gate3_passed
+    assert not res.gate_passed
+    assert any("Gate 3" in r and "ltx" in r.lower() for r in res.kill_reasons)
+
+
+def test_merge_offline_founder_profiles(tmp_path):
+    import json
+    from backend.db.repository import DatabaseRepository
+    from backend.enrichment.import_founder_links import merge_offline_founder_profiles
+
+    db_path = tmp_path / "test.db"
+    repo = DatabaseRepository(db_path)
+    entity_id = repo.upsert_entity(canonical_name="Acme AI", normalized_domain="acme.ai")
+    f_id = repo.upsert_founder(full_name="Alice Smith")
+    repo.link_entity_founder(entity_id=entity_id, founder_id=f_id, link_method="impressum")
+
+    cache_dir = tmp_path / "cache"
+    cache_dir.mkdir()
+    cache_file = cache_dir / f"{entity_id}.json"
+    cache_file.write_text(json.dumps({
+        "canonical_name": "Acme AI",
+        "founders_enriched": [
+            {"full_name": "Alice Smith", "role": "CEO"}
+        ]
+    }), encoding="utf-8")
+
+    enrich_file = tmp_path / "profiles.json"
+    enrich_file.write_text(json.dumps({
+        entity_id: {
+            "founders": [
+                {
+                    "full_name": "Alice Smith",
+                    "github_handle": "alice-dev",
+                    "linkedin_url": "https://linkedin.com/in/alice-smith"
+                }
+            ]
+        }
+    }), encoding="utf-8")
+
+    stats = merge_offline_founder_profiles(enrich_file, cache_dir, db_path)
+    assert stats["startups_matched"] == 1
+    assert stats["cache_files_updated"] == 1
+    assert stats["founders_updated"] >= 1
+
+    # Verify cache
+    with open(cache_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert data["founders_enriched"][0]["github_handle"] == "alice-dev"
+    assert data["founders_enriched"][0]["linkedin_url"] == "https://linkedin.com/in/alice-smith"
+
+
+def test_ml_contract_deeptech_and_ai_flags(tmp_path):
+    import csv
+    from backend.export.ml_exporter import export_ml_contract
+    from backend.enrichment.openai_enricher import EnrichedProfile
+
+    cands = [
+        {
+            "entity_id": "e1",
+            "canonical_name": "QuantumCore",
+            "country_code": "DE",
+            "city": "Munich",
+            "description": "Novel semiconductor spintronics technology.",
+            "raw_tags": ["hardware", "deeptech"],
+            "enriched_profile": EnrichedProfile(
+                canonical_name="QuantumCore",
+                htgf_vertical="industrial_climate_deeptech",
+                founders_enriched=[]
+            )
+        },
+        {
+            "entity_id": "e2",
+            "canonical_name": "SimpleStore",
+            "country_code": "",
+            "city": "",
+            "description": "Standard e-commerce Shopify plugin.",
+            "raw_tags": ["retail"],
+            "enriched_profile": EnrichedProfile(
+                canonical_name="SimpleStore",
+                htgf_vertical="digital_tech",
+                founders_enriched=[]
+            )
+        }
+    ]
+    out_csv = tmp_path / "out.csv"
+    export_ml_contract(cands, out_csv)
+
+    with open(out_csv, "r", encoding="utf-8") as f:
+        reader = list(csv.DictReader(f))
+
+    assert len(reader) == 2
+    # e1: deeptech
+    assert reader[0]["profile2026_is_deeptech"] == "1"
+    assert reader[0]["is_germany"] == "1"
+    # e2: non-deeptech, unknown country
+    assert reader[1]["profile2026_is_deeptech"] == "0"
+    assert reader[1]["is_germany"] == "0"
+    assert reader[1]["country_code"] == ""
+
