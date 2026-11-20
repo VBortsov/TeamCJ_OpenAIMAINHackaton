@@ -50,7 +50,7 @@ Empty is encoded as **0**, with no separate "missing" flag, so the model cannot 
 | `fd_any_bigtech` (ex-Google/Meta/Nvidia/Bosch/Siemens/SAP/Celonis…) | 4% | 55% (11) | 54% |
 | `fd_any_academic_researcher` | 4% | 71% (28) | 53% |
 | `fd_any_serial_founder` | 4% | 67% (24) | 53% |
-| `fd_any_prior_exit` | 1% | n < 10 | |
+| `fd_any_prior_exit` (not used by the model) | 1% | n < 10 | |
 | `fd_any_top_consulting` | 2% | n < 10 | |
 | `fd_any_elite_business_school` | 1% | n < 10 | |
 | `fd_any_studied_abroad` | 3% | 79% (19) | 53% |
@@ -65,38 +65,39 @@ Empty is encoded as **0**, with no separate "missing" flag, so the model cannot 
 
 ## 2. Features the model builds (`backend/ml/features.py`)
 
-`model_noacc` uses the compact set below; `model_acc` adds the `acc_*` dummies. Coefficients are from the logistic regression on standardised inputs (+ raises the score).
+`model_noacc` uses the compact set below; `model_acc` adds the `acc_*` dummies. Weight = change in log-odds when the feature goes up by 1 (flag 0 → 1, one more founder). + raises the score.
 
-| Feature | Built from | Coef (noacc) | Success if 1 (n) vs 0 |
+| Feature | Built from | Weight (noacc) | Success if 1 (n) vs 0 |
 |---|---|---|---|
-| `n_founders` | `n_founders_listed` / `fd_n_founders_found` | +0.36 | |
-| `fd_any_top_consulting` | input | +0.32 | |
-| `fd_team_has_technical_founder` | input | +0.30 | 68% (191) vs 48% |
-| `solo_founder` | n_founders == 1 | +0.30 | 58% (123) vs 52% |
-| `is_deeptech` | `profile2026_is_deeptech` | +0.21 | 59% (235) vs 51% |
-| `fd_university_spinoff` | input | +0.20 | 86% (14) vs 53% |
-| `tag_fintech` | tags + description contain "fintech" | +0.16 | 59% (87) vs 53% |
-| `tag_saas` | "saas" | +0.15 | 58% (100) vs 53% |
-| `fd_any_elite_business_school` | input | +0.13 | |
-| `has_cto_founder` | input | +0.12 | 63% (106) vs 52% |
-| `fd_any_phd` | input | +0.11 | 75% (28) vs 53% |
-| `fd_any_studied_abroad` | input | +0.07 | |
-| `fd_any_serial_founder` | input | +0.06 | |
-| `is_university_city` | input | +0.02 | 55% (413) vs 51% |
-| `fd_any_top_university` | input | +0.02 | |
-| `tag_b2b` | "b2b" | +0.02 | |
+| `solo_founder` | n_founders == 1 | +0.68 | 58% (123) vs 52% |
+| `fd_team_has_technical_founder` | input | +0.66 | 68% (191) vs 48% |
+| `fd_any_top_consulting` | input | +0.63 |  |
+| `fd_university_spinoff` | input | +0.61 | 86% (14) vs 53% |
+| `n_founders` | `n_founders_listed` / `fd_n_founders_found` (per extra founder) | +0.48 |  |
+| `tag_fintech` | tags + description contain "fintech" | +0.44 | 59% (87) vs 53% |
+| `is_deeptech` | `profile2026_is_deeptech` | +0.43 | 59% (235) vs 51% |
+| `fd_any_elite_business_school` | input | +0.38 |  |
+| `tag_saas` | "saas" | +0.36 | 58% (100) vs 53% |
+| `fd_any_studied_abroad` | input | +0.30 | 79% (19) vs 53% |
+| `has_cto_founder` | input | +0.29 | 63% (106) vs 52% |
+| `fd_any_phd` | input | +0.28 | 75% (28) vs 53% |
+| `fd_any_top_university` | input | +0.12 | 70% (23) vs 53% |
+| `fd_any_serial_founder` | input | +0.08 | 67% (24) vs 53% |
+| `is_university_city` | input | +0.07 | 55% (413) vs 51% |
+| `tag_b2b` | "b2b" | +0.07 | 57% (14) vs 53% |
+| `fd_any_academic_researcher` | input | +0.05 | 71% (28) vs 53% |
+| `fd_any_stem_degree` | input | +0.04 | 70% (74) vs 52% |
 | `mentions_ai` | `profile2026_mentions_ai` | +0.01 | 52% (226) vs 54% |
-| `fd_any_bigtech` | input | −0.01 | |
-| `fd_any_stem_degree` | input | −0.03 | |
-| `fd_any_academic_researcher` | input | −0.03 | |
-| `country_FRA` | `country_code` | −0.07 | 52% (240) vs 54% |
-| `is_germany` | input | −0.11 | 53% (234) vs 54% |
-| `fd_any_prior_exit` | input | −0.23 | (only 1% filled, noisy) |
-| `ctrl_cohort_year` | training control only | −0.43 | Fixed to 2021 for every live lead, so it does not change their order |
+| `fd_any_bigtech` | input | −0.04 | 55% (11) vs 54% |
+| `ctrl_cohort_year` | training control only (per year) | −0.16 | Fixed to 2021 for every live lead, so it does not change their order |
+| `country_FRA` | `country_code` | −0.17 | 52% (240) vs 54% |
+| `is_germany` | input | −0.21 | 53% (234) vs 54% |
+
+`fd_any_prior_exit` is exported but not used by the model: only 2 positive rows in training.
 
 Built but not in the compact set (available for experiments): other `country_*`, `hub_*` (7 cities), more `tag_*` (healthcare, climate, artificial intelligence, hardware, consumer, marketplace, biotech, robotics, developer tools, energy, education, proptech, logistics), `fd_n_positive_signals` (sum of fd flags).
 
-Accelerator dummies in `model_acc`: `acc_yc` +0.19, `acc_500` +0.09, `acc_ef` +0.06, `acc_antler` −0.03, `acc_sosv` −0.11, `acc_techstars` −0.15, `acc_alchemist` −0.02, `acc_other_program` 0.
+Accelerator dummies in `model_acc`: `acc_yc` +0.41, `acc_500` +0.15, `acc_ef` +0.14, `acc_other_program` +0.00, `acc_antler` -0.05, `acc_alchemist` -0.08, `acc_sosv` -0.29, `acc_techstars` -0.30.
 
 ## 3. Columns that must NOT go into the model
 
@@ -131,11 +132,11 @@ Column names and types match what the model reads. Differences in how values are
 | Column | In the export | Effect on `ml_score` |
 |---|---|---|
 | `profile2026_is_deeptech` | 1 only if the literal word "deeptech" is in tags or description | Medium. Misses "deep tech", robotics, biotech, hardware, so real deep-tech leads get a clearly lower score. Better: set from `htgf_vertical` or a wider keyword list |
-| `has_cto_founder` | Also set to 1 whenever `fd_team_has_technical_founder` is true | Medium. One fact is counted twice (CTO +0.12 and technical founder +0.30) |
+| `has_cto_founder` | Also set to 1 whenever `fd_team_has_technical_founder` is true | Medium. One fact is counted twice (CTO +0.29 and technical founder +0.66) |
 | `n_founders_listed`, `fd_n_founders_found` | 0 when no founders were found | Fixed on the model side: 0 is now read as unknown |
 | `fd_*` | 0 for every non-enriched lead | Fine, as long as all leads are enriched to the same depth. Otherwise enriched leads rank higher just for being enriched (`fd_enriched` shows which) |
 | `profile2026_mentions_ai` | 1 if the letters "ai" appear anywhere ("maintain", "available") | Negligible (weight +0.01), but the flag is almost always 1 |
-| `is_university_city` | Own city list, and also 1 if a city name appears in the description | Negligible (weight +0.02) |
-| `country_code`, `is_germany` | Missing country defaults to DE | Small (weight −0.11), but it is an assumed value |
+| `is_university_city` | Own city list, and also 1 if a city name appears in the description | Negligible (weight +0.07) |
+| `country_code`, `is_germany` | Missing country defaults to DE | Small (weight −0.21), but it is an assumed value |
 | `accelerator` | Filled for YC leads | Those leads go through `model_acc`. Intended |
 | `cohort_year`, `fd_enriched`, `is_pre_crunchbase`, `htgf_vertical`, `deterministic_score`, `lp_synergy_matches`, `inflection_why_now` | Extra columns | Ignored by the model |

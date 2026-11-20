@@ -18,7 +18,8 @@ FD = ["fd_any_phd", "fd_any_top_university", "fd_any_stem_degree", "fd_any_bigte
 ACCELERATORS = ["yc", "techstars", "antler", "ef", "sosv", "500", "alchemist"]
 # compact feature set that won the contract-compliant search (within-year AUC on label_progressed)
 SMALL = ["ctrl_cohort_year", "is_university_city", "n_founders", "solo_founder", "has_cto_founder", "tag_fintech", "tag_b2b",
-         "tag_saas", "is_deeptech", "mentions_ai", "is_germany", "country_FRA"] + FD
+         "tag_saas", "is_deeptech", "mentions_ai", "is_germany", "country_FRA"] + [f for f in FD if f != "fd_any_prior_exit"]
+# fd_any_prior_exit is left out of the model: only 2 positive rows in training, its weight would be pure noise
 REF_YEAR = 2021  # scoring-time value of the cohort-year control (same for every live lead -> does not change their order)
 
 

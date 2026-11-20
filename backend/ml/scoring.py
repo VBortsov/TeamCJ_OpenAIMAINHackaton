@@ -1,6 +1,6 @@
 """Importable scoring: the same logic as score_live.py, plus per-feature contributions for explanations.
-Contribution of a feature = standardised coefficient * standardised value (log-odds units, relative to the
-average training startup). ctrl_cohort_year is constant at scoring, so it is left out of explanations.
+Contribution of a feature = weight per unit * (value - training mean), in log-odds relative to the
+average training startup. ctrl_cohort_year is constant at scoring, so it is left out of explanations.
 """
 import json
 import sys
@@ -31,7 +31,9 @@ LABELS = {
 @lru_cache(maxsize=1)
 def load_bundle():
     try:
-        return joblib.load(HERE / "model.joblib")
+        b = joblib.load(HERE / "model.joblib")
+        b["model_noacc"]["weights"]  # older bundle format -> retrain
+        return b
     except Exception:  # pickle from another scikit-learn version: retrain from the bundled training table (seconds)
         import subprocess
         subprocess.run([sys.executable, "-m", "backend.ml.train_final"], cwd=HERE.parent.parent, check=True, capture_output=True)
@@ -59,9 +61,10 @@ def score_frame(df: pd.DataFrame, with_contributions: bool = True) -> pd.DataFra
         prob[m] = b["model"].predict_proba(Xm)[:, 1]
         score[m] = np.searchsorted(b["reference"], prob[m], side="right") / len(b["reference"]) * 100
         if with_contributions:
-            scaler, lr = b["model"][0], b["model"][-1]
-            z = (Xm.values - scaler.mean_) / scaler.scale_
-            c = z * lr.coef_[0]
+            # contribution = weight per unit * (value - training mean): log-odds relative to the average training startup
+            w = np.array([b["weights"][f] for f in b["columns"]])
+            mu = np.array([b["means"][f] for f in b["columns"]])
+            c = (Xm.values - mu) * w
             for row_i, idx in enumerate(np.where(m)[0]):
                 items = []
                 for j, f in enumerate(b["columns"]):

@@ -31,9 +31,13 @@ startups BEFORE their first funding round. Write a short investment memo for one
 You receive one JSON object with everything we know. Rules, no exceptions:
 1. Every claim must rest on a fact in the JSON. If there is no fact for something, do not write about it.
 2. Cite sources only with URLs that appear in the JSON. Never invent URLs, names, numbers or dates.
+   A signal gets a `source_url` only if that URL is attached to that same fact in the JSON (e.g. the `source_url`
+   of the entry in `signals`, or a founder's own link). Scores, ranks and model drivers have no URL: use null.
+   Prefer signals that have a source over scores.
 3. A missing, null or empty field means UNKNOWN, not "no". Say "unknown" or put it under risks, never "has no X".
-4. `ml_score` is a percentile rank against our training cohort, NOT a probability of success. Write e.g.
-   "scores above 85% of the reference cohort" or "rank 3 of 40 today". Never write "85% chance".
+4. `ml_score` is a percentile rank against our training cohort, NOT a probability of success. Describe it as
+   "scores above <ml_score>% of the reference cohort". Never write "<N>% chance". For the rank use only the
+   numbers in `scores.rank_today` and `scores.leads_today`; if they are absent, do not mention a rank.
 5. `ml_drivers` are what pushed the ML score up (+) or down (-); explain them in plain words.
    `base_rates` come from 688 accelerator-backed European startups (2014-2024): quote them as
    "in our training data" and treat them as correlations, not guarantees.

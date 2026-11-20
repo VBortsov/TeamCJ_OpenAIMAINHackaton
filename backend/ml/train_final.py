@@ -2,6 +2,7 @@
   model_noacc : leads found BEFORE any accelerator (default)      -> features SMALL
   model_acc   : leads already in a programme (accelerator filled) -> SMALL + accelerator dummies
 Target: label_progressed (raised a round after start, or exit). Logistic regression won the search (simplest, most stable).
+Numeric columns are standardised, 0/1 flags are not (keeps rare founder flags from getting extreme weights).
 cohort_year is only a training control; at scoring it is fixed to REF_YEAR for every lead, so it does not change their order.
 Usage: python -m backend.ml.train_final  -> model.joblib (both models + reference score distributions), metrics.json
 """
@@ -13,6 +14,7 @@ from pathlib import Path
 import joblib
 import numpy as np
 import pandas as pd
+from sklearn.compose import ColumnTransformer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import RepeatedStratifiedKFold, StratifiedKFold
@@ -30,8 +32,25 @@ yb = pd.cut(df.cohort_year, [2013, 2018, 2021, 2022, 2024], labels=False).values
 COLS = {"model_noacc": SMALL, "model_acc": SMALL + [f"acc_{a}" for a in ACCELERATORS] + ["acc_other_program"]}
 
 
+CONT = ["ctrl_cohort_year", "n_founders"]
+
+
 def make():
-    return make_pipeline(StandardScaler(), LogisticRegression(C=0.1, max_iter=3000, class_weight="balanced"))
+    """Only the two numeric columns are standardised. 0/1 flags stay raw, so the L2 penalty shrinks rare flags
+    (a flag seen in 9 rows must not move the score by 3 log-odds, which is what standardising all columns did)."""
+    scale = ColumnTransformer([("num", StandardScaler(), CONT)], remainder="passthrough", verbose_feature_names_out=False)
+    return make_pipeline(scale, LogisticRegression(C=0.3, max_iter=3000, class_weight="balanced"))
+
+
+def unit_weights(mdl, cols):
+    """Effect on the log-odds of +1 in each feature (+1 founder, +1 year, flag 0 -> 1)."""
+    z = pd.DataFrame(np.zeros((1, len(cols))), columns=cols)
+    base = mdl.decision_function(z)[0]
+    w = {}
+    for c in cols:
+        z1 = z.copy(); z1[c] = 1.0
+        w[c] = float(mdl.decision_function(z1)[0] - base)
+    return w
 
 
 def within_auc(y, p, b):
@@ -71,9 +90,10 @@ for name, cols in COLS.items():
     for tr, va in StratifiedKFold(5, shuffle=True, random_state=0).split(X, y):
         Xv = X.iloc[va][cols].copy(); Xv["ctrl_cohort_year"] = REF_YEAR
         oof[va] = make().fit(X.iloc[tr][cols], y[tr]).predict_proba(Xv)[:, 1]
-    coef = pd.Series(mdl[-1].coef_[0], index=cols).sort_values()
-    bundle[name] = {"model": mdl, "columns": cols, "reference": np.sort(oof)}
-    metrics[f"{name} coefficients (standardised; + raises score)"] = coef.round(3).to_dict()
+    w = unit_weights(mdl, cols)
+    bundle[name] = {"model": mdl, "columns": cols, "reference": np.sort(oof), "weights": w,
+                    "means": X[cols].mean().to_dict()}
+    metrics[f"{name} weights (log-odds per +1 of the feature; + raises score)"] = pd.Series(w).sort_values().round(3).to_dict()
 joblib.dump(bundle, HERE / "model.joblib")
 json.dump(metrics, open(HERE / "metrics.json", "w"), indent=2, ensure_ascii=False)
 print(json.dumps(metrics, indent=2, ensure_ascii=False))
