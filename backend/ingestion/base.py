@@ -49,6 +49,7 @@ class RawCandidate(BaseModel):
     register_number: Optional[str] = None
     country_code: Optional[str] = None  # DE, CH, AT, NL, etc.
     city: Optional[str] = None
+    accelerator: Optional[str] = ""
     incorporation_date: Optional[str] = None
     domain_created_date: Optional[str] = None
     description: Optional[str] = None

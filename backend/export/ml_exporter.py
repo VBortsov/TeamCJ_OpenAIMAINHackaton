@@ -1,7 +1,7 @@
 """
 ML Inference Contract Exporter.
 Exports surviving candidate entities to data/live_candidates_for_ml.csv matching
-the schema of our ML teammate's train_new_cohort.csv.
+the schema of our ML teammate's train_new_cohort.csv and features.md.
 """
 
 from __future__ import annotations
@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from backend.config import settings
+from backend.db.repository import normalize_city
 
 logger = logging.getLogger(__name__)
 
@@ -22,13 +23,16 @@ ISO2_TO_ISO3 = {
 }
 
 UNIVERSITY_CITIES = {
-    "aachen", "münchen", "munich", "zürich", "zurich", "berlin",
-    "darmstadt", "dresden", "karlsruhe", "heidelberg", "tübingen",
-    "delft", "lausanne", "oxford", "cambridge", "leoben", "muenster",
-    "bonn", "erlangen", "stuttgart", "frankfurt", "hamburg", "cologne",
-    "köln", "düsseldorf", "freiburg", "würzburg", "hannover", "innsbruck",
-    "wien", "vienna", "basel", "jena", "potsdam", "braunschweig"
+    "aachen", "munich", "zurich", "berlin", "darmstadt", "dresden",
+    "karlsruhe", "heidelberg", "tubingen", "delft", "lausanne",
+    "oxford", "cambridge", "leoben", "muenster", "bonn", "erlangen",
+    "stuttgart", "frankfurt", "hamburg", "cologne", "dusseldorf",
+    "freiburg", "wuerzburg", "hannover", "innsbruck", "vienna",
+    "basel", "jena", "potsdam", "braunschweig", "london", "paris",
+    "amsterdam", "copenhagen", "stockholm"
 }
+
+ALLOWED_ACCELERATORS = {"yc", "techstars", "antler", "ef", "sosv", "500", "alchemist", "other"}
 
 
 def export_ml_contract(
@@ -36,7 +40,7 @@ def export_ml_contract(
     output_path: Optional[Path | str] = None
 ) -> Path:
     """
-    Exports candidates to CSV matching the ML inference feature contract.
+    Exports candidates to CSV matching the ML inference feature contract in features.md.
     """
     target_file = Path(output_path or settings.DATA_DIR / "live_candidates_for_ml.csv")
     target_file.parent.mkdir(parents=True, exist_ok=True)
@@ -50,8 +54,8 @@ def export_ml_contract(
         "fd_any_elite_business_school", "fd_any_stem_degree", "fd_any_studied_abroad",
         "fd_any_bigtech", "fd_any_top_consulting", "fd_any_academic_researcher",
         "fd_any_serial_founder", "fd_any_prior_exit", "fd_team_has_technical_founder",
-        "fd_university_spinoff", "is_pre_crunchbase", "htgf_vertical",
-        "deterministic_score", "lp_synergy_matches", "inflection_why_now"
+        "fd_university_spinoff", "accelerator", "fd_enriched", "is_pre_crunchbase",
+        "htgf_vertical", "deterministic_score", "lp_synergy_matches", "inflection_why_now"
     ]
 
     rows = []
@@ -65,18 +69,23 @@ def export_ml_contract(
         breakdown_raw = cand.get("score_breakdown") or {}
         breakdown = breakdown_raw.model_dump() if hasattr(breakdown_raw, "model_dump") else (breakdown_raw if isinstance(breakdown_raw, dict) else {})
 
-        # City & University check
-        city = cand.get("city") or cand.get("impressum_city") or profile.get("city") or ""
+        # English normalized city & University check
+        raw_city = cand.get("city") or cand.get("impressum_city") or profile.get("city") or ""
+        city = normalize_city(raw_city) or ""
         tags = cand.get("raw_tags", [])
         desc = cand.get("description", "") or ""
         is_uni_city = 1 if (city and any(u in city.lower() for u in UNIVERSITY_CITIES)) or any(u in desc.lower() for u in UNIVERSITY_CITIES) else 0
         is_deeptech = 1 if any("deeptech" in t.lower() for t in tags) or "deeptech" in desc.lower() else 0
         mentions_ai = 1 if any("ai" in t.lower() for t in tags) or "ai" in desc.lower() or "neural" in desc.lower() else 0
 
-        # Founders & LinkedIns (from database or enriched profile)
+        # Accelerator column (exact lowercase values per features.md)
+        raw_acc = (cand.get("accelerator") or "").strip().lower()
+        accelerator = raw_acc if raw_acc in ALLOWED_ACCELERATORS else ("other" if raw_acc else "")
+
+        # Founders & LinkedIns (only genuine identities, never fabricated)
         founders = cand.get("founders", [])
         enriched_founders = profile.get("founders_enriched", [])
-        
+
         all_f_names = [f.get("full_name", "") for f in founders if f.get("full_name")]
         all_f_linkedins = [f.get("linkedin_url", "") for f in founders if f.get("linkedin_url")]
 
@@ -93,16 +102,20 @@ def export_ml_contract(
         formatted_lps = []
         for item in raw_lps:
             if isinstance(item, dict):
-                formatted_lps.append(item.get("lp_name", ""))
+                lp_name = item.get("lp_name", "")
+                reason = item.get("reason", "")
+                formatted_lps.append(f"{lp_name} ({reason})" if reason else lp_name)
             elif hasattr(item, "lp_name"):
-                formatted_lps.append(item.lp_name)
+                formatted_lps.append(f"{item.lp_name} ({getattr(item, 'reason', '')})")
             else:
                 formatted_lps.append(str(item))
         lps = "; ".join([lp for lp in formatted_lps if lp])
 
         has_cto = 1 if any(
             "cto" in (f.get("raw_bio", "") or "").lower() for f in founders
-        ) or profile.get("fd_team_has_technical_founder", True) else 0
+        ) or any(
+            "cto" in (ef.get("role", "") or "").lower() for ef in enriched_founders
+        ) or profile.get("fd_team_has_technical_founder", False) else 0
 
         # Cohort year
         cohort = profile.get("founding_year") or 2026
@@ -141,6 +154,8 @@ def export_ml_contract(
             "fd_any_prior_exit": 1 if profile.get("fd_any_prior_exit") else 0,
             "fd_team_has_technical_founder": 1 if profile.get("fd_team_has_technical_founder") else 0,
             "fd_university_spinoff": 1 if profile.get("fd_university_spinoff") else 0,
+            "accelerator": accelerator,
+            "fd_enriched": int(profile.get("fd_enriched", 0)),
             "is_pre_crunchbase": 1 if profile.get("is_pre_crunchbase", True) else 0,
             "htgf_vertical": profile.get("htgf_vertical", "industrial_climate_deeptech"),
             "deterministic_score": cand.get("deterministic_score", breakdown.get("final_score", 0.0)),

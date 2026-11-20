@@ -70,6 +70,54 @@ def slugify(text: str) -> str:
     return text.strip("-")
 
 
+CITY_NORMALIZATION: Dict[str, str] = {
+    "münchen": "Munich",
+    "munchen": "Munich",
+    "garching": "Munich",
+    "garching bei münchen": "Munich",
+    "zürich": "Zurich",
+    "zurich": "Zurich",
+    "köln": "Cologne",
+    "koln": "Cologne",
+    "berlin": "Berlin",
+    "hamburg": "Hamburg",
+    "paris": "Paris",
+    "amsterdam": "Amsterdam",
+    "copenhagen": "Copenhagen",
+    "københavn": "Copenhagen",
+    "aachen": "Aachen",
+    "bonn": "Bonn",
+    "stuttgart": "Stuttgart",
+    "frankfurt": "Frankfurt",
+    "frankfurt am main": "Frankfurt",
+    "düsseldorf": "Dusseldorf",
+    "dusseldorf": "Dusseldorf",
+    "erlangen": "Erlangen",
+    "karlsruhe": "Karlsruhe",
+    "dresden": "Dresden",
+    "leipzig": "Leipzig",
+    "heidelberg": "Heidelberg",
+    "tübingen": "Tubingen",
+    "tubingen": "Tubingen",
+    "darmstadt": "Darmstadt",
+    "potsdam": "Potsdam",
+    "london": "London",
+    "stockholm": "Stockholm",
+    "vienna": "Vienna",
+    "wien": "Vienna"
+}
+
+
+def normalize_city(city: Optional[str]) -> Optional[str]:
+    """Standardize city names to English hub names per ML contract (features.md)."""
+    if not city:
+        return None
+    clean = city.strip()
+    clean = re.sub(r"^\d{4,5}\s+", "", clean)
+    clean = clean.split(",")[0].split("\n")[0].strip()
+    return CITY_NORMALIZATION.get(clean.lower(), clean.title() if clean else None)
+
+
 def generate_entity_id(
     canonical_name: str,
     normalized_domain: Optional[str] = None,
@@ -147,10 +195,12 @@ class DatabaseRepository:
 
         with get_db_connection(self.db_path) as conn:
             conn.executescript(schema_sql)
-            # Non-breaking migration check: Ensure 'city' column exists on entities
+            # Non-breaking migration check: Ensure 'city' and 'accelerator' columns exist on entities
             cols = [row["name"] for row in conn.execute("PRAGMA table_info(entities)").fetchall()]
             if "city" not in cols:
                 conn.execute("ALTER TABLE entities ADD COLUMN city TEXT")
+            if "accelerator" not in cols:
+                conn.execute("ALTER TABLE entities ADD COLUMN accelerator TEXT DEFAULT ''")
             conn.commit()
         logger.info("Database schema initialized at %s", self.db_path)
 
@@ -164,6 +214,7 @@ class DatabaseRepository:
         register_number: Optional[str] = None,
         country_code: Optional[str] = None,
         city: Optional[str] = None,
+        accelerator: Optional[str] = "",
         incorporation_date: Optional[str] = None,
         domain_created_date: Optional[str] = None,
         description: Optional[str] = None,
@@ -180,6 +231,7 @@ class DatabaseRepository:
         norm_domain = normalize_domain(normalized_domain or website_url)
         if norm_domain in PLATFORM_DOMAINS:
             norm_domain = None
+        norm_city = normalize_city(city)
         raw_tags_json = json.dumps(raw_tags or [], ensure_ascii=False)
         lp_synergy_json = json.dumps(lp_synergy or {}, ensure_ascii=False) if lp_synergy else None
 
@@ -212,10 +264,10 @@ class DatabaseRepository:
             sql = """
             INSERT INTO entities (
                 entity_id, canonical_name, normalized_domain, website_url,
-                legal_name, legal_form, register_number, country_code, city,
+                legal_name, legal_form, register_number, country_code, city, accelerator,
                 incorporation_date, domain_created_date, description,
                 raw_tags_json, funding_status, lp_synergy_json
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(entity_id) DO UPDATE SET
                 canonical_name = COALESCE(excluded.canonical_name, entities.canonical_name),
                 normalized_domain = COALESCE(excluded.normalized_domain, entities.normalized_domain),
@@ -225,6 +277,9 @@ class DatabaseRepository:
                 register_number = COALESCE(excluded.register_number, entities.register_number),
                 country_code = COALESCE(excluded.country_code, entities.country_code),
                 city = COALESCE(excluded.city, entities.city),
+                accelerator = CASE
+                    WHEN excluded.accelerator IS NOT NULL AND excluded.accelerator != '' THEN excluded.accelerator
+                    ELSE entities.accelerator END,
                 description = CASE
                     WHEN entities.description IS NULL OR length(entities.description) < length(excluded.description)
                     THEN excluded.description ELSE entities.description END,
@@ -233,7 +288,7 @@ class DatabaseRepository:
             """
             cursor.execute(sql, (
                 entity_id, canonical_name, norm_domain, website_url,
-                legal_name, legal_form, register_number, country_code, city,
+                legal_name, legal_form, register_number, country_code, norm_city, accelerator or "",
                 incorporation_date, domain_created_date, description,
                 raw_tags_json, funding_status, lp_synergy_json
             ))
@@ -251,6 +306,7 @@ class DatabaseRepository:
         city: Optional[str] = None,
     ) -> None:
         """Update legal registration details and city from Impressum scraping."""
+        norm_city = normalize_city(city)
         with self.get_connection() as conn:
             cursor = conn.cursor()
             sql = """
@@ -263,7 +319,7 @@ class DatabaseRepository:
                 updated_at = CURRENT_TIMESTAMP
             WHERE entity_id = ?
             """
-            cursor.execute(sql, (legal_name, legal_form, register_number, country_code, city, entity_id))
+            cursor.execute(sql, (legal_name, legal_form, register_number, country_code, norm_city, entity_id))
             conn.commit()
 
     def upsert_signal(

@@ -343,6 +343,7 @@ def test_export_ml_contract_schema_and_types():
         assert row["name"] == "Calyx Robotics"
         assert row["country_code"] == "DEU"
         assert row["is_germany"] == "1"
+        assert row["city"] == "Aachen"
         assert row["is_university_city"] == "1"
         assert row["profile2026_is_deeptech"] == "1"
         assert row["profile2026_mentions_ai"] == "1"
@@ -350,12 +351,44 @@ def test_export_ml_contract_schema_and_types():
         assert row["fd_any_phd"] == "1"
         assert row["fd_university_spinoff"] == "1"
         assert row["is_pre_crunchbase"] == "1"
+        assert row["accelerator"] == ""
+        assert row["fd_enriched"] == "1"
         assert float(row["deterministic_score"]) == 84.5
         assert "Robert Bosch GmbH" in row["lp_synergy_matches"]
 
 
 # =============================================================================
-# 6. FastAPI Provenance Endpoints Tests
+# 6. Zero Fake Data & City Normalization Tests
+# =============================================================================
+def test_zero_fake_data_and_city_normalization():
+    from backend.enrichment.openai_enricher import OpenAIEnricher, HTGF_IV_LPS
+    from backend.db.repository import normalize_city
+
+    # 1. Carl Zeiss and Trumpf MUST be excluded
+    assert "Carl Zeiss" not in HTGF_IV_LPS
+    assert "Trumpf" not in HTGF_IV_LPS
+
+    # 2. Verified LPs MUST be present
+    assert "Robert Bosch GmbH" in HTGF_IV_LPS
+    assert "Schunk Group" in HTGF_IV_LPS
+    assert "ALTANA" in HTGF_IV_LPS
+    assert "Jungheinrich" in HTGF_IV_LPS
+
+    # 3. NO hardcoded company intelligence dictionary
+    enricher_cls = OpenAIEnricher
+    assert not hasattr(enricher_cls, "KNOWN_DEEPTECH_INTELLIGENCE")
+
+    # 4. City normalization per features.md
+    assert normalize_city("München") == "Munich"
+    assert normalize_city("Zürich") == "Zurich"
+    assert normalize_city("Köln") == "Cologne"
+    assert normalize_city("Garching bei München") == "Munich"
+    assert normalize_city("Wien") == "Vienna"
+    assert normalize_city("Berlin") == "Berlin"
+
+
+# =============================================================================
+# 7. FastAPI Provenance Endpoints Tests
 # =============================================================================
 def test_fastapi_endpoints():
     client = TestClient(app)

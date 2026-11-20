@@ -37,6 +37,7 @@ from backend.ingestion.adapters import (
     LumaEventsAdapter,
     CordisErcAdapter,
     FundingBlocklistAdapter,
+    YcRecentAdapter,
 )
 from backend.enrichment.impressum import ImpressumScraper, ImpressumResult
 from backend.enrichment.github_verifier import GitHubVerifier, GitHubRepoMetrics
@@ -72,6 +73,9 @@ def format_source_label(sig: Dict[str, Any]) -> Dict[str, str]:
     elif src == "cordis_erc":
         label = "EU CORDIS ERC Proof-of-Concept"
         summary = "Horizon Europe ERC Proof-of-Concept grant commercializing university research"
+    elif src == "yc_recent":
+        label = "Y Combinator Recent European Cohort"
+        summary = "Fresh 2025-2026 YC European cohort startup"
     elif src == "hf_hub":
         label = "Hugging Face Trending AI Org"
         summary = "High developer velocity and model downloads on Hugging Face Hub"
@@ -93,7 +97,7 @@ def format_source_label(sig: Dict[str, Any]) -> Dict[str, str]:
 
 async def run_wave2_pipeline(
     limit_per_adapter: int = 30,
-    top_k: int = 25,
+    top_k: int = 200,
     skip_ingestion: bool = False,
     clear_cache: bool = False
 ) -> DatabaseRepository:
@@ -127,13 +131,14 @@ async def run_wave2_pipeline(
         # Stage 2: Ingestion Across All 5 Signal Adapters
         # =========================================================================
         if not skip_ingestion:
-            logger.info("\n--- [Stage 2] Running 5 Ingestion Adapters (Limit: %d each) ---", limit_per_adapter)
+            logger.info("\n--- [Stage 2] Running 6 Ingestion Adapters (Limit: %d each) ---", limit_per_adapter)
             adapters: List[BaseSignalAdapter] = [
                 EthRwthAdapter(http_client=http_client),
                 OpenAlexAdapter(http_client=http_client),
                 HuggingFaceHubAdapter(http_client=http_client),
                 LumaEventsAdapter(http_client=http_client),
                 CordisErcAdapter(http_client=http_client),
+                YcRecentAdapter(http_client=http_client),
             ]
 
             results = await asyncio.gather(
@@ -159,6 +164,7 @@ async def run_wave2_pipeline(
                         register_number=cand.register_number,
                         country_code=cand.country_code,
                         city=cand.city,
+                        accelerator=cand.accelerator,
                         incorporation_date=cand.incorporation_date,
                         domain_created_date=cand.domain_created_date,
                         description=cand.description,
@@ -362,36 +368,35 @@ async def run_wave2_pipeline(
                     (gate_counts["total_passed"] / max(1, gate_counts["total_screened"])) * 100)
 
         # =========================================================================
-        # Stage 5: Top-K Founder Pedigree Enrichment & Multi-Pillar Scoring
+        # Stage 5: Equal Pedigree Enrichment Across ALL Surviving Leads (No Top-25 Bias!)
         # =========================================================================
-        logger.info("\n--- [Stage 5] Pedigree Enrichment & Transparent 0-100 Multi-Pillar Scoring ---")
+        logger.info("\n--- [Stage 5] Equal Pedigree Enrichment & Multi-Pillar Scoring ---")
         enricher = OpenAIEnricher()
 
         # Fetch candidates that passed Kill-Gates
         surviving_candidates = repo.get_surviving_candidates()
+        candidates_to_enrich = surviving_candidates[:top_k]
+        logger.info("Found %d surviving leads across Kill-Gates for enrichment (top_k limit: %d)", len(surviving_candidates), top_k)
 
-        def priority_key(cand: Dict[str, Any]) -> tuple:
-            cc = (cand.get("country_code") or "").upper()
-            is_de = 1 if cc == "DE" else (0.85 if cc in ("CH", "AT") else 0.5)
-            has_spinoff = 1 if any("spin-off" in t.lower() or "rwth" in t.lower() or "eth" in t.lower() or "erc" in t.lower() for t in cand.get("raw_tags", [])) else 0
-            n_sigs = len(cand.get("signals", []))
-            return (is_de, has_spinoff, n_sigs)
+        # Tier-2 Real OpenAI Web Search enrichment with 6 parallel workers
+        sem = asyncio.Semaphore(6)
 
-        surviving_candidates.sort(key=priority_key, reverse=True)
-        top_candidates = surviving_candidates[:top_k]
-        logger.info("Selected Top %d surviving leads for deep pedigree enrichment & scoring", len(top_candidates))
+        async def enrich_candidate_task(cand_dict: Dict[str, Any]) -> tuple[Dict[str, Any], EnrichedProfile]:
+            async with sem:
+                prof = await enricher.enrich_async(cand_dict)
+                return cand_dict, prof
+
+        logger.info("Running concurrent OpenAI Web Search enrichment (concurrency=6)...")
+        enrichment_results = await asyncio.gather(*(enrich_candidate_task(c) for c in candidates_to_enrich))
 
         scored_candidates: List[Dict[str, Any]] = []
 
-        for cand in top_candidates:
+        for cand, profile in enrichment_results:
             ent_id = cand["entity_id"]
             imp = impressum_map.get(ent_id)
             gh = github_map.get(ent_id)
 
-            # 1. Enrich founder pedigree flags & HTGF LP matches (disk cache + OpenAI / heuristic fallback)
-            profile: EnrichedProfile = enricher.enrich(cand)
-
-            # 2. Check for post-enrichment age or funding kills (e.g. Ingeneric founded 2001)
+            # 2. Check for post-enrichment age or funding kills (e.g. Ingeneric, Menlo Systems founded <= 2022)
             if profile.is_post_enrichment_kill:
                 logger.info("Rejecting '%s' post-enrichment: %s", cand["canonical_name"], profile.kill_reason)
                 gate_counts["post_enrichment_age_kills"] += 1
@@ -404,6 +409,7 @@ async def run_wave2_pipeline(
                 )
                 rejected_audit.append({
                     "entity_id": ent_id,
+                    "name": cand["canonical_name"],
                     "canonical_name": cand["canonical_name"],
                     "country_code": cand.get("country_code") or "N/A",
                     "website_url": cand.get("website_url"),
@@ -628,7 +634,7 @@ def print_funnel_summary(
 def main():
     parser = argparse.ArgumentParser(description="Wave 2.5 / 3 Pipeline Runner")
     parser.add_argument("--limit", type=int, default=30, help="Per-adapter candidate limit (default: 30)")
-    parser.add_argument("--top-k", type=int, default=25, help="Number of surviving leads to deeply enrich & score (default: 25)")
+    parser.add_argument("--top-k", type=int, default=200, help="Number of surviving leads to deeply enrich & score (default: 200)")
     parser.add_argument("--skip-ingestion", action="store_true", help="Skip re-ingestion and run pipeline on existing database")
     parser.add_argument("--clear-cache", action="store_true", help="Clear stale data/llm_cache before running")
     args = parser.parse_args()

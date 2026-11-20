@@ -8,6 +8,7 @@ from backend.ingestion.adapters.hf_hub import HuggingFaceHubAdapter
 from backend.ingestion.adapters.luma_events import LumaEventsAdapter
 from backend.ingestion.adapters.cordis_erc import CordisErcAdapter
 from backend.ingestion.adapters.funding_blocklist import FundingBlocklistAdapter
+from backend.ingestion.adapters.yc_recent import YcRecentAdapter
 
 __all__ = [
     "EthRwthAdapter",
@@ -16,4 +17,5 @@ __all__ = [
     "LumaEventsAdapter",
     "CordisErcAdapter",
     "FundingBlocklistAdapter",
+    "YcRecentAdapter",
 ]
