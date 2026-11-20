@@ -2,9 +2,12 @@
 (async () => {
   "use strict";
 
+  // The wordmark is text. If a logo image is added to index.html later, it replaces the text once it has loaded.
   const logo = document.querySelector(".wordmark img");
-  logo.addEventListener("load", () => logo.parentElement.classList.add("has-logo"), { once: true });
-  if (logo.naturalWidth) logo.parentElement.classList.add("has-logo");
+  if (logo) {
+    logo.addEventListener("load", () => logo.parentElement.classList.add("has-logo"), { once: true });
+    if (logo.naturalWidth) logo.parentElement.classList.add("has-logo");
+  }
 
   const { teams, sources, people, liveCount, connected } = await window.FOUNDERHUNT_API.load();
   if (liveCount) document.getElementById("dataMode").textContent = "Backend + demo";
@@ -554,7 +557,9 @@
     const record = index.find(entry => entry.team === team);
     const terms = queryTerms();
     const matched = terms.length && terms.every(term => [record.names, record.topics, record.body].some(field => field.includes(term)));
-    return [(matched ? 'Matches ' + terms.join(' ') : team.focus), signalCount(team)].filter(Boolean).join(' · ');
+    // Backend ventures have one description, already shown as the summary, so it is not repeated here.
+    const focus = team.focus !== team.summary ? team.focus : '';
+    return [(matched ? 'Matches ' + terms.join(' ') : focus), signalCount(team)].filter(Boolean).join(' · ');
   }
 
   function backendBrief(team, memo) {

@@ -564,3 +564,29 @@ def test_optional_ml_score_blend_integration():
             pred_file.unlink()
 
 
+
+
+def test_founder_flags_follow_founder_records():
+    from backend.enrichment.openai_enricher import EnrichedFounder, EnrichedProfile, normalize_profile
+
+    cached = EnrichedProfile(
+        founders_enriched=[
+            EnrichedFounder(full_name="A", role="CEO", prior_companies=["Accenture", "EY", "CEMEX"], is_ex_bigtech=True),
+            EnrichedFounder(full_name="B", role="Co-Founder", prior_companies=["Calspak"]),
+        ],
+        fd_any_bigtech=True, fd_team_has_technical_founder=True, htgf_vertical="Industrial Tech",
+    )
+    profile = normalize_profile(cached)
+    assert not profile.fd_any_bigtech and not profile.founders_enriched[0].is_ex_bigtech
+    assert not profile.fd_team_has_technical_founder  # no founder holds a technical role
+    assert profile.htgf_vertical == "industrial_climate_deeptech"
+
+    with_cto = EnrichedProfile(founders_enriched=[
+        EnrichedFounder(full_name="C", role="Co-Founder & CTO", prior_companies=["Google DeepMind"])])
+    profile = normalize_profile(with_cto)
+    assert profile.fd_team_has_technical_founder and profile.fd_any_bigtech
+
+    fresh = normalize_profile(EnrichedProfile(founders_enriched=[EnrichedFounder(full_name="D", role="CEO")]),
+                              model_says_technical=True)
+    assert fresh.fd_team_has_technical_founder  # the model's own finding still counts for a fresh profile
+    assert normalize_profile(EnrichedProfile(htgf_vertical="something else")).htgf_vertical == ""
