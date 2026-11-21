@@ -167,10 +167,12 @@ class BayStartUPAdapter(BaseSignalAdapter):
                         link_el = el.find("a", href=True) or (el.find_next("a", href=True) if el.find_next("a", href=True) else None)
                         if link_el and link_el.get("href"):
                             href = link_el["href"]
-                            if href.startswith("http") and "baystartup.de" not in href:
+                            if href.startswith("http") and not any(p in href for p in ["baystartup.de", "ey.com"]):
                                 website_url = href
 
                         norm_domain = normalize_domain(website_url) if website_url else None
+                        if not norm_domain:
+                            website_url = None
                         clean_name, legal_name, legal_form = clean_legal_name(cname)
 
                         signal = RawSignal(
@@ -191,7 +193,7 @@ class BayStartUPAdapter(BaseSignalAdapter):
                         candidate = RawCandidate(
                             canonical_name=clean_name,
                             normalized_domain=norm_domain,
-                            website_url=website_url or url,
+                            website_url=website_url,
                             legal_name=legal_name,
                             legal_form=legal_form,
                             country_code="DE",

@@ -174,6 +174,10 @@ class GitHubEuDeeptechAdapter(BaseSignalAdapter):
                             continue
                         seen_repos.add(full_name)
 
+                        repo_name = it.get("name", "")
+                        if re.search(r"(?i)(?:^best-of-|^awesome-|mcp-server|-web$)", repo_name):
+                            continue
+
                         stars = it.get("stargazers_count", 0)
                         forks = it.get("forks_count", 0)
 

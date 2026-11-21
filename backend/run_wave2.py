@@ -114,6 +114,26 @@ def format_source_label(sig: Dict[str, Any]) -> Dict[str, str]:
     }
 
 
+def sort_candidates_prioritize_cache(
+    candidates: List[Dict[str, Any]],
+    cache_dir: Optional[Path] = None
+) -> List[Dict[str, Any]]:
+    """
+    Sort candidates so those with existing LLM cache entries are prioritized first,
+    guaranteeing zero drops of pre-enriched flagships even when top_k truncation applies.
+    Secondary sort by signal count (descending) and canonical name (ascending).
+    """
+    c_dir = cache_dir or settings.LLM_CACHE_DIR
+    return sorted(
+        candidates,
+        key=lambda c: (
+            0 if (c_dir / f"{c['entity_id']}.json").exists() else 1,
+            -len(c.get("signals") or []),
+            (c.get("canonical_name") or "").lower()
+        )
+    )
+
+
 async def run_wave2_pipeline(
     limit_per_adapter: int = 30,
     top_k: int = 200,
@@ -262,81 +282,110 @@ async def run_wave2_pipeline(
         # Stage 3: German § 5 DDG Impressum Scraping & GitHub Verification
         # =========================================================================
         logger.info("\n--- [Stage 3] Impressum & Commercial Intent Scraping + GitHub Verifier ---")
-        impressum_scraper = ImpressumScraper(http_client=http_client)
-        github_verifier = GitHubVerifier(http_client=http_client)
-
         impressum_map: Dict[str, ImpressumResult] = {}
         github_map: Dict[str, GitHubRepoMetrics] = {}
 
-        sem = asyncio.Semaphore(5)
-
-        async def scrape_impressum_task(cand: Dict[str, Any]):
-            domain = cand.get("normalized_domain")
-            if not domain or domain in PLATFORM_DOMAINS:
-                return cand["entity_id"], None
-            async with sem:
-                res = await impressum_scraper.scrape(domain)
-                return cand["entity_id"], res
-
-        impressum_tasks = [scrape_impressum_task(c) for c in all_candidates]
-        impressum_results = await asyncio.gather(*impressum_tasks, return_exceptions=True)
-
-        for res in impressum_results:
-            if isinstance(res, tuple) and res[1]:
-                ent_id, imp_res = res
-                impressum_map[ent_id] = imp_res
-                # Update entity legal details in DB if found
-                if imp_res.legal_name or imp_res.register_number or imp_res.legal_form or imp_res.city:
-                    repo.update_entity_impressum(
-                        entity_id=ent_id,
-                        legal_name=imp_res.legal_name,
-                        legal_form=imp_res.legal_form,
-                        register_number=imp_res.register_number,
-                        country_code="DE" if imp_res.register_number and "HRB" in imp_res.register_number else None,
-                        city=imp_res.city
+        if cache_only:
+            logger.info("Cache-only mode active: hydrating Impressum & GitHub metrics from existing SQLite records (zero network calls).")
+            for cand in all_candidates:
+                ent_id = cand["entity_id"]
+                if cand.get("impressum_found") or cand.get("legal_form") or cand.get("register_number") or cand.get("legal_name"):
+                    impressum_map[ent_id] = ImpressumResult(
+                        impressum_found=bool(cand.get("impressum_found", 1)),
+                        legal_name=cand.get("legal_name"),
+                        legal_form=cand.get("legal_form"),
+                        register_number=cand.get("register_number"),
+                        city=cand.get("city"),
+                        founders=[f.get("full_name") for f in cand.get("founders", []) if f.get("is_geschaeftsfuehrer")]
                     )
-                # Link newly discovered founders (Geschäftsführer)
-                for f_name in imp_res.founders:
-                    f_id = repo.upsert_founder(full_name=f_name)
-                    repo.link_entity_founder(
-                        entity_id=ent_id,
-                        founder_id=f_id,
-                        link_method="impressum_geschaeftsfuehrer",
-                        link_confidence=0.95,
-                        is_geschaeftsfuehrer=1
-                    )
-
-        logger.info("Completed Impressum scraping: %d entities enriched with corporate disclosures", len(impressum_map))
-
-        # Run GitHub verification for candidates with GitHub signals or discovered orgs
-        async def verify_github_task(cand: Dict[str, Any]):
-            ent_id = cand["entity_id"]
-            imp = impressum_map.get(ent_id)
-            target = imp.github_org if imp and imp.github_org else None
-            if not target:
-                for f in cand.get("founders", []):
-                    if f.get("github_handle"):
-                        target = f["github_handle"]
-                        break
-            if not target:
                 for s in cand.get("signals", []):
-                    if "github.com" in s.get("source_url", ""):
-                        target = s["source_url"]
+                    rm = s.get("raw_metrics") or {}
+                    if "stars" in rm:
+                        stars = rm.get("stars", 0)
+                        forks = rm.get("forks", 0)
+                        ratio = (forks / stars) if stars > 0 else 0.0
+                        github_map[ent_id] = GitHubRepoMetrics(
+                            org_or_owner=rm.get("owner", cand["canonical_name"]),
+                            top_repo_name=rm.get("repo"),
+                            stargazer_count=stars,
+                            fork_count=forks,
+                            fork_to_star_ratio=ratio,
+                            is_fake_star_suspect=bool(stars >= 100 and ratio < 0.03)
+                        )
                         break
-            if target:
+            logger.info("Hydrated %d Impressum records and %d GitHub metrics from local database", len(impressum_map), len(github_map))
+        else:
+            impressum_scraper = ImpressumScraper(http_client=http_client)
+            github_verifier = GitHubVerifier(http_client=http_client)
+            sem = asyncio.Semaphore(5)
+
+            async def scrape_impressum_task(cand: Dict[str, Any]):
+                domain = cand.get("normalized_domain")
+                if not domain or domain in PLATFORM_DOMAINS:
+                    return cand["entity_id"], None
                 async with sem:
-                    gh_metrics = await github_verifier.verify(target)
-                    return ent_id, gh_metrics
-            return ent_id, None
+                    res = await impressum_scraper.scrape(domain)
+                    return cand["entity_id"], res
 
-        gh_tasks = [verify_github_task(c) for c in all_candidates]
-        gh_results = await asyncio.gather(*gh_tasks, return_exceptions=True)
-        for res in gh_results:
-            if isinstance(res, tuple) and res[1]:
-                ent_id, gh_met = res
-                github_map[ent_id] = gh_met
+            impressum_tasks = [scrape_impressum_task(c) for c in all_candidates]
+            impressum_results = await asyncio.gather(*impressum_tasks, return_exceptions=True)
 
-        logger.info("Completed GitHub verification: %d repositories/orgs verified", len(github_map))
+            for res in impressum_results:
+                if isinstance(res, tuple) and res[1]:
+                    ent_id, imp_res = res
+                    impressum_map[ent_id] = imp_res
+                    # Update entity legal details in DB if found
+                    if imp_res.legal_name or imp_res.register_number or imp_res.legal_form or imp_res.city:
+                        repo.update_entity_impressum(
+                            entity_id=ent_id,
+                            legal_name=imp_res.legal_name,
+                            legal_form=imp_res.legal_form,
+                            register_number=imp_res.register_number,
+                            country_code="DE" if imp_res.register_number and "HRB" in imp_res.register_number else None,
+                            city=imp_res.city
+                        )
+                    # Link newly discovered founders (Geschäftsführer)
+                    for f_name in imp_res.founders:
+                        f_id = repo.upsert_founder(full_name=f_name)
+                        repo.link_entity_founder(
+                            entity_id=ent_id,
+                            founder_id=f_id,
+                            link_method="impressum_geschaeftsfuehrer",
+                            link_confidence=0.95,
+                            is_geschaeftsfuehrer=1
+                        )
+
+            logger.info("Completed Impressum scraping: %d entities enriched with corporate disclosures", len(impressum_map))
+
+            # Run GitHub verification for candidates with GitHub signals or discovered orgs
+            async def verify_github_task(cand: Dict[str, Any]):
+                ent_id = cand["entity_id"]
+                imp = impressum_map.get(ent_id)
+                target = imp.github_org if imp and imp.github_org else None
+                if not target:
+                    for f in cand.get("founders", []):
+                        if f.get("github_handle"):
+                            target = f["github_handle"]
+                            break
+                if not target:
+                    for s in cand.get("signals", []):
+                        if "github.com" in s.get("source_url", ""):
+                            target = s["source_url"]
+                            break
+                if target:
+                    async with sem:
+                        gh_metrics = await github_verifier.verify(target)
+                        return ent_id, gh_metrics
+                return ent_id, None
+
+            gh_tasks = [verify_github_task(c) for c in all_candidates]
+            gh_results = await asyncio.gather(*gh_tasks, return_exceptions=True)
+            for res in gh_results:
+                if isinstance(res, tuple) and res[1]:
+                    ent_id, gh_met = res
+                    github_map[ent_id] = gh_met
+
+            logger.info("Completed GitHub verification: %d repositories/orgs verified", len(github_map))
 
         # =========================================================================
         # Stage 4: Deterministic 5-Gate Kill Screening (Zero-LLM Cost)
@@ -418,8 +467,9 @@ async def run_wave2_pipeline(
 
         # Fetch candidates that passed Kill-Gates
         surviving_candidates = repo.get_surviving_candidates()
+        surviving_candidates = sort_candidates_prioritize_cache(surviving_candidates, enricher.cache_dir)
         candidates_to_enrich = surviving_candidates[:top_k]
-        logger.info("Found %d surviving leads across Kill-Gates for enrichment (top_k limit: %d)", len(surviving_candidates), top_k)
+        logger.info("Found %d surviving leads across Kill-Gates for enrichment (prioritized cached flagships, top_k limit: %d)", len(surviving_candidates), top_k)
 
         # Tier-2 Real OpenAI Web Search enrichment with 8 parallel workers
         sem = asyncio.Semaphore(8)
@@ -733,7 +783,7 @@ def print_funnel_summary(
 def main():
     parser = argparse.ArgumentParser(description="Wave 2.5 / 3 Pipeline Runner")
     parser.add_argument("--limit", type=int, default=30, help="Per-adapter candidate limit (default: 30)")
-    parser.add_argument("--top-k", type=int, default=200, help="Number of surviving leads to deeply enrich & score (default: 200)")
+    parser.add_argument("--top-k", type=int, default=500, help="Number of surviving leads to deeply enrich & score (default: 500)")
     parser.add_argument("--skip-ingestion", action="store_true", help="Skip re-ingestion and run pipeline on existing database")
     parser.add_argument("--cache-only", action="store_true", help="Strictly forbid live OpenAI calls; only read from data/llm_cache/ ($0.00)")
     parser.add_argument("--max-budget-usd", type=float, default=2.00, help="Hard circuit-breaker budget cap in USD (default: 2.00)")

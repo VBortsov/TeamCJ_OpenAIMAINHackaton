@@ -109,14 +109,51 @@ def age_kill_reason(founding_year: Optional[int], model_says_old: bool, model_re
 
 
 def funding_kill_reason(model_says_round: bool, funding_summary: Optional[str]) -> Optional[str]:
-    """Gate 5 only fires on an equity round. Grants, prizes and fellowships (Venture Kick, EXIST, Innosuisse,
-    ERC ...) are not funding rounds, so a summary that only names those does not reject the lead."""
+    """Gate 5 fires on equity rounds or funding >= €3.0M.
+    Grants, prizes and fellowships (Venture Kick, EXIST, Innosuisse, ERC, EIC, Horizon, etc.)
+    are non-dilutive and do not reject the lead unless accompanied by >= 3M equity."""
+    summary = (funding_summary or "").strip()
+    if not summary:
+        return None
+    summary_lower = summary.lower()
+
+    # Filter out negated sentences (e.g. "no public information indicating that X has raised Series A or €3M")
+    non_negated_sentences = []
+    for s in re.split(r"[.\n;]", summary_lower):
+        s_clean = s.strip()
+        if not s_clean:
+            continue
+        if re.search(r"\b(?:no\s+(?:publicly\s+available\s+|public\s+)?(?:information|records?|evidence|details?)|has\s+not\s+raised|not\s+publicly\s+disclosed|neither\s+raised)\b", s_clean):
+            continue
+        non_negated_sentences.append(s_clean)
+
+    active_text = " ".join(non_negated_sentences)
+
+    # Check for large funding amounts >= 3.0M / B in non-negated statements
+    has_large_amount = False
+    amounts = re.findall(r"(?:€|\$|£)?\s*(\d+(?:\.\d+)?)\s*(?:million|m|billion|b)\b", active_text)
+    for amt_str in amounts:
+        try:
+            val = float(amt_str)
+            if val >= 3.0:
+                has_large_amount = True
+                break
+        except ValueError:
+            pass
+
+    has_grant = bool(_NON_DILUTIVE_PATTERN.search(summary_lower))
+    has_equity = bool(_EQUITY_ROUND_PATTERN.search(active_text))
+
+    if has_large_amount and not (has_grant and not has_equity):
+        return f"Gate 5: Large funding round >= €3.0M ({summary})"
+
     if not model_says_round:
         return None
-    summary = (funding_summary or "").lower()
-    if _NON_DILUTIVE_PATTERN.search(summary) and not _EQUITY_ROUND_PATTERN.search(summary):
+
+    if has_grant and not has_equity:
         return None
-    return f"Gate 5: Raised institutional round ({funding_summary})"
+
+    return f"Gate 5: Raised institutional round ({summary})"
 
 
 def is_empty_research(extracted: "_StructuredWebSearchOutput") -> bool:
@@ -206,6 +243,16 @@ def normalize_profile(profile: "EnrichedProfile", model_says_technical: Optional
         profile.fd_team_has_technical_founder = role_based or (bool(model_says_technical) and backed)
     elif profile.flags_version < 2:
         profile.fd_team_has_technical_founder = role_based
+    if profile.city:
+        profile.city = normalize_city(profile.city)
+    re_kill = (
+        age_kill_reason(profile.founding_year, False, None)
+        or funding_kill_reason(profile.raised_institutional_round, profile.funding_summary)
+    )
+    if re_kill:
+        profile.is_post_enrichment_kill = True
+        profile.kill_reason = re_kill
+        profile.is_pre_crunchbase = False
     profile.htgf_vertical = normalize_vertical(profile.htgf_vertical)
     profile.flags_version = 2
     return profile

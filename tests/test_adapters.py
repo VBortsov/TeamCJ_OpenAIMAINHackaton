@@ -95,3 +95,32 @@ def test_github_eu_detection():
 
     adapter = GitHubEuDeeptechAdapter()
     assert adapter.name == "github_eu"
+
+
+def test_platform_domains_distinct_entity_ids():
+    from backend.db.repository import generate_entity_id, normalize_domain
+    from backend.config import PLATFORM_DOMAINS
+
+    assert "tum-venture-labs.de" in PLATFORM_DOMAINS
+    assert "baystartup.de" in PLATFORM_DOMAINS
+    assert "legaltechcolab.com" in PLATFORM_DOMAINS
+
+    # Neither portal domain should normalize to an entity domain
+    assert normalize_domain("https://www.tum-venture-labs.de/teams/holloid") is None
+    assert normalize_domain("https://www.baystartup.de/startupdate/nordbayern-2026") is None
+
+    # Two distinct startups from TUM Venture Labs must NOT share the same entity_id
+    id1 = generate_entity_id(
+        canonical_name="Holloid",
+        normalized_domain=None,
+        source_name="tum_venture_labs",
+        source_native_id="tum:holloid"
+    )
+    id2 = generate_entity_id(
+        canonical_name="Autonomous Navy",
+        normalized_domain=None,
+        source_name="tum_venture_labs",
+        source_native_id="tum:autonomous-navy"
+    )
+    assert id1 != id2
+

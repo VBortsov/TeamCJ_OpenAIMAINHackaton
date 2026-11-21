@@ -111,11 +111,13 @@ class TumVentureLabsAdapter(BaseSignalAdapter):
                     website_url = None
                     for a in soup.find_all("a", href=True):
                         href = a["href"]
-                        if href.startswith("http") and not any(host in href for host in ["tum-venture-labs.de", "tum.de", "linkedin.com", "spotify.com", "instagram.com", "twitter.com", "x.com"]):
+                        if href.startswith("http") and not any(host in href for host in ["tum-venture-labs.de", "tum.de", "linkedin.com", "spotify.com", "instagram.com", "twitter.com", "x.com", "unternehmertum.de", "legaltechcolab.com"]):
                             website_url = href
                             break
 
                     norm_domain = normalize_domain(website_url) if website_url else None
+                    if not norm_domain:
+                        website_url = None
 
                     signal = RawSignal(
                         source_name=self.name,
@@ -134,7 +136,7 @@ class TumVentureLabsAdapter(BaseSignalAdapter):
                     candidate = RawCandidate(
                         canonical_name=cname,
                         normalized_domain=norm_domain,
-                        website_url=website_url or team_url,
+                        website_url=website_url,
                         legal_name=legal_name,
                         legal_form=legal_form,
                         country_code="DE",

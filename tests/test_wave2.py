@@ -820,3 +820,96 @@ def test_ml_contract_deeptech_and_ai_flags(tmp_path):
     assert reader[1]["is_germany"] == "0"
     assert reader[1]["country_code"] == ""
 
+
+def test_sort_candidates_prioritize_cache(tmp_path):
+    from backend.run_wave2 import sort_candidates_prioritize_cache
+
+    cache_dir = tmp_path / "llm_cache"
+    cache_dir.mkdir()
+
+    # Create dummy cache for entity 'e_cached'
+    (cache_dir / "e_cached.json").write_text("{}", encoding="utf-8")
+
+    candidates = [
+        {"entity_id": "e_uncached_high_signals", "canonical_name": "Zeta Uncached", "signals": [1, 2, 3]},
+        {"entity_id": "e_cached", "canonical_name": "Alpha Cached", "signals": [1]},
+        {"entity_id": "e_uncached_low_signals", "canonical_name": "Beta Uncached", "signals": [1]},
+    ]
+
+    sorted_cands = sort_candidates_prioritize_cache(candidates, cache_dir=cache_dir)
+    assert sorted_cands[0]["entity_id"] == "e_cached"
+    assert sorted_cands[1]["entity_id"] == "e_uncached_high_signals"
+    assert sorted_cands[2]["entity_id"] == "e_uncached_low_signals"
+
+
+def test_gate1_rejects_luma_only_and_utility_repos(tmp_path):
+    from backend.scoring.kill_gates import KillGateEvaluator
+    from backend.db.repository import DatabaseRepository
+
+    repo = DatabaseRepository(db_path=tmp_path / "test.db")
+    evaluator = KillGateEvaluator(repo=repo)
+
+    # 1. Luma-only candidate should fail Gate 1
+    luma_only = {
+        "entity_id": "luma1",
+        "canonical_name": "House of AI Hamburg",
+        "signals": [{"source_name": "luma_events"}]
+    }
+    res = evaluator.evaluate(luma_only)
+    assert not res.gate1_passed
+    assert not res.gate_passed
+    assert any("Event Organizer" in r for r in res.kill_reasons)
+
+    # 2. Corroborated candidate (Luma + RWTH) should pass Gate 1
+    corroborated = {
+        "entity_id": "c1",
+        "canonical_name": "RoboSpin",
+        "description": "Robotics spin-off with proprietary sensing algorithms.",
+        "signals": [{"source_name": "luma_events"}, {"source_name": "eth_rwth"}]
+    }
+    res_corr = evaluator.evaluate(corroborated)
+    assert res_corr.gate1_passed
+
+    # 3. Utility / curated list / MCP repo patterns should fail Gate 1
+    for utility_name in ["best-of-robot-simulators", "awesome-deeptech", "slack-mcp-server", "esp-labs-web"]:
+        cand = {
+            "entity_id": f"u_{utility_name}",
+            "canonical_name": utility_name,
+            "signals": [{"source_name": "github_eu"}]
+        }
+        res_u = evaluator.evaluate(cand)
+        assert not res_u.gate1_passed
+        assert any("Utility/List Repo" in r for r in res_u.kill_reasons)
+
+
+def test_city_normalization_strips_legal_noise():
+    from backend.db.repository import normalize_city
+
+    assert normalize_city("Würzburg Vertreten") == "Würzburg"
+    assert normalize_city("Stuttgart Postfach") == "Stuttgart"
+    assert normalize_city("Augsburg c/o") == "Augsburg"
+    assert normalize_city("52062 Aachen") == "Aachen"
+    assert normalize_city("München GmbH") == "Munich"
+    assert normalize_city("Berlin UG (haftungsbeschränkt)") == "Berlin"
+
+
+def test_funding_kill_scaleups_and_grants():
+    from backend.enrichment.openai_enricher import funding_kill_reason
+
+    # Spott (€21.5M) -> killed
+    spott_summary = "Total funding raised: €21.5 million. Seed Round: Raised €3.2 million in March 2025. Series A Round: Raised €18.3 million in September 2026."
+    assert funding_kill_reason(False, spott_summary) is not None
+
+    # Expanse (€4.5M) -> killed
+    expanse_summary = "Raised €4.5 million ($5.3 million) in a seed round in September 2026, led by Crane Venture Partners..."
+    assert funding_kill_reason(False, expanse_summary) is not None
+
+    # TigerShark Science (€1.3M EXIST) -> not killed
+    tigershark_summary = "In 2024, TigerShark Science received €1.3 million in EXIST funding."
+    assert funding_kill_reason(False, tigershark_summary) is None
+
+    # FIDENTIS (€1.62M EXIST) -> not killed
+    fidentis_summary = "Received €1.62 million in funding through the EXIST Transfer of Research program..."
+    assert funding_kill_reason(False, fidentis_summary) is None
+
+
