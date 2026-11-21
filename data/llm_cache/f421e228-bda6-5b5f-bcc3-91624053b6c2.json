@@ -1,0 +1,80 @@
+{
+  "canonical_name": "Dayjob",
+  "description": "Dayjob offers an AI scheduling agent that integrates with existing ERP systems to continuously re-optimize short-haul truck routes in real time, handling new jobs, driver changes, and exceptions automatically.",
+  "founders_enriched": [
+    {
+      "full_name": "George Postlethwaite",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Deliveroo",
+        "Otta"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Fred Fooks",
+      "role": "Founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Oxford University"
+      ],
+      "prior_companies": [
+        "Deloitte",
+        "Capgemini"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": true,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "Raised $1.6 million in August 2023 (Pre-Seed Round) and $500,000 in 2026 (Seed Round).",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of logistics operations and the need for real-time optimization present a significant opportunity for AI-driven solutions like Dayjob's.",
+  "devils_advocate_risks": [
+    "Integration challenges with diverse ERP systems across various clients.",
+    "Dependence on the adoption rate of AI technologies within the logistics industry."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/companies/dayjob",
+    "https://aventure.vc/companies/dayjob-london-gb/fundraising",
+    "https://standout.work/companies/c6e2630b-4f4e-4571-8055-5b56ea249d5d"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leading enterprise software company, SAP could benefit from integrating Dayjob's AI scheduling solutions into its logistics and supply chain management offerings."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "As a global logistics leader, DHL could leverage Dayjob's AI-driven scheduling to enhance route optimization and operational efficiency in its short-haul trucking operations."
+    }
+  ],
+  "flags_version": 2
+}

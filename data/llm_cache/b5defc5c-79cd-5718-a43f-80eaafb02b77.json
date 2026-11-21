@@ -1,0 +1,85 @@
+{
+  "canonical_name": "Condor Energy",
+  "description": "Condor Energy offers an AI-powered enterprise energy operating system that unifies real-time multi-site consumption tracking, power purchase hedging, load forecasting, and behind-the-meter asset management for large electricity consumers.",
+  "founders_enriched": [
+    {
+      "full_name": "Jean Costa de Beauregard",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "[ycombinator.com](https://www.ycombinator.com/founders/clement-grivel?utm_source=openai)"
+    },
+    {
+      "full_name": "Clément Grivel",
+      "role": "CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "[ycombinator.com](https://www.ycombinator.com/founders/clement-grivel?utm_source=openai)"
+    },
+    {
+      "full_name": "Florian Pérocheau",
+      "role": "CPO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "[svatlas.io](https://svatlas.io/companies/condor-energy?utm_source=openai)"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "Paris",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised a $500,000 seed round in April 2026, supported by investors including Kima Ventures, Frst Capital, and Source Ventures.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised a $500,000 seed round in April 2026, supported by investors including Kima Ventures, Frst Capital, and Source Ventures.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing volatility in global energy markets and the growing emphasis on sustainable energy practices create a pressing need for advanced energy procurement solutions, positioning Condor Energy's platform as a timely and essential tool for large-scale energy consumers.",
+  "devils_advocate_risks": [
+    "The complexity of integrating Condor Energy's platform with diverse existing energy management systems across various industries may pose technical challenges.",
+    "Achieving widespread adoption among large enterprises could be hindered by resistance to change and the need for significant investment in new technologies."
+  ],
+  "citations": [
+    "https://svatlas.io/companies/condor-energy",
+    "https://www.ycombinator.com/founders/clement-grivel",
+    "https://startupmap.one/startup/condor_energy_fr",
+    "https://www.condor.energy/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could synergize with Condor Energy's AI-driven energy procurement solutions to enhance energy efficiency in chemical manufacturing processes."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's expertise in enterprise software could complement Condor Energy's platform by integrating energy procurement data with broader enterprise resource planning systems, offering comprehensive solutions to large-scale industrial clients."
+    }
+  ],
+  "flags_version": 2
+}

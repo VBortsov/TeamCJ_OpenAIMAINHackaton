@@ -1,0 +1,60 @@
+{
+  "canonical_name": "FlowFacade",
+  "description": "FlowFacade aims to enhance the intelligence of thermo-pneumatic passive shading systems by integrating soft pneumatic circuits and actuators into patented passive shading technology.",
+  "founders_enriched": [
+    {
+      "full_name": "Professor Bas Overvelde",
+      "role": "Lead",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Eindhoven University of Technology"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Affiliated with Eindhoven University of Technology"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Eindhoven",
+  "raised_institutional_round": false,
+  "funding_summary": "FlowFacade has received €150,000 in funding from the European Research Council (ERC) under the Proof of Concept grant.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for sustainable architectural solutions and energy-efficient building designs presents a timely opportunity for FlowFacade's innovative approach to passive shading systems.",
+  "devils_advocate_risks": [
+    "Technical Feasibility: Integrating soft pneumatic circuits and actuators into existing passive shading systems may present engineering challenges.",
+    "Market Adoption: Convincing the construction industry to adopt new, unproven technologies could be challenging."
+  ],
+  "citations": [
+    "https://cordis.europa.eu/project/id/101335576"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could be synergistic with FlowFacade's focus on passive shading systems based on soft robotics and active materials."
+    },
+    {
+      "lp_name": "WACKER",
+      "reason": "WACKER is involved in the production of silicone-based materials, which could be relevant to the development of materials used in FlowFacade's shading systems."
+    }
+  ],
+  "flags_version": 2
+}

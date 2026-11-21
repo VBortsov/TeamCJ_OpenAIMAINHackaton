@@ -1,0 +1,82 @@
+{
+  "canonical_name": "Wealor",
+  "description": "Wealor provides an AI-native platform for wealth managers, centralizing client data and automating advisory operations.",
+  "founders_enriched": [
+    {
+      "full_name": "Karim Bouri",
+      "role": "CEO & Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "founding team information"
+    },
+    {
+      "full_name": "Pierre Depuydt",
+      "role": "CTO & Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "École Polytechnique",
+        "UC Berkeley"
+      ],
+      "prior_companies": [
+        "Boston Consulting Group",
+        "Tiffany & Co",
+        "French Military"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "founding team information"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": true,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "Paris",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $500K in a Convertible Note funding round on June 1, 2026, led by Y Combinator.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $500K in a Convertible Note funding round on June 1, 2026, led by Y Combinator.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing adoption of AI in financial services presents a timely opportunity for Wealor to address inefficiencies in wealth management.",
+  "devils_advocate_risks": [
+    "Integration challenges with existing legacy systems in wealth management.",
+    "Ensuring data privacy and compliance with financial regulations."
+  ],
+  "citations": [
+    "https://www.roundfunded.com/en/yc-startup/wealor",
+    "https://ai.lounge.ai/companies/wealor",
+    "https://fundraisingfox.com/people/pierre-depuydt",
+    "https://www.cbinsights.com/company/wealor",
+    "https://www.cbinsights.com/company/wealor/financials",
+    "https://www.crunchbase.com/organization/wealor"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Wealor's AI-native platform for wealth managers could integrate with SAP's enterprise solutions, enhancing financial data management and operational efficiency."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's focus on innovative technologies aligns with Wealor's AI-driven approach to wealth management, potentially fostering collaboration in financial technology advancements."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,64 @@
+{
+  "canonical_name": "SPIROPENT",
+  "description": "SPIROPENT aims to develop new three-dimensional carbon-based tricyclic spiropentane building blocks for pharmaceutical applications.",
+  "founders_enriched": [
+    {
+      "full_name": "Max Hansmann",
+      "role": "Professor",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "TU Dortmund University"
+      ],
+      "prior_companies": [
+        "TU Dortmund University"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Professor of organic chemistry at TU Dortmund University."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Dortmund",
+  "raised_institutional_round": false,
+  "funding_summary": "Received a €150,000 Proof of Concept Grant from the European Research Council (ERC) in June 2026.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing demand for innovative drug design solutions presents a timely opportunity for SPIROPENT's novel building blocks.",
+  "devils_advocate_risks": [
+    "Technical Risk: Challenges in synthesizing the new building blocks with the desired properties.",
+    "Market Risk: Uncertainty regarding the adoption of these new building blocks by pharmaceutical companies."
+  ],
+  "citations": [
+    "https://www.tu-dortmund.de/en/newsdetail/professor-max-hansmann-secures-proof-of-concept-grant-65013/",
+    "https://www.tu-dortmund.de/en/newsdetail/spin-off-from-tu-dortmund-university-attracts-biotech-communitys-attention-56086/",
+    "https://cordis.europa.eu/project/id/101335348"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "As a pharmaceutical company, they may be interested in innovative drug development technologies."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Specializing in specialty chemicals, they might find value in new chemical building blocks for pharmaceutical applications."
+    }
+  ],
+  "flags_version": 2
+}

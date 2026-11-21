@@ -1,0 +1,98 @@
+{
+  "canonical_name": "Parsewise",
+  "description": "Parsewise offers an AI-powered platform that transforms unstructured documents into structured, traceable evidence, enabling organizations to make reliable risk decisions from complex information.",
+  "founders_enriched": [
+    {
+      "full_name": "Maximilian Hofer",
+      "role": "Co-founder & CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Greg Csegzi",
+      "role": "Co-founder & CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Nikola Bozhinov",
+      "role": "Founding Engineer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Shan Singh",
+      "role": "Founding Engineer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Thijl Klerkx",
+      "role": "Founding Go-To-Market Lead",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity and volume of unstructured data in industries like insurance and finance create a pressing need for efficient data processing solutions, positioning Parsewise's technology as timely and relevant.",
+  "devils_advocate_risks": [
+    "Challenges in scaling the AI models to handle diverse document types and industries effectively.",
+    "Potential difficulties in integrating with existing enterprise systems and workflows."
+  ],
+  "citations": [
+    "https://find-and-update.company-information.service.gov.uk/company/16677569",
+    "https://www.parsewise.ai/"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

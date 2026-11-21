@@ -339,6 +339,42 @@ def list_events():
             "description": "European DeepTech founders accepted into recent Y Combinator cohorts.",
             "projectsLabel": "European YC cohort teams",
             "projects": []
+        },
+        "baystartup": {
+            "type": "competition",
+            "name": "BayStartUP Bavarian Business Plan Award",
+            "organiser": "BayStartUP GmbH",
+            "location": "Munich",
+            "country_code": "DE",
+            "date": "2026-02-15",
+            "url": "https://www.baystartup.de/businessplan-wettbewerbe/sieger",
+            "description": "Premier Bavarian startup competition recognizing high-growth DeepTech and B2B technology ventures across Munich, Northern Bavaria, and Swabia.",
+            "projectsLabel": "BayStartUP award winners",
+            "projects": []
+        },
+        "tum_venture_labs": {
+            "type": "lab",
+            "name": "TUM Venture Labs Spin-off Cohort",
+            "organiser": "Technical University of Munich & UnternehmerTUM",
+            "location": "Munich",
+            "country_code": "DE",
+            "date": "2026-01-15",
+            "url": "https://www.tum-venture-labs.de",
+            "description": "Elite university spin-outs and domain-specific incubators across AI, Quantum, Robotics, Aerospace, and MedTech.",
+            "projectsLabel": "TUM Venture Labs teams",
+            "projects": []
+        },
+        "github_eu": {
+            "type": "competition",
+            "name": "Verified European Open Source DeepTech",
+            "organiser": "European Open Source Ecosystem",
+            "location": "DACH / Pan-Europe",
+            "country_code": "DE",
+            "date": "2026-02-01",
+            "url": "https://github.com",
+            "description": "High-velocity European DeepTech code repositories and technical projects exhibiting organic community adoption and healthy fork ratios.",
+            "projectsLabel": "European open-source ventures",
+            "projects": []
         }
     }
 
@@ -362,6 +398,12 @@ def list_events():
             cohorts["cordis_erc"]["projects"].append([lid, f"ERC Proof-of-Concept Grantee: {lname}"])
         elif "yc_recent" in signals or lead.get("accelerator") == "yc":
             cohorts["yc_eu"]["projects"].append([lid, f"Y Combinator EU founder: {lname}"])
+        elif "baystartup" in signals or lead.get("accelerator") == "baystartup":
+            cohorts["baystartup"]["projects"].append([lid, f"BayStartUP winner: {lname}"])
+        elif "tum_venture_labs" in signals or lead.get("accelerator") == "tum_venture_labs":
+            cohorts["tum_venture_labs"]["projects"].append([lid, f"TUM Venture Labs team: {lname}"])
+        elif "github_eu" in signals:
+            cohorts["github_eu"]["projects"].append([lid, f"European OSS DeepTech: {lname}"])
 
         # Also check for direct Luma signals on leads
         for signal in lead.get("discovered_from", []):

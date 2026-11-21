@@ -1,0 +1,65 @@
+{
+  "canonical_name": "BacForClimate",
+  "description": "BacForClimate is developing novel compounds aimed at significantly reducing methane emissions in cattle through feed additives.",
+  "founders_enriched": [
+    {
+      "full_name": "Prof. Dr. Benedikt Sabaß",
+      "role": "Professor of Biophysics",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "University of Stuttgart",
+        "TU Dortmund University",
+        "Ludwig-Maximilians-Universität (LMU) Munich"
+      ],
+      "prior_companies": [
+        "Ludwig-Maximilians-Universität (LMU) Munich"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Professor at TU Dortmund University"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Dortmund",
+  "raised_institutional_round": false,
+  "funding_summary": "The European Research Council (ERC) awarded a Proof of Concept Grant of €150,000 for the BacForClimate project.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing global emphasis on sustainable agriculture and climate change mitigation creates a timely opportunity for solutions like BacForClimate.",
+  "devils_advocate_risks": [
+    "Regulatory Approval: Ensuring that the new feed additives meet all regulatory standards for animal feed.",
+    "Market Adoption: Convincing livestock producers to adopt new feed additives may require overcoming established practices and demonstrating clear benefits."
+  ],
+  "citations": [
+    "https://www.tu-dortmund.de/en/university/news/detail/prof-benedikt-sabass-secures-proof-of-concept-grant-60200/",
+    "https://cordis.europa.eu/project/id/101243989"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in specialty chemicals and has a strong focus on sustainable solutions, aligning with BacForClimate's goal of reducing methane emissions in livestock farming."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim has a significant presence in animal health, making them a potential strategic partner for developing and commercializing livestock-related innovations."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,78 @@
+{
+  "canonical_name": "Pairio",
+  "description": "Pairio is an AI mobile app that assists factory technicians in diagnosing and repairing malfunctioning equipment by analyzing technical documentation and providing real-time solutions.",
+  "founders_enriched": [
+    {
+      "full_name": "Matthias Wolf",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "AI engineer at Lio"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "founders.io"
+    },
+    {
+      "full_name": "Tim Zinkl",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Founder of an events business"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "ycombinator.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "By",
+  "raised_institutional_round": true,
+  "funding_summary": "In January 2026, Pairio raised $500,000 in a seed funding round, and in May 2026, it raised an undisclosed amount in a pre-seed funding round led by Y Combinator.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In January 2026, Pairio raised $500,000 in a seed funding round, and in May 2026, it raised an undisclosed amount in a pre-seed funding round led by Y Combinator.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of industrial machinery and the need for efficient maintenance solutions create a timely opportunity for Pairio's AI-driven approach to address these challenges.",
+  "devils_advocate_risks": [
+    "Ensuring the AI system's accuracy and reliability across diverse industrial environments.",
+    "Achieving widespread adoption among technicians accustomed to traditional maintenance methods."
+  ],
+  "citations": [
+    "https://founders.io/company/pairio",
+    "https://fundraisingfox.com/companies/pairio",
+    "https://www.ycombinator.com/companies/pairio",
+    "https://millionrounds.com/company/pairio",
+    "https://neuronfeed.com/startups/pairio"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "As a leading manufacturer of industrial equipment, Bosch could benefit from Pairio's AI-driven maintenance solutions to enhance the efficiency and reliability of their machinery."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's focus on industrial technologies aligns with Pairio's offerings, potentially enabling Evonik to integrate advanced maintenance solutions into their operations."
+    }
+  ],
+  "flags_version": 2
+}

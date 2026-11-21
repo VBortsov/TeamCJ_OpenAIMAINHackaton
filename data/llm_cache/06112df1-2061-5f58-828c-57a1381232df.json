@@ -1,0 +1,82 @@
+{
+  "canonical_name": "Prism",
+  "description": "Prism is an AI-native recruiting agency that uses software and agents to help companies find better candidates faster.",
+  "founders_enriched": [
+    {
+      "full_name": "Theo Kitsberg",
+      "role": "Co-founder & CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Cambridge University"
+      ],
+      "prior_companies": [
+        "Managed recruiting and training for a mental health helpline at Cambridge."
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Conducted research at MIT's Media Lab and the Cambridge Computer Science Faculty."
+    },
+    {
+      "full_name": "Axel La Pira",
+      "role": "Co-founder & CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Oxford University"
+      ],
+      "prior_companies": [
+        "Machine learning at Citadel",
+        "Founder associate at Alan."
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Studied Computer Science and Philosophy at Oxford University, graduating second in his cohort."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Prism participated in Y Combinator's Spring 2026 batch, receiving a standard $500,000 investment through SAFEs.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Prism participated in Y Combinator's Spring 2026 batch, receiving a standard $500,000 investment through SAFEs.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for efficient and scalable recruitment solutions in a competitive talent market makes Prism's AI-driven approach timely.",
+  "devils_advocate_risks": [
+    "Market Competition: Established recruiting firms and HR software companies may pose significant competition.",
+    "Technology Adoption: Potential clients may be hesitant to adopt AI-driven recruitment solutions, affecting market penetration."
+  ],
+  "citations": [
+    "https://tryprism.com/about",
+    "https://altss.com/companies/yc/tryprism",
+    "https://www.ycombinator.com/companies/tryprism",
+    "https://www.zeitgeist.bot/company/prism"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Prism's AI-driven recruitment platform could enhance Bosch's talent acquisition processes, aligning with Bosch's focus on innovation and efficiency."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Prism's technology could streamline SAP's recruitment efforts, supporting SAP's commitment to leveraging advanced technologies for business optimization."
+    }
+  ],
+  "flags_version": 2
+}

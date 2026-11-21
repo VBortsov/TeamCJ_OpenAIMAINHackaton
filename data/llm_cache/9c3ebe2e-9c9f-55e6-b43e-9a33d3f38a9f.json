@@ -1,0 +1,84 @@
+{
+  "canonical_name": "Comena",
+  "description": "Comena develops AI agents that automate order processing for industrial distributors and manufacturers, converting orders from emails and PDFs into ERP systems.",
+  "founders_enriched": [
+    {
+      "full_name": "Jiehua Wu",
+      "role": "Co-Founder & CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Technical University of Munich"
+      ],
+      "prior_companies": [
+        "askLio",
+        "Pina Earth",
+        "Google"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Almo Sutedjo",
+      "role": "Co-Founder & CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Microsoft Azure",
+        "HubSpot"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": true,
+      "source_of_identity": "comena.ai"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "München Ladungsfähige",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $500K in September 2025 and $1M in April 2026.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $500K in September 2025 and $1M in April 2026.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for automation in B2B order processing presents a timely opportunity for Comena's solutions to gain traction.",
+  "devils_advocate_risks": [
+    "Potential challenges in integrating AI agents with diverse ERP systems across various industries.",
+    "Competition from established enterprise software providers developing similar automation features."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/founders/jiehua-wu",
+    "https://comena.ai/en/about-us",
+    "https://svatlas.io/companies/comena",
+    "https://www.vcbacked.co/company/comena",
+    "https://www.caplight.com/company/comena",
+    "https://fondo.com/blog/comena-launches"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leading enterprise software company, SAP could benefit from integrating Comena's AI-driven order processing solutions into its ERP systems, enhancing automation capabilities."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "DHL's logistics operations could leverage Comena's technology to streamline order processing, reducing manual data entry and improving efficiency in supply chain management."
+    }
+  ],
+  "flags_version": 2
+}

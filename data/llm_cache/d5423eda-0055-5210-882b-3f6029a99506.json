@@ -1,0 +1,97 @@
+{
+  "canonical_name": "Moritz",
+  "description": "Moritz is an AI-native law firm that combines artificial intelligence with experienced attorneys to deliver complex legal work with same-day turnaround.",
+  "founders_enriched": [
+    {
+      "full_name": "Pamir Ehsas",
+      "role": "Founder & CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Oxford"
+      ],
+      "prior_companies": [
+        "OpenAI",
+        "Google"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": false,
+      "source_of_identity": "Founder & CEO of Moritz."
+    },
+    {
+      "full_name": "Daniel Dalla Vedova",
+      "role": "Co-founder & COO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Harvard"
+      ],
+      "prior_companies": [
+        "Orrick",
+        "Pareto"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-founder & COO of Moritz."
+    },
+    {
+      "full_name": "Stefan Mandaric",
+      "role": "Co-founder & CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "MIT"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-founder & CTO of Moritz."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "Oslo",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $9 million in a seed funding round led by Y Combinator and 20VC on May 5, 2026.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $9 million in a seed funding round led by Y Combinator and 20VC on May 5, 2026.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for rapid and cost-effective legal services in the tech industry presents a timely opportunity for Moritz's AI-driven approach.",
+  "devils_advocate_risks": [
+    "Ensuring the AI system's accuracy and reliability in handling complex legal matters.",
+    "Scaling operations to meet the needs of a growing client base without compromising service quality."
+  ],
+  "citations": [
+    "https://www.moritzlegal.com/team",
+    "https://www.techstartupslist.com/startup/moritz",
+    "https://www.moritzlegal.com/blog/moritz-raises-9m",
+    "https://www.moritzlegal.com/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Moritz's AI-driven legal services could benefit from Evonik's expertise in industrial applications, potentially streamlining legal processes within the chemical industry."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's focus on enterprise software aligns with Moritz's mission to provide efficient legal solutions, potentially integrating legal workflows into SAP's business processes."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,80 @@
+{
+  "canonical_name": "fiveD",
+  "description": "fiveD entwickelt eine Softwarelösung namens 'Radar Simulation Suite', die eine realistische Simulation von Radardaten ermöglicht. Diese wird in verschiedenen Bereichen eingesetzt, darunter Fahrerassistenzsysteme, industrielle Anwendungen und die Entwicklung von Körperscannern an Flughäfen.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Michael Stelzig",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Friedrich-Alexander-Universität Erlangen-Nürnberg"
+      ],
+      "prior_companies": [
+        "Siemens",
+        "Mercedes-Benz"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": true,
+      "source_of_identity": "Research group leader in Remote Sensing & Radar Based Ice Exploration at FAU."
+    },
+    {
+      "full_name": "Marcel Hoffmann",
+      "role": "Co-Founder & Managing Director",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-Founder and Managing Director of fiveD."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2024,
+  "city": "Erlangen",
+  "raised_institutional_round": false,
+  "funding_summary": "Im November 2026 wurde fiveD mit dem IHK-Gründerpreis Mittelfranken ausgezeichnet. Es liegen keine Informationen über weitere Finanzierungsrunden oder Investitionen vor.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "Mit der zunehmenden Komplexität und den Anforderungen an Radarsysteme in verschiedenen Branchen besteht ein wachsender Bedarf an präzisen und effizienten Simulationswerkzeugen, um Entwicklungszeiten zu verkürzen und Kosten zu senken.",
+  "devils_advocate_risks": [
+    "Technologische Komplexität: Die Entwicklung hochpräziser Radarsimulationssoftware erfordert fortschrittliche technische Expertise und kontinuierliche Innovation, um mit den sich schnell entwickelnden Technologien Schritt zu halten.",
+    "Marktdurchdringung: Als relativ neues Unternehmen könnte fiveD Herausforderungen bei der Etablierung seiner Produkte im Markt und der Gewinnung von Kunden haben, insbesondere gegenüber etablierten Wettbewerbern."
+  ],
+  "citations": [
+    "https://www.carsummit.de/sprecher/detail/veranstaltung/automotiveit-carsummit-2025-engineering-meets-it-2025/sprecher/dr-ing-michael-stelzig-new690c9d5fea887443161174/",
+    "https://prospeo.io/c/fived",
+    "https://www.academy.fau.de/veranstaltungen/collegium-alexandrinum-radar-simulation-von-fived-wie-aus-fau-forschung-ein-deep-tech-startup-entstand/",
+    "https://www.companyhouse.de/fiveD-GmbH-Erlangen",
+    "https://www.everythingrf.com/news/details/18984-r-s-collaborates-with-fived-to-conduct-hyper-realistic-radar-simulations-for-contactless-security-checks",
+    "https://www.ihk-nuernberg.de/meldungen/details/zum-30-mal-ausgezeichnet-ihk-gruenderpreis-mittelfranken-2026"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Dräger",
+      "reason": "Als Unternehmen im Bereich Medizintechnik könnte Dräger an den Radarsimulationslösungen von fiveD interessiert sein, insbesondere für Anwendungen in der medizinischen Bildgebung und Diagnostik."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "Als Logistikunternehmen könnte DHL an der Anwendung von Radarsimulationen für autonome Fahrzeuge und Flottenmanagement interessiert sein, um die Effizienz und Sicherheit ihrer Lieferprozesse zu verbessern."
+    }
+  ],
+  "flags_version": 2
+}

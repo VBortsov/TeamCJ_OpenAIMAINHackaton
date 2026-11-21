@@ -2,7 +2,7 @@
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-2.5.0-009688.svg)](https://fastapi.tiangolo.com/)
-[![Tests](https://img.shields.io/badge/tests-37%20passed-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/tests-40%20passed-brightgreen.svg)]()
 [![Zero-Fake-Data](https://img.shields.io/badge/policy-Zero--Fake--Data-red.svg)]()
 [![Track](https://img.shields.io/badge/MAIN%20Summit%202026-HTGF%20Track-orange.svg)]()
 
@@ -17,69 +17,76 @@
 The engine continuously uncovers high-potential, undiscovered European DeepTech spin-offs before they appear on institutional databases (Crunchbase, PitchBook). It screens out noisy agencies and hobby projects via 5 deterministic Kill-Gates, deeply enriches surviving founders with OpenAI live web search, scores companies against the HTGF IV investment mandate, runs specialized ML ranking models, and serves an interactive full-stack app (`first-signal/`) directly from FastAPI.
 
 ```
-                           [ LIVE INGESTION SOURCES ]
-  +----------------+  +----------------+  +----------------+  +----------------+  +----------------+  +----------------+
-  |    ETH / RWTH  |  |    OpenAlex    |  |  Hugging Face  |  |  Luma Events   |  | CORDIS ERC-PoC |  |  European YC   |
-  | University Labs|  | European Papers|  | Hub Org Models|  | Tech Demo-Days |  | Horizon Europe |  | Recent Cohorts|
-  +--------+-------+  +--------+-------+  +--------+-------+  +--------+-------+  +--------+-------+  +--------+-------+
-           |                   |                   |                   |                   |                   |
-           +-------------------+-------------------+-------------------+-------------------+-------------------+
-                                                   |
-                                                   v
-                                     [ SQLite Ingestion & Cache ]
-                                        (data/scout.db & HTTP)
-                                                   |
-                                                   v
-                                [ STAGE 3: IMPRESSUM & GITHUB ]
-                                - German § 5 DDG Impressum Scraping
-                                - GitHub Star & Fork-Ratio Verification
-                                                   |
-                                                   v
-                                [ STAGE 4: DETERMINISTIC KILL-GATES ($0.00) ]
-                                - Gate 1: Hobby / Event Communities Filter
-                                - Gate 2: IT Consultancies & Agencies Filter
-                                - Gate 3: Legacy Corporates & Age Filter (<= 3 yrs)
-                                - Gate 4: GitHub Fake-Star Anomaly Filter
-                                - Gate 5: Funding Blocklist (Scaleups, YC <= 2024)
-                                                   |
-                                                   v
-                                [ STAGE 5: ASYNC FOUNDER ENRICHMENT ]
-                                - OpenAI Web Search (GPT-4o-mini + Pydantic)
-                                - Real Founder Pedigree (Doctorates, Prior Exits)
-                                - HTGF IV LP Strategic Synergy Alignment
-                                - Budget Circuit-Breaker ($2.00 hard cap)
-                                                   |
-                                                   v
-                                [ STAGE 6: POST-ENRICHMENT AGE FILTER ]
-                                - Eliminates stealth scaleups / old rebrands
-                                                   |
-                                                   v
-                                [ STAGE 7: 5-PILLAR SCORING + ML BLEND ]
-                                - Team Pedigree (32 pts)
-                                - Commercial Intent (25 pts)
-                                - Technical Moat (18 pts)
-                                - Multi-Signal Convergence (15 pts)
-                                - HTGF Mandate Fit (10 pts)
-                                - 50/50 Blended Ranking: 0.5 * det + 0.5 * ml
-                                                   |
-           +---------------------------------------+---------------------------------------+
-           |                                                                               |
-           v                                                                               v
-[ ML Contract CSV Export ]                                                     [ Frontend Provenance Feed ]
-data/live_candidates_for_ml.csv                                                data/wave2_frontend_feed.json
- (36 columns per features.md)                                                   (conversion funnel & audit)
-           |                                                                               |
-           +---------------------------------------+---------------------------------------+
-                                                   |
-                                                   v
-                                       [ FastAPI REST Service ]
-                                      (http://localhost:8000)
-                                                   |
-                     +-----------------------------+-----------------------------+
-                     |                             |                             |
-                     v                             v                             v
-          [ FounderHunt Web UI ]         [ Interactive Docs ]          [ n8n Automation Dispatch ]
-          (Mounted at / from first-signal) (Swagger at /docs)           (Lusha Enrichment & Slack)
+                                              [ 9 LIVE INGESTION SOURCES ]
+  +----------------+  +----------------+  +----------------+  +----------------+  +----------------+
+  |    ETH / RWTH  |  |    OpenAlex    |  |  Hugging Face  |  |  Luma Events   |  | CORDIS ERC-PoC |
+  | University Labs|  | European Papers|  | Hub Org Models|  | Tech Demo-Days |  | Horizon Europe |
+  +--------+-------+  +--------+-------+  +--------+-------+  +--------+-------+  +--------+-------+
+           |                   |                   |                   |                   |
+           +-------------------+---------+---------+-------------------+-------------------+
+                                         |
+  +----------------+  +------------------+-------------+  +----------------+
+  |  European YC   |  |        BayStartUP Awards       |  |  TUM Venture   |  | European GitHub|
+  | Recent Cohorts |  | Munich, Nordbayern, Schwaben   |  | Labs Spin-offs |  | Verified OSS   |
+  +--------+-------+  +------------------+-------------+  +--------+-------+  +--------+-------+
+           |                             |                         |                   |
+           +-----------------------------+-------------------------+-------------------+
+                                         |
+                                         v
+                           [ SQLite Ingestion & Cache ]
+                              (data/scout.db & HTTP)
+                                         |
+                                         v
+                      [ STAGE 3: IMPRESSUM & GITHUB VERIFIER ]
+                      - German § 5 DDG Impressum Scraping
+                      - GitHub Star & Fork-Ratio Verification
+                                         |
+                                         v
+                      [ STAGE 4: DETERMINISTIC KILL-GATES ($0.00) ]
+                      - Gate 1: Hobby / Event Communities Filter
+                      - Gate 2: IT Consultancies & Agencies Filter
+                      - Gate 3: Legacy Corporates & Age Filter (<= 3 yrs)
+                      - Gate 4: GitHub Fake-Star Anomaly Filter
+                      - Gate 5: Funding Blocklist (Scaleups, YC <= 2024)
+                                         |
+                                         v
+                      [ STAGE 5: ASYNC FOUNDER ENRICHMENT ]
+                      - OpenAI Web Search (GPT-4o-mini + Pydantic)
+                      - Real Founder Pedigree (Doctorates, Prior Exits)
+                      - HTGF IV LP Strategic Synergy Alignment
+                      - Budget Circuit-Breaker ($12.00 hard cap)
+                                         |
+                                         v
+                      [ STAGE 6: POST-ENRICHMENT AGE FILTER ]
+                      - Eliminates stealth scaleups / old rebrands
+                                         |
+                                         v
+                      [ STAGE 7: 5-PILLAR SCORING + ML BLEND ]
+                      - Team Pedigree (32 pts)
+                      - Commercial Intent (25 pts)
+                      - Technical Moat (18 pts)
+                      - Multi-Signal Convergence (15 pts)
+                      - HTGF Mandate Fit (10 pts)
+                      - 50/50 Blended Ranking: 0.5 * det + 0.5 * ml
+                                         |
+            +----------------------------+----------------------------+
+            |                                                         |
+            v                                                         v
+ [ ML Contract CSV Export ]                                 [ Frontend Provenance Feed ]
+ data/live_candidates_for_ml.csv                            data/wave2_frontend_feed.json
+  (36 columns per features.md)                               (conversion funnel & audit)
+            |                                                         |
+            +----------------------------+----------------------------+
+                                         |
+                                         v
+                             [ FastAPI REST Service ]
+                            (http://localhost:8000)
+                                         |
+                      +------------------+------------------+
+                      |                  |                  |
+                      v                  v                  v
+           [ FounderHunt Web UI ]  [ Interactive Docs ]  [ n8n Automation Dispatch ]
+           (first-signal client)   (Swagger at /docs)    (Lusha & Partner Alerting)
 ```
 
 ---

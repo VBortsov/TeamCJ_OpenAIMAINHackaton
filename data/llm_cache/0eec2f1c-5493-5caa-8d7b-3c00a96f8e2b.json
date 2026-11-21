@@ -1,0 +1,85 @@
+{
+  "canonical_name": "Alan",
+  "description": "Alan offers a digital health platform that combines health insurance, digital care, and preventive tools in a single app, simplifying reimbursements, care access, and personalized prevention.",
+  "founders_enriched": [
+    {
+      "full_name": "Jean-Charles Samuelian-Werve",
+      "role": "Co-founder & CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Ecole des Ponts Paristech",
+        "Collège des Ingénieurs"
+      ],
+      "prior_companies": [
+        "Expliseat"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "alan.com"
+    },
+    {
+      "full_name": "Charles Gorintin",
+      "role": "Co-founder & CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Ecole des Ponts ParisTech",
+        "ENS Paris-Saclay",
+        "UC Berkeley - Haas School of Business"
+      ],
+      "prior_companies": [
+        "Facebook",
+        "Instagram",
+        "Twitter"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": true,
+      "source_of_identity": "alan.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": true,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": true,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2016,
+  "city": null,
+  "raised_institutional_round": true,
+  "funding_summary": "Seed Round (2016): Raised €12 million; Series A (2018): Raised €23 million; Series B (2019): Raised €40 million; Series C (2020): Raised €50 million; Series D (2021): Raised €150 million; Series E (2022): Raised €183 million; Series F (2024): Raised €173 million; Growth Equity (March 2026): Raised €100 million; Series G (June 2026): Raised €400 million.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2016 (older than 3.5 years)",
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing adoption of AI in healthcare and the growing demand for integrated health solutions present a timely opportunity for Alan's offerings.",
+  "devils_advocate_risks": [
+    "Regulatory Challenges: Navigating diverse healthcare regulations across different countries could impede expansion efforts.",
+    "Market Competition: The emergence of new entrants in the digital health insurance space may intensify competition."
+  ],
+  "citations": [
+    "https://alan.com/en/leadership-team",
+    "https://www.orrick.com/en/News/2018/04/Record-Series-A-Financing-for-French-Insurtech-Startup-Alan",
+    "https://www.prosus.com/news-insights/2026/prosus-leads-euros-480-million-funding-round-in-alan-to-shape-the-future-of-ai-powered-healthcare?trk=article-ssr-frontend-pulse_little-text-block"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Alan's focus on AI-driven health solutions aligns with Evonik's interest in innovative technologies in the healthcare sector."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Alan's integration of health insurance with digital care and prevention complements Boehringer Ingelheim's commitment to advancing healthcare through innovative solutions."
+    }
+  ],
+  "flags_version": 2
+}

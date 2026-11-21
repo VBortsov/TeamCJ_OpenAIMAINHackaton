@@ -1,0 +1,72 @@
+{
+  "canonical_name": "Metorial",
+  "description": "Metorial provides an open-source Model Context Protocol (MCP) gateway, offering over 1,100 MCP servers and 21,000 tools for AI agent integrations.",
+  "founders_enriched": [
+    {
+      "full_name": "Karim (Wen) Rahme",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Experience in AI and distributed systems."
+    },
+    {
+      "full_name": "Tobias Herber",
+      "role": "Founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Background in AI, distributed systems, and system software."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Vienna",
+  "raised_institutional_round": true,
+  "funding_summary": "Metorial participated in Y Combinator's Fall 2025 batch and has raised $500K in seed funding.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Metorial participated in Y Combinator's Fall 2025 batch and has raised $500K in seed funding.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing adoption of AI across industries creates a pressing need for standardized integration solutions like Metorial's MCP gateway.",
+  "devils_advocate_risks": [
+    "Market Competition: The AI integration space is highly competitive, with numerous players vying for market share.",
+    "Scalability Challenges: Ensuring the MCP gateway can handle large-scale deployments without performance degradation."
+  ],
+  "citations": [
+    "https://mentionfox.com/funding/yc-metorial",
+    "https://standout.work/companies/metorial",
+    "https://aiolum.com/story/metorial/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Metorial's focus on AI-native infrastructure aligns with Evonik's interest in innovative technologies."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Metorial's open-source MCP gateway for AI enablement complements SAP's enterprise software solutions."
+    }
+  ],
+  "flags_version": 2
+}

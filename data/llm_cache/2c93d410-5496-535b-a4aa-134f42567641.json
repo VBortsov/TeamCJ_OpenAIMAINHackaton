@@ -1,0 +1,133 @@
+{
+  "canonical_name": "Peak Quantum",
+  "description": "Peak Quantum develops superconducting quantum processors with error protection integrated directly into the qubit architecture, aiming to reduce the complexity of quantum computing systems.",
+  "founders_enriched": [
+    {
+      "full_name": "Leon Koch",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-founder and CEO"
+    },
+    {
+      "full_name": "Dr. Thomas Luschmann",
+      "role": "Co-founder and COO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-founder and COO"
+    },
+    {
+      "full_name": "Dr. Max Werninghaus",
+      "role": "Co-founder and CSO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-founder and CSO"
+    },
+    {
+      "full_name": "Alexander Schult",
+      "role": "Co-founder and CFO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-founder and CFO"
+    },
+    {
+      "full_name": "Ivan Tsitsilin",
+      "role": "Head of Design",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Head of Design"
+    },
+    {
+      "full_name": "Kedar Honasoge",
+      "role": "Head of Production",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Head of Production"
+    },
+    {
+      "full_name": "Daniil Bazulin",
+      "role": "Quantum Engineer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Quantum Engineer"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2024,
+  "city": "Munich",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised €2.2 million in a pre-seed round led by Cloudberry Ventures and received €2.8 million from the EU Chips Act, bringing total funding to over €5 million.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised €2.2 million in a pre-seed round led by Cloudberry Ventures and received €2.8 million from the EU Chips Act, bringing total funding to over €5 million.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The recent €5 million funding, including support from the EU Chips Act, positions Peak Quantum to advance its technology and establish a European pilot production facility, marking a significant milestone in its growth.",
+  "devils_advocate_risks": [
+    "Technological Challenges: Developing error-resistant quantum processors is complex and may encounter unforeseen technical hurdles.",
+    "Market Competition: The quantum computing industry is highly competitive, with numerous players vying for dominance, which could impact Peak Quantum's market share."
+  ],
+  "citations": [
+    "https://www.munich-quantum-valley.de/news-events/detail/peakquantum-secures-five-million-in-total-funding",
+    "https://tech.eu/2026/04/14/peak-quantum-reaches-eur5m-in-total-funding-for-quantum-chips",
+    "https://funding.tech.eu/companies/peak-quantum-db798a16",
+    "https://www.munich-startup.de/en/119430/peak-quantum-secures-5-million-euros-for-new-approach/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could be crucial for developing the superconducting materials used in quantum processors."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's expertise in enterprise software could facilitate the integration of quantum computing solutions into business applications, enhancing their value proposition."
+    }
+  ],
+  "flags_version": 2
+}

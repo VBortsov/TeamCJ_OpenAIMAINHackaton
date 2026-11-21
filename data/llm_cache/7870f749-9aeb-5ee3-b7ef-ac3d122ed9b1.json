@@ -1,0 +1,76 @@
+{
+  "canonical_name": "Flott HQ",
+  "description": "Flott HQ provides an AI-powered operating system that unifies planning, live tracking, invoicing, and payments into a single control center for transport and logistics companies.",
+  "founders_enriched": [
+    {
+      "full_name": "Sylvanus MAHE",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "McKinsey",
+        "Datadog"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Kanvaly Fadiga",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Datadog"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Paris",
+  "raised_institutional_round": true,
+  "funding_summary": "In March 2022, Flott HQ raised $2 million in a seed round led by Vertex Ventures. In June 2025, Flott HQ raised $500,000 in a pre-seed round led by Y Combinator.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In March 2022, Flott HQ raised $2 million in a seed round led by Vertex Ventures. In June 2025, Flott HQ raised $500,000 in a pre-seed round led by Y Combinator.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of logistics operations and the need for integrated solutions create a timely opportunity for Flott HQ's platform.",
+  "devils_advocate_risks": [
+    "Challenges in scaling the AI algorithms to handle diverse fleet operations effectively.",
+    "Potential resistance from established logistics companies to adopt new, AI-driven technologies."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/companies/flott-hq",
+    "https://www.startuphub.ai/startups/flott-hq"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Flott HQ's AI-native operating system for vehicle fleet management aligns with Evonik's interest in innovative technologies within the transportation sector."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "Flott HQ's platform enhances logistics operations, which could synergize with DHL's global logistics and supply chain services."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,27 @@
+{
+  "one_liner": "Precira develops autonomous weeding robots and won CHF 40,000 in October 2026 to build its second robot.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich lists Precira as a recognized academic spin-off.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "Precira won the technology and innovation category of the LUKB Zukunftspreis, receiving CHF 40,000 to build a second robot.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 85.7 of 100 (at the top of the reference cohort). Inputs that raised it include ETH spin-off status, deep-tech classification, and a technical founder with an ETH doctorate. The model counts four founders, but the records identify three founders and list the fourth person as a board member and consultant.",
+      "source_url": null
+    }
+  ],
+  "team": "Founder and CEO Marius Gächter holds an ETH Zurich doctorate and leads laser optics. Co-founders Joël Rüttimann and Mario Steinger lead computer vision and system integration, respectively. Oliver Huber is listed as a board member and business consultant.",
+  "why_early": "Unknown whether Precira has closed a priced round. The CHF 40,000 was a prize and does not establish its equity funding history.",
+  "devils_advocate_risks": [
+    "Weed detection and targeting accuracy across different field conditions is unknown.",
+    "Farmer adoption versus conventional weed control is unproven in the available records."
+  ],
+  "next_step": "HTGF Industrial Tech team: Ask the founders what weed detection and targeting accuracy the robot has achieved in field trials so far.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "83681c6f-1224-56c5-80ee-44349b2d2029",
+  "input_hash": "6cf225597093ec06"
+}

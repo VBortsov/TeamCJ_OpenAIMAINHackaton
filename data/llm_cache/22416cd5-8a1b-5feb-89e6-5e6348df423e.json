@@ -1,0 +1,64 @@
+{
+  "canonical_name": "Studyond",
+  "description": "Studyond is a platform that connects students, universities, and companies for guest lectures, applied projects, theses, internships, interview partners, and entry-level positions.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Philipp Wetzel",
+      "role": "CEO and Project Lead",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "University of St. Gallen"
+      ],
+      "prior_companies": [
+        "Calculum"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "CEO and Project Lead of Studyond"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2023,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "In August 2026, Studyond completed a financing round, raising CHF 2 million to support its growth.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for practical experience among students and the need for companies to engage with emerging talent create a timely opportunity for Studyond's services.",
+  "devils_advocate_risks": [
+    "Achieving widespread adoption among universities and companies may be challenging.",
+    "Ensuring data privacy and security on the platform is critical to maintain trust among users."
+  ],
+  "citations": [
+    "https://studyond.com/about/",
+    "https://startupnews.ch/news/studyond-chf-2-mio-finanzierungsrunde",
+    "https://studyond.com/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Studyond's platform connects students and universities with companies for innovation projects, aligning with Bosch's focus on fostering innovation and collaboration."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Studyond's emphasis on connecting students with companies for internships and early-career opportunities complements SAP's commitment to talent development and industry partnerships."
+    }
+  ],
+  "flags_version": 2
+}

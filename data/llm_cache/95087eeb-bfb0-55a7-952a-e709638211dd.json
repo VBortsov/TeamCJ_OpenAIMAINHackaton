@@ -1,0 +1,120 @@
+{
+  "canonical_name": "Skaaltec",
+  "description": "Skaaltec develops SmartVNS, a wearable device combining transcutaneous auricular vagus nerve stimulation with upper limb rehabilitation exercises to enhance stroke recovery.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Paulius Viskaitis",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-founder, Neuroscientist"
+    },
+    {
+      "full_name": "Dr. Dane Donekan",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-founder, Neuroscientist"
+    },
+    {
+      "full_name": "Max Quast",
+      "role": "Chief Product Officer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Chief Product Officer"
+    },
+    {
+      "full_name": "Reda Fornera",
+      "role": "Chief Technology Officer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Chief Technology Officer"
+    },
+    {
+      "full_name": "Clément Lhoste",
+      "role": "Clinical Scientist",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Clinical Scientist"
+    },
+    {
+      "full_name": "Prof. Olivier Lambercy",
+      "role": "Scientific Advisor",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Scientific Advisor"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "Skaaltec has raised a total of $200,000 over four funding rounds, with the latest funding raised approximately six months ago.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing prevalence of stroke survivors with chronic upper limb impairments creates a pressing need for innovative rehabilitation solutions like SmartVNS.",
+  "devils_advocate_risks": [
+    "Regulatory Approval: Securing necessary medical device certifications across different regions.",
+    "Market Adoption: Achieving widespread acceptance among healthcare providers and patients."
+  ],
+  "citations": [
+    "https://skaaltec.com/about/",
+    "https://relab.ethz.ch/spin-off/skaaltec.html",
+    "https://www.crunchbase.com/organization/skaaltec/financial_details"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Skaaltec's focus on neurotechnology aligns with Evonik's interest in innovative healthcare solutions."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Skaaltec's work in stroke rehabilitation complements Boehringer Ingelheim's commitment to advancing medical treatments."
+    }
+  ],
+  "flags_version": 2
+}

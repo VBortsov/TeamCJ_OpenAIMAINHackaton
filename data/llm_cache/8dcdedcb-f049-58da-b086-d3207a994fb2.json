@@ -1,0 +1,112 @@
+{
+  "canonical_name": "Alpic",
+  "description": "Alpic provides a cloud platform dedicated to building, deploying, and distributing Model Context Protocol (MCP) servers and ChatGPT applications, offering integrated tools for server orchestration, resource scaling, and model hosting.",
+  "founders_enriched": [
+    {
+      "full_name": "Pierre-Louis Theron",
+      "role": "Co-founder & CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Streamroot"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Prior to founding Alpic, Theron was involved in Streamroot, a video delivery startup acquired by Lumen Technologies."
+    },
+    {
+      "full_name": "Frédéric Barthelet",
+      "role": "Co-founder & CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Nikolay Rodionov",
+      "role": "Co-founder & COO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Erica Beavers",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Charles Sonigo",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": true,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": null,
+  "raised_institutional_round": true,
+  "funding_summary": "In September 2025, Alpic raised $6 million in a pre-seed funding round led by Partech, with participation from K5 Global, Irregular Expressions, Yellow, Kima Ventures, Drysdale Ventures, and Galion.exe.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In September 2025, Alpic raised $6 million in a pre-seed funding round led by Partech, with participation from K5 Global, Irregular Expressions, Yellow, Kima Ventures, Drysdale Ventures, and Galion.exe.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing adoption of AI agents across various industries creates a pressing need for specialized infrastructure, positioning Alpic's solutions as timely and essential.",
+  "devils_advocate_risks": [
+    "Alpic faces competition from established cloud service providers expanding into AI infrastructure.",
+    "The rapid evolution of AI technologies may require continuous adaptation of Alpic's platform to meet emerging standards and customer expectations."
+  ],
+  "citations": [
+    "https://www.seedops.co/companies/alpic-ai",
+    "https://b2db.com/company/alpic",
+    "https://alpic.ai/about",
+    "https://alpic.ai/blog/alpic-raises-6-million-preseed",
+    "https://startupintros.com/orgs/alpic"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a global leader in enterprise software, SAP could benefit from integrating Alpic's AI-native interfaces into its cloud solutions."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in innovative technologies aligns with Alpic's development of AI infrastructure, potentially enhancing Evonik's digital transformation initiatives."
+    }
+  ],
+  "flags_version": 2
+}

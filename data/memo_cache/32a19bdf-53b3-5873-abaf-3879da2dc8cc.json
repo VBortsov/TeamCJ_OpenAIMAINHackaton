@@ -1,0 +1,27 @@
+{
+  "one_liner": "UNOMR is an ETH Zurich spin-off developing single-molecule protein analysis; its academic origin warrants an early conversation, though its funding stage is unknown.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich lists UNOMR as a recognized spin-off.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "All three founders are technical and hold PhDs; each lists ETH Zurich in their university background.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 81.4 of 100 (at the top of the reference cohort). Its strongest positive inputs were university spin-off status, a technical founder and three known founders.",
+      "source_url": null
+    }
+  ],
+  "team": "Dr. Til Schlotter is CEO; Dr. Julian Hengsteler and Dr. Julia Wagner are co-founders. Founder records identify all three as technical and confirm their PhDs and ETH Zurich affiliations.",
+  "why_early": "Unknown. UNOMR has raised an undisclosed amount; whether that funding included a priced round is unknown.",
+  "devils_advocate_risks": [
+    "The platform’s accuracy and reliability across different biological contexts remain to be established.",
+    "Adoption and integration into existing research and medical workflows are uncertain."
+  ],
+  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders whether any funding to date was raised in a priced equity round.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "32a19bdf-53b3-5873-abaf-3879da2dc8cc",
+  "input_hash": "4efaf36856280689"
+}

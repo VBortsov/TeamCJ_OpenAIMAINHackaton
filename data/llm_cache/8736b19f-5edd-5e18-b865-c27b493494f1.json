@@ -1,0 +1,76 @@
+{
+  "canonical_name": "Kuli",
+  "description": "Kuli is an AI coworker for marketing teams at the world's largest consumer brands, analyzing social media videos to enhance campaign effectiveness.",
+  "founders_enriched": [
+    {
+      "full_name": "Michael Hodara",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "EPFL"
+      ],
+      "prior_companies": [
+        "Aircall"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Jonathan Hassan",
+      "role": "CRO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "KPMG"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "ycombinator.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": true,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "Paris",
+  "raised_institutional_round": false,
+  "funding_summary": "Kuli has raised approximately €500K in 2026 and participated in Y Combinator's Spring 2026 batch.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing reliance on AI for marketing efficiency and the growing volume of social media content create a timely opportunity for Kuli's solution.",
+  "devils_advocate_risks": [
+    "Challenges in scaling AI capabilities to handle vast amounts of social media data.",
+    "Potential resistance from traditional marketing teams to adopt AI-driven processes."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/companies/kuli"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in digitalization and AI solutions for industrial applications, aligning with Kuli's AI-driven marketing platform."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's focus on enterprise software and AI integration complements Kuli's AI solutions for marketing teams."
+    }
+  ],
+  "flags_version": 2
+}

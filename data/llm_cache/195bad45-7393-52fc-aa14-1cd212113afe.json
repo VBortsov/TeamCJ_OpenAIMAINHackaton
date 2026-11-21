@@ -1,0 +1,60 @@
+{
+  "canonical_name": "OnsiteOkine",
+  "description": "OnsiteOkine is developing a self-deactivating cytokine platform technology aimed at enhancing immunotherapeutic treatments for cancer by targeting tumor tissues and minimizing systemic side effects.",
+  "founders_enriched": [
+    {
+      "full_name": "Prof. Dr. Matthias Feige",
+      "role": "Lead Researcher",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Technical University of Munich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Chair of Cellular Protein Biochemistry at TUM"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": null,
+  "city": "Muenchen",
+  "raised_institutional_round": false,
+  "funding_summary": "The project has received funding from the European Research Council (ERC), including an ERC Proof-of-Concept Grant to advance its application.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The recent ERC Proof-of-Concept Grant signifies a critical juncture, providing the necessary funding to transition from basic research to practical application in cancer immunotherapy.",
+  "devils_advocate_risks": [
+    "Clinical Validation: Ensuring the modified interleukin-12 variant's efficacy and safety in human trials.",
+    "Regulatory Approval: Navigating complex regulatory pathways for new immunotherapeutic agents."
+  ],
+  "citations": [
+    "https://www.mep.tum.de/en/mep/news/news-single-view-en/article/erc-grants-fuer-mep-kernmitglieder/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "As a pharmaceutical company with a focus on innovative therapies, they could provide expertise and resources to advance OnsiteOkine's therapeutic applications."
+    },
+    {
+      "lp_name": "QIAGEN",
+      "reason": "Specializing in molecular diagnostics, QIAGEN could offer complementary technologies for biomarker analysis and patient stratification in immunotherapy treatments."
+    }
+  ],
+  "flags_version": 2
+}

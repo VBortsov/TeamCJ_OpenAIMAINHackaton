@@ -39,6 +39,9 @@ from backend.ingestion.adapters import (
     CordisErcAdapter,
     FundingBlocklistAdapter,
     YcRecentAdapter,
+    BayStartUPAdapter,
+    TumVentureLabsAdapter,
+    GitHubEuDeeptechAdapter,
 )
 from backend.enrichment.impressum import ImpressumScraper, ImpressumResult
 from backend.enrichment.github_verifier import GitHubVerifier, GitHubRepoMetrics
@@ -89,6 +92,15 @@ def format_source_label(sig: Dict[str, Any]) -> Dict[str, str]:
     elif src == "luma_events":
         label = "German AI Demo-Day & Pitch Event"
         summary = "Founder demo-day pitch at German tech hub event"
+    elif src == "baystartup":
+        label = "BayStartUP Bavarian Business Plan Award"
+        summary = "Winner or finalist in Bavarian Business Plan Competition (BayStartUP)"
+    elif src == "tum_venture_labs":
+        label = "TUM Venture Labs Spin-off"
+        summary = "Technical University of Munich & UnternehmerTUM incubator spin-off"
+    elif src == "github_eu":
+        label = "Verified European Open Source DeepTech"
+        summary = "High-velocity European open-source DeepTech code repository"
 
     return {
         "source_name": src,
@@ -159,7 +171,7 @@ async def run_wave2_pipeline(
         # Stage 2: Ingestion Across All 5 Signal Adapters
         # =========================================================================
         if not skip_ingestion:
-            logger.info("\n--- [Stage 2] Running 6 Ingestion Adapters (Limit: %d each) ---", limit_per_adapter)
+            logger.info("\n--- [Stage 2] Running 9 Ingestion Adapters (Limit: %d each) ---", limit_per_adapter)
             adapters: List[BaseSignalAdapter] = [
                 EthRwthAdapter(http_client=http_client),
                 OpenAlexAdapter(http_client=http_client),
@@ -167,6 +179,9 @@ async def run_wave2_pipeline(
                 LumaEventsAdapter(http_client=http_client),
                 CordisErcAdapter(http_client=http_client),
                 YcRecentAdapter(http_client=http_client),
+                BayStartUPAdapter(http_client=http_client),
+                TumVentureLabsAdapter(http_client=http_client),
+                GitHubEuDeeptechAdapter(http_client=http_client),
             ]
 
             results = await asyncio.gather(
@@ -406,15 +421,15 @@ async def run_wave2_pipeline(
         candidates_to_enrich = surviving_candidates[:top_k]
         logger.info("Found %d surviving leads across Kill-Gates for enrichment (top_k limit: %d)", len(surviving_candidates), top_k)
 
-        # Tier-2 Real OpenAI Web Search enrichment with 6 parallel workers
-        sem = asyncio.Semaphore(6)
+        # Tier-2 Real OpenAI Web Search enrichment with 8 parallel workers
+        sem = asyncio.Semaphore(8)
 
         async def enrich_candidate_task(cand_dict: Dict[str, Any]) -> tuple[Dict[str, Any], EnrichedProfile]:
             async with sem:
                 prof = await enricher.enrich_async(cand_dict)
                 return cand_dict, prof
 
-        logger.info("Running concurrent OpenAI Web Search enrichment (concurrency=6)...")
+        logger.info("Running concurrent OpenAI Web Search enrichment (concurrency=8)...")
         enrichment_results = await asyncio.gather(*(enrich_candidate_task(c) for c in candidates_to_enrich))
 
         scored_candidates: List[Dict[str, Any]] = []
@@ -588,6 +603,14 @@ async def run_wave2_pipeline(
             logger.info("Generating European events sourcing catalog from 12 hubs...")
             luma_adapter = LumaEventsAdapter(http_client=http_client)
             catalog = await luma_adapter.fetch_events_catalog(limit_per_city=15)
+            # Also merge university ecosystem lab events from TUM Venture Labs
+            try:
+                tum_adapter = TumVentureLabsAdapter(http_client=http_client)
+                tum_events = await tum_adapter.fetch_events()
+                catalog.extend(tum_events)
+            except Exception as e_tum:
+                logger.warning("Failed appending TUM Venture Labs events: %s", e_tum)
+
             with NamedTemporaryFile(mode="w", encoding="utf-8", dir=events_feed_path.parent, delete=False) as output:
                 json.dump(catalog, output, indent=2, ensure_ascii=False)
             Path(output.name).replace(events_feed_path)

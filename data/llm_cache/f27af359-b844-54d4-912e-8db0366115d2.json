@@ -1,0 +1,97 @@
+{
+  "canonical_name": "Voviva",
+  "description": "Voviva develops custom AI systems tailored to clients' processes, including document processing, workflow automation, and guided intake.",
+  "founders_enriched": [
+    {
+      "full_name": "André Emmenegger",
+      "role": "Engineer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [
+        "BSI"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ETH Zurich"
+    },
+    {
+      "full_name": "Darius Doongaji",
+      "role": "Engineer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [
+        "San Francisco startup",
+        "medical startup"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ETH Zurich"
+    },
+    {
+      "full_name": "Tobias Leuthold",
+      "role": "Engineer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [
+        "Swiss AI startup"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ETH Zurich"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "As of now, there is no publicly available information regarding equity funding rounds or non-dilutive funding such as grants or awards.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for AI-driven automation solutions across industries presents a timely opportunity for Voviva's offerings.",
+  "devils_advocate_risks": [
+    "Challenges in scaling AI solutions to meet diverse client needs.",
+    "Potential difficulties in integrating AI systems with existing client infrastructures."
+  ],
+  "citations": [
+    "https://voviva.ch/en/",
+    "https://ethz.ch/en/news-and-events/eth-news/news/2026/02/mm-more-new-companies-founded-new-regulations-new-accelerator.html",
+    "https://www.moneyhouse.ch/de/company/voviva-gmbh-1752348701"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Voviva's focus on AI and automation aligns with Evonik's interest in innovative technologies in the chemical industry."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Voviva's expertise in AI and automation complements SAP's enterprise software solutions, potentially enhancing SAP's AI capabilities."
+    }
+  ],
+  "flags_version": 2
+}

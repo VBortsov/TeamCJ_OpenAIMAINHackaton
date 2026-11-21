@@ -1,0 +1,93 @@
+{
+  "canonical_name": "Tenet Industries",
+  "description": "Tenet Industries develops low-cost, mass-manufacturable strike drones optimized for rapid scaling across various defense categories.",
+  "founders_enriched": [
+    {
+      "full_name": "Hugo Frisk",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "KTH Royal Institute of Technology"
+      ],
+      "prior_companies": [
+        "Teenage Engineering",
+        "ÆSIR"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Fabian Andersson",
+      "role": "Founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "KTH Royal Institute of Technology"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Emil Falk",
+      "role": "Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Stockholm School of Economics"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "ycombinator.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": true,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": true,
+  "fd_any_prior_exit": true,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "Munich",
+  "raised_institutional_round": true,
+  "funding_summary": "Accepted into Y Combinator's Spring 2026 batch, receiving an initial investment of $125,000 in March 2026, with a total expected funding of $500,000.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Accepted into Y Combinator's Spring 2026 batch, receiving an initial investment of $125,000 in March 2026, with a total expected funding of $500,000.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for cost-effective and rapidly deployable defense solutions presents a timely opportunity for Tenet Industries' offerings.",
+  "devils_advocate_risks": [
+    "Challenges in scaling production to meet potential demand.",
+    "Navigating regulatory and ethical considerations in defense manufacturing."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/companies/tenet-industries",
+    "https://www.ycombinator.com/founders/hugo-frisk",
+    "https://startupmap.one/startup/tenet_industries_se"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could be crucial for developing durable components for Tenet Industries' drones."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch's expertise in automation and robotics aligns with Tenet Industries' focus on AI and robotics for manufacturing."
+    }
+  ],
+  "flags_version": 2
+}

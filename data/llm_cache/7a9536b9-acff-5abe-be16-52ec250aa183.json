@@ -1,0 +1,101 @@
+{
+  "canonical_name": "ENDOLEASE",
+  "description": "ENDOLEASE is a spin-off from the University Hospital Würzburg, developing implantable platform technology for precise, localized drug delivery directly into the arterial bloodstream.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. med. Anna Fleischer, M.Sc., MHBA",
+      "role": "CEO and Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of Würzburg"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Medical doctor with expertise in translational medicine and health business administration."
+    },
+    {
+      "full_name": "Johannes Braig",
+      "role": "CTO and Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Engineer and medical student with expertise in cardiovascular Melt Electrowriting applications."
+    },
+    {
+      "full_name": "Prof. Tomasz Jüngst",
+      "role": "Head of Scientific Advisory Board and Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Professor specializing in biofabrication methods."
+    },
+    {
+      "full_name": "Dr. Heinz Schwer, MBA",
+      "role": "Head of Board of Directors and Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Serial biotech entrepreneur with expertise in corporate venture capital."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": true,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": null,
+  "city": "Würzburg",
+  "raised_institutional_round": false,
+  "funding_summary": "In October 2024, ENDOLEASE received the Medical Valley Award 2024, including €500,000 in funding from the Bavarian State Ministry of Economic Affairs, Regional Development, and Energy. In August 2025, the team won the third phase of the Northern Bavaria Business Plan Competition, securing an additional €10,000. In May 2025, ENDOLEASE was awarded first place in the 'Global Hero' category at the Würzburg StartUP Prize.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing demand for precision medicine and localized therapies makes ENDOLEASE's technology timely and relevant.",
+  "devils_advocate_risks": [
+    "Regulatory challenges in developing implantable medical devices combined with pharmaceuticals.",
+    "Technical hurdles in scaling up production of micro-engineered implantable devices."
+  ],
+  "citations": [
+    "https://endolease.de/",
+    "https://www.uni-wuerzburg.de/sft/aktuelles/single/news/von-der-klinischen-beobachtung-zum-medtech-startup-die-gruendungsreise-von-endolease-ringvorlesung-digitale-innovationen-und-entrepreneurship/",
+    "https://www.uni-wuerzburg.de/aktuelles/einblick/single/news/eine-halbe-million-euro-fuer-endovascular-release/",
+    "https://www.uni-wuerzburg.de/en/news-and-events/einblick/single/news/start-up-prize-endolease/",
+    "https://www.wuerzburg-ag.de/projekte/laufende-projekte/546706.Wuerzburger-StartUP-Preis-2025-Siegerteam-von-ENDOLEASE-Systems.html",
+    "https://www.medica.de/de/media-news/erlebniswelten-magazin/medtech-devices/endolease-systeme-medikament-abgabe-implantat"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their focus on innovative healthcare solutions aligns with ENDOLEASE's implantable drug delivery technology."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Their expertise in advanced materials and biotechnologies complements ENDOLEASE's use of Melt Electrowriting and bioprinting technologies."
+    }
+  ],
+  "flags_version": 2
+}

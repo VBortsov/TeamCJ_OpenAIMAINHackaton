@@ -1,0 +1,94 @@
+{
+  "canonical_name": "Sat4Com",
+  "description": "Sat4Com is associated with the CloudCT project, which aims to develop a self-organizing formation of ten cooperating small satellites to generate data for computed tomography methods, providing inputs for improved climate predictions.",
+  "founders_enriched": [
+    {
+      "full_name": "Prof. Dr. Hubert Josef Roth",
+      "role": "Managing Director",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "ZENTRUM FÜR TELEMATIK EV"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Principal Investigator of CloudCT project"
+    },
+    {
+      "full_name": "Prof. Dr. Norbert Menke",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "ZENTRUM FÜR TELEMATIK EV"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Principal Investigator of CloudCT project"
+    },
+    {
+      "full_name": "Prof. Dr. Shai Avidan Schechner",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Technion – Israel Institute of Technology"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Principal Investigator of CloudCT project"
+    },
+    {
+      "full_name": "Prof. Dr. Ilan Koren",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Weizmann Institute of Science"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Principal Investigator of CloudCT project"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2017,
+  "city": "Wurzburg",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2017 (older than 3.5 years)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The satellites are in the final implementation stage for launch in 2027, indicating a critical phase for the commercialization of the technology.",
+  "devils_advocate_risks": [
+    "Technical challenges in deploying and maintaining a formation of ten cooperating small satellites.",
+    "Market adoption risks for the satellite data services in climate prediction applications."
+  ],
+  "citations": [
+    "https://cordis.europa.eu/project/id/101335531/de",
+    "https://www.unternehmen24.info/Handelsregister/Deutschland/Neueintragung/Firma/4342182"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

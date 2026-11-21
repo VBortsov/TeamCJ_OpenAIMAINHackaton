@@ -1,0 +1,61 @@
+{
+  "canonical_name": "slack-mcp-server",
+  "description": "A powerful MCP Slack Server offering features like Apps support, GovSlack, DMs, Group DMs, and smart history fetch logic without permission requirements.",
+  "founders_enriched": [
+    {
+      "full_name": "Dmitrii Korotovskii",
+      "role": "Founder",
+      "linkedin_url": "https://de.linkedin.com/in/korotovsky",
+      "github_handle": "korotovsky",
+      "has_phd": false,
+      "universities": [
+        "Master's degree in the IT field"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Senior Software Engineer with over 7 years of experience in PHP/Web development and two years in low-level hardware programming."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": null,
+  "city": "Berlin",
+  "raised_institutional_round": false,
+  "funding_summary": "No information about equity funding rounds or non-dilutive funding is available.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The recent introduction of Slack's official MCP server in February 2026 highlights a growing emphasis on integrating AI applications with Slack, positioning 'slack-mcp-server' to capitalize on this trend.",
+  "devils_advocate_risks": [
+    "Market Competition: The emergence of official solutions like Slack's MCP server could overshadow third-party offerings.",
+    "Adoption Challenges: Convincing organizations to adopt a new server solution may be difficult, especially when existing tools are already in place."
+  ],
+  "citations": [
+    "https://stackoverflow.com/users/1563234/dmitrii-korotovskii",
+    "https://www.toolstile.com/blog/slack-mcp-server"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in digitalization and automation solutions for industrial processes, aligning with 'slack-mcp-server's' focus on enhancing Slack's capabilities."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's enterprise software solutions could integrate with 'slack-mcp-server' to provide seamless communication and collaboration tools within large organizations."
+    }
+  ],
+  "flags_version": 2
+}

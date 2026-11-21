@@ -1,0 +1,96 @@
+{
+  "canonical_name": "FIDENTIS",
+  "description": "FIDENTIS develops and applies multi-material laser powder bed fusion technology to automate the production of high-quality dental prosthetics.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Max Horn",
+      "role": "CEO and Executive",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "CEO and Executive"
+    },
+    {
+      "full_name": "Timo Schröder",
+      "role": "CTO and Technology Lead",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "CTO and Technology Lead"
+    },
+    {
+      "full_name": "Johannes Lauer",
+      "role": "Commercial Lead",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Commercial Lead"
+    },
+    {
+      "full_name": "Lukas Langer",
+      "role": "COO and Production Lead",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "COO and Production Lead"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Augsburg",
+  "raised_institutional_round": false,
+  "funding_summary": "Received €1.62 million in funding through the EXIST Transfer of Research program, co-financed by the European Union and the German Federal Ministry for Economic Affairs and Climate Action (BMWK) in July 2024.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The recent €1.62 million funding from the EXIST Transfer of Research program enables FIDENTIS to advance its technology and product development, positioning the company for significant growth in the dental prosthetics market.",
+  "devils_advocate_risks": [
+    "Technological Validation: Ensuring the reliability and scalability of the multi-material laser powder bed fusion technology in mass production.",
+    "Market Adoption: Achieving widespread acceptance of the new dental prosthetics among dental professionals and patients."
+  ],
+  "citations": [
+    "https://www.igcv.fraunhofer.de/de/presse_downloads/pressemitteilungen/fraunhofer-igcv-ausgruendung--fidentis--will-die-herstellung-von.html",
+    "https://www.tum-venture-labs.de/teams/fidentis/",
+    "https://www.fidentis.de/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and additive manufacturing, aligning with FIDENTIS's focus on multi-material laser powder bed fusion technology for dental prosthetics."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch's expertise in precision engineering and manufacturing processes complements FIDENTIS's innovative approach to scalable dental prosthesis production."
+    }
+  ],
+  "flags_version": 2
+}

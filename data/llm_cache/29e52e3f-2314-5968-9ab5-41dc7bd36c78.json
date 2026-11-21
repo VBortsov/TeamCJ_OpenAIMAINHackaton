@@ -1,0 +1,62 @@
+{
+  "canonical_name": "Kalligo Medical AG",
+  "description": "Kalligo Medical AG develops a prosthetic socket that automatically adjusts to changes in the user's limb volume throughout the day, thereby preventing pain and instability.",
+  "founders_enriched": [
+    {
+      "full_name": "Cara Patricia Ammann",
+      "role": "Board Member",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "moneyhouse.ch"
+    },
+    {
+      "full_name": "Lisa-Marie Frühauf",
+      "role": "Board Member",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "moneyhouse.ch"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "No publicly available information regarding its funding history, including equity rounds or non-dilutive funding.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing prevalence of amputations and the demand for more comfortable and adaptable prosthetic solutions create a timely opportunity for Kalligo Medical AG's product.",
+  "devils_advocate_risks": [
+    "Challenges in scaling production to meet potential demand.",
+    "Regulatory hurdles in obtaining approvals for medical devices."
+  ],
+  "citations": [
+    "https://www.moneyhouse.ch/en/company/kalligo-medical-ag-19038492981",
+    "https://ethz.ch/en/news-and-events/eth-news/news/2026/02/mm-more-new-companies-founded-new-regulations-new-accelerator.html"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

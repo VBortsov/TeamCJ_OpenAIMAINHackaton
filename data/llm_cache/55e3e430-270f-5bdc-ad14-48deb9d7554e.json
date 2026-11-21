@@ -1,0 +1,95 @@
+{
+  "canonical_name": "NODI Energy",
+  "description": "NODI Energy is developing a modular plug-in battery system designed to provide distributed energy storage solutions for small businesses and consumers.",
+  "founders_enriched": [
+    {
+      "full_name": "Borong Hu",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "founders.io"
+    },
+    {
+      "full_name": "Yu Ri Catherine Jeong",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "founders.io"
+    },
+    {
+      "full_name": "Fatai Olanipekun",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "founders.io"
+    },
+    {
+      "full_name": "Amira Arba",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "founders.io"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "NODI Energy has raised funding through Y Combinator's Spring 2025 batch.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (NODI Energy has raised funding through Y Combinator's Spring 2025 batch.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for decentralized energy solutions and the need for grid capacity expansion present a timely opportunity for NODI Energy's offerings.",
+  "devils_advocate_risks": [
+    "Challenges in scaling hardware production to meet market demand.",
+    "Navigating regulatory approvals and certifications for energy storage devices."
+  ],
+  "citations": [
+    "https://founders.io/company/nodi-energy",
+    "https://www.nodienergy.com/about"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could complement NODI Energy's hardware development for distributed energy infrastructure."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch's expertise in energy solutions and smart home technologies aligns with NODI Energy's mission to provide accessible energy flexibility."
+    }
+  ],
+  "flags_version": 2
+}

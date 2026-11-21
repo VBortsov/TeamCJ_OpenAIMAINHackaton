@@ -1,0 +1,96 @@
+{
+  "canonical_name": "Paul Ruppelt",
+  "description": "The startup is organizing 'AI Safety Day Sweden 2026,' an event aimed at addressing AI safety challenges in Sweden.",
+  "founders_enriched": [
+    {
+      "full_name": "Paul Ruppelt",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Host of AI Safety Day Sweden 2026"
+    },
+    {
+      "full_name": "Kelvin Soen",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Host of AI Safety Day Sweden 2026"
+    },
+    {
+      "full_name": "Aleksandra Midor",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Host of AI Safety Day Sweden 2026"
+    },
+    {
+      "full_name": "Emil",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Host of AI Safety Day Sweden 2026"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": null,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing adoption of AI in Sweden, coupled with the lack of dedicated AI safety initiatives, creates a timely opportunity for this venture.",
+  "devils_advocate_risks": [
+    "Difficulty in attracting a diverse range of stakeholders to the event.",
+    "Challenges in establishing a sustainable platform for ongoing AI safety discussions post-event."
+  ],
+  "citations": [
+    "https://luma.com/6oz9b743",
+    "https://luma.com/discover/stockholm/ai",
+    "https://www.vcbacked.co/tools/funding-lookup"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could align with AI safety applications in material science."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's focus on enterprise software solutions could benefit from AI safety measures to enhance data security and compliance."
+    }
+  ],
+  "flags_version": 2
+}

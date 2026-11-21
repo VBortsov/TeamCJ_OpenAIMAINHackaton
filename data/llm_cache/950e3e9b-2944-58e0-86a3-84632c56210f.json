@@ -1,0 +1,62 @@
+{
+  "canonical_name": "Centre for Reparative Finance",
+  "description": "CRF is a think tank that educates the public about reparative payments and provides tailored advice on valuing, making, and assessing such payments.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Felix Stein",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "University of Amsterdam"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Affiliated with the Amsterdam Institute for Social Science Research (AISSR)"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Amsterdam",
+  "raised_institutional_round": false,
+  "funding_summary": "The primary funding source is the €150,000 ERC Proof of Concept Grant awarded in August 2026.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "out_of_mandate",
+  "inflection_why_now": "The increasing global emphasis on reparative payments highlights the need for specialized expertise, positioning CRF to address this emerging demand.",
+  "devils_advocate_risks": [
+    "Market Adoption: The concept of reparative finance is relatively new, and gaining widespread acceptance may be challenging.",
+    "Funding Sustainability: Relying on grants may pose risks if future funding opportunities are limited."
+  ],
+  "citations": [
+    "https://www.cordis.europa.eu/project/id/101334862",
+    "https://www.oozo.nl/bedrijven/amsterdam/noordelijke-ij-oevers-west/overhoeks/4204895/stichting-center-for-reparative-finance",
+    "https://aissr.uva.nl/news/2026/aissr-conflict-researchers-awarded-the-divine-doctoral-network"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in chemicals and materials science, aligning with CRF's focus on reparative finance, which may involve complex financial instruments and materials-related compensation."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim's interest in healthcare and pharmaceuticals could synergize with CRF's work in reparative payments, particularly in sectors addressing health-related harms."
+    }
+  ],
+  "flags_version": 2
+}

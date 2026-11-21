@@ -1,0 +1,61 @@
+{
+  "canonical_name": "CHIRAL-MORPHS",
+  "description": "CHIRAL-MORPHS is an ERC Proof-of-Concept project aimed at developing a faster and more sustainable method for producing single-handed molecules, addressing a significant challenge in modern chemistry and drug development.",
+  "founders_enriched": [
+    {
+      "full_name": "Professor Wim Noorduin",
+      "role": "Professor at the Van 't Hoff Institute for Molecular Sciences and group leader at the AMOLF research institute",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of Amsterdam"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "hims.uva.nl"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Amsterdam",
+  "raised_institutional_round": false,
+  "funding_summary": "The project received an ERC Proof-of-Concept grant of €150,000.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing demand for efficient and sustainable methods in pharmaceutical manufacturing creates a timely opportunity for CHIRAL-MORPHS' technology.",
+  "devils_advocate_risks": [
+    "Scalability: Challenges in scaling the crystallization process for industrial applications.",
+    "Market Adoption: Potential resistance from established pharmaceutical manufacturing processes."
+  ],
+  "citations": [
+    "https://hims.uva.nl/content/news/2026/01/erc-proof-of-concept-grant-for-wim-noorduin.html",
+    "https://cordis.europa.eu/project/id/101293303"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in specialty chemicals and materials, aligning with CHIRAL-MORPHS' focus on chemical processes and pharmaceutical applications."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim is a global pharmaceutical company, making it a strategic partner for CHIRAL-MORPHS' development of enantiomerically pure molecules for drug development."
+    }
+  ],
+  "flags_version": 2
+}

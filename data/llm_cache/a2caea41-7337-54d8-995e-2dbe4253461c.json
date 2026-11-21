@@ -1,0 +1,52 @@
+{
+  "canonical_name": "PolMol-QT",
+  "description": "A research project focused on developing a new type of hybrid quantum technology by coherently coupling a single molecule to a superconducting resonator.",
+  "founders_enriched": [
+    {
+      "full_name": "Prof. Jörg Schmiedmayer",
+      "role": "Lead Researcher",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Technische Universität Wien"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Affiliated with the Atominstitut at TU Wien and the Vienna Center for Quantum Science and Technology."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": null,
+  "city": "Vienna",
+  "raised_institutional_round": false,
+  "funding_summary": "The project received an ERC Proof of Concept Grant with a total EU contribution of €150,000.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "out_of_mandate",
+  "inflection_why_now": "The rapid advancements in quantum computing and the increasing demand for scalable and reliable quantum technologies underscore the timely relevance of this research.",
+  "devils_advocate_risks": [
+    "Technical Complexity: Achieving coherent coupling between single molecules and superconducting resonators is a complex task that may encounter unforeseen technical challenges.",
+    "Integration Challenges: Integrating the developed technology with existing quantum hardware platforms could face compatibility and scalability issues."
+  ],
+  "citations": [
+    "https://cordis.europa.eu/project/id/101288263/pl",
+    "https://www.tuwien.at/en/tu-wien/news/news-articles/news/erc-grant-polare-molekuele-die-neue-quantentechnologie"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

@@ -1,0 +1,98 @@
+{
+  "canonical_name": "Stilta",
+  "description": "Stilta develops agentic AI software designed to streamline patent litigation and intelligence processes.",
+  "founders_enriched": [
+    {
+      "full_name": "Oskar Block",
+      "role": "Co-founder & CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "McKinsey & Company",
+        "Goldman Sachs"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "stilta.com"
+    },
+    {
+      "full_name": "Petrus Werner",
+      "role": "Co-founder & CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "stilta.com"
+    },
+    {
+      "full_name": "Tobias Estreen",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "stilta.com"
+    },
+    {
+      "full_name": "Oscar Adamsson",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "stilta.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": true,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "Stockholm",
+  "raised_institutional_round": true,
+  "funding_summary": "In May 2026, Stilta raised a $10.5 million seed round led by Andreessen Horowitz, with participation from Y Combinator and operators from companies including OpenAI, Legora, and Lovable.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In May 2026, Stilta raised a $10.5 million seed round led by Andreessen Horowitz, with participation from Y Combinator and operators from companies including OpenAI, Legora, and Lovable.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity and volume of patent data create a pressing need for AI solutions that can efficiently analyze and manage intellectual property.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing traditional IP firms and corporations to adopt AI-driven solutions may face resistance due to established workflows.",
+    "Technological Challenges: Ensuring the AI system's accuracy and reliability in complex legal scenarios is critical and may present technical hurdles."
+  ],
+  "citations": [
+    "https://www.stilta.com/about",
+    "https://stilta.com/news/stilta-raises"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Stilta's focus on AI-driven patent analysis aligns with Evonik's interest in innovative technologies that enhance industrial processes."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Stilta's AI solutions for intellectual property management could integrate with SAP's enterprise software, offering enhanced patent analytics capabilities."
+    }
+  ],
+  "flags_version": 2
+}

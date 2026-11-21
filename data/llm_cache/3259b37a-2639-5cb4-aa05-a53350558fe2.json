@@ -1,0 +1,91 @@
+{
+  "canonical_name": "Lucis",
+  "description": "Lucis is a preventive health platform that combines blood biomarker analysis with AI to deliver personalized, science-based health recommendations.",
+  "founders_enriched": [
+    {
+      "full_name": "Maxime Berthelot",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "PixelMe"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Founder of PixelMe; built multiple profitable direct-to-consumer businesses in health and supplements; operated a longevity media and community platform."
+    },
+    {
+      "full_name": "Baptiste Debever",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Gorgias",
+        "WeMaintain"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Built and sold his first startup; worked at Gorgias and WeMaintain; architected and built Lucis's platform."
+    },
+    {
+      "full_name": "Max Guérois",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Listed as a co-founder; registry filing indicates departure as director general."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Paris",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $8.5 million in December 2025 (Seed Round) and $20 million in May 2026 (Series A Round).",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $8.5 million in December 2025 (Seed Round) and $20 million in May 2026 (Series A Round).)",
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing emphasis on preventive healthcare and personalized medicine creates a timely opportunity for Lucis's offerings.",
+  "devils_advocate_risks": [
+    "Challenges in scaling operations across multiple European countries.",
+    "Ensuring data privacy and compliance with varying health regulations across regions."
+  ],
+  "citations": [
+    "https://www.lucis.life/blog/lucis-raises-20m-series-a",
+    "https://healthcarediscovery.ai/companies/lucis/",
+    "https://seedlist.com/startups/lucis",
+    "https://www.startup.eu/investments/lucis-8-5m-seed-04-2026",
+    "https://www.eu-startups.com/2026/05/yc-backed-french-preventive-health-platform-lucis-raises-e17-3-million-series-a-led-by-singular"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in health and nutrition, aligning with Lucis's focus on preventive health and biomarker analysis."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim invests in health-related innovations, which complements Lucis's AI-driven health recommendations."
+    }
+  ],
+  "flags_version": 2
+}

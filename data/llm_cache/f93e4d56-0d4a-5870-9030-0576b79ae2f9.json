@@ -1,0 +1,58 @@
+{
+  "canonical_name": "CYBEX",
+  "description": "CYBEX is developing an electrochemical process to recover critical raw materials from end-of-life solar modules, aiming to make recycling more efficient and economically viable.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Ian Marius Peters",
+      "role": "Materials Scientist",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Materials scientist at Forschungszentrum Jülich"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Jülich",
+  "raised_institutional_round": false,
+  "funding_summary": "Received an ERC Proof of Concept Grant of €150,000 in June 2026.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing accumulation of end-of-life solar modules presents a pressing need for efficient recycling solutions to recover valuable materials and support sustainable practices in the renewable energy sector.",
+  "devils_advocate_risks": [
+    "Technological Feasibility: Ensuring the electrochemical process can be scaled effectively for industrial applications.",
+    "Market Adoption: Convincing existing recycling facilities to adopt new, unproven technologies."
+  ],
+  "citations": [
+    "https://www.fz-juelich.de/en/news/archive/press-release/2026/erc-funds-julich-recycling-technology-for-solar-modules"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in specialty chemicals and materials, aligning with CYBEX's focus on extracting valuable metals from waste streams."
+    },
+    {
+      "lp_name": "WACKER",
+      "reason": "WACKER is involved in chemical production and materials science, which could complement CYBEX's recycling technology development."
+    }
+  ],
+  "flags_version": 2
+}

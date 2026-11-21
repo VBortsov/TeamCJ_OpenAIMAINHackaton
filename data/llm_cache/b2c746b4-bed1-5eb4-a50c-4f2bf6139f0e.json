@@ -1,0 +1,72 @@
+{
+  "canonical_name": "Aylight",
+  "description": "Aylight develops chip-scale multiwavelength lasers using a frequency-modulated optical frequency comb architecture, generating multiple precisely spaced wavelengths from a single chip.",
+  "founders_enriched": [
+    {
+      "full_name": "Bahareh Marzban",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Founder of Aylight"
+    },
+    {
+      "full_name": "Dmitry Kazakov",
+      "role": "CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Founder of Aylight"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": true,
+  "funding_summary": "In July 2026, Aylight raised €4.5 million in a pre-seed financing round, co-led by Elaia and Swisscom Ventures, with participation from Verve Ventures and Plug and Play.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In July 2026, Aylight raised €4.5 million in a pre-seed financing round, co-led by Elaia and Swisscom Ventures, with participation from Verve Ventures and Plug and Play.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for efficient optical interconnects in AI data centers highlights the need for Aylight's innovative laser solutions.",
+  "devils_advocate_risks": [
+    "Technological Validation: Ensuring the scalability and reliability of their laser technology in real-world applications.",
+    "Market Adoption: Convincing data center operators to transition from existing solutions to Aylight's novel approach."
+  ],
+  "citations": [
+    "https://tech.eu/2026/07/06/aylight-closes-eur45m-pre-seed-round-to-advance-optical-interconnect-technology/",
+    "https://aylight.io/news/preseed-funding/",
+    "https://svtr.ai/orgs/aylight?lang=en"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, aligning with Aylight's focus on photonics and semiconductor technologies."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch's expertise in industrial automation and sensor technologies complements Aylight's developments in high-precision sensing applications."
+    }
+  ],
+  "flags_version": 2
+}

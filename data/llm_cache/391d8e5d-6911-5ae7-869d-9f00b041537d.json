@@ -1,0 +1,64 @@
+{
+  "canonical_name": "Frontier Computing",
+  "description": "Frontier Computing grows large-scale biological neural tissue as a computational substrate for machine learning training and inference.",
+  "founders_enriched": [
+    {
+      "full_name": "Michael Domarkas",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of Cambridge"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Cambridge-trained natural scientist"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $10 million in a pre-seed round on September 1, 2026.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $10 million in a pre-seed round on September 1, 2026.)",
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The recent $10 million pre-seed funding round, led by General Catalyst, indicates strong investor confidence and positions the company to scale its innovative biocomputing solutions.",
+  "devils_advocate_risks": [
+    "Scalability Challenges: Successfully scaling biological neural tissue to the desired size for machine learning applications remains a complex technical hurdle.",
+    "Market Adoption: Convincing the broader AI and machine learning community to adopt biological substrates over traditional hardware solutions may face resistance."
+  ],
+  "citations": [
+    "https://venturecapitaltracker.com/startup/frontier-computing",
+    "https://startups.fru.dev/companies/frontier-computing",
+    "https://aventure.vc/companies/frontier-computing-cambridge-gb/fundraising",
+    "https://www.cbinsights.com/company/frontier-computing/financials",
+    "https://www.wsgr.com/en/insights/firm-advises-frontier-computing-on-dollar10-million-pre-seed-round.html"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could be synergistic with Frontier Computing's work in biological neural tissue for machine learning substrates."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim focuses on biotechnology and pharmaceuticals, aligning with Frontier Computing's innovative approach to biocomputing."
+    }
+  ],
+  "flags_version": 2
+}

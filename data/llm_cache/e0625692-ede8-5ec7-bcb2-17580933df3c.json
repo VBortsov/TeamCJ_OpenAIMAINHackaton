@@ -1,0 +1,52 @@
+{
+  "canonical_name": "Maxim Kopecki Holding",
+  "description": "The startup is developing machine learning-driven agents to automate knowledge work, focusing on scalable systems and intuitive, high-performance interfaces.",
+  "founders_enriched": [
+    {
+      "full_name": "Maxim Kopecki",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ETH Zurich graduate"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": null,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for automation in knowledge work presents a timely opportunity for AI-driven solutions.",
+  "devils_advocate_risks": [
+    "Challenges in achieving seamless integration of AI agents into existing workflows.",
+    "Potential difficulties in scaling the technology to handle diverse and complex tasks."
+  ],
+  "citations": [
+    "https://mkopecki.com/",
+    "https://ethz.ch/en/news-and-events/eth-news/news/2026/02/mm-more-new-companies-founded-new-regulations-new-accelerator.html"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

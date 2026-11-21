@@ -1,0 +1,62 @@
+{
+  "canonical_name": "DaCe GPT",
+  "description": "DaCe GPT integrates large language models into the DaCe framework to enhance performance optimization in scientific computing applications.",
+  "founders_enriched": [
+    {
+      "full_name": "Professor Torsten Hoefler",
+      "role": "Principal Investigator",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "ETH Zurich",
+        "University of Illinois at Urbana-Champaign",
+        "University of Stuttgart"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Principal investigator of the DaCe GPT project."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Zuerich",
+  "raised_institutional_round": false,
+  "funding_summary": "The project received up to €150,000 in funding over a period of up to 18 months from the ERC Proof-of-Concept Grant.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of hardware accelerators necessitates advanced optimization techniques to maintain efficiency in scientific simulations.",
+  "devils_advocate_risks": [
+    "Integrating large language models into existing scientific computing frameworks may present unforeseen technical challenges.",
+    "Researchers without expertise in high-performance computing might face difficulties adopting the new optimization tools."
+  ],
+  "citations": [
+    "https://inf.ethz.ch/de/news-und-veranstaltungen/spotlights/infk-news-channel/2026/06/torsten-hoefler-receives-erc-proof-of-concept-grant.html"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's expertise in enterprise software and data management aligns with DaCe GPT's focus on optimizing performance in scientific computing applications."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in innovative technologies and materials could complement DaCe GPT's advancements in computational optimization for scientific simulations."
+    }
+  ],
+  "flags_version": 2
+}

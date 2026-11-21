@@ -1,0 +1,61 @@
+{
+  "canonical_name": "AI-TreatCancer",
+  "description": "AI-TreatCancer is an ERC Proof-of-Concept project aimed at developing an AI-guided classifier, predicTCR, to identify tumor-killing T-cell receptors from patient samples, reducing the identification time from 3-4 months to under 2 weeks.",
+  "founders_enriched": [
+    {
+      "full_name": "Prof. Dr. Michael Platten",
+      "role": "Project Leader",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "University Hospital Mannheim"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Project leader at DKFZ and University Hospital Mannheim."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Heidelberg",
+  "raised_institutional_round": false,
+  "funding_summary": "The project has received a €150,000 contribution from the European Research Council (ERC) under the Proof of Concept Grant.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The project's focus on developing a compliant AI-guided classifier for personalized T-cell therapies addresses the growing demand for rapid and precise cancer treatments.",
+  "devils_advocate_risks": [
+    "Ensuring regulatory compliance for the clinical application of AI-guided therapies.",
+    "Achieving widespread adoption of the technology within the medical community."
+  ],
+  "citations": [
+    "https://cordis.europa.eu/project/id/101293142",
+    "https://www.uni-heidelberg.de/en/newsroom/erc-funding-for-hellmut-augustin-and-michael-platten"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "As a pharmaceutical company, Boehringer Ingelheim could benefit from AI-TreatCancer's advancements in personalized T-cell therapies, aligning with their interest in innovative cancer treatments."
+    },
+    {
+      "lp_name": "QIAGEN",
+      "reason": "Specializing in sample and assay technologies, QIAGEN could find synergy in integrating AI-TreatCancer's diagnostic advancements into their product offerings."
+    }
+  ],
+  "flags_version": 2
+}

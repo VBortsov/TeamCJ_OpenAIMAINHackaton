@@ -1,0 +1,82 @@
+{
+  "canonical_name": "RoBoa AG",
+  "description": "RoBoa AG develops a snake-like robot designed for exploring hard-to-reach areas, suitable for rescue missions and industrial inspections.",
+  "founders_enriched": [
+    {
+      "full_name": "Alexander Kübler",
+      "role": "CEO and co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "mavt.ethz.ch"
+    },
+    {
+      "full_name": "Pascal Auf der Maur",
+      "role": "CTO and co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "mavt.ethz.ch"
+    },
+    {
+      "full_name": "Betim Djambazi",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "ethz-foundation.ch"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "RoBoa AG has received various grants and awards including BRIDGE, InnoBooster, ESA BIC, Innosuisse, ETH Pioneer Fellowship, Swiss Technology Award 2024, and Venture Kick. Specific details about equity funding rounds are not available.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for advanced robotic solutions in rescue operations and industrial inspections presents a timely opportunity for RoBoa's technology.",
+  "devils_advocate_risks": [
+    "Challenges in scaling production to meet potential market demand.",
+    "Ensuring the robot's reliability and safety in diverse operational environments."
+  ],
+  "citations": [
+    "https://mavt.ethz.ch/news-and-events/d-mavt-news/2025/09/acht-spin-offs-unter-top-100-swiss-startups-2025.html",
+    "https://ethz-foundation.ch/en/pioneer-fellows/roboa/",
+    "https://www.roboa.ch/about-us",
+    "https://mavt.ethz.ch/news-and-events/d-mavt-news/2025/12/vom-fokusprojekt-zum-start-up-zu-besuch-beim-d-mavt-spin-off-roboa.html"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

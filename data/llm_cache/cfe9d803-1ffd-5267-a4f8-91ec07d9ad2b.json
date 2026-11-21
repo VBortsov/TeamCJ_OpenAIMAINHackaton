@@ -1,0 +1,76 @@
+{
+  "canonical_name": "Aumatis GmbH",
+  "description": "Aumatis offers a compact desktop device that automates the investment casting process, enabling users to produce complex metal components without specialized knowledge.",
+  "founders_enriched": [
+    {
+      "full_name": "Felix Pancheri",
+      "role": "Co-founder and Managing Director",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "aumatis.com"
+    },
+    {
+      "full_name": "Dr.-Ing. Christoph Rehekampff",
+      "role": "Co-founder and Managing Director",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Technical University of Munich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "aumatis.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2023,
+  "city": "Munich",
+  "raised_institutional_round": false,
+  "funding_summary": "As of November 2026, there is no publicly available information indicating that Aumatis has raised funding rounds such as Seed or Series A, or received non-dilutive funding like grants or awards.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for rapid prototyping and localized manufacturing solutions presents a timely opportunity for Aumatis's desktop metal casting technology.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing traditional industries to adopt desktop metal casting may face resistance due to established manufacturing practices.",
+    "Technological Scalability: Ensuring the device's performance and reliability across various metal types and component sizes is crucial for broader market acceptance."
+  ],
+  "citations": [
+    "https://www.aumatis.com/contact",
+    "https://www.mec.ed.tum.de/mimed/research/tim-lueths-research/",
+    "https://www.registercheck.de/companies/aumatis-gmbh",
+    "https://www.baystartup.de/en/startupdate/the-nominees-in-the-munich-business-plan-competition-2025-phase-2",
+    "https://b2db.com/speaker/christoph-rehekampff"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, aligning with Aumatis's focus on metal component manufacturing."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch's expertise in industrial technology complements Aumatis's innovations in desktop metal casting systems."
+    }
+  ],
+  "flags_version": 2
+}

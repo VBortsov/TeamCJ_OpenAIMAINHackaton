@@ -1,0 +1,27 @@
+{
+  "one_liner": "YQuantum develops miniaturized hardware components for quantum computers and is worth meeting after its 2026 recognition as an ETH Zurich spin-off.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich recognized YQuantum on its 2026 spin-off roster.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "YQuantum received CHF 150,000 in seed funding from Venture Kick in November 2025.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 84.5 of 100 (at the top of the reference cohort). The score was lifted by flags for university spin-off status, deep tech, three identified founders, a founder with a PhD, a founding CTO, and a founder from a top university. The technical-founder flag also lifted the score but is not confirmed by the founder records.",
+      "source_url": null
+    }
+  ],
+  "team": "The founder records list Dr. Christian Jünger (CEO; University of Basel; previously at QuantrolOx), Dr. Johannes Herrmann (CTO; ETH Zurich), and Prof. em. Dr. Christian Schönenberger (Scientific Advisor; University of Basel). All three hold PhDs.",
+  "why_early": "Unknown whether a priced round has occurred. The Venture Kick funding is recorded, but its terms are unknown.",
+  "devils_advocate_risks": [
+    "Integrating the components with existing quantum computing systems may pose technical hurdles.",
+    "Scaling component production may be difficult."
+  ],
+  "next_step": "HTGF Digital Tech team: Ask the founders what they have demonstrated by integrating a miniaturized component into an existing quantum computing system.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "bb262d13-c3e6-5ea7-9cc5-54fd59dd569b",
+  "input_hash": "14581c0803767371"
+}

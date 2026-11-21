@@ -1,0 +1,61 @@
+{
+  "canonical_name": "BLASTOID-FERTILITY",
+  "description": "BLASTOID-FERTILITY is developing a human blastoid-based platform to improve post-implantation IVF outcomes and facilitate therapeutic screening.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Nicolas Rivron",
+      "role": "Group Leader at the Institute of Molecular Biotechnology (IMBA)",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Institute of Molecular Biotechnology"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Research focus on stem cell-derived models of early human development."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Vienna",
+  "raised_institutional_round": false,
+  "funding_summary": "Funded by a €150,000 Proof of Concept Grant from the European Research Council (ERC).",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing prevalence of infertility and the limitations of current IVF technologies underscore the urgent need for innovative solutions like BLASTOID-FERTILITY's platform.",
+  "devils_advocate_risks": [
+    "Technical challenges in accurately replicating human embryonic development in vitro.",
+    "Regulatory hurdles in translating experimental models into clinical applications."
+  ],
+  "citations": [
+    "https://www.oeaw.ac.at/news/oeaw-forscher-nicolas-rivron-erhaelt-erc-grant",
+    "https://cordis.europa.eu/project/id/101292866/es"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their focus on innovative healthcare solutions aligns with BLASTOID-FERTILITY's aim to enhance reproductive health through advanced IVF technologies."
+    },
+    {
+      "lp_name": "QIAGEN",
+      "reason": "Specializing in molecular diagnostics, QIAGEN's expertise could complement BLASTOID-FERTILITY's efforts in therapeutic screening and IVF optimization."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,116 @@
+{
+  "canonical_name": "Sentio",
+  "description": "Sentio is a company that operates in multiple sectors, including blockchain observability, virtual training solutions, mental health monitoring, and workplace mental health products.",
+  "founders_enriched": [
+    {
+      "full_name": "George Eleftheriou",
+      "role": "CEO & Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "CEO & Co-founder of Sentio Solutions"
+    },
+    {
+      "full_name": "Haris Tsirmpas",
+      "role": "CTO & Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "CTO & Co-founder of Sentio Solutions"
+    },
+    {
+      "full_name": "Sanjay Wadhwani",
+      "role": "Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Founder of Sentio Health"
+    },
+    {
+      "full_name": "Jo Boswell",
+      "role": "Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Founder of Sentio-B"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2022,
+  "city": null,
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $6.4 million in a Seed round in February 2023.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2022 (older than 3.5 years)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The rapid growth of decentralized finance (DeFi) and blockchain applications has heightened the need for robust monitoring and diagnostics.",
+  "devils_advocate_risks": [
+    "Potential challenges in scaling the platform to accommodate diverse blockchain ecosystems.",
+    "Competition from established blockchain analytics providers."
+  ],
+  "citations": [
+    "https://www.owler.com/company/sentioxyz/funding",
+    "https://www.cbinsights.com/company/sentio-2",
+    "https://www.cbinsights.com/company/vistra",
+    "https://www.gaebler.com/Funded-Company-0E09B92A-A48D-482D-ACC5-94C4454C9EC2-SENTIO",
+    "https://growjo.com/company/Sentio_Solutions",
+    "https://usesentio.com/about/",
+    "https://get.niceincontact.com/rs/069-KVM-666/images/0002177_EN_Innovative-personalization-ideas-for-the-digital-customer-eBook.pdf"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's expertise in advanced materials and digitalization could enhance Sentio's platform capabilities."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's experience in enterprise software solutions could provide integration opportunities for Sentio's observability tools."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer's interest in healthcare innovations aligns with Sentio's mental health solutions."
+    },
+    {
+      "lp_name": "QIAGEN",
+      "reason": "QIAGEN's diagnostics capabilities could complement Sentio's health monitoring technologies."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer's focus on healthcare and employee well-being aligns with Sentio Health's mission."
+    },
+    {
+      "lp_name": "Dräger",
+      "reason": "Dräger's commitment to safety and health could enhance Sentio Health's offerings."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,80 @@
+{
+  "canonical_name": "Soverli",
+  "description": "Soverli develops a sovereign smartphone architecture that operates alongside Android and iOS, enabling multiple isolated operating systems on a single device.",
+  "founders_enriched": [
+    {
+      "full_name": "Ivan Puddu",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [
+        "ETH Zurich"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Postdoctoral researcher in confidential computing at ETH Zurich."
+    },
+    {
+      "full_name": "Moritz Schneider",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Specializes in cybersecurity, postdoctoral researcher at ETH Zurich."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $2.6 million in a pre-seed funding round in December 2025, led by Founderful, with participation from the ETH Zurich Foundation, Venture Kick, and cybersecurity industry figures.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $2.6 million in a pre-seed funding round in December 2025, led by Founderful, with participation from the ETH Zurich Foundation, Venture Kick, and cybersecurity industry figures.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing prevalence of cyber threats and the need for secure mobile environments make Soverli's solution timely and critical.",
+  "devils_advocate_risks": [
+    "Challenges in achieving seamless integration with existing smartphone hardware and software.",
+    "Potential resistance from smartphone manufacturers to adopt third-party security solutions."
+  ],
+  "citations": [
+    "https://inf.ethz.ch/de/news-und-veranstaltungen/in-den-medien/2025.html",
+    "https://inf.ethz.ch/department/spin-offs.html",
+    "https://startupintros.com/orgs/soverli",
+    "https://tech.eu/2025/12/15/soverli-raises-26m-to-develop-sovereign-smartphone-architecture",
+    "https://www.venturelab.swiss/Soverli-The-Venture-Leader-Mobile-ensuring-digital-sovereignty-with-nextgen-mobile-security"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Soverli's cybersecurity solutions for smartphones could align with Evonik's interest in advanced materials and technologies, potentially enhancing device security."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Soverli's platform could integrate with SAP's enterprise solutions, offering enhanced mobile security for business applications."
+    }
+  ],
+  "flags_version": 2
+}

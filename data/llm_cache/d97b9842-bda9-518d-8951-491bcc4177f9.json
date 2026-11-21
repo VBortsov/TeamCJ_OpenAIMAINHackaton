@@ -1,0 +1,84 @@
+{
+  "canonical_name": "InLoop Robotics",
+  "description": "InLoop Robotics offers AI-native robotic arms that automate tasks such as packing, kitting, and fulfillment in warehouses, fulfillment centers, and factories.",
+  "founders_enriched": [
+    {
+      "full_name": "Zakariea Sharfeddine",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "roundfunded.com"
+    },
+    {
+      "full_name": "Stepan Feduniak",
+      "role": "Founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "roundfunded.com"
+    },
+    {
+      "full_name": "Pasha Rizali",
+      "role": "Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "roundfunded.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "By",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $500,000 from Y Combinator in April 2026.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $500,000 from Y Combinator in April 2026.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for warehouse automation solutions presents a timely opportunity for InLoop Robotics to deploy its technology.",
+  "devils_advocate_risks": [
+    "Challenges in scaling operations to meet diverse client needs.",
+    "Potential technical difficulties in integrating robotic systems into existing warehouse infrastructures."
+  ],
+  "citations": [
+    "https://www.roundfunded.com/en/yc-startup/inloop-robotics",
+    "https://www.cbinsights.com/company/inloop-robotics",
+    "https://www.crunchbase.com/organization/inloop-robotics"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "InLoop Robotics' focus on AI-driven robotics aligns with Bosch's expertise in automation and manufacturing technologies."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in innovative industrial solutions complements InLoop Robotics' advancements in warehouse automation."
+    }
+  ],
+  "flags_version": 2
+}

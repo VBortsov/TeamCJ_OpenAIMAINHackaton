@@ -1,0 +1,117 @@
+{
+  "canonical_name": "Zurich AI Safety",
+  "description": "Zurich AI Safety (ZAIS) is a volunteer-run organization in Zurich that organizes speaker events, community gatherings, and educational programs on AI safety.",
+  "founders_enriched": [
+    {
+      "full_name": "Lukas Fluri",
+      "role": "President",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "President of Zurich AI Safety"
+    },
+    {
+      "full_name": "Patrick Widmann",
+      "role": "Director",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Director of Zurich AI Safety"
+    },
+    {
+      "full_name": "Marcel Steimke",
+      "role": "Board Member",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Board Member of Zurich AI Safety"
+    },
+    {
+      "full_name": "Isaia Gisler",
+      "role": "Policy Initiatives Lead",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Policy Initiatives Lead of Zurich AI Safety"
+    },
+    {
+      "full_name": "Marius Wenk",
+      "role": "Program Manager",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Program Manager of Zurich AI Safety"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "In March 2026, ZAIS received a $195,000 grant from Coefficient Giving.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The rapid advancement of AI technologies has heightened the need for dedicated AI safety initiatives.",
+  "devils_advocate_risks": [
+    "Sustaining Volunteer Engagement: Maintaining active participation from volunteers over time.",
+    "Securing Ongoing Funding: Ensuring continuous financial support to expand and sustain operations."
+  ],
+  "citations": [
+    "https://zurich.aisafety.ch/about/",
+    "https://aisafety.fund/zurich-ai-safety"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a global leader in enterprise software, SAP's expertise in data management and analytics aligns with ZAIS's focus on AI safety."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in innovative technologies complements ZAIS's mission to advance AI safety research."
+    }
+  ],
+  "flags_version": 2
+}

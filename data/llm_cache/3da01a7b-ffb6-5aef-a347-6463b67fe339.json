@@ -1,0 +1,78 @@
+{
+  "canonical_name": "Chiron",
+  "description": "Chiron offers an AI-powered platform that enables healthcare organizations to deliver personalized care beyond the clinic by transforming episodic care into a continuous feedback loop between patients and providers.",
+  "founders_enriched": [
+    {
+      "full_name": "James Booth",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Oxford"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-founder and CEO of Chiron."
+    },
+    {
+      "full_name": "Max Booth",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Oxford"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-founder and CTO of Chiron."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2023,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "Seed Round: April 2025, raising $500,000; Seed Round: July 2026, raising £900,000 (approximately $1.1 million).",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing demand for continuous patient engagement and personalized care solutions presents a timely opportunity for Chiron's platform.",
+  "devils_advocate_risks": [
+    "Challenges in integrating the platform with diverse healthcare systems and electronic health records.",
+    "Regulatory hurdles in expanding the platform's deployment across different regions, including the United States."
+  ],
+  "citations": [
+    "https://allai.events/event/from-oxford-to-building-chiron-yc-x25",
+    "https://startups.fru.dev/companies/chiron",
+    "https://aventure.vc/companies/chiron-london-gb/fundraising",
+    "https://uktechnews.co.uk/2026/07/08/chiron-secures-900000-seed-investment-led-by-thena-capital-to-transform-patient-activation-through-ai-powered-personalised-care/",
+    "https://femtechinsider.com/chiron-raises-900k-seed-for-ai-platform-supporting-patients-between-clinic-visits-plans-womens-health-expansion/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Chiron's AI-driven platform for personalized care aligns with Evonik's focus on innovative healthcare solutions."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Chiron's expansion into chronic disease management complements Boehringer Ingelheim's interest in advancing patient care through technology."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,76 @@
+{
+  "canonical_name": "Specific",
+  "description": "Specific offers a cloud platform that enables coding agents to write code and build the infrastructure to deploy it, facilitating rapid development and deployment.",
+  "founders_enriched": [
+    {
+      "full_name": "Fabian Lindfors",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Stripe"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": true,
+      "source_of_identity": "Tech lead at Stripe overseeing systems that processed tens of billions of dollars annually."
+    },
+    {
+      "full_name": "Iman Radjavi",
+      "role": "Founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "MSc in Computer Science"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Built mission-critical backend systems, including energy grid systems processing over a billion data points daily."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Stockholm",
+  "raised_institutional_round": true,
+  "funding_summary": "Specific raised $500,000 in a pre-seed round in December 2025, backed by Y Combinator.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Specific raised $500,000 in a pre-seed round in December 2025, backed by Y Combinator.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing reliance on AI coding agents necessitates efficient infrastructure solutions, positioning Specific to meet this growing demand.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing developers to adopt a new platform amidst established tools could be challenging.",
+    "Scalability: Ensuring the platform can handle diverse and complex backend requirements as it scales."
+  ],
+  "citations": [
+    "https://specific.dev/about",
+    "https://millionrounds.com/company/specific",
+    "https://www.ycombinator.com/companies/specific"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leader in enterprise software, SAP could benefit from Specific's cloud platform designed for coding agents, enhancing their backend development capabilities."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's focus on innovation in various sectors aligns with Specific's mission to streamline backend development, potentially improving operational efficiencies."
+    }
+  ],
+  "flags_version": 2
+}

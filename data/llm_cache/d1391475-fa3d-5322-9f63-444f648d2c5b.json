@@ -1,0 +1,98 @@
+{
+  "canonical_name": "Rapidata",
+  "description": "Rapidata provides a platform that accelerates AI development by offering scalable, on-demand data labeling through digital ads, enabling faster model iteration and deployment.",
+  "founders_enriched": [
+    {
+      "full_name": "Jason Corkill",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "eu-startups.com"
+    },
+    {
+      "full_name": "Marian Kannwischer",
+      "role": "CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "rapidata.ai"
+    },
+    {
+      "full_name": "Luca Strebel",
+      "role": "Chief Architect",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "rapidata.ai"
+    },
+    {
+      "full_name": "Mads Alber",
+      "role": "CIO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "rapidata.ai"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2022,
+  "city": "Zurich",
+  "raised_institutional_round": true,
+  "funding_summary": "As of November 2026, Rapidata has raised a total of USD 10.2 million across two funding rounds: CHF 1.5 million in a pre-seed round on July 17, 2023, and USD 8.5 million in a seed round on February 20, 2026.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2022 (older than 3.5 years)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for rapid and reliable human feedback in AI development presents a timely opportunity for Rapidata's services.",
+  "devils_advocate_risks": [
+    "Challenges in scaling the platform to meet global demand.",
+    "Potential competition from established data annotation providers."
+  ],
+  "citations": [
+    "https://www.eu-startups.com/2026/02/zurich-based-ai-infrastructure-startup-rapidata-raises-e7-2-million-to-scale-global-human-feedback-network/",
+    "https://rapidata.ai/press",
+    "https://www.premieralts.com/companies/rapidata/valuation",
+    "https://seedtable.com/companies/rapidata/funding-rounds",
+    "https://www.caplight.com/company/rapidata"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Rapidata's focus on scalable, on-demand data labeling aligns with Evonik's interest in innovative technologies that enhance industrial processes."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Rapidata's AI infrastructure solutions could complement SAP's enterprise software offerings, particularly in areas requiring advanced data processing and human feedback integration."
+    }
+  ],
+  "flags_version": 2
+}

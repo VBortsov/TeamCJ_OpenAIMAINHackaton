@@ -1,0 +1,27 @@
+{
+  "one_liner": "Roboa develops robots for rescue operations and industrial inspections. Its 2025 recognition as an ETH Zurich spin-off is a reason to reach out now.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich recognizes Roboa as an academic spin-off.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "Roboa received the Swiss Technology Award 2024 and support from programs including BRIDGE, Innosuisse and Venture Kick.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 81.5 of 100 (at the top of the reference cohort). The score was lifted by the university spin-off, deep-tech and team flags: three known founders, technical founders including the CTO, and ETH Zurich backgrounds.",
+      "source_url": null
+    }
+  ],
+  "team": "Alexander Kübler (CEO) and Pascal Auf der Maur (CTO) are technical co-founders. Betim Djambazi is the third co-founder. All three founder records list ETH Zurich.",
+  "why_early": "Unknown whether a priced round has happened. Grants and awards are documented, but equity financing details are unavailable.",
+  "devils_advocate_risks": [
+    "Robot reliability and safety across different operating environments remain open questions.",
+    "Ability to scale production to meet demand is unknown."
+  ],
+  "next_step": "HTGF Industrial Tech team: Ask the founders what reliability data they have from industrial inspection field tests.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "a94bfa76-7ea5-5c41-93cf-65e74280f3a8",
+  "input_hash": "d173f0d2dde0b112"
+}

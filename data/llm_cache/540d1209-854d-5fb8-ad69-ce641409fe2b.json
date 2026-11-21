@@ -1,0 +1,85 @@
+{
+  "canonical_name": "Future Founders Initiative",
+  "description": "The Future Founders Initiative (FFI) is a non-profit organization based in Frankfurt, Germany, dedicated to fostering entrepreneurship among young adults aged 18 to 23.",
+  "founders_enriched": [
+    {
+      "full_name": "Lina Wiedenmann",
+      "role": "1st Chairperson",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Leadership team of Future Founders Initiative"
+    },
+    {
+      "full_name": "Kai Arnold",
+      "role": "2nd Chairperson",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Leadership team of Future Founders Initiative"
+    },
+    {
+      "full_name": "Yorick Schilling",
+      "role": "Content Manager",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Leadership team of Future Founders Initiative"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Frankfurt",
+  "raised_institutional_round": false,
+  "funding_summary": "FFI has not raised any external funding and operates with an estimated annual revenue of $684,440.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "out_of_mandate",
+  "inflection_why_now": "The increasing interest in entrepreneurship among young adults presents a timely opportunity for FFI to expand its impact.",
+  "devils_advocate_risks": [
+    "Sustainability of Funding: Relying solely on revenue without external funding may limit growth potential.",
+    "Scalability Challenges: Expanding programs to reach a broader audience could require significant resources and infrastructure."
+  ],
+  "citations": [
+    "https://www.ksg-stiftung.de/projekt-ffi",
+    "https://prospeo.io/c/future-founders-initiative-revenue",
+    "https://www.futurefounders.com/about-us/",
+    "https://www.youtube.com/watch?v=wTr_vX1LVxM"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "As a global leader in technology and innovation, Bosch could provide mentorship and resources to young entrepreneurs."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "With a focus on innovative startups, Evonik could offer strategic guidance and potential investment opportunities."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,57 @@
+{
+  "canonical_name": "bioACTIVATE",
+  "description": "bioACTIVATE is an ERC Proof-of-Concept project coordinated by Technische Universität Wien (TU Wien) in Vienna, Austria, aiming to develop a new generation of bioorthogonal click-to-release chemistry for controlled prodrug activation, potentially reducing medication side effects.",
+  "founders_enriched": [
+    {
+      "full_name": "Hannes Mikula",
+      "role": "Lead researcher",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Technische Universität Wien"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Lead researcher of the bioACTIVATE project."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Vienna",
+  "raised_institutional_round": false,
+  "funding_summary": "The project received an ERC Proof-of-Concept Grant with a European Union contribution of €150,000.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The project's focus on targeted therapeutic strategies addresses the growing demand for treatments with reduced side effects, aligning with current trends in personalized medicine.",
+  "devils_advocate_risks": [
+    "Challenges in scaling the bioorthogonal chemistry for widespread clinical application.",
+    "Potential regulatory hurdles in introducing new drug activation technologies to the market."
+  ],
+  "citations": [
+    "https://www.tuwien.at/alle-news/news/fuenf-erc-proof-of-concept-grants-fuer-die-tu-wien",
+    "https://cordis.europa.eu/project/id/101335615"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "As a pharmaceutical company, Boehringer Ingelheim could benefit from bioACTIVATE's advancements in controlled prodrug activation, potentially enhancing drug efficacy and reducing side effects."
+    }
+  ],
+  "flags_version": 2
+}

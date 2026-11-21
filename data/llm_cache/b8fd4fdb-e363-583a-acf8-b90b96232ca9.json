@@ -1,0 +1,98 @@
+{
+  "canonical_name": "Ontora",
+  "description": "Ontora provides AI agents that interview every employee to map how work actually gets done, identifying bottlenecks and automation opportunities.",
+  "founders_enriched": [
+    {
+      "full_name": "David Korn",
+      "role": "Co-Founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "CODE University"
+      ],
+      "prior_companies": [
+        "Google",
+        "beglaubigt.de"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": true,
+      "source_of_identity": "Co-Founder and CTO of Ontora"
+    },
+    {
+      "full_name": "Leon Johannes Iwanowitsch",
+      "role": "Co-Founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of St. Gallen"
+      ],
+      "prior_companies": [
+        "AI consulting firms"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-Founder and CEO of Ontora"
+    },
+    {
+      "full_name": "Maximilian Arnold",
+      "role": "Co-Founder and COO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "CODE University",
+        "Stanford"
+      ],
+      "prior_companies": [
+        "Porsche"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-Founder and COO of Ontora"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "Dover",
+  "raised_institutional_round": false,
+  "funding_summary": "Ontora participated in Y Combinator's Spring 2026 batch (P26).",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of organizational processes and the need for rapid digital transformation make Ontora's solution timely and essential.",
+  "devils_advocate_risks": [
+    "Ensuring the AI agents accurately capture and interpret diverse organizational workflows without misrepresentation.",
+    "Achieving widespread adoption across various industries with differing operational structures and cultures."
+  ],
+  "citations": [
+    "https://ontora.com/company/about",
+    "https://www.ycombinator.com/companies/ontora",
+    "https://www.youtube.com/watch?v=6qvXmiHSbto"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Ontora's AI-driven process discovery aligns with SAP's focus on enterprise software solutions, potentially enhancing SAP's offerings in operational intelligence."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Ontora's expertise in AI process optimization could complement Evonik's interest in innovative technologies, particularly in industrial applications."
+    }
+  ],
+  "flags_version": 2
+}

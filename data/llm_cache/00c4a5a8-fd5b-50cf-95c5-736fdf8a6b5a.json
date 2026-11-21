@@ -1,0 +1,87 @@
+{
+  "canonical_name": "0security",
+  "description": "0security offers an open-source security harness that enables the deployment of sovereign, persistent AI security agents capable of continuously identifying, verifying, and remediating security vulnerabilities across various technology stacks.",
+  "founders_enriched": [
+    {
+      "full_name": "Doruk Tan Öztürk",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zürich",
+        "University of Applied Sciences and Arts Northwestern Switzerland (FHNW)"
+      ],
+      "prior_companies": [
+        "Migros-Gruppe",
+        "Swiss FHNW Mars Rover Team",
+        "Soothe Studios"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Fabian Zbinden",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "FHNW",
+        "Universidad Popular Autónoma del Estado de Puebla"
+      ],
+      "prior_companies": [
+        "Mellivora Capital",
+        "Crypto Finance Group",
+        "BEEYOND Clothing"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "ycombinator.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "Zurich",
+  "raised_institutional_round": true,
+  "funding_summary": "0security has raised a total of $500,000 in a seed funding round led by Y Combinator.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (0security has raised a total of $500,000 in a seed funding round led by Y Combinator.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "With the increasing sophistication of AI-driven cyber threats, there is a pressing need for autonomous security solutions that can proactively identify and mitigate risks, making 0security's offerings highly relevant.",
+  "devils_advocate_risks": [
+    "Achieving widespread adoption of their open-source platform amidst competition from established cybersecurity firms.",
+    "Ensuring the scalability and adaptability of their AI agents across diverse enterprise environments."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/founders/doruk-tan-ozturk",
+    "https://www.ycombinator.com/founders/fabian-zbinden",
+    "https://www.cbinsights.com/company/0security",
+    "https://0.security/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could benefit from 0security's AI-driven cybersecurity solutions to protect their proprietary technologies."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "As a leading enterprise software company, SAP could integrate 0security's autonomous security agents to enhance the security of their software offerings."
+    }
+  ],
+  "flags_version": 2
+}

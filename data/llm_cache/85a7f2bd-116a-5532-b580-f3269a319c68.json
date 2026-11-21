@@ -1,0 +1,71 @@
+{
+  "canonical_name": "Didit",
+  "description": "Didit provides a modular API platform that offers identity verification and fraud prevention services, analyzing over 200 signals, including documents, biometrics, deepfakes, injection attacks, and behavioral patterns.",
+  "founders_enriched": [
+    {
+      "full_name": "Alberto Rosas",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Founding Team"
+    },
+    {
+      "full_name": "Alejandro Rosas",
+      "role": "CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Founding Team"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": true,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2023,
+  "city": "Barcelona",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $6 million in a seed round, totaling $7.5 million.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $6 million in a seed round, totaling $7.5 million.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing sophistication of AI-driven fraud, such as deepfakes and synthetic identities, has heightened the demand for robust identity verification solutions.",
+  "devils_advocate_risks": [
+    "Market Competition: The identity verification and fraud prevention market is highly competitive, with numerous established players.",
+    "Scalability Challenges: Ensuring the platform can handle a growing number of clients and data without compromising performance or security."
+  ],
+  "citations": [
+    "https://didit.me/about-us/",
+    "https://didit.me/blog/didit-7-5m-seed-infrastructure-identity-fraud/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could benefit from Didit's identity verification and fraud prevention infrastructure to secure transactions and data integrity."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's enterprise software solutions could integrate Didit's services to enhance security and compliance in their applications."
+    }
+  ],
+  "flags_version": 2
+}

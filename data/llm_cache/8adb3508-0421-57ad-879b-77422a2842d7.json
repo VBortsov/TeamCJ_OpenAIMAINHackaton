@@ -1,0 +1,91 @@
+{
+  "canonical_name": "TigerShark Science",
+  "description": "TigerShark Science develops advanced in-vitro skin models grown from human stem cells to reduce animal testing in biomedical research.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Amelie Reigl",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [
+        "Fraunhofer Institute for Silicate Research ISC",
+        "Fraunhofer Translational Center for Regenerative Therapies (TLC-RT)"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Biologist and project manager at the Fraunhofer TLC-RT."
+    },
+    {
+      "full_name": "Dr. Dieter Groneberg",
+      "role": "Group manager",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [
+        "Fraunhofer TLC-RT"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Group manager for in-vitro skin testing systems at the Fraunhofer TLC-RT."
+    },
+    {
+      "full_name": "Prof. Dr. Florian Groeber-Becker",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [
+        "Fraunhofer TLC-RT"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Affiliated with the Fraunhofer TLC-RT."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": null,
+  "city": "Stuttgart Postfach",
+  "raised_institutional_round": false,
+  "funding_summary": "Secured €1.3 million in funding through the EXIST Transfer of Research program.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "With increasing ethical concerns over animal testing and advancements in tissue engineering, the demand for reliable in-vitro models is at an all-time high.",
+  "devils_advocate_risks": [
+    "Challenges in scaling the production of complex skin models to meet industry demands.",
+    "Potential regulatory hurdles in validating and standardizing new in-vitro testing methods."
+  ],
+  "citations": [
+    "https://www.fraunhofer.de/content/dam/zv/en/Publications/Annual-Report/2024/Fraunhofer-Annual-Report-2024.pdf",
+    "https://www.fraunhofer.de/en/press/research-news/2024/june-2024/skin-models-as-an-alternative-to-animal-testing.html",
+    "https://www.fraunhofer.de/en/research/range-of-services/technology-transfer/founding-a-company-with-fraunhofer/tigershark-science---in-vitro-hautmodelle.html"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in specialty chemicals and materials, aligning with TigerShark Science's focus on advanced skin models for pharmaceutical and cosmetic applications."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim is a global pharmaceutical company, making it a strategic partner for TigerShark Science's in-vitro skin models used in drug testing."
+    }
+  ],
+  "flags_version": 2
+}

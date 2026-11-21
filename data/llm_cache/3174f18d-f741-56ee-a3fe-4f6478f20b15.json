@@ -1,0 +1,77 @@
+{
+  "canonical_name": "SCALE Lasers",
+  "description": "SCALE Lasers develops cost-effective, power-efficient mid-infrared lasers for scalable production and multicolor sensing applications.",
+  "founders_enriched": [
+    {
+      "full_name": "David Stark",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Physicist with a PhD from ETH Zurich's Institute for Quantum Electronics."
+    },
+    {
+      "full_name": "Killian Keller",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Laser physicist and photonic integrated circuit engineer, affiliated with ETH Zurich."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "Venture Kick: CHF 150,000 in December 2025; Gebert Rüf Stiftung: CHF 150,000 in October 2025.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for portable, multi-gas analyzers in environmental and industrial monitoring creates a timely market opportunity for SCALE Lasers' technology.",
+  "devils_advocate_risks": [
+    "Technological Validation: Ensuring the reliability and performance of their novel laser components in real-world applications.",
+    "Market Adoption: Convincing industries to transition from existing sensor technologies to SCALE Lasers' innovative solutions."
+  ],
+  "citations": [
+    "https://www.grstiftung.ch/en/funding/portfolio~grs-058-25~.html",
+    "https://www.help.ch/firma/CHE-335.959.614/scale-lasers-ag-zuerich",
+    "https://www.venturekick.ch/SCALE-receives-CHF-150000-from-Venture-Kick-to-power-sensor-innovation-with-novel-midinfrared-lasers",
+    "https://www.startup.ch/scale-lasers"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Their focus on advanced materials and specialty chemicals aligns with SCALE Lasers' development of novel mid-infrared semiconductor lasers."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their interest in innovative technologies for diagnostics complements SCALE Lasers' work on laser-based gas sensors."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,52 @@
+{
+  "canonical_name": "GWC Solutions",
+  "description": "GWC Solutions specializes in building custom software that helps teams work smarter by streamlining workflows, automating routine tasks, and delivering real ROI.",
+  "founders_enriched": [
+    {
+      "full_name": "Griffin Jerome White",
+      "role": "Managing Director and Shareholder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Moneyhouse entry for GWC GmbH"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2023,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "The company's capital is listed as CHF 20,000, but there is no publicly available information regarding any funding rounds or financial investments.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for automation and data integration in laboratory and business workflows presents a timely opportunity for GWC Solutions to address these needs with their custom software solutions.",
+  "devils_advocate_risks": [
+    "Limited brand recognition in a competitive market could hinder customer acquisition.",
+    "Dependence on a small team may impact scalability and the ability to handle multiple large projects simultaneously."
+  ],
+  "citations": [
+    "https://ch.linkedin.com/company/gwc-solutions-ch",
+    "https://www.crunchbase.com/organization/gwc-solutions",
+    "https://www.moneyhouse.ch/de/company/gwc-gmbh-12696897771",
+    "https://www.gwc-solutions.ch/"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

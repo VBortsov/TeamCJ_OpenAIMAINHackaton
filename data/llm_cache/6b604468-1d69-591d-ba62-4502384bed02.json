@@ -1,0 +1,76 @@
+{
+  "canonical_name": "Moby Analytics",
+  "description": "Moby Analytics offers an AI-driven platform that integrates with Excel to automate audit processes, including intelligent document management and real-time audit tracking.",
+  "founders_enriched": [
+    {
+      "full_name": "Dimitri Kassubeck",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "foundersprime.com"
+    },
+    {
+      "full_name": "Thomas Rapilly",
+      "role": "Founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "foundersprime.com"
+    },
+    {
+      "full_name": "Clément Sengelen",
+      "role": "Founder and Head of AI",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "foundersprime.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2022,
+  "city": "Paris",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised a $500,000 seed round in April 2025.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2022 (older than 3.5 years)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of financial audits and the growing adoption of AI technologies present a timely opportunity for Moby Analytics to streamline audit workflows.",
+  "devils_advocate_risks": [
+    "Potential challenges in achieving widespread adoption among traditional audit firms.",
+    "Dependence on the continuous evolution of AI technologies to maintain competitive advantage."
+  ],
+  "citations": [
+    "https://www.foundersprime.com/startups/moby-analytics",
+    "https://www.pappers.fr/entreprise/moby-analytics-912082500",
+    "https://aventure.vc/companies/moby-analytics-paris-fr/fundraising",
+    "https://www.extruct.ai/hub/mobyanalytics-com/"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

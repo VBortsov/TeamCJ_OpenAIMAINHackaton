@@ -1,0 +1,82 @@
+{
+  "canonical_name": "Brickwise",
+  "description": "Brickwise offers an AI-powered property management platform that automates maintenance requests, handles tenant communications 24/7, and coordinates with contractors to resolve issues.",
+  "founders_enriched": [
+    {
+      "full_name": "Ismail Jeilani",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "LiveLink AI",
+        "Scoodle"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "brickwiseai.com"
+    },
+    {
+      "full_name": "Elias Kassell",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of Bristol",
+        "Imperial College London"
+      ],
+      "prior_companies": [
+        "Dataform",
+        "Google"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": true,
+      "source_of_identity": "brickwiseai.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": true,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": true,
+  "fd_any_prior_exit": true,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $3.5 million in a seed round on November 1, 2021, led by Yabeo Capital, along with additional undisclosed amounts in subsequent seed rounds.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $3.5 million in a seed round on November 1, 2021, led by Yabeo Capital, along with additional undisclosed amounts in subsequent seed rounds.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for automated property management solutions presents a timely opportunity for Brickwise to capitalize on market needs.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing traditional property managers to adopt AI-driven solutions may pose challenges.",
+    "Scalability: Ensuring the platform can handle diverse property types and scales effectively."
+  ],
+  "citations": [
+    "https://www.brickwiseai.com/about",
+    "https://www.ycombinator.com/companies/brickwise",
+    "https://seedtable.com/companies/brickwise",
+    "https://www.cbinsights.com/company/brickwise/financials"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's expertise in enterprise software solutions aligns with Brickwise's AI-driven property management platform, potentially enhancing operational efficiencies for landlords and estate agents."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "DHL's global logistics network could complement Brickwise's property management services, offering integrated solutions for property-related logistics and maintenance."
+    }
+  ],
+  "flags_version": 2
+}

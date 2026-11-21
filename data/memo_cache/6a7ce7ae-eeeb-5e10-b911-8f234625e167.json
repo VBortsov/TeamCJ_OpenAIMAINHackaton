@@ -1,0 +1,27 @@
+{
+  "one_liner": "SOLISTIQ builds AI software that recommends when and how much to reorder and explains why; its March 2026 EXIST grant makes now a good time to reach out.",
+  "top_signals": [
+    {
+      "signal": "SOLISTIQ received an EXIST Research Transfer grant in March 2026.",
+      "source_url": null
+    },
+    {
+      "signal": "BayStartUP listed SOLISTIQ as a winner or finalist in its Bavarian Business Plan Competition; the exact placement is unknown.",
+      "source_url": "https://www.baystartup.de/startupdate/nordbayerns-top-startups-das-sind-die-sieger-im-businessplan-wettbewerb-2026"
+    },
+    {
+      "signal": "Model score 83.0 of 100 (at the top of the reference cohort); ranked 3rd of 174 leads today. Four known founders and technical founder profiles lifted the score. The model also rewarded university spin-off, deep-tech, doctorate and top-university flags; these are model inputs, not verified facts. Being based in Germany slightly lowered the score.",
+      "source_url": null
+    }
+  ],
+  "team": "Magnus Maichle, Nico Elbert and Kai Günder are listed as technical founders and doctoral candidates at the University of Würzburg. Their records also flag PhDs, so degree completion is unclear. Thomas Wangler is listed as a technical founder specializing in IT consulting and software development. The founder records do not confirm the top-university flag.",
+  "why_early": "Unknown whether a priced round has occurred. The EXIST grant does not establish equity funding history.",
+  "devils_advocate_risks": [
+    "Customer adoption and performance against existing inventory planning tools are unknown.",
+    "It is unclear whether the software can adapt across industries and product categories without substantial integration work."
+  ],
+  "next_step": "HTGF Digital Tech & AI team: Ask the founders what a customer pilot has measured on stockouts or excess inventory compared with the customer's existing planning process.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "6a7ce7ae-eeeb-5e10-b911-8f234625e167",
+  "input_hash": "c143f53986ab5d93"
+}

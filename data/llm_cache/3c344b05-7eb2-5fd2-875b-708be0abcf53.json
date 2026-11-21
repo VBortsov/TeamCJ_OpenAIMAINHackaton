@@ -1,0 +1,107 @@
+{
+  "canonical_name": "Holloid",
+  "description": "Holloid offers a real-time, AI-powered holographic microscopy system for continuous, on-site monitoring of industrial processes, enabling rapid detection of deviations and contaminants.",
+  "founders_enriched": [
+    {
+      "full_name": "Marcus Lebesmühlbacher",
+      "role": "Chief Executive Officer (CEO)",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "i5invest",
+        "Austria Wirtschaftsservice",
+        "AWS Gründerfonds",
+        "Helpling",
+        "Rocket Internet",
+        "Epigami",
+        "DocDoc"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": false,
+      "source_of_identity": "crunchbase.com"
+    },
+    {
+      "full_name": "Pinar Frank",
+      "role": "Chief Product Officer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "crunchbase.com"
+    },
+    {
+      "full_name": "Peter van Oostrum",
+      "role": "Chief Technology Officer (CTO)",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "crunchbase.com"
+    },
+    {
+      "full_name": "Erik Reimhult",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "crunchbase.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2022,
+  "city": "Munich",
+  "raised_institutional_round": false,
+  "funding_summary": "Secured a grant from the European Innovation Council (EIC) Accelerator program in February 2025 and participated in the MassChallenge accelerator program in May 2023.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2022 (older than 3.5 years)",
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing demand for efficient and sustainable industrial processes, particularly in the pharmaceutical and food sectors, creates a timely opportunity for Holloid's technology.",
+  "devils_advocate_risks": [
+    "Challenges in scaling the technology for diverse industrial applications.",
+    "Potential resistance from industries accustomed to traditional monitoring methods."
+  ],
+  "citations": [
+    "https://www.crunchbase.com/organization/holloid",
+    "https://www.eitmanufacturing.eu/news-events/news/meet-holloid-the-austrian-deep-tech-startup-that-won-europes-most-competitive-grant/",
+    "https://www.caplight.com/company/holloid",
+    "https://www.thecompanycheck.com/company/b/holloid/5435z9og6fjm4d9kp",
+    "https://www.holloid.com/",
+    "https://www.cbinsights.com/company/holloid/people"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Their interest in innovative technologies aligns with Holloid's advancements in bioprocess monitoring."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their focus on healthcare and biotechnology complements Holloid's applications in the pharmaceutical industry."
+    }
+  ],
+  "flags_version": 2
+}

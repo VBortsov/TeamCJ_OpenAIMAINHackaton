@@ -1,0 +1,94 @@
+{
+  "canonical_name": "Forgis",
+  "description": "Forgis develops AI-driven factory software that unifies fragmented industrial systems, enabling adaptive, self-optimizing manufacturing processes.",
+  "founders_enriched": [
+    {
+      "full_name": "Federico Martelli",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of St. Gallen"
+      ],
+      "prior_companies": [
+        "University of St. Gallen"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-founder of Forgis."
+    },
+    {
+      "full_name": "Camilla Mazzoleni",
+      "role": "Chief Product Officer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Autonomous Systems Lab at ETH Zurich"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-founder of Forgis."
+    },
+    {
+      "full_name": "Riccardo Maggioni",
+      "role": "Chief Technology Officer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Autonomous Systems Lab at ETH Zurich"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-founder of Forgis."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": true,
+  "funding_summary": "In November 2025, Forgis secured a pre-seed funding of $4.5 million.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In November 2025, Forgis secured a pre-seed funding of $4.5 million.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for flexible and adaptive manufacturing solutions presents a timely opportunity for Forgis to address the challenges of modern industrial automation.",
+  "devils_advocate_risks": [
+    "Integration Challenges: Ensuring seamless integration of Forgis's software with diverse industrial systems and machinery.",
+    "Scalability: Effectively scaling the solution across various manufacturing environments without compromising performance."
+  ],
+  "citations": [
+    "https://ai.ethz.ch/news-and-events/ai-center-news/2025/11/forgis-industrial-intelligence-from-zurich.html",
+    "https://www.unisg.ch/en/newsdetail/news/hsg-startup-forgis-has-raised-45-million-dollars-in-pre-seed-funding/",
+    "https://ai.ethz.ch/entrepreneurship/community/startups.html",
+    "https://www.pappers.ch/de/company/forgis-ag-CHE190938748",
+    "https://www.zhk.ch/de/mitgliedschaft/unser-angebot/ueber-unsere-mitglieder/artikel/forgis-ist-einer-der-gewinner-bei-abb-startup-challenge.html"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could synergize with Forgis's AI-driven factory software to enhance material processing and manufacturing efficiency."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch is a leader in industrial automation and robotics, aligning with Forgis's mission to modernize industrial operations through intelligent automation."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,65 @@
+{
+  "canonical_name": "RAD-AI-INFRA",
+  "description": "RAD-AI-INFRA is developing a software platform that enables hospitals and research institutions to utilize large-scale radiological data for the development, validation, and monitoring of modern AI applications in a GDPR-compliant manner.",
+  "founders_enriched": [
+    {
+      "full_name": "Prof. Dr. Philipp Vollmuth",
+      "role": "Lead",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of Bonn"
+      ],
+      "prior_companies": [
+        "University Hospital Bonn"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Lead of RAD-AI-INFRA project and Professor for AI in Medical Imaging at the University of Bonn."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Bonn",
+  "raised_institutional_round": false,
+  "funding_summary": "RAD-AI-INFRA has received a European Research Council (ERC) Proof of Concept Grant with an EU contribution of €150,000.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing demand for AI-driven solutions in healthcare, coupled with stringent data privacy regulations, creates a timely opportunity for RAD-AI-INFRA's platform to address these challenges.",
+  "devils_advocate_risks": [
+    "Integration Challenges: Ensuring seamless integration of the platform across diverse hospital IT infrastructures.",
+    "Regulatory Compliance: Navigating complex healthcare regulations to maintain data privacy and security."
+  ],
+  "citations": [
+    "https://ccibonn.ai/",
+    "https://www.cordis.europa.eu/project/id/101335506",
+    "https://www.uni-bonn.de/en/research-and-teaching/research-profile/awards-and-prizes/erc-grants",
+    "https://www.uni-bonn.de/de/forschung-lehre/transfer/transfercenter-enacom/news-ordner/software-infrastruktur-fuer-die-radiologie"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their focus on healthcare innovation aligns with RAD-AI-INFRA's development of AI platforms for radiology."
+    },
+    {
+      "lp_name": "QIAGEN",
+      "reason": "Their expertise in molecular diagnostics complements RAD-AI-INFRA's aim to enhance diagnostic accuracy through AI in medical imaging."
+    }
+  ],
+  "flags_version": 2
+}

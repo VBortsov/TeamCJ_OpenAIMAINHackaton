@@ -1,0 +1,58 @@
+{
+  "canonical_name": "HemaToxMod",
+  "description": "HemaToxMod is a research initiative focusing on improving the prediction of hematotoxicity in cancer therapies, led by Professor Judith Zaugg at the University of Basel.",
+  "founders_enriched": [
+    {
+      "full_name": "Professor Judith Zaugg",
+      "role": "Principal Investigator",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of Basel"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Research Group Leader in the Department of Biomedicine at the University of Basel"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Basel",
+  "raised_institutional_round": false,
+  "funding_summary": "Funded by the European Research Council (ERC) under grant agreement ID 101335316.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing need for safer and more effective cancer treatments underscores the importance of accurate hematotoxicity prediction, making this research timely.",
+  "devils_advocate_risks": [
+    "Challenges in replicating human bone marrow responses accurately in preclinical models.",
+    "Integration of complex experimental and computational data may face technical hurdles."
+  ],
+  "citations": [
+    "https://biomedizin.unibas.ch/de/default-pages/news/details/erc-proof-of-concept-grant-for-hematrax-improving-prediction-of-blood-toxicity-in-cancer-therapies-zaugg-lab/",
+    "https://biomedizin.unibas.ch/en/persons/judith-zaugg/projects/",
+    "https://cordis.europa.eu/project/id/101335316"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Specializes in pharmaceutical innovations, aligning with HemaToxMod's objectives in drug development."
+    }
+  ],
+  "flags_version": 2
+}

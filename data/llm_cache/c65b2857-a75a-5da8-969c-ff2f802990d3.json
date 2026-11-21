@@ -1,0 +1,87 @@
+{
+  "canonical_name": "Codyco",
+  "description": "Codyco offers an AI-powered reservation team for hotel groups, answering calls, resolving guest requests, processing payments, and integrating confirmed bookings directly into hotel Property Management Systems (PMS).",
+  "founders_enriched": [
+    {
+      "full_name": "Stefan Schaff",
+      "role": "CEO & Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Siemens"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": true,
+      "source_of_identity": "Served as a co-founder at Siemens, where he developed one-class anomaly detection for federated learning using PyTorch and Ray."
+    },
+    {
+      "full_name": "Endrit Bytyqi",
+      "role": "CTO & Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-founder of Codyco."
+    },
+    {
+      "full_name": "Alexander Schober",
+      "role": "CRO & Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-founder of Codyco."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "By",
+  "raised_institutional_round": false,
+  "funding_summary": "Raised $500K in a Pre-Seed Round in October 2025.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing reliance on AI to streamline operations in the hospitality industry presents a timely opportunity for Codyco to address the challenge of missed calls and lost bookings.",
+  "devils_advocate_risks": [
+    "Market Competition: Established AI-driven reservation solutions may pose competitive challenges.",
+    "Integration Challenges: Ensuring seamless integration with diverse hotel PMS platforms could be complex."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/companies/codyco",
+    "https://startupintros.com/orgs/codyco",
+    "https://www.vcbacked.co/company/codyco",
+    "https://www.codyco.ai/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leading enterprise software company, SAP's expertise in enterprise solutions could complement Codyco's AI-driven reservation system, enhancing integration capabilities for hotel groups."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "With its extensive logistics and supply chain experience, DHL could provide valuable insights into operational efficiencies, potentially aiding Codyco in optimizing its AI solutions for the hospitality industry."
+    }
+  ],
+  "flags_version": 2
+}

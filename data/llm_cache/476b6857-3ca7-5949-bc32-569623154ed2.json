@@ -1,0 +1,80 @@
+{
+  "canonical_name": "Epi-Show",
+  "description": "Epi-Show is developing augmented reality technology to visualize epileptic brain signals during surgery, enhancing precision in identifying and removing epileptic tissue.",
+  "founders_enriched": [
+    {
+      "full_name": "Prof. Dr. Maeike Zijlmans",
+      "role": "Neurologist",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "UMC Utrecht"
+      ],
+      "prior_companies": [
+        "UMC Utrecht's EpiLab"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Neurologist at UMC Utrecht"
+    },
+    {
+      "full_name": "Dr. Tristan van Doormaal",
+      "role": "Neurosurgeon",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "UMC Utrecht"
+      ],
+      "prior_companies": [
+        "UMC Utrecht"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Neurosurgeon at UMC Utrecht"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Utrecht",
+  "raised_institutional_round": false,
+  "funding_summary": "Received a €150,000 Proof of Concept grant from the European Research Council (ERC). No additional funding rounds reported.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing prevalence of focal epilepsy and the need for precise surgical interventions create a timely opportunity for Epi-Show's technology.",
+  "devils_advocate_risks": [
+    "Technical challenges in integrating augmented reality with surgical procedures.",
+    "Regulatory hurdles in adopting new medical technologies in clinical settings."
+  ],
+  "citations": [
+    "https://www.umcutrecht.nl/nieuws/subsidie-voor-augmented-reality-bij-epilepsiechirurgie",
+    "https://cordis.europa.eu/project/id/101292143",
+    "https://research.umcutrecht.nl/research-groups/neurophysiology-and-surgical-tailoring-in-epilepsy/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their interest in innovative healthcare solutions aligns with Epi-Show's application of augmented reality in epilepsy surgery."
+    },
+    {
+      "lp_name": "Dräger",
+      "reason": "Specializing in medical and safety technology, Dräger's expertise could complement Epi-Show's surgical applications."
+    }
+  ],
+  "flags_version": 2
+}

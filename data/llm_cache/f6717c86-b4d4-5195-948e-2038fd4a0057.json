@@ -1,0 +1,62 @@
+{
+  "canonical_name": "Inth",
+  "description": "Inth provides privacy and consent infrastructure that integrates directly into codebases, enabling developers to manage user consent and compliance seamlessly within their applications.",
+  "founders_enriched": [
+    {
+      "full_name": "Christopher Burns",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": "burnedchris",
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Everfund"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "burnedchris.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "In April 2026, Inth raised a $1.2 million pre-seed funding round.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In April 2026, Inth raised a $1.2 million pre-seed funding round.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "With increasing global emphasis on data privacy regulations and the need for transparent user consent mechanisms, Inth's solution addresses a critical gap in developer tools for compliance.",
+  "devils_advocate_risks": [
+    "Achieving widespread adoption among developers who may be resistant to integrating new compliance tools into existing workflows.",
+    "Ensuring the platform remains adaptable to evolving privacy laws and regulations across different jurisdictions."
+  ],
+  "citations": [
+    "https://burnedchris.com/about",
+    "https://aventure.vc/companies/inth-london-gb/fundraising",
+    "https://inth.com/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Inth's focus on integrating privacy and consent infrastructure directly into code aligns with SAP's emphasis on enterprise software solutions that prioritize data security and compliance."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Inth's developer-first approach to privacy infrastructure complements Evonik's interest in supporting innovative technologies that enhance digital processes and data management."
+    }
+  ],
+  "flags_version": 2
+}

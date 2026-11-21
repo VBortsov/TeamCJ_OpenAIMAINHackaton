@@ -1,0 +1,68 @@
+{
+  "canonical_name": "Techarena",
+  "description": "Techarena is a platform that empowers change-makers to drive innovation and growth through its events and networking opportunities.",
+  "founders_enriched": [
+    {
+      "full_name": "Johannes Lundberg",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "LinkedIn"
+    },
+    {
+      "full_name": "Igor Chapot",
+      "role": null,
+      "linkedin_url": "https://se.linkedin.com/in/igor-chapot-99610b207/fr",
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "IAE Saint-Etienne"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "LinkedIn"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": 2014,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2014 (older than 3.5 years)",
+  "htgf_vertical": "out_of_mandate",
+  "inflection_why_now": "The increasing global emphasis on innovation and entrepreneurship presents a timely opportunity for Techarena to expand its influence and attract a diverse range of participants.",
+  "devils_advocate_risks": [
+    "Challenges in scaling operations to accommodate a growing number of international participants.",
+    "Dependence on the successful execution of large-scale events, which may be affected by external factors such as economic downturns or global crises."
+  ],
+  "citations": [
+    "https://luma.com/ubsq00ih",
+    "https://www.linkedin.com/posts/johannes-lundberg-b50834103_needed-some-time-but-a-month-ago-activity-7437767360360615936-GBvp",
+    "https://www.linkedin.com/posts/activity-7421847102328287232-08sb",
+    "https://se.linkedin.com/in/igor-chapot-99610b207/fr",
+    "https://se.linkedin.com/company/techarenan",
+    "https://www.linkedin.com/company/techarenan/"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

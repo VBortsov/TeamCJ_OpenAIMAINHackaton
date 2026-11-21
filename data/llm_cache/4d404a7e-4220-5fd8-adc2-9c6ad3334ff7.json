@@ -1,0 +1,60 @@
+{
+  "canonical_name": "NEWHEART",
+  "description": "NEWHEART is developing a regenerative factor for myocardial infarction, inspired by the heart regeneration abilities of the naked mole-rat.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Jane Reznick",
+      "role": "Principal Investigator",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of Cologne"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Principal Investigator at CECAD and CMMC"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Koeln",
+  "raised_institutional_round": false,
+  "funding_summary": "In January 2026, Dr. Reznick received a 'Proof of Concept' grant of €150,000 over 18 months from the ERC to explore the commercial or societal potential of the project.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The ERC grant signifies a pivotal moment, enabling the team to assess the commercial viability of their regenerative therapy.",
+  "devils_advocate_risks": [
+    "Clinical Validation: Ensuring the regenerative factor's efficacy and safety in human trials.",
+    "Market Adoption: Overcoming potential resistance from existing cardiovascular treatment protocols."
+  ],
+  "citations": [
+    "https://www.cmmc-uni-koeln.de/cmmc-news/show-news-detail/jane-reznick-receives-proof-of-concept-grant-from-the-european-research-council"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "As a pharmaceutical company, Boehringer Ingelheim could be interested in the regenerative therapies for myocardial infarction developed by NEWHEART."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's focus on health and nutrition aligns with the project's aim to improve cardiovascular health through innovative treatments."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,88 @@
+{
+  "canonical_name": "LIGARO",
+  "description": "LIGARO develops bio-based, non-toxic adhesives for the wood and paper industries, aiming to replace conventional petroleum-based adhesives.",
+  "founders_enriched": [
+    {
+      "full_name": "Florentine Adam",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Wood engineer with a passion for sustainable materials."
+    },
+    {
+      "full_name": "Joana Kappes",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Handles finance and strategy for LIGARO."
+    },
+    {
+      "full_name": "Mona Körding",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Focuses on protein development in life sciences."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Hannover",
+  "raised_institutional_round": false,
+  "funding_summary": "LIGARO has received a grant of €140,000 from the EXIST start-up scholarship, running from November 1, 2025, to October 31, 2026. Additionally, LIGARO secured first place in the 'Hottest Innovation' category at the Startup-Impuls Competition 2026.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing global emphasis on sustainability and environmental regulations creates a timely opportunity for LIGARO's eco-friendly adhesive solutions.",
+  "devils_advocate_risks": [
+    "Challenges in scaling up production to meet industrial demands.",
+    "Potential resistance from industries accustomed to traditional adhesive products."
+  ],
+  "citations": [
+    "https://ligaro.org/en/about-us/",
+    "https://www.uni-hannover.de/en/universitaet/aktuelles/online-aktuell/details/news/luh-spin-offs-successful-at-2026-startup-impuls-competition",
+    "https://blog.dgnb.de/dgnb-sustainability-challenge-2026/dgnb-sustainability-challenge-2026-kategorie-start-up/finalist-start-up-ligaro/",
+    "https://www.companyhouse.de/LIGARO-GmbH-Hannover",
+    "https://www.sustainability.uni-hannover.de/en/community/startups",
+    "https://www.vc-magazin.de/blog/2026/03/17/startup-impuls-2026-praemierung/",
+    "https://www.youtube.com/watch?v=4t6dOp9gR1w"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in specialty chemicals and has a strong focus on sustainable materials, aligning with LIGARO's development of bio-based adhesives."
+    },
+    {
+      "lp_name": "WACKER",
+      "reason": "WACKER is a global chemical company with expertise in polymer chemistry, which could complement LIGARO's adhesive technology development."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,93 @@
+{
+  "canonical_name": "Zymbly",
+  "description": "Zymbly provides an AI copilot that assists aircraft maintenance technicians with troubleshooting, parts lookup, and documentation.",
+  "founders_enriched": [
+    {
+      "full_name": "Ben Jacob",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Multiverse",
+        "Oliver Wyman"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Led Applied AI initiatives; experience in operational improvements within the aviation sector."
+    },
+    {
+      "full_name": "Robbie Bourke",
+      "role": "Co-founder and Chief Customer Officer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Airbus",
+        "Virgin Atlantic",
+        "Oliver Wyman"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Qualified Aeronautical Engineer with extensive experience in aviation operations and engineering."
+    },
+    {
+      "full_name": "Azmat Habibullah",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Imperial College London"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Holds a Master's in Mathematics with a focus on quantum mechanics; extensive experience in machine learning and software development."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": true,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "Raised $500,000 in a Pre-Seed Round in February 2026 and accepted into Y Combinator's Winter 2026 batch.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The aviation industry's increasing pressure due to fleet growth and technician shortages creates a critical need for Zymbly's automation solutions.",
+  "devils_advocate_risks": [
+    "Integration challenges with existing maintenance systems.",
+    "Ensuring compliance with diverse international aviation regulations."
+  ],
+  "citations": [
+    "https://www.batchpro.co/company/zymbly",
+    "https://www.gritt.io/company/zymbly/",
+    "https://www.zeitgeist.bot/company/zymbly"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Zymbly's AI solutions for aviation maintenance align with Evonik's focus on innovative technologies in industrial sectors."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "Zymbly's automation of aircraft maintenance processes could enhance DHL's logistics operations by improving fleet efficiency."
+    }
+  ],
+  "flags_version": 2
+}

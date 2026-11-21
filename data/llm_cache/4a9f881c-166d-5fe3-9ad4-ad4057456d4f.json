@@ -1,0 +1,98 @@
+{
+  "canonical_name": "AUTO-FES",
+  "description": "AUTO-FES is a research initiative at the Technical University of Munich (TUM) focused on automating the calibration of multi-array functional electrical stimulation (FES) systems to assist patients with motor disabilities, particularly those recovering from strokes.",
+  "founders_enriched": [
+    {
+      "full_name": "Prof. Sandra Hirche",
+      "role": "Principal Investigator",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Technical University of Munich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Principal investigator of AUTO-FES project."
+    },
+    {
+      "full_name": "Satoshi Endo",
+      "role": "Team Member",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Team member of AUTO-FES project."
+    },
+    {
+      "full_name": "Hossein Kavianirad",
+      "role": "Team Member",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Team member of AUTO-FES project."
+    },
+    {
+      "full_name": "Nicolas Kantor Nagel",
+      "role": "Team Member",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Team member of AUTO-FES project."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Munich",
+  "raised_institutional_round": false,
+  "funding_summary": "The project received an ERC Proof of Concept Grant in 2026, indicating its initiation around that time.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The recent ERC Proof of Concept Grant in 2026 provides the necessary funding to transition AUTO-FES from lab validation to real-world clinical applications.",
+  "devils_advocate_risks": [
+    "Ensuring the system's adaptability to the diverse neuromuscular responses of stroke patients.",
+    "Achieving widespread adoption of the technology in clinical and home rehabilitation settings."
+  ],
+  "citations": [
+    "https://www.ce.cit.tum.de/itr/projekte/erc-poc-auto-fes/",
+    "https://www.ce.cit.tum.de/itr/auszeichnungen/",
+    "https://portal.fis.tum.de/en/publications/repetitive-grasping-after-stroke-assisted-by-functional-electrica/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their focus on innovative healthcare solutions aligns with AUTO-FES's mission to enhance rehabilitation through advanced technology."
+    },
+    {
+      "lp_name": "Dräger",
+      "reason": "Specializing in medical and safety technology, Dräger's expertise could complement AUTO-FES's development of assistive devices for stroke patients."
+    }
+  ],
+  "flags_version": 2
+}

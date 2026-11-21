@@ -1,0 +1,27 @@
+{
+  "one_liner": "fiveD is listed as developing BreatheAssist, a real-time ventilation aid backed by EXIST. The November 2026 IHK founder award is a reason to reach out.",
+  "top_signals": [
+    {
+      "signal": "Named a winner or finalist in the 2025 BayStartUP business plan competition.",
+      "source_url": "https://www.baystartup.de/startupdate/das-sind-die-sieger-im-businessplan-wettbewerb-nordbayern-2025"
+    },
+    {
+      "signal": "The BreatheAssist project originated at Friedrich-Alexander-Universität Erlangen-Nürnberg and received EXIST Research Transfer support.",
+      "source_url": null
+    },
+    {
+      "signal": "Received the IHK-Gründerpreis Mittelfranken in November 2026.",
+      "source_url": null
+    }
+  ],
+  "team": "Dr. Michael Stelzig is a technical co-founder with a PhD, an FAU radar research leadership role, and prior experience at Siemens and Mercedes-Benz. Marcel Hoffmann is co-founder and managing director.",
+  "why_early": "Unknown whether a priced round has happened. EXIST support is reported, but the funding summary does not document an investment round.",
+  "devils_advocate_risks": [
+    "The company description names BreatheAssist, but the market and risk notes describe radar simulation. The product fiveD is commercializing is unclear.",
+    "Clinical evidence for the reported ventilation benefits is unknown."
+  ],
+  "next_step": "HTGF Digital Tech & AI team: Ask the founders which product fiveD is commercializing: BreatheAssist or radar simulation software.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "d520c797-9174-5e13-9a3f-e9f41dde5e9d",
+  "input_hash": "77afab2fa2e7a037"
+}

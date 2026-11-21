@@ -1,0 +1,27 @@
+{
+  "one_liner": "OptimalPSI develops patient-specific spinal implants. ETH Zurich spin-off recognition and a 2025 Venture Kick award make it worth meeting now.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich recognizes OptimalPSI as a spin-off.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "OptimalPSI won CHF 150,000 from Venture Kick in 2025 and secured an Innosuisse grant in 2024.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 92.1 of 100 (at the top of the reference cohort). Spin-off status, the deep-tech classification, technical founders, an ETH Zurich doctorate and a six-founder flag pushed the score up. The records list three co-founders and three clinical advisors, so the six-founder flag is unconfirmed.",
+      "source_url": null
+    }
+  ],
+  "team": "Co-founders: Dr. Thijs Smit (ETH Zurich PhD in orthopaedic technology), Wolfgang Rubin (over 15 years of medical device engineering experience) and Bertrand Hughes (medtech leadership experience). Smit and Rubin are listed as technical founders.",
+  "why_early": "Priced-round status is unknown. The Venture Kick award and Innosuisse grant do not establish whether a priced round has occurred.",
+  "devils_advocate_risks": [
+    "Scaling production of patient-specific implants may be difficult.",
+    "Regulatory approvals across jurisdictions may be challenging."
+  ],
+  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders what evidence they still need for their first regulatory submission.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "7960f33c-aa58-5ced-b975-dad6e580098f",
+  "input_hash": "969f10c1402cd4ea"
+}

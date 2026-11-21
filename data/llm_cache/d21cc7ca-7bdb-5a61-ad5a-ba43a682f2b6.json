@@ -1,0 +1,80 @@
+{
+  "canonical_name": "Juno",
+  "description": "Juno is an AI health assistant designed to support individuals living with chronic illnesses by tracking symptoms, identifying patterns, and preparing reports for healthcare providers.",
+  "founders_enriched": [
+    {
+      "full_name": "Isaac Tolley",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University College London"
+      ],
+      "prior_companies": [
+        "UCL's Venture Builder program"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-founder of Juno"
+    },
+    {
+      "full_name": "Marshall Gould",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University College London"
+      ],
+      "prior_companies": [
+        "UCL's Venture Builder program"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-founder of Juno"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "In 2026, Juno raised a £12 million seed round led by Atomico, with participation from firstminute capital, XYZ Venture Capital, Tenacity Capital, MMC Ventures, and Avenir.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In 2026, Juno raised a £12 million seed round led by Atomico, with participation from firstminute capital, XYZ Venture Capital, Tenacity Capital, MMC Ventures, and Avenir.)",
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing prevalence of chronic illnesses and the growing adoption of AI in healthcare create a timely opportunity for Juno's solution.",
+  "devils_advocate_risks": [
+    "User Adoption: Ensuring widespread adoption among individuals with chronic illnesses may be challenging.",
+    "Data Privacy: Managing sensitive health data securely is critical to maintain user trust and comply with regulations."
+  ],
+  "citations": [
+    "https://www.linkedin.com/posts/ucl-innovation-and-enterprise_were-proud-that-juno-a-ucl-startup-co-founded-activity-7482346851728531458-R0uf",
+    "https://www.linkedin.com/posts/grishinrobotics_frontier-health-raised-16m-to-automate-the-activity-7473649750177902594-Nc7_",
+    "https://junocompanion.com/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "As a pharmaceutical company, Boehringer Ingelheim could benefit from Juno's AI-driven health assistant to enhance patient engagement and support chronic illness management."
+    },
+    {
+      "lp_name": "Dräger",
+      "reason": "Specializing in medical and safety technology, Dräger could collaborate with Juno to integrate advanced monitoring solutions for chronic illness patients."
+    }
+  ],
+  "flags_version": 2
+}

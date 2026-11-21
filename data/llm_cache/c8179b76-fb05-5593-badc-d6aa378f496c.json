@@ -1,0 +1,101 @@
+{
+  "canonical_name": "Transload",
+  "description": "Transload's AI captures the true size of any shipment as it moves through the warehouse, with 15% of customer shipments found to be larger than declared, unlocking significant rebilling revenue and improved trailer utilization.",
+  "founders_enriched": [
+    {
+      "full_name": "Julius Scheel",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Technical University of Munich"
+      ],
+      "prior_companies": [
+        "McKinsey",
+        "avi medical"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Nils Börner",
+      "role": "Co-founder and CTO (AI)",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Technical University of Munich",
+        "University of Queensland"
+      ],
+      "prior_companies": [
+        "deep-tech startups",
+        "academic research"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Jago Wahl-Schwentker",
+      "role": "Co-founder and CTO (Engineering)",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Technical University of Munich"
+      ],
+      "prior_companies": [
+        "Veli",
+        "Rohde & Schwarz",
+        "Digital Product School by UnternehmerTUM"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": true,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Munich",
+  "raised_institutional_round": true,
+  "funding_summary": "Participated in Y Combinator's Spring 2026 batch and raised funding in June 2026.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Participated in Y Combinator's Spring 2026 batch and raised funding in June 2026.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing reliance on AI and computer vision in logistics presents a timely opportunity for Transload's solution.",
+  "devils_advocate_risks": [
+    "Integration challenges with diverse existing camera systems.",
+    "Scalability issues as the company expands its customer base."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/companies/transload",
+    "https://www.founderland.ai/founder/jago-wahl-schwentker",
+    "https://www.online-handelsregister.de/handelsregisterauszug/by/Muenchen/HRB/313543/transload-GmbH"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "DHL Group",
+      "reason": "Transload's AI-powered logistics technology aligns with DHL's focus on innovative supply chain solutions."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Transload's integration capabilities with warehouse management systems complement SAP's enterprise software offerings."
+    }
+  ],
+  "flags_version": 2
+}

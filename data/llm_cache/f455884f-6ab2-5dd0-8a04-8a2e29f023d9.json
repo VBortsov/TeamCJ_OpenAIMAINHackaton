@@ -1,0 +1,63 @@
+{
+  "canonical_name": "Sparkles",
+  "description": "Sparkles provides AI-powered coding agents that allow non-technical team members to safely contribute to production codebases through GitHub-native workflows.",
+  "founders_enriched": [
+    {
+      "full_name": "Ai Daniil Bekirov",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Iterate.com",
+        "StructuredAI"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Dropped out of University College London to build Sparkles."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "Raised $500,000 in January 2026 and $3.5 million in a seed round led by Y Combinator, with participation from Moonfire Ventures and angel investors.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing reliance on cross-functional teams in software development creates a demand for tools that empower non-technical members to participate in coding processes.",
+  "devils_advocate_risks": [
+    "Adoption Resistance: Technical teams may be hesitant to trust AI-driven contributions from non-technical members.",
+    "Integration Challenges: Ensuring seamless integration with diverse existing codebases and development environments could be complex."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/companies/sparkles",
+    "https://aventure.vc/companies/sparkles-san-francisco-ca-us/fundraising",
+    "https://vctavern.com/sparkles-raises-3-5m-seed-round-led-by-y-combinator-to-let-non-technical-teams-safely-ship-changes-to-production-codebases/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Sparkles' AI-driven workflow for codebase management could integrate with SAP's enterprise solutions, enhancing collaborative development processes."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Sparkles' focus on enabling non-technical teams to contribute to codebases aligns with Evonik's interest in innovative technologies that streamline operations."
+    }
+  ],
+  "flags_version": 2
+}

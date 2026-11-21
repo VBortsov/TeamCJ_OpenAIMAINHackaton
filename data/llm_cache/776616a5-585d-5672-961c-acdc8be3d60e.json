@@ -1,0 +1,83 @@
+{
+  "canonical_name": "Motives",
+  "description": "Motives provides AI-powered qualitative research for consumer brands, conducting and analyzing video interviews to deliver actionable insights rapidly.",
+  "founders_enriched": [
+    {
+      "full_name": "Sam Stoll",
+      "role": "Co-Founder & CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of Oxford"
+      ],
+      "prior_companies": [
+        "Palantir Technologies",
+        "Ensoft"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": true,
+      "source_of_identity": "svatlas.io"
+    },
+    {
+      "full_name": "Sean Conley",
+      "role": "Co-Founder & CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Dataiku",
+        "TrueLayer",
+        "Google",
+        "GiveWell"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": true,
+      "source_of_identity": "svatlas.io"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $500,000 in a Seed round in June 2025, led by Y Combinator.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $500,000 in a Seed round in June 2025, led by Y Combinator.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for rapid, data-driven consumer insights presents a timely opportunity for AI-driven qualitative research solutions.",
+  "devils_advocate_risks": [
+    "Challenges in scaling AI models to accurately interpret diverse consumer behaviors.",
+    "Potential resistance from traditional market research firms to adopting AI-based methodologies."
+  ],
+  "citations": [
+    "https://svatlas.io/founders/b8ce7202-2901-4b72-8025-cda78ffeb5a0",
+    "https://svatlas.io/founders/20a9d642-edfe-4468-b1b6-32436fbc74d3",
+    "https://aventure.vc/companies/motives-london-gb/fundraising",
+    "https://motives.ai/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Motives' AI-driven qualitative research aligns with Evonik's focus on innovative technologies in the chemical industry."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Motives' AI solutions for consumer insights could integrate with SAP's enterprise software offerings, enhancing data-driven decision-making."
+    }
+  ],
+  "flags_version": 2
+}

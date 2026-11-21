@@ -1,0 +1,108 @@
+{
+  "canonical_name": "CHoNova",
+  "description": "CHoNova develops an ultrasound-based analysis system that monitors chocolate behavior during production, providing real-time insights to optimize quality and efficiency.",
+  "founders_enriched": [
+    {
+      "full_name": "Frédérique Elise Renée Delahaye",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "chonova.com"
+    },
+    {
+      "full_name": "Dr. Johannes Burkard",
+      "role": "CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "chonova.com"
+    },
+    {
+      "full_name": "Prof. Dr. Erich Josef Windhab",
+      "role": "Chairman of the Board of Directors",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "chonova.com"
+    },
+    {
+      "full_name": "Prof. Dr. Adolphus Petrus Gerardus Maria van Loon",
+      "role": "Board member",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "moneyhouse.ch"
+    },
+    {
+      "full_name": "Dr. Hans Peter Meyer",
+      "role": "Board member",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "moneyhouse.ch"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2024,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "No specific details about funding rounds or amounts are available.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing demand for precision in food manufacturing processes presents a timely opportunity for CHoNova's technology.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing traditional chocolate manufacturers to integrate new technologies may be challenging.",
+    "Technological Scalability: Ensuring the system's effectiveness across diverse production environments could pose technical hurdles."
+  ],
+  "citations": [
+    "https://chonova.com/about/",
+    "https://www.moneyhouse.ch/en/company/chonova-ag-13320224671",
+    "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Specializes in advanced materials and chemicals, aligning with CHoNova's focus on food manufacturing technologies."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Invests in innovative technologies, potentially complementing CHoNova's advancements in food production processes."
+    }
+  ],
+  "flags_version": 2
+}

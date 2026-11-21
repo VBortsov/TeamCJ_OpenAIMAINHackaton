@@ -1,0 +1,61 @@
+{
+  "canonical_name": "Cryo-iLM",
+  "description": "Cryo-iLM aims to develop a modular, portable cryo-immersion microscopy platform that enables high-resolution imaging of cellular structures at cryogenic temperatures.",
+  "founders_enriched": [
+    {
+      "full_name": "Professor Thomas Burg",
+      "role": "Lead Researcher",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Technische Universität Darmstadt"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Department of Electrical Engineering and Information Technology at TU Darmstadt"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Darmstadt",
+  "raised_institutional_round": false,
+  "funding_summary": "Cryo-iLM has been awarded a €150,000 Proof of Concept Grant from the ERC, intended to support the project's development over an 18-month period.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing demand for advanced imaging techniques in biomedical research and diagnostics presents a timely opportunity for Cryo-iLM's innovative approach.",
+  "devils_advocate_risks": [
+    "Technical Challenges: Developing a cryo-immersion microscopy platform that maintains high-resolution imaging at cryogenic temperatures may encounter unforeseen technical obstacles.",
+    "Market Adoption: Convincing the scientific community to adopt a new, specialized imaging platform could be challenging, potentially affecting the project's commercial success."
+  ],
+  "citations": [
+    "https://www.etit.tu-darmstadt.de/fachbereich/etit_newsdetails_297664.en.jsp",
+    "https://cordis.europa.eu/project/id/101335035"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, aligning with Cryo-iLM's focus on innovative microscopy technologies that could benefit from advanced materials development."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim is involved in pharmaceutical research, which could leverage Cryo-iLM's high-resolution imaging capabilities for drug discovery and development."
+    }
+  ],
+  "flags_version": 2
+}

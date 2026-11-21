@@ -1,0 +1,95 @@
+{
+  "canonical_name": "InstaHeat",
+  "description": "InstaHeat's patented ohmic flow heater delivers efficient and reliable liquid heating by generating heat directly through the liquid, eliminating traditional heating elements and associated issues like scaling and energy waste.",
+  "founders_enriched": [
+    {
+      "full_name": "Alexey Gromov",
+      "role": "Chief Operating Officer (COO)",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [
+        "Research and Development roles"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-founder and COO of InstaHeat"
+    },
+    {
+      "full_name": "Fabian Dietschi",
+      "role": "Chief Executive Officer (CEO)",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [
+        "Coffee machine manufacturer"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-founder and CEO of InstaHeat"
+    },
+    {
+      "full_name": "Anil Sethi",
+      "role": "Chief Marketing Officer (CMO)",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Management author",
+        "Serial tech entrepreneur"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-founder and CMO of InstaHeat"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": true,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2019,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "In May 2023, the company received a cash award of CHF 1 million from Swiss Accelerator Innosuisse.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2019 (older than 3.5 years)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing global emphasis on energy efficiency and sustainability makes InstaHeat's technology timely and relevant.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing industries to transition from traditional heating methods to InstaHeat's innovative technology may face resistance.",
+    "Scalability: Ensuring the technology can be effectively scaled for diverse industrial applications poses a challenge."
+  ],
+  "citations": [
+    "https://www.instaheat.ch/cofounders",
+    "https://www.instaheat.ch/",
+    "https://www.instaheat.ch/recognition"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "InstaHeat's innovative ohmic flow heater technology aligns with Bosch's focus on energy-efficient heating solutions."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in sustainable technologies complements InstaHeat's mission to redefine liquid heating with minimal energy waste."
+    }
+  ],
+  "flags_version": 2
+}

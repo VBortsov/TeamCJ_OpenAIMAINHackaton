@@ -1,0 +1,27 @@
+{
+  "one_liner": "optohive develops wearable technology for non-invasive, real-time brain monitoring. Its recognition as an ETH Zurich spin-off makes it worth an early conversation.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich recognizes optohive as a spin-off; approval is recorded in 2025.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "Three of the five listed founders have PhDs and technical backgrounds.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 89.5 of 100 (at the top of the reference cohort); ranked 6th of 174 leads today. The five listed founders, university spin-off status, technical founders and founder PhDs pushed the score up. The model also flags research-intensive technology and a founder’s affiliation with a top university; the founder records do not confirm that affiliation.",
+      "source_url": null
+    }
+  ],
+  "team": "The founder records identify Dominik Wyser, Roger Gassert and Matteo Pavan as technical founders with PhDs. Marc Willhaus and Michael Wyser are also listed as founders; specific roles are unknown.",
+  "why_early": "Unknown. The Pre-Crunchbase badge does not establish whether a priced round has happened.",
+  "devils_advocate_risks": [
+    "Accuracy and reliability outside controlled laboratory settings remain a technical risk.",
+    "Adoption in clinical workflows remains uncertain."
+  ],
+  "next_step": "HTGF Life Sciences team: Ask the founders what validation data show about measurement accuracy outside controlled laboratory settings.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "92fcc881-e21d-57f0-8a82-0296f5e55357",
+  "input_hash": "65d1ebb4444b7a3c"
+}

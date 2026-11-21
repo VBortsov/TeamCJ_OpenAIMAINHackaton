@@ -1,0 +1,73 @@
+{
+  "canonical_name": "SwissBid",
+  "description": "SwissBid offers an AI-driven platform that automates the tenant turnover process, including inquiries, scheduling, and applicant communication, aiming to reduce vacancy rates and compliance risks for property managers.",
+  "founders_enriched": [
+    {
+      "full_name": "Marc Sebastian Agustin Waszkis",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Philipp Leonard Braune",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2024,
+  "city": "Cham",
+  "raised_institutional_round": false,
+  "funding_summary": "Participated in the Venture Kick program, receiving CHF 10,000 in 2025. No additional equity funding rounds or non-dilutive funding reported.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing adoption of AI technologies in property management presents a timely opportunity for SwissBid to address inefficiencies in tenant turnover processes.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing traditional property managers to adopt AI-driven solutions may pose challenges.",
+    "Scalability: Ensuring the platform can handle diverse property types and regulatory environments across different regions."
+  ],
+  "citations": [
+    "https://www.pappers.ch/de/company/swissbid-gmbh-CHE351639622",
+    "https://joinup.ch/startup/robinrent-ai-97fc961b-b498-4dea-89aa-91223bc1a316-11983",
+    "https://entrepreneurship.ethz.ch/startups-spinoffs/spin-off.html",
+    "https://www.venturekick.ch/robinrealai-swissbid-gmbh"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in specialty chemicals and materials, which could benefit from SwissBid's AI-driven property management solutions to optimize their real estate portfolios."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "DHL's logistics operations require efficient real estate management; SwissBid's platform could streamline tenant turnover processes, enhancing operational efficiency."
+    }
+  ],
+  "flags_version": 2
+}

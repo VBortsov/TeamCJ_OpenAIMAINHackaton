@@ -1,0 +1,75 @@
+{
+  "canonical_name": "Sitefire",
+  "description": "Sitefire offers a marketing suite designed to enhance brand visibility across AI agents like ChatGPT and OpenClaw by creating and optimizing content.",
+  "founders_enriched": [
+    {
+      "full_name": "Jochen Madler",
+      "role": "Co-founder & CEO",
+      "linkedin_url": "https://www.linkedin.com/in/jochen-madler/",
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Technical University Munich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Conducted deep reinforcement learning and optimization research at Stanford; pursued a PhD at Technical University Munich."
+    },
+    {
+      "full_name": "Vincent Jeltsch",
+      "role": "Co-founder & CTO",
+      "linkedin_url": "https://www.linkedin.com/in/vincent-jeltsch/",
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Center for Digital Technology and Management"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Studied at the Center for Digital Technology and Management, a program known for producing a significant number of German unicorns."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "By",
+  "raised_institutional_round": false,
+  "funding_summary": "Raised $500K in a convertible note on February 1, 2026; accepted into Y Combinator Winter 2026 batch.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing reliance on AI agents for information retrieval presents a timely opportunity for brands to optimize their AI visibility.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing brands to invest in AI-specific marketing tools may face resistance due to existing marketing strategies.",
+    "Technological Integration: Ensuring seamless integration with various AI platforms and staying updated with their evolving algorithms poses a continuous challenge."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/companies/sitefire",
+    "https://www.cbinsights.com/company/sitefire/financials"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in digitalization and AI solutions for industrial applications, aligning with Sitefire's focus on AI-driven marketing tools."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's enterprise software solutions could integrate with Sitefire's marketing suite, enhancing AI visibility for SAP's clientele."
+    }
+  ],
+  "flags_version": 2
+}
