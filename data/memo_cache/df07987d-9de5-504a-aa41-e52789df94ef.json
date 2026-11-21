@@ -1,8 +1,17 @@
 {
-  "one_liner": "Acytronix develops nanotechnology for extracellular vesicle isolation; its 2025 recognition as an ETH Zurich spin-off is a reason to reach out now.",
+  "devils_advocate_risks": [
+    "Scaling production could be challenging.",
+    "Clinical applications could face regulatory approval hurdles."
+  ],
+  "entity_id": "df07987d-9de5-504a-aa41-e52789df94ef",
+  "input_hash": "088e26971e346f86",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Life Sciences & Chemistry team: Ask what evidence the founders have that their isolation process maintains performance at higher production volumes.",
+  "one_liner": "Acytronix develops nanotechnology for extracellular vesicle isolation in diagnostics and therapeutics and received ETH Zurich spin-off approval in 2025.",
+  "team": "The founder records list Dr. Vadim Krivitsky as CEO and Dr. Adva Krivitsky as CTO, both with PhDs and ETH Zurich affiliations. Vitaly Krivitsky leads digital marketing.",
   "top_signals": [
     {
-      "signal": "ETH Zurich recognized Acytronix as a spin-off in 2025.",
+      "signal": "ETH Zurich recognized Acytronix as a spin-off.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
@@ -10,18 +19,9 @@
       "source_url": null
     },
     {
-      "signal": "Model score 84.5 of 100 (at the top of the reference cohort). Positive inputs include the university spin-off, deep-tech classification, three named founders, a founding CTO, and founders with PhDs and ETH Zurich affiliations. A separate technical-founder flag also lifted the score but is not confirmed by the founder records.",
+      "signal": "Model score 84.5 of 100 (at the top of the reference cohort). Positive inputs include university spin-off status, a deep-tech classification, three known founders, a founding CTO, and ETH Zurich and PhD credentials. The technical-founder flag also pushed the score up but is not confirmed by the founder records.",
       "source_url": null
     }
   ],
-  "team": "Dr. Vadim Krivitsky is CEO and Dr. Adva Krivitsky is CTO. Both are recorded as holding PhDs and having ETH Zurich affiliations. Vitaly Krivitsky leads digital marketing.",
-  "why_early": "Unknown whether a priced round has closed. The CHF 10,000 from Venture Kick does not establish priced-round status.",
-  "devils_advocate_risks": [
-    "Production scale-up may be challenging.",
-    "Clinical applications may face regulatory approval hurdles."
-  ],
-  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders whether Acytronix has closed a priced equity round.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "df07987d-9de5-504a-aa41-e52789df94ef",
-  "input_hash": "8776e1fdeb2c8401"
+  "why_early": "Unknown whether a priced round has occurred. The CHF 10,000 Venture Kick award does not establish priced-round status."
 }

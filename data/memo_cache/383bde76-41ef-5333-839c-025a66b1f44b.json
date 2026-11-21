@@ -1,27 +1,27 @@
 {
-  "one_liner": "UTHEREAL turns business expertise into secure AI for enterprises and is worth meeting after its 2026 ETH Zurich spin-off recognition and reported $1 million Innosuisse grant.",
+  "devils_advocate_risks": [
+    "Customer adoption is unknown.",
+    "It is unclear whether the platform can meet different industries’ requirements without losing performance."
+  ],
+  "entity_id": "383bde76-41ef-5333-839c-025a66b1f44b",
+  "input_hash": "11cf3e3f23ce21c0",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Industrial Tech team: Ask the founders whether UTHEREAL has closed a priced equity round.",
+  "one_liner": "UTHEREAL turns business expertise into secure AI for enterprises; ETH Zurich recognized it as a spin-off in 2026, and it received a $1 million Innosuisse grant.",
+  "team": "Co-founder and CTO João Carvalho holds a PhD and attended ETH Zurich. Co-founder and CEO Wael Abdelmalek previously worked at PwC, WHO, Credit Suisse and AWS.",
   "top_signals": [
     {
       "signal": "ETH Zurich lists UTHEREAL on its 2026 spin-off roster.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
-      "signal": "The funding summary reports a $1 million Innosuisse innovation grant.",
+      "signal": "UTHEREAL received a $1 million Innosuisse innovation grant.",
       "source_url": null
     },
     {
-      "signal": "Model score 82.1 of 100 (at the top of the reference cohort). Spin-off status, deep-tech classification, and having a co-founder who is CTO and holds an ETH Zurich PhD pushed the score up. Separate flags for a technical founder and study abroad also raised the score but are not confirmed by the founder records.",
+      "signal": "Model score 82.1 of 100 (at the top of the reference cohort). The spin-off and deep-tech flags, along with the founder CTO, PhD and ETH Zurich education flags, pushed the score up. The technical-founder and study-abroad flags also lifted the score but are not confirmed by the founder records.",
       "source_url": null
     }
   ],
-  "team": "João Carvalho is co-founder and CTO and holds a PhD from ETH Zurich. Wael Abdelmalek is co-founder and CEO; his listed prior organizations include AWS, Credit Suisse, WHO, and PwC.",
-  "why_early": "Unknown whether a priced round has happened. The reported grant does not establish equity funding status.",
-  "devils_advocate_risks": [
-    "Customer adoption is unknown.",
-    "It is unknown whether the platform can meet different industries’ requirements without losing performance."
-  ],
-  "next_step": "HTGF Industrial Tech team: Ask the founders whether UTHEREAL has closed a priced equity round.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "383bde76-41ef-5333-839c-025a66b1f44b",
-  "input_hash": "86c1af48e85cf592"
+  "why_early": "Unknown whether a priced round has occurred. The reported Innosuisse funding is a grant, not a priced round."
 }

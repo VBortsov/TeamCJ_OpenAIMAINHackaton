@@ -1,27 +1,27 @@
 {
-  "one_liner": "Determion is developing open-source software for safety-critical systems and won the 2026 RWTH Aachen Spin-off Award, giving HTGF a reason to reach out now.",
+  "devils_advocate_risks": [
+    "Industrial customers may be reluctant to switch from proprietary software stacks to open-source alternatives.",
+    "Meeting safety-critical software standards across sectors may be difficult."
+  ],
+  "entity_id": "75568775-b601-54d7-a62a-906edc1c3964",
+  "input_hash": "bf6e721428155467",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Industrial Tech team: Ask the founders which safety standard they plan to target first with Determi.CORE.",
+  "one_liner": "Determion is building open-source software for safety-critical systems; its 2026 RWTH Aachen Spin-off Award makes it worth a closer look.",
+  "team": "Seven co-founders are listed: CEO Dr. Alexandru Kampmann, CTO Dr. Dominik Püllen, Niels Schneider, Joschko Rehder, Michael Petrosyan, Jonas Hegerath and Roni Ibrahim. The founder records confirm PhDs for Kampmann and Püllen.",
   "top_signals": [
     {
       "signal": "Won the 2026 RWTH Aachen University Spin-off Award.",
       "source_url": "https://www.rwth-aachen.de/cms/root/wir/Profil/Auszeichnungen-und-Ehrungen/Spin-off-Award/~bsjmkr/Determion/lidx/1/"
     },
     {
-      "signal": "Co-founder Dominik Püllen is the CTO and holds a doctorate.",
+      "signal": "Co-founder Dominik Püllen is listed as CTO and holds a PhD.",
       "source_url": "https://de.linkedin.com/in/dominik-p%C3%BCllen-54b438319"
     },
     {
-      "signal": "Ranked 2nd of 63 leads today; model score 92.5 of 100 (at the top of the reference cohort). The model rewards team size, spin-off status, deep tech, a founder with a doctorate, and a founding CTO. Its founder-count input is six, but seven are listed. The technical-founder and top-university flags are set but not confirmed by the founder records. Being based in Germany slightly lowers the score.",
+      "signal": "Model score 92.5 of 100 (at the top of the reference cohort); ranked 7th of 205 leads today. The model counted six founders, while seven are listed. The university spin-off, deep-tech, PhD and founder-CTO flags lifted the score; the German location lowered it. The technical-founder and top-university flags also lifted the score but are not confirmed by the founder records.",
       "source_url": null
     }
   ],
-  "team": "The founder records list Dr. Alexandru Kampmann (CEO) and Dr. Dominik Püllen (CTO), both with doctorates. The other co-founders are Niels Schneider, Joschko Rehder, Michael Petrosyan, Jonas Hegerath, and Roni Ibrahim.",
-  "why_early": "Unknown whether a priced round has occurred; funding history is not publicly documented in the available information.",
-  "devils_advocate_risks": [
-    "Industrial customers may be reluctant to switch from proprietary stacks to open-source software.",
-    "It is unknown whether the software meets the safety standards required in its target sectors."
-  ],
-  "next_step": "HTGF Industrial Tech team: Ask the founders what safety evidence their first target customer would need before piloting Determi.CORE.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "75568775-b601-54d7-a62a-906edc1c3964",
-  "input_hash": "9218c1161435065c"
+  "why_early": "Unknown. Funding history is not publicly documented, so whether a priced round has happened is unverified."
 }

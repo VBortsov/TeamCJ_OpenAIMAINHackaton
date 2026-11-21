@@ -1,27 +1,27 @@
 {
-  "one_liner": "optohive develops wearable technology for non-invasive, real-time brain monitoring. Its recognition as an ETH Zurich spin-off makes it worth an early conversation.",
+  "devils_advocate_risks": [
+    "Accuracy and reliability outside controlled laboratory settings are unknown.",
+    "Adoption in clinical settings may be difficult."
+  ],
+  "entity_id": "92fcc881-e21d-57f0-8a82-0296f5e55357",
+  "input_hash": "0c29b12c2f6ee286",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Life Sciences & Chemistry team: What data show how accurately and reliably the device measures brain activity outside controlled laboratory settings?",
+  "one_liner": "optohive is an ETH Zurich spin-off developing wearable brain imaging for non-invasive, real-time monitoring in clinical and research settings.",
+  "team": "Dr. Dominik Wyser, Prof. Roger Gassert and Dr. Matteo Pavan are listed as technical founders with doctorates. Marc Willhaus and Michael Wyser are also listed as founders.",
   "top_signals": [
     {
-      "signal": "ETH Zurich recognizes optohive as a spin-off; approval is recorded in 2025.",
+      "signal": "ETH Zurich lists optohive as a recognized spin-off.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
-      "signal": "Three of the five listed founders have PhDs and technical backgrounds.",
+      "signal": "Three of the five founders are listed as technical and hold doctorates.",
       "source_url": null
     },
     {
-      "signal": "Model score 89.5 of 100 (at the top of the reference cohort); ranked 6th of 174 leads today. The five listed founders, university spin-off status, technical founders and founder PhDs pushed the score up. The model also flags research-intensive technology and a founder’s affiliation with a top university; the founder records do not confirm that affiliation.",
+      "signal": "Model score 89.5 of 100 (at the top of the reference cohort); ranked 8th of 205 leads today. The five known founders, spin-off status, technical founders, doctorates, and deep-tech classification pushed the score up. A top-university founder flag also contributed, but founder records do not confirm who it refers to.",
       "source_url": null
     }
   ],
-  "team": "The founder records identify Dominik Wyser, Roger Gassert and Matteo Pavan as technical founders with PhDs. Marc Willhaus and Michael Wyser are also listed as founders; specific roles are unknown.",
-  "why_early": "Unknown. The Pre-Crunchbase badge does not establish whether a priced round has happened.",
-  "devils_advocate_risks": [
-    "Accuracy and reliability outside controlled laboratory settings remain a technical risk.",
-    "Adoption in clinical workflows remains uncertain."
-  ],
-  "next_step": "HTGF Life Sciences team: Ask the founders what validation data show about measurement accuracy outside controlled laboratory settings.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "92fcc881-e21d-57f0-8a82-0296f5e55357",
-  "input_hash": "65d1ebb4444b7a3c"
+  "why_early": "Unknown. The Pre-Crunchbase / Undiscovered badge does not establish whether a priced round has occurred."
 }

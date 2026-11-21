@@ -1,28 +1,28 @@
 {
-  "one_liner": "Loka AI uses locally hosted AI to search and enrich executive-search firms’ internal candidate pools; a February 2026 EXIST grant makes this a timely lead.",
+  "devils_advocate_risks": [
+    "Paid customer traction is unknown.",
+    "Integration with existing recruiting systems and workflows may be difficult.",
+    "Deployments may require customization across executive-search firms."
+  ],
+  "entity_id": "fdf32a32-156e-516a-afc1-03ca21694075",
+  "input_hash": "693b258ac3d38173",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Digital Tech team: What reduction in shortlist preparation time have executive-search customers measured against their existing workflow?",
+  "one_liner": "Loka AI uses local AI models to search and enrich executive-search firms’ internal candidate pools; the February 2026 EXIST grant is a reason to reach out now.",
+  "team": "Dr. Markus Binder is an AI specialist with a PhD, TUM ties and BMW research experience. Ha Do has over ten years in B2B SaaS product development and scaling. Eugen Paul has 13 years building and scaling HR-tech SaaS businesses. Ahmad Owaydate is listed as AI Founder Associate, with TUM ties and AI research experience at BMW.",
   "top_signals": [
     {
-      "signal": "BayStartUP recognized Loka AI in its Bavarian Business Plan Competition; the funding summary records second place in March 2025.",
+      "signal": "Recognized in BayStartUP’s Bavarian Business Plan Competition.",
       "source_url": "https://www.baystartup.de/startupdate/sieger-im-businessplan-wettbewerb-ideenreich-2025"
     },
     {
-      "signal": "Awarded the EXIST Start-up Grant in February 2026.",
+      "signal": "Awarded an EXIST Start-up Grant in February 2026 and received €25,000 in startup funding from AI+Munich in March 2024.",
       "source_url": null
     },
     {
-      "signal": "Model score 82.6 of 100 (at the top of the reference cohort). Four listed team members, technical expertise, a PhD and TUM ties lifted the score. University spin-off status also lifted it but is not confirmed by founder records. The deep-tech classification helped; being based in Germany weighed slightly against it.",
+      "signal": "Model score 82.6 of 100 (at the top of the reference cohort). Four recorded founders, technical expertise, a PhD and TUM affiliations lifted the score. The deep-tech and university spin-off flags also lifted it, but the founder records do not confirm them. Being based in Germany slightly lowered it.",
       "source_url": null
     }
   ],
-  "team": "Dr. Markus Binder is an AI specialist with a PhD, TUM ties and prior BMW Group R&D experience. Ha Do has over ten years in B2B SaaS product development, and Eugen Paul has 13 years building and scaling HR-tech SaaS businesses. Ahmad Owaydate is listed as AI Founder Associate, with TUM ties and AI research experience at BMW Group R&D.",
-  "why_early": "Priced-round status is unknown. The funding summary lists €25,000 from AI+Munich in March 2024 and an EXIST grant in February 2026, but does not establish whether a priced round has occurred.",
-  "devils_advocate_risks": [
-    "Paid customer traction is unknown.",
-    "Integration with existing HR systems and workflows may be difficult.",
-    "It is unclear how much customization different search firms will require."
-  ],
-  "next_step": "HTGF Digital Tech team: Ask the founders how many executive-search firms are currently paying to use the product.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "fdf32a32-156e-516a-afc1-03ca21694075",
-  "input_hash": "84cc629ee5b1048c"
+  "why_early": "Priced-round status is unknown. The EXIST grant and AI+Munich funding do not establish whether a priced round has occurred."
 }

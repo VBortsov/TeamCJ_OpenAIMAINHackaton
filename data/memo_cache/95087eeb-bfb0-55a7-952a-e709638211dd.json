@@ -1,27 +1,27 @@
 {
-  "one_liner": "Skaaltec, a 2026 ETH Zurich spin-off, is developing SmartVNS for stroke rehabilitation, targeting chronic upper-limb impairment.",
+  "devils_advocate_risks": [
+    "The status of medical device certification across regions is unknown.",
+    "Adoption by healthcare providers and patients remains uncertain."
+  ],
+  "entity_id": "95087eeb-bfb0-55a7-952a-e709638211dd",
+  "input_hash": "f51803c467481f0d",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders whether any of the four reported rounds issued equity at an agreed valuation.",
+  "one_liner": "Skaaltec develops SmartVNS for stroke survivors with chronic upper-limb impairments and was recognized as an ETH Zurich spin-off in 2026.",
+  "team": "Dr. Paulius Viskaitis and Dr. Dane Donekan are identified as co-founders and neuroscientists with PhDs. The records also list Max Quast as Chief Product Officer, Reda Fornera as Chief Technology Officer, Clément Lhoste as Clinical Scientist, and Prof. Olivier Lambercy as Scientific Advisor; their co-founder status is unknown.",
   "top_signals": [
     {
       "signal": "ETH Zurich lists Skaaltec on its 2026 spin-off roster.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
-      "signal": "The team records list two technical neuroscientist co-founders with PhDs and a technical CTO.",
+      "signal": "Two named co-founders are technical neuroscientists with PhDs, and the team records name a CTO.",
       "source_url": null
     },
     {
-      "signal": "Model score 93.4 of 100 (at the top of the reference cohort), ranked 11 of 174 leads today. Six listed team members, the university spin-off, technical founders, PhDs, and a CTO on the team pushed the score up. The deep-tech and founder-from-a-top-university flags also lifted the score but are not confirmed by the founder records.",
+      "signal": "Model score 93.4 of 100 (at the top of the reference cohort); rank 5 of 205 today. Positive inputs include six people counted as founders, spin-off status, deep-tech classification, and technical and PhD founder records. The CTO and top-university founder flags also helped, but the records do not confirm the CTO is a co-founder or identify the founder behind the university flag.",
       "source_url": null
     }
   ],
-  "team": "Dr. Paulius Viskaitis and Dr. Dane Donekan are listed as technical co-founders and neuroscientists with PhDs. The records also list Max Quast (Chief Product Officer), Reda Fornera (Chief Technology Officer), Clément Lhoste (Clinical Scientist), and Prof. Olivier Lambercy (Scientific Advisor); their co-founder status is unknown.",
-  "why_early": "Unknown whether a priced round has occurred. The funding summary reports $200,000 across four rounds but does not specify the financing terms.",
-  "devils_advocate_risks": [
-    "Medical-device certification status is unknown.",
-    "Adoption by healthcare providers and patients is uncertain."
-  ],
-  "next_step": "HTGF Life Sciences & Chemistry team: Ask whether any of the four reported financings was a priced equity round.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "95087eeb-bfb0-55a7-952a-e709638211dd",
-  "input_hash": "5c35aa825460c6c2"
+  "why_early": "Unknown whether Skaaltec has completed a priced round. The funding summary reports $200,000 across four rounds but does not specify the financing terms."
 }

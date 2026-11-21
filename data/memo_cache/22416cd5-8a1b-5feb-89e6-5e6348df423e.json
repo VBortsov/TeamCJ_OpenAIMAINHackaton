@@ -1,27 +1,27 @@
 {
-  "one_liner": "Studyond connects students, universities and companies for innovation projects; its August 2026 financing makes it worth checking whether it is still pre-priced-round.",
+  "devils_advocate_risks": [
+    "Adoption across universities and companies may be difficult.",
+    "Data privacy and security are important to maintaining user trust."
+  ],
+  "entity_id": "22416cd5-8a1b-5feb-89e6-5e6348df423e",
+  "input_hash": "223c8bd4ad8426fa",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Digital Tech & AI team: Ask the founders whether the August 2026 financing was a priced equity round.",
+  "one_liner": "Studyond connects students, universities and companies for innovation projects. Its August 2026 financing makes it worth checking whether it has already raised a priced round.",
+  "team": "Dr. Philipp Wetzel is the only founder on record. He is CEO and Project Lead, holds a PhD, is listed as a technical founder, and previously worked at Calculum. His founder record lists the University of St. Gallen.",
   "top_signals": [
     {
-      "signal": "ETH Zurich recognizes Studyond as an academic spin-off.",
+      "signal": "Studyond raised CHF 2 million in August 2026 to support growth.",
+      "source_url": null
+    },
+    {
+      "signal": "ETH Zurich recognizes Studyond as a spin-off.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
-      "signal": "Studyond raised CHF 2 million in August 2026 to support growth; the financing terms are unknown.",
-      "source_url": null
-    },
-    {
-      "signal": "Model score 78.5 of 100 (at the top of the reference cohort). The ETH spin-off, technical founder and founder PhD flags lifted the score.",
+      "signal": "Model score 78.5 of 100 (at the top of the reference cohort). Spin-off status and a technical founder with a PhD lifted the score. A solo-founder flag lifted it, while having only one founder on record lowered it; the records do not confirm that Wetzel founded alone. Deep-tech and top-university founder flags also lifted the score but are unconfirmed.",
       "source_url": null
     }
   ],
-  "team": "Dr. Philipp Wetzel, CEO and project lead, is the only founder listed. The founder record identifies him as technical, records a PhD, and lists the University of St. Gallen and prior experience at Calculum. The model's solo-founder flag is not confirmed by the record.",
-  "why_early": "Unknown. Studyond completed a CHF 2 million financing round in August 2026, but whether that round was priced is unknown.",
-  "devils_advocate_risks": [
-    "Adoption across universities and companies may be difficult.",
-    "Data privacy and security are important to maintaining trust on the platform."
-  ],
-  "next_step": "HTGF Digital Tech team: Ask the founders whether Studyond has ever closed a priced equity round, including the August 2026 financing.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "22416cd5-8a1b-5feb-89e6-5e6348df423e",
-  "input_hash": "763c0cc385f5ebdb"
+  "why_early": "Unknown. Studyond has already completed a financing round, but the record does not say whether it was priced."
 }

@@ -159,6 +159,18 @@ def load_current_memo(entity_id: str, payload: Dict[str, Any]) -> Optional[Dict[
     return cached if cached and cached.get("input_hash") == memo_input_hash(payload) else None
 
 
+def current_or_template_memo(entity_id: str, payload: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """What a read-only view should show: the cached LLM memo while it is current; if the lead has a cached
+    memo that is out of date (the feed was rebuilt since), a template from the current facts instead of
+    nothing; None if the lead never had a memo."""
+    current = load_current_memo(entity_id, payload)
+    if current or not load_cached_memo(entity_id):
+        return current
+    return {**fallback_memo(payload), "memo_source": "fallback_template", "entity_id": entity_id,
+            "input_hash": memo_input_hash(payload),
+            "memo_note": "Facts or rank changed since the LLM memo was written; regenerate with POST /api/ml/score"}
+
+
 def fallback_memo(p: Dict[str, Any]) -> Dict[str, Any]:
     """Deterministic memo from the same facts. Used when OpenAI is unavailable; states only supplied facts."""
     c = p.get("company", {})

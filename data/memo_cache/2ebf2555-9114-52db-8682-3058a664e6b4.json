@@ -1,27 +1,27 @@
 {
-  "one_liner": "TigerShark Science grows human skin models for pharma and cosmetics testing; its BayStartUP competition result and reported EXIST funding make it worth meeting now.",
+  "devils_advocate_risks": [
+    "Whether the reported standardized, partly automated process can produce consistent skin models at scale is unknown.",
+    "Regulatory acceptance of the models as a testing method is uncertain."
+  ],
+  "entity_id": "2ebf2555-9114-52db-8682-3058a664e6b4",
+  "input_hash": "23ef1e4068f2280a",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders what batch-to-batch variability they observe at their current production volume.",
+  "one_liner": "TigerShark Science grows human skin models with hair that stay stable for weeks, giving pharma and cosmetics companies an alternative to explore as pressure to reduce animal testing grows.",
+  "team": "Co-founder and CEO Dr. Amelie Reigl is a biologist with a PhD and project management experience at Fraunhofer ISC’s Translational Center for Regenerative Therapies. Dieter Groneberg and Dr. Florian Groeber-Becker are listed as co-founders.",
   "top_signals": [
     {
-      "signal": "Listed as a winner or finalist in the 2026 BayStartUP Bavarian Business Plan Competition.",
+      "signal": "Winner or finalist in BayStartUP’s 2026 North Bavarian business plan competition.",
       "source_url": "https://www.baystartup.de/startupdate/nordbayerns-top-startups-das-sind-die-sieger-im-businessplan-wettbewerb-2026"
     },
     {
-      "signal": "Reported €1.3 million in EXIST funding in 2024.",
-      "source_url": null
+      "signal": "Winner or finalist in BayStartUP’s 2026 Bavarian Female Founders Contest.",
+      "source_url": "https://www.baystartup.de/startupdate/female-founders-contest-2026-das-sind-die-siegerinnen-des-bayerischen-finales"
     },
     {
-      "signal": "Model score 78.5 of 100 (at the top of the reference cohort). Three known founders, a technical founder with a PhD, and the deep-tech classification lifted the score; being based in Germany lowered it. University spin-off status and a founder's top-university affiliation also lifted the score, but neither flag is confirmed by the founder records.",
+      "signal": "Model score 78.5 of 100 (at the top of the reference cohort), ranked 18th of 205 leads today. Three known founders, a technical founder with a PhD, and the deep-tech classification lifted the score; being based in Germany lowered it. The university spin-off and top-university flags also lifted the score but are not confirmed by the founder records.",
       "source_url": null
     }
   ],
-  "team": "Dr. Amelie Reigl is co-founder and CEO. The founder record identifies her as a biologist with a PhD and a project manager at Fraunhofer ISC. Dieter Groneberg and Dr. Florian Groeber-Becker are listed as co-founders; their operating responsibilities are unknown.",
-  "why_early": "Priced-round status is unknown. The reported EXIST funding does not establish whether a priced round has occurred.",
-  "devils_advocate_risks": [
-    "The team describes production as standardized and partly automated, but performance at commercial volumes is unknown.",
-    "Regulatory acceptance of the models as alternatives to animal testing is uncertain."
-  ],
-  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders what batch-to-batch reproducibility data they have at production volumes requested by pharma or cosmetics customers.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "2ebf2555-9114-52db-8682-3058a664e6b4",
-  "input_hash": "659c6ff27969a37b"
+  "why_early": "Priced-round status is unknown. The funding summary reports €1.3 million in EXIST funding in 2024, which does not establish whether a priced round occurred."
 }

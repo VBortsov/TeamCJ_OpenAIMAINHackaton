@@ -59,6 +59,17 @@ def test_memo_input_drops_empty_and_fallback_works(monkeypatch, tmp_path):
     out = asyncio.run(generate_memo("a", payload))
     assert out["memo_source"] == "fallback_template" and not list(tmp_path.iterdir())
 
+    # read-only view: nothing for a lead that never had a memo, the LLM memo while it is current,
+    # a template from the current facts once the feed changed under it
+    import json
+    assert memo_agent.current_or_template_memo("a", payload) is None
+    cached = {**memo, "memo_source": "openai:test", "entity_id": "a", "input_hash": memo_agent.memo_input_hash(payload)}
+    (tmp_path / "a.json").write_text(json.dumps(cached), encoding="utf-8")
+    assert memo_agent.current_or_template_memo("a", payload)["memo_source"] == "openai:test"
+    moved = build_memo_input(lead, 3, 205, ml_row, load_base_rates())
+    stale = memo_agent.current_or_template_memo("a", moved)
+    assert stale["memo_source"] == "fallback_template" and stale["input_hash"] == memo_agent.memo_input_hash(moved)
+
 
 def test_memo_generation_needs_operator_token(tmp_path, monkeypatch):
     from fastapi.testclient import TestClient

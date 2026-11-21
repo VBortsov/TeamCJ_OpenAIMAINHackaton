@@ -1,27 +1,27 @@
 {
-  "one_liner": "SemiVi develops semiconductor modeling and simulation tools; ETH Zurich’s spin-off recognition makes it worth meeting while its funding status is still unknown.",
+  "devils_advocate_risks": [
+    "Established semiconductor simulation vendors could make customer adoption difficult.",
+    "Rapid changes in semiconductor technology could require frequent software updates."
+  ],
+  "entity_id": "bb56b3bb-6e1d-59a5-9ac4-b3ca367b394e",
+  "input_hash": "bb5e5906944ab64c",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Digital Tech team: ask which semiconductor device simulation task SemiVi can solve more efficiently than an incumbent tool.",
+  "one_liner": "SemiVi is an ETH Zurich spin-off focused on semiconductor device simulation, worth a look as increasing device complexity drives demand for efficient simulation tools.",
+  "team": "Dr. Saurabh Sant is the only founder on record. His record lists a PhD, study at IIT Bombay and ETH Zurich, and prior experience at Infineon Technologies AG. The model's solo-founder flag is not confirmed by the founder records.",
   "top_signals": [
     {
-      "signal": "ETH Zurich lists SemiVi as a recognized academic spin-off.",
+      "signal": "ETH Zurich lists SemiVi as a recognized spin-off.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
-      "signal": "The founder record identifies a technical founder with a PhD and prior experience at Infineon Technologies AG.",
+      "signal": "The known founder is technical, holds a PhD and previously worked at Infineon Technologies AG.",
       "source_url": null
     },
     {
-      "signal": "Model score 81.3 of 100 (at the top of the reference cohort). Spin-off status, the deep-tech classification, and the founder’s technical background, PhD and ETH Zurich education lifted the score. The solo-founder and study-abroad flags also lifted it but are not confirmed by the founder record. Having only one founder on record pulled the score down.",
+      "signal": "Model score 81.3 of 100 (at the top of the reference cohort). The ETH spin-off and technical-founder flags lifted the score; having only one founder on record lowered it.",
       "source_url": null
     }
   ],
-  "team": "Dr. Saurabh Sant is the only founder on record. He holds a PhD, studied at IIT Bombay and ETH Zurich, and previously worked at Infineon Technologies AG.",
-  "why_early": "Unknown. Funding history is not publicly available, so it is unclear whether a priced round has taken place.",
-  "devils_advocate_risks": [
-    "SemiVi’s performance relative to established simulation tools is unknown.",
-    "Rapid changes in semiconductor technology may require ongoing software updates."
-  ],
-  "next_step": "HTGF Digital Tech & AI team: Ask which semiconductor device simulation task SemiVi has benchmarked against an incumbent tool and what the benchmark showed.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "bb56b3bb-6e1d-59a5-9ac4-b3ca367b394e",
-  "input_hash": "b54db2be66abd537"
+  "why_early": "Unknown: no funding history is publicly available, so we cannot tell whether a priced round has already occurred."
 }

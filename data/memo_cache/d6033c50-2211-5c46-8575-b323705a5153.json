@@ -1,27 +1,27 @@
 {
-  "one_liner": "LLMify develops AI tools for business processes and is worth contacting after ETH Zurich’s 2026 spin-off recognition, with no publicly announced funding round.",
+  "devils_advocate_risks": [
+    "Paying customers and live deployments are unknown.",
+    "The founder record lists an AI Engineer title but does not confirm who leads product engineering."
+  ],
+  "entity_id": "d6033c50-2211-5c46-8575-b323705a5153",
+  "input_hash": "533520f65c76c296",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Digital Tech team: Ask the founders which business workflow, if any, LLMify is already running for a paying customer.",
+  "one_liner": "LLMify develops AI tools for business processes; ETH Zurich recognized it as a spin-off in 2026, and no funding round has been publicly announced.",
+  "team": "Francesco Lässig is listed as Co-Founder and AI Engineer. He is the only founder identified in the records; the full founding team is unknown.",
   "top_signals": [
     {
-      "signal": "ETH Zurich recognized LLMify on its 2026 spin-off roster.",
+      "signal": "ETH Zurich lists LLMify on its 2026 spin-off roster.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
-      "signal": "The founder record lists Francesco Lässig as co-founder and AI engineer, with a PhD and prior experience at Unit8.",
-      "source_url": "https://www.linkedin.com/in/francesco-laessig/"
+      "signal": "The identified co-founder holds a PhD, lists ETH Zurich among his universities, and previously worked at Unit8.",
+      "source_url": null
     },
     {
-      "signal": "Ranked 1 of 63 leads today; model score 81.6 of 100 (at the top of the reference cohort). The ETH spin-off, PhD and university pedigree flags helped. A solo-founder flag helped, while having only one identified founder hurt; the record does not establish that Lässig founded alone. Technical-founder, study-abroad and deep-tech flags also helped, but those classifications are not confirmed.",
+      "signal": "Model score 81.6 of 100 (at the top of the reference cohort). Spin-off status, a founder PhD and a top-university affiliation pushed it up; having only one founder on record pushed it down. The model also rewarded solo-founder status, a technical founder, study abroad and deep-tech classification, but those flags are not confirmed by the records.",
       "source_url": null
     }
   ],
-  "team": "Francesco Lässig is the only identified founder. His record lists ETH Zurich, the University of Zurich and the University of Amsterdam. It gives his role as AI engineer but marks him as nontechnical, leaving the model’s technical-founder flag unresolved.",
-  "why_early": "No funding round has been publicly announced. Whether a priced round has already closed is unknown.",
-  "devils_advocate_risks": [
-    "Paying customer traction is unknown.",
-    "The full founding team and its division of technical responsibilities are unknown."
-  ],
-  "next_step": "HTGF Digital Tech team: Contact Lässig and ask whether LLMify has already closed a priced equity round.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "d6033c50-2211-5c46-8575-b323705a5153",
-  "input_hash": "9c918ebf4845b518"
+  "why_early": "The company is privately held and has not publicly announced a funding round or capital raise. Whether a priced round has happened is unknown."
 }

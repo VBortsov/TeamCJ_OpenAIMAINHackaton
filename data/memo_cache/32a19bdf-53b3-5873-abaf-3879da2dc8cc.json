@@ -1,27 +1,27 @@
 {
-  "one_liner": "UNOMR is an ETH Zurich spin-off developing single-molecule protein analysis; its academic origin warrants an early conversation, though its funding stage is unknown.",
+  "devils_advocate_risks": [
+    "Accuracy and reliability across biological contexts are unverified in the available information.",
+    "Adoption and integration into existing research and medical workflows remain uncertain."
+  ],
+  "entity_id": "32a19bdf-53b3-5873-abaf-3879da2dc8cc",
+  "input_hash": "4bd7074cab67c5bf",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders whether any funding to date was raised in a priced equity round.",
+  "one_liner": "UNOMR develops single-molecule protein analysis technology and was approved as an ETH Zurich spin-off in 2025.",
+  "team": "Dr. Til Schlotter is CEO. Dr. Julian Hengsteler and Dr. Julia Wagner are co-founders. Founder records list all three as technical, with PhDs and ETH Zurich affiliations.",
   "top_signals": [
     {
       "signal": "ETH Zurich lists UNOMR as a recognized spin-off.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
-      "signal": "All three founders are technical and hold PhDs; each lists ETH Zurich in their university background.",
+      "signal": "All three founders are listed as technical and hold PhDs, with ETH Zurich listed for each.",
       "source_url": null
     },
     {
-      "signal": "Model score 81.4 of 100 (at the top of the reference cohort). Its strongest positive inputs were university spin-off status, a technical founder and three known founders.",
+      "signal": "Model score 81.4 of 100 (at the top of the reference cohort). The spin-off status, deep-tech classification, three identified founders, and their technical, doctoral and ETH Zurich backgrounds all pushed the score up.",
       "source_url": null
     }
   ],
-  "team": "Dr. Til Schlotter is CEO; Dr. Julian Hengsteler and Dr. Julia Wagner are co-founders. Founder records identify all three as technical and confirm their PhDs and ETH Zurich affiliations.",
-  "why_early": "Unknown. UNOMR has raised an undisclosed amount; whether that funding included a priced round is unknown.",
-  "devils_advocate_risks": [
-    "The platform’s accuracy and reliability across different biological contexts remain to be established.",
-    "Adoption and integration into existing research and medical workflows are uncertain."
-  ],
-  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders whether any funding to date was raised in a priced equity round.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "32a19bdf-53b3-5873-abaf-3879da2dc8cc",
-  "input_hash": "4efaf36856280689"
+  "why_early": "Unknown whether a priced round has occurred. UNOMR has raised an undisclosed amount, and the financing terms are unknown."
 }

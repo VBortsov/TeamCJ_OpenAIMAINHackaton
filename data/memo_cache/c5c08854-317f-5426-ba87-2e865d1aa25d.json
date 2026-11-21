@@ -1,27 +1,27 @@
 {
-  "one_liner": "Archemides develops sustainable polymer materials and was approved as an ETH Zurich spin-off in 2025.",
+  "devils_advocate_risks": [
+    "Customer pilot status is unknown; established industrial practices may slow adoption.",
+    "Compliance with applicable international standards is unknown."
+  ],
+  "entity_id": "c5c08854-317f-5426-ba87-2e865d1aa25d",
+  "input_hash": "a2a9ef7b3184ad7a",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Industrial Tech team: Ask the founders whether Archemides has closed a priced equity round.",
+  "one_liner": "Archemides develops polymer solutions and is worth contacting now as a Zurich materials science spin-off approved by ETH Zurich in 2025.",
+  "team": "The founder records list ETH Zurich materials science professors Marco F. D’Elia, Walter Caseri, Markus Niederberger and Stefano Trasatti; ETH Zurich researcher Alessandro Lauria, who holds a PhD; and business leaders Fabio Nani, Chiara Schiaffi and Denis Charlier, each listed with materials science expertise.",
   "top_signals": [
     {
       "signal": "ETH Zurich lists Archemides as a recognized spin-off.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
-      "signal": "The founder records combine five technical materials scientists with three business leaders who have materials-science expertise.",
+      "signal": "Founder records identify Alessandro Lauria as an ETH Zurich materials science researcher with a PhD and list four ETH Zurich materials science professors in technical roles.",
       "source_url": null
     },
     {
-      "signal": "Model score 92.1 of 100 (at the top of the reference cohort). The model rewards team size, university spin-off status, deep-tech classification, and technical, PhD and ETH Zurich backgrounds. The model counts six founders, while the founder records list eight.",
+      "signal": "Ranked 9 of 205 leads today; model score 92.1 of 100 (at the top of the reference cohort). The model was lifted by the ETH Zurich spin-off origin, deep-tech classification, technical founders, a founder with a PhD, ETH Zurich affiliations, and a founder-count input of six. The founder records list eight people, so the model count is unconfirmed.",
       "source_url": null
     }
   ],
-  "team": "The founder records list four ETH Zurich materials-science professors (Marco F. D'Elia, Walter Caseri, Markus Niederberger and Stefano Trasatti), ETH Zurich researcher and PhD holder Alessandro Lauria, and business leaders Fabio Nani, Chiara Schiaffi and Denis Charlier.",
-  "why_early": "Unknown whether a priced round has occurred. The lead is tagged Pre-Crunchbase / Undiscovered, which does not verify financing status.",
-  "devils_advocate_risks": [
-    "Customer validation is unknown; established practices may slow adoption of new polymer materials.",
-    "Compliance status is unknown; meeting different international standards may be complex."
-  ],
-  "next_step": "HTGF Industrial Tech team: Ask the founders what performance benchmark their polymer must meet for a first customer pilot.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "c5c08854-317f-5426-ba87-2e865d1aa25d",
-  "input_hash": "74286b28b54c2bf7"
+  "why_early": "Unknown. The Pre-Crunchbase / Undiscovered badge does not establish whether a priced round has closed."
 }

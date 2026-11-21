@@ -1,27 +1,27 @@
 {
-  "one_liner": "FIDENTIS uses 3D printing to automate production of dental prostheses with precious-metal components and secured €1.62 million in research-transfer funding.",
+  "devils_advocate_risks": [
+    "Reliability and repeatability of the two-alloy printing process at production scale are unknown.",
+    "Adoption by dental professionals and patients is unknown."
+  ],
+  "entity_id": "740f9391-c74f-5499-b82c-f1add9f94df7",
+  "input_hash": "fa83a57e8f54341e",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders what production-run data demonstrate repeatable quality for two-alloy telescopic dentures.",
+  "one_liner": "FIDENTIS uses 3D printing to automate production of dental prostheses from two alloys, including a precious-metal alloy, and has secured €1.62 million in research funding.",
+  "team": "Dr. Max Horn is CEO and a technical founder with a PhD. Timo Schröder is CTO and technical lead. Johannes Lauer leads commercial work, and Lukas Langer is COO and production lead.",
   "top_signals": [
-    {
-      "signal": "Received €1.62 million through the EXIST Transfer of Research program in July 2024.",
-      "source_url": null
-    },
     {
       "signal": "Named a winner or finalist in the 2025 BayStartUP Bavarian Business Plan Competition.",
       "source_url": "https://www.baystartup.de/startupdate/sieger-im-businessplan-wettbewerb-schwaben-2025"
     },
     {
-      "signal": "The Fraunhofer IGCV spin-off uses laser powder bed fusion to process two alloys in a single component.",
+      "signal": "Received €1.62 million through the EXIST Transfer of Research program in July 2024.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 84.0 of 100 (at the top of the reference cohort). Four known founders, technical depth, a PhD, a founding CTO, and the spin-off and deep-tech flags raised the score; being based in Germany lowered it. A top-university flag also raised it but is not confirmed by the founder records.",
       "source_url": null
     }
   ],
-  "team": "Dr. Max Horn (CEO) holds a PhD. He and Timo Schröder (CTO and technology lead) are listed as technical founders. Johannes Lauer leads commercial activities, and Lukas Langer is COO and production lead.",
-  "why_early": "The documented funding came through EXIST; whether a priced round has taken place is unknown.",
-  "devils_advocate_risks": [
-    "Reliability and scalability at mass-production volumes remain to be validated.",
-    "Adoption by dental professionals and patients is uncertain."
-  ],
-  "next_step": "The HTGF Life Sciences & Chemistry team should ask: What share of prostheses in your largest production run met your quality specifications?",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "740f9391-c74f-5499-b82c-f1add9f94df7",
-  "input_hash": "208e1e9edd38b202"
+  "why_early": "The disclosed funding came through EXIST Transfer of Research. Whether a priced equity round has occurred is unknown."
 }
