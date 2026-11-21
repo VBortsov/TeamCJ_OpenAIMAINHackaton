@@ -1,0 +1,54 @@
+{
+  "canonical_name": "CALIBRATE",
+  "description": "CALIBRATE aims to develop a globally applicable calibration standard for quantitative in-situ electron microscopy.",
+  "founders_enriched": [
+    {
+      "full_name": "Professor Leopoldo Molina-Luna",
+      "role": "Principal Investigator",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Eberhard Karls University of Tübingen"
+      ],
+      "prior_companies": [
+        "University of Antwerp"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Research project lead"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": null,
+  "city": "Darmstadt",
+  "raised_institutional_round": false,
+  "funding_summary": "The project has received a 'Proof of Concept' grant from the ERC, amounting to €150,000 over 18 months.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "out_of_mandate",
+  "inflection_why_now": "The increasing complexity of in-situ electron microscopy experiments necessitates precise calibration standards, making CALIBRATE's development timely.",
+  "devils_advocate_risks": [
+    "Potential challenges in translating theoretical calibration methods into practical, widely adoptable standards.",
+    "Dependence on continued ERC funding and institutional support for project completion."
+  ],
+  "citations": [
+    "https://www.tu-darmstadt.de/universitaet/aktuelles_meldungen/archiv_2/2026/detailseite_2026_568000.de.jsp",
+    "https://www.tu-darmstadt.de/universitaet/aktuelles_meldungen/archiv_2/2026/detailseite_2026_567872.de.jsp"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

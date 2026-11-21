@@ -1,0 +1,95 @@
+{
+  "canonical_name": "Zelsius",
+  "description": "Zelsius develops user-friendly software solutions that enable Swiss industrial companies to accurately calculate emissions at both product and enterprise levels.",
+  "founders_enriched": [
+    {
+      "full_name": "Adina Hochuli",
+      "role": "Managing Director",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Yannick Krabben",
+      "role": "Head of Product Development",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Lukas Hegner",
+      "role": "Head of Research & Development",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Marcel Niederberger",
+      "role": "Head of Marketing & Sales",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2024,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "Received approximately CHF 15,000 from the Energy Lab in May 2023; secured a grant from the Gerbert Rüf Stiftung in November 2023; incorporated as Zelsius AG in June 2024.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing regulatory pressure on industries to reduce carbon footprints creates a timely demand for Zelsius's emission calculation tools.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing traditional industries to adopt new emission calculation software may face resistance.",
+    "Scalability: Ensuring the software can handle diverse industrial processes and scale effectively across various sectors."
+  ],
+  "citations": [
+    "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html",
+    "https://www.zelsius.ch/ueber-uns/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in sustainable technologies and materials, aligning with Zelsius's mission to assist Swiss industries in achieving net-zero emissions."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer's focus on innovative solutions in various sectors complements Zelsius's development of user-friendly software for emission calculations in industrial settings."
+    }
+  ],
+  "flags_version": 2
+}

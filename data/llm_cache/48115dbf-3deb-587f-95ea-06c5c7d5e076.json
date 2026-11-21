@@ -1,0 +1,62 @@
+{
+  "canonical_name": "cve-mcp-server",
+  "description": "The 'cve-mcp-server' is an open-source server that transforms Anthropic's Claude AI into a comprehensive security analyst by integrating 27 intelligence tools across 21 APIs, including CVE lookup, EPSS scoring, CISA KEV, MITRE ATT&CK, Shodan, and VirusTotal.",
+  "founders_enriched": [
+    {
+      "full_name": "Mahipal Jangra",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": "mukul975",
+      "has_phd": false,
+      "universities": [
+        "SRH Berlin University of Applied Sciences"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "GitHub handle"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "Berlin",
+  "raised_institutional_round": false,
+  "funding_summary": "There is no publicly available information regarding any funding rounds or financial backing for this venture.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "With the increasing complexity of cybersecurity threats, integrating multiple intelligence tools into a single AI-driven platform addresses the need for efficient and comprehensive vulnerability management.",
+  "devils_advocate_risks": [
+    "Ensuring the continuous accuracy and reliability of integrated APIs amidst evolving cybersecurity landscapes.",
+    "Achieving widespread adoption and trust in the AI-driven security analysis among traditional security professionals."
+  ],
+  "citations": [
+    "https://github.com/mukul975/cve-mcp-server",
+    "https://www.mahipal.engineer/",
+    "https://www.mahipal.engineer/CVE-MCP-Server/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik focuses on digitalization and cybersecurity solutions, aligning with Mahipal's expertise in security intelligence tools."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's interest in cybersecurity and enterprise solutions complements Mahipal's development of security tools for AI systems."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,72 @@
+{
+  "canonical_name": "Witty Machines",
+  "description": "Witty Machines develops intelligent mobile manipulation systems designed to operate in unstructured environments, addressing tasks that traditional automation systems cannot handle.",
+  "founders_enriched": [
+    {
+      "full_name": "Kenneth Blomqvist",
+      "role": "CEO and Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-Founder of Witty Machines"
+    },
+    {
+      "full_name": "Johannes Pankert",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-Founder of Witty Machines"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2024,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "Received a grant of $11,000 from Venture Kick in February 2025. Participated in a funding round with investors including Seedcamp, Cocoa VC, Illusian, and Common Magic in July 2026, but specific funding amounts are not disclosed.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for automation in the food industry presents a timely opportunity for Witty Machines to deploy its robotic solutions.",
+  "devils_advocate_risks": [
+    "Challenges in scaling robotic solutions to meet diverse industrial requirements.",
+    "Potential difficulties in integrating AI-driven robots into existing production lines."
+  ],
+  "citations": [
+    "https://www.moneyhouse.ch/de/company/witty-machines-ag-3915836191",
+    "https://ch.linkedin.com/jobs/view/co-founder-commercial-at-witty-machines-3951138045",
+    "https://app.dealroom.co/companies/witty_machines"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in industrial chemicals and materials, aligning with Witty Machines' focus on industrial automation and robotics."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch's expertise in industrial technology and automation complements Witty Machines' development of intelligent robotic systems for industrial applications."
+    }
+  ],
+  "flags_version": 2
+}

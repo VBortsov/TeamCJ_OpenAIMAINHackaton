@@ -1,0 +1,88 @@
+{
+  "canonical_name": "Minimal AI",
+  "description": "Minimal AI provides AI agents that integrate with existing e-commerce helpdesks to automate up to 90% of customer support tickets, enhancing operational efficiency.",
+  "founders_enriched": [
+    {
+      "full_name": "Niek Hogenboom",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Delft University of Technology",
+        "University of Oxford"
+      ],
+      "prior_companies": [
+        "SitRight",
+        "Kempen & Co",
+        "Vattenfall Solar Team",
+        "FITS Custom Suits"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Titus Ex",
+      "role": "CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Delft University of Technology"
+      ],
+      "prior_companies": [
+        "Soda",
+        "Uber",
+        "Enjins",
+        "Deliveroo"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": true,
+  "fd_any_prior_exit": true,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Amsterdam",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $500,000 in a Seed round from Alaya Capital and Y Combinator in September 2025; raised $36 million in a Seed round led by Formosa Capital, Rebel Fund, Sunshine Lake, Y Combinator, and Zeno Ventures in March 2026.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $500,000 in a Seed round from Alaya Capital and Y Combinator in September 2025; raised $36 million in a Seed round led by Formosa Capital, Rebel Fund, Sunshine Lake, Y Combinator, and Zeno Ventures in March 2026.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The rapid adoption of AI technologies in customer service, combined with the increasing complexity of e-commerce operations, creates a timely opportunity for Minimal AI's solutions.",
+  "devils_advocate_risks": [
+    "Challenges in integrating AI agents seamlessly with diverse e-commerce platforms and helpdesk systems.",
+    "Ensuring AI agents maintain high accuracy and customer satisfaction across various industries and customer queries."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/companies/minimal-ai",
+    "https://svatlas.io/founders/c6a91c59-9d6b-442b-b723-229ab01092e0",
+    "https://svatlas.io/founders/eb597b0a-9461-4a9b-b35e-af97a0ae7bd4",
+    "https://startupintros.com/orgs/minimal-ai"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could benefit from Minimal AI's AI-driven customer support solutions to enhance client interactions and support services."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "DHL's extensive logistics operations could leverage Minimal AI's technology to improve customer service efficiency and scalability in handling support tickets."
+    }
+  ],
+  "flags_version": 2
+}

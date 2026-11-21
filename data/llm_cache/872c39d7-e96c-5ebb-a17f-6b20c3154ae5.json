@@ -1,0 +1,88 @@
+{
+  "canonical_name": "Veriad",
+  "description": "Veriad develops AI agents that automate the end-to-end management of advertising campaigns for enterprises.",
+  "founders_enriched": [
+    {
+      "full_name": "Rohan Mahendraker",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "King's College London"
+      ],
+      "prior_companies": [
+        "CoLoop (YC S21)"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "self-taught software engineer who has built and sold compliance software to Fortune 500 companies."
+    },
+    {
+      "full_name": "Anton Muratov",
+      "role": "Co-founder and Chief Commercial Officer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University College London"
+      ],
+      "prior_companies": [
+        "Minoa",
+        "Kernel AI",
+        "HIVED",
+        "Sigma Squared Society",
+        "Brain4Energy",
+        "J.P. Morgan",
+        "Global Counsel",
+        "EM",
+        "Carnegie Endowment for International Peace"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "has previously closed seven-figure deals with major clients and advised Y Combinator startups."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "The company has raised a total of $500,000 in seed funding.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of global advertising regulations and the need for efficient compliance solutions present a timely opportunity for Veriad's offerings.",
+  "devils_advocate_risks": [
+    "Market Adoption: Enterprises may be hesitant to adopt AI-driven compliance solutions due to concerns over reliability and integration with existing systems.",
+    "Competitive Landscape: The emergence of new competitors offering similar AI compliance solutions could impact Veriad's market share."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/companies/veriad",
+    "https://www.ycombinator.com/founders/anton-muratov",
+    "https://www.cbinsights.com/company/veriad"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Veriad's AI-driven marketing compliance solutions could integrate with SAP's enterprise resource planning systems, enhancing compliance workflows within large organizations."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's focus on digitalization in the chemical industry aligns with Veriad's AI solutions, potentially streamlining compliance processes in regulated sectors."
+    }
+  ],
+  "flags_version": 2
+}

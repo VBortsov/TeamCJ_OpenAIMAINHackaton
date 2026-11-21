@@ -1,0 +1,27 @@
+{
+  "one_liner": "BioExoTec, a TUM hospital spin-off, is developing a blood and saliva test to detect certain cancers early and has drawn recognition from BayStartUP.",
+  "top_signals": [
+    {
+      "signal": "BayStartUP lists BioExoTec as a winner or finalist in its Bavarian Business Plan Competition.",
+      "source_url": "https://www.baystartup.de/startupdate/die-sieger-im-muenchener-businessplan-wettbewerb-2025"
+    },
+    {
+      "signal": "BioExoTec spun out of TUM Klinikum rechts der Isar.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 83.8 of 100 (at the top of the reference cohort); ranked 23rd of 174 leads today. Four known founders, university spin-off status, deep-tech classification, and founder records showing technical backgrounds, PhDs, TUM affiliations and a CTO lifted the score. Being based in Germany lowered it.",
+      "source_url": null
+    }
+  ],
+  "team": "Marie-Nicole Theodoraki (CEO), Linda Hofmann (CTO), Tobias Theodorakis (COO) and Gaby Wiegran (CFO) are all listed as founders with Technical University of Munich affiliations. Theodoraki, Hofmann and Wiegran are listed as technical founders with PhDs.",
+  "why_early": "Unknown. BioExoTec is tagged pre-Crunchbase, but that does not establish whether a priced round has already happened.",
+  "devils_advocate_risks": [
+    "Clinical sensitivity and specificity are unknown.",
+    "Scaling the test for widespread clinical use and obtaining regulatory approval are identified risks."
+  ],
+  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders what sensitivity and specificity the test has shown in clinical samples for each cancer type tested.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "0dc9bdf9-dd7d-581d-b1e6-9fe758eaf6c3",
+  "input_hash": "f711b6b4ec55b36b"
+}

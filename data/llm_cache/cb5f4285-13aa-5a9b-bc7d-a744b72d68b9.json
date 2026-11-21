@@ -1,0 +1,82 @@
+{
+  "canonical_name": "Trace",
+  "description": "Trace is a workflow orchestration platform that provides AI agents with shared context across systems, enabling teams to build visual processes that combine AI and human inputs.",
+  "founders_enriched": [
+    {
+      "full_name": "Tim Cherkasov",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "The University of Manchester",
+        "University College London"
+      ],
+      "prior_companies": [
+        "Clustr",
+        "Copper.co",
+        "Nickel Digital Asset Management",
+        "Mindful Store",
+        "Say Hi To World"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "svatlas.io"
+    },
+    {
+      "full_name": "Artur Romanov",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": true,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "In February 2026, Trace raised $3 million in seed funding from Y Combinator, Zeno Ventures, Transpose Platform Management, Goodwater Capital, Formosa Capital, and WeFunder.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In February 2026, Trace raised $3 million in seed funding from Y Combinator, Zeno Ventures, Transpose Platform Management, Goodwater Capital, Formosa Capital, and WeFunder.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing adoption of AI in enterprise settings creates a pressing need for effective orchestration solutions, positioning Trace to address this demand.",
+  "devils_advocate_risks": [
+    "Challenges in integrating Trace's platform with diverse existing enterprise systems.",
+    "Potential resistance from organizations to adopt AI-driven workflow changes."
+  ],
+  "citations": [
+    "https://svatlas.io/founders/a8a8013d-9309-4669-bb7d-3ae1341686e0",
+    "https://www.roundfunded.com/en/yc-startup/trace-so",
+    "https://techcrunch.com/2026/02/26/trace-raises-3-million-to-solve-the-agent-adoption-problem/",
+    "https://www.trace.so/blog/trace-raised-dollar3m-to-build-the-context-layer-for-ai-at-work"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could benefit from Trace's AI-driven workflow orchestration to enhance operational efficiency."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "As a leader in enterprise software, SAP could integrate Trace's AI orchestration platform to improve process automation and collaboration within organizations."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,89 @@
+{
+  "canonical_name": "Milliray",
+  "description": "Milliray develops high-frequency radar systems designed to detect and track small drones, including low-cost consumer models that pose threats to airports and critical infrastructure.",
+  "founders_enriched": [
+    {
+      "full_name": "Matthew Moore",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Thomas Doherty",
+      "role": "Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "University of Oxford"
+      ],
+      "prior_companies": [
+        "University of Oxford"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Jordina Frances de Mas",
+      "role": "Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2023,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "Milliray has raised a total of $1 million across two funding rounds: $500,000 in a Pre-Seed Round in March 2026 and $500,000 in a Seed Round in January 2026.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing proliferation of affordable drones has outpaced existing air defense systems, creating a pressing need for effective detection solutions.",
+  "devils_advocate_risks": [
+    "Technological challenges in developing radar systems capable of accurately detecting small, low-signature drones.",
+    "Market adoption hurdles due to competition from established defense-tech companies and potential regulatory challenges."
+  ],
+  "citations": [
+    "https://map.city-of-bits.com/company/milliray/",
+    "https://www.cbinsights.com/company/dronetector",
+    "https://www.vcbacked.co/company/milliray",
+    "https://aventure.vc/companies/milliray-london-gb/fundraising"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "As a leading technology company, Bosch's expertise in sensor technology and automotive systems could complement Milliray's radar systems."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in innovative technologies aligns with Milliray's defense-tech solutions, potentially fostering collaboration in advanced materials for radar systems."
+    }
+  ],
+  "flags_version": 2
+}

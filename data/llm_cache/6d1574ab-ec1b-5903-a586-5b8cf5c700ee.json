@@ -1,0 +1,76 @@
+{
+  "canonical_name": "Tsüri",
+  "description": "Tsüri.ch is an independent local journalism platform providing news and insights about Zurich, focusing on topics relevant to its residents.",
+  "founders_enriched": [
+    {
+      "full_name": "Simon Jacoby",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of Zurich"
+      ],
+      "prior_companies": [
+        "Watson (Internship)"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Founder of Tsüri"
+    },
+    {
+      "full_name": "Conradin Zellweger",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Founder of Tsüri"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": 2015,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "In 2016, Tsüri.ch launched a crowdfunding campaign, gaining its first 500 paying members. In 2023, Simon Jacoby sold a portion of the company to long-time employees Lara Blatter and Elio Donauer, who now share the management responsibilities.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2015 (older than 3.5 years)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for local, independent journalism in the digital age presents a significant opportunity for Tsüri.ch to expand its reach and influence.",
+  "devils_advocate_risks": [
+    "Financial Sustainability: Ensuring consistent revenue streams to support operations without compromising journalistic integrity.",
+    "Audience Engagement: Maintaining and growing a loyal readership base in a competitive media landscape."
+  ],
+  "citations": [
+    "https://www.mediaforwardfund.org/en/knowlegde-hub/case-story-our-grantee-tsuri",
+    "https://tsri.ch/a/bali-streik-sillicon-valley-vibes",
+    "https://www.persoenlich.com/medien/simon-jacoby-gibt-mehrheit-an-stadtmagazin-ab"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's focus on sustainable technologies aligns with Tsüri.ch's commitment to promoting environmental consciousness and sustainability in Zurich."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's expertise in data analytics and enterprise software could support Tsüri.ch in enhancing its digital platforms and data-driven journalism initiatives."
+    }
+  ],
+  "flags_version": 2
+}

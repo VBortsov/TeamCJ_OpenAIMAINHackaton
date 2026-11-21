@@ -1,0 +1,52 @@
+{
+  "canonical_name": "BloomSCAN",
+  "description": "BloomSCAN aims to develop a portable device that analyzes small water samples on-site, providing rapid assessments of harmful algal blooms within minutes.",
+  "founders_enriched": [
+    {
+      "full_name": "Mazi Jalaal",
+      "role": "Physicist",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of Amsterdam"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Current role at the University of Amsterdam's Institute of Physics."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Amsterdam",
+  "raised_institutional_round": false,
+  "funding_summary": "Received a €150,000 contribution from the ERC as a Proof of Concept grant.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing frequency of harmful algal blooms due to climate change and pollution underscores the urgent need for rapid detection tools, making BloomSCAN's solution timely.",
+  "devils_advocate_risks": [
+    "Challenges in translating laboratory research into a reliable, user-friendly field device.",
+    "Potential difficulties in achieving widespread adoption among water management authorities."
+  ],
+  "citations": [
+    "https://iop.uva.nl/news/2026/proof-of-concept-grant-for-mazi-jalaal?origin=hqZwIY6%2FTt2p%2FbYjLQhlIg",
+    "https://cordis.europa.eu/project/id/101286545/fr"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

@@ -1,0 +1,49 @@
+{
+  "canonical_name": "Stockholm MLOps",
+  "description": "Stockholm MLOps organizes community meetups focused on machine learning operations (MLOps) in Stockholm.",
+  "founders_enriched": [
+    {
+      "full_name": "Patrick Couch",
+      "role": "Founder",
+      "linkedin_url": "https://www.linkedin.com/in/couchpatrick/",
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Host and organizer of the Stockholm MLOps community events."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": null,
+  "city": "Stockholm",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The rapid growth of AI and machine learning applications in Stockholm has created a strong demand for MLOps expertise, positioning Stockholm MLOps to meet this need.",
+  "devils_advocate_risks": [
+    "Sustaining community engagement and participation over time.",
+    "Securing consistent sponsorship and funding to support event organization."
+  ],
+  "citations": [
+    "https://www.linkedin.com/posts/couchpatrick_2026-kick-off-thu-jan-22-2026-500-activity-7407041160998952960-9qk3"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

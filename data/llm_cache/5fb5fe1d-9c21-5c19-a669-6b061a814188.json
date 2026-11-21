@@ -1,0 +1,98 @@
+{
+  "canonical_name": "3Wave Instruments AG",
+  "description": "3Wave Instruments AG develops laser-optical systems for real-time, non-destructive monitoring of functional material properties during the growth of thin films and multilayer heterostructures.",
+  "founders_enriched": [
+    {
+      "full_name": "Markus Dantler",
+      "role": "President of the Board of Directors",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Jens Ullrich Florian Geiger",
+      "role": "Member of the Board of Directors",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Manfred Fiebig",
+      "role": "Director",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Jannis Lehmann",
+      "role": "Director",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Morgan Trassin",
+      "role": "Director",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for precise in-situ monitoring of material properties in thin-film fabrication processes presents a timely opportunity for 3Wave Instruments AG's technology.",
+  "devils_advocate_risks": [
+    "Potential challenges in scaling the technology for widespread industrial adoption.",
+    "Dependence on the continued advancement and adoption of thin-film deposition technologies."
+  ],
+  "citations": [
+    "https://www.help.ch/firma/CHE-473.841.635/3wave-instruments-ag-zuerich",
+    "https://3wave-instruments.ch/"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

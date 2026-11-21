@@ -1,0 +1,27 @@
+{
+  "one_liner": "Archemides develops sustainable polymer materials and was approved as an ETH Zurich spin-off in 2025.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich lists Archemides as a recognized spin-off.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "The founder records combine five technical materials scientists with three business leaders who have materials-science expertise.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 92.1 of 100 (at the top of the reference cohort). The model rewards team size, university spin-off status, deep-tech classification, and technical, PhD and ETH Zurich backgrounds. The model counts six founders, while the founder records list eight.",
+      "source_url": null
+    }
+  ],
+  "team": "The founder records list four ETH Zurich materials-science professors (Marco F. D'Elia, Walter Caseri, Markus Niederberger and Stefano Trasatti), ETH Zurich researcher and PhD holder Alessandro Lauria, and business leaders Fabio Nani, Chiara Schiaffi and Denis Charlier.",
+  "why_early": "Unknown whether a priced round has occurred. The lead is tagged Pre-Crunchbase / Undiscovered, which does not verify financing status.",
+  "devils_advocate_risks": [
+    "Customer validation is unknown; established practices may slow adoption of new polymer materials.",
+    "Compliance status is unknown; meeting different international standards may be complex."
+  ],
+  "next_step": "HTGF Industrial Tech team: Ask the founders what performance benchmark their polymer must meet for a first customer pilot.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "c5c08854-317f-5426-ba87-2e865d1aa25d",
+  "input_hash": "74286b28b54c2bf7"
+}

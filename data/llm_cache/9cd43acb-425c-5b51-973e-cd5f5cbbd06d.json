@@ -1,0 +1,86 @@
+{
+  "canonical_name": "Emmi AI",
+  "description": "Emmi AI specializes in deep-learning frameworks for engineering AI, offering the Noether Framework, an open-source software for building, training, and applying industrial models across various engineering domains.",
+  "founders_enriched": [
+    {
+      "full_name": "Johannes Brandstetter",
+      "role": "Co-Founder & Chief Scientist",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "CERN",
+        "Microsoft"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Experience at CERN and Microsoft."
+    },
+    {
+      "full_name": "Dennis Just",
+      "role": "Co-Founder & CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "A serial founder and company builder."
+    },
+    {
+      "full_name": "Miks Mikelsons",
+      "role": "Co-Founder & COO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Experience in building high-performance organizations."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": true,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Vienna",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised €15M in a seed round, marking the largest ever for an Austrian startup.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised €15M in a seed round, marking the largest ever for an Austrian startup.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of industrial simulations and the need for faster, more efficient modeling present a timely opportunity for Emmi AI's solutions.",
+  "devils_advocate_risks": [
+    "Achieving widespread adoption in traditional engineering sectors may face resistance due to established workflows.",
+    "Scaling the technology to handle diverse industrial applications without compromising performance could be challenging."
+  ],
+  "citations": [
+    "https://www.emmi.ai/about-us",
+    "https://noether-docs.emmi.ai/noether/index.html"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Emmi AI's deep-learning models for industrial simulations could enhance Bosch's engineering processes, aligning with Bosch's focus on advanced manufacturing technologies."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Emmi AI's AI-driven simulation tools may benefit Evonik's chemical engineering applications, supporting Evonik's interest in innovative industrial solutions."
+    }
+  ],
+  "flags_version": 2
+}

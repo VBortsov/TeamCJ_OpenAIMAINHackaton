@@ -1,0 +1,103 @@
+{
+  "canonical_name": "SOLISTIQ",
+  "description": "SOLISTIQ entwickelt mit Q‑Foundry das erste Foundation Model für Bestandsmanagement in Europa.",
+  "founders_enriched": [
+    {
+      "full_name": "Magnus Maichle",
+      "role": "Doktorand",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Universität Würzburg"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ki-regio.de"
+    },
+    {
+      "full_name": "Nico Elbert",
+      "role": "Doktorand",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Universität Würzburg"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ki-regio.de"
+    },
+    {
+      "full_name": "Kai Günder",
+      "role": "Doktorand",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Universität Würzburg"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ki-regio.de"
+    },
+    {
+      "full_name": "Thomas Wangler",
+      "role": "Spezialist auf IT-Consulting und Software-Entwicklung",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ki-regio.de"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Würzburg Vertreten",
+  "raised_institutional_round": false,
+  "funding_summary": "Erhielt im März 2026 den EXIST-Forschungstransfer.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "Angesichts der zunehmenden Komplexität globaler Lieferketten und der Notwendigkeit präziser Bestandsprognosen ist der Bedarf an KI-gestützten Lösungen für das Bestandsmanagement größer denn je.",
+  "devils_advocate_risks": [
+    "Marktdurchdringung: Die Herausforderung, sich in einem etablierten Markt mit bestehenden Lösungen durchzusetzen.",
+    "Technologische Skalierbarkeit: Die Fähigkeit, das Modell auf eine Vielzahl von Branchen und Produkten anzupassen."
+  ],
+  "citations": [
+    "https://ki-regio.de/ki-gestuetzte-bestandsplanung-mit-solistiq/",
+    "https://www.wiwi.uni-wuerzburg.de/en/aktuelles/news/single/news/wuerzburger-ki-ausgruendung-solistiq-erhaelt-exist-forschungstransfer/",
+    "https://solistiq.com/en/about",
+    "https://solistiq.com/press"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Als führendes Unternehmen im Bereich Industrie 4.0 könnte Bosch Interesse an KI-gestützten Bestandsmanagementlösungen haben."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Als Anbieter von Unternehmenssoftware könnte SAP an der Integration von KI-basierten Bestandsplanungstools in ihre ERP-Systeme interessiert sein."
+    }
+  ],
+  "flags_version": 2
+}

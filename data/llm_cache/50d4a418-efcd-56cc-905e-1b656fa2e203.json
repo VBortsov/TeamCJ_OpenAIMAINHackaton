@@ -1,0 +1,89 @@
+{
+  "canonical_name": "Crimson",
+  "description": "Crimson offers an AI-powered case intelligence platform designed to assist litigation and arbitration teams in analyzing extensive case files, drafting documents, and managing correspondence efficiently.",
+  "founders_enriched": [
+    {
+      "full_name": "Mark Feldner",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Clifford Chance",
+        "Willkie Farr & Gallagher"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "nonbillable.co.uk"
+    },
+    {
+      "full_name": "David Strömbäck",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "nonbillable.co.uk"
+    },
+    {
+      "full_name": "Amine Amor",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "thelegaltechmap.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $2.5 million in a Seed Round in May 2026, led by Y Combinator, and $500,000 in a Pre-Seed Round in July 2025.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $2.5 million in a Seed Round in May 2026, led by Y Combinator, and $500,000 in a Pre-Seed Round in July 2025.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The legal industry's increasing adoption of AI solutions for complex disputes presents a timely opportunity for Crimson's specialized platform.",
+  "devils_advocate_risks": [
+    "Potential resistance from traditional law firms to adopting AI-driven tools.",
+    "Challenges in integrating Crimson's platform with existing legal technologies and workflows."
+  ],
+  "citations": [
+    "https://www.nonbillable.co.uk/news/litigation-ai-startup-founded-city-lawyer-crimson-fundraise-mark-feldner",
+    "https://thelegaltechmap.com/company/crimson",
+    "https://www.crimson.law/news/seed-round-us-expansion",
+    "https://sacra.com/c/crimson/",
+    "https://www.crimson.law/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Crimson's AI-driven platform could enhance Evonik's legal operations, particularly in managing complex chemical litigation cases."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Crimson's technology could streamline SAP's internal legal processes, improving efficiency in handling software-related disputes."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,27 @@
+{
+  "one_liner": "Iron Energy is an ETH Zurich spin-off working on seasonal energy storage, with scale-up a key question for an initial meeting.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich lists Iron Energy as a recognized spin-off.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "CEO and CTO Dr. Samuel Heiniger holds a PhD and previously worked in ETH Zurich’s Functional Materials Laboratory.",
+      "source_url": null
+    },
+    {
+      "signal": "Ranked 2 of 174 leads today, with model score 88.2 of 100 (at the top of the reference cohort). Positive inputs included four named founders, the university spin-off and deep-tech flags, and a technical founder who is CTO, holds a PhD and has an ETH Zurich affiliation.",
+      "source_url": null
+    }
+  ],
+  "team": "Four founders: Dr. Samuel Heiniger (CEO & CTO), Dr. Lauri Lehtonen (COO), Brian Petrus (Head of Engineering & Projects) and Daniel Bloch (CFO). The founder records confirm Heiniger’s PhD, technical role and ETH Zurich affiliation.",
+  "why_early": "Unknown whether a priced round has closed. The “Pre-Crunchbase / Undiscovered” badge does not establish funding status.",
+  "devils_advocate_risks": [
+    "Technical and operational feasibility at large storage scales remains unknown.",
+    "Funding and strategic partnerships for commercialization are not confirmed."
+  ],
+  "next_step": "HTGF Industrial Tech team: Ask the founders whether Iron Energy has closed a priced equity round.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "6bad8256-5dcb-59f2-9873-a43bfeca9627",
+  "input_hash": "8d776c10f21ce585"
+}

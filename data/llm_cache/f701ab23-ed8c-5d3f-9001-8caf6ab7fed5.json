@@ -1,0 +1,86 @@
+{
+  "canonical_name": "throxy",
+  "description": "Throxy offers a managed outbound sales service that combines AI agents with human expertise to book qualified meetings for B2B companies targeting traditional industries.",
+  "founders_enriched": [
+    {
+      "full_name": "Pablo Jiménez de Parga Ramos",
+      "role": "Growth lead",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University College London"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Alumnus of UCL, completed an MSc in Bioscience Entrepreneurship."
+    },
+    {
+      "full_name": "Arnau Ayerbe Garcia",
+      "role": "Heads Engineering",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Bergen Merey",
+      "role": "Oversees Product & Operations",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2023,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $6.2 million in a seed round on September 4, 2025, led by Base10 Partners with participation from Y Combinator.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $6.2 million in a seed round on September 4, 2025, led by Base10 Partners with participation from Y Combinator.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of outbound sales in traditional industries and the limitations of generic automation tools create a market opportunity for Throxy's tailored solution.",
+  "devils_advocate_risks": [
+    "Scaling the AI-human workflow effectively across diverse industries.",
+    "Maintaining high-quality outreach while expanding the client base."
+  ],
+  "citations": [
+    "https://throxy.com/resources/directory/what-throxy-does",
+    "https://throxyai.com/about-us.html",
+    "https://www.ucl.ac.uk/news/2025/sep/62-million-investment-ucl-startup-transforming-traditional-industries"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Throxy's AI-driven outbound sales platform could integrate with SAP's enterprise resource planning systems, enhancing sales processes for traditional industries."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Throxy's focus on traditional industries aligns with Evonik's interest in innovative solutions for sectors like manufacturing and logistics."
+    }
+  ],
+  "flags_version": 2
+}

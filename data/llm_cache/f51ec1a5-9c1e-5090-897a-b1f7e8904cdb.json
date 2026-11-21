@@ -1,0 +1,108 @@
+{
+  "canonical_name": "FinalDose",
+  "description": "FinalDose is developing a programmable DNA drug platform that targets and destroys diseased cells by recognizing specific DNA sequences, aiming to address previously undruggable cancer targets.",
+  "founders_enriched": [
+    {
+      "full_name": "Jeff Liu",
+      "role": "CEO and Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "University of Oxford"
+      ],
+      "prior_companies": [
+        "Vivid Dx",
+        "Oxford MEStar Ltd",
+        "Stemblue",
+        "Humango",
+        "MRC Weatherall Institute of Molecular Medicine",
+        "USC Eli and Edythe Broad Center",
+        "USC Zilkha Neurogenetic Institute",
+        "National Taipei University of Technology",
+        "AHBLab",
+        "Caltech",
+        "California Institute of Technology"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Li-Yao Huang",
+      "role": "Chief Scientific Officer and Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "University of Oxford"
+      ],
+      "prior_companies": [
+        "MRC Weatherall Institute of Molecular Medicine"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "yctierlist.com"
+    },
+    {
+      "full_name": "Steven Lin",
+      "role": "Chief Technology Officer and Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "University of Oxford"
+      ],
+      "prior_companies": [
+        "Gutsee Biotech"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "yctierlist.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "In June 2026, FinalDose raised $500,000 in a pre-seed round from Y Combinator and Transpose Platform Management. Participated in Y Combinator's Spring 2026 batch.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing prevalence of cancers with complex genetic mutations creates a pressing need for innovative therapies like FinalDose's DNA-targeting drugs.",
+  "devils_advocate_risks": [
+    "Demonstrating the safety and efficacy of their DNA-targeting drugs in clinical trials.",
+    "Securing additional funding to advance research and development beyond the pre-seed stage."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/founders/jeff-liu",
+    "https://yctierlist.com/s26/finaldose/",
+    "https://www.caplight.com/company/finaldose",
+    "https://biobase.whitefordresearch.com/companies/finaldose",
+    "https://www.crunchbase.com/organization/finaldose-ltd"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their focus on innovative biopharmaceuticals aligns with FinalDose's development of programmable DNA-targeting drugs for cancer therapy."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Specializes in biotechnology and life sciences investments, which complements FinalDose's work in precision medicine and drug discovery."
+    }
+  ],
+  "flags_version": 2
+}

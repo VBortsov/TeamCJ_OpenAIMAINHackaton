@@ -1,0 +1,62 @@
+{
+  "canonical_name": "Flatable",
+  "description": "Flatable is a Swiss platform that helps students and young professionals find shared flats and compatible roommates.",
+  "founders_enriched": [
+    {
+      "full_name": "Safras Rawfal",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "flatable.ch"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "Flatable has received support from Venture Kick, a non-dilutive funding program.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "out_of_mandate",
+  "inflection_why_now": "The increasing demand for shared living solutions among students and young professionals in Switzerland presents a timely opportunity for Flatable's growth.",
+  "devils_advocate_risks": [
+    "Market Competition: The shared housing market is competitive, with established players potentially challenging Flatable's market entry.",
+    "User Adoption: Convincing users to transition from traditional housing platforms to Flatable's new model may pose challenges."
+  ],
+  "citations": [
+    "https://flatable.ch/about-us",
+    "https://www.linkedin.com/company/flatable",
+    "https://transfer.ethz.ch/founders.html",
+    "https://ch.linkedin.com/jobs/view/founding-engineer-at-flatable-4367475410",
+    "https://www.crunchbase.com/organization/flatable"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Flatable's focus on shared living aligns with Evonik's interest in innovative housing solutions."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "Flatable's platform could benefit from DHL's logistics expertise in managing housing-related services."
+    }
+  ],
+  "flags_version": 2
+}

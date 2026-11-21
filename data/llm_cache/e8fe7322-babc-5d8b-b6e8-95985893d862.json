@@ -1,0 +1,74 @@
+{
+  "canonical_name": "Netter",
+  "description": "Netter provides an AI-powered data platform that centralizes and structures enterprise data to deploy analytics, workflows, and machine learning pipelines.",
+  "founders_enriched": [
+    {
+      "full_name": "Samuel Ladroue",
+      "role": "Co-Founder & CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Mines Paris"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "fundraisingfox.com"
+    },
+    {
+      "full_name": "Amin Hamzaoui",
+      "role": "Co-Founder & CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "fundraisingfox.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "Neuilly",
+  "raised_institutional_round": false,
+  "funding_summary": "Netter has raised $500,000 in seed funding as of January 2026.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of enterprise data management and the need for AI-driven insights create a timely opportunity for Netter's solutions.",
+  "devils_advocate_risks": [
+    "Market Competition: The enterprise AI and data integration space is highly competitive, with numerous established players.",
+    "Scalability Challenges: Ensuring the platform can scale effectively across diverse industries and data environments may present technical hurdles."
+  ],
+  "citations": [
+    "https://fundraisingfox.com/companies/netter",
+    "https://neuronfeed.com/startups/netter",
+    "https://altss.com/companies/yc/netter"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Netter's AI-powered data platform aligns with SAP's enterprise software solutions, potentially enhancing data integration and analytics capabilities."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Netter's focus on industrial operations and predictive maintenance could complement Evonik's interests in advanced manufacturing technologies."
+    }
+  ],
+  "flags_version": 2
+}

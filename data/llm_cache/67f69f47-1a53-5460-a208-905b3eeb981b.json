@@ -1,0 +1,76 @@
+{
+  "canonical_name": "MechanOxidation",
+  "description": "Mechanolution develops solvent-free cosmetic ingredients using mechanochemical synthesis, aiming to make chemical production more sustainable and cost-effective.",
+  "founders_enriched": [
+    {
+      "full_name": "Desislava Dobreva",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Ruhr University Bochum"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Bulgarian chemist currently working on her doctoral thesis."
+    },
+    {
+      "full_name": "Sebastian Grothaus",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Seasoned entrepreneur with experience in sales and finance."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": null,
+  "city": "Bochum",
+  "raised_institutional_round": false,
+  "funding_summary": "In April 2025, Mechanolution secured €269,000 from the Start-up Transfer.NRW program. In 2024, Desislava Dobreva participated in the EXIST-Women program.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing global emphasis on sustainability and environmental regulations in the chemical industry creates a timely opportunity for Mechanolution's innovative approach to chemical synthesis.",
+  "devils_advocate_risks": [
+    "Scalability Challenges: Translating laboratory-scale mechanochemical processes to industrial-scale production may encounter technical and economic hurdles.",
+    "Market Adoption: Convincing established chemical manufacturers to adopt new, unproven technologies can be difficult, potentially slowing growth."
+  ],
+  "citations": [
+    "https://news.rub.de/english/2024-10-25-start-ups-chemistry-right",
+    "https://news.rub.de/english/2024-04-22-mechanochemistry-i-started-think-bigger-and-want-more",
+    "https://mechanolution.com/about",
+    "https://news.rub.de/transfer/2025-04-14-foerderung-chemie-start-erhaelt-rueckenwind-vom-land-nrw",
+    "https://www.campus-start-ups.nrw/aktuelles/news/2025/chemie-start-up-der-rub-erhaelt-start-up-transfer-nrw"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in specialty chemicals and has a strong focus on sustainable solutions, aligning with Mechanolution's mission."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim is a global leader in pharmaceuticals, and Mechanolution's solvent-free chemical synthesis could enhance efficiency in pharmaceutical manufacturing."
+    }
+  ],
+  "flags_version": 2
+}

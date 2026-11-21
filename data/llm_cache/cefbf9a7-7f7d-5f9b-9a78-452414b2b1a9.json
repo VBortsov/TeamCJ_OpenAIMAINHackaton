@@ -1,0 +1,59 @@
+{
+  "canonical_name": "esp-labs-web",
+  "description": "'esp-labs-web' is an interactive React application designed to teach users about the ESP32-S3 microcontroller through hands-on labs, live simulators, and code explanations.",
+  "founders_enriched": [
+    {
+      "full_name": "Abderrahmen Gharsallah",
+      "role": "Founder",
+      "linkedin_url": null,
+      "github_handle": "agharsallah",
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Software engineer with experience in machine learning and embedded systems."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "Frankfurt",
+  "raised_institutional_round": false,
+  "funding_summary": "No information about funding rounds or non-dilutive funding sources is available.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for accessible and interactive learning resources in embedded systems education presents a timely opportunity for 'esp-labs-web' to meet this need.",
+  "devils_advocate_risks": [
+    "Market Adoption: Achieving widespread adoption among educators and learners in a competitive educational technology landscape.",
+    "Content Expansion: Continuously developing and updating content to cover a broad range of embedded systems topics to maintain user engagement."
+  ],
+  "citations": [
+    "https://github.com/agharsallah/esp-labs-web",
+    "https://teapaw.org/abderrahmen_g"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "As a leader in embedded systems and IoT solutions, Bosch could benefit from the educational tools provided by 'esp-labs-web' to train engineers on their platforms."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in innovative technologies aligns with 'esp-labs-web's' focus on interactive learning for embedded systems, potentially fostering collaboration in educational initiatives."
+    }
+  ],
+  "flags_version": 2
+}

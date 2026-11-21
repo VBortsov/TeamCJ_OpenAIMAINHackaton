@@ -1,0 +1,90 @@
+{
+  "canonical_name": "BLADE",
+  "description": "BLADE develops a continuous, low-pressure Atomic Layer Deposition system for coating flowable bulk materials, aiming to enhance applications in energy, battery, and manufacturing sectors.",
+  "founders_enriched": [
+    {
+      "full_name": "Prof. Dr. Jan Torgersen",
+      "role": "Professor of Materials Science",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Technical University of Munich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ed.tum.de"
+    },
+    {
+      "full_name": "Sven Marx",
+      "role": "Student researcher",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Technical University of Munich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "mae.ed.tum.de"
+    },
+    {
+      "full_name": "Nishant Mistry",
+      "role": "Student researcher",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Technical University of Munich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "mae.ed.tum.de"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Muenchen",
+  "raised_institutional_round": false,
+  "funding_summary": "Received an ERC Proof of Concept Grant in June 2026.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for precise and uniform coatings in industries like energy storage and pharmaceuticals creates a timely opportunity for BLADE's innovative coating technology.",
+  "devils_advocate_risks": [
+    "Technological Validation: Ensuring the scalability and efficiency of the low-pressure ALD process for industrial applications.",
+    "Market Adoption: Convincing industries to transition from traditional coating methods to BLADE's novel technology."
+  ],
+  "citations": [
+    "https://www.ed.tum.de/en/ed/news-single-view-start/article/erc-grant-fuer-prof-jan-torgersen/",
+    "https://cordis.europa.eu/project/id/101334824/es",
+    "https://www.mae.ed.tum.de/en/lww/news/article/erc-proof-of-concept-grant-funded-project-blade/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and coatings, aligning with BLADE's focus on nanocoatings for various applications."
+    },
+    {
+      "lp_name": "WACKER",
+      "reason": "WACKER is involved in chemical production and materials science, which could complement BLADE's innovative coating technologies."
+    }
+  ],
+  "flags_version": 2
+}

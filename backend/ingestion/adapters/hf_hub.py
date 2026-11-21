@@ -84,6 +84,7 @@ class HuggingFaceHubAdapter(BaseSignalAdapter):
 
             logger.info("Discovered %d non-Big-Tech AI organizations on HF Hub", len(org_models))
 
+            unknown_country_count = 0
             for org_name, m_list in org_models.items():
                 if len(candidates) >= limit:
                     break
@@ -158,11 +159,23 @@ class HuggingFaceHubAdapter(BaseSignalAdapter):
                     source_url=f"https://huggingface.co/{top_model_id}"
                 )
 
+                detected_cc = None
+                if norm_domain:
+                    for tld_cc in ["de", "ch", "at", "fr", "nl", "uk"]:
+                        if norm_domain.endswith(f".{tld_cc}"):
+                            detected_cc = tld_cc.upper()
+                            break
+
+                if not detected_cc and unknown_country_count >= 20:
+                    continue
+                if not detected_cc:
+                    unknown_country_count += 1
+
                 candidate = RawCandidate(
                     canonical_name=canonical_name,
                     normalized_domain=norm_domain,
                     website_url=effective_website,
-                    country_code=None,  # HF doesn't guarantee country, can be enriched downstream
+                    country_code=detected_cc,  # Inferred from TLD or enriched downstream
                     description=(
                         f"AI research lab & startup developing open-weights models on Hugging Face. "
                         f"Top model '{top_model_id}' with trending score {trending_score} "

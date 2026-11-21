@@ -1,0 +1,85 @@
+{
+  "canonical_name": "Corti",
+  "description": "Corti offers Symphony, a clinical-grade AI model that powers clinical and administrative workflows across healthcare, available through the Corti Platform API.",
+  "founders_enriched": [
+    {
+      "full_name": "Andreas Cleve",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "CEO of Corti"
+    },
+    {
+      "full_name": "Thomas Madsen-Mygdal",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Listed as employee on LinkedIn"
+    },
+    {
+      "full_name": "Florian Schwiecker",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Listed as employee on LinkedIn"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": 2016,
+  "city": null,
+  "raised_institutional_round": true,
+  "funding_summary": "In September 2023, Corti raised $60 million in a Series B funding round co-led by Prosus Ventures and Atomico, with participation from Eurazeo, EIFO, and Chr. Augustinus Fabrikker. In 2021, Corti raised $27 million in a Series A funding round.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2016 (older than 3.5 years)",
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing demand for AI solutions in healthcare, coupled with regulatory advancements, presents a timely opportunity for Corti to expand its impact.",
+  "devils_advocate_risks": [
+    "Regulatory Compliance: Navigating complex healthcare regulations across different regions may pose challenges.",
+    "Market Competition: The rapidly evolving AI healthcare sector is highly competitive, requiring continuous innovation."
+  ],
+  "citations": [
+    "https://www.linkedin.com/company/corti/",
+    "https://fortune.com/2025/10/08/my-company-died-three-times-including-a-full-pivot-back-to-our-roots-after-a-60m-series-b-its-the-test-most-vc-backed-startups-face/",
+    "https://corti.ai/blog/corti-raises-60m-in-series-b-funding-to-accelerate-healthcare-ai-innovation-and-expand-work-in-public-safety",
+    "https://techcrunch.com/2023/09/20/corti-an-ai-co-pilot-for-healthcare-clinicians-raises-60m/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Corti's focus on AI-driven healthcare solutions aligns with SAP's expertise in enterprise software and data analytics, potentially enhancing healthcare data management and operational efficiency."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Corti's advancements in healthcare AI could complement Boehringer Ingelheim's interest in innovative healthcare technologies, fostering collaboration in AI-driven medical solutions."
+    }
+  ],
+  "flags_version": 2
+}

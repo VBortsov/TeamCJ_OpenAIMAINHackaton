@@ -68,17 +68,12 @@ class EthRwthAdapter(BaseSignalAdapter):
             if own_client:
                 await client.__aenter__()
 
-            # Balance between ETH and RWTH so both elite institutions contribute
-            eth_limit = max(limit // 2, 15)
-            rwth_limit = max(limit // 2, 10)
-
-            # 1. Fetch ETH Zurich Spin-offs & Start-ups
-            eth_candidates = await self._fetch_eth_spinoffs(client, limit=eth_limit)
+            # Pull all 2025-2026 rows up to limit from both elite institutions
+            eth_candidates = await self._fetch_eth_spinoffs(client, limit=limit)
             candidates.extend(eth_candidates)
             logger.info("Fetched %d candidates from ETH Zurich", len(eth_candidates))
 
-            # 2. Fetch RWTH Aachen Spin-off Award Winners
-            rwth_candidates = await self._fetch_rwth_spinoffs(client, limit=rwth_limit)
+            rwth_candidates = await self._fetch_rwth_spinoffs(client, limit=limit)
             candidates.extend(rwth_candidates)
             logger.info("Fetched %d candidates from RWTH Aachen", len(rwth_candidates))
 

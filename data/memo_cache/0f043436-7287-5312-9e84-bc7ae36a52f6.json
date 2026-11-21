@@ -1,0 +1,27 @@
+{
+  "one_liner": "kuafu is an ETH Zurich spin-off developing AI-powered energy management; growing renewable integration and the need for grid flexibility make it worth meeting now.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich lists kuafu as an academic spin-off.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "Selected for Venture Leaders Cleantech 2026 in September 2026.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 79.9 of 100 (at the top of the reference cohort). The score was lifted by flags for university spin-off status, deep tech, and a team with technical founders, PhDs, ETH Zurich backgrounds, and a co-founder serving as CTO.",
+      "source_url": null
+    }
+  ],
+  "team": "Co-founders Dr. Federica Bellizio (CEO) and Dr. Hanmin Cai (CTO) are both technical founders with PhDs and ETH Zurich backgrounds.",
+  "why_early": "Unknown whether a priced round has occurred. Founderful Campus invested in July 2025, but the investment terms are unknown.",
+  "devils_advocate_risks": [
+    "Deployment may be difficult to scale across different building infrastructures.",
+    "Regulatory requirements may complicate deployment across markets."
+  ],
+  "next_step": "HTGF Industrial Tech team: Was the July 2025 Founderful Campus investment part of a priced equity round?",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "0f043436-7287-5312-9e84-bc7ae36a52f6",
+  "input_hash": "164d09d7b3bf189d"
+}

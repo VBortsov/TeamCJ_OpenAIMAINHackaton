@@ -1,0 +1,60 @@
+{
+  "canonical_name": "MIRAGE",
+  "description": "MIRAGE develops a tool that transforms RTL code to protect hardware designs from AI-assisted reverse engineering.",
+  "founders_enriched": [
+    {
+      "full_name": "Professor Ahmad-Reza Sadeghi",
+      "role": "Principal Investigator",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Technische Universität Darmstadt"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "cordis.europa.eu"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Darmstadt",
+  "raised_institutional_round": false,
+  "funding_summary": "The project received a €150,000 Proof-of-Concept Grant from the European Research Council (ERC).",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "With the rise of AI models capable of reverse-engineering hardware designs, securing intellectual property in chip development is increasingly critical.",
+  "devils_advocate_risks": [
+    "Technical Complexity: Ensuring the transformed RTL code maintains functionality while being unrecognizable to AI systems is technically challenging.",
+    "Industry Adoption: Convincing hardware companies to adopt new security measures may face resistance due to established workflows."
+  ],
+  "citations": [
+    "https://cordis.europa.eu/project/id/101335589"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, aligning with MIRAGE's focus on hardware design security."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's expertise in enterprise software solutions could complement MIRAGE's technology in secure hardware design sharing."
+    }
+  ],
+  "flags_version": 2
+}

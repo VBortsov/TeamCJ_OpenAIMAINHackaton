@@ -1,0 +1,85 @@
+{
+  "canonical_name": "House of AI Hamburg",
+  "description": "House of AI Hamburg is a collaborative workspace and community hub designed for AI founders, offering coworking spaces, event venues, and a physical AI lab.",
+  "founders_enriched": [
+    {
+      "full_name": "Gunnar Froh",
+      "role": "Co-founder and co-CEO of Wunder Mobility",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "McKinsey",
+        "Accoleo (acquired by Airbnb)",
+        "Airbnb"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "house-of-ai.org"
+    },
+    {
+      "full_name": "Bojan Jukic",
+      "role": "Co-founder and co-CEO of Wunder Mobility",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "goUrban",
+        "Wunder Mobility"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "house-of-ai.org"
+    },
+    {
+      "full_name": "Vincent Klein",
+      "role": "Managing Director of House of AI Hamburg",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Various NGOs",
+        "German Mittelstand companies"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "house-of-ai.org"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": true,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "Hamburg",
+  "raised_institutional_round": false,
+  "funding_summary": "Specific details about equity funding rounds are not publicly disclosed. The initiative is described as privately funded.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for AI-focused workspaces and communities in Hamburg presents a timely opportunity for House of AI Hamburg to establish itself as a central hub in the AI ecosystem.",
+  "devils_advocate_risks": [
+    "Potential challenges in attracting a diverse range of AI startups and professionals to the community.",
+    "Sustaining engagement and participation in events and programs over time."
+  ],
+  "citations": [
+    "https://www.house-of-ai.org/about/",
+    "https://startupcity.hamburg/news-events/news/house-of-ai-is-the-new-hub-for-the-ai-community",
+    "https://www.house-of-ai.org/"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

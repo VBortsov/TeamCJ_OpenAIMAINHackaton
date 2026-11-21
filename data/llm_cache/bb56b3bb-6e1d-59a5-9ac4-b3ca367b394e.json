@@ -1,0 +1,66 @@
+{
+  "canonical_name": "SemiVi",
+  "description": "SemiVi develops software tools for simulating optical and semiconductor devices, including solvers for optical and drift-diffusion simulations.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Saurabh Sant",
+      "role": "Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Indian Institute of Technology Bombay",
+        "ETH Zurich"
+      ],
+      "prior_companies": [
+        "Infineon Technologies AG"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": true,
+      "source_of_identity": "Founder of SemiVi"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "No publicly available information regarding its funding history.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of semiconductor devices and the demand for efficient simulation tools present a timely opportunity for SemiVi's solutions.",
+  "devils_advocate_risks": [
+    "Market Competition: The presence of established players in the semiconductor simulation software market could pose challenges for SemiVi's market penetration.",
+    "Technological Advancements: Rapid changes in semiconductor technology may require continuous updates to SemiVi's software to remain relevant."
+  ],
+  "citations": [
+    "https://www.semivi.ch/about",
+    "https://transfer.ethz.ch/founders.html",
+    "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html",
+    "https://www.semivi.ch/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "SemiVi's focus on semiconductor modeling and simulation aligns with Evonik's interest in advanced materials and chemical engineering, potentially fostering collaboration in material science applications."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Given Bosch's involvement in semiconductor technologies, SemiVi's expertise in semiconductor device simulation could complement Bosch's product development efforts."
+    }
+  ],
+  "flags_version": 2
+}

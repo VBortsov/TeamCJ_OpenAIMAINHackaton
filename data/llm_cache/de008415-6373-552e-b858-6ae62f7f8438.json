@@ -1,0 +1,79 @@
+{
+  "canonical_name": "Combinely",
+  "description": "Combinely offers an AI coworker that automates end-to-end accounting workflows, client queries, and deliverables for tax, audit, and accounting teams in large firms.",
+  "founders_enriched": [
+    {
+      "full_name": "Tom Invernizzi",
+      "role": "Accountant",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "London Business School"
+      ],
+      "prior_companies": [
+        "Deloitte"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Former accountant at Deloitte and London Business School alumnus."
+    },
+    {
+      "full_name": "Arthur Granacher",
+      "role": "Engineer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Google",
+        "Shazam"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": true,
+      "source_of_identity": "Engineer with experience at Google and Shazam."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Combinely raised $500,000 in a seed funding round in April 2025.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Combinely raised $500,000 in a seed funding round in April 2025.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing adoption of AI in professional services presents a timely opportunity for Combinely's solutions.",
+  "devils_advocate_risks": [
+    "Convincing traditional accounting firms to integrate AI solutions may face resistance.",
+    "Ensuring robust data protection measures to maintain client trust is crucial."
+  ],
+  "citations": [
+    "https://startupintros.com/orgs/combinely",
+    "https://www.london.edu/news/combinely-accountancy-co-worker-lbs-incubator?entry=true",
+    "https://aventure.vc/companies/combinely-london-gb/fundraising"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Combinely's AI platform integrates with accounting tools, aligning with SAP's enterprise software solutions."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "Combinely's automation of accounting workflows could enhance DHL's financial operations efficiency."
+    }
+  ],
+  "flags_version": 2
+}

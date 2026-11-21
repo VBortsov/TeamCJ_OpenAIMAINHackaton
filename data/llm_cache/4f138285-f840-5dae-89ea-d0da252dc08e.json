@@ -1,0 +1,57 @@
+{
+  "canonical_name": "OligoBackMod",
+  "description": "OligoBackMod aims to develop oligonucleotide therapeutics with enhanced nuclease resistance and improved pharmacokinetic properties through novel backbone modifications.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Christof Sparr",
+      "role": "Principal Investigator",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "University of Basel"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Principal Investigator at University of Basel"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Basel",
+  "raised_institutional_round": false,
+  "funding_summary": "The project is funded by the European Research Council (ERC) under the Horizon Europe program, with a contribution of €150,000.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing prevalence of diseases previously unaddressable by conventional therapies creates a pressing need for innovative treatments like oligonucleotide-based drugs.",
+  "devils_advocate_risks": [
+    "Challenges in scaling up the chemical modifications for oligonucleotide synthesis.",
+    "Regulatory hurdles in obtaining approval for new therapeutic modalities."
+  ],
+  "citations": [
+    "https://universe.unibas.ch/projects-collaborations/12448",
+    "https://cordis.europa.eu/project/id/101335537/pl"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Invests in innovative biopharmaceuticals."
+    }
+  ],
+  "flags_version": 2
+}

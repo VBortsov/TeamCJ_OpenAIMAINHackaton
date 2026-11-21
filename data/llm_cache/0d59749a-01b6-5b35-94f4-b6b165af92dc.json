@@ -1,0 +1,86 @@
+{
+  "canonical_name": "Complir",
+  "description": "Complir offers an AI-powered compliance platform that automates product compliance tasks for retailers and consumer brands, enabling faster market entry and reducing manual workload.",
+  "founders_enriched": [
+    {
+      "full_name": "Gustav Bang",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "tech.eu"
+    },
+    {
+      "full_name": "Tine Kühnel",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "fundraisebase.com"
+    },
+    {
+      "full_name": "Marc Kaa Brejner",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "fundraisebase.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Copenhagen",
+  "raised_institutional_round": true,
+  "funding_summary": "In December 2025, Complir raised €1.7 million in a pre-seed funding round led by Vendep Capital. In September 2026, Complir raised $11 million in a seed funding round led by General Catalyst.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In December 2025, Complir raised €1.7 million in a pre-seed funding round led by Vendep Capital. In September 2026, Complir raised $11 million in a seed funding round led by General Catalyst.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of global product regulations and the need for efficient compliance solutions present a significant market opportunity for Complir's platform.",
+  "devils_advocate_risks": [
+    "Market Adoption: Retailers may be hesitant to adopt new compliance technologies, potentially slowing growth.",
+    "Regulatory Changes: Frequent changes in global regulations could require continuous updates to Complir's platform, posing operational challenges."
+  ],
+  "citations": [
+    "https://tech.eu/2026/09/16/copenhagens-complir-raises-11m-to-tackle-product-compliance-bottlenecks",
+    "https://www.complir.io/resources/news/complir-raises-11m-seed",
+    "https://fundraisebase.com/company/complir",
+    "https://www.mazanti.dk/en/news/complir-raises-eur-17-million-in-a-pre-seed-funding-round/",
+    "https://aivirksomheder.dk/blog/complir-rejser-11-mio-dollar-seed/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Complir's AI-powered compliance platform could benefit from Bosch's extensive experience in manufacturing and product compliance, enhancing the efficiency and scalability of Bosch's product compliance processes."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's focus on specialty chemicals aligns with Complir's mission to streamline product compliance, potentially improving Evonik's regulatory compliance across diverse product categories."
+    }
+  ],
+  "flags_version": 2
+}

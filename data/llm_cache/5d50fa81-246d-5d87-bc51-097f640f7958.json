@@ -1,0 +1,72 @@
+{
+  "canonical_name": "Mecas GmbH",
+  "description": "Mecas GmbH is a private AI lab based in Zurich, specializing in bridging digital intelligence with physical reality. The company collaborates with professors from leading institutions to integrate cutting-edge research into real-world industry applications, focusing on AI systems that connect hardware and software across sectors such as manufacturing, medtech, logistics, and automation.",
+  "founders_enriched": [
+    {
+      "full_name": "Marco Adriano Magno",
+      "role": "Chairman",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Mecas GmbH legal notice"
+    },
+    {
+      "full_name": "Claudio Heintze",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Mecas GmbH legal notice"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "No publicly available information regarding its funding history, including equity rounds or non-dilutive funding.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for AI integration in industrial applications presents a timely opportunity for Mecas to leverage its expertise.",
+  "devils_advocate_risks": [
+    "Challenges in scaling AI solutions across diverse industries.",
+    "Dependence on collaborations with academic institutions for research and development."
+  ],
+  "citations": [
+    "https://www.mecas.ai/",
+    "https://www.mecas.ai/legal",
+    "https://www.moneyhouse.ch/de/company/mecas-gmbh-2266681201"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, aligning with Mecas's focus on integrating AI into manufacturing processes."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim's interest in innovative technologies in the healthcare sector complements Mecas's expertise in AI applications within medtech."
+    }
+  ],
+  "flags_version": 2
+}

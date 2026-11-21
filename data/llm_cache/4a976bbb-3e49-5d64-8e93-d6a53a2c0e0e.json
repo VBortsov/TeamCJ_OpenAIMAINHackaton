@@ -1,0 +1,78 @@
+{
+  "canonical_name": "Openroll",
+  "description": "Openroll offers an AI-powered platform that automates recurring tasks and manages workflows for HR and finance teams, integrating compensation, headcount, and budgeting into a single system.",
+  "founders_enriched": [
+    {
+      "full_name": "Mattias Lindell",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Stockholm School of Economics"
+      ],
+      "prior_companies": [
+        "Swedbank"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Graduated with a Master's in Finance from the Stockholm School of Economics."
+    },
+    {
+      "full_name": "Porsev Aslan",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-founder and CTO, inferred technical background."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Stockholm",
+  "raised_institutional_round": false,
+  "funding_summary": "Raised $500,000 in a Pre-Seed Round in December 2025 and $500,000 in a Seed Round in January 2026 from Foundry Ventures.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of compensation management and the need for data-driven decisions in HR and finance departments create a timely opportunity for Openroll's solutions.",
+  "devils_advocate_risks": [
+    "Challenges in scaling AI solutions to meet diverse client needs across various industries.",
+    "Potential resistance from organizations accustomed to traditional HR and finance processes, hindering adoption of AI-driven platforms."
+  ],
+  "citations": [
+    "https://nexus.opensphere.ai/openroll/mattias-lindell",
+    "https://fundraisingfox.com/companies/openroll",
+    "https://www.vcbacked.co/company/openroll",
+    "https://www.cbinsights.com/company/openroll/financials",
+    "https://www.openroll.com/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Openroll's AI-driven compensation and workforce planning platform aligns with SAP's enterprise software solutions, potentially enhancing SAP's HR offerings."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's focus on innovative technologies in various sectors could synergize with Openroll's AI solutions for HR and finance teams, fostering advancements in industrial applications."
+    }
+  ],
+  "flags_version": 2
+}

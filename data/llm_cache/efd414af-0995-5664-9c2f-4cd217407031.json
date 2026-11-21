@@ -1,0 +1,71 @@
+{
+  "canonical_name": "Zavo",
+  "description": "Zavo offers an AI-native platform that integrates payments, point of sale, and AI agents to streamline restaurant operations.",
+  "founders_enriched": [
+    {
+      "full_name": "Can Zehebi",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Background in procurement and consulting."
+    },
+    {
+      "full_name": "Ilkan Gezer",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Background in procurement and consulting."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "Raised $500,000 in a seed round in September 2025.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing adoption of AI in the hospitality industry presents a timely opportunity for Zavo to revolutionize restaurant management.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing traditional restaurants to transition to AI-driven systems may face resistance.",
+    "Integration Challenges: Ensuring seamless integration with existing restaurant technologies could be complex."
+  ],
+  "citations": [
+    "https://yespress.io/zavo",
+    "https://www.vcbacked.co/company/zavo"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Zavo's AI-driven solutions for procurement and supply chain management align with Evonik's focus on innovative technologies in the chemical industry."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Zavo's integrated platform for procurement and operations complements SAP's enterprise resource planning systems, potentially enhancing supply chain efficiency."
+    }
+  ],
+  "flags_version": 2
+}

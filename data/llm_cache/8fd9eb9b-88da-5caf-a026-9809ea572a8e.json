@@ -1,0 +1,60 @@
+{
+  "canonical_name": "AutoSERA",
+  "description": "AutoSERA develops a method to identify potent human antibodies directly from blood proteins, bypassing traditional genetic analyses.",
+  "founders_enriched": [
+    {
+      "full_name": "Professor Albert Heck",
+      "role": "Principal Investigator",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Utrecht University"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Utrecht University"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": null,
+  "city": "Utrecht",
+  "raised_institutional_round": false,
+  "funding_summary": "In June 2026, Professor Heck's AutoSERA project received an ERC Proof of Concept Grant worth €150,000 to advance the technology.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing demand for effective therapeutic antibodies necessitates innovative discovery methods to accelerate drug development.",
+  "devils_advocate_risks": [
+    "Technical Validation: Ensuring the accuracy and reproducibility of the antibody identification process.",
+    "Market Adoption: Convincing pharmaceutical companies to integrate a new antibody discovery method into their existing pipelines."
+  ],
+  "citations": [
+    "https://utrecht-universiteit.nl/en/news/three-erc-proof-of-concept-grants-awarded-to-faculty-of-science-researchers"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their focus on innovative therapeutic antibodies aligns with AutoSERA's antibody discovery technology."
+    },
+    {
+      "lp_name": "QIAGEN",
+      "reason": "Specializing in sample and assay technologies, QIAGEN could benefit from integrating AutoSERA's antibody identification methods into their diagnostic platforms."
+    }
+  ],
+  "flags_version": 2
+}

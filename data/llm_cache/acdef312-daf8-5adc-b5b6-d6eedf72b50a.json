@@ -1,0 +1,73 @@
+{
+  "canonical_name": "Mirabelle",
+  "description": "Mirabelle is developing a personal robot chef capable of chopping, cooking, and serving fresh meals on demand.",
+  "founders_enriched": [
+    {
+      "full_name": "Hugo Jenny",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Founder of Mirabelle"
+    },
+    {
+      "full_name": "Bastien Davalos",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Founder of Mirabelle"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Paris",
+  "raised_institutional_round": true,
+  "funding_summary": "In December 2024, raised €1.3 million in seed funding. In April 2026, secured an additional €6 million in funding.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In December 2024, raised €1.3 million in seed funding. In April 2026, secured an additional €6 million in funding.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "Advancements in vision AI have made it feasible to create machines with the precision and adaptability of a private chef.",
+  "devils_advocate_risks": [
+    "Technical Complexity: Developing a robot capable of safely and efficiently preparing a wide variety of meals presents significant engineering challenges.",
+    "Market Adoption: Convincing consumers to integrate a robotic chef into their daily routines may face resistance due to cost, trust, and usability concerns."
+  ],
+  "citations": [
+    "https://mirabelle.fr/qui-sommes-nous-decouvrir/",
+    "https://funding.tech.eu/companies/mirabelle-81ab3be3",
+    "https://www.hiroz.co/annuaire-startups-financees/mirabelle/",
+    "https://svatlas.io/companies/mirabelle"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could be leveraged to develop innovative components for Mirabelle's robotic chef."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's expertise in enterprise software could assist Mirabelle in developing robust data analytics and management systems for their robotic kitchen solutions."
+    }
+  ],
+  "flags_version": 2
+}

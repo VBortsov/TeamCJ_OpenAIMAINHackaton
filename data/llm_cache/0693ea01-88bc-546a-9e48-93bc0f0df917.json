@@ -1,0 +1,81 @@
+{
+  "canonical_name": "AICE",
+  "description": "AICE develops modular autonomous subsea systems designed for fleet defense, capable of operating without GPS or reliable communication links.",
+  "founders_enriched": [
+    {
+      "full_name": "Grégoire Chomette",
+      "role": null,
+      "linkedin_url": "https://www.linkedin.com/in/gregoirechomette",
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "MIT"
+      ],
+      "prior_companies": [
+        "MIT",
+        "NASA"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Aerospace Engineering background."
+    },
+    {
+      "full_name": "Rémi Bouteiller",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ENS Paris-Saclay"
+      ],
+      "prior_companies": [
+        "ENS Paris-Saclay"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Embedded Systems and Data Processing background."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Versailles",
+  "raised_institutional_round": false,
+  "funding_summary": "In July 2026, AICE joined Y Combinator's P26 batch.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing need for scalable and cost-effective underwater defense solutions presents a timely opportunity for AICE's technology.",
+  "devils_advocate_risks": [
+    "Challenges in scaling production to meet potential demand.",
+    "Integration complexities with existing naval defense systems."
+  ],
+  "citations": [
+    "https://www.linkedin.com/in/gregoirechomette",
+    "https://aicepower.com/company",
+    "https://aicepower.com/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could be crucial for developing durable and efficient underwater drone components."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch's expertise in sensors and embedded systems aligns with AICE's focus on autonomous underwater vehicles."
+    }
+  ],
+  "flags_version": 2
+}

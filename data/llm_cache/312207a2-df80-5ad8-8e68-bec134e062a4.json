@@ -1,0 +1,61 @@
+{
+  "canonical_name": "GenThADy",
+  "description": "GenThADy is a research project focusing on developing gene therapies to convert the APOE4 allele to APOE3 as a preventive measure against Alzheimer's disease.",
+  "founders_enriched": [
+    {
+      "full_name": "Prof. Dr. Martin Fuhrmann",
+      "role": "Principal Investigator",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "University of Bonn"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Neuroscientist at the Deutsches Zentrum für Neurodegenerative Erkrankungen (DZNE)"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Bonn",
+  "raised_institutional_round": false,
+  "funding_summary": "The project has been awarded a €150,000 Proof of Concept Grant from the European Research Council (ERC) for the period from June 2026 to November 2027.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "With the increasing prevalence of Alzheimer's disease and the identification of APOE4 as a major genetic risk factor, there is a pressing need for preventive therapies targeting this genetic variant.",
+  "devils_advocate_risks": [
+    "Technical Feasibility: Ensuring the safe and effective conversion of APOE4 to APOE3 in human subjects.",
+    "Regulatory Approval: Navigating the complex regulatory pathways for gene therapies, which can be time-consuming and uncertain."
+  ],
+  "citations": [
+    "https://www.uni-bonn.de/en/research-and-teaching/research-profile/awards-and-prizes/erc-grants?set_language=en",
+    "https://cordis.europa.eu/project/id/101292850"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "As a pharmaceutical company, Boehringer Ingelheim could provide valuable expertise and resources in the development and commercialization of gene therapies for neurodegenerative diseases."
+    },
+    {
+      "lp_name": "QIAGEN",
+      "reason": "Specializing in molecular diagnostics, QIAGEN could offer complementary technologies for the analysis and monitoring of genetic modifications in therapeutic applications."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,78 @@
+{
+  "canonical_name": "Elyra",
+  "description": "Elyra offers an AI-powered reservation system for restaurants, combining voice agents, email automation, guest intelligence, and smart table allocation in a single platform.",
+  "founders_enriched": [
+    {
+      "full_name": "Felix Odeberg Glasenapp",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "KTH Royal Institute of Technology"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-founder and CEO of Elyra."
+    },
+    {
+      "full_name": "Alan Mando",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "WU Vienna"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-founder of Elyra."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2023,
+  "city": "Stockholm",
+  "raised_institutional_round": true,
+  "funding_summary": "Reported to have received a $500,000 investment from Y Combinator.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Reported to have received a $500,000 investment from Y Combinator.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing adoption of AI in the hospitality industry presents a timely opportunity for Elyra to revolutionize restaurant operations.",
+  "devils_advocate_risks": [
+    "Potential challenges in scaling the AI system to handle diverse restaurant environments.",
+    "Competition from established reservation platforms with larger market shares."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/companies/elyra",
+    "https://www.hhs.se/news/sse/2026/sse-business-lab-admits-diverse-ai-startup-batch/",
+    "https://www.hitta.se/verksamhet/elyra-ab-jmuffiiop",
+    "https://www.zeitgeist.bot/company/elyra",
+    "https://startupmap.one/startup/elyra_se"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Elyra's AI-driven reservation system could integrate with SAP's enterprise solutions, enhancing operational efficiency for restaurant clients."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "DHL's logistics expertise could support Elyra in optimizing supply chain management for restaurants, ensuring timely deliveries and inventory management."
+    }
+  ],
+  "flags_version": 2
+}

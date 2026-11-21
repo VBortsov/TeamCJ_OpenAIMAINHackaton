@@ -1,0 +1,72 @@
+{
+  "canonical_name": "SHRARE Technology AG",
+  "description": "SHRARE Technology AG develops an AI-assisted platform for research and development in the field of rare diseases, supporting researchers and institutions in project structuring, scientific positioning, and addressing regulatory, clinical, and partnership aspects.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Alexandre Nicolas Gabioud",
+      "role": "Chairman of the Board of Directors",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Founding Team"
+    },
+    {
+      "full_name": "Fabio Cavalli",
+      "role": "Board Member",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Founding Team"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "No publicly available information indicating that SHRARE Technology AG has raised any funding rounds, including seed or Series A investments. Additionally, there are no records of non-dilutive funding such as grants, prizes, awards, or fellowships.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing prevalence of rare diseases and the growing demand for specialized research solutions create a timely opportunity for SHRARE's platform.",
+  "devils_advocate_risks": [
+    "Challenges in integrating AI technologies effectively into the complex landscape of rare disease research.",
+    "Potential difficulties in establishing partnerships with key stakeholders in the healthcare and biotechnology sectors."
+  ],
+  "citations": [
+    "https://www.moneyhouse.ch/en/company/shrare-technology-ag-14231367161",
+    "https://www.shrare.net/news/shrare-launches-the-rare-assembly-grant",
+    "https://ranq.ch/unternehmen/shrare-technology-ag"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their interest in innovative healthcare solutions aligns with SHRARE's focus on rare diseases."
+    },
+    {
+      "lp_name": "QIAGEN",
+      "reason": "Their expertise in molecular diagnostics complements SHRARE's work in rare disease research."
+    }
+  ],
+  "flags_version": 2
+}

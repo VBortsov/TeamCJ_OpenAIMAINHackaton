@@ -1,0 +1,82 @@
+{
+  "canonical_name": "Squid",
+  "description": "Squid offers AI-powered grid planning software that integrates various power-system models into a unified, governed model, enhancing consistency and visibility in planning processes.",
+  "founders_enriched": [
+    {
+      "full_name": "Conor Jones",
+      "role": "Co-Founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Octopus Energy",
+        "National Grid",
+        "Boston Consulting Group (BCG)"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "founders.io"
+    },
+    {
+      "full_name": "George Kolokotronis",
+      "role": "Co-Founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of Cambridge"
+      ],
+      "prior_companies": [
+        "Octopus Energy",
+        "AWS"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": false,
+      "source_of_identity": "founders.io"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $500K in July 2026 (Seed Round), $6.0M in May 2026 (Venture Round), and $4.0M in January 2024 (Series A).",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $500K in July 2026 (Seed Round), $6.0M in May 2026 (Venture Round), and $4.0M in January 2024 (Series A).)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing complexity of energy grids due to the transition to renewable energy sources creates a pressing need for advanced planning tools like Squid's.",
+  "devils_advocate_risks": [
+    "Challenges in integrating diverse power-system models into a cohesive platform.",
+    "Potential resistance from established industry players to adopting new AI-driven planning solutions."
+  ],
+  "citations": [
+    "https://founders.io/company/squid",
+    "https://ycwatcher.info/en/companies/squid",
+    "https://millionrounds.com/company/squid",
+    "https://www.squid.energy/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Squid's AI-powered grid planning aligns with Bosch's focus on smart grid technologies and energy solutions."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Squid's innovative approach to power grid planning complements Evonik's interest in sustainable energy and industrial technologies."
+    }
+  ],
+  "flags_version": 2
+}

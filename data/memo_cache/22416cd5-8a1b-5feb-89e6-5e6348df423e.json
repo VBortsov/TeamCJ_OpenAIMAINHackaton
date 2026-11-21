@@ -1,0 +1,27 @@
+{
+  "one_liner": "Studyond connects students, universities and companies for innovation projects; its August 2026 financing makes it worth checking whether it is still pre-priced-round.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich recognizes Studyond as an academic spin-off.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "Studyond raised CHF 2 million in August 2026 to support growth; the financing terms are unknown.",
+      "source_url": null
+    },
+    {
+      "signal": "Model score 78.5 of 100 (at the top of the reference cohort). The ETH spin-off, technical founder and founder PhD flags lifted the score.",
+      "source_url": null
+    }
+  ],
+  "team": "Dr. Philipp Wetzel, CEO and project lead, is the only founder listed. The founder record identifies him as technical, records a PhD, and lists the University of St. Gallen and prior experience at Calculum. The model's solo-founder flag is not confirmed by the record.",
+  "why_early": "Unknown. Studyond completed a CHF 2 million financing round in August 2026, but whether that round was priced is unknown.",
+  "devils_advocate_risks": [
+    "Adoption across universities and companies may be difficult.",
+    "Data privacy and security are important to maintaining trust on the platform."
+  ],
+  "next_step": "HTGF Digital Tech team: Ask the founders whether Studyond has ever closed a priced equity round, including the August 2026 financing.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "22416cd5-8a1b-5feb-89e6-5e6348df423e",
+  "input_hash": "763c0cc385f5ebdb"
+}

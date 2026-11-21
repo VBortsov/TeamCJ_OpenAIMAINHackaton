@@ -1,0 +1,83 @@
+{
+  "canonical_name": "42 Entrepreneurs",
+  "description": "42 Entrepreneurs is an association dedicated to supporting and mentoring students from the coding school 42 Paris and members of the network42 in their entrepreneurial endeavors.",
+  "founders_enriched": [
+    {
+      "full_name": "Yue Wang",
+      "role": "President",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Leadership position in 42 Entrepreneurs"
+    },
+    {
+      "full_name": "Eric Djavid",
+      "role": "Treasurer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Leadership position in 42 Entrepreneurs"
+    },
+    {
+      "full_name": "Nicolas Mattera",
+      "role": "Secretary General",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Leadership position in 42 Entrepreneurs"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": null,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "In the current tech-driven era, fostering entrepreneurial talent is crucial for driving innovation and economic growth.",
+  "devils_advocate_risks": [
+    "Sustaining Engagement: Maintaining active participation from both mentors and mentees over time can be challenging.",
+    "Resource Allocation: Ensuring adequate resources and funding to support a growing number of startups may strain the association's capabilities."
+  ],
+  "citations": [
+    "https://42entrepreneurs.com/conditions-generales",
+    "https://foundercal.com/events/pitch-roast-2nd-edition-V1GKZJQEqtWk2A8"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a global leader in enterprise software, SAP could benefit from engaging with a network of emerging tech entrepreneurs."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "With its emphasis on logistics and supply chain solutions, DHL could find value in collaborating with startups developing innovative technologies in these areas."
+    }
+  ],
+  "flags_version": 2
+}

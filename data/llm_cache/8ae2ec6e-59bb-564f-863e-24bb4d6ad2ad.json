@@ -1,0 +1,64 @@
+{
+  "canonical_name": "Ionic Wind",
+  "description": "Ionic Wind develops ultra-thin, silent airflow accelerators that replace mechanical fans in electronics, enabling silent and compact cooling solutions.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Donato Rubinetti",
+      "role": "CEO and co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Empa"
+      ],
+      "prior_companies": [
+        "Empa"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "CEO and co-founder of Ionic Wind, led the spin-out from Empa."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "Raised $2.1 million USD in a pre-seed round to accelerate the industrialization of its solid-state airflow technology.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for compact and silent cooling solutions in next-generation electronics, such as high-performance laptops and edge-AI devices, presents a significant market opportunity.",
+  "devils_advocate_risks": [
+    "Challenges in scaling production to meet market demand.",
+    "Potential technical hurdles in integrating the technology into existing electronic devices."
+  ],
+  "citations": [
+    "https://map.city-of-bits.com/company/ionic-wind/",
+    "https://www.bsv.admin.ch/en/newnsb/GlYavDa_w4aQmpsOO565s",
+    "https://ionicwind.ch/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, aligning with Ionic Wind's focus on innovative cooling solutions for electronics."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch's expertise in automotive and industrial technologies could synergize with Ionic Wind's solid-state cooling technology for automotive electronics."
+    }
+  ],
+  "flags_version": 2
+}

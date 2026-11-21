@@ -1,0 +1,48 @@
+{
+  "canonical_name": "Siiips Sàrl",
+  "description": "The company's primary activity is the operation of various public establishments, including cafés, restaurants, bars, and tea-rooms.",
+  "founders_enriched": [
+    {
+      "full_name": "Lenka Krizanová",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Glovont SA"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Management listed for Siiips Sàrl"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Lausanne",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "out_of_mandate",
+  "inflection_why_now": "",
+  "devils_advocate_risks": [],
+  "citations": [
+    "https://www.pappers.ch/de/company/siiips-sarl-451143758"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

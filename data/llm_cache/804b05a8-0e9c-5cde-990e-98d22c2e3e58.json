@@ -1,0 +1,53 @@
+{
+  "canonical_name": "Dream Machines",
+  "description": "Dream Machines develops AI-powered robotic arms designed to automate variable, repetitive manufacturing tasks for European SMEs.",
+  "founders_enriched": [
+    {
+      "full_name": "Dominique Paul",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Studied mathematics and statistics at ETH Zurich, experience in computational genomics, machine learning scaling laws, and freelance ML engineering."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "As of November 2026, there is no publicly available information indicating that Dream Machines has raised any funding rounds, including seed or Series A. The company has not received non-dilutive funding such as grants, prizes, awards, or fellowships.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing convergence of global labor costs for routine tasks presents a significant opportunity for automation solutions like those offered by Dream Machines.",
+  "devils_advocate_risks": [
+    "Challenges in scaling AI-powered robotic solutions to accommodate the diverse needs of various SMEs.",
+    "Potential difficulties in integrating new robotic systems with existing manufacturing processes and infrastructure."
+  ],
+  "citations": [
+    "https://tufalabs.ai/news/announce-tufa-talks-episode-5/",
+    "https://dream-machines.eu/",
+    "https://www.moneyhouse.ch/de/company/dream-machines-gmbh-3198532331"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

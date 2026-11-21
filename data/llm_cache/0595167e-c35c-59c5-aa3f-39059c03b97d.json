@@ -1,0 +1,73 @@
+{
+  "canonical_name": "Zalos",
+  "description": "Zalos provides AI-powered computer agents that automate finance operations by logging into existing enterprise systems to perform tasks such as invoice processing, reconciliations, and payroll without requiring system replacements.",
+  "founders_enriched": [
+    {
+      "full_name": "William Fairbairn",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Founder of Zalos"
+    },
+    {
+      "full_name": "Hung Hoang",
+      "role": "CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Founder of Zalos"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Zalos has raised a total of $4.1 million across three funding rounds: $3.6 million seed round on March 24, 2026, and a convertible note on October 1, 2025.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Zalos has raised a total of $4.1 million across three funding rounds: $3.6 million seed round on March 24, 2026, and a convertible note on October 1, 2025.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of financial systems and the need for automation present a timely opportunity for Zalos to offer solutions that integrate seamlessly with existing infrastructures.",
+  "devils_advocate_risks": [
+    "Integration Challenges: Ensuring compatibility and seamless integration of AI agents with diverse and legacy enterprise systems could be complex.",
+    "Scalability Concerns: Maintaining performance and reliability as the number of automated processes and clients grows may pose operational challenges."
+  ],
+  "citations": [
+    "https://www.globenewswire.com/news-release/2026/03/24/3261268/0/en/Zalos-raises-3-6M-to-build-Computer-Agents-that-operate-finance-systems-the-way-humans-do.html",
+    "https://startups.fru.dev/companies/zalos",
+    "https://www.cbinsights.com/company/zalos",
+    "https://www.cbinsights.com/company/zalos/financials"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "As a leading enterprise software provider, SAP's existing ERP systems could integrate with Zalos' AI agents to enhance financial automation capabilities."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "With extensive logistics and supply chain operations, DHL could benefit from Zalos' automation to streamline financial processes across its global network."
+    }
+  ],
+  "flags_version": 2
+}

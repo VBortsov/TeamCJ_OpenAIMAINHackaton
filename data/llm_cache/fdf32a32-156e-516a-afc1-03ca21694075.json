@@ -1,0 +1,108 @@
+{
+  "canonical_name": "Loka AI",
+  "description": "Loka AI develops secure, explainable AI agents tailored for HR departments and recruiting companies, focusing on internal candidate search and automated CV screening.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Markus Binder",
+      "role": "AI & Tech specialist",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "University of Regensburg",
+        "Technical University of Munich"
+      ],
+      "prior_companies": [
+        "BMW Group Corporate R&D"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Research and publications on Large Language Models (LLMs) and explainable AI."
+    },
+    {
+      "full_name": "Ha Do",
+      "role": "Product expert",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Over ten years of experience in building and scaling B2B SaaS products."
+    },
+    {
+      "full_name": "Eugen Paul",
+      "role": "HR-Tech Champion",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "13 years of experience in building and scaling SaaS businesses in the HR-Tech sector."
+    },
+    {
+      "full_name": "Ahmad Owaydate",
+      "role": "AI Founder Associate",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Technical University of Munich"
+      ],
+      "prior_companies": [
+        "BMW Group Corporate R&D"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Conducted AI research at BMW Group Corporate R&D."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2024,
+  "city": "Munich",
+  "raised_institutional_round": false,
+  "funding_summary": "Received €25,000 in startup funding from AI+Munich Batch 8 in March 2024; finalist in the Munich Innovation Challenge 2024 in July 2024; secured second place in the BayStartUP competition in March 2025; accepted into the Spring 2025 batch of 'The Migrant Accelerator' in April 2025; awarded the EXIST Start-up Grant in February 2026.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for data privacy and compliance with regulations like the EU AI Act makes Loka AI's locally hosted AI solutions timely and essential.",
+  "devils_advocate_risks": [
+    "Challenges in scaling AI solutions to meet diverse client needs.",
+    "Potential difficulties in integrating with existing HR systems and workflows."
+  ],
+  "citations": [
+    "https://loka-ai.de/ueber-uns/",
+    "https://loka-ai.de/en/2025/03/18/loka-ai-wins-2nd-place-in-the-baystartup-competition/",
+    "https://loka-ai.de/en/2024/03/20/loka-ai-wins-startup-funding-from-aimunich/",
+    "https://loka-ai.de/2024/07/23/loka-ai-ist-finalist-beim-muenchen-innovationswettbewerb-2024/",
+    "https://loka-ai.de/en/2025/04/04/loka-ai-becomes-part-of-the-migrant-accelerator-spring-2025/",
+    "https://loka-ai.de/en/2026/02/26/loka-ai-receives-exist-start-up-grant/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Loka AI's focus on secure, explainable AI agents for corporate HR aligns with SAP's enterprise solutions, potentially enhancing SAP SuccessFactors with advanced AI capabilities."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in innovative technologies could complement Loka AI's AI-driven HR solutions, fostering advancements in talent management within the chemical industry."
+    }
+  ],
+  "flags_version": 2
+}

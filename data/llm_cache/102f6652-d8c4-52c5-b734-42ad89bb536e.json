@@ -1,0 +1,66 @@
+{
+  "canonical_name": "Agent-BigEarth",
+  "description": "Agent-BigEarth is an AI-powered digital assistant designed to facilitate seamless interaction with Copernicus Earth observation data, enabling users to query and retrieve relevant environmental information.",
+  "founders_enriched": [
+    {
+      "full_name": "Prof. Dr. Begüm Demir",
+      "role": "Principal Investigator",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Technische Universität Berlin"
+      ],
+      "prior_companies": [
+        "Technische Universität Berlin",
+        "BIFOLD"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Principal Investigator of the Agent-BigEarth project."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Berlin",
+  "raised_institutional_round": false,
+  "funding_summary": "Agent-BigEarth received a €150,000 Proof of Concept Grant from the European Research Council (ERC).",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The unprecedented increase in satellite data volume necessitates advanced AI solutions to make this information accessible and actionable for various stakeholders.",
+  "devils_advocate_risks": [
+    "Ensuring the AI system's accuracy and reliability in interpreting complex environmental data.",
+    "Achieving user adoption across diverse sectors, including journalism, policy-making, and research."
+  ],
+  "citations": [
+    "https://rsim.berlin/projects",
+    "https://www.bifold.berlin/people/prof-dr-beguem-demir.html",
+    "https://ai.berlin/news/detail/prof-dr-beguem-demir-deputy-director-of-bifold",
+    "https://cordis.europa.eu/project/id/101292498"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could benefit from enhanced environmental intelligence provided by Agent-BigEarth."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "As a pharmaceutical company, Boehringer Ingelheim could leverage environmental data to assess the impact of climate change on health and disease patterns."
+    }
+  ],
+  "flags_version": 2
+}

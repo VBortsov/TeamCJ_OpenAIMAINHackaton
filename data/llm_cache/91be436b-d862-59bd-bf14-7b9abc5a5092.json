@@ -1,0 +1,63 @@
+{
+  "canonical_name": "Even Founders",
+  "description": "Even Founders is a non-profit organization dedicated to increasing the number of women founders and funding opportunities for them in the Nordic region.",
+  "founders_enriched": [
+    {
+      "full_name": "Nina Berchoux",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "LinkedIn"
+    },
+    {
+      "full_name": "Stine Jersie Olsen",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "LinkedIn"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": 2023,
+  "city": null,
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "out_of_mandate",
+  "inflection_why_now": "The increasing recognition of gender disparities in entrepreneurship and the growing emphasis on diversity and inclusion present a timely opportunity for Even Founders to address these challenges.",
+  "devils_advocate_risks": [
+    "Potential challenges in scaling operations across multiple Nordic countries.",
+    "Difficulty in securing sustained funding and partnerships to support their initiatives."
+  ],
+  "citations": [
+    "https://www.linkedin.com/posts/evenfounders_the-state-of-nordic-women-founded-startups-activity-7449769191760531456-UPiJ",
+    "https://find-virksomhed.dk/firma/even-founders-44427427",
+    "https://fractional.evenfounders.com/about-us"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

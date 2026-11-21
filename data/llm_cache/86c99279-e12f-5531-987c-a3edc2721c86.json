@@ -1,0 +1,79 @@
+{
+  "canonical_name": "Armature",
+  "description": "Armature helps companies monitor, analyze, and optimize how AI agents experience their products.",
+  "founders_enriched": [
+    {
+      "full_name": "Theodore Otzenberger",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Palantir",
+        "Tsuga",
+        "Joko"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": false,
+      "source_of_identity": "Previously at Palantir, Tsuga, and Joko."
+    },
+    {
+      "full_name": "Louis Scremin",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Joko"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Previously at Joko."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "Paris",
+  "raised_institutional_round": true,
+  "funding_summary": "Seed Round: April 1, 2026, led by Y Combinator.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Seed Round: April 1, 2026, led by Y Combinator.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing integration of AI agents into software products creates a demand for tools that ensure compatibility and performance.",
+  "devils_advocate_risks": [
+    "Difficulty in scaling AI agent testing across diverse platforms.",
+    "Challenges in differentiating from existing AI observability tools."
+  ],
+  "citations": [
+    "https://armatureai.io/about",
+    "https://startups.fru.dev/companies/armature",
+    "https://vcinfo.io/companies/armature.tech",
+    "https://www.roundfunded.com/en/yc-startup/armature"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Armature's focus on AI development tools aligns with Evonik's interest in innovative technologies."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Armature's AI agents and developer tools could complement SAP's enterprise software solutions."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,75 @@
+{
+  "canonical_name": "Immitra Bio",
+  "description": "Immitra Bio is developing a scalable in-vivo gene editing platform for one-time curative therapies targeting genetic diseases.",
+  "founders_enriched": [
+    {
+      "full_name": "Jan Nelis",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "venture-leaders.ch"
+    },
+    {
+      "full_name": "Amir Taheri-Ghahfarokhi",
+      "role": "Chief Scientific Officer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "venture-leaders.ch"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised CHF 2.4 million in a pre-seed round in July 2026.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised CHF 2.4 million in a pre-seed round in July 2026.)",
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The recent CHF 2.4 million pre-seed funding round positions Immitra Bio to advance its gene editing platform and lead candidate, IB-003.",
+  "devils_advocate_risks": [
+    "Challenges in demonstrating the safety and efficacy of in-vivo gene editing therapies in clinical trials.",
+    "Potential regulatory hurdles in obtaining approvals for new gene editing treatments."
+  ],
+  "citations": [
+    "https://www.venture-leaders.ch/Immitra-Bio-The-Venture-Leader-Biotech-targeting-genetic-diseases",
+    "https://raising.fi/news/immitra-bio-pre-seed-july-2026",
+    "https://bioalps.org/immitra-bio-gebertrufstiftung-grant/",
+    "https://www.eu-startups.com/2026/07/zurich-based-immitra-bio-secures-e2-58-million-to-scale-its-scalable-in-vivo-genetic-medicine-platform/",
+    "https://immitrabio.com/",
+    "https://immitrabio.com/press/2026/20260721_pre-seed_announcement.html"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Immitra Bio is developing in-vivo gene editing therapies, aligning with Boehringer Ingelheim's focus on innovative biopharmaceuticals."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "The company's scalable gene editing platform could benefit from Evonik's expertise in biotechnology and materials science."
+    }
+  ],
+  "flags_version": 2
+}

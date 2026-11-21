@@ -460,5 +460,126 @@
     "url": "https://luma.com/ofjo44q1",
     "description": "European tech & founder scouting event in Copenhagen.",
     "projects": []
+  },
+  {
+    "type": "lab",
+    "name": "36th Expert Session: Regulatory Essentials – From Proof of Concept to First-in-Human Clinical Studies and What It All Means for Xenotransplantation",
+    "organiser": "TUM Venture Labs",
+    "location": "Munich",
+    "country_code": "DE",
+    "date": "November 23, 2026",
+    "url": "https://www.tum-venture-labs.de/events/36th-expert-session-regulatory-essentials---from-proof-of-concept-to-first-in-human-clinical-studies-and-what-it-all-means-for-xenotransplantation/",
+    "description": "TUM Venture Labs deeptech & founder ecosystem event in Munich.",
+    "projects": []
+  },
+  {
+    "type": "lab",
+    "name": "Open House AM Check-In",
+    "organiser": "TUM Venture Labs",
+    "location": "Munich",
+    "country_code": "DE",
+    "date": "November 24, 2026",
+    "url": "https://www.tum-venture-labs.de/events/open-house-am-check-in/",
+    "description": "TUM Venture Labs deeptech & founder ecosystem event in Munich.",
+    "projects": []
+  },
+  {
+    "type": "lab",
+    "name": "Founders' regulars' table: Food & Agtech",
+    "organiser": "TUM Venture Labs",
+    "location": "Munich",
+    "country_code": "DE",
+    "date": "November 26, 2026",
+    "url": "https://www.tum-venture-labs.de/events/founders-regulars-table-food-agtech-3/",
+    "description": "TUM Venture Labs deeptech & founder ecosystem event in Munich.",
+    "projects": []
+  },
+  {
+    "type": "lab",
+    "name": "Frontier AI Builder Series",
+    "organiser": "TUM Venture Labs",
+    "location": "Munich",
+    "country_code": "DE",
+    "date": "December 16, 2026",
+    "url": "https://www.tum-venture-labs.de/events/frontier-ai-builder-series-4/",
+    "description": "TUM Venture Labs deeptech & founder ecosystem event in Munich.",
+    "projects": []
+  },
+  {
+    "type": "lab",
+    "name": "The Weihenstephan Entrepreneurship Day",
+    "organiser": "TUM Venture Labs",
+    "location": "Munich",
+    "country_code": "DE",
+    "date": "January 12, 2027",
+    "url": "https://www.tum-venture-labs.de/events/weihenstephaner-unternehmertag/",
+    "description": "TUM Venture Labs deeptech & founder ecosystem event in Munich.",
+    "projects": []
+  },
+  {
+    "type": "lab",
+    "name": "Healthcare Happy Hour",
+    "organiser": "TUM Venture Labs",
+    "location": "Munich",
+    "country_code": "DE",
+    "date": "January 12, 2027",
+    "url": "https://www.tum-venture-labs.de/events/healthcare-happy-hour-3/",
+    "description": "TUM Venture Labs deeptech & founder ecosystem event in Munich.",
+    "projects": []
+  },
+  {
+    "type": "lab",
+    "name": "Workshop Brewery 2030+",
+    "organiser": "TUM Venture Labs",
+    "location": "Munich",
+    "country_code": "DE",
+    "date": "January 13, 2027",
+    "url": "https://www.tum-venture-labs.de/events/workshop-brewery-2030/",
+    "description": "TUM Venture Labs deeptech & founder ecosystem event in Munich.",
+    "projects": []
+  },
+  {
+    "type": "lab",
+    "name": "AECO Hackathon @BAU 2027",
+    "organiser": "TUM Venture Labs",
+    "location": "Munich",
+    "country_code": "DE",
+    "date": "January 14, 2027",
+    "url": "https://www.tum-venture-labs.de/events/aeco-hackathon-bau-2027/",
+    "description": "TUM Venture Labs deeptech & founder ecosystem event in Munich.",
+    "projects": []
+  },
+  {
+    "type": "lab",
+    "name": "Hospitality Techathon @ INTERNORGA 2027",
+    "organiser": "TUM Venture Labs",
+    "location": "Munich",
+    "country_code": "DE",
+    "date": "March 12, 2027",
+    "url": "https://www.tum-venture-labs.de/events/hospitality-techathon-internorga-2027/",
+    "description": "TUM Venture Labs deeptech & founder ecosystem event in Munich.",
+    "projects": []
+  },
+  {
+    "type": "lab",
+    "name": "B|E Masterclass - Marketing for Startups",
+    "organiser": "TUM Venture Labs",
+    "location": "Munich",
+    "country_code": "DE",
+    "date": "November 19, 2026",
+    "url": "https://www.tum-venture-labs.de/events/masterclass-marketing-for-startups-2-2/",
+    "description": "TUM Venture Labs deeptech & founder ecosystem event in Munich.",
+    "projects": []
+  },
+  {
+    "type": "lab",
+    "name": "35th Expert Session: Invention Harvesting - Recognize IP, Create Value",
+    "organiser": "TUM Venture Labs",
+    "location": "Munich",
+    "country_code": "DE",
+    "date": "November 16, 2026",
+    "url": "https://www.tum-venture-labs.de/events/35th-expert-session-invention-harvesting-recognize-ip-create-value/",
+    "description": "TUM Venture Labs deeptech & founder ecosystem event in Munich.",
+    "projects": []
   }
 ]

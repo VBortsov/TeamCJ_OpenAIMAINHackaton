@@ -1,0 +1,64 @@
+{
+  "canonical_name": "Clarm",
+  "description": "Clarm Atlas enables non-technical teams to build AI coworker agents using pre-approved building blocks, facilitating deployment into production.",
+  "founders_enriched": [
+    {
+      "full_name": "Marcus Storm-Mollard",
+      "role": "CEO and co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Imperial College London"
+      ],
+      "prior_companies": [
+        "Deutsche Bank",
+        "NielsenIQ"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "clarm.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2024,
+  "city": "Zh",
+  "raised_institutional_round": true,
+  "funding_summary": "Clarm is backed by Y Combinator (X25).",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Clarm is backed by Y Combinator (X25).)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for AI-driven automation in operational tasks presents a timely opportunity for Clarm's solutions.",
+  "devils_advocate_risks": [
+    "Ensuring seamless integration with diverse enterprise systems.",
+    "Maintaining robust security and compliance standards across various industries."
+  ],
+  "citations": [
+    "https://clarm.com/about/marcus/",
+    "https://clarm.com/about/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Clarm's AI agent builder could integrate with SAP's enterprise resource planning systems, enhancing operational efficiency."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Clarm's solutions could streamline operations in Evonik's chemical production processes, improving productivity."
+    }
+  ],
+  "flags_version": 2
+}

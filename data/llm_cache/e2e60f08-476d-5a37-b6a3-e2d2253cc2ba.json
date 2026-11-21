@@ -1,0 +1,50 @@
+{
+  "canonical_name": "Beemind GmbH",
+  "description": "",
+  "founders_enriched": [
+    {
+      "full_name": "Marc Raphael Wittwer",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Management listed as Marc Raphael Wittwer"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2022,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 3: Company founded in 2022 (older than 3.5 years)",
+  "htgf_vertical": "",
+  "inflection_why_now": "",
+  "devils_advocate_risks": [
+    "Lack of publicly available information about the product and market could pose challenges in assessing market demand and competition.",
+    "As a recent university spin-off, Beemind may face challenges in scaling operations and establishing a customer base."
+  ],
+  "citations": [
+    "https://www.moneyhouse.ch/de/company/beemind-gmbh-6403389671",
+    "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

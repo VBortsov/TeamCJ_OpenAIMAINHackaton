@@ -1,0 +1,81 @@
+{
+  "canonical_name": "Mosaic SoC",
+  "description": "Mosaic SoC designs low-power perception chips that enable devices to understand their environment in real-time, integrating object recognition, audio processing, and simultaneous localization and mapping on a single system-on-chip.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Alfio Di Mauro",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [
+        "ETH Zurich",
+        "PULP Platform"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "mosaicsoc.ch"
+    },
+    {
+      "full_name": "Dr. Moritz Scherer",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [
+        "ETH Zurich"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "mosaicsoc.ch"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2024,
+  "city": "Zurich",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $3.8 million in a pre-seed round in April 2026, led by Founderful with participation from Kick Foundation.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $3.8 million in a pre-seed round in April 2026, led by Founderful with participation from Kick Foundation.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for spatially aware devices, such as AR glasses and wearables, presents a timely opportunity for Mosaic SoC's technology to meet market needs for efficient, always-on perception capabilities.",
+  "devils_advocate_risks": [
+    "Market Adoption: The success of Mosaic SoC's chips depends on widespread adoption by Original Design Manufacturers (ODMs) and device manufacturers, which may face integration challenges.",
+    "Technological Competition: The semiconductor industry is highly competitive, with rapid technological advancements; Mosaic SoC must continually innovate to maintain a competitive edge."
+  ],
+  "citations": [
+    "https://mosaicsoc.ch/about/",
+    "https://seedtable.com/companies/mosaic-soc",
+    "https://seedtable.com/companies/mosaic-soc/funding-rounds"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could synergize with Mosaic SoC's semiconductor technology for developing innovative materials and processes in chip manufacturing."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim focuses on healthcare and pharmaceuticals, potentially aligning with Mosaic SoC's technology for applications in medical devices requiring real-time spatial intelligence."
+    }
+  ],
+  "flags_version": 2
+}

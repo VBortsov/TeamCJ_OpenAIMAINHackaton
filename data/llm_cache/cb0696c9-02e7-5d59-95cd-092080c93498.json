@@ -1,0 +1,61 @@
+{
+  "canonical_name": "AT-PRIME",
+  "description": "AT-PRIME is an ERC Proof-of-Concept project aiming to advance PRIME editing technology to broaden the scope of gene correction therapies.",
+  "founders_enriched": [
+    {
+      "full_name": "Professor Sabine Fuchs",
+      "role": "Lead Researcher",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Universitair Medisch Centrum Utrecht"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Affiliated with UMC Utrecht and specializes in metabolic disorders and innovative therapies."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Utrecht",
+  "raised_institutional_round": false,
+  "funding_summary": "Funded under the European Research Council's (ERC) Proof-of-Concept grant with a net EU contribution of €150,000.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The project's initiation in 2026 coincides with significant advancements in gene editing technologies, positioning AT-PRIME to capitalize on emerging therapeutic needs.",
+  "devils_advocate_risks": [
+    "Technical Risk: Achieving high editing efficiency in AT-rich DNA loci may present unforeseen challenges.",
+    "Regulatory Risk: Navigating the regulatory landscape for new gene therapies could delay development timelines."
+  ],
+  "citations": [
+    "https://www.cordis.europa.eu/project/id/101335565",
+    "https://utrecht-universiteit.nl/en/news/towards-effective-gene-therapy-for-more-metabolic-disorders"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their focus on innovative therapies aligns with AT-PRIME's goal of advancing gene correction treatments."
+    },
+    {
+      "lp_name": "QIAGEN",
+      "reason": "Specializing in sample and assay technologies, QIAGEN could support AT-PRIME in developing diagnostic tools for gene editing applications."
+    }
+  ],
+  "flags_version": 2
+}

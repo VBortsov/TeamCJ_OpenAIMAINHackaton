@@ -1,0 +1,97 @@
+{
+  "canonical_name": "Optohive",
+  "description": "Optohive develops a next-generation wearable brain imaging platform based on high-resolution fNIRS (functional Near-Infrared Spectroscopy) technology, enabling objective and accessible brain monitoring for both clinical and non-medical applications.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Dominik Wyser",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Prof. Roger Gassert",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Dr. Matteo Pavan",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Marc Willhaus",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Michael Wyser",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing demand for non-invasive, real-time brain monitoring solutions in both clinical and research settings presents a timely opportunity for Optohive's technology.",
+  "devils_advocate_risks": [
+    "Challenges in achieving widespread adoption of wearable brain imaging technology in clinical environments.",
+    "Potential technical hurdles in ensuring the accuracy and reliability of brain imaging data outside controlled laboratory settings."
+  ],
+  "citations": [
+    "https://relab.ethz.ch/spin-off/optohive.html"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

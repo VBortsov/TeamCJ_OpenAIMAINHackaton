@@ -84,7 +84,7 @@ class OpenAlexAdapter(BaseSignalAdapter):
         params = {
             "filter": filter_param,
             "select": select_fields,
-            "per_page": 100,
+            "per_page": 200,
             "sort": "publication_date:desc"
         }
 

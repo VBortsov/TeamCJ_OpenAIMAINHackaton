@@ -108,7 +108,9 @@ CITY_NORMALIZATION: Dict[str, str] = {
     "vienna": "Vienna",
     "wien": "Vienna",
     "herford": "Herford",
-    "delft": "Delft"
+    "delft": "Delft",
+    "würzburg": "Würzburg",
+    "augsburg": "Augsburg"
 }
 
 NOISE_CITY_PATTERNS = [
@@ -132,6 +134,9 @@ def normalize_city(city: Optional[str]) -> Optional[str]:
     # Strip postal code prefixes: e.g. "52062 Aachen"
     clean = re.sub(r"^\d{4,5}\s+", "", clean)
     clean = clean.split(",")[0].split("\n")[0].strip()
+
+    # Strip legal representation and corporate address noise
+    clean = re.sub(r"(?i)\s+(?:vertreten|postfach|c/o|gmbh|ug|haftungsbeschränkt).*$", "", clean).strip()
 
     # Strip trailing corporate/register noise words
     for noise in NOISE_CITY_PATTERNS:

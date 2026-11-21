@@ -1,0 +1,61 @@
+{
+  "canonical_name": "QUASAR",
+  "description": "QUASAR aims to develop retina-safe SWIR detectors with high detectivity and fast modulation response, enabling applications in advanced LiDAR systems and other high-performance sensing platforms.",
+  "founders_enriched": [
+    {
+      "full_name": "Prof. Dr. Maria A. Loi",
+      "role": "Lead Researcher",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "University of Groningen"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Researcher in photophysics and optoelectronics."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Groningen",
+  "raised_institutional_round": false,
+  "funding_summary": "Funded by the European Research Council (ERC) under the Horizon Europe program.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "Recent breakthroughs in solution-processed materials and large-area superlattice assembly present a timely opportunity to advance SWIR photodetector technology.",
+  "devils_advocate_risks": [
+    "Technical Risk: Challenges in achieving the desired performance metrics for the photodetectors.",
+    "Market Risk: Uncertainty regarding the adoption of new photodetector technologies in existing applications."
+  ],
+  "citations": [
+    "https://www.leopoldina.org/en/members/member-list/detail/maria-loi",
+    "https://cordis.europa.eu/project/id/101292398/de"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could complement QUASAR's work in developing novel photodetectors."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim's interest in innovative technologies could align with QUASAR's advancements in optoelectronics for medical imaging applications."
+    }
+  ],
+  "flags_version": 2
+}

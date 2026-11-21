@@ -1,0 +1,71 @@
+{
+  "canonical_name": "catchfree",
+  "description": "Catchfree produces plant-based seafood products, including shrimp, fish burgers, and snacks, made from rice, soy protein, and algae.",
+  "founders_enriched": [
+    {
+      "full_name": "Sevi",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-founder of Catchfree"
+    },
+    {
+      "full_name": "Eddy",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-founder of Catchfree"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": true,
+  "funding_summary": "In April 2025, Catchfree secured CHF 1.2 million in seed funding, led by the FortyOne Group and the Stiftung Startfeld, with participation from various industry and private investors, as well as business angels.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In April 2025, Catchfree secured CHF 1.2 million in seed funding, led by the FortyOne Group and the Stiftung Startfeld, with participation from various industry and private investors, as well as business angels.)",
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing consumer demand for sustainable and healthy food options presents a significant market opportunity for plant-based seafood alternatives.",
+  "devils_advocate_risks": [
+    "Supply Chain Challenges: Ensuring a consistent and scalable supply of plant-based ingredients may pose logistical difficulties.",
+    "Market Competition: The growing plant-based food sector is becoming increasingly competitive, requiring effective differentiation strategies."
+  ],
+  "citations": [
+    "https://sfp.ethz.ch/startups.html",
+    "https://www.zhk.ch/de/wirtschaft-und-politik/news/catchfree-akquiriert-12-millionen-franken.html"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in sustainable materials and chemicals, aligning with Catchfree's focus on plant-based seafood alternatives."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Boehringer Ingelheim has a history of investing in innovative food technologies, which complements Catchfree's mission to revolutionize seafood consumption."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,27 @@
+{
+  "one_liner": "CHoNova develops food manufacturing technology for chocolate producers and was recognized as an ETH Zurich spin-off in 2025.",
+  "top_signals": [
+    {
+      "signal": "ETH Zurich lists CHoNova as a recognized spin-off.",
+      "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
+    },
+    {
+      "signal": "The founder records identify Johannes Burkard as a technical co-founder and CTO with a PhD.",
+      "source_url": null
+    },
+    {
+      "signal": "Ranked 1 of 174 leads today, with a model score 91.2 of 100 (at the top of the reference cohort). The five listed founders, university spin-off status, and technical CTO with a PhD contributed positively.",
+      "source_url": null
+    }
+  ],
+  "team": "The founder records list Frédérique Elise Renée Delahaye as CEO and Dr. Johannes Burkard as CTO. Prof. Dr. Erich Josef Windhab chairs the board; Prof. Dr. Adolphus Petrus Gerardus Maria van Loon and Dr. Hans Peter Meyer are board members. Burkard and all three board members are listed as technical and as holding doctorates. The model flags a founder from a top university, but the founder records do not confirm that affiliation.",
+  "why_early": "Unknown whether a priced round has taken place; the available funding summary gives no round or amount details.",
+  "devils_advocate_risks": [
+    "Adoption by traditional chocolate manufacturers is uncertain.",
+    "It is unknown whether the system performs consistently across different production environments."
+  ],
+  "next_step": "HTGF Life Sciences & Chemistry team: Ask whether CHoNova has already closed a priced equity round.",
+  "memo_source": "openai:gpt-6.2-sol",
+  "entity_id": "173d9583-c23a-57b7-98dd-14e9709be0ff",
+  "input_hash": "7efc57d17059046e"
+}

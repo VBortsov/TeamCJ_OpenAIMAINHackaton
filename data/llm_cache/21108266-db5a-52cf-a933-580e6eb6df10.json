@@ -1,0 +1,86 @@
+{
+  "canonical_name": "DropGen AG",
+  "description": "DropGen AG develops a benchtop liquid handling platform utilizing microdroplet arrays for high-throughput screening in life sciences.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Claudius Dietsche",
+      "role": "Co-founder and CEO",
+      "linkedin_url": "https://ch.linkedin.com/in/claudius-dietsche",
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-founder and CEO"
+    },
+    {
+      "full_name": "Dr. Maximilian Breitfeld",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-founder and CTO"
+    },
+    {
+      "full_name": "Prof. Dr. Petra S. Dittrich",
+      "role": "Co-founder and Chief Scientific Officer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-founder and Chief Scientific Officer"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "In 2025, DropGen received CHF 10,000 from Venture Kick's first financial and entrepreneurial support stage.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing demand for efficient and scalable high-throughput screening methods in life sciences presents a timely opportunity for DropGen's technology.",
+  "devils_advocate_risks": [
+    "Market Adoption: Convincing established laboratories to transition to new microdroplet array platforms may pose challenges.",
+    "Technological Development: Ensuring the platform's scalability and reliability across diverse applications is critical."
+  ],
+  "citations": [
+    "https://ch.linkedin.com/in/claudius-dietsche",
+    "https://www.linkedin.com/posts/bioanalytics-dittrich-group_congratulations-to-dr-claudius-d-dr-maximilian-activity-7451898443259772928-txql",
+    "https://www.linkedin.com/company/dropgen",
+    "https://ch.linkedin.com/in/d-j-stark",
+    "https://dropgen.ch/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "DropGen's focus on miniaturized liquid handling platforms aligns with Evonik's interest in innovative life sciences technologies."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "DropGen's high-throughput screening solutions complement Boehringer Ingelheim's commitment to advancing pharmaceutical research."
+    }
+  ],
+  "flags_version": 2
+}

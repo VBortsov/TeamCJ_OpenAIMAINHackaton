@@ -1,0 +1,121 @@
+{
+  "canonical_name": "OptimalPSI",
+  "description": "OptimalPSI develops patient-specific, optimized spinal fusion implants designed to reduce subsidence and improve outcomes.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Thijs Smit",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "PhD from ETH Zurich's Laboratory for Orthopaedic Technology."
+    },
+    {
+      "full_name": "Wolfgang Rubin",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Over 15 years of medical device engineering experience."
+    },
+    {
+      "full_name": "Bertrand Hughes",
+      "role": "Co-Founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "MedTech leadership experience."
+    },
+    {
+      "full_name": "Prof. Stephen Ferguson",
+      "role": "Clinical Advisor",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Expertise in orthopaedic technology."
+    },
+    {
+      "full_name": "PD Dr. med. Daniel Haschtmann",
+      "role": "Clinical Advisor",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Leading spine surgeon at Schulthess Klinik."
+    },
+    {
+      "full_name": "Dr. Rahul V. Shah",
+      "role": "Clinical Advisor",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Clinical advisor at Premier Orthopaedic Associates, USA."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "OptimalPSI won CHF 150,000 from Venture Kick in 2025 and secured an Innosuisse grant in 2024.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing incidence of implant subsidence in spinal fusion surgeries underscores the urgent need for innovative solutions like OptimalPSI's implants.",
+  "devils_advocate_risks": [
+    "Challenges in scaling production to meet potential market demand.",
+    "Navigating regulatory approvals across different healthcare jurisdictions."
+  ],
+  "citations": [
+    "https://optimalpsi.com/about",
+    "https://www.venturekick.ch/OptimalPSI"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "OptimalPSI's focus on patient-specific spinal implants aligns with Boehringer Ingelheim's interest in innovative medical technologies."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's expertise in advanced materials could complement OptimalPSI's development of optimized spinal implants."
+    }
+  ],
+  "flags_version": 2
+}

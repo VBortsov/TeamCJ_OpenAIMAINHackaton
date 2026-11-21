@@ -1,0 +1,95 @@
+{
+  "canonical_name": "Hessian",
+  "description": "Hessian provides a platform that automates business operations by deploying AI agents to map and execute workflows end-to-end, integrating seamlessly with existing tools like Slack, HubSpot, and Salesforce.",
+  "founders_enriched": [
+    {
+      "full_name": "Tom Watson",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Durham University"
+      ],
+      "prior_companies": [
+        "GoCardless",
+        "CMC Markets"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Bao Nguyen",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Bloomberg",
+        "DRW"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "aideploymentfirms.com"
+    },
+    {
+      "full_name": "James Smith",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Bloomberg",
+        "DRW"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "aideploymentfirms.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "Hessian raised $500,000 in a seed funding round in April 2026.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Hessian raised $500,000 in a seed funding round in April 2026.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The maturation of AI agent technology and the increasing demand for automation in business operations present a timely opportunity for Hessian to scale its solutions.",
+  "devils_advocate_risks": [
+    "Integration Challenges: Ensuring seamless integration of AI agents with diverse existing business systems could be complex.",
+    "Scalability: Maintaining performance and reliability as the platform scales to accommodate a growing number of clients and workflows."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/founders/thomasedw",
+    "https://aideploymentfirms.com/company/hessian",
+    "https://aventure.vc/companies/hessian-san-francisco-ca-us/fundraising"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Hessian's focus on automating business operations with AI agents aligns with SAP's enterprise software solutions, potentially enhancing SAP's offerings in AI-driven process automation."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Hessian's expertise in deploying AI agents for business operations could complement Evonik's interest in innovative technologies, particularly in the chemical industry, where process optimization is crucial."
+    }
+  ],
+  "flags_version": 2
+}

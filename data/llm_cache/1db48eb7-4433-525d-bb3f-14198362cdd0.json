@@ -1,0 +1,61 @@
+{
+  "canonical_name": "MinCryo",
+  "description": "MinCryo aims to develop a compact, high-stability, closed-cycle cryo-microscope module for integration into commercial microscopes.",
+  "founders_enriched": [
+    {
+      "full_name": "Daqing Wang",
+      "role": "Junior Professor",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of Bonn"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Junior Professor at the Institute of Applied Physics, University of Bonn."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Bonn",
+  "raised_institutional_round": false,
+  "funding_summary": "ERC Proof of Concept Grant: €150,000 over one year, awarded in January 2026.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing importance of cryogenic optical microscopy in bioimaging, photonics, semiconductor research, and quantum technology underscores the timely relevance of MinCryo's innovation.",
+  "devils_advocate_risks": [
+    "Technical challenges in integrating cryogenic conditions into standard microscopes.",
+    "Market adoption hurdles due to the specialized nature of cryogenic microscopy."
+  ],
+  "citations": [
+    "https://www.uni-bonn.de/de/neues/020-2026",
+    "https://cordis.europa.eu/project/id/101292552"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Their focus on advanced materials and chemical technologies aligns with MinCryo's development of cryogenic microscopy modules."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their interest in innovative technologies for biomedical research complements MinCryo's applications in bioimaging."
+    }
+  ],
+  "flags_version": 2
+}

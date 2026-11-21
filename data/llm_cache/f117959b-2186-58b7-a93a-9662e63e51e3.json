@@ -1,0 +1,82 @@
+{
+  "canonical_name": "Superlog",
+  "description": "Superlog develops AI-driven observability agents that monitor production software, investigate alerts, and propose fixes, integrating with platforms like Sentry, Datadog, and Slack.",
+  "founders_enriched": [
+    {
+      "full_name": "Nicolò Magnante",
+      "role": "Founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "HEC Paris"
+      ],
+      "prior_companies": [
+        "Bluco"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Founder and CEO of Superlog"
+    },
+    {
+      "full_name": "Arseniy Shishaev",
+      "role": "Co-Founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "École 42 Paris"
+      ],
+      "prior_companies": [
+        "Bluco",
+        "Datadog"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Co-Founder and CTO of Superlog"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": true,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": true,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "Paris",
+  "raised_institutional_round": true,
+  "funding_summary": "In 2026, Superlog received a $125K seed investment from Y Combinator and secured additional funding from Kima Ventures, Vento Fund II, and Koinos Capital.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In 2026, Superlog received a $125K seed investment from Y Combinator and secured additional funding from Kima Ventures, Vento Fund II, and Koinos Capital.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of software systems and the need for efficient incident management make Superlog's solutions timely and relevant.",
+  "devils_advocate_risks": [
+    "Challenges in scaling the AI agents to handle diverse software environments.",
+    "Potential difficulties in integrating seamlessly with various monitoring platforms."
+  ],
+  "citations": [
+    "https://www.upside24.com/articles/nicolo-magnante-venu-d-italie-pour-etudier-a-paris-il-y-fonde-ses-start-up",
+    "https://fundraisingfox.com/people/arseniy-shishaev",
+    "https://www.zeitgeist.bot/company/superlog",
+    "https://www.gp-intel.com/company/superlog"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Superlog's focus on AI-driven observability aligns with Evonik's interest in innovative technologies that enhance industrial processes."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Superlog's solutions for monitoring and resolving production issues complement SAP's enterprise software offerings, potentially enhancing SAP's product reliability."
+    }
+  ],
+  "flags_version": 2
+}

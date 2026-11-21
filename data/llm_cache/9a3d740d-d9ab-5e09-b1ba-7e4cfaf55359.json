@@ -1,0 +1,79 @@
+{
+  "canonical_name": "Lunavo",
+  "description": "Lunavo is an AI assistant designed to automate back-office operations for carriers, handling repetitive tasks and resolving issues autonomously to enhance operational efficiency.",
+  "founders_enriched": [
+    {
+      "full_name": "Felix Lösch",
+      "role": "Co-Founder & CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "McKinsey",
+        "Series A robotics logistics startup"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Niclas Heun",
+      "role": "Co-Founder & CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Technical University of Munich",
+        "University of Waterloo"
+      ],
+      "prior_companies": [
+        "Siemens"
+      ],
+      "is_ex_bigtech": true,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": true,
+  "fd_any_top_consulting": true,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Pullach",
+  "raised_institutional_round": false,
+  "funding_summary": "Lunavo participated in Y Combinator's Fall 2025 batch. As of now, there is no publicly available information indicating that Lunavo has raised additional funding beyond this accelerator program.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of logistics operations and the need for automation present a timely opportunity for Lunavo's AI solutions to address these challenges.",
+  "devils_advocate_risks": [
+    "Integration challenges with diverse existing systems used by carriers.",
+    "Ensuring the AI's decision-making aligns with the nuanced requirements of logistics operations."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/companies/lunavo",
+    "https://www.lunavo.ai/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Lunavo's AI assistant for carriers could integrate with SAP's enterprise resource planning systems, enhancing logistics and supply chain management."
+    },
+    {
+      "lp_name": "DHL Group",
+      "reason": "Lunavo's automation of back-office operations aligns with DHL's focus on optimizing logistics processes and improving operational efficiency."
+    }
+  ],
+  "flags_version": 2
+}

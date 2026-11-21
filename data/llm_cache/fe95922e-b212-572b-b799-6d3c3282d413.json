@@ -1,0 +1,49 @@
+{
+  "canonical_name": "best-of-robot-simulators",
+  "description": "A curated list of robot simulators, regenerated weekly on Wednesdays.",
+  "founders_enriched": [
+    {
+      "full_name": "Kimberly N. McGuire, PhD",
+      "role": "Independent roboticist and founder of McGuire Robotics AB",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [
+        "Bitcraze"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Completed a PhD in swarm robotics in 2019; previously worked with the Aerial Robot Crazyflie at Bitcraze until 2024."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": null,
+  "city": "Malmö",
+  "raised_institutional_round": false,
+  "funding_summary": "No information on funding rounds or financial backing is available.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing reliance on robotics across various industries has heightened the need for effective simulation tools, making such curated resources more valuable.",
+  "devils_advocate_risks": [
+    "Maintaining the accuracy and relevance of the curated list amidst rapidly evolving robotics technologies.",
+    "Ensuring consistent engagement and growth of the user base to sustain the platform's utility."
+  ],
+  "citations": [],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

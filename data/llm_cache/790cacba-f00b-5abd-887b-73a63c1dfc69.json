@@ -1,0 +1,85 @@
+{
+  "canonical_name": "Athegus",
+  "description": "Athegus develops hospOS, a vendor-agnostic, modular robot management system designed to alleviate staff workloads and enhance healthcare delivery by integrating robots and building technologies into a unified system.",
+  "founders_enriched": [
+    {
+      "full_name": "Sebastian Schmidt",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Deggendorf Institute of Technology"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Background in business informatics with extensive entrepreneurial experience."
+    },
+    {
+      "full_name": "Tobias Greiler",
+      "role": "CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Specializing in computer science with a focus on software development and robot integration."
+    },
+    {
+      "full_name": "Stefan Fischer",
+      "role": "Head of Operations",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Expertise in health sciences and a deep understanding of healthcare workflows."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Deggendorf",
+  "raised_institutional_round": false,
+  "funding_summary": "In May 2025, Athegus received €740,000 in EXIST Research Transfer funding from Germany's Federal Ministry for Economic Affairs and Energy.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing adoption of service robots in healthcare facilities presents a timely opportunity for Athegus's solutions to address operational challenges.",
+  "devils_advocate_risks": [
+    "Integration Complexity: Ensuring seamless interoperability between diverse robot models and existing building systems may pose technical challenges.",
+    "Regulatory Compliance: Navigating the complex regulatory landscape of healthcare environments to ensure compliance with standards and regulations."
+  ],
+  "citations": [
+    "https://athegus.com/en/about",
+    "https://athegus.com/en/news/2025-05-01-exist-funding"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch's expertise in industrial automation and robotics aligns with Athegus's focus on integrating service robots into healthcare facilities."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in innovative healthcare solutions complements Athegus's development of robot management systems for medical environments."
+    }
+  ],
+  "flags_version": 2
+}

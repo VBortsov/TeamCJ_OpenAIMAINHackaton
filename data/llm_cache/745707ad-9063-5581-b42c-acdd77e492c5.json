@@ -1,0 +1,95 @@
+{
+  "canonical_name": "Versatile Robotics",
+  "description": "Versatile Robotics develops a novel controller software that enables robots to work safely with humans while being precise, sensitive, and ultra-fast.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Johannes Adalbert Englsberger",
+      "role": "Managing Director",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Sole managing director of Versatile Robotics GmbH."
+    },
+    {
+      "full_name": "Stefanie Brandl",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-founder of Versatile Robotics."
+    },
+    {
+      "full_name": "Ulrich Köhler",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-founder of Versatile Robotics."
+    },
+    {
+      "full_name": "Adrian Prinz",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-founder of Versatile Robotics."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2024,
+  "city": "Weßling",
+  "raised_institutional_round": false,
+  "funding_summary": "The company has received support from the EXIST research transfer project and the ESA Business Incubation Centre (ESA BIC) Bavaria.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for automation in industries such as manufacturing and healthcare creates a pressing need for advanced robotic systems capable of safe human interaction.",
+  "devils_advocate_risks": [
+    "Challenges in integrating the controller software with a wide range of robotic hardware.",
+    "Potential difficulties in scaling the technology for mass adoption across various industries."
+  ],
+  "citations": [
+    "https://www.companyhouse.de/Versatile-Robotics-GmbH-Wessling",
+    "https://www.dlr.de/en/rm/transfer/spin-offs/versatile-robotics"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could synergize with Versatile Robotics' focus on precise and sensitive robotic control systems."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch's expertise in automation and industrial technology aligns with Versatile Robotics' development of robotic systems for industrial applications."
+    }
+  ],
+  "flags_version": 2
+}

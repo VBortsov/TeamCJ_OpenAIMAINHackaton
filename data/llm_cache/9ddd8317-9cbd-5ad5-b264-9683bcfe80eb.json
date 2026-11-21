@@ -1,0 +1,89 @@
+{
+  "canonical_name": "Servo7",
+  "description": "Servo7's Mammoth is an AI-powered robot designed to automate the unloading of loose-loaded shipping containers at warehouse dock doors.",
+  "founders_enriched": [
+    {
+      "full_name": "Pieter Becking",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Boeing",
+        "Recruitment tech startup"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "dutchstartup.ai"
+    },
+    {
+      "full_name": "Jasper van Leuven",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Autonomous defense systems",
+        "Video generation models for autonomous driving"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "dutchstartup.ai"
+    },
+    {
+      "full_name": "Willem Momma",
+      "role": "Founding Engineer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "dutchstartup.ai"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": true,
+  "fd_any_prior_exit": true,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Amsterdam",
+  "raised_institutional_round": true,
+  "funding_summary": "Servo7 participated in Y Combinator's Winter 2026 batch, raising its first external funding from investors including Duco van Lanschot, Durk Kingma, Thomas Wolf, and NP-Hard Ventures.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Servo7 participated in Y Combinator's Winter 2026 batch, raising its first external funding from investors including Duco van Lanschot, Durk Kingma, Thomas Wolf, and NP-Hard Ventures.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for efficient logistics solutions and the challenges in manual container unloading create a timely opportunity for automation technologies like Mammoth.",
+  "devils_advocate_risks": [
+    "Ensuring Mammoth's adaptability to diverse container configurations and environments.",
+    "Achieving widespread adoption in the logistics industry, which may be resistant to rapid technological changes."
+  ],
+  "citations": [
+    "https://www.dutchstartup.ai/en/news/amsterdam-robotics-startup-servo7-uses-ai-to-unload-warehouse-containers",
+    "https://servo7.com/product"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "DHL Group",
+      "reason": "Servo7's product, Mammoth, automates the unloading of loose-loaded shipping containers, directly aligning with DHL's logistics operations."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Servo7's focus on robotics and automation in logistics complements Bosch's expertise in industrial technology and automation solutions."
+    }
+  ],
+  "flags_version": 2
+}

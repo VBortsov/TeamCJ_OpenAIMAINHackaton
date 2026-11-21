@@ -1,0 +1,78 @@
+{
+  "canonical_name": "Tornyol",
+  "description": "Tornyol develops 40-gram autonomous micro-drones equipped with ultrasonic phased-array sonar and digital signal processing to detect and eliminate mosquitoes.",
+  "founders_enriched": [
+    {
+      "full_name": "Alex Toussaint",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "MBDA"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Expert in digital signal processing and electronics, leading hardware development and signal processing."
+    },
+    {
+      "full_name": "Clovis Piedallu",
+      "role": "COO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Specializes in drone control systems and algorithms, overseeing flight control and interception systems."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Paris",
+  "raised_institutional_round": false,
+  "funding_summary": "Raised $500,000 in September 2025 and $1.03 million on November 7, 2025 in seed rounds.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The successful demonstration of the first air-to-air insect kill by an autonomous micro-drone marks a significant advancement in mosquito control technology.",
+  "devils_advocate_risks": [
+    "Achieving reliable and consistent mosquito detection and elimination in diverse environments.",
+    "Ensuring scalability and affordability for widespread adoption in various regions."
+  ],
+  "citations": [
+    "https://tornyol.com/about",
+    "https://www.techradar.com/pro/ex-mbda-engineer-builds-usd1-100-40g-ai-micro-drone-using-amd-phased-array-sonar-for-yc-backed-startup-tornyol-to-eradicate-mosquitoes-currently-restricted-to-3-minute-flights",
+    "https://seedtable.com/companies/tornyol",
+    "https://aventure.vc/companies/tornyol-paris-fr",
+    "https://www.caplight.com/company/tornyol",
+    "https://tornyol.com/technology",
+    "https://www.tomshardware.com/tech-industry/drones/autonomous-micro-drone-achieves-first-air-to-air-insect-kill-on-the-way-towards-completely-eradicating-mosquitoes-40-gram-unit-uses-car-parking-sensors-can-eliminate-insects-at-up-to-26-feet"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Their focus on innovative technologies aligns with Tornyol's development of autonomous micro-drones for mosquito control."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their interest in health-related innovations complements Tornyol's mission to combat mosquito-borne diseases."
+    }
+  ],
+  "flags_version": 2
+}

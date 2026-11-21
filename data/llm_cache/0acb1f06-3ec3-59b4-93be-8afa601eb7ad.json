@@ -1,0 +1,91 @@
+{
+  "canonical_name": "Finto",
+  "description": "Finto develops AI agents that autonomously handle invoice verification, account coding, purchase-order matching, and posting into ERP systems like SAP, Microsoft Dynamics, and DATEV.",
+  "founders_enriched": [
+    {
+      "full_name": "Jonas Morgner",
+      "role": "Co-Founder & CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "TradeLink"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "startupwiki.tech"
+    },
+    {
+      "full_name": "Linus Boehm",
+      "role": "Co-Founder & CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Tacto"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "linusboehm.de"
+    },
+    {
+      "full_name": "Lorenz Neuner",
+      "role": "Co-Founder & CPO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "TradeLink"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "startupwiki.tech"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Munich",
+  "raised_institutional_round": true,
+  "funding_summary": "In July 2026, Finto raised €2.98 million ($3.4 million) in a seed funding round from Y Combinator, Gradient (Alphabet's AI fund), and Lightspeed Venture Partners.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In July 2026, Finto raised €2.98 million ($3.4 million) in a seed funding round from Y Combinator, Gradient (Alphabet's AI fund), and Lightspeed Venture Partners.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing complexity of financial regulations and the need for efficient accounting processes in large enterprises create a pressing demand for automated solutions like Finto's.",
+  "devils_advocate_risks": [
+    "Long enterprise sales cycles may delay revenue generation.",
+    "Competition from established accounting automation providers could impact market penetration."
+  ],
+  "citations": [
+    "https://startupwiki.tech/startup/finto",
+    "https://www.linusboehm.de/",
+    "https://www.munich-startup.de/en/123167/3-million-euro-seed-funding-finto/",
+    "https://companies.evolc.com/company/finto"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Finto's AI accounting agents integrate directly with SAP, aligning with SAP's focus on enterprise software solutions."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's interest in digitalization and automation in industrial processes complements Finto's mission to automate accounting workflows for enterprises."
+    }
+  ],
+  "flags_version": 2
+}

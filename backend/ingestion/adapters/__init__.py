@@ -9,6 +9,9 @@ from backend.ingestion.adapters.luma_events import LumaEventsAdapter
 from backend.ingestion.adapters.cordis_erc import CordisErcAdapter
 from backend.ingestion.adapters.funding_blocklist import FundingBlocklistAdapter
 from backend.ingestion.adapters.yc_recent import YcRecentAdapter
+from backend.ingestion.adapters.baystartup import BayStartUPAdapter
+from backend.ingestion.adapters.tum_venture_labs import TumVentureLabsAdapter
+from backend.ingestion.adapters.github_eu import GitHubEuDeeptechAdapter
 
 __all__ = [
     "EthRwthAdapter",
@@ -18,4 +21,7 @@ __all__ = [
     "CordisErcAdapter",
     "FundingBlocklistAdapter",
     "YcRecentAdapter",
+    "BayStartUPAdapter",
+    "TumVentureLabsAdapter",
+    "GitHubEuDeeptechAdapter",
 ]

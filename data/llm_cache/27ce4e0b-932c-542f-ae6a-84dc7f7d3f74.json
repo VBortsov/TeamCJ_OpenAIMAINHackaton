@@ -1,0 +1,61 @@
+{
+  "canonical_name": "Baxiva",
+  "description": "Baxiva is developing a vaccine designed to help the immune system recognize certain bacteria at an early stage and mount a targeted response.",
+  "founders_enriched": [
+    {
+      "full_name": "Giorgia Greter",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "ETH Pioneer Fellow"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "In February 2026, Baxiva received CHF 150,000 from Venture Kick to advance a new vaccine targeting Escherichia coli.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing global concern over antibiotic resistance and the lack of approved vaccines for E. coli infections create a pressing need for Baxiva's innovative solution.",
+  "devils_advocate_risks": [
+    "Regulatory Approval: Securing regulatory approval for a new vaccine can be a lengthy and uncertain process.",
+    "Market Adoption: Achieving widespread adoption in a competitive pharmaceutical market may pose challenges."
+  ],
+  "citations": [
+    "https://ethz.ch/en/news-and-events/eth-news/news/2026/06/double-success-for-eth-entrepreneurs-at-the-venture-awards.html",
+    "https://www.venturekick.ch/Baxiva-receives-CHF-150000-from-Venture-Kick-to-develop-firstinclass-Escherichia-Coli-vaccine"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "As a pharmaceutical company, Boehringer Ingelheim could provide valuable expertise and resources to Baxiva in developing and commercializing its vaccine."
+    },
+    {
+      "lp_name": "QIAGEN",
+      "reason": "Specializing in molecular diagnostics, QIAGEN could offer complementary technologies and distribution channels for Baxiva's vaccine."
+    }
+  ],
+  "flags_version": 2
+}

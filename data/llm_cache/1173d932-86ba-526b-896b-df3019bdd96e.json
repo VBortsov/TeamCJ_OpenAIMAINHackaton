@@ -1,0 +1,198 @@
+{
+  "canonical_name": "Bubble Robotics",
+  "description": "Bubble Robotics develops autonomous underwater robots designed for continuous offshore inspection and monitoring without human intervention.",
+  "founders_enriched": [
+    {
+      "full_name": "Jean Crosetti",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "Sciences Po",
+        "Bocconi"
+      ],
+      "prior_companies": [
+        "Former VC & EIB"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "bubble-robotics.com"
+    },
+    {
+      "full_name": "Patricia Apostol",
+      "role": "CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "TU Delft"
+      ],
+      "prior_companies": [
+        "NASA JPL",
+        "ETH Zurich"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "bubble-robotics.com"
+    },
+    {
+      "full_name": "Saverio Iacoponi",
+      "role": "System Design Lead",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Sant’Anna School of Advanced Studies"
+      ],
+      "prior_companies": [
+        "NASA JPL",
+        "Sant’Anna School of Advanced Studies"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "bubble-robotics.com"
+    },
+    {
+      "full_name": "Benjamin Mottis",
+      "role": "Product & GTM Lead",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "EPFL",
+        "Caltech"
+      ],
+      "prior_companies": [
+        "ANYbotics",
+        "EPFL",
+        "Caltech"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "bubble-robotics.com"
+    },
+    {
+      "full_name": "Carlo Guarnieri",
+      "role": "Electrical Engineering Lead",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Politecnico di Bari"
+      ],
+      "prior_companies": [
+        "Politecnico di Bari"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "bubble-robotics.com"
+    },
+    {
+      "full_name": "Paul Joseph",
+      "role": "Autonomy Lead",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "ETH Zurich"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "bubble-robotics.com"
+    },
+    {
+      "full_name": "Alessandro De Marco",
+      "role": "AI & ML Engineer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "ETH Zurich",
+        "Politecnico di Torino"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "bubble-robotics.com"
+    },
+    {
+      "full_name": "Yannick Van Der Laan",
+      "role": "Hardware Engineer",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "bubble-robotics.com"
+    },
+    {
+      "full_name": "Cedric Landsmeer",
+      "role": "Autonomy Intern",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "bubble-robotics.com"
+    },
+    {
+      "full_name": "Gabriel Kocenko",
+      "role": "Autonomy Intern",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "bubble-robotics.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $5 million in a Pre-Seed Round in April 2026, led by Episode 1 Ventures, Asterion Ventures, and Norrsken Evolve.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $5 million in a Pre-Seed Round in April 2026, led by Episode 1 Ventures, Asterion Ventures, and Norrsken Evolve.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for efficient and cost-effective offshore infrastructure monitoring presents a significant market opportunity for autonomous solutions.",
+  "devils_advocate_risks": [
+    "Environmental Challenges: Ensuring reliable operation of robots in harsh marine environments.",
+    "Technological Integration: Successfully integrating various technologies to create a seamless autonomous system."
+  ],
+  "citations": [
+    "https://www.bubble-robotics.com/about",
+    "https://fundswiss.ch/en/levees/2026-04-24-bubble-robotics/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could be crucial for developing durable underwater robotics."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch's expertise in automation and sensor technology aligns with Bubble Robotics' focus on autonomous systems for offshore monitoring."
+    }
+  ],
+  "flags_version": 2
+}

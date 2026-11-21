@@ -1,0 +1,63 @@
+{
+  "canonical_name": "AI Pilled",
+  "description": "AI Pilled organizes hands-on workshops in London to help non-technical individuals build with AI.",
+  "founders_enriched": [
+    {
+      "full_name": "Yiran Qin",
+      "role": "Co-host of AI Pilled events",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-host of AI Pilled events"
+    },
+    {
+      "full_name": "Nuan Zhang",
+      "role": "Co-host of AI Pilled events",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Co-host of AI Pilled events"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": false,
+  "founding_year": 2026,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "No information is available regarding funding rounds or financial backing for AI Pilled.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing interest in AI among non-technical individuals presents a timely opportunity for AI Pilled to meet this demand.",
+  "devils_advocate_risks": [
+    "Difficulty in attracting a consistent audience for workshops.",
+    "Challenges in sourcing qualified instructors for diverse AI topics."
+  ],
+  "citations": [
+    "https://www.linkedin.com/company/boltzbit/",
+    "https://www.linkedin.com/company/ai-pilled",
+    "https://foundercal.com/events/ai-pilled-beginner-01-urk1GlIgWMgWyrc"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}

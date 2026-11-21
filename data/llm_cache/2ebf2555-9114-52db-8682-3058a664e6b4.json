@@ -1,0 +1,87 @@
+{
+  "canonical_name": "TigerShark Science",
+  "description": "TigerShark Science develops human skin models from stem cells, replicating structures like hair and nerves, to provide realistic alternatives to animal testing.",
+  "founders_enriched": [
+    {
+      "full_name": "Dr. Amelie Reigl",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Fraunhofer Institute for Silicate Research ISC"
+      ],
+      "prior_companies": [
+        "Fraunhofer Institute for Silicate Research ISC"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Biologist and project manager at the Translational Center for Regenerative Therapies (TLC-RT) of the Fraunhofer Institute for Silicate Research ISC."
+    },
+    {
+      "full_name": "Dieter Groneberg",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Dr. Florian Groeber-Becker",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": null,
+  "city": "Riedenheim",
+  "raised_institutional_round": false,
+  "funding_summary": "In 2024, TigerShark Science received €1.3 million in EXIST funding.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing ethical and regulatory pressures against animal testing in the pharmaceutical and cosmetics industries create a timely demand for advanced in-vitro models.",
+  "devils_advocate_risks": [
+    "Scalability: Challenges in mass-producing complex skin models could hinder widespread adoption.",
+    "Regulatory Acceptance: Gaining regulatory approval for new testing methods may be time-consuming and uncertain."
+  ],
+  "citations": [
+    "https://www.fraunhofer.de/content/dam/zv/en/Publications/Annual-Report/2024/Fraunhofer-Annual-Report-2024.pdf",
+    "https://www.isc.fraunhofer.de/content/dam/isc/de/documents/Jahresberichte_Annual-Reports/AnnualReport_2022_2023_FraunhoferISC.pdf"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "As a pharmaceutical company, Boehringer Ingelheim could benefit from TigerShark Science's advanced in-vitro skin models for drug testing."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik's focus on specialty chemicals aligns with TigerShark Science's development of complex skin models, potentially enhancing material science applications."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,89 @@
+{
+  "canonical_name": "Gojiberry AI",
+  "description": "Gojiberry AI provides AI-driven go-to-market agents that automate lead generation, outreach, and qualification for B2B sales teams.",
+  "founders_enriched": [
+    {
+      "full_name": "Pierre-Eliott Lallemant",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "CoCo AI"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Romàn Czerny",
+      "role": "Co-founder and CMO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "CoCo AI"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Dylan Teixeira",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Edusign"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "ycombinator.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Paris",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $500K in a seed round from Y Combinator in 2026.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $500K in a seed round from Y Combinator in 2026.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing demand for AI-driven sales solutions presents a timely opportunity for Gojiberry AI to capitalize on the market need for efficient and scalable sales processes.",
+  "devils_advocate_risks": [
+    "Dependence on LinkedIn for lead generation may expose the company to platform policy changes.",
+    "Scaling the AI technology to handle diverse B2B sales scenarios could present technical challenges."
+  ],
+  "citations": [
+    "https://www.ycombinator.com/companies/gojiberry-ai",
+    "https://www.cbinsights.com/company/gojiberryai"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "As a venture capital arm of a leading specialty chemicals company, Evonik could benefit from Gojiberry AI's AI-driven go-to-market solutions to enhance its sales and marketing strategies."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "As a global leader in enterprise software, SAP could leverage Gojiberry AI's AI agents to improve its B2B sales processes and customer engagement."
+    }
+  ],
+  "flags_version": 2
+}

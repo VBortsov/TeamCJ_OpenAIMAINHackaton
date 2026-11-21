@@ -74,8 +74,21 @@ class KillGateEvaluator:
         g1 = g2 = g3 = g4 = g5 = True
 
         # =========================================================================
-        # Gate 1: Homework / Hobby / Community / Meetup
+        # Gate 1: Homework / Hobby / Community / Meetup / Event Organizer / Utility Repo
         # =========================================================================
+        signals = candidate.get("signals") or []
+        source_names = {s.get("source_name") for s in signals if s.get("source_name")}
+        if not source_names and candidate.get("source_name"):
+            source_names = {candidate.get("source_name")}
+
+        if source_names == {"luma_events"}:
+            g1 = False
+            reasons.append("Gate 1 (Event Organizer): Only discovered from Luma events feed without startup/academic/code corroboration")
+
+        if re.search(r"(?i)(?:^best-of-|^awesome-|mcp-server|-web$)", name):
+            g1 = False
+            reasons.append("Gate 1 (Utility/List Repo): Name matches utility/list/template pattern")
+
         for pat in GATE1_PATTERNS:
             if pat.search(name) or pat.search(desc[:120]):
                 g1 = False

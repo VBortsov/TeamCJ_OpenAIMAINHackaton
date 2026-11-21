@@ -1,0 +1,88 @@
+{
+  "canonical_name": "Swiss Engineering Partners",
+  "description": "Swiss Engineering Partners provides process automation, collaborative robot systems, and customized AI solutions using computer vision to enhance manufacturing efficiency.",
+  "founders_enriched": [
+    {
+      "full_name": "Mischa Buob",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Mechanical engineering graduate from ETH Zurich"
+    },
+    {
+      "full_name": "Fabio De Carli",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Mechanical engineering graduate from ETH Zurich"
+    },
+    {
+      "full_name": "Maurice Kaulich",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "ETH Zurich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Mechanical engineering graduate from ETH Zurich"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "Bootstrapped startup, currently profitable, targeting $3.75 million in revenue for 2026.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for automation in manufacturing, driven by the need for cost efficiency and high-quality production, presents a significant opportunity for the company's solutions.",
+  "devils_advocate_risks": [
+    "Market Competition: The industrial automation sector is highly competitive, with numerous established players and emerging startups.",
+    "Technological Integration: Ensuring seamless integration of AI solutions with existing manufacturing systems can be complex and resource-intensive."
+  ],
+  "citations": [
+    "https://tollbit.forbes.com/profile/swiss-engineering-partners/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Swiss Engineering Partners specializes in process automation and collaborative robot systems, aligning with Bosch's focus on industrial automation and robotics."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "The company's expertise in customized AI solutions using computer vision complements Evonik's interest in innovative technologies for industrial applications."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,74 @@
+{
+  "canonical_name": "NEXLIGHT",
+  "description": "NEXLIGHT aims to develop compact X-ray laser systems that are significantly smaller and more cost-effective than current free-electron lasers, facilitating broader access for research and medical applications.",
+  "founders_enriched": [
+    {
+      "full_name": "Erik Lindroth",
+      "role": "CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "nexlight.com"
+    },
+    {
+      "full_name": "Nathan McCullough",
+      "role": "President",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "nexlight.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": false,
+  "fd_university_spinoff": true,
+  "founding_year": null,
+  "city": "Baxter",
+  "raised_institutional_round": false,
+  "funding_summary": "Received a Proof of Concept Grant from the European Research Council (ERC) in October 2026.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The ERC's support in 2026 underscores the project's readiness to transition from research to commercial viability, addressing the need for accessible X-ray laser technologies.",
+  "devils_advocate_risks": [
+    "Technical challenges in miniaturizing X-ray laser systems without compromising performance.",
+    "Securing additional funding and partnerships to bring the technology to market."
+  ],
+  "citations": [
+    "https://pro-physik.de/nachrichten/kompakte-roentgenlaser-fuer-forschung-und-industrie",
+    "https://cordis.europa.eu/project/id/101335618",
+    "https://www.nexlight.com/team-member/erik-lindroth/",
+    "https://www.nexlight.com/about/",
+    "https://www.nexlight.com/"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Their focus on advanced materials and technologies aligns with NEXLIGHT's development of compact X-ray laser systems."
+    },
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "Their interest in innovative technologies for research and diagnostics complements NEXLIGHT's potential applications in medical imaging."
+    }
+  ],
+  "flags_version": 2
+}

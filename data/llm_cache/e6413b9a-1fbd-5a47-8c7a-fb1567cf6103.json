@@ -1,0 +1,109 @@
+{
+  "canonical_name": "Expanse",
+  "description": "Expanse develops software that predicts the computing resources required for AI workloads before execution, helping organizations reduce wasted GPU capacity and improve infrastructure efficiency.",
+  "founders_enriched": [
+    {
+      "full_name": "Ismaeel Bashir",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of Edinburgh"
+      ],
+      "prior_companies": [
+        "Led machine learning at a major quantitative hedge fund."
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "expanse.sh"
+    },
+    {
+      "full_name": "Nikodem Bieniek",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of Edinburgh"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "expanse.sh"
+    },
+    {
+      "full_name": "Eren Mendi",
+      "role": "Co-founder and CPO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of Edinburgh"
+      ],
+      "prior_companies": [
+        "Developed decentralized foundation model training systems and performance models; previously prototyped emerging technologies in quantitative finance at G-Research."
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "ycombinator.com"
+    },
+    {
+      "full_name": "Yafet Melake",
+      "role": "Co-founder and COO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "University of Edinburgh"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "expanse.sh"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": false,
+  "funding_summary": "Raised €4.5 million ($5.3 million) in a seed round in September 2026, led by Crane Venture Partners, with participation from PXN Ventures, AIP Seed, and angel investors, including former DeepMind researchers.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The rapid growth of AI workloads has intensified the need for efficient compute resource management, making Expanse's solutions timely and critical.",
+  "devils_advocate_risks": [
+    "Challenges in integrating Expanse's software with diverse existing infrastructure setups.",
+    "Potential resistance from organizations accustomed to traditional methods of estimating compute requirements."
+  ],
+  "citations": [
+    "https://www.expanse.sh/company",
+    "https://informatics.ed.ac.uk/news/latest-news/informatics-founded-startup-raises-53-million-to-tackle-ai-infrastructure-waste",
+    "https://www.expanse.sh/blog/expanse-raises-5-3m-seed",
+    "https://www.ycombinator.com/companies/expanse"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Expanse's focus on optimizing GPU infrastructure aligns with Evonik's interest in advanced materials and technologies."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Expanse's AI infrastructure solutions could complement SAP's enterprise software offerings, enhancing data processing capabilities."
+    }
+  ],
+  "flags_version": 2
+}

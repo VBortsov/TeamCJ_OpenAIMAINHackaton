@@ -1,0 +1,64 @@
+{
+  "canonical_name": "SPHEROMOUSE",
+  "description": "SPHEROMOUSE is an ERC Proof-of-Concept project aimed at validating a versatile platform of novel standardized and biobankable preclinical mouse tumor models to enhance the translatability of cancer research findings.",
+  "founders_enriched": [
+    {
+      "full_name": "Prof. Dr. Hellmut Augustin",
+      "role": "Principal Investigator",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": true,
+      "universities": [
+        "Heidelberg University"
+      ],
+      "prior_companies": [
+        "German Cancer Research Center (DKFZ)",
+        "Medical Faculty Mannheim of Heidelberg University"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Leading scientist in vascular oncology and tumor angiogenesis at the DKFZ."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": true,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Heidelberg",
+  "raised_institutional_round": false,
+  "funding_summary": "Funded by the European Research Council (ERC) under the Proof-of-Concept Grant scheme.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing demand for reliable preclinical models in cancer research presents a timely opportunity for SPHEROMOUSE to address existing gaps in model standardization and biobanking.",
+  "devils_advocate_risks": [
+    "Model Validation: Ensuring that the developed tumor models accurately replicate human cancer biology is crucial for their acceptance in the scientific community.",
+    "Biobank Integration: Establishing a comprehensive biobank that is accessible and useful to researchers may face logistical and regulatory challenges."
+  ],
+  "citations": [
+    "https://www.uni-heidelberg.de/en/newsroom/erc-funding-for-hellmut-augustin-and-michael-platten?overlay=menu",
+    "https://cordis.europa.eu/project/id/101292630"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Boehringer Ingelheim Venture Fund",
+      "reason": "As a pharmaceutical company, Boehringer Ingelheim could benefit from SPHEROMOUSE's preclinical tumor models to enhance drug discovery and development processes."
+    },
+    {
+      "lp_name": "QIAGEN",
+      "reason": "Specializing in sample and assay technologies, QIAGEN could leverage SPHEROMOUSE's standardized tumor models to improve diagnostic assays and biomarker discovery."
+    }
+  ],
+  "flags_version": 2
+}

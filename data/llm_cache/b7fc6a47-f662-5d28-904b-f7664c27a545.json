@@ -1,0 +1,63 @@
+{
+  "canonical_name": "The Robot Learning Company",
+  "description": "The Robot Learning Company specializes in affordable robotic workers designed to automate repetitive, stationary tasks.",
+  "founders_enriched": [
+    {
+      "full_name": "Jannik Grothusen",
+      "role": "Founder/CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [
+        "UC Berkeley",
+        "TU Munich"
+      ],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Degree in Mechatronics and research experience in robot learning."
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": true,
+  "fd_any_studied_abroad": true,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": true,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Munich",
+  "raised_institutional_round": true,
+  "funding_summary": "The company has raised a pre-seed round led by Y Combinator.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (The company has raised a pre-seed round led by Y Combinator.)",
+  "htgf_vertical": "industrial_climate_deeptech",
+  "inflection_why_now": "The increasing demand for cost-effective automation solutions in various industries presents a timely opportunity for The Robot Learning Company.",
+  "devils_advocate_risks": [
+    "Achieving widespread acceptance of new automation technologies can be challenging.",
+    "Ensuring the robots can handle a wide range of tasks effectively requires continuous innovation."
+  ],
+  "citations": [
+    "https://www.companyhouse.de/en/The-Robot-Learning-Company-GmbH-Muenchen",
+    "https://www.ycombinator.com/companies/the-robot-learning-company",
+    "https://www.crunchbase.com/organization/the-robot-learning-company"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could complement The Robot Learning Company's automation solutions."
+    },
+    {
+      "lp_name": "Robert Bosch GmbH",
+      "reason": "Bosch's expertise in industrial automation aligns with The Robot Learning Company's focus on affordable robotic workers."
+    }
+  ],
+  "flags_version": 2
+}

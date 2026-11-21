@@ -1,0 +1,111 @@
+{
+  "canonical_name": "AI BEAVERS",
+  "description": "AI BEAVERS is a global community of builders, founders, and AI enthusiasts focused on hands-on collaboration and innovation in AI.",
+  "founders_enriched": [
+    {
+      "full_name": "Sebil Satici",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "Listed as a host for AI BEAVERS events."
+    },
+    {
+      "full_name": "Vladyslav Nyzhashchyy",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Kiel agency"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "Worked as a software engineer and built a handmade jewelry brand."
+    },
+    {
+      "full_name": "Ron Junior van Cann",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Felix Beyer",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    },
+    {
+      "full_name": "Charlotte Hahn",
+      "role": null,
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": ""
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Hamburg",
+  "raised_institutional_round": false,
+  "funding_summary": "No information about equity funding rounds or non-dilutive funding is available.",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The rapid expansion of AI applications across industries presents a timely opportunity for AI BEAVERS to leverage its community-driven approach to meet growing demand.",
+  "devils_advocate_risks": [
+    "Scalability Challenges: Maintaining community engagement and quality across multiple international chapters.",
+    "Monetization Strategy: Developing sustainable revenue streams without compromising the community's non-profit ethos."
+  ],
+  "citations": [
+    "https://luma.com/f4v4m5z9",
+    "https://www.linkedin.com/company/ai-beavers",
+    "https://ai-beavers.com/",
+    "https://startupcity.hamburg/news-events/news/ai-beavers-a-global-community-from-hamburg"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Evonik specializes in advanced materials and chemicals, which could benefit from AI BEAVERS' AI-driven solutions in product development and process optimization."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "SAP's enterprise software solutions could integrate with AI BEAVERS' AI technologies to enhance data analytics and business intelligence offerings."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,76 @@
+{
+  "canonical_name": "Lua Global Inc",
+  "description": "Lua provides a platform that enables businesses to build and manage AI agent workforces, facilitating tasks such as sales, support, and operations across various channels and tools.",
+  "founders_enriched": [
+    {
+      "full_name": "Lorcan O'Cathain",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Zephyr Management"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "lua.dev"
+    },
+    {
+      "full_name": "Stefan Kruger",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [
+        "Paystack"
+      ],
+      "is_ex_bigtech": false,
+      "is_technical": true,
+      "source_of_identity": "standout.work"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "London",
+  "raised_institutional_round": true,
+  "funding_summary": "In April 2026, Lua raised $5.8 million in a seed funding round led by Norrsken22, with participation from Flourish Ventures, 20VC, P1 Ventures, Phosphor Capital, and Y Combinator.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (In April 2026, Lua raised $5.8 million in a seed funding round led by Norrsken22, with participation from Flourish Ventures, 20VC, P1 Ventures, Phosphor Capital, and Y Combinator.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The rapid adoption of AI technologies in business operations presents a timely opportunity for Lua to offer scalable AI agent solutions to mid-market enterprises.",
+  "devils_advocate_risks": [
+    "Achieving widespread adoption among mid-market companies may be challenging due to competition and integration complexities.",
+    "Ensuring the reliability and security of AI agents in diverse operational environments could pose technical challenges."
+  ],
+  "citations": [
+    "https://lua.dev/about/",
+    "https://www.globenewswire.com/news-release/2026/04/16/3275560/0/en/CORRECTION-Lua-Raises-5-8M-to-Help-Build-Operating-System-for-Human-and-Agent-Collaboration.html",
+    "https://standout.work/companies/32428b86-c7a4-488f-85d4-ef379315c323"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Lua's focus on AI-driven agent platforms aligns with Evonik's interest in innovative technologies, potentially fostering collaboration in AI applications within industrial sectors."
+    },
+    {
+      "lp_name": "SAP",
+      "reason": "Lua's enterprise-grade AI agents could integrate with SAP's enterprise solutions, enhancing operational efficiency for mutual clients."
+    }
+  ],
+  "flags_version": 2
+}

@@ -1,0 +1,98 @@
+{
+  "canonical_name": "Crunched",
+  "description": "Crunched offers an AI-powered assistant for Excel, automating complex financial tasks within spreadsheets for professionals in consulting, investment banking, and private equity.",
+  "founders_enriched": [
+    {
+      "full_name": "Philip Zandjani Borge",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "proff.no"
+    },
+    {
+      "full_name": "Michael Bartek Witold Sakowski",
+      "role": "Co-founder and CTO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "proff.no"
+    },
+    {
+      "full_name": "Markus Skagemo",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "startupintros.com"
+    },
+    {
+      "full_name": "Lars Gjardar Musæus",
+      "role": "Co-founder",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "startupintros.com"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": false,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": false,
+  "founding_year": 2025,
+  "city": "Oslo",
+  "raised_institutional_round": true,
+  "funding_summary": "Raised $500K in a Pre-Seed Round in December 2025 led by Y Combinator; raised $6M in a Seed Round in January 2026 with investors including First Round Capital, Liquid 2 Ventures, Shorooq Partners, SV Angel, and Y Combinator.",
+  "is_pre_crunchbase": false,
+  "is_post_enrichment_kill": true,
+  "kill_reason": "Gate 5: Raised institutional round (Raised $500K in a Pre-Seed Round in December 2025 led by Y Combinator; raised $6M in a Seed Round in January 2026 with investors including First Round Capital, Liquid 2 Ventures, Shorooq Partners, SV Angel, and Y Combinator.)",
+  "htgf_vertical": "digital_tech_ai",
+  "inflection_why_now": "The increasing reliance on data-driven decision-making in finance and consulting sectors creates a growing demand for efficient financial modeling tools like Crunched.",
+  "devils_advocate_risks": [
+    "Achieving widespread adoption among Excel power users may be challenging due to entrenched workflows.",
+    "Ensuring seamless integration with diverse financial models and data sources could pose technical difficulties."
+  ],
+  "citations": [
+    "https://www.proff.no/selskap/crunched-holding-as/oslo/-/IFHE32O0000",
+    "https://startupintros.com/orgs/crunched",
+    "https://firmadatabasen.no/selskap/crunched-tech-as/836201922",
+    "https://millionrounds.com/company/crunched",
+    "https://startupdb.com/organizations/crunched"
+  ],
+  "lp_synergy_matches": [
+    {
+      "lp_name": "SAP",
+      "reason": "Crunched's AI-powered Excel assistant aligns with SAP's focus on enterprise software solutions, potentially enhancing SAP's data analytics capabilities."
+    },
+    {
+      "lp_name": "Evonik Venture Capital",
+      "reason": "Crunched's financial modeling tools could complement Evonik's interest in innovative technologies, particularly in data-driven decision-making processes."
+    }
+  ],
+  "flags_version": 2
+}

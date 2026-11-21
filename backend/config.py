@@ -77,7 +77,8 @@ PLATFORM_DOMAINS: Set[str] = {
     "huggingface.co", "github.com", "gitlab.com", "lu.ma", "luma.com",
     "linkedin.com", "twitter.com", "x.com", "medium.com", "substack.com",
     "youtube.com", "arxiv.org", "orcid.org", "openalex.org", "doi.org",
-    "wikipedia.org", "notion.site", "linktr.ee", "google.com", "apple.com"
+    "wikipedia.org", "notion.site", "linktr.ee", "google.com", "apple.com",
+    "baystartup.de", "tum-venture-labs.de", "legaltechcolab.com", "unternehmertum.de", "ey.com"
 }
 
 # Established Big Tech, Legacy Corporates & Research Institutes Blocklist

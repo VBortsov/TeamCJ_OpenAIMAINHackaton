@@ -1,0 +1,64 @@
+{
+  "canonical_name": "Checktor Biosciences",
+  "description": "Checktor Biosciences develops rapid, point-of-care diagnostic tests capable of detecting multiple infections and associated resistances within 10 minutes, aiming to combat antibiotic resistance.",
+  "founders_enriched": [
+    {
+      "full_name": "Carolina Paganini",
+      "role": "Co-founder and CEO",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "entrepreneurship.ethz.ch"
+    },
+    {
+      "full_name": "Jake Lesinski",
+      "role": "Co-founder and R&D Scientist",
+      "linkedin_url": null,
+      "github_handle": null,
+      "has_phd": false,
+      "universities": [],
+      "prior_companies": [],
+      "is_ex_bigtech": false,
+      "is_technical": false,
+      "source_of_identity": "checktor.bio"
+    }
+  ],
+  "fd_enriched": 1,
+  "fd_any_phd": false,
+  "fd_any_top_university": true,
+  "fd_any_elite_business_school": false,
+  "fd_any_stem_degree": false,
+  "fd_any_studied_abroad": false,
+  "fd_any_bigtech": false,
+  "fd_any_top_consulting": false,
+  "fd_any_academic_researcher": false,
+  "fd_any_serial_founder": false,
+  "fd_any_prior_exit": false,
+  "fd_team_has_technical_founder": true,
+  "fd_university_spinoff": true,
+  "founding_year": 2026,
+  "city": "Zurich",
+  "raised_institutional_round": false,
+  "funding_summary": "",
+  "is_pre_crunchbase": true,
+  "is_post_enrichment_kill": false,
+  "kill_reason": null,
+  "htgf_vertical": "life_sciences_chemistry",
+  "inflection_why_now": "The increasing global concern over antibiotic resistance and the need for rapid diagnostics create a timely opportunity for Checktor's solutions.",
+  "devils_advocate_risks": [
+    "Challenges in integrating their diagnostic technology into existing healthcare infrastructures.",
+    "Potential regulatory hurdles in obtaining approvals for medical diagnostics."
+  ],
+  "citations": [
+    "https://entrepreneurship.ethz.ch/startups-spinoffs/find-offers-programs-space-grants-for-entrepreneurs/pioneer-fellowship/2023/checktorbiosciences.html",
+    "https://checktor.bio/",
+    "https://chab.ethz.ch/en/news-and-events/news.html",
+    "https://partnerships.ethz.ch/news-and-events/news/data/2025/03/fighting-antibiotic-resistance-with-rapid-tests.html"
+  ],
+  "lp_synergy_matches": [],
+  "flags_version": 2
+}
