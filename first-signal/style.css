@@ -39,12 +39,13 @@ em { font: 400 1.11em/.9 var(--serif); }
   align-self: center;
   width: 184px;
   aspect-ratio: 8 / 1;
+  min-height: 26px;
   overflow: hidden;
   mix-blend-mode: darken;
   color: var(--coral);
   text-decoration: none;
 }
-.wordmark-text { display: block; font: 700 clamp(1rem, 2vw, 1.4rem)/1 var(--serif); white-space: nowrap; }
+.wordmark-text { display: flex; align-items: center; min-height: 26px; font: 700 clamp(1rem, 2vw, 1.4rem)/1.15 var(--serif); white-space: nowrap; }
 .wordmark:not(.has-logo) img, .wordmark.has-logo .wordmark-text { visibility: hidden; }
 .wordmark img {
   position: absolute;

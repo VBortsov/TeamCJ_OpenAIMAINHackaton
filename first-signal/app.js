@@ -9,6 +9,9 @@
     if (logo.naturalWidth) logo.parentElement.classList.add("has-logo");
   }
 
+  const byId = id => document.getElementById(id);
+  initFounderPreview();
+
   const { teams, sources, people, liveCount, connected } = await window.FOUNDERHUNT_API.load();
   if (liveCount) document.getElementById("dataMode").textContent = "Backend + demo";
   document.getElementById("sourcingNav").hidden = !connected;
@@ -39,7 +42,6 @@
     "Digital Tech": "digital", "Life Sciences": "life", "Industrial & Deep Tech": "deep"
   };
   const storageKey = "first-signal-review-v1";
-  const byId = id => document.getElementById(id);
   const query = byId("query");
   const sector = byId("sector");
   const sort = byId("sort");
@@ -1048,79 +1050,83 @@
       byId("closeDialog").focus();
     }
   });
-  const preview = byId("heroFounder");
-  preview.innerHTML = people.map(person => {
-    const venture = teamById.get(person.projects[0]);
-    return '<div class="preview-slide" role="group" aria-roledescription="slide" aria-hidden="true">' +
-      '<p class="preview-label">Founder profile</p><h2>' + escape(person.name) + '</h2>' +
-      '<p class="preview-role">' + escape(person.role) + '</p>' +
-      '<p class="preview-experience">' + escape(person.contribution) + '</p>' +
-      '<div class="preview-venture"><span>Venture</span><strong>' + escape(venture.name) +
-      '</strong><p>' + escape(venture.focus) + '</p></div></div>';
-  }).join("");
-  const previewPosition = byId("previewPosition");
-  let previewIndex = 0;
-  let slideAnimations = [];
-  const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+  function initFounderPreview() {
+    const preview = byId("heroFounder");
+    const ventures = new Map(window.SCOUT_DATA.teams.map(venture => [venture.id, venture]));
+    preview.innerHTML = window.SCOUT_PEOPLE.map(person => {
+      const venture = ventures.get(person.projects[0]);
+      return '<div class="preview-slide" role="group" aria-roledescription="slide" aria-hidden="true">' +
+        '<p class="preview-label">Founder profile</p><h2>' + escape(person.name) + '</h2>' +
+        '<p class="preview-role">' + escape(person.role) + '</p>' +
+        '<p class="preview-experience">' + escape(person.contribution) + '</p>' +
+        '<div class="preview-venture"><span>Venture</span><strong>' + escape(venture.name) +
+        '</strong><p>' + escape(venture.focus) + '</p></div></div>';
+    }).join("");
+    const previewPosition = byId("previewPosition");
+    let previewIndex = 0;
+    let slideAnimations = [];
+    const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 
-  function changePreview(step) {
-    const slides = preview.children;
-    if (!slides.length) return;
-    slideAnimations.forEach(animation => animation.cancel());
-    slideAnimations = [];
-    const outgoing = slides[previewIndex];
-    outgoing.setAttribute("aria-hidden", "true");
-    previewIndex = (previewIndex + step + slides.length) % slides.length;
-    const incoming = slides[previewIndex];
-    const position = (previewIndex + 1) + " of " + slides.length;
-    incoming.setAttribute("aria-label", position);
-    incoming.setAttribute("aria-hidden", "false");
-    previewPosition.textContent = position;
-    previewPosition.parentElement.style.setProperty("--preview-progress", ((previewIndex + 1) / slides.length * 100) + "%");
+    function changePreview(step) {
+      const slides = preview.children;
+      if (!slides.length) return;
+      slideAnimations.forEach(animation => animation.cancel());
+      slideAnimations = [];
+      const outgoing = slides[previewIndex];
+      outgoing.setAttribute("aria-hidden", "true");
+      previewIndex = (previewIndex + step + slides.length) % slides.length;
+      const incoming = slides[previewIndex];
+      const position = (previewIndex + 1) + " of " + slides.length;
+      incoming.setAttribute("aria-label", position);
+      incoming.setAttribute("aria-hidden", "false");
+      previewPosition.textContent = position;
+      previewPosition.parentElement.style.setProperty("--preview-progress", ((previewIndex + 1) / slides.length * 100) + "%");
 
-    if (!step || slides.length < 2 || reducedMotion.matches || !incoming.animate) return;
-    const direction = Math.sign(step);
-    const options = { duration: 480, easing: "cubic-bezier(.22, 1, .36, 1)" };
-    slideAnimations = [
-      outgoing.animate([
-        { visibility: "visible", translate: "0 0", opacity: 1 },
-        { visibility: "visible", translate: (-direction * 78) + "% 0", opacity: 0, scale: .97 }
-      ], options),
-      incoming.animate([
-        { translate: (direction * 88) + "% 0", opacity: .25, scale: .98 },
-        { translate: "0 0", opacity: 1, scale: 1 }
-      ], options),
-      incoming.querySelector(".preview-venture").animate([
-        { translate: (direction * 22) + "px 0", opacity: .25 },
-        { translate: "0 0", opacity: 1 }
-      ], { ...options, delay: 55, fill: "backwards" })
-    ];
+      if (!step || slides.length < 2 || reducedMotion.matches || !incoming.animate) return;
+      const direction = Math.sign(step);
+      const options = { duration: 480, easing: "cubic-bezier(.22, 1, .36, 1)" };
+      slideAnimations = [
+        outgoing.animate([
+          { visibility: "visible", translate: "0 0", opacity: 1 },
+          { visibility: "visible", translate: (-direction * 78) + "% 0", opacity: 0, scale: .97 }
+        ], options),
+        incoming.animate([
+          { translate: (direction * 88) + "% 0", opacity: .25, scale: .98 },
+          { translate: "0 0", opacity: 1, scale: 1 }
+        ], options),
+        incoming.querySelector(".preview-venture").animate([
+          { translate: (direction * 22) + "px 0", opacity: .25 },
+          { translate: "0 0", opacity: 1 }
+        ], { ...options, delay: 55, fill: "backwards" })
+      ];
+    }
+
+    byId("previewPrevious").addEventListener("click", () => changePreview(-1));
+    byId("previewNext").addEventListener("click", () => changePreview(1));
+    preview.closest(".founder-preview").addEventListener("keydown", event => {
+      if (event.altKey || event.ctrlKey || event.metaKey || !["ArrowLeft", "ArrowRight"].includes(event.key)) return;
+      event.preventDefault();
+      changePreview(event.key === "ArrowRight" ? 1 : -1);
+    });
+
+    let previewTouch = null;
+    preview.addEventListener("pointerdown", event => {
+      if (event.pointerType !== "touch" || !event.isPrimary) return;
+      previewTouch = { id: event.pointerId, x: event.clientX, y: event.clientY };
+      preview.setPointerCapture(event.pointerId);
+    });
+    preview.addEventListener("pointercancel", () => { previewTouch = null; });
+    preview.addEventListener("pointerup", event => {
+      if (previewTouch?.id !== event.pointerId) return;
+      const dx = event.clientX - previewTouch.x;
+      const dy = event.clientY - previewTouch.y;
+      previewTouch = null;
+      if (Math.abs(dx) > 32 && Math.abs(dx) > Math.abs(dy) * 1.4) changePreview(dx < 0 ? 1 : -1);
+    });
+
+    changePreview(0);
   }
 
-  byId("previewPrevious").addEventListener("click", () => changePreview(-1));
-  byId("previewNext").addEventListener("click", () => changePreview(1));
-  preview.closest(".founder-preview").addEventListener("keydown", event => {
-    if (event.altKey || event.ctrlKey || event.metaKey || !["ArrowLeft", "ArrowRight"].includes(event.key)) return;
-    event.preventDefault();
-    changePreview(event.key === "ArrowRight" ? 1 : -1);
-  });
-
-  let previewTouch = null;
-  preview.addEventListener("pointerdown", event => {
-    if (event.pointerType !== "touch" || !event.isPrimary) return;
-    previewTouch = { id: event.pointerId, x: event.clientX, y: event.clientY };
-    preview.setPointerCapture(event.pointerId);
-  });
-  preview.addEventListener("pointercancel", () => { previewTouch = null; });
-  preview.addEventListener("pointerup", event => {
-    if (previewTouch?.id !== event.pointerId) return;
-    const dx = event.clientX - previewTouch.x;
-    const dy = event.clientY - previewTouch.y;
-    previewTouch = null;
-    if (Math.abs(dx) > 32 && Math.abs(dx) > Math.abs(dy) * 1.4) changePreview(dx < 0 ? 1 : -1);
-  });
-
-  changePreview(0);
   renderEvents("all");
   if (connected) {
     window.FOUNDERHUNT_API.events().then(({ events }) => {
