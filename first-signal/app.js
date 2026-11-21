@@ -675,9 +675,7 @@
       ["Rejected ventures", data ? audit.length : undefined],
       ["Ingested entities", health.value?.database?.total_entities],
       ["Recorded signals", health.value?.database?.total_signals],
-      ["API status", health.value?.status],
-      ["Enrichment spend", health.value?.cost_and_cache ? "$" +
-        Number(health.value.cost_and_cache.cumulative_spend_usd).toFixed(2) : undefined]
+      ["API status", health.value?.status]
     ];
     const entries = metrics.filter(([, value]) => value != null).map(([label, value]) =>
       '<div><dt>' + escape(label) + '</dt><dd>' + escape(value) + '</dd></div>');
