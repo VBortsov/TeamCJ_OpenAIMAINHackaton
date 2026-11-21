@@ -3,7 +3,7 @@
     {
       "full_name": "Francesco Lässig",
       "role": "Co-Founder, AI Engineer",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/francesco-laessig/",
       "has_phd": true,
       "universities": [
         "ETH Zurich",
@@ -14,7 +14,8 @@
         "Unit8"
       ],
       "is_ex_bigtech": false,
-      "source_of_identity": "Website"
+      "source_of_identity": "Website",
+      "github_handle": "entropicbloom"
     }
   ],
   "fd_enriched": 1,

@@ -1,0 +1,77 @@
+{
+  "name": "FounderHunt \u2014 HTGF Lead Handoff",
+  "nodes": [
+    {
+      "id": "node-webhook-1",
+      "name": "Webhook",
+      "webhookId": "htgf-lead-webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "htgf-lead",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "node-code-1",
+      "name": "Format Lead Alert",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "parameters": {
+        "jsCode": "\nconst lead = $input.first().json;\n\nconst alert = {\n  event: 'HTGF_LEAD_DISPATCH',\n  timestamp: new Date().toISOString(),\n  entity_id: lead.entity_id || lead.id,\n  company_name: lead.name || lead.canonical_name,\n  vertical: lead.htgf_vertical || 'deeptech',\n  score: lead.deterministic_score || lead.score,\n  ml_tier: (lead.ml_score && lead.ml_score >= 0.85) ? 'TIER_1_MUST_INVEST' : 'TIER_2_PRIORITY',\n  founders: (lead.founders || []).map(f => ({\n    name: f.full_name || f.name,\n    linkedin: f.linkedin_url,\n    github: f.github_handle\n  })),\n  memo_summary: lead.memo ? lead.memo.summary : lead.funding_summary\n};\n\nreturn [{ json: { status: 'success', dispatched: true, alert: alert } }];\n"
+      }
+    },
+    {
+      "id": "node-respond-1",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        440,
+        0
+      ],
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Format Lead Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Lead Alert": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null
+}

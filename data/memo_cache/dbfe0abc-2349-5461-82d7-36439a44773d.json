@@ -1,27 +1,27 @@
 {
-  "one_liner": "superglue builds AI agents that run ERP implementations for consultants; its Y Combinator participation and live demo booking make it worth an early conversation.",
+  "one_liner": "superglue builds AI agents to run ERP implementations for consultants; a live demo booking option gives HTGF a concrete reason to reach out.",
   "top_signals": [
     {
       "signal": "Participated in Y Combinator’s Winter 2025 batch.",
       "source_url": "https://www.ycombinator.com/companies/superglue"
     },
     {
-      "signal": "The live site takes demo bookings; customer adoption is unknown.",
+      "signal": "Offers live demo booking; paid deployments are unknown.",
       "source_url": null
     },
     {
-      "signal": "Model score 69.9 of 100 (above 95.9% of the reference cohort). YC participation, deep-tech and B2B classifications, AI mentions, and a co-founder in the CTO role lifted the score; being based in Germany lowered it. A technical-founder flag also lifted the score but is not confirmed by the founder records.",
+      "signal": "Model score 69.9 of 100 (above 95.9% of the reference cohort). Deep-tech classification, YC participation, a co-founder CTO, a business-focused product and mentions of AI lifted the score; being based in Germany lowered it. The technical-founder flag also lifted it but is not confirmed by the founder records.",
       "source_url": null
     }
   ],
-  "team": "Adina Goerres is co-founder and CEO; Stefan Faistenauer is co-founder and CTO. The records identify their roles but do not verify a technical background for either founder.",
-  "why_early": "Unknown whether a priced round has occurred. YC participation does not establish priced-round status.",
+  "team": "Adina Goerres is co-founder and CEO; Stefan Faistenauer is co-founder and CTO. The records confirm Faistenauer’s CTO role but do not confirm the model’s technical-founder flag.",
+  "why_early": "Unknown whether a priced round has occurred; the funding summary records YC participation only.",
   "devils_advocate_risks": [
-    "Consultants and enterprises may hesitate to rely on AI agents for ERP implementation.",
-    "Integrating with different ERP systems and existing IT infrastructure could require substantial effort."
+    "Paid customer adoption is unknown.",
+    "Integrating the agents with different ERP systems and existing IT infrastructure could be resource-intensive."
   ],
-  "next_step": "HTGF Industrial Tech team: Ask the founders which ERP implementation tasks consultants have run with superglue on live client projects.",
+  "next_step": "HTGF Industrial Tech team: Ask the founders which ERP implementation tasks the agents have completed in a paid customer deployment.",
   "memo_source": "openai:gpt-6.2-sol",
   "entity_id": "dbfe0abc-2349-5461-82d7-36439a44773d",
-  "input_hash": "c2fd2c25132bc600"
+  "input_hash": "ad5055859093f38b"
 }

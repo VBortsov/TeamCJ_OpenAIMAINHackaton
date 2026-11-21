@@ -3,7 +3,7 @@
     {
       "full_name": "Adina Goerres",
       "role": "CEO",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/adinagoerres/",
       "has_phd": false,
       "universities": [],
       "prior_companies": [],
@@ -13,12 +13,13 @@
     {
       "full_name": "Stefan Faistenauer",
       "role": "CTO",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/stefan-faistenauer/",
       "has_phd": false,
       "universities": [],
       "prior_companies": [],
       "is_ex_bigtech": false,
-      "source_of_identity": "Co-founder of Superglue"
+      "source_of_identity": "Co-founder of Superglue",
+      "github_handle": "stefanfaistenauer"
     }
   ],
   "fd_enriched": 1,

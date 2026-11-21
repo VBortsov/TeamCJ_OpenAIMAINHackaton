@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-20T21:52:16.708436+00:00",
+    "generated_at": "2026-11-21T00:38:20.946543+00:00",
     "total_raw": 148,
     "passed_kill_gates": 63,
     "enriched_count": 63,
@@ -163,8 +163,8 @@
         {
           "full_name": "Francesco Lässig",
           "role": "Co-Founder, AI Engineer",
-          "linkedin_url": null,
-          "github_handle": null,
+          "linkedin_url": "https://www.linkedin.com/in/francesco-laessig/",
+          "github_handle": "entropicbloom",
           "has_phd": true,
           "universities": [
             "ETH Zurich",
@@ -247,7 +247,7 @@
         {
           "full_name": "João Carvalho",
           "role": "Co-founder and CTO",
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/ujc/",
           "github_handle": null,
           "has_phd": true,
           "universities": [
@@ -261,7 +261,7 @@
         {
           "full_name": "Wael Abdelmalek",
           "role": "Co-founder and CEO",
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/wwael/",
           "github_handle": null,
           "has_phd": false,
           "universities": [],
@@ -326,7 +326,7 @@
         "htgf_mandate_fit": 10.0,
         "drivers": [
           "Elite university origin (ETH Zurich, RWTH Aachen, TUM) (+4 pts)",
-          "Balanced multi-person founding team (3 key members) (+4 pts)",
+          "Balanced multi-person founding team (4 key members) (+4 pts)",
           "Principal investigator / academic researcher commercializing proprietary lab IP (+3 pts)",
           "Commercial register registration verified (HRB 309071) (+10 pts)",
           "Active commercial pilot / demo booking capabilities on live domain (+7 pts)",
@@ -343,7 +343,7 @@
         {
           "full_name": "Oliver Petrovic",
           "role": "Co-founder and Oberingenieur für Automatisierung und Steuerungstechnik",
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/oliver-petrovic-387b57127/",
           "github_handle": null,
           "has_phd": false,
           "universities": [
@@ -357,7 +357,7 @@
         {
           "full_name": "Manuel Belke",
           "role": "Co-founder",
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/manuel-belke-40b633138/",
           "github_handle": null,
           "has_phd": false,
           "universities": [
@@ -371,7 +371,7 @@
         {
           "full_name": "Christoph Susen",
           "role": "Co-founder",
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/dr-ing-christoph-susen-9211211b1/",
           "github_handle": null,
           "has_phd": false,
           "universities": [
@@ -452,7 +452,7 @@
           "full_name": "Dr. Alexandru Kampmann",
           "role": "Co-founder and CEO",
           "linkedin_url": null,
-          "github_handle": null,
+          "github_handle": "akampmann",
           "has_phd": true,
           "universities": [],
           "prior_companies": [],
@@ -602,7 +602,7 @@
         {
           "full_name": "Nives Rombini",
           "role": "CEO",
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/nives-rombini/",
           "github_handle": null,
           "has_phd": false,
           "universities": [
@@ -619,8 +619,8 @@
         {
           "full_name": "Dr. Jonas Steffen Walheim",
           "role": "CTO",
-          "linkedin_url": null,
-          "github_handle": null,
+          "linkedin_url": "https://www.linkedin.com/in/jonas-walheim-441b0284",
+          "github_handle": "j-walheim",
           "has_phd": true,
           "universities": [
             "ETH Zurich"
@@ -700,7 +700,7 @@
         {
           "full_name": "Matti Kesti",
           "role": "Co-founder & CEO",
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/matti-kesti-0a9302126/",
           "github_handle": null,
           "has_phd": true,
           "universities": [
@@ -716,7 +716,7 @@
         {
           "full_name": "Ping-Hsun Tsai",
           "role": "Co-founder & CTO",
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/ping-hsun-tsai-926782213/",
           "github_handle": null,
           "has_phd": false,
           "universities": [
@@ -795,7 +795,7 @@
         {
           "full_name": "Adina Goerres",
           "role": "CEO",
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/adinagoerres/",
           "github_handle": null,
           "has_phd": false,
           "universities": [],
@@ -807,8 +807,8 @@
         {
           "full_name": "Stefan Faistenauer",
           "role": "CTO",
-          "linkedin_url": null,
-          "github_handle": null,
+          "linkedin_url": "https://www.linkedin.com/in/stefan-faistenauer/",
+          "github_handle": "stefanfaistenauer",
           "has_phd": false,
           "universities": [],
           "prior_companies": [],
@@ -1062,8 +1062,8 @@
         {
           "full_name": "Jannis Schönleber",
           "role": "CEO & Founder",
-          "linkedin_url": null,
-          "github_handle": null,
+          "linkedin_url": "https://www.linkedin.com/in/jannis-schoenleber",
+          "github_handle": "joennlae",
           "has_phd": false,
           "universities": [],
           "prior_companies": [],
@@ -1087,7 +1087,7 @@
           "full_name": "Frédéric Odermatt",
           "role": "Senior AI Researcher",
           "linkedin_url": null,
-          "github_handle": null,
+          "github_handle": "FredericOdermatt",
           "has_phd": false,
           "universities": [],
           "prior_companies": [],
@@ -1248,7 +1248,7 @@
         {
           "full_name": "Sascha Nievelstein",
           "role": "Co-Founder",
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/sascha-nievelstein/",
           "github_handle": null,
           "has_phd": false,
           "universities": [
@@ -1262,7 +1262,7 @@
         {
           "full_name": "Robin Karutz",
           "role": "Co-Founder",
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/robin-karutz/",
           "github_handle": null,
           "has_phd": false,
           "universities": [],
@@ -1352,7 +1352,7 @@
         {
           "full_name": "Dominique Michel",
           "role": "Co-Founder & CEO",
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/dominique-michel-salesautomation/",
           "github_handle": null,
           "has_phd": false,
           "universities": [
@@ -1534,7 +1534,7 @@
           "Elite university origin (ETH Zurich, RWTH Aachen, TUM) (+4 pts)",
           "Principal investigator / academic researcher commercializing proprietary lab IP (+3 pts)",
           "Active commercial pilot / demo booking capabilities on live domain (+7 pts)",
-          "Commercial deeptech focus verified: industrial, ai, artificial intelligence (+2 pts)",
+          "Commercial deeptech focus verified: industrial, artificial intelligence, robotics (+2 pts)",
           "Official ETH Zurich spin-off approval (+11 pts)",
           "Live independent domain infrastructure (sherlockrobotics.com) (+3 pts)"
         ],
@@ -1550,7 +1550,7 @@
           "full_name": "Kirill Meisser",
           "role": null,
           "linkedin_url": null,
-          "github_handle": null,
+          "github_handle": "kirillmeisser",
           "has_phd": false,
           "universities": [],
           "prior_companies": [],
@@ -1563,85 +1563,6 @@
       "devils_advocate_risks": [
         "Potential challenges in scaling operations to meet market demand.",
         "Risks associated with integrating new technologies into existing manufacturing systems."
-      ],
-      "lp_synergy_matches": []
-    },
-    {
-      "entity_id": "c0562771-1048-52bb-ba26-121814f6a6a9",
-      "name": "NbMEA",
-      "canonical_name": "NbMEA",
-      "website_url": null,
-      "country_code": "DE",
-      "city": "Erlangen",
-      "legal_name": "NbMEA (ERC Proof of Concept, FRIEDRICH-ALEXANDER-UNIVERSITAET ERLANGEN-NUERNBERG)",
-      "legal_form": null,
-      "register_number": null,
-      "founding_year": 2025,
-      "htgf_vertical": "industrial_climate_deeptech",
-      "description": "ERC Proof-of-Concept Project: NbMEA: Niobium Multi-Electrode Arrays for Next-Generation ofElectromyographic Interfaces. Host: FRIEDRICH-ALEXANDER-UNIVERSITAET ERLANGEN-NUERNBERG (Erlangen). Objective: Intramuscular electromyography (iEMG) is the clinical gold standard for diagnosing neuromuscular disorders, yet the dominant material used by doctors is stainless-steel, and has remained unchanged for...",
-      "discovered_at": "2026-11-20 16:52:55",
-      "discovered_from": [
-        {
-          "source_name": "cordis_erc",
-          "source_label": "EU CORDIS ERC Proof-of-Concept",
-          "signal_date": "2026-11-01",
-          "source_url": "https://cordis.europa.eu/project/id/101335490",
-          "summary": "Horizon Europe ERC Proof-of-Concept grant commercializing university research"
-        }
-      ],
-      "earliness_badge": "Pre-Crunchbase / Undiscovered",
-      "funding_summary": "NbMEA is funded through the European Research Council's Proof-of-Concept program.",
-      "score_breakdown": {
-        "final_score": 44.0,
-        "team_pedigree": 19.0,
-        "commercial_intent": 0.0,
-        "technical_moat": 10.0,
-        "multi_signal_convergence": 5.0,
-        "htgf_mandate_fit": 10.0,
-        "drivers": [
-          "Founder holds a PhD / doctorate from a technical research university (+8 pts)",
-          "Elite university origin (ETH Zurich, RWTH Aachen, TUM) (+4 pts)",
-          "Balanced multi-person founding team (2 key members) (+4 pts)",
-          "Principal investigator / academic researcher commercializing proprietary lab IP (+3 pts)",
-          "European Research Council (ERC) Proof-of-Concept grant backed (+10 pts)",
-          "Ingested from authoritative upstream source (cordis_erc) (+5 pts)"
-        ],
-        "evidence_urls": [
-          "https://cordis.europa.eu/project/id/101335490"
-        ]
-      },
-      "founders": [
-        {
-          "full_name": "Prof. Dr. Alexander Steinkasserer",
-          "role": "Lead Principal Investigator of the NbMEA project",
-          "linkedin_url": null,
-          "github_handle": null,
-          "has_phd": true,
-          "universities": [
-            "Friedrich-Alexander-Universität Erlangen-Nürnberg"
-          ],
-          "prior_companies": [],
-          "is_ex_bigtech": false,
-          "is_technical": false,
-          "source_of_identity": "Lead PI of NbMEA"
-        },
-        {
-          "full_name": "",
-          "role": null,
-          "linkedin_url": null,
-          "github_handle": null,
-          "has_phd": false,
-          "universities": [],
-          "prior_companies": [],
-          "is_ex_bigtech": false,
-          "is_technical": false,
-          "source_of_identity": ""
-        }
-      ],
-      "inflection_why_now": "The development of NbMEA addresses the growing need for advanced diagnostic tools in neuromuscular diseases, aligning with increasing healthcare demands.",
-      "devils_advocate_risks": [
-        "Technical Risk: Challenges in translating the research outcomes into clinically viable devices.",
-        "Regulatory Risk: Navigating complex medical device regulations to achieve market approval."
       ],
       "lp_synergy_matches": []
     },
@@ -1697,8 +1618,8 @@
         {
           "full_name": "James He",
           "role": "Co-founder and CEO",
-          "linkedin_url": null,
-          "github_handle": null,
+          "linkedin_url": "https://www.linkedin.com/in/james-k-he/",
+          "github_handle": "james-helium",
           "has_phd": false,
           "universities": [
             "University of Cambridge"
@@ -1711,7 +1632,7 @@
         {
           "full_name": "Patrick Sharpe",
           "role": "Co-founder and CPO",
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/sharpe-patrick/",
           "github_handle": null,
           "has_phd": false,
           "universities": [],
@@ -1725,8 +1646,8 @@
         {
           "full_name": "Tom Whittle",
           "role": "Co-founder and CTO",
-          "linkedin_url": null,
-          "github_handle": null,
+          "linkedin_url": "https://www.linkedin.com/in/tomwhittle/",
+          "github_handle": "magerags",
           "has_phd": false,
           "universities": [],
           "prior_companies": [],
@@ -1803,7 +1724,7 @@
         {
           "full_name": "Lander Degrève",
           "role": "Co-Founder & CEO",
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/lander-degr%C3%A8ve/",
           "github_handle": null,
           "has_phd": false,
           "universities": [
@@ -1820,7 +1741,7 @@
         {
           "full_name": "Manu Vanderveeren",
           "role": "Co-Founder & COO",
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/manuvanderveeren/",
           "github_handle": null,
           "has_phd": false,
           "universities": [],
@@ -1832,8 +1753,8 @@
         {
           "full_name": "Samuel Smeys",
           "role": "Co-Founder & CTO",
-          "linkedin_url": null,
-          "github_handle": null,
+          "linkedin_url": "https://www.linkedin.com/in/samuelsmeys/",
+          "github_handle": "SamuelSmeys",
           "has_phd": false,
           "universities": [],
           "prior_companies": [],
@@ -1951,6 +1872,58 @@
       "lp_synergy_matches": []
     },
     {
+      "entity_id": "c0562771-1048-52bb-ba26-121814f6a6a9",
+      "name": "NbMEA",
+      "canonical_name": "NbMEA",
+      "website_url": null,
+      "country_code": "DE",
+      "city": "Erlangen",
+      "legal_name": "NbMEA (ERC Proof of Concept, FRIEDRICH-ALEXANDER-UNIVERSITAET ERLANGEN-NUERNBERG)",
+      "legal_form": null,
+      "register_number": null,
+      "founding_year": 2025,
+      "htgf_vertical": "industrial_climate_deeptech",
+      "description": "ERC Proof-of-Concept Project: NbMEA: Niobium Multi-Electrode Arrays for Next-Generation ofElectromyographic Interfaces. Host: FRIEDRICH-ALEXANDER-UNIVERSITAET ERLANGEN-NUERNBERG (Erlangen). Objective: Intramuscular electromyography (iEMG) is the clinical gold standard for diagnosing neuromuscular disorders, yet the dominant material used by doctors is stainless-steel, and has remained unchanged for...",
+      "discovered_at": "2026-11-20 16:52:55",
+      "discovered_from": [
+        {
+          "source_name": "cordis_erc",
+          "source_label": "EU CORDIS ERC Proof-of-Concept",
+          "signal_date": "2026-11-01",
+          "source_url": "https://cordis.europa.eu/project/id/101335490",
+          "summary": "Horizon Europe ERC Proof-of-Concept grant commercializing university research"
+        }
+      ],
+      "earliness_badge": "Pre-Crunchbase / Undiscovered",
+      "funding_summary": "NbMEA is funded through the European Research Council's Proof-of-Concept program.",
+      "score_breakdown": {
+        "final_score": 40.0,
+        "team_pedigree": 15.0,
+        "commercial_intent": 0.0,
+        "technical_moat": 10.0,
+        "multi_signal_convergence": 5.0,
+        "htgf_mandate_fit": 10.0,
+        "drivers": [
+          "Founder holds a PhD / doctorate from a technical research university (+8 pts)",
+          "Elite university origin (ETH Zurich, RWTH Aachen, TUM) (+4 pts)",
+          "Principal investigator / academic researcher commercializing proprietary lab IP (+3 pts)",
+          "European Research Council (ERC) Proof-of-Concept grant backed (+10 pts)",
+          "Ingested from authoritative upstream source (cordis_erc) (+5 pts)",
+          "Core German investment mandate (DE) (+10 pts)"
+        ],
+        "evidence_urls": [
+          "https://cordis.europa.eu/project/id/101335490"
+        ]
+      },
+      "founders": [],
+      "inflection_why_now": "The development of NbMEA addresses the growing need for advanced diagnostic tools in neuromuscular diseases, aligning with increasing healthcare demands.",
+      "devils_advocate_risks": [
+        "Technical Risk: Challenges in translating the research outcomes into clinically viable devices.",
+        "Regulatory Risk: Navigating complex medical device regulations to achieve market approval."
+      ],
+      "lp_synergy_matches": []
+    },
+    {
       "entity_id": "b5927155-e380-574e-9c37-fdba1d229914",
       "name": "ClipMania GmbH (Frameway)",
       "canonical_name": "ClipMania GmbH (Frameway)",
@@ -2037,7 +2010,7 @@
           "Elite university origin (ETH Zurich, RWTH Aachen, TUM) (+4 pts)",
           "Balanced multi-person founding team (2 key members) (+4 pts)",
           "Active commercial pilot / demo booking capabilities on live domain (+7 pts)",
-          "Commercial deeptech focus verified: industrial, ai (+2 pts)",
+          "Commercial deeptech focus verified: ai, industrial (+2 pts)",
           "Live independent domain infrastructure (vantel.com) (+3 pts)"
         ],
         "evidence_urls": [
@@ -2148,7 +2121,7 @@
         {
           "full_name": "Arman Karégar",
           "role": "Co-founder and CEO",
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/armankaregar",
           "github_handle": null,
           "has_phd": false,
           "universities": [
@@ -2163,8 +2136,8 @@
         {
           "full_name": "Max Henry Xie",
           "role": "Co-founder and CTO",
-          "linkedin_url": null,
-          "github_handle": null,
+          "linkedin_url": "https://www.linkedin.com/in/max-henry-xie",
+          "github_handle": "MaxHXie",
           "has_phd": false,
           "universities": [
             "KTH Royal Institute of Technology"
@@ -2244,7 +2217,7 @@
         {
           "full_name": "Antonia Spicher",
           "role": null,
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/antonia-spicher-549122215/",
           "github_handle": null,
           "has_phd": false,
           "universities": [],
@@ -2256,7 +2229,7 @@
         {
           "full_name": "Johannes Steingass",
           "role": null,
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/johannes-steingass-0ba683164/",
           "github_handle": null,
           "has_phd": false,
           "universities": [],
@@ -2268,7 +2241,7 @@
         {
           "full_name": "René Bacher",
           "role": null,
-          "linkedin_url": null,
+          "linkedin_url": "https://www.linkedin.com/in/ren%C3%A9-bacher-4273a3202/",
           "github_handle": null,
           "has_phd": false,
           "universities": [],
@@ -5257,7 +5230,7 @@
         "Hugging Face Trending AI Org"
       ],
       "kill_reasons": [
-        "Gate 3 (Legacy Corporate): Matches corporate blocklist token 'lightricks'"
+        "Gate 3 (Legacy Corporate): Matches corporate blocklist token 'ltx.io'"
       ]
     },
     {

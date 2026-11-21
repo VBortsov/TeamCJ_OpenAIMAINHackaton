@@ -1,27 +1,27 @@
 {
-  "one_liner": "Navis Bio develops AI tools for translational medicine and drug design; ETH Zurich’s 2026 spin-off recognition gives HTGF a reason to reach out now.",
+  "one_liner": "Navis Bio focuses on AI for translational medicine; ETH Zurich recognized it as a spin-off in 2026, and its funding status remains unconfirmed.",
   "top_signals": [
     {
-      "signal": "ETH Zurich recognized Navis Bio as a spin-off on its 2026 roster.",
+      "signal": "ETH Zurich recognized Navis Bio as a spin-off in 2026.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
-      "signal": "Both founders attended ETH Zurich and previously worked at Bristol Myers Squibb; the CTO holds a PhD.",
-      "source_url": null
+      "signal": "Co-founder and CTO Dr. Jonas Steffen Walheim holds a PhD and previously worked at Bristol Myers Squibb.",
+      "source_url": "https://www.linkedin.com/in/jonas-walheim-441b0284"
     },
     {
-      "signal": "Model score 79.9 of 100 (at the top of the reference cohort). University spin-off status, a founding CTO, a founder with a PhD, and ETH Zurich backgrounds pushed the score up. The technical-founder and deep-tech flags also raised the score but are not confirmed by the founder and company records, respectively.",
+      "signal": "Model score 79.9 of 100 (at the top of the reference cohort). University spin-off status, ETH Zurich founder backgrounds, a founder with a PhD and a co-founding CTO lifted the score. The model also flagged deep tech and a technical founder, but the founder records do not confirm the technical-founder flag.",
       "source_url": null
     }
   ],
-  "team": "Nives Rombini, CEO, previously worked at Bristol Myers Squibb and Swisscom. Dr. Jonas Steffen Walheim, CTO, holds a PhD and previously worked at Bristol Myers Squibb. Both attended ETH Zurich.",
-  "why_early": "No public records indicate that Navis Bio had raised funding as of November 2026. Whether a priced round has occurred is unknown.",
+  "team": "CEO Nives Rombini and CTO Dr. Jonas Steffen Walheim both studied at ETH Zurich and previously worked at Bristol Myers Squibb. Rombini also worked at Swisscom; Walheim holds a PhD.",
+  "why_early": "As of November 2026, public records did not indicate any funding raised. Whether a priced round has closed is unknown.",
   "devils_advocate_risks": [
-    "Pharma adoption is uncertain: customers would need to integrate the AI tools into existing R&D workflows.",
-    "It is unknown how well the platform scales across therapeutic areas."
+    "Pharma adoption depends on whether customers will integrate the platform into established R&D workflows.",
+    "It is unknown whether the platform can scale across therapeutic areas."
   ],
-  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders which existing pharma R&D workflow they would target in a first pilot.",
+  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders whether Navis Bio has already closed a priced funding round.",
   "memo_source": "openai:gpt-6.2-sol",
   "entity_id": "41ea90c8-934e-5908-b968-9c780425a47e",
-  "input_hash": "b829539e197744f4"
+  "input_hash": "17d7786f36e5284f"
 }

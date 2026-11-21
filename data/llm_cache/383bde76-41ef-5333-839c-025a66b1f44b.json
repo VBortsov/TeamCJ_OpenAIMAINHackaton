@@ -3,7 +3,7 @@
     {
       "full_name": "João Carvalho",
       "role": "Co-founder and CTO",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/ujc/",
       "has_phd": true,
       "universities": [
         "ETH Zurich"
@@ -15,7 +15,7 @@
     {
       "full_name": "Wael Abdelmalek",
       "role": "Co-founder and CEO",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/wwael/",
       "has_phd": false,
       "universities": [],
       "prior_companies": [

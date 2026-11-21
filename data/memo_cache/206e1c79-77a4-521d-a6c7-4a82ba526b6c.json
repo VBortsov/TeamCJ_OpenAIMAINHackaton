@@ -1,27 +1,28 @@
 {
-  "one_liner": "44ai develops Haidy, an AI platform for clinical documentation; healthcare pilots and ETH Zurich’s 2026 spin-off recognition make it worth meeting now.",
+  "one_liner": "44ai develops Haidy, an AI platform for clinical documentation. Reported healthcare pilots make this a good time to ask whether hospitals will pay for it.",
   "top_signals": [
     {
-      "signal": "ETH Zurich recognized 44ai as a spin-off in its 2026 roster.",
+      "signal": "ETH Zurich recognized 44ai as a spin-off in 2026.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
-      "signal": "44ai has been involved in healthcare AI partnerships and pilots; paid conversion is unknown.",
+      "signal": "44ai has been involved in healthcare AI partnerships and pilot projects; paid conversion is unknown.",
       "source_url": null
     },
     {
-      "signal": "Model score 89.4 of 100 (at the top of the reference cohort). The model rewarded a founder-count input of six (only two are identified as founders in the records), ETH spin-off status, a technical-founder flag not confirmed by the founder records, and a deep-tech classification.",
+      "signal": "Model score 89.4 of 100 (at the top of the reference cohort); ranked 6 of 63 leads today. The university spin-off and deep-tech flags lifted the score, as did flags for six founders and a technical founder. The founder records confirm neither of the latter two flags.",
       "source_url": null
     }
   ],
-  "team": "Jannis Schönleber (CEO) and Stefan Lombriser (Strategic Affairs) are identified as founders. The team also lists senior AI research and engineering roles and a medical expert.",
-  "why_early": "Unknown. Funding details are not publicly disclosed, so it is unclear whether a priced round has occurred.",
+  "team": "Jannis Schönleber is listed as CEO and founder, and Stefan Lombriser as Strategic Affairs and founder. Frédéric Odermatt and Florence Lenter are listed as Senior AI Researcher and Senior AI Engineer, respectively, but neither is identified as a founder.",
+  "why_early": "Unknown. Funding details are not publicly disclosed, so whether a priced round has occurred is unconfirmed.",
   "devils_advocate_risks": [
-    "It is unknown whether pilots have converted to paid deployments.",
-    "Integration into existing clinical workflows and compliance with applicable healthcare AI regulations could slow adoption."
+    "Whether pilots have converted into paid hospital deployments is unknown.",
+    "Integrating Haidy into established clinical workflows could slow adoption.",
+    "Applicable healthcare AI and medical-device regulatory requirements are unclear."
   ],
-  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders whether 44ai has closed a priced equity round.",
+  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders whether any hospital pilot has converted into a paid deployment.",
   "memo_source": "openai:gpt-6.2-sol",
   "entity_id": "206e1c79-77a4-521d-a6c7-4a82ba526b6c",
-  "input_hash": "17d5149582350498"
+  "input_hash": "a870d370ac30e02c"
 }

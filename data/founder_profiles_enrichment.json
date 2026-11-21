@@ -1,0 +1,443 @@
+{
+  "LLMify": {
+    "verified_city": "Cham",
+    "verified_country": "CH",
+    "org_github": null,
+    "founders": [
+      {
+        "full_name": "Francesco Lässig",
+        "linkedin_url": "https://www.linkedin.com/in/francesco-laessig/",
+        "github_handle": "entropicbloom",
+        "evidence_url": "https://www.flaessig.com/"
+      }
+    ]
+  },
+  "aiXopt": {
+    "verified_city": "Aachen",
+    "verified_country": "DE",
+    "org_github": null,
+    "founders": [
+      {
+        "full_name": "Dr.-Ing. David Stenger",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      },
+      {
+        "full_name": "Dr.-Ing. Tim Reuscher",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      }
+    ]
+  },
+  "Athenyx Robotics": {
+    "verified_city": "Grünwald",
+    "verified_country": "DE",
+    "org_github": "athenyxrobotics",
+    "founders": [
+      {
+        "full_name": "Oliver Petrovic",
+        "linkedin_url": "https://www.linkedin.com/in/oliver-petrovic-387b57127/",
+        "github_handle": null,
+        "evidence_url": "https://athenyxrobotics.com/team"
+      },
+      {
+        "full_name": "Manuel Belke",
+        "linkedin_url": "https://www.linkedin.com/in/manuel-belke-40b633138/",
+        "github_handle": null,
+        "evidence_url": "https://athenyxrobotics.com/team"
+      },
+      {
+        "full_name": "Christoph Susen",
+        "linkedin_url": "https://www.linkedin.com/in/dr-ing-christoph-susen-9211211b1/",
+        "github_handle": null,
+        "evidence_url": "https://athenyxrobotics.com/team"
+      },
+      {
+        "full_name": "Andreas Mössner",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      }
+    ]
+  },
+  "Determion": {
+    "verified_city": "Aachen",
+    "verified_country": "DE",
+    "org_github": "determion",
+    "founders": [
+      {
+        "full_name": "Dr. Alexandru Kampmann",
+        "linkedin_url": null,
+        "github_handle": "akampmann",
+        "evidence_url": "https://github.com/embedded-software-laboratory/embeddedRTPS-STM32"
+      },
+      {
+        "full_name": "Dr. Dominik Püllen",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      },
+      {
+        "full_name": "Niels Schneider",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      },
+      {
+        "full_name": "Joschko Rehder",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      }
+    ]
+  },
+  "UTHEREAL": {
+    "verified_city": "Zurich",
+    "verified_country": "CH",
+    "org_github": null,
+    "founders": [
+      {
+        "full_name": "João Carvalho",
+        "linkedin_url": "https://www.linkedin.com/in/ujc/",
+        "github_handle": null,
+        "evidence_url": "https://uthereal.ai/about"
+      },
+      {
+        "full_name": "Wael Abdelmalek",
+        "linkedin_url": "https://www.linkedin.com/in/wwael/",
+        "github_handle": null,
+        "evidence_url": "https://uthereal.ai/about"
+      }
+    ]
+  },
+  "Hydken": {
+    "verified_city": "Zurich",
+    "verified_country": "CH",
+    "org_github": null,
+    "founders": [
+      {
+        "full_name": "Olga Meichtry",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      },
+      {
+        "full_name": "Arnesh Das",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      }
+    ]
+  },
+  "Navis Bio": {
+    "verified_city": "Küsnacht",
+    "verified_country": "CH",
+    "org_github": "navisbio",
+    "founders": [
+      {
+        "full_name": "Nives Rombini",
+        "linkedin_url": "https://www.linkedin.com/in/nives-rombini/",
+        "github_handle": null,
+        "evidence_url": "https://feed.podbean.com/pharmaprescribed/feed.xml"
+      },
+      {
+        "full_name": "Dr. Jonas Steffen Walheim",
+        "linkedin_url": "https://www.linkedin.com/in/jonas-walheim-441b0284",
+        "github_handle": "j-walheim",
+        "evidence_url": "https://github.com/j-walheim"
+      }
+    ]
+  },
+  "TaskHived": {
+    "verified_city": "Zurich",
+    "verified_country": "CH",
+    "org_github": null,
+    "founders": [
+      {
+        "full_name": "Priya Darshani",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      }
+    ]
+  },
+  "brixl": {
+    "verified_city": "Cologne",
+    "verified_country": "DE",
+    "org_github": null,
+    "founders": [
+      {
+        "full_name": "Sascha Nievelstein",
+        "linkedin_url": "https://www.linkedin.com/in/sascha-nievelstein/",
+        "github_handle": null,
+        "evidence_url": "https://brixl.tech/about"
+      },
+      {
+        "full_name": "Robin Karutz",
+        "linkedin_url": "https://www.linkedin.com/in/robin-karutz/",
+        "github_handle": null,
+        "evidence_url": "https://brixl.tech/about"
+      }
+    ]
+  },
+  "Revonode / Floatz": {
+    "verified_city": "Zurich",
+    "verified_country": "CH",
+    "org_github": null,
+    "founders": [
+      {
+        "full_name": "Matti Kesti",
+        "linkedin_url": "https://www.linkedin.com/in/matti-kesti-0a9302126/",
+        "github_handle": null,
+        "evidence_url": "https://revonode.ai/team"
+      },
+      {
+        "full_name": "Ping-Hsun Tsai",
+        "linkedin_url": "https://www.linkedin.com/in/ping-hsun-tsai-926782213/",
+        "github_handle": null,
+        "evidence_url": "https://revonode.ai/team"
+      }
+    ]
+  },
+  "superglue": {
+    "verified_city": "Herford",
+    "verified_country": "DE",
+    "org_github": "superglue-ai",
+    "founders": [
+      {
+        "full_name": "Adina Goerres",
+        "linkedin_url": "https://www.linkedin.com/in/adinagoerres/",
+        "github_handle": null,
+        "evidence_url": "https://superglue.ai/press/"
+      },
+      {
+        "full_name": "Stefan Faistenauer",
+        "linkedin_url": "https://www.linkedin.com/in/stefan-faistenauer/",
+        "github_handle": "stefanfaistenauer",
+        "evidence_url": "https://superglue.ai/press/"
+      }
+    ]
+  },
+  "FUN-CRETE": {
+    "verified_city": "Delft",
+    "verified_country": "NL",
+    "org_github": null,
+    "founders": [
+      {
+        "full_name": "Prof. Branko Šavija",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      }
+    ]
+  },
+  "Sherlock Robotics": {
+    "verified_city": "Zurich",
+    "verified_country": "CH",
+    "org_github": null,
+    "founders": [
+      {
+        "full_name": "Kirill Meisser",
+        "linkedin_url": null,
+        "github_handle": "kirillmeisser",
+        "evidence_url": "https://github.com/AlexanderSchuetz97/completion_stage"
+      }
+    ]
+  },
+  "NbMEA": {
+    "verified_city": "Erlangen",
+    "verified_country": "DE",
+    "org_github": null,
+    "founders": []
+  },
+  "44ai": {
+    "verified_city": "Olten",
+    "verified_country": "CH",
+    "org_github": "44ai-labs",
+    "founders": [
+      {
+        "full_name": "Jannis Schönleber",
+        "linkedin_url": "https://www.linkedin.com/in/jannis-schoenleber",
+        "github_handle": "joennlae",
+        "evidence_url": "https://github.com/joennlae"
+      },
+      {
+        "full_name": "Stefan Lombriser",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      },
+      {
+        "full_name": "Frédéric Odermatt",
+        "linkedin_url": null,
+        "github_handle": "FredericOdermatt",
+        "evidence_url": "https://github.com/FredericOdermatt"
+      }
+    ]
+  },
+  "Clayground": {
+    "verified_city": "Schaffhausen",
+    "verified_country": "CH",
+    "org_github": null,
+    "founders": [
+      {
+        "full_name": "Massimo Höhn",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      },
+      {
+        "full_name": "Dominique Michel",
+        "linkedin_url": "https://www.linkedin.com/in/dominique-michel-salesautomation/",
+        "github_handle": null,
+        "evidence_url": "https://community.clay.com/members/prof_9xu15g5n80mZ"
+      },
+      {
+        "full_name": "Carlo Harprecht",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      }
+    ]
+  },
+  "Softreg": {
+    "verified_city": "Wohlen",
+    "verified_country": "CH",
+    "org_github": null,
+    "founders": [
+      {
+        "full_name": "Aharon Yechezkel",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      },
+      {
+        "full_name": "Anna-Marie Makarova",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      },
+      {
+        "full_name": "Alistair Venables",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      }
+    ]
+  },
+  "H2ALL": {
+    "verified_city": "Cologne",
+    "verified_country": "DE",
+    "org_github": null,
+    "founders": [
+      {
+        "full_name": "Antonia Spicher",
+        "linkedin_url": "https://www.linkedin.com/in/antonia-spicher-549122215/",
+        "github_handle": null,
+        "evidence_url": "https://h2-all.com/en/"
+      },
+      {
+        "full_name": "Johannes Steingass",
+        "linkedin_url": "https://www.linkedin.com/in/johannes-steingass-0ba683164/",
+        "github_handle": null,
+        "evidence_url": "https://h2-all.com/en/"
+      },
+      {
+        "full_name": "René Bacher",
+        "linkedin_url": "https://www.linkedin.com/in/ren%C3%A9-bacher-4273a3202/",
+        "github_handle": null,
+        "evidence_url": "https://h2-all.com/en/"
+      }
+    ]
+  },
+  "Senlytics": {
+    "verified_city": "Aachen",
+    "verified_country": "DE",
+    "org_github": null,
+    "founders": [
+      {
+        "full_name": "Florian Wirsing",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      },
+      {
+        "full_name": "Oliver Kokron",
+        "linkedin_url": null,
+        "github_handle": null,
+        "evidence_url": null
+      }
+    ]
+  },
+  "Vetnio": {
+    "verified_city": "Stockholm",
+    "verified_country": "SE",
+    "org_github": null,
+    "founders": [
+      {
+        "full_name": "Arman Karégar",
+        "linkedin_url": "https://www.linkedin.com/in/armankaregar",
+        "github_handle": null,
+        "evidence_url": "https://www.extruct.ai/data-room/ycombinator-companies-w25/"
+      },
+      {
+        "full_name": "Max Henry Xie",
+        "linkedin_url": "https://www.linkedin.com/in/max-henry-xie",
+        "github_handle": "MaxHXie",
+        "evidence_url": "https://www.extruct.ai/data-room/ycombinator-companies-w25/"
+      }
+    ]
+  },
+  "Artificial Societies": {
+    "verified_city": "London",
+    "verified_country": "GB",
+    "org_github": "artificial-societies",
+    "founders": [
+      {
+        "full_name": "James He",
+        "linkedin_url": "https://www.linkedin.com/in/james-k-he/",
+        "github_handle": "james-helium",
+        "evidence_url": "https://societies.ai/company"
+      },
+      {
+        "full_name": "Patrick Sharpe",
+        "linkedin_url": "https://www.linkedin.com/in/sharpe-patrick/",
+        "github_handle": null,
+        "evidence_url": "https://societies.ai/company"
+      },
+      {
+        "full_name": "Tom Whittle",
+        "linkedin_url": "https://www.linkedin.com/in/tomwhittle/",
+        "github_handle": "magerags",
+        "evidence_url": "https://societies.ai/company"
+      }
+    ]
+  },
+  "Spott": {
+    "verified_city": "Leuven",
+    "verified_country": "BE",
+    "org_github": null,
+    "founders": [
+      {
+        "full_name": "Lander Degrève",
+        "linkedin_url": "https://www.linkedin.com/in/lander-degr%C3%A8ve/",
+        "github_handle": null,
+        "evidence_url": "https://spott.io/authors/lander-degreve"
+      },
+      {
+        "full_name": "Manu Vanderveeren",
+        "linkedin_url": "https://www.linkedin.com/in/manuvanderveeren/",
+        "github_handle": null,
+        "evidence_url": "https://spott.io/authors/lander-degreve"
+      },
+      {
+        "full_name": "Samuel Smeys",
+        "linkedin_url": "https://www.linkedin.com/in/samuelsmeys/",
+        "github_handle": "SamuelSmeys",
+        "evidence_url": "https://spott.io/authors/lander-degreve"
+      }
+    ]
+  }
+}

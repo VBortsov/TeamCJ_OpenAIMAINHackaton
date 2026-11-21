@@ -3,7 +3,7 @@
     {
       "full_name": "Nives Rombini",
       "role": "CEO",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/nives-rombini/",
       "has_phd": false,
       "universities": [
         "ETH Zurich"
@@ -18,7 +18,7 @@
     {
       "full_name": "Dr. Jonas Steffen Walheim",
       "role": "CTO",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/jonas-walheim-441b0284",
       "has_phd": true,
       "universities": [
         "ETH Zurich"
@@ -27,7 +27,8 @@
         "Bristol Myers Squibb"
       ],
       "is_ex_bigtech": true,
-      "source_of_identity": "CTO of Navis Bio"
+      "source_of_identity": "CTO of Navis Bio",
+      "github_handle": "j-walheim"
     }
   ],
   "fd_enriched": 1,

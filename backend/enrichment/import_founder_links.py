@@ -20,6 +20,12 @@ logger = logging.getLogger(__name__)
 
 HONORIFICS_REGEX = re.compile(r"\b(dr|prof|phd|dipl-ing|dipl\.-ing\.|msc|bsc|mba|herr|frau)\b\.?", re.IGNORECASE)
 
+OPERATIONAL_HUBS = {"zurich", "zürich", "munich", "münchen", "aachen"}
+TAX_DOMICILES = {
+    "cham", "olten", "wohlen", "schaffhausen", "küsnacht", "kuesnacht",
+    "herford", "grünwald", "gruenwald"
+}
+
 
 def normalize_tokens(text: str) -> List[str]:
     """Tokenize and strip honorifics/punctuation for fuzzy founder name matching."""
@@ -117,16 +123,24 @@ def merge_offline_founder_profiles(
             matched_ent = next((e for e in entities if e["entity_id"] == target_eid), None)
 
         if not matched_ent and cname:
-            cslug = slugify(cname)
-            matched_ent = entity_by_slug.get(cslug)
-            if not matched_ent:
+            candidate_names = [cname]
+            if "/" in cname or "|" in cname:
+                candidate_names.extend([p.strip() for p in re.split(r"[/|]", cname) if p.strip()])
+
+            for cand_name in candidate_names:
+                cslug = slugify(cand_name)
+                matched_ent = entity_by_slug.get(cslug)
+                if matched_ent:
+                    break
                 # Fuzzy match by startup token
-                c_tokens = set(normalize_tokens(cname))
+                c_tokens = set(normalize_tokens(cand_name))
                 for ent in entities:
                     ent_tokens = set(normalize_tokens(ent["canonical_name"]))
                     if c_tokens and ent_tokens and len(c_tokens & ent_tokens) >= 1 and (c_tokens.issubset(ent_tokens) or ent_tokens.issubset(c_tokens)):
                         matched_ent = ent
                         break
+                if matched_ent:
+                    break
 
         if not matched_ent:
             continue
@@ -134,14 +148,20 @@ def merge_offline_founder_profiles(
         startups_matched += 1
         eid = matched_ent["entity_id"]
 
-        # Verified city/country updates
+        # Verified city/country updates (preserving operational hubs from tax domiciles)
+        current_city = matched_ent["city"]
         verified_city = normalize_city(item.get("verified_city") or item.get("city"))
         verified_country = (item.get("verified_country") or item.get("country_code") or "").strip().upper()
 
-        if verified_city or verified_country:
+        effective_city = verified_city
+        if current_city and current_city.lower() in OPERATIONAL_HUBS:
+            if not verified_city or verified_city.lower() in TAX_DOMICILES:
+                effective_city = current_city
+
+        if effective_city or verified_country:
             cursor.execute(
                 "UPDATE entities SET city = coalesce(?, city), country_code = coalesce(?, country_code) WHERE entity_id = ?",
-                (verified_city or None, verified_country or None, eid)
+                (effective_city or None, verified_country or None, eid)
             )
 
         # Merge into llm_cache file
@@ -155,9 +175,13 @@ def merge_offline_founder_profiles(
             except Exception as e:
                 logger.debug("Error reading cache file %s: %s", cache_file, e)
 
-        if cache_data:
-            if verified_city and not cache_data.get("city"):
-                cache_data["city"] = verified_city
+        if cache_data and effective_city:
+            cache_city = cache_data.get("city")
+            if not cache_city or (cache_city.lower() in TAX_DOMICILES and effective_city.lower() in OPERATIONAL_HUBS):
+                cache_data["city"] = effective_city
+                cache_changed = True
+            elif cache_city.lower() not in OPERATIONAL_HUBS and effective_city.lower() not in TAX_DOMICILES:
+                cache_data["city"] = effective_city
                 cache_changed = True
 
         # Process founders
@@ -246,6 +270,37 @@ def merge_offline_founder_profiles(
                 cache_files_updated += 1
             except Exception as e:
                 logger.warning("Could not write updated cache file %s: %s", cache_file, e)
+
+    # Purge misattributed founders for NbMEA (Prof. Steinkasserer belongs to Mallia Innovations)
+    nbmea_eid = "c0562771-1048-52bb-ba26-121814f6a6a9"
+    cursor.execute("""
+        SELECT f.founder_id FROM founders f
+        JOIN entity_founder_links l ON f.founder_id = l.founder_id
+        WHERE l.entity_id = ? AND (f.full_name LIKE '%Steinkasserer%' OR trim(f.full_name) = '')
+    """, (nbmea_eid,))
+    for (f_id_to_del,) in cursor.fetchall():
+        cursor.execute("DELETE FROM entity_founder_links WHERE entity_id = ? AND founder_id = ?", (nbmea_eid, f_id_to_del))
+        cursor.execute("SELECT count(*) FROM entity_founder_links WHERE founder_id = ?", (f_id_to_del,))
+        if cursor.fetchone()[0] == 0:
+            cursor.execute("DELETE FROM founders WHERE founder_id = ?", (f_id_to_del,))
+
+    nbmea_cache_file = cache_path / f"{nbmea_eid}.json"
+    if nbmea_cache_file.exists():
+        try:
+            with open(nbmea_cache_file, "r", encoding="utf-8") as f:
+                c_data = json.load(f)
+            orig_founders = c_data.get("founders_enriched", [])
+            cleaned_founders = [
+                f for f in orig_founders
+                if "steinkasserer" not in (f.get("full_name") or "").lower() and (f.get("full_name") or "").strip()
+            ]
+            if len(cleaned_founders) != len(orig_founders):
+                c_data["founders_enriched"] = cleaned_founders
+                with open(nbmea_cache_file, "w", encoding="utf-8") as f:
+                    json.dump(c_data, f, indent=2, ensure_ascii=False)
+                cache_files_updated += 1
+        except Exception as e:
+            logger.warning("Failed to purge Steinkasserer from %s: %s", nbmea_cache_file, e)
 
     conn.commit()
     conn.close()

@@ -3,19 +3,20 @@
     {
       "full_name": "James He",
       "role": "Co-founder and CEO",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/james-k-he/",
       "has_phd": false,
       "universities": [
         "University of Cambridge"
       ],
       "prior_companies": [],
       "is_ex_bigtech": false,
-      "source_of_identity": "Standout Work"
+      "source_of_identity": "Standout Work",
+      "github_handle": "james-helium"
     },
     {
       "full_name": "Patrick Sharpe",
       "role": "Co-founder and CPO",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/sharpe-patrick/",
       "has_phd": false,
       "universities": [],
       "prior_companies": [
@@ -27,12 +28,13 @@
     {
       "full_name": "Tom Whittle",
       "role": "Co-founder and CTO",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/tomwhittle/",
       "has_phd": false,
       "universities": [],
       "prior_companies": [],
       "is_ex_bigtech": false,
-      "source_of_identity": ""
+      "source_of_identity": "",
+      "github_handle": "magerags"
     }
   ],
   "fd_enriched": 1,

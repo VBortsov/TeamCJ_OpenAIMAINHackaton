@@ -1,27 +1,28 @@
 {
-  "one_liner": "Athenyx Robotics is developing software to standardize industrial robot deployment and operation; RWTH Aachen’s 2026 Spin-off Award makes it worth an early conversation.",
+  "one_liner": "Athenyx Robotics is building software to train industrial robots in simulation and deploy them in factories; RWTH Aachen’s 2026 Spin-off Award makes it worth a conversation now.",
   "top_signals": [
     {
       "signal": "Won RWTH Aachen University’s 2026 Spin-off Award.",
       "source_url": "https://www.rwth-aachen.de/cms/root/wir/Profil/Auszeichnungen-und-Ehrungen/Spin-off-Award/~bsjluc/Athenyx-Robotics/lidx/1/"
     },
     {
-      "signal": "Demo and pilot booking are reported; completed deployments are unknown.",
+      "signal": "The live site offers pilot or demo booking; actual deployments are unknown.",
       "source_url": null
     },
     {
-      "signal": "Ranked 9th of 63 leads today; model score 66.5 of 100 (above 92% of the reference cohort). University spin-off status, three identified founders, deep-tech classification and an RWTH Aachen affiliation flagged as a top-university link lifted the score; being based in Germany lowered it.",
+      "signal": "Model score 73.1 of 100 (above 98.7% of the reference cohort). The university spin-off, deep-tech classification, and founder university background raised the score; being based in Germany lowered it. A four-founder flag also raised the score, but only three founders are documented.",
       "source_url": null
     }
   ],
-  "team": "The founder records identify three RWTH Aachen co-founders: Oliver Petrovic, a senior engineer in automation and control; Manuel Belke and Christoph Susen, both with backgrounds in robotics, AI, simulation and production at RWTH Aachen’s WZL.",
-  "why_early": "Unknown whether a priced round has occurred; the Pre-Crunchbase badge does not establish funding status.",
+  "team": "The three documented co-founders all have ties to RWTH Aachen’s Werkzeugmaschinenlabor (WZL): Oliver Petrovic is a senior engineer in automation and control; Manuel Belke and Christoph Susen have backgrounds in robotics, AI, simulation, and production.",
+  "why_early": "Unknown whether a priced round has occurred. The “Pre-Crunchbase / Undiscovered” badge does not establish funding status.",
   "devils_advocate_risks": [
-    "It is unknown whether a robot skill can be transferred across production sites without substantial custom integration.",
-    "Technical founder status is unverified."
+    "It is unknown whether skills trained in simulation transfer reliably to live production.",
+    "It is unknown how much custom integration each new factory or robot system requires.",
+    "A technical founder is not verified in the founder records."
   ],
-  "next_step": "HTGF Industrial Tech team: Ask the founders, “What evidence do you have that a robot skill can be deployed at a second production site without substantial re-engineering?”",
+  "next_step": "HTGF Industrial Tech team: Ask the founders how much site-specific engineering their first factory deployment has required or is expected to require.",
   "memo_source": "openai:gpt-6.2-sol",
   "entity_id": "aa0e9e32-4e6a-5325-81a6-aa68cb0791d4",
-  "input_hash": "3d416c428b4e9068"
+  "input_hash": "cbfb8f9162d75a1d"
 }

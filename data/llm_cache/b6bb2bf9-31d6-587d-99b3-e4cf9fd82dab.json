@@ -3,7 +3,7 @@
     {
       "full_name": "Lander Degrève",
       "role": "Co-Founder & CEO",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/lander-degr%C3%A8ve/",
       "has_phd": false,
       "universities": [
         "Bocconi University"
@@ -18,7 +18,7 @@
     {
       "full_name": "Manu Vanderveeren",
       "role": "Co-Founder & COO",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/manuvanderveeren/",
       "has_phd": false,
       "universities": [],
       "prior_companies": [],
@@ -28,12 +28,13 @@
     {
       "full_name": "Samuel Smeys",
       "role": "Co-Founder & CTO",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/samuelsmeys/",
       "has_phd": false,
       "universities": [],
       "prior_companies": [],
       "is_ex_bigtech": false,
-      "source_of_identity": "CTO of Spott"
+      "source_of_identity": "CTO of Spott",
+      "github_handle": "SamuelSmeys"
     }
   ],
   "fd_enriched": 1,

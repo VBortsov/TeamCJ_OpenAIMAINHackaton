@@ -1,28 +1,5 @@
 {
-  "founders_enriched": [
-    {
-      "full_name": "Prof. Dr. Alexander Steinkasserer",
-      "role": "Lead Principal Investigator of the NbMEA project",
-      "linkedin_url": null,
-      "has_phd": true,
-      "universities": [
-        "Friedrich-Alexander-Universität Erlangen-Nürnberg"
-      ],
-      "prior_companies": [],
-      "is_ex_bigtech": false,
-      "source_of_identity": "Lead PI of NbMEA"
-    },
-    {
-      "full_name": "",
-      "role": null,
-      "linkedin_url": null,
-      "has_phd": false,
-      "universities": [],
-      "prior_companies": [],
-      "is_ex_bigtech": false,
-      "source_of_identity": ""
-    }
-  ],
+  "founders_enriched": [],
   "fd_enriched": 1,
   "fd_any_phd": true,
   "fd_any_top_university": true,

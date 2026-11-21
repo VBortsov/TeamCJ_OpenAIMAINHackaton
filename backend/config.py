@@ -35,6 +35,7 @@ class Settings(BaseSettings):
     DATA_DIR: Path = Field(default=Path("./data"))
     SQLITE_DB_PATH: Path = Field(default=Path("./data/scout.db"))
     HTTP_CACHE_DIR: Path = Field(default=Path("./data/http_cache"))
+    LLM_CACHE_DIR: Path = Field(default=Path("./data/llm_cache"))
     HTTP_CACHE_ENABLED: bool = Field(default=True)
     HTTP_CACHE_TTL_HOURS: int = Field(default=24)
 

@@ -3,7 +3,7 @@
     {
       "full_name": "Arman Karégar",
       "role": "Co-founder and CEO",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/armankaregar",
       "has_phd": false,
       "universities": [
         "KTH Royal Institute of Technology",
@@ -16,7 +16,7 @@
     {
       "full_name": "Max Henry Xie",
       "role": "Co-founder and CTO",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/max-henry-xie",
       "has_phd": false,
       "universities": [
         "KTH Royal Institute of Technology"
@@ -25,7 +25,8 @@
         "PayPal"
       ],
       "is_ex_bigtech": true,
-      "source_of_identity": "AI/Data Scientist"
+      "source_of_identity": "AI/Data Scientist",
+      "github_handle": "MaxHXie"
     }
   ],
   "fd_enriched": 1,

@@ -13,7 +13,7 @@ import tempfile
 from pathlib import Path
 import pytest
 
-from backend.config import PLATFORM_DOMAINS, BIG_TECH_BLOCKLIST
+from backend.config import PLATFORM_DOMAINS, BIG_TECH_BLOCKLIST, settings
 from backend.db.repository import DatabaseRepository, normalize_domain, slugify
 from backend.scoring.kill_gates import KillGateEvaluator, KillGateResult
 from backend.enrichment.impressum import ImpressumScraper, ImpressumResult
@@ -482,7 +482,10 @@ def test_fastapi_endpoints():
     assert "lp_synergy_analysis" in memo
 
     # N8N dispatch endpoint
-    res_n8n = client.post(f"/api/dispatch/n8n/{top_id}")
+    auth_headers = {}
+    if settings.FOUNDERHUNT_WRITE_TOKEN:
+        auth_headers["Authorization"] = f"Bearer {settings.FOUNDERHUNT_WRITE_TOKEN}"
+    res_n8n = client.post(f"/api/dispatch/n8n/{top_id}", headers=auth_headers)
     assert res_n8n.status_code == 200
     assert res_n8n.json()["status"] in ["simulated_dispatch", "dispatched"]
 

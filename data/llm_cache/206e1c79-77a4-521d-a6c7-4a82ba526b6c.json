@@ -3,12 +3,13 @@
     {
       "full_name": "Jannis Schönleber",
       "role": "CEO & Founder",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/jannis-schoenleber",
       "has_phd": false,
       "universities": [],
       "prior_companies": [],
       "is_ex_bigtech": false,
-      "source_of_identity": "CEO & Founder"
+      "source_of_identity": "CEO & Founder",
+      "github_handle": "joennlae"
     },
     {
       "full_name": "Stefan Lombriser",
@@ -28,7 +29,8 @@
       "universities": [],
       "prior_companies": [],
       "is_ex_bigtech": false,
-      "source_of_identity": "Senior AI Researcher"
+      "source_of_identity": "Senior AI Researcher",
+      "github_handle": "FredericOdermatt"
     },
     {
       "full_name": "Florence Lenter",

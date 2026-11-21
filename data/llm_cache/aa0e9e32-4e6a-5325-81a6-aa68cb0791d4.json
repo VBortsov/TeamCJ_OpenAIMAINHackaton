@@ -3,7 +3,7 @@
     {
       "full_name": "Oliver Petrovic",
       "role": "Co-founder and Oberingenieur für Automatisierung und Steuerungstechnik",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/oliver-petrovic-387b57127/",
       "has_phd": false,
       "universities": [
         "RWTH Aachen University"
@@ -15,7 +15,7 @@
     {
       "full_name": "Manuel Belke",
       "role": "Co-founder",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/manuel-belke-40b633138/",
       "has_phd": false,
       "universities": [
         "RWTH Aachen University"
@@ -27,7 +27,7 @@
     {
       "full_name": "Christoph Susen",
       "role": "Co-founder",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/in/dr-ing-christoph-susen-9211211b1/",
       "has_phd": false,
       "universities": [
         "RWTH Aachen University"
@@ -51,7 +51,7 @@
   "fd_team_has_technical_founder": true,
   "fd_university_spinoff": true,
   "founding_year": 2026,
-  "city": "Grünwald Handelsregister",
+  "city": "Munich",
   "raised_institutional_round": false,
   "funding_summary": "",
   "is_pre_crunchbase": true,

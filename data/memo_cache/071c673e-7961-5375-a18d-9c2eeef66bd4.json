@@ -1,27 +1,27 @@
 {
-  "one_liner": "Vantel builds an AI platform for commercial insurance brokerages; its Y Combinator listing makes it worth tracking, but a reported seed round puts it past HTGF’s first-round window.",
+  "one_liner": "Vantel builds AI software for commercial insurance brokerages. Its Y Combinator participation warrants a look, but a reported seed round makes first-round outreach unlikely.",
   "top_signals": [
     {
       "signal": "Vantel is listed in Y Combinator’s 2025–2026 European cohort.",
       "source_url": "https://www.ycombinator.com/companies/vantel"
     },
     {
-      "signal": "The funding summary reports a $2 million seed round in March 2025 from Y Combinator, Inception Fund, Rebel Fund, and angel investors.",
+      "signal": "Vantel reportedly raised a $2 million seed round in March 2025 from Y Combinator, Inception Fund, Rebel Fund and angel investors.",
       "source_url": null
     },
     {
-      "signal": "The lead ranks 13th of 63 today, with a model score 84.5 of 100 (at the top of the reference cohort). Fintech, deep tech, and YC participation flags lifted the score, as did flags for a founder CTO, a technical founder, study abroad, and attendance at a top university and a leading business school. The founder records confirm the CTO role but do not confirm the technical-founder flag, study abroad, or the school classifications.",
+      "signal": "Model score 84.5 of 100 (at the top of the reference cohort). The fintech and deep-tech tags, YC participation and a co-founder in the CTO role lifted the score. The model also flagged a technical founder, selective school backgrounds and study abroad; the founder records list institutions but do not independently confirm those flags.",
       "source_url": null
     }
   ],
-  "team": "Love Redin is founder and CEO; Ulme Wennberg is founder and CTO. Both list KTH Royal Institute of Technology. Wennberg also lists the Stockholm School of Economics and the University of Washington.",
-  "why_early": "Unknown whether the reported March 2025 seed round was priced. The reported $2 million raise means Vantel is not a pre-first-round lead.",
+  "team": "Love Redin is co-founder and CEO; his record lists KTH Royal Institute of Technology. Ulme Wennberg is co-founder and CTO; his record lists KTH, Stockholm School of Economics and the University of Washington. The CTO role is recorded, but neither founder record confirms the model’s technical-founder flag.",
+  "why_early": "Unknown whether the reported March 2025 seed round was priced. The round was already reported, so Vantel should not be treated as a pre-first-funding lead.",
   "devils_advocate_risks": [
-    "Established brokers may resist integrating AI into their workflows.",
-    "Adapting the platform to different insurance products and regional regulations could complicate scaling."
+    "Established brokers may resist integrating AI into existing workflows.",
+    "Supporting different insurance products and regulatory requirements across regions may complicate expansion."
   ],
-  "next_step": "HTGF Industrial Tech team: confirm funding status before pursuing. Ask the founders: Was the March 2025 seed round a priced equity round?",
+  "next_step": "HTGF Industrial Tech team: Ask the founders whether the reported March 2025 seed round was priced equity.",
   "memo_source": "openai:gpt-6.2-sol",
   "entity_id": "071c673e-7961-5375-a18d-9c2eeef66bd4",
-  "input_hash": "5e91837478c30009"
+  "input_hash": "3c1b725902dda159"
 }
