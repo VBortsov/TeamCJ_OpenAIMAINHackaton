@@ -1,27 +1,27 @@
 {
-  "one_liner": "DropGen is a newly recognized ETH Zurich spin-off developing miniaturized liquid handling for high-throughput screening, with early support from Venture Kick.",
+  "devils_advocate_risks": [
+    "Established labs may be reluctant to switch to a microdroplet array platform.",
+    "Scalability and reliability across applications remain open questions."
+  ],
+  "entity_id": "21108266-db5a-52cf-a933-580e6eb6df10",
+  "input_hash": "5c55687efbdfb6d0",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders, “What results show that the platform matches an established lab’s current workflow on throughput and reproducibility?”",
+  "one_liner": "DropGen develops miniaturized liquid handling for high-throughput screening; ETH Zurich’s 2026 spin-off recognition makes it a timely outreach lead.",
+  "team": "Dr. Claudius Dietsche (CEO), Dr. Maximilian Breitfeld (CTO) and Prof. Dr. Petra S. Dittrich (chief scientific officer) are listed as co-founders, each with a PhD.",
   "top_signals": [
     {
-      "signal": "ETH Zurich recognized DropGen as a spin-off in its 2026 roster.",
+      "signal": "ETH Zurich lists DropGen as a recognized spin-off on its 2026 roster.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
-      "signal": "DropGen received CHF 10,000 from Venture Kick’s first support stage in 2025.",
+      "signal": "Three co-founders hold PhDs and cover the CEO, CTO and chief scientific officer roles.",
       "source_url": null
     },
     {
-      "signal": "Model score 84.2 of 100 (at the top of the reference cohort). The spin-off status, three known founders, doctoral training, a co-founder serving as CTO, and a deep-tech classification pushed the score up. The technical-founder and top-university founder flags also helped but are not confirmed by the founder records.",
+      "signal": "Model score 84.2 of 100 (at the top of the reference cohort); ranked 6th of 205 leads today. The spin-off, three-founder team, PhD and founder-CTO flags raised the score, as did the deep-tech classification. The model also flags a technical founder and a founder from a top university, but the founder records do not confirm those two flags.",
       "source_url": null
     }
   ],
-  "team": "Dr. Claudius Dietsche (CEO), Dr. Maximilian Breitfeld (CTO), and Prof. Dr. Petra S. Dittrich (Chief Scientific Officer) are listed as co-founders, all with PhDs.",
-  "why_early": "Unknown whether a priced round has occurred. The disclosed CHF 10,000 was first-stage Venture Kick support.",
-  "devils_advocate_risks": [
-    "Established labs may be slow to switch to a microdroplet array platform.",
-    "It is unknown whether the platform can scale reliably across different screening applications."
-  ],
-  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders what performance threshold their first target lab would require before switching to DropGen’s platform.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "21108266-db5a-52cf-a933-580e6eb6df10",
-  "input_hash": "3e79504e1cfbe202"
+  "why_early": "Priced-round status is unknown. DropGen received CHF 10,000 from Venture Kick’s first support stage in 2025, which does not establish whether a priced round has occurred."
 }

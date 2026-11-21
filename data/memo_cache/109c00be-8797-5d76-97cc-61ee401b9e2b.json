@@ -1,27 +1,28 @@
 {
-  "one_liner": "PQ Technologies develops AI tools for financial compliance and risk management. ETH Zurich approved it as a startup in 2025; funding status is unknown.",
+  "devils_advocate_risks": [
+    "Integrating Nucleus across different banking systems and regulatory frameworks may be difficult.",
+    "How Nucleus protects sensitive financial data is unknown.",
+    "Customer adoption is unknown."
+  ],
+  "entity_id": "109c00be-8797-5d76-97cc-61ee401b9e2b",
+  "input_hash": "2668b5d057728b2f",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Digital Tech & AI team: Ask the founders what integration work a bank needs to complete before it can run a Nucleus pilot.",
+  "one_liner": "PQ Technologies develops AI software for financial compliance and risk management. Its 2025 ETH Zurich spin-off approval gives HTGF a reason to reach out now.",
+  "team": "The records list Markus Reinacher as CEO, Vu Nguyen as Head of Product, Gabriel Larumbe as CFO, and Robert Hönig as Head of Engineering, alongside staff in risk, regulatory, compliance, and engineering roles. The exact founding group is unknown.",
   "top_signals": [
     {
       "signal": "ETH Zurich lists PQ Technologies as a recognized spin-off.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
-      "signal": "Head of Product Vu Nguyen and Head of Engineering Robert Hönig each hold an ETH Zurich MSc in computer science.",
+      "signal": "Head of Product Vu Nguyen and Head of Engineering Robert Hönig both hold MSc degrees in Computer Science from ETH Zurich.",
       "source_url": null
     },
     {
-      "signal": "Model score 90.4 of 100 (at the top of the reference cohort). Positive inputs include the university spin-off, technical team members, ETH Zurich backgrounds, and a deep-tech classification. The model counts six founders, but the team records do not confirm which six.",
+      "signal": "Model score 90.4 of 100 (at the top of the reference cohort). Spin-off status and ETH-trained technical team members lifted the score. The model also rewards a deep-tech classification and a count of six founders; the team records do not establish that founder count.",
       "source_url": null
     }
   ],
-  "team": "The team records list Markus Reinacher as CEO, Gabriel Larumbe as CFO, Vu Nguyen as Head of Product, and Robert Hönig as Head of Engineering. Reinacher’s listed qualifications include a Master of Law and a MAS in Bank Management; Larumbe holds a Master of Arts in Business Innovation. The exact founding roster is unknown.",
-  "why_early": "Unknown. The Pre-Crunchbase / Undiscovered badge does not establish whether a priced round has closed.",
-  "devils_advocate_risks": [
-    "Integrating Nucleus across banking systems and regulatory frameworks may be difficult.",
-    "Handling sensitive financial information creates privacy and security risks."
-  ],
-  "next_step": "HTGF Digital Tech team: Ask the founders whether PQ Technologies AG has closed a priced equity round.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "109c00be-8797-5d76-97cc-61ee401b9e2b",
-  "input_hash": "6da9ea901bd82222"
+  "why_early": "Unknown; the available records do not establish whether a priced round has occurred."
 }

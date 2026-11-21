@@ -1,27 +1,27 @@
 {
-  "one_liner": "MYNERVA is developing Leia for peripheral neuropathy and is worth a look following its recognition as an ETH Zurich spin-off in 2025.",
+  "devils_advocate_risks": [
+    "Scaling production to meet demand could be difficult.",
+    "Regulatory approvals across markets could be complex."
+  ],
+  "entity_id": "8aeffecc-d3bc-5a9e-ae56-b4dce7c636a7",
+  "input_hash": "dd97cb7ab20d9420",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Life Sciences team: ask the founders whether MYNERVA has closed a priced equity round.",
+  "one_liner": "MYNERVA is a 2025 ETH Zurich spin-off developing Leia for peripheral neuropathy, with priced-round status still unknown.",
+  "team": "Greta Preatoni is the CEO and the only person explicitly identified as a co-founder. Karin Biondi Morra is Chief Business Officer, and Michael Peyer is Lead System Engineer; their founder status is unknown.",
   "top_signals": [
     {
-      "signal": "ETH Zurich lists MYNERVA as a recognized spin-off.",
+      "signal": "ETH Zurich recognizes MYNERVA as an official spin-off.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
-      "signal": "The team roster lists systems, hardware, software and embedded engineering roles, alongside clinical affairs and quality and regulatory roles.",
+      "signal": "The team includes systems, hardware and software engineers, as well as clinical affairs and regulatory specialists.",
       "source_url": null
     },
     {
-      "signal": "Model score 90.1 of 100 (at the top of the reference cohort); ranked 15th of 174 leads today. University spin-off status and a deep-tech classification lifted the score, as did flags for six founders, a technical founder and a founder from a top university. The founder records do not confirm those three founder flags.",
+      "signal": "Model score 90.1 of 100 (at the top of the reference cohort). The university spin-off and deep-tech flags lifted the score. The model also counts six founders and flags a technical founder and a founder from a top university, but the founder records do not confirm those three inputs.",
       "source_url": null
     }
   ],
-  "team": "Greta Preatoni is listed as CEO and co-founder. The roster names Michael Peyer as Lead System Engineer, Dunja Cekić as Hardware Engineer, Robert John as Software Engineer and Alice Fornaciari as Embedded System Engineer; their entries do not specify co-founder status.",
-  "why_early": "Unknown. The Pre-Crunchbase / Undiscovered badge does not establish whether a priced round has closed.",
-  "devils_advocate_risks": [
-    "Scaling production to meet demand is a stated risk.",
-    "Regulatory approvals across markets are a stated risk."
-  ],
-  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders whether MYNERVA has closed a priced equity round.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "8aeffecc-d3bc-5a9e-ae56-b4dce7c636a7",
-  "input_hash": "d1153e33d26a4fff"
+  "why_early": "Unknown. The Pre-Crunchbase / Undiscovered badge does not establish whether a priced round has occurred."
 }

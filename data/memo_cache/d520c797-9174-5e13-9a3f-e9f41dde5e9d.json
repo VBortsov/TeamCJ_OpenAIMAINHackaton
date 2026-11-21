@@ -1,27 +1,27 @@
 {
-  "one_liner": "fiveD is listed as developing BreatheAssist, a real-time ventilation aid backed by EXIST. The November 2026 IHK founder award is a reason to reach out.",
+  "devils_advocate_risks": [
+    "The company description concerns mechanical ventilation, while other records describe radar simulation. It is unclear which product fiveD is commercializing.",
+    "Clinical evidence for the claimed ventilation benefits is unknown."
+  ],
+  "entity_id": "d520c797-9174-5e13-9a3f-e9f41dde5e9d",
+  "input_hash": "cbcbe501ae2b34ca",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Digital Tech & AI team: Ask the founders which product fiveD is commercializing under HRB 21264.",
+  "one_liner": "Erlangen-based fiveD is described as developing BreatheAssist for mechanical ventilation; competition recognition warrants a call to resolve conflicting references to radar simulation.",
+  "team": "Dr. Michael Stelzig is a technical co-founder with a doctorate, an FAU research group leadership role, and prior experience at Siemens and Mercedes-Benz. Marcel Hoffmann is co-founder and managing director.",
   "top_signals": [
     {
-      "signal": "Named a winner or finalist in the 2025 BayStartUP business plan competition.",
+      "signal": "Listed as a winner or finalist in the 2025 BayStartUP business plan competition.",
       "source_url": "https://www.baystartup.de/startupdate/das-sind-die-sieger-im-businessplan-wettbewerb-nordbayern-2025"
     },
     {
-      "signal": "The BreatheAssist project originated at Friedrich-Alexander-Universität Erlangen-Nürnberg and received EXIST Research Transfer support.",
+      "signal": "Received the IHK Gründerpreis Mittelfranken in November 2026.",
       "source_url": null
     },
     {
-      "signal": "Received the IHK-Gründerpreis Mittelfranken in November 2026.",
+      "signal": "Model score 71.7 of 100 (above 97.7% of the reference cohort). University spin-off, deep-tech, technical-founder and doctorate flags lifted the score; Germany and prior Big Tech experience lowered it. A top-university flag also lifted it but is not confirmed by the founder records.",
       "source_url": null
     }
   ],
-  "team": "Dr. Michael Stelzig is a technical co-founder with a PhD, an FAU radar research leadership role, and prior experience at Siemens and Mercedes-Benz. Marcel Hoffmann is co-founder and managing director.",
-  "why_early": "Unknown whether a priced round has happened. EXIST support is reported, but the funding summary does not document an investment round.",
-  "devils_advocate_risks": [
-    "The company description names BreatheAssist, but the market and risk notes describe radar simulation. The product fiveD is commercializing is unclear.",
-    "Clinical evidence for the reported ventilation benefits is unknown."
-  ],
-  "next_step": "HTGF Digital Tech & AI team: Ask the founders which product fiveD is commercializing: BreatheAssist or radar simulation software.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "d520c797-9174-5e13-9a3f-e9f41dde5e9d",
-  "input_hash": "77afab2fa2e7a037"
+  "why_early": "Unknown. The BreatheAssist description cites EXIST Research Transfer support, but that does not establish whether fiveD has closed a priced round."
 }

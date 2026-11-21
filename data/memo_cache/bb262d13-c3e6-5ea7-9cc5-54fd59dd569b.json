@@ -1,8 +1,17 @@
 {
-  "one_liner": "YQuantum develops miniaturized hardware components for quantum computers and is worth meeting after its 2026 recognition as an ETH Zurich spin-off.",
+  "devils_advocate_risks": [
+    "It is unclear how readily the components can be integrated into existing quantum computing systems.",
+    "It is unclear whether production can scale to meet demand."
+  ],
+  "entity_id": "bb262d13-c3e6-5ea7-9cc5-54fd59dd569b",
+  "input_hash": "c58bacb98e07e997",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Digital Tech team: Ask the founders what integration tests they have completed with existing quantum computing systems.",
+  "one_liner": "YQuantum develops miniaturized hardware components for quantum computers and gained ETH Zurich spin-off recognition in 2026.",
+  "team": "The founder records list Dr. Christian Jünger (CEO; University of Basel; previously at QuantrolOx), Dr. Johannes Herrmann (CTO; ETH Zurich), and Prof. em. Dr. Christian Schönenberger (Scientific Advisor; University of Basel). All three are recorded as holding PhDs.",
   "top_signals": [
     {
-      "signal": "ETH Zurich recognized YQuantum on its 2026 spin-off roster.",
+      "signal": "ETH Zurich lists YQuantum on its 2026 spin-off roster.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
@@ -10,18 +19,9 @@
       "source_url": null
     },
     {
-      "signal": "Model score 84.5 of 100 (at the top of the reference cohort). The score was lifted by flags for university spin-off status, deep tech, three identified founders, a founder with a PhD, a founding CTO, and a founder from a top university. The technical-founder flag also lifted the score but is not confirmed by the founder records.",
+      "signal": "Model score 84.5 of 100 (at the top of the reference cohort); ranked 4 of 205 leads today. The ETH spin-off origin, deep-tech classification, three named founders, founder PhDs, a founder serving as CTO, and a founder’s ETH Zurich affiliation lifted the score. The technical-founder flag also lifted it but is not confirmed by the founder records.",
       "source_url": null
     }
   ],
-  "team": "The founder records list Dr. Christian Jünger (CEO; University of Basel; previously at QuantrolOx), Dr. Johannes Herrmann (CTO; ETH Zurich), and Prof. em. Dr. Christian Schönenberger (Scientific Advisor; University of Basel). All three hold PhDs.",
-  "why_early": "Unknown whether a priced round has occurred. The Venture Kick funding is recorded, but its terms are unknown.",
-  "devils_advocate_risks": [
-    "Integrating the components with existing quantum computing systems may pose technical hurdles.",
-    "Scaling component production may be difficult."
-  ],
-  "next_step": "HTGF Digital Tech team: Ask the founders what they have demonstrated by integrating a miniaturized component into an existing quantum computing system.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "bb262d13-c3e6-5ea7-9cc5-54fd59dd569b",
-  "input_hash": "14581c0803767371"
+  "why_early": "Unknown. The reported Venture Kick funding does not establish whether a priced round has occurred."
 }

@@ -1,27 +1,27 @@
 {
-  "one_liner": "OptimalPSI develops patient-specific spinal implants. ETH Zurich spin-off recognition and a 2025 Venture Kick award make it worth meeting now.",
+  "devils_advocate_risks": [
+    "Scaling production of patient-specific implants could be difficult.",
+    "Regulatory approvals across healthcare jurisdictions are a risk."
+  ],
+  "entity_id": "7960f33c-aa58-5ced-b975-dad6e580098f",
+  "input_hash": "629468d5b90cc829",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders whether OptimalPSI has closed a priced equity round.",
+  "one_liner": "OptimalPSI develops patient-specific spinal implants. Its 2025 ETH Zurich spin-off approval and CHF 150,000 Venture Kick award make it worth contacting now.",
+  "team": "Co-founders: Dr. Thijs Smit (PhD from ETH Zurich’s Laboratory for Orthopaedic Technology), Wolfgang Rubin (over 15 years in medical device engineering), and Bertrand Hughes (medtech leadership experience). Stephen Ferguson, Daniel Haschtmann, and Rahul V. Shah are listed as clinical advisors.",
   "top_signals": [
     {
-      "signal": "ETH Zurich recognizes OptimalPSI as a spin-off.",
+      "signal": "ETH Zurich lists OptimalPSI as a recognized spin-off.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
-      "signal": "OptimalPSI won CHF 150,000 from Venture Kick in 2025 and secured an Innosuisse grant in 2024.",
+      "signal": "Won CHF 150,000 from Venture Kick in 2025 and secured an Innosuisse grant in 2024.",
       "source_url": null
     },
     {
-      "signal": "Model score 92.1 of 100 (at the top of the reference cohort). Spin-off status, the deep-tech classification, technical founders, an ETH Zurich doctorate and a six-founder flag pushed the score up. The records list three co-founders and three clinical advisors, so the six-founder flag is unconfirmed.",
+      "signal": "Ranks 1 of 205 leads today, with a model score 92.1 of 100 (at the top of the reference cohort). The score was helped by the ETH spin-off status, deep-tech classification, and technical co-founders, including one with an ETH Zurich PhD. The model counts six founders, but the records list three co-founders and three clinical advisors.",
       "source_url": null
     }
   ],
-  "team": "Co-founders: Dr. Thijs Smit (ETH Zurich PhD in orthopaedic technology), Wolfgang Rubin (over 15 years of medical device engineering experience) and Bertrand Hughes (medtech leadership experience). Smit and Rubin are listed as technical founders.",
-  "why_early": "Priced-round status is unknown. The Venture Kick award and Innosuisse grant do not establish whether a priced round has occurred.",
-  "devils_advocate_risks": [
-    "Scaling production of patient-specific implants may be difficult.",
-    "Regulatory approvals across jurisdictions may be challenging."
-  ],
-  "next_step": "HTGF Life Sciences & Chemistry team: Ask the founders what evidence they still need for their first regulatory submission.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "7960f33c-aa58-5ced-b975-dad6e580098f",
-  "input_hash": "969f10c1402cd4ea"
+  "why_early": "Whether a priced round has occurred is unknown. The Venture Kick award and Innosuisse grant do not establish the company’s equity funding history."
 }

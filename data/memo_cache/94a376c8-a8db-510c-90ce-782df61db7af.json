@@ -1,8 +1,17 @@
 {
-  "one_liner": "aiXopt automates industrial machine settings with small-data AI; its 2026 RWTH Aachen Spin-off Award gives HTGF a reason to reach out now.",
+  "devils_advocate_risks": [
+    "Integration with different manufacturing systems may be complex.",
+    "It is unclear how much customization is needed to deploy the software across different production environments."
+  ],
+  "entity_id": "94a376c8-a8db-510c-90ce-782df61db7af",
+  "input_hash": "e788f1a97c412fcd",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Industrial Tech team: Ask the founders how much engineering time it takes to deploy the software on a machine type they have not tuned before.",
+  "one_liner": "aiXopt automates industrial machine tuning with small-data AI, targeting the manual adjustments manufacturers repeat when products, materials, or machines change.",
+  "team": "Dr.-Ing. David Stenger handles technology; Dr.-Ing. Tim Reuscher handles organization and external representation. Both hold doctorates from RWTH Aachen University.",
   "top_signals": [
     {
-      "signal": "Won RWTH Aachen University's 2026 Spin-off Award.",
+      "signal": "Won the 2026 RWTH Aachen University Spin-off Award.",
       "source_url": "https://www.rwth-aachen.de/cms/root/wir/Profil/Auszeichnungen-und-Ehrungen/Spin-off-Award/~bsjlly/aiXopt/lidx/1/"
     },
     {
@@ -10,18 +19,9 @@
       "source_url": null
     },
     {
-      "signal": "Ranked 4 of 63 leads today, with a model score 74.2 of 100 (above 98.8% of the reference cohort). The spin-off, deep-tech, founder doctorate and university background flags lifted the score; Germany lowered it. The technical-founder flag also lifted the score but is not confirmed by the founder records.",
+      "signal": "Model score 74.2 of 100 (above 98.8% of the reference cohort). The university spin-off, deep-tech and founder PhD and university flags lifted the score; the Germany flag lowered it. The technical-founder flag also lifted the score but is not confirmed by the founder records.",
       "source_url": null
     }
   ],
-  "team": "Dr.-Ing. David Stenger handles technology; Dr.-Ing. Tim Reuscher handles organization and external representation. The founder records list doctorates and RWTH Aachen University affiliations for both.",
-  "why_early": "Unknown whether a priced round has occurred. The EXIST grant does not establish equity funding history.",
-  "devils_advocate_risks": [
-    "Integration with existing manufacturing systems may be complex.",
-    "It is unknown how much work is needed to adapt the software across production environments."
-  ],
-  "next_step": "HTGF Industrial Tech team: What measured improvement has aiXopt achieved against manual parameter tuning on a production machine?",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "94a376c8-a8db-510c-90ce-782df61db7af",
-  "input_hash": "14d8187e7f060317"
+  "why_early": "Unknown whether a priced round has occurred. The EXIST grant is reported, but the available funding information does not establish whether the company previously raised a priced round."
 }

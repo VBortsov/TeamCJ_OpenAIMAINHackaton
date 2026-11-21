@@ -1,8 +1,17 @@
 {
-  "one_liner": "Zelsius develops emissions calculation software for industry; rising pressure to cut emissions and ETH Zurich’s 2026 spin-off recognition make it worth approaching now.",
+  "devils_advocate_risks": [
+    "Traditional industrial buyers may be slow to adopt new emissions calculation software.",
+    "It is unknown how well the software scales across different industrial processes."
+  ],
+  "entity_id": "d090cdfa-67e8-5c49-ab19-b98e12b6889b",
+  "input_hash": "cfd5b8d3c4b2f4a4",
+  "memo_source": "openai:gpt-6.2-sol",
+  "next_step": "HTGF Industrial Tech team: Ask the founders which industrial processes, if any, paying customers already use Zelsius to calculate emissions for.",
+  "one_liner": "Zelsius develops emissions calculation software for Swiss industry and gained ETH Zurich spin-off recognition in 2026.",
+  "team": "The founder records list Adina Hochuli (Managing Director), Yannick Krabben (Head of Product Development), Lukas Hegner (Head of Research & Development), and Marcel Niederberger (Head of Marketing & Sales).",
   "top_signals": [
     {
-      "signal": "ETH Zurich recognized Zelsius on its 2026 spin-off roster.",
+      "signal": "ETH Zurich lists Zelsius on its 2026 spin-off roster.",
       "source_url": "https://entrepreneurship.ethz.ch/startup-stories/explore-startup-portraits-and-success-stories/uebersicht-eth-spin-offs.html"
     },
     {
@@ -10,18 +19,9 @@
       "source_url": null
     },
     {
-      "signal": "Model score 82.9 of 100 (at the top of the reference cohort). Four listed founders, university spin-off status and the deep-tech classification lifted the score. Flags for a technical founder and a founder from a top university also lifted it but are not confirmed by the founder records.",
+      "signal": "Model score 82.9 of 100 (at the top of the reference cohort). Four listed founders, university spin-off status and deep-tech classification lifted the score. Technical-founder and top-university founder flags also lifted it but are not confirmed by the founder records.",
       "source_url": null
     }
   ],
-  "team": "Four founders are listed: Adina Hochuli (Managing Director), Yannick Krabben (Head of Product Development), Lukas Hegner (Head of Research & Development), and Marcel Niederberger (Head of Marketing & Sales).",
-  "why_early": "Priced-round status is unknown. The funding summary records two sources of support in 2023 and incorporation in June 2024, but does not establish whether a priced round has occurred.",
-  "devils_advocate_risks": [
-    "Industrial customers may be reluctant to adopt new emissions calculation software.",
-    "It is unknown whether the software can handle different industrial processes across sectors."
-  ],
-  "next_step": "HTGF Industrial Tech team: Ask the founders whether Zelsius has closed a priced equity round.",
-  "memo_source": "openai:gpt-6.2-sol",
-  "entity_id": "d090cdfa-67e8-5c49-ab19-b98e12b6889b",
-  "input_hash": "a29467e6a4ab83f4"
+  "why_early": "Priced-round status is unknown. The funding summary records Energy Lab support and a foundation grant before incorporation in June 2024."
 }
